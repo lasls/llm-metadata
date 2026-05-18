@@ -30,6 +30,7 @@ class Builder {
   private readonly CACHE_DIR: string;
   private readonly DATA_DIR: string;
   private readonly SOURCE_URL = 'https://models.dev/api.json';
+  private readonly PPIO_URL = 'https://api.ppio.com/openai/v1/models';
 
   private readonly dataLoader: DataLoader;
   private readonly dataProcessor: DataProcessor;
@@ -199,6 +200,10 @@ class Builder {
     const overrides = this.dataLoader.loadOverrides();
     const policy = this.dataLoader.loadPolicy();
 
+    // 加载补充数据源（ppio 中文描述）
+    console.log('Loading supplementary data (ppio)...');
+    const ppioDescriptions = await this.dataLoader.loadPpioDescriptions(this.PPIO_URL);
+
     // 处理数据
     console.log('Processing data...');
     let normalized = this.dataProcessor.mapSourceToNormalized(source);
@@ -254,6 +259,7 @@ class Builder {
             allModelsData,
             overrides,
             locale,
+            ppioDescriptions,
           );
           const outDir = join(i18nDir, locale);
           ensureDirSync(outDir);
@@ -310,6 +316,7 @@ class Builder {
             allModelsData,
             overrides,
             locale,
+            ppioDescriptions,
           );
           const voapiPayload = this.voApiBuilder.buildFirms(localized);
           if (
@@ -347,6 +354,7 @@ class Builder {
         allModelsData,
         overrides,
         'en',
+        ppioDescriptions,
       );
       const newapiSync = this.newApiBuilder.buildSyncPayload(allModelsDataEn, tagMapEn);
       if (
@@ -414,6 +422,7 @@ class Builder {
             allModelsData,
             overrides,
             locale,
+            ppioDescriptions,
           );
           const payload = this.newApiBuilder.buildSyncPayload(localized, tagMap);
           if (
@@ -492,6 +501,7 @@ class Builder {
             allModelsData,
             overrides,
             locale,
+            ppioDescriptions,
           );
           changes += this.writeProvidersAndModels(outDir, localized, policy, sourceProviderIds, {
             dryRun,
@@ -537,7 +547,7 @@ class Builder {
         }
 
         const releasesMd = this.docsGenerator.generateReleasesMarkdown(
-          this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale),
+          this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale, ppioDescriptions),
           manifest,
           locale,
         );

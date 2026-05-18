@@ -212,6 +212,7 @@ export class DataProcessor {
     data: NormalizedData,
     overrides: OverrideConfig,
     locale: string,
+    supplementaryDescriptions?: Map<string, string>,
   ): NormalizedData {
     const localizedProviders: Record<string, Provider> = {};
 
@@ -230,6 +231,8 @@ export class DataProcessor {
         if (modelName !== undefined) newModel.name = modelName;
         if (modelDesc !== undefined) {
           newModel.description = modelDesc;
+        } else if (locale === 'zh' && supplementaryDescriptions?.has(key)) {
+          newModel.description = supplementaryDescriptions.get(key)!;
         } else {
           // 若原描述等于英文默认描述，则替换为对应语言模板
           const baseName = newModel.name || modelId;
