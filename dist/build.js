@@ -19,6 +19,7 @@ class Builder {
     CACHE_DIR;
     DATA_DIR;
     SOURCE_URL = 'https://models.dev/api.json';
+    PPIO_URL = 'https://api.ppio.com/openai/v1/models';
     dataLoader;
     dataProcessor;
     indexBuilder;
@@ -142,6 +143,9 @@ class Builder {
         console.log('Loading configuration...');
         const overrides = this.dataLoader.loadOverrides();
         const policy = this.dataLoader.loadPolicy();
+        // 加载补充数据源（ppio 中文描述）
+        console.log('Loading supplementary data (ppio)...');
+        const ppioDescriptions = await this.dataLoader.loadPpioDescriptions(this.PPIO_URL);
         // 处理数据
         console.log('Processing data...');
         let normalized = this.dataProcessor.mapSourceToNormalized(source);
@@ -180,7 +184,7 @@ class Builder {
                 ensureDirSync(i18nDir);
                 const locales = this.i18nService.getLocales().map((l) => l.locale);
                 for (const locale of locales) {
-                    const allLocalized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
+                    const allLocalized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale, ppioDescriptions);
                     const outDir = join(i18nDir, locale);
                     ensureDirSync(outDir);
                     if (writeJSONIfChanged(join(outDir, 'all.json'), allLocalized.providers, { dryRun })) {
@@ -216,7 +220,7 @@ class Builder {
                 for (const locale of locales) {
                     const outDir = join(i18nBase, locale, 'voapi');
                     ensureDirSync(outDir);
-                    const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
+                    const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale, ppioDescriptions);
                     const voapiPayload = this.voApiBuilder.buildFirms(localized);
                     if (writeJSONIfChanged(join(outDir, 'firms.json'), { success: true, message: '', data: voapiPayload.firms }, { dryRun })) {
                         changes++;
@@ -235,7 +239,7 @@ class Builder {
                 ...(apiI18nEn.capability_labels || {}),
             };
             // 使用英文本地化数据集，以便提供商的国际化信息（如描述）应用于基础 NewAPI 输出
-            const allModelsDataEn = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, 'en');
+            const allModelsDataEn = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, 'en', ppioDescriptions);
             const newapiSync = this.newApiBuilder.buildSyncPayload(allModelsDataEn, tagMapEn);
             if (writeJSONIfChanged(join(newapiDir, 'vendors.json'), { success: true, message: '', data: newapiSync.vendors }, { dryRun })) {
                 changes++;
@@ -275,7 +279,7 @@ class Builder {
                     };
                     const outDir = join(i18nBase, locale, 'newapi');
                     ensureDirSync(outDir);
-                    const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
+                    const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale, ppioDescriptions);
                     const payload = this.newApiBuilder.buildSyncPayload(localized, tagMap);
                     if (writeJSONIfChanged(join(outDir, 'vendors.json'), { success: true, message: '', data: payload.vendors }, { dryRun })) {
                         changes++;
@@ -328,7 +332,7 @@ class Builder {
                 for (const locale of locales) {
                     const outDir = join(i18nDir, locale);
                     ensureDirSync(outDir);
-                    const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale);
+                    const localized = this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale, ppioDescriptions);
                     changes += this.writeProvidersAndModels(outDir, localized, policy, sourceProviderIds, {
                         dryRun,
                     });
@@ -363,7 +367,7 @@ class Builder {
                 if (writeTextIfChanged(dataOut, dataMd, { dryRun })) {
                     changes++;
                 }
-                const releasesMd = this.docsGenerator.generateReleasesMarkdown(this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale), manifest, locale);
+                const releasesMd = this.docsGenerator.generateReleasesMarkdown(this.dataProcessor.localizeNormalizedData(allModelsData, overrides, locale, ppioDescriptions), manifest, locale);
                 const releasesOut = join(this.ROOT, 'docs', locale, 'releases.md');
                 if (writeTextIfChanged(releasesOut, releasesMd, { dryRun })) {
                     changes++;

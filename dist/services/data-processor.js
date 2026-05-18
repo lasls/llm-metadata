@@ -150,7 +150,7 @@ export class DataProcessor {
         return { providers: processed };
     }
     /** 根据 locale 应用 i18n 文案到标准化数据（返回深拷贝后的新对象） */
-    localizeNormalizedData(data, overrides, locale) {
+    localizeNormalizedData(data, overrides, locale, supplementaryDescriptions) {
         const localizedProviders = {};
         for (const [providerId, provider] of Object.entries(data.providers)) {
             const provI18n = overrides.i18n?.providers?.[providerId];
@@ -167,6 +167,9 @@ export class DataProcessor {
                     newModel.name = modelName;
                 if (modelDesc !== undefined) {
                     newModel.description = modelDesc;
+                }
+                else if (locale === 'zh' && supplementaryDescriptions?.has(key)) {
+                    newModel.description = supplementaryDescriptions.get(key);
                 }
                 else {
                     // 若原描述等于英文默认描述，则替换为对应语言模板

@@ -1,7 +1,8 @@
-import { existsSync, readFileSync, readdirSync, statSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { join, extname, basename } from 'node:path';
 import { deepMerge } from '../utils/object-utils.js';
 import { ALLOWED_MODEL_OVERRIDE_KEY_SET } from '../constants/override-keys.js';
+import { PPIO_PROVIDER_MAP } from '../constants/ppio-provider-map.js';
 /** 数据加载服务 */
 export class DataLoader {
     dataDir;
@@ -181,6 +182,50 @@ export class DataLoader {
             }
         }
         return base;
+    }
+    /** 从 ppio API 加载补充描述数据（中文） */
+    async loadPpioDescriptions(ppioUrl) {
+        const result = new Map();
+        const parseEntries = (entries) => {
+            for (const entry of entries) {
+                if (!entry.id || !entry.description)
+                    continue;
+                const slashIdx = entry.id.indexOf('/');
+                if (slashIdx === -1)
+                    continue;
+                const ppioProvider = entry.id.slice(0, slashIdx);
+                const modelName = entry.id.slice(slashIdx + 1);
+                const projectProvider = PPIO_PROVIDER_MAP[ppioProvider] ?? ppioProvider;
+                result.set(`${projectProvider}/${modelName}`, entry.description);
+            }
+        };
+        try {
+            const response = await fetch(ppioUrl, {
+                headers: { accept: 'application/json' },
+            });
+            if (!response.ok) {
+                console.warn(`ppio API returned ${response.status}, skipping supplementary data`);
+                return result;
+            }
+            const json = (await response.json());
+            const entries = Array.isArray(json) ? json : (json.data ?? []);
+            parseEntries(entries);
+            try {
+                writeFileSync(join(this.cacheDir, 'ppio.json'), JSON.stringify(entries), 'utf8');
+            }
+            catch {
+                // cache dir may not exist yet; non-critical
+            }
+        }
+        catch (error) {
+            console.warn('ppio API fetch failed, trying cache:', error);
+            const cachePath = join(this.cacheDir, 'ppio.json');
+            if (existsSync(cachePath)) {
+                const cached = this.readJSONSafe(cachePath, []);
+                parseEntries(cached);
+            }
+        }
+        return result;
     }
 }
 //# sourceMappingURL=data-loader.js.map

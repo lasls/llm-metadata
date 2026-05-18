@@ -12,5 +12,7 @@ export declare class DataLoader {
     loadPolicy(): PolicyConfig;
     /** 加载覆写配置 */
     loadOverrides(): OverrideConfig;
+    /** 从 ppio API 加载补充描述数据（中文） */
+    loadPpioDescriptions(ppioUrl: string): Promise<Map<string, string>>;
 }
 //# sourceMappingURL=data-loader.d.ts.map
