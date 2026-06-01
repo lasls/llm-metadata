@@ -32787,9 +32787,9 @@
       "deepseek-v3.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.06,
-          "input": 0.28,
-          "output": 0.38
+          "cache_read": 0.04,
+          "input": 0.18,
+          "output": 0.35
         },
         "description": "DeepSeek V3.2 是由 crof 提供的人工智能模型。",
         "family": "deepseek",
@@ -32817,7 +32817,7 @@
       "deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.02,
+          "cache_read": 0.003,
           "input": 0.12,
           "output": 0.21
         },
@@ -32856,8 +32856,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.003,
-          "input": 0.4,
-          "output": 0.85
+          "input": 0.35,
+          "output": 0.8
         },
         "description": "DeepSeek V4 Pro 是由 crof 提供的人工智能模型。",
         "family": "deepseek-thinking",
@@ -32890,19 +32890,20 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek-v4-pro-precision": {
+      "deepseek-v4-pro-lightning": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1,
-          "input": 1.25,
-          "output": 2.5
+          "cache_read": 0.02,
+          "input": 0.8,
+          "output": 1.6
         },
-        "description": "DeepSeek V4 Pro (Precision) 是由 crof 提供的人工智能模型。",
+        "description": "DeepSeek V4 Pro 是由 crof 提供的人工智能模型。",
         "family": "deepseek-thinking",
-        "id": "deepseek-v4-pro-precision",
+        "id": "deepseek-v4-pro-lightning",
         "interleaved": {
           "field": "reasoning_content"
         },
+        "knowledge": "2025-05",
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1000000,
@@ -32916,8 +32917,11 @@
             "text"
           ]
         },
-        "name": "DeepSeek V4 Pro (Precision)",
+        "name": "DeepSeek V4 Pro",
         "open_weights": true,
+        "provider": {
+          "npm": "@ai-sdk/openai-compatible"
+        },
         "reasoning": true,
         "release_date": "2026-04-24",
         "structured_output": true,
@@ -33011,7 +33015,7 @@
         "knowledge": "2025-04",
         "last_updated": "2026-01-19",
         "limit": {
-          "context": 200000,
+          "context": 202752,
           "output": 131072
         },
         "modalities": {
@@ -33072,10 +33076,10 @@
       "glm-5.1": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.09,
+          "cache_read": 0.08,
           "cache_write": 0,
           "input": 0.45,
-          "output": 2.1
+          "output": 2.15
         },
         "description": "GLM-5.1 是由 crof 提供的人工智能模型。",
         "family": "glm",
@@ -33107,49 +33111,15 @@
         "temperature": true,
         "tool_call": true
       },
-      "glm-5.1-precision": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.15,
-          "input": 0.75,
-          "output": 2.9
-        },
-        "description": "GLM 5.1 (Precision) 是由 crof 提供的人工智能模型。",
-        "family": "glm",
-        "id": "glm-5.1-precision",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-03-27",
-        "limit": {
-          "context": 202752,
-          "output": 202752
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 5.1 (Precision)",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2026-03-27",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "greg": {
+      "greg-1": {
         "attachment": false,
         "cost": {
           "cache_read": 0.02,
           "input": 0.1,
-          "output": 0.2
+          "output": 0.3
         },
-        "description": "Experiment!: Greg 是由 crof 提供的人工智能模型。",
-        "id": "greg",
+        "description": "Greg 1 Normal 是由 crof 提供的人工智能模型。",
+        "id": "greg-1",
         "last_updated": "2026-01-27",
         "limit": {
           "context": 229376,
@@ -33163,7 +33133,94 @@
             "text"
           ]
         },
-        "name": "Experiment!: Greg",
+        "name": "Greg 1 Normal",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": false
+      },
+      "greg-1-mini": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.07,
+          "output": 0.15
+        },
+        "description": "Greg 1 Mini 是由 crof 提供的人工智能模型。",
+        "id": "greg-1-mini",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 229376,
+          "output": 229376
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Greg 1 Mini",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": false
+      },
+      "greg-1-super": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1,
+          "output": 5
+        },
+        "description": "Greg 1 Super 是由 crof 提供的人工智能模型。",
+        "id": "greg-1-super",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 229376,
+          "output": 229376
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Greg 1 Super",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-01-27",
+        "temperature": true,
+        "tool_call": false
+      },
+      "greg-rp": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Greg (Roleplay) 是由 crof 提供的人工智能模型。",
+        "id": "greg-rp",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 229376,
+          "output": 229376
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Greg (Roleplay)",
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-01-27",
@@ -33249,7 +33306,7 @@
       "kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.1,
+          "cache_read": 0.05,
           "input": 0.5,
           "output": 1.99
         },
@@ -33286,53 +33343,17 @@
         "temperature": true,
         "tool_call": true
       },
-      "kimi-k2.6-precision": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.11,
-          "input": 0.55,
-          "output": 2.7
-        },
-        "description": "Kimi K2.6 (Precision) 是由 crof 提供的人工智能模型。",
-        "family": "kimi-k2.6",
-        "id": "kimi-k2.6-precision",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-04-21",
-        "limit": {
-          "context": 262144,
-          "output": 262144
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2.6 (Precision)",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2026-04-21",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "mimo-v2.5-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1,
+          "cache_read": 0.003,
           "context_over_200k": {
             "cache_read": 0.4,
             "input": 2,
             "output": 6
           },
-          "input": 0.5,
-          "output": 1.5,
+          "input": 0.4,
+          "output": 0.8,
           "tiers": [
             {
               "cache_read": 0.4,
@@ -33370,39 +33391,6 @@
         "provider": {
           "npm": "@ai-sdk/openai-compatible"
         },
-        "reasoning": true,
-        "release_date": "2026-04-22",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mimo-v2.5-pro-precision": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.16,
-          "input": 0.8,
-          "output": 2.5
-        },
-        "description": "MiMo-V2.5-Pro (Precision) 是由 crof 提供的人工智能模型。",
-        "family": "mimo",
-        "id": "mimo-v2.5-pro-precision",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 1000000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5-Pro (Precision)",
-        "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-22",
         "temperature": true,
@@ -41380,29 +41368,31 @@
       "claude-haiku-4.5": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.1,
+          "cache_write": 1.25,
+          "input": 1,
+          "output": 5
         },
-        "description": "Claude Haiku 4.5 是由 github-copilot 提供的人工智能模型。",
+        "description": "Claude Haiku 4.5 (latest) 是由 github-copilot 提供的人工智能模型。",
         "family": "claude-haiku",
         "id": "claude-haiku-4.5",
         "knowledge": "2025-02-28",
         "last_updated": "2025-10-15",
         "limit": {
           "context": 200000,
-          "input": 136000,
           "output": 64000
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Claude Haiku 4.5",
+        "name": "Claude Haiku 4.5 (latest)",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-10-15",
@@ -41412,29 +41402,31 @@
       "claude-opus-4.5": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
         },
-        "description": "Claude Opus 4.5 是由 github-copilot 提供的人工智能模型。",
+        "description": "Claude Opus 4.5 (latest) 是由 github-copilot 提供的人工智能模型。",
         "family": "claude-opus",
         "id": "claude-opus-4.5",
         "knowledge": "2025-03-31",
-        "last_updated": "2025-08-01",
+        "last_updated": "2025-11-24",
         "limit": {
           "context": 200000,
-          "input": 168000,
-          "output": 32000
+          "output": 64000
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Claude Opus 4.5",
+        "name": "Claude Opus 4.5 (latest)",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-11-24",
@@ -41444,23 +41436,45 @@
       "claude-opus-4.6": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
         },
         "description": "Claude Opus 4.6 是由 github-copilot 提供的人工智能模型。",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 3,
+                "cache_write": 37.5,
+                "input": 30,
+                "output": 150
+              },
+              "provider": {
+                "body": {
+                  "speed": "fast"
+                },
+                "headers": {
+                  "anthropic-beta": "fast-mode-2026-02-01"
+                }
+              }
+            }
+          }
+        },
         "family": "claude-opus",
         "id": "claude-opus-4.6",
         "knowledge": "2025-05-31",
-        "last_updated": "2026-02-05",
+        "last_updated": "2026-03-13",
         "limit": {
-          "context": 200000,
-          "input": 168000,
-          "output": 32000
+          "context": 1000000,
+          "output": 128000
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -41476,23 +41490,45 @@
       "claude-opus-4.7": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
         },
         "description": "Claude Opus 4.7 是由 github-copilot 提供的人工智能模型。",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 3,
+                "cache_write": 37.5,
+                "input": 30,
+                "output": 150
+              },
+              "provider": {
+                "body": {
+                  "speed": "fast"
+                },
+                "headers": {
+                  "anthropic-beta": "fast-mode-2026-02-01"
+                }
+              }
+            }
+          }
+        },
         "family": "claude-opus",
         "id": "claude-opus-4.7",
         "knowledge": "2026-01-31",
         "last_updated": "2026-04-16",
         "limit": {
-          "context": 200000,
-          "input": 168000,
-          "output": 32000
+          "context": 1000000,
+          "output": 128000
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -41508,23 +41544,44 @@
       "claude-opus-4.8": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
         },
         "description": "Claude Opus 4.8 是由 github-copilot 提供的人工智能模型。",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 1,
+                "cache_write": 12.5,
+                "input": 10,
+                "output": 50
+              },
+              "provider": {
+                "body": {
+                  "speed": "fast"
+                },
+                "headers": {
+                  "anthropic-beta": "fast-mode-2026-02-01"
+                }
+              }
+            }
+          }
+        },
         "family": "claude-opus",
         "id": "claude-opus-4.8",
-        "knowledge": "2026-01-31",
         "last_updated": "2026-05-28",
         "limit": {
-          "context": 200000,
-          "input": 168000,
-          "output": 64000
+          "context": 1000000,
+          "output": 128000
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -41537,97 +41594,68 @@
         "temperature": false,
         "tool_call": true
       },
-      "claude-opus-41": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Claude Opus 4.1 是由 github-copilot 提供的人工智能模型。",
-        "family": "claude-opus",
-        "id": "claude-opus-41",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-08-05",
-        "limit": {
-          "context": 80000,
-          "output": 16000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Opus 4.1",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-08-05",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": false
-      },
       "claude-sonnet-4": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
         },
-        "description": "Claude Sonnet 4 是由 github-copilot 提供的人工智能模型。",
+        "description": "Claude Sonnet 4 (latest) 是由 github-copilot 提供的人工智能模型。",
         "family": "claude-sonnet",
         "id": "claude-sonnet-4",
         "knowledge": "2025-03-31",
         "last_updated": "2025-05-22",
         "limit": {
-          "context": 216000,
-          "input": 128000,
-          "output": 16000
+          "context": 200000,
+          "output": 64000
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Claude Sonnet 4",
+        "name": "Claude Sonnet 4 (latest)",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-05-22",
-        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
       "claude-sonnet-4.5": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
         },
-        "description": "Claude Sonnet 4.5 是由 github-copilot 提供的人工智能模型。",
+        "description": "Claude Sonnet 4.5 (latest) 是由 github-copilot 提供的人工智能模型。",
         "family": "claude-sonnet",
         "id": "claude-sonnet-4.5",
-        "knowledge": "2025-03-31",
+        "knowledge": "2025-07-31",
         "last_updated": "2025-09-29",
         "limit": {
           "context": 200000,
-          "input": 168000,
-          "output": 32000
+          "output": 64000
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Claude Sonnet 4.5",
+        "name": "Claude Sonnet 4.5 (latest)",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-09-29",
@@ -41637,23 +41665,25 @@
       "claude-sonnet-4.6": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
         },
         "description": "Claude Sonnet 4.6 是由 github-copilot 提供的人工智能模型。",
         "family": "claude-sonnet",
         "id": "claude-sonnet-4.6",
         "knowledge": "2025-08-31",
-        "last_updated": "2026-02-17",
+        "last_updated": "2026-03-13",
         "limit": {
-          "context": 200000,
-          "input": 168000,
-          "output": 32000
+          "context": 1000000,
+          "output": 64000
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -41669,8 +41699,25 @@
       "gemini-2.5-pro": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.125,
+          "context_over_200k": {
+            "cache_read": 0.25,
+            "input": 2.5,
+            "output": 15
+          },
+          "input": 1.25,
+          "output": 10,
+          "tiers": [
+            {
+              "cache_read": 0.25,
+              "input": 2.5,
+              "output": 15,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 2.5 Pro 是由 github-copilot 提供的人工智能模型。",
         "family": "gemini-pro",
@@ -41678,16 +41725,16 @@
         "knowledge": "2025-01",
         "last_updated": "2025-06-05",
         "limit": {
-          "context": 128000,
-          "input": 128000,
-          "output": 64000
+          "context": 1048576,
+          "output": 65536
         },
         "modalities": {
           "input": [
             "text",
             "image",
             "audio",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -41695,39 +41742,42 @@
         },
         "name": "Gemini 2.5 Pro",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
         "release_date": "2025-03-20",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
       "gemini-3-flash-preview": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.05,
+          "input": 0.5,
+          "input_audio": 1,
+          "output": 3
         },
-        "description": "Gemini 3 Flash 是由 github-copilot 提供的人工智能模型。",
+        "description": "Gemini 3 Flash Preview 是由 github-copilot 提供的人工智能模型。",
         "family": "gemini-flash",
         "id": "gemini-3-flash-preview",
         "knowledge": "2025-01",
         "last_updated": "2025-12-17",
         "limit": {
-          "context": 128000,
-          "input": 128000,
-          "output": 64000
+          "context": 1048576,
+          "output": 65536
         },
         "modalities": {
           "input": [
             "text",
             "image",
+            "video",
             "audio",
-            "video"
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Gemini 3 Flash",
+        "name": "Gemini 3 Flash Preview",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-17",
@@ -41735,47 +41785,28 @@
         "temperature": true,
         "tool_call": true
       },
-      "gemini-3-pro-preview": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Gemini 3 Pro Preview 是由 github-copilot 提供的人工智能模型。",
-        "family": "gemini-pro",
-        "id": "gemini-3-pro-preview",
-        "knowledge": "2025-01",
-        "last_updated": "2025-11-18",
-        "limit": {
-          "context": 128000,
-          "input": 128000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini 3 Pro Preview",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-11-18",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "gemini-3.1-pro-preview": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18
+          },
+          "input": 2,
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Gemini 3.1 Pro Preview 是由 github-copilot 提供的人工智能模型。",
         "family": "gemini-pro",
@@ -41783,14 +41814,16 @@
         "knowledge": "2025-01",
         "last_updated": "2026-02-19",
         "limit": {
-          "context": 200000,
-          "input": 136000,
-          "output": 64000
+          "context": 1048576,
+          "output": 65536
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video",
+            "audio",
+            "pdf"
           ],
           "output": [
             "text"
@@ -41807,8 +41840,10 @@
       "gemini-3.5-flash": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.15,
+          "input": 1.5,
+          "input_audio": 1.5,
+          "output": 9
         },
         "description": "Gemini 3.5 Flash 是由 github-copilot 提供的人工智能模型。",
         "family": "gemini-flash",
@@ -41816,16 +41851,16 @@
         "knowledge": "2025-01",
         "last_updated": "2026-05-19",
         "limit": {
-          "context": 200000,
-          "input": 128000,
-          "output": 64000
+          "context": 1048576,
+          "output": 65536
         },
         "modalities": {
           "input": [
             "text",
             "image",
+            "video",
             "audio",
-            "video"
+            "pdf"
           ],
           "output": [
             "text"
@@ -41842,8 +41877,9 @@
       "gpt-4.1": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.5,
+          "input": 2,
+          "output": 8
         },
         "description": "GPT-4.1 是由 github-copilot 提供的人工智能模型。",
         "family": "gpt",
@@ -41851,14 +41887,14 @@
         "knowledge": "2024-04",
         "last_updated": "2025-04-14",
         "limit": {
-          "context": 128000,
-          "input": 64000,
-          "output": 16384
+          "context": 1047576,
+          "output": 32768
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -41868,152 +41904,25 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-04-14",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gpt-4o": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GPT-4o 是由 github-copilot 提供的人工智能模型。",
-        "family": "gpt",
-        "id": "gpt-4o",
-        "knowledge": "2023-09",
-        "last_updated": "2024-05-13",
-        "limit": {
-          "context": 128000,
-          "input": 64000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-4o",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-05-13",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gpt-5": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GPT-5 是由 github-copilot 提供的人工智能模型。",
-        "family": "gpt",
-        "id": "gpt-5",
-        "knowledge": "2024-10",
-        "last_updated": "2025-08-07",
-        "limit": {
-          "context": 128000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-08-07",
-        "status": "deprecated",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
       "gpt-5-mini": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 2
         },
-        "description": "GPT-5-mini 是由 github-copilot 提供的人工智能模型。",
+        "description": "GPT-5 Mini 是由 github-copilot 提供的人工智能模型。",
         "family": "gpt-mini",
         "id": "gpt-5-mini",
-        "knowledge": "2024-06",
-        "last_updated": "2025-08-13",
-        "limit": {
-          "context": 264000,
-          "input": 128000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5-mini",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-08-13",
-        "temperature": true,
-        "tool_call": true
-      },
-      "gpt-5.1": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GPT-5.1 是由 github-copilot 提供的人工智能模型。",
-        "family": "gpt",
-        "id": "gpt-5.1",
-        "knowledge": "2024-09-30",
-        "last_updated": "2025-11-13",
-        "limit": {
-          "context": 264000,
-          "input": 128000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5.1",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-11-13",
-        "status": "deprecated",
-        "temperature": false,
-        "tool_call": true
-      },
-      "gpt-5.1-codex": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GPT-5.1-Codex 是由 github-copilot 提供的人工智能模型。",
-        "family": "gpt-codex",
-        "id": "gpt-5.1-codex",
-        "knowledge": "2024-09-30",
-        "last_updated": "2025-11-13",
+        "knowledge": "2024-05-30",
+        "last_updated": "2025-08-07",
         "limit": {
           "context": 400000,
-          "input": 128000,
+          "input": 272000,
           "output": 128000
         },
         "modalities": {
@@ -42025,85 +41934,20 @@
             "text"
           ]
         },
-        "name": "GPT-5.1-Codex",
+        "name": "GPT-5 Mini",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-11-13",
-        "status": "deprecated",
-        "temperature": false,
-        "tool_call": true
-      },
-      "gpt-5.1-codex-max": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GPT-5.1-Codex-max 是由 github-copilot 提供的人工智能模型。",
-        "family": "gpt-codex",
-        "id": "gpt-5.1-codex-max",
-        "knowledge": "2024-09-30",
-        "last_updated": "2025-12-04",
-        "limit": {
-          "context": 400000,
-          "input": 128000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5.1-Codex-max",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-12-04",
-        "status": "deprecated",
-        "temperature": false,
-        "tool_call": true
-      },
-      "gpt-5.1-codex-mini": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GPT-5.1-Codex-mini 是由 github-copilot 提供的人工智能模型。",
-        "family": "gpt-codex",
-        "id": "gpt-5.1-codex-mini",
-        "knowledge": "2024-09-30",
-        "last_updated": "2025-11-13",
-        "limit": {
-          "context": 400000,
-          "input": 128000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5.1-Codex-mini",
-        "open_weights": false,
-        "reasoning": true,
-        "release_date": "2025-11-13",
-        "status": "deprecated",
+        "release_date": "2025-08-07",
+        "structured_output": true,
         "temperature": false,
         "tool_call": true
       },
       "gpt-5.2": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.175,
+          "input": 1.75,
+          "output": 14
         },
         "description": "GPT-5.2 是由 github-copilot 提供的人工智能模型。",
         "family": "gpt",
@@ -42128,16 +41972,18 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-11",
+        "structured_output": true,
         "temperature": false,
         "tool_call": true
       },
       "gpt-5.2-codex": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.175,
+          "input": 1.75,
+          "output": 14
         },
-        "description": "GPT-5.2-Codex 是由 github-copilot 提供的人工智能模型。",
+        "description": "GPT-5.2 Codex 是由 github-copilot 提供的人工智能模型。",
         "family": "gpt-codex",
         "id": "gpt-5.2-codex",
         "knowledge": "2025-08-31",
@@ -42150,30 +41996,33 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "GPT-5.2-Codex",
+        "name": "GPT-5.2 Codex",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2025-12-11",
+        "structured_output": true,
         "temperature": false,
         "tool_call": true
       },
       "gpt-5.3-codex": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.175,
+          "input": 1.75,
+          "output": 14
         },
-        "description": "GPT-5.3-Codex 是由 github-copilot 提供的人工智能模型。",
+        "description": "GPT-5.3 Codex 是由 github-copilot 提供的人工智能模型。",
         "family": "gpt-codex",
         "id": "gpt-5.3-codex",
         "knowledge": "2025-08-31",
-        "last_updated": "2026-02-24",
+        "last_updated": "2026-02-05",
         "limit": {
           "context": 400000,
           "input": 272000,
@@ -42182,39 +42031,75 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "GPT-5.3-Codex",
+        "name": "GPT-5.3 Codex",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2026-02-24",
+        "release_date": "2026-02-05",
+        "structured_output": true,
         "temperature": false,
         "tool_call": true
       },
       "gpt-5.4": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.25,
+          "context_over_200k": {
+            "cache_read": 0.5,
+            "input": 5,
+            "output": 22.5
+          },
+          "input": 2.5,
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "GPT-5.4 是由 github-copilot 提供的人工智能模型。",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 0.5,
+                "input": 5,
+                "output": 30
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "gpt",
         "id": "gpt-5.4",
         "knowledge": "2025-08-31",
         "last_updated": "2026-03-05",
         "limit": {
-          "context": 400000,
-          "input": 272000,
+          "context": 1050000,
+          "input": 922000,
           "output": 128000
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -42224,16 +42109,34 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-05",
+        "structured_output": true,
         "temperature": false,
         "tool_call": true
       },
       "gpt-5.4-mini": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 4.5
         },
-        "description": "GPT-5.4 Mini 是由 github-copilot 提供的人工智能模型。",
+        "description": "GPT-5.4 mini 是由 github-copilot 提供的人工智能模型。",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 0.15,
+                "input": 1.5,
+                "output": 9
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "gpt-mini",
         "id": "gpt-5.4-mini",
         "knowledge": "2025-08-31",
@@ -42252,7 +42155,7 @@
             "text"
           ]
         },
-        "name": "GPT-5.4 Mini",
+        "name": "GPT-5.4 mini",
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-17",
@@ -42260,17 +42163,18 @@
         "temperature": false,
         "tool_call": true
       },
-      "gpt-5.5": {
-        "attachment": false,
+      "gpt-5.4-nano": {
+        "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.02,
+          "input": 0.2,
+          "output": 1.25
         },
-        "description": "GPT-5.5 是由 github-copilot 提供的人工智能模型。",
-        "family": "gpt",
-        "id": "gpt-5.5",
+        "description": "GPT-5.4 nano 是由 github-copilot 提供的人工智能模型。",
+        "family": "gpt-nano",
+        "id": "gpt-5.4-nano",
         "knowledge": "2025-08-31",
-        "last_updated": "2026-04-22",
+        "last_updated": "2026-03-17",
         "limit": {
           "context": 400000,
           "input": 272000,
@@ -42285,42 +42189,113 @@
             "text"
           ]
         },
-        "name": "GPT-5.5",
+        "name": "GPT-5.4 nano",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2026-04-22",
+        "release_date": "2026-03-17",
+        "structured_output": true,
         "temperature": false,
         "tool_call": true
       },
-      "grok-code-fast-1": {
-        "attachment": false,
+      "gpt-5.5": {
+        "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.5,
+          "context_over_200k": {
+            "cache_read": 1,
+            "input": 10,
+            "output": 45
+          },
+          "input": 5,
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
-        "description": "Grok Code Fast 1 是由 github-copilot 提供的人工智能模型。",
-        "family": "grok",
-        "id": "grok-code-fast-1",
-        "knowledge": "2025-08",
-        "last_updated": "2025-08-27",
+        "description": "GPT-5.5 是由 github-copilot 提供的人工智能模型。",
+        "experimental": {
+          "modes": {
+            "fast": {
+              "cost": {
+                "cache_read": 1.25,
+                "input": 12.5,
+                "output": 75
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
+        "family": "gpt",
+        "id": "gpt-5.5",
+        "knowledge": "2025-12-01",
+        "last_updated": "2026-04-23",
         "limit": {
-          "context": 128000,
-          "input": 128000,
-          "output": 64000
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Grok Code Fast 1",
+        "name": "GPT-5.5",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2025-08-27",
-        "temperature": true,
+        "release_date": "2026-04-23",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "raptor-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "output": 2
+        },
+        "description": "Raptor mini 是由 github-copilot 提供的人工智能模型。",
+        "family": "gpt-mini",
+        "id": "raptor-mini",
+        "knowledge": "2024-05-30",
+        "last_updated": "2025-08-07",
+        "limit": {
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Raptor mini",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2025-08-07",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       }
     },
@@ -67253,8 +67228,8 @@
       "deepseek-r1-0528": {
         "attachment": false,
         "cost": {
-          "input": 0.8,
-          "output": 2.4
+          "input": 0.55,
+          "output": 2.19
         },
         "description": "DeepSeek R1 (0528) 是由 llmgateway 提供的人工智能模型。",
         "family": "deepseek",
@@ -67284,7 +67259,7 @@
       "deepseek-v3.1": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.11,
+          "cache_read": 0.07,
           "input": 0.56,
           "output": 1.68
         },
@@ -67316,7 +67291,7 @@
       "deepseek-v3.2": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.03,
+          "cache_read": 0.056,
           "input": 0.28,
           "output": 0.42
         },
@@ -68315,7 +68290,7 @@
       "glm-4.6v-flashx": {
         "attachment": true,
         "cost": {
-          "cache_read": 0,
+          "cache_read": 0.004,
           "input": 0.04,
           "output": 0.4
         },
@@ -69566,8 +69541,8 @@
       "gpt-oss-120b": {
         "attachment": false,
         "cost": {
-          "input": 0.15,
-          "output": 0.75
+          "input": 0.05,
+          "output": 0.25
         },
         "description": "GPT OSS 120B 是由 llmgateway 提供的人工智能模型。",
         "family": "gpt-oss",
@@ -69596,8 +69571,8 @@
       "gpt-oss-20b": {
         "attachment": false,
         "cost": {
-          "input": 0.1,
-          "output": 0.5
+          "input": 0.04,
+          "output": 0.15
         },
         "description": "GPT OSS 20B 是由 llmgateway 提供的人工智能模型。",
         "family": "gpt-oss",
@@ -69990,9 +69965,9 @@
       "kimi-k2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.5,
-          "input": 1,
-          "output": 3
+          "cache_read": 0.12,
+          "input": 0.6,
+          "output": 2.5
         },
         "description": "Kimi K2 是由 llmgateway 提供的人工智能模型。",
         "family": "kimi",
@@ -71315,8 +71290,8 @@
       "qwen-coder-plus": {
         "attachment": false,
         "cost": {
-          "input": 0.5,
-          "output": 1
+          "input": 0.502,
+          "output": 1.004
         },
         "description": "Qwen Coder Plus 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -71405,8 +71380,8 @@
       "qwen-max-latest": {
         "attachment": true,
         "cost": {
-          "input": 1.6,
-          "output": 6.4
+          "input": 0.345,
+          "output": 1.377
         },
         "description": "Qwen Max Latest 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -71503,8 +71478,8 @@
       "qwen-plus-latest": {
         "attachment": true,
         "cost": {
-          "input": 0.3,
-          "output": 0.9
+          "input": 0.115,
+          "output": 0.287
         },
         "description": "Qwen Plus Latest 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -71627,8 +71602,8 @@
       "qwen2-5-vl-32b-instruct": {
         "attachment": true,
         "cost": {
-          "input": 0.3,
-          "output": 0.3
+          "input": 1.4,
+          "output": 4.2
         },
         "description": "Qwen2.5 VL 32B Instruct 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -71719,8 +71694,8 @@
       "qwen3-235b-a22b-fp8": {
         "attachment": false,
         "cost": {
-          "input": 0.5,
-          "output": 2.5
+          "input": 0.2,
+          "output": 0.8
         },
         "description": "Qwen3 235B A22B FP8 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -71749,8 +71724,8 @@
       "qwen3-235b-a22b-instruct-2507": {
         "attachment": false,
         "cost": {
-          "input": 0.8,
-          "output": 2.4
+          "input": 0.09,
+          "output": 0.58
         },
         "description": "Qwen3 235B A22B Instruct (2507) 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -71779,8 +71754,8 @@
       "qwen3-235b-a22b-thinking-2507": {
         "attachment": false,
         "cost": {
-          "input": 0.8,
-          "output": 2.4
+          "input": 0.2,
+          "output": 0.6
         },
         "description": "Qwen3 235B A22B Thinking (2507) 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -71840,7 +71815,7 @@
         "attachment": false,
         "cost": {
           "input": 0.1,
-          "output": 0.1
+          "output": 0.3
         },
         "description": "Qwen3 30B A3B Instruct (2507) 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -71961,7 +71936,7 @@
         "attachment": false,
         "cost": {
           "input": 0.03,
-          "output": 0.05
+          "output": 0.03
         },
         "description": "Qwen3 4B FP8 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -72080,8 +72055,8 @@
       "qwen3-coder-next": {
         "attachment": false,
         "cost": {
-          "input": 0.8,
-          "output": 4
+          "input": 0.108,
+          "output": 0.675
         },
         "description": "Qwen3 Coder Next 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -72170,9 +72145,9 @@
       "qwen3-max-2026-01-23": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.6,
-          "input": 3,
-          "output": 15
+          "cache_read": 0.072,
+          "input": 0.359,
+          "output": 1.434
         },
         "description": "Qwen3 Max (2026-01-23) 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -72262,8 +72237,8 @@
       "qwen3-vl-235b-a22b-instruct": {
         "attachment": true,
         "cost": {
-          "input": 0.8,
-          "output": 2.4
+          "input": 0.3,
+          "output": 1.5
         },
         "description": "Qwen3 VL 235B A22B Instruct 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -72293,8 +72268,8 @@
       "qwen3-vl-235b-a22b-thinking": {
         "attachment": true,
         "cost": {
-          "input": 0.8,
-          "output": 2.4
+          "input": 0.5,
+          "output": 2
         },
         "description": "Qwen3 VL 235B A22B Thinking 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -72324,8 +72299,8 @@
       "qwen3-vl-30b-a3b-instruct": {
         "attachment": true,
         "cost": {
-          "input": 0.1,
-          "output": 0.1
+          "input": 0.2,
+          "output": 0.7
         },
         "description": "Qwen3 VL 30B A3B Instruct 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -72355,8 +72330,8 @@
       "qwen3-vl-30b-a3b-thinking": {
         "attachment": true,
         "cost": {
-          "input": 0.1,
-          "output": 0.1
+          "input": 0.2,
+          "output": 1
         },
         "description": "Qwen3 VL 30B A3B Thinking 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -72386,8 +72361,8 @@
       "qwen3-vl-8b-instruct": {
         "attachment": true,
         "cost": {
-          "input": 0.1,
-          "output": 0.1
+          "input": 0.08,
+          "output": 0.5
         },
         "description": "Qwen3 VL 8B Instruct 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -72417,9 +72392,9 @@
       "qwen3-vl-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.01,
-          "input": 0.05,
-          "output": 0.4
+          "cache_read": 0.0044,
+          "input": 0.022,
+          "output": 0.215
         },
         "description": "Qwen3 VL Flash 是由 llmgateway 提供的人工智能模型。",
         "family": "qwen",
@@ -72756,7 +72731,7 @@
       "seed-1-6-flash-250715": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.01,
+          "cache_read": 0.015,
           "input": 0.07,
           "output": 0.3
         },
@@ -124535,15 +124510,45 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.5-397b-a17b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.71,
+          "output": 4.25
+        },
+        "description": "Qwen3.5-397B-A17B 是由 ovhcloud 提供的人工智能模型。",
+        "id": "qwen3.5-397b-a17b",
+        "last_updated": "2026-05-18",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5-397B-A17B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-05-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3.5-9b": {
         "attachment": true,
         "cost": {
-          "input": 0.1,
-          "output": 0.15
+          "input": 0.12,
+          "output": 0.18
         },
         "description": "Qwen3.5-9B 是由 ovhcloud 提供的人工智能模型。",
         "id": "qwen3.5-9b",
-        "last_updated": "2026-02-15",
+        "last_updated": "2026-04-22",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -124559,11 +124564,89 @@
         },
         "name": "Qwen3.5-9B",
         "open_weights": true,
-        "reasoning": false,
-        "release_date": "2026-02-15",
+        "reasoning": true,
+        "release_date": "2026-04-22",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
+      },
+      "qwen3.6-27b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.47,
+          "output": 3.19
+        },
+        "description": "Qwen3.6-27B 是由 ovhcloud 提供的人工智能模型。",
+        "id": "qwen3.6-27b",
+        "last_updated": "2026-06-01",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6-27B",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-06-01",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3guard-gen-0.6b": {
+        "attachment": false,
+        "description": "Qwen3Guard-Gen-0.6B 是由 ovhcloud 提供的人工智能模型。",
+        "id": "qwen3guard-gen-0.6b",
+        "last_updated": "2026-01-22",
+        "limit": {
+          "context": 32768,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3Guard-Gen-0.6B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-01-22",
+        "temperature": true,
+        "tool_call": false
+      },
+      "qwen3guard-gen-8b": {
+        "attachment": false,
+        "description": "Qwen3Guard-Gen-8B 是由 ovhcloud 提供的人工智能模型。",
+        "id": "qwen3guard-gen-8b",
+        "last_updated": "2026-01-22",
+        "limit": {
+          "context": 32768,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3Guard-Gen-8B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-01-22",
+        "temperature": true,
+        "tool_call": false
       }
     },
     "name": "OVHcloud AI Endpoints",
