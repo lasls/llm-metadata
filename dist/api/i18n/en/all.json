@@ -51500,14 +51500,14 @@
       "minimax/minimax-m2.5": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.14,
-          "output": 0.56
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "MiniMax M2.5 is an AI model provided by hpc-ai.",
         "family": "minimax-m2.5",
         "id": "minimax/minimax-m2.5",
-        "last_updated": "2026-03-25",
+        "last_updated": "2026-06-01",
         "limit": {
           "context": 1000000,
           "output": 131072
@@ -51531,9 +51531,9 @@
       "moonshotai/kimi-k2.5": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.03,
-          "input": 0.21,
-          "output": 1
+          "cache_read": 0.05,
+          "input": 0.3,
+          "output": 1.5
         },
         "description": "Kimi K2.5 is an AI model provided by hpc-ai.",
         "family": "kimi",
@@ -51542,7 +51542,7 @@
           "field": "reasoning_content"
         },
         "knowledge": "2025-01-01",
-        "last_updated": "2026-03-25",
+        "last_updated": "2026-06-01",
         "limit": {
           "context": 262144,
           "output": 262144
@@ -51568,9 +51568,9 @@
       "zai-org/glm-5.1": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.12,
-          "input": 0.66,
-          "output": 2
+          "cache_read": 0.133,
+          "input": 0.615,
+          "output": 2.46
         },
         "description": "GLM 5.1 is an AI model provided by hpc-ai.",
         "family": "glm",
@@ -51578,7 +51578,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-04-08",
+        "last_updated": "2026-06-01",
         "limit": {
           "context": 202000,
           "output": 202000
@@ -104660,6 +104660,34 @@
         "release_date": "2026-03-18",
         "tool_call": true
       },
+      "minimax-m3": {
+        "attachment": false,
+        "description": "minimax-m3 is an AI model provided by ollama-cloud.",
+        "family": "minimax-m3",
+        "id": "minimax-m3",
+        "knowledge": "2025-01",
+        "last_updated": "2026-05-31",
+        "limit": {
+          "context": 512000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "minimax-m3",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-05-31",
+        "temperature": true,
+        "tool_call": true
+      },
       "ministral-3:14b": {
         "attachment": true,
         "description": "ministral-3:14b is an AI model provided by ollama-cloud.",
@@ -111584,8 +111612,8 @@
       "deepseek/deepseek-chat": {
         "attachment": false,
         "cost": {
-          "input": 0.2288,
-          "output": 0.9144
+          "input": 0.2002,
+          "output": 0.8001
         },
         "description": "DeepSeek Chat is an AI model provided by openrouter.",
         "family": "deepseek",
@@ -111836,9 +111864,8 @@
       "deepseek/deepseek-v3.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0252,
-          "input": 0.252,
-          "output": 0.378
+          "input": 0.2288,
+          "output": 0.3432
         },
         "description": "DeepSeek V3.2 is an AI model provided by openrouter.",
         "family": "deepseek",
@@ -111846,8 +111873,8 @@
         "knowledge": "2024-07",
         "last_updated": "2025-12-01",
         "limit": {
-          "context": 131072,
-          "output": 65536
+          "context": 128000,
+          "output": 64000
         },
         "modalities": {
           "input": [
@@ -111992,78 +112019,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-12-07",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "google/gemini-2.0-flash-001": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.025,
-          "cache_write": 0.083333,
-          "input": 0.1,
-          "output": 0.4
-        },
-        "description": "Gemini 2.0 Flash is an AI model provided by openrouter.",
-        "family": "gemini-flash",
-        "id": "google/gemini-2.0-flash-001",
-        "knowledge": "2024-08-31",
-        "last_updated": "2025-02-05",
-        "limit": {
-          "context": 1048576,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini 2.0 Flash",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-02-05",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "google/gemini-2.0-flash-lite-001": {
-        "attachment": true,
-        "cost": {
-          "input": 0.075,
-          "output": 0.3
-        },
-        "description": "Gemini 2.0 Flash Lite is an AI model provided by openrouter.",
-        "family": "gemini",
-        "id": "google/gemini-2.0-flash-lite-001",
-        "knowledge": "2024-08-31",
-        "last_updated": "2025-02-25",
-        "limit": {
-          "context": 1048576,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf",
-            "audio",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini 2.0 Flash Lite",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-02-25",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -114198,6 +114153,39 @@
         "reasoning": true,
         "release_date": "2026-03-18",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax/minimax-m3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M3 is an AI model provided by openrouter.",
+        "family": "minimax-m3",
+        "id": "minimax/minimax-m3",
+        "last_updated": "2026-05-31",
+        "limit": {
+          "context": 524288,
+          "output": 512000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M3",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-05-31",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -120045,9 +120033,9 @@
       "tencent/hy3-preview": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.021,
-          "input": 0.063,
-          "output": 0.21
+          "cache_read": 0.029,
+          "input": 0.066,
+          "output": 0.26
         },
         "description": "Hy3 preview is an AI model provided by openrouter.",
         "family": "Hy",
@@ -120842,7 +120830,7 @@
         "cost": {
           "cache_read": 0.12,
           "input": 0.6,
-          "output": 1.92
+          "output": 2.08
         },
         "description": "GLM-5 is an AI model provided by openrouter.",
         "family": "glm",
@@ -120853,7 +120841,7 @@
         "last_updated": "2026-02-11",
         "limit": {
           "context": 202752,
-          "output": 131000
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -120921,7 +120909,7 @@
         "last_updated": "2026-03-27",
         "limit": {
           "context": 202752,
-          "output": 202800
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -146240,6 +146228,37 @@
         "open_weights": false,
         "reasoning": true,
         "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
+      "minimax-m3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax M3 is an AI model provided by venice.",
+        "family": "minimax-m3",
+        "id": "minimax-m3",
+        "last_updated": "2026-06-01",
+        "limit": {
+          "context": 500000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M3",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-06-01",
         "temperature": true,
         "tool_call": true
       },
