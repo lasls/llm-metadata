@@ -8981,6 +8981,12 @@
         "cost": {
           "cache_read": 0.05,
           "cache_write": 0.625,
+          "context_over_200k": {
+            "cache_read": 0.2,
+            "cache_write": 2.5,
+            "input": 2,
+            "output": 6
+          },
           "input": 0.5,
           "output": 3,
           "tiers": [
@@ -8990,7 +8996,7 @@
               "input": 2,
               "output": 6,
               "tier": {
-                "size": 128000,
+                "size": 256000,
                 "type": "context"
               }
             }
@@ -9003,7 +9009,7 @@
         "last_updated": "2026-06-04",
         "limit": {
           "context": 1000000,
-          "output": 16384
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -21923,6 +21929,78 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-12-01",
+        "temperature": true,
+        "tool_call": false
+      },
+      "deepseek-v4-flash": {
+        "attachment": false,
+        "cost": {
+          "input": 1.74,
+          "output": 3.48
+        },
+        "description": "DeepSeek-V4-Flash is an AI model provided by azure.",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4-flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V4-Flash",
+        "open_weights": true,
+        "provider": {
+          "api": "https://${AZURE_RESOURCE_NAME}.services.ai.azure.com/models",
+          "npm": "@ai-sdk/openai-compatible",
+          "shape": "completions"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": false
+      },
+      "deepseek-v4-pro": {
+        "attachment": false,
+        "cost": {
+          "input": 0.19,
+          "output": 0.51
+        },
+        "description": "DeepSeek-V4-Pro is an AI model provided by azure.",
+        "family": "deepseek-thinking",
+        "id": "deepseek-v4-pro",
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V4-Pro",
+        "open_weights": true,
+        "provider": {
+          "api": "https://${AZURE_RESOURCE_NAME}.services.ai.azure.com/models",
+          "npm": "@ai-sdk/openai-compatible",
+          "shape": "completions"
+        },
+        "reasoning": true,
+        "release_date": "2026-04-24",
+        "structured_output": true,
         "temperature": true,
         "tool_call": false
       },
@@ -104993,6 +105071,7 @@
         "name": "ERNIE-4.5-21B-A3B-Thinking",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-09-19",
         "temperature": true,
         "tool_call": false
@@ -105051,6 +105130,7 @@
         "name": "ERNIE 4.5 VL 28B A3B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-06-30",
         "temperature": true,
         "tool_call": true
@@ -105081,6 +105161,7 @@
         "name": "ERNIE-4.5-VL-28B-A3B-Thinking",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-11-26",
         "structured_output": true,
         "temperature": true,
@@ -105111,6 +105192,7 @@
         "name": "ERNIE 4.5 VL 424B A47B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-06-30",
         "temperature": true,
         "tool_call": false
@@ -105228,6 +105310,7 @@
         "name": "DeepSeek R1 0528",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-05-28",
         "structured_output": true,
         "temperature": true,
@@ -105257,6 +105340,7 @@
         "name": "DeepSeek R1 0528 Qwen3 8B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-05-29",
         "temperature": true,
         "tool_call": false
@@ -105286,6 +105370,7 @@
         "name": "DeepSeek R1 Distill LLama 70B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-01-27",
         "structured_output": true,
         "temperature": true,
@@ -105373,6 +105458,7 @@
         "name": "DeepSeek R1 (Turbo)\t",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-03-05",
         "temperature": true,
         "tool_call": true
@@ -105463,6 +105549,11 @@
         "name": "DeepSeek V3.1",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2025-08-21",
         "structured_output": true,
         "temperature": true,
@@ -105494,6 +105585,11 @@
         "name": "Deepseek V3.1 Terminus",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2025-09-22",
         "structured_output": true,
         "temperature": true,
@@ -105528,6 +105624,11 @@
         "name": "Deepseek V3.2",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2025-12-01",
         "structured_output": true,
         "temperature": true,
@@ -105557,6 +105658,11 @@
         "name": "Deepseek V3.2 Exp",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2025-09-29",
         "structured_output": true,
         "temperature": true,
@@ -105592,6 +105698,21 @@
         "name": "DeepSeek V4 Flash",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
         "release_date": "2026-04-24",
         "structured_output": true,
         "temperature": true,
@@ -105627,6 +105748,20 @@
         "name": "DeepSeek V4 Pro",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
         "release_date": "2026-04-24",
         "structured_output": true,
         "temperature": true,
@@ -105718,6 +105853,11 @@
         "name": "Gemma 4 26B A4B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-04-02",
         "structured_output": true,
         "temperature": true,
@@ -105749,6 +105889,11 @@
         "name": "Gemma 4 31B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-04-02",
         "structured_output": true,
         "temperature": true,
@@ -105869,6 +106014,7 @@
         "name": "Ring-2.6-1T",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2026-05-08",
         "structured_output": true,
         "temperature": true,
@@ -106166,6 +106312,7 @@
         "name": "MiniMax-M2",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-10-27",
         "temperature": true,
         "tool_call": true
@@ -106233,6 +106380,7 @@
         "name": "MiniMax M2.5",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2026-02-12",
         "structured_output": true,
         "temperature": true,
@@ -106267,6 +106415,7 @@
         "name": "MiniMax M2.5 Highspeed",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2026-02-12",
         "structured_output": true,
         "temperature": true,
@@ -106301,6 +106450,7 @@
         "name": "MiniMax M2.7",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2026-03-18",
         "structured_output": true,
         "temperature": true,
@@ -106333,6 +106483,7 @@
         "name": "MiniMax-M2.7-highspeed",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2026-03-18",
         "structured_output": true,
         "temperature": true,
@@ -106363,6 +106514,7 @@
         "name": "MiniMax M1",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-06-17",
         "temperature": true,
         "tool_call": true
@@ -106439,7 +106591,7 @@
         "last_updated": "2025-07-11",
         "limit": {
           "context": 131072,
-          "output": 131072
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -106453,7 +106605,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-11",
-        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -106485,6 +106636,7 @@
         "name": "Kimi K2 Thinking",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-11-07",
         "structured_output": true,
         "temperature": true,
@@ -106522,6 +106674,11 @@
         "name": "Kimi K2.5",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-01-27",
         "structured_output": true,
         "temperature": true,
@@ -106559,6 +106716,11 @@
         "name": "Kimi K2.6",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-04-21",
         "structured_output": true,
         "temperature": true,
@@ -106618,6 +106780,16 @@
         "name": "OpenAI GPT OSS 120B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2025-08-06",
         "structured_output": true,
         "temperature": true,
@@ -106648,6 +106820,16 @@
         "name": "OpenAI: GPT OSS 20B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2025-08-06",
         "structured_output": true,
         "temperature": true,
@@ -106825,6 +107007,7 @@
         "name": "Qwen3 235B A22B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-04-29",
         "temperature": true,
         "tool_call": false
@@ -106886,6 +107069,7 @@
         "name": "Qwen3 235B A22b Thinking 2507",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-07-25",
         "temperature": true,
         "tool_call": true
@@ -106914,6 +107098,7 @@
         "name": "Qwen3 30B A3B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-04-29",
         "temperature": true,
         "tool_call": false
@@ -106942,6 +107127,7 @@
         "name": "Qwen3 32B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-04-29",
         "temperature": true,
         "tool_call": false
@@ -106970,6 +107156,7 @@
         "name": "Qwen3 4B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-04-29",
         "temperature": true,
         "tool_call": false
@@ -106998,6 +107185,7 @@
         "name": "Qwen3 8B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-04-29",
         "temperature": true,
         "tool_call": false
@@ -107176,6 +107364,7 @@
         "name": "Qwen3 Next 80B A3B Thinking",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-09-10",
         "structured_output": true,
         "temperature": true,
@@ -107247,6 +107436,7 @@
         "name": "Qwen3 Omni 30B A3B Thinking",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-09-24",
         "structured_output": true,
         "temperature": true,
@@ -107309,6 +107499,7 @@
         "name": "Qwen3 VL 235B A22B Thinking",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-09-24",
         "temperature": true,
         "tool_call": false
@@ -107433,6 +107624,11 @@
         "name": "Qwen3.5-122B-A10B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-02-26",
         "structured_output": true,
         "temperature": true,
@@ -107465,6 +107661,11 @@
         "name": "Qwen3.5-27B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-02-26",
         "structured_output": true,
         "temperature": true,
@@ -107497,6 +107698,11 @@
         "name": "Qwen3.5-35B-A3B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-02-26",
         "structured_output": true,
         "temperature": true,
@@ -107529,6 +107735,11 @@
         "name": "Qwen3.5-397B-A17B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-02-17",
         "structured_output": true,
         "temperature": true,
@@ -107561,6 +107772,11 @@
         "name": "Qwen3.7-Max",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-05-21",
         "structured_output": true,
         "temperature": true,
@@ -107707,6 +107923,7 @@
         "name": "XiaomiMiMo/MiMo-V2-Flash",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-12-19",
         "structured_output": true,
         "temperature": true,
@@ -107758,6 +107975,7 @@
         "name": "MiMo-V2-Pro",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2026-03-18",
         "structured_output": true,
         "temperature": true,
@@ -107809,6 +108027,7 @@
         "name": "MiMo-V2.5-Pro",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2026-04-22",
         "structured_output": true,
         "temperature": true,
@@ -107872,6 +108091,11 @@
         "name": "GLM-4.5",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2025-07-28",
         "temperature": true,
         "tool_call": true
@@ -107902,6 +108126,11 @@
         "name": "GLM 4.5 Air",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2025-10-13",
         "temperature": true,
         "tool_call": true
@@ -107935,6 +108164,11 @@
         "name": "GLM 4.5V",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2025-08-11",
         "structured_output": true,
         "temperature": true,
@@ -107969,6 +108203,11 @@
         "name": "GLM 4.6",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2025-09-30",
         "structured_output": true,
         "temperature": true,
@@ -108003,6 +108242,11 @@
         "name": "GLM 4.6V",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2025-12-08",
         "structured_output": true,
         "temperature": true,
@@ -108037,6 +108281,11 @@
         "name": "GLM-4.7",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2025-12-22",
         "structured_output": true,
         "temperature": true,
@@ -108069,6 +108318,11 @@
         "name": "GLM-4.7-Flash",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-01-19",
         "structured_output": true,
         "temperature": true,
@@ -108103,6 +108357,11 @@
         "name": "GLM-5",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-02-11",
         "structured_output": true,
         "temperature": true,
@@ -108137,6 +108396,11 @@
         "name": "GLM-5.1",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-03-27",
         "structured_output": true,
         "temperature": true,
@@ -118047,6 +118311,41 @@
         "temperature": true,
         "tool_call": true
       },
+      "anthropic/claude-fable-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 50
+        },
+        "description": "Claude Fable 5 is an AI model provided by openrouter.",
+        "family": "claude-fable",
+        "id": "anthropic/claude-fable-5",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-06-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Fable 5",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-06-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "anthropic/claude-haiku-4.5": {
         "attachment": true,
         "cost": {
@@ -118611,36 +118910,6 @@
           ]
         },
         "name": "Coder Large",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-05-05",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "arcee-ai/maestro-reasoning": {
-        "attachment": false,
-        "cost": {
-          "input": 0.9,
-          "output": 3.3
-        },
-        "description": "Maestro Reasoning is an AI model provided by openrouter.",
-        "id": "arcee-ai/maestro-reasoning",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-05-05",
-        "limit": {
-          "context": 131072,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Maestro Reasoning",
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-05-05",
@@ -121605,8 +121874,9 @@
       "minimax/minimax-m2.5": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.05,
           "input": 0.15,
-          "output": 1.15
+          "output": 0.9
         },
         "description": "MiniMax-M2.5 is an AI model provided by openrouter.",
         "family": "minimax",
@@ -121638,16 +121908,17 @@
       "minimax/minimax-m2.7": {
         "attachment": false,
         "cost": {
-          "input": 0.279,
-          "output": 1.2
+          "cache_read": 0.054,
+          "input": 0.27,
+          "output": 1.08
         },
         "description": "MiniMax-M2.7 is an AI model provided by openrouter.",
         "family": "minimax",
         "id": "minimax/minimax-m2.7",
         "last_updated": "2026-03-18",
         "limit": {
-          "context": 196608,
-          "output": 196608
+          "context": 204800,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -128078,37 +128349,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "z-ai/glm-4-32b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.1,
-          "output": 0.1
-        },
-        "description": "GLM 4 32B  is an AI model provided by openrouter.",
-        "family": "glm",
-        "id": "z-ai/glm-4-32b",
-        "knowledge": "2024-06-30",
-        "last_updated": "2025-07-24",
-        "limit": {
-          "context": 128000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 4 32B ",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-07-24",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "z-ai/glm-4.5": {
         "attachment": false,
         "cost": {
@@ -128166,37 +128406,6 @@
           ]
         },
         "name": "GLM-4.5-Air",
-        "open_weights": true,
-        "reasoning": true,
-        "release_date": "2025-07-28",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "z-ai/glm-4.5-air:free": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "GLM 4.5 Air (free) is an AI model provided by openrouter.",
-        "family": "glm-air",
-        "id": "z-ai/glm-4.5-air:free",
-        "knowledge": "2025-04",
-        "last_updated": "2025-07-28",
-        "limit": {
-          "context": 131072,
-          "output": 96000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 4.5 Air (free)",
         "open_weights": true,
         "reasoning": true,
         "release_date": "2025-07-28",
@@ -128272,7 +128481,7 @@
       "z-ai/glm-4.6v": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.05,
+          "cache_read": 0.055,
           "input": 0.3,
           "output": 0.9
         },
@@ -128283,7 +128492,7 @@
         "last_updated": "2025-12-08",
         "limit": {
           "context": 131072,
-          "output": 24000
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -128422,7 +128631,7 @@
         },
         "last_updated": "2026-03-16",
         "limit": {
-          "context": 202752,
+          "context": 262144,
           "output": 131072
         },
         "modalities": {
@@ -128475,40 +128684,38 @@
         "temperature": true,
         "tool_call": true
       },
-      "z-ai/glm-5v-turbo": {
+      "~anthropic/claude-fable-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.24,
-          "input": 1.2,
-          "output": 4
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 50
         },
-        "description": "GLM-5V-Turbo is an AI model provided by openrouter.",
-        "family": "glm",
-        "id": "z-ai/glm-5v-turbo",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-04-01",
+        "description": "Claude Fable Latest is an AI model provided by openrouter.",
+        "family": "claude-fable",
+        "id": "~anthropic/claude-fable-latest",
+        "last_updated": "2026-06-09",
         "limit": {
-          "context": 202752,
-          "output": 131072
+          "context": 1000000,
+          "output": 128000
         },
         "modalities": {
           "input": [
-            "image",
             "text",
-            "video"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "GLM-5V-Turbo",
+        "name": "Claude Fable Latest",
         "open_weights": false,
         "reasoning": true,
-        "release_date": "2026-04-01",
-        "structured_output": false,
-        "temperature": true,
+        "release_date": "2026-06-09",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       },
       "~anthropic/claude-haiku-latest": {
@@ -166160,6 +166367,46 @@
         "release_date": "2026-04-22",
         "temperature": true,
         "tool_call": true
+      },
+      "mimo-v2.5-pro-ultraspeed": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.0108,
+          "input": 1.305,
+          "output": 2.61
+        },
+        "description": "MiMo-V2.5-Pro-UltraSpeed is an AI model provided by xiaomi.",
+        "family": "mimo",
+        "id": "mimo-v2.5-pro-ultraspeed",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2024-12",
+        "last_updated": "2026-06-09",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5-Pro-UltraSpeed",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-06-08",
+        "status": "beta",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Xiaomi",
@@ -167850,6 +168097,44 @@
         "reasoning": true,
         "release_date": "2025-02-24",
         "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-fable-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 50
+        },
+        "description": "Claude Fable 5 is an AI model provided by zenmux.",
+        "family": "claude-fable",
+        "id": "anthropic/claude-fable-5",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-06-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Fable 5",
+        "open_weights": false,
+        "provider": {
+          "api": "https://zenmux.ai/api/anthropic/v1",
+          "npm": "@ai-sdk/anthropic"
+        },
+        "reasoning": true,
+        "release_date": "2026-06-09",
+        "temperature": false,
         "tool_call": true
       },
       "anthropic/claude-haiku-4.5": {
