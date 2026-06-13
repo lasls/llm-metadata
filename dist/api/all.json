@@ -45857,6 +45857,12 @@
         "name": "Claude Haiku 4.5",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "min": 1024,
+            "type": "budget_tokens"
+          }
+        ],
         "release_date": "2025-10-15",
         "temperature": true,
         "tool_call": true
@@ -45891,6 +45897,21 @@
         "name": "Claude Opus 4.6",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          },
+          {
+            "min": 1024,
+            "type": "budget_tokens"
+          }
+        ],
         "release_date": "2026-02-05",
         "temperature": true,
         "tool_call": true
@@ -45925,6 +45946,18 @@
         "name": "Claude Opus 4.7",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-04-16",
         "temperature": false,
         "tool_call": true
@@ -45958,6 +45991,18 @@
         "name": "Claude Opus 4.8",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-05-28",
         "temperature": false,
         "tool_call": true
@@ -45992,6 +46037,21 @@
         "name": "Claude Sonnet 4.6",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          },
+          {
+            "min": 1024,
+            "type": "budget_tokens"
+          }
+        ],
         "release_date": "2026-02-17",
         "temperature": true,
         "tool_call": true
@@ -46031,6 +46091,18 @@
           "npm": "@ai-sdk/openai-compatible"
         },
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
         "release_date": "2026-02-05",
         "structured_output": true,
         "temperature": false,
@@ -46071,6 +46143,18 @@
           "npm": "@ai-sdk/openai-compatible"
         },
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
         "release_date": "2026-03-05",
         "structured_output": true,
         "temperature": false,
@@ -46110,6 +46194,18 @@
           "npm": "@ai-sdk/openai-compatible"
         },
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
         "release_date": "2026-03-17",
         "structured_output": true,
         "temperature": false,
@@ -46150,6 +46246,18 @@
           "npm": "@ai-sdk/openai-compatible"
         },
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
         "release_date": "2026-04-23",
         "structured_output": true,
         "temperature": false,
@@ -50953,6 +51061,7 @@
         "name": "Nano Banana",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-08-26",
         "temperature": true,
         "tool_call": false
@@ -51199,6 +51308,7 @@
         "name": "Nano Banana Pro",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2025-11-20",
         "temperature": true,
         "tool_call": false
@@ -51294,6 +51404,15 @@
         "name": "Nano Banana 2",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2026-02-26",
         "temperature": true,
         "tool_call": false
@@ -51378,6 +51497,17 @@
         "name": "Gemini 3.1 Flash Lite Preview",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2026-03-03",
         "status": "deprecated",
         "structured_output": true,
@@ -51493,6 +51623,16 @@
         "name": "Gemini 3.1 Pro Preview Custom Tools",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2026-02-19",
         "structured_output": true,
         "temperature": true,
@@ -51610,6 +51750,16 @@
         "name": "Gemini Flash Latest",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 24576,
+            "min": 0,
+            "type": "budget_tokens"
+          }
+        ],
         "release_date": "2025-09-25",
         "structured_output": true,
         "temperature": true,
@@ -51646,6 +51796,16 @@
         "name": "Gemini Flash-Lite Latest",
         "open_weights": false,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 24576,
+            "min": 512,
+            "type": "budget_tokens"
+          }
+        ],
         "release_date": "2025-09-25",
         "structured_output": true,
         "temperature": true,
@@ -51673,6 +51833,11 @@
         "name": "Gemma 4 26B A4B IT",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-04-02",
         "structured_output": true,
         "temperature": true,
@@ -51700,6 +51865,11 @@
         "name": "Gemma 4 31B IT",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-04-02",
         "structured_output": true,
         "temperature": true,
@@ -121071,6 +121241,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-01-27",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -121109,6 +121280,44 @@
         "reasoning_options": [],
         "release_date": "2026-04-21",
         "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.7-code": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.19,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Kimi K2.7 Code is an AI model provided by opencode-go.",
+        "family": "kimi-k2",
+        "id": "kimi-k2.7-code",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.7 Code",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-06-12",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       },
       "mimo-v2-omni": {
@@ -121343,6 +121552,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-02-12",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -123397,7 +123607,7 @@
         "knowledge": "2024-07-31",
         "last_updated": "2025-03-24",
         "limit": {
-          "context": 32768,
+          "context": 163840,
           "output": 16384
         },
         "modalities": {
@@ -123694,9 +123904,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0197,
-          "input": 0.0983,
-          "output": 0.1966
+          "cache_read": 0.02,
+          "input": 0.098,
+          "output": 0.196
         },
         "description": "DeepSeek V4 Flash is an AI model provided by openrouter.",
         "family": "deepseek-flash",
@@ -123707,7 +123917,7 @@
         "knowledge": "2025-05",
         "last_updated": "2026-04-24",
         "limit": {
-          "context": 1048576,
+          "context": 1048575,
           "output": 131072
         },
         "modalities": {
@@ -125718,37 +125928,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "meta-llama/llama-guard-3-8b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.484,
-          "output": 0.03
-        },
-        "description": "Llama Guard 3 8B is an AI model provided by openrouter.",
-        "family": "llama",
-        "id": "meta-llama/llama-guard-3-8b",
-        "knowledge": "2023-12-31",
-        "last_updated": "2025-02-12",
-        "limit": {
-          "context": 131072,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama Guard 3 8B",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-02-12",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
       "meta-llama/llama-guard-4-12b": {
         "attachment": true,
         "cost": {
@@ -126899,9 +127078,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.14,
-          "input": 0.67,
-          "output": 3.39
+          "cache_read": 0.34,
+          "input": 0.68,
+          "output": 3.41
         },
         "description": "Kimi K2.6 is an AI model provided by openrouter.",
         "family": "kimi-k2",
@@ -126912,8 +127091,8 @@
         "knowledge": "2025-01",
         "last_updated": "2026-04-21",
         "limit": {
-          "context": 262144,
-          "output": 262144
+          "context": 262142,
+          "output": 262142
         },
         "modalities": {
           "input": [
@@ -126929,6 +127108,40 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k2.7-code": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.19,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Kimi K2.7 Code is an AI model provided by openrouter.",
+        "family": "kimi-k2",
+        "id": "moonshotai/kimi-k2.7-code",
+        "knowledge": "2025-01",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.7 Code",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-06-12",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -130566,8 +130779,9 @@
       "qwen/qwen2.5-vl-72b-instruct": {
         "attachment": true,
         "cost": {
-          "input": 0.25,
-          "output": 0.75
+          "cache_read": 0.4,
+          "input": 0.8,
+          "output": 1
         },
         "description": "Qwen2.5 VL 72B Instruct is an AI model provided by openrouter.",
         "family": "qwen",
@@ -130575,8 +130789,8 @@
         "knowledge": "2024-06-30",
         "last_updated": "2025-02-01",
         "limit": {
-          "context": 32000,
-          "output": 8192
+          "context": 128000,
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -131805,16 +132019,16 @@
       "qwen/qwen3.6-27b": {
         "attachment": true,
         "cost": {
-          "input": 0.289,
-          "output": 2.4
+          "input": 0.2885,
+          "output": 3.17
         },
         "description": "Qwen3.6 27B is an AI model provided by openrouter.",
         "family": "qwen",
         "id": "qwen/qwen3.6-27b",
         "last_updated": "2026-04-22",
         "limit": {
-          "context": 131072,
-          "output": 131072
+          "context": 262140,
+          "output": 262140
         },
         "modalities": {
           "input": [
@@ -133664,17 +133878,17 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.14,
-          "input": 0.67,
-          "output": 3.39
+          "cache_read": 0.34,
+          "input": 0.68,
+          "output": 3.41
         },
         "description": "MoonshotAI Kimi Latest is an AI model provided by openrouter.",
         "family": "kimi",
         "id": "~moonshotai/kimi-latest",
         "last_updated": "2026-04-27",
         "limit": {
-          "context": 262144,
-          "output": 262144
+          "context": 262142,
+          "output": 262142
         },
         "modalities": {
           "input": [
@@ -158137,6 +158351,224 @@
     "name": "Together AI",
     "npm": "@ai-sdk/togetherai"
   },
+  "umans-ai": {
+    "api": "https://api.code.umans.ai/v1",
+    "doc": "https://app.umans.ai/offers/code/docs/orgs",
+    "env": [
+      "UMANS_AI_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/umans-ai.svg",
+    "id": "umans-ai",
+    "models": {
+      "umans-coder": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Umans Coder is an AI model provided by umans-ai.",
+        "family": "kimi-k2",
+        "id": "umans-coder",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Umans Coder",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "umans-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.15,
+          "output": 1
+        },
+        "description": "Umans Flash is an AI model provided by umans-ai.",
+        "family": "qwen",
+        "id": "umans-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-17",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Umans Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-04-17",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "umans-glm-5.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.29,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "GLM 5.1 is an AI model provided by umans-ai.",
+        "family": "glm",
+        "id": "umans-glm-5.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-27",
+        "limit": {
+          "context": 204800,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-03-27",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "umans-kimi-k2.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Kimi K2.6 is an AI model provided by umans-ai.",
+        "family": "kimi-k2",
+        "id": "umans-kimi-k2.6",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-04-21",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.6",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "umans-kimi-k2.7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.19,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Kimi K2.7 Code is an AI model provided by umans-ai.",
+        "family": "kimi-k2",
+        "id": "umans-kimi-k2.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.7 Code",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-06-12",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      }
+    },
+    "name": "Umans AI",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "umans-ai-coding-plan": {
     "api": "https://api.code.umans.ai/v1",
     "doc": "https://app.umans.ai/offers/code/docs",
@@ -158178,6 +158610,11 @@
         "name": "Umans Coder",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-04-21",
         "structured_output": true,
         "temperature": false,
@@ -158194,6 +158631,9 @@
         "description": "Umans Flash is an AI model provided by umans-ai-coding-plan.",
         "family": "qwen",
         "id": "umans-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-04-17",
         "limit": {
           "context": 262144,
@@ -158211,6 +158651,11 @@
         "name": "Umans Flash",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-04-17",
         "structured_output": true,
         "temperature": false,
@@ -158237,7 +158682,8 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -158246,6 +158692,11 @@
         "name": "GLM 5.1",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-03-27",
         "structured_output": true,
         "temperature": true,
@@ -158274,7 +158725,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video"
           ],
           "output": [
             "text"
@@ -158283,7 +158735,55 @@
         "name": "Kimi K2.6",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-04-21",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "umans-kimi-k2.7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Kimi K2.7 Code is an AI model provided by umans-ai-coding-plan.",
+        "family": "kimi-k2",
+        "id": "umans-kimi-k2.7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.7 Code",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-06-12",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -158299,6 +158799,9 @@
         "description": "Qwen3.6 35B A3B is an AI model provided by umans-ai-coding-plan.",
         "family": "qwen",
         "id": "umans-qwen3.6-35b-a3b",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-04-17",
         "limit": {
           "context": 262144,
@@ -158316,6 +158819,11 @@
         "name": "Qwen3.6 35B A3B",
         "open_weights": true,
         "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
         "release_date": "2026-04-17",
         "structured_output": true,
         "temperature": false,
@@ -166694,6 +167202,40 @@
         "open_weights": true,
         "reasoning": true,
         "release_date": "2026-04-20",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k2.7-code": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.19,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Kimi K2.7 Code is an AI model provided by vercel.",
+        "family": "kimi-k2",
+        "id": "moonshotai/kimi-k2.7-code",
+        "knowledge": "2025-01",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 256000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.7 Code",
+        "open_weights": false,
+        "reasoning": true,
+        "release_date": "2026-06-12",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
