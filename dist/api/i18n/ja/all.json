@@ -128254,7 +128254,7 @@
         "id": "google/gemini-3-pro-image",
         "last_updated": "2026-06-18",
         "limit": {
-          "context": 131072,
+          "context": 65536,
           "output": 32768
         },
         "modalities": {
@@ -128323,8 +128323,8 @@
         "id": "google/gemini-3.1-flash-image",
         "last_updated": "2026-06-18",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 65536,
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -128356,8 +128356,8 @@
         "knowledge": "2025-01",
         "last_updated": "2026-02-26",
         "limit": {
-          "context": 65536,
-          "output": 65536
+          "context": 131072,
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -128949,7 +128949,7 @@
         "last_updated": "2026-04-02",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -129327,8 +129327,8 @@
         "id": "kwaipilot/kat-coder-pro-v2",
         "last_updated": "2026-03-27",
         "limit": {
-          "context": 262144,
-          "output": 144000
+          "context": 256000,
+          "output": 80000
         },
         "modalities": {
           "input": [
@@ -130892,7 +130892,6 @@
       "moonshotai/kimi-k2-thinking": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.6,
           "input": 0.6,
           "output": 2.5
         },
@@ -130977,8 +130976,8 @@
         "knowledge": "2025-01",
         "last_updated": "2026-04-21",
         "limit": {
-          "context": 262142,
-          "output": 262142
+          "context": 262144,
+          "output": 65535
         },
         "modalities": {
           "input": [
@@ -131991,7 +131990,6 @@
       "openai/gpt-4o": {
         "attachment": true,
         "cost": {
-          "cache_read": 1.25,
           "input": 2.5,
           "output": 10
         },
@@ -132451,7 +132449,7 @@
       "openai/gpt-5-mini": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.03,
+          "cache_read": 0.025,
           "input": 0.25,
           "output": 2
         },
@@ -132624,7 +132622,7 @@
       "openai/gpt-5.1-chat": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.125,
+          "cache_read": 0.13,
           "input": 1.25,
           "output": 10
         },
@@ -132635,7 +132633,7 @@
         "last_updated": "2025-11-13",
         "limit": {
           "context": 128000,
-          "output": 16384
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -132849,7 +132847,7 @@
         "last_updated": "2025-12-10",
         "limit": {
           "context": 128000,
-          "output": 32000
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -135758,7 +135756,6 @@
       "qwen/qwen3.5-35b-a3b": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.05,
           "input": 0.14,
           "output": 1
         },
@@ -135768,7 +135765,7 @@
         "last_updated": "2026-02-23",
         "limit": {
           "context": 262144,
-          "output": 81920
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -135841,8 +135838,8 @@
         "id": "qwen/qwen3.5-9b",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 256000,
-          "output": 32768
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -137501,7 +137498,7 @@
       "z-ai/glm-5.1": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.182,
+          "cache_read": 0.49,
           "input": 0.98,
           "output": 3.08
         },
@@ -137868,8 +137865,8 @@
         "id": "~moonshotai/kimi-latest",
         "last_updated": "2026-04-27",
         "limit": {
-          "context": 262142,
-          "output": 262142
+          "context": 262144,
+          "output": 65535
         },
         "modalities": {
           "input": [
@@ -178774,6 +178771,50 @@
         "temperature": true,
         "tool_call": true
       },
+      "glm-5.2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "cache_write": 0,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "GLM-5.2 は zai によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "glm-5.2",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "glm-5v-turbo": {
         "attachment": true,
         "cost": {
@@ -183433,6 +183474,86 @@
           }
         ],
         "release_date": "2026-04-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-5.2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.5
+        },
+        "description": "GLM 5.2 は zenmux によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "z-ai/glm-5.2",
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-5.2-free": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM 5.2 (Free) は zenmux によって提供される AI モデルです。",
+        "family": "glm",
+        "id": "z-ai/glm-5.2-free",
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.2 (Free)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
