@@ -126174,40 +126174,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "anthropic/claude-3.5-haiku": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.08,
-          "cache_write": 1,
-          "input": 0.8,
-          "output": 4
-        },
-        "description": "Claude 3.5 Haiku 是由 openrouter 提供的人工智能模型。",
-        "family": "claude",
-        "id": "anthropic/claude-3.5-haiku",
-        "knowledge": "2024-07-31",
-        "last_updated": "2024-11-04",
-        "limit": {
-          "context": 200000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude 3.5 Haiku",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-11-04",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "anthropic/claude-haiku-4.5": {
         "attachment": true,
         "cost": {
@@ -128289,7 +128255,7 @@
         "id": "google/gemini-3-pro-image",
         "last_updated": "2026-06-18",
         "limit": {
-          "context": 65536,
+          "context": 131072,
           "output": 32768
         },
         "modalities": {
@@ -128358,8 +128324,8 @@
         "id": "google/gemini-3.1-flash-image",
         "last_updated": "2026-06-18",
         "limit": {
-          "context": 65536,
-          "output": 65536
+          "context": 131072,
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -128391,8 +128357,8 @@
         "knowledge": "2025-01",
         "last_updated": "2026-02-26",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 65536,
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -128984,7 +128950,7 @@
         "last_updated": "2026-04-02",
         "limit": {
           "context": 262144,
-          "output": 8192
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -129362,8 +129328,8 @@
         "id": "kwaipilot/kat-coder-pro-v2",
         "last_updated": "2026-03-27",
         "limit": {
-          "context": 256000,
-          "output": 80000
+          "context": 262144,
+          "output": 144000
         },
         "modalities": {
           "input": [
@@ -130927,6 +130893,7 @@
       "moonshotai/kimi-k2-thinking": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.6,
           "input": 0.6,
           "output": 2.5
         },
@@ -131125,6 +131092,38 @@
         "temperature": true,
         "tool_call": false
       },
+      "nex-agi/nex-n2-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 0.5,
+          "output": 2.5
+        },
+        "description": "Nex-N2-Pro 是由 openrouter 提供的人工智能模型。",
+        "family": "agi",
+        "id": "nex-agi/nex-n2-pro",
+        "last_updated": "2026-06-08",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nex-N2-Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "release_date": "2026-06-08",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      },
       "nex-agi/nex-n2-pro:free": {
         "attachment": true,
         "cost": {
@@ -131137,7 +131136,7 @@
         "last_updated": "2026-06-08",
         "limit": {
           "context": 262144,
-          "output": 262144
+          "output": 256000
         },
         "modalities": {
           "input": [
@@ -131153,7 +131152,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-06-08",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -131993,6 +131992,7 @@
       "openai/gpt-4o": {
         "attachment": true,
         "cost": {
+          "cache_read": 1.25,
           "input": 2.5,
           "output": 10
         },
@@ -132452,7 +132452,7 @@
       "openai/gpt-5-mini": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.025,
+          "cache_read": 0.03,
           "input": 0.25,
           "output": 2
         },
@@ -132625,7 +132625,7 @@
       "openai/gpt-5.1-chat": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.13,
+          "cache_read": 0.125,
           "input": 1.25,
           "output": 10
         },
@@ -132636,7 +132636,7 @@
         "last_updated": "2025-11-13",
         "limit": {
           "context": 128000,
-          "output": 32000
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -132850,7 +132850,7 @@
         "last_updated": "2025-12-10",
         "limit": {
           "context": 128000,
-          "output": 16384
+          "output": 32000
         },
         "modalities": {
           "input": [
@@ -135759,6 +135759,7 @@
       "qwen/qwen3.5-35b-a3b": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.05,
           "input": 0.14,
           "output": 1
         },
@@ -135768,7 +135769,7 @@
         "last_updated": "2026-02-23",
         "limit": {
           "context": 262144,
-          "output": 262144
+          "output": 81920
         },
         "modalities": {
           "input": [
@@ -135841,8 +135842,8 @@
         "id": "qwen/qwen3.5-9b",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 262144,
-          "output": 262144
+          "context": 256000,
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -137501,7 +137502,7 @@
       "z-ai/glm-5.1": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.49,
+          "cache_read": 0.182,
           "input": 0.98,
           "output": 3.08
         },
@@ -137536,9 +137537,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.2,
-          "input": 1.2,
-          "output": 4.1
+          "cache_read": 0.18,
+          "input": 1,
+          "output": 4
         },
         "description": "GLM-5.2 是由 openrouter 提供的人工智能模型。",
         "family": "glm",
@@ -137549,7 +137550,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -168065,56 +168066,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-04-14",
-        "temperature": true,
-        "tool_call": false
-      },
-      "bytedance/seedance-v1.0-lite-i2v": {
-        "attachment": false,
-        "description": "Seedance v1.0 Lite Image-to-Video 是由 vercel 提供的人工智能模型。",
-        "family": "seed",
-        "id": "bytedance/seedance-v1.0-lite-i2v",
-        "last_updated": "2025-06-01",
-        "limit": {
-          "context": 0,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "video"
-          ]
-        },
-        "name": "Seedance v1.0 Lite Image-to-Video",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-06-01",
-        "temperature": true,
-        "tool_call": false
-      },
-      "bytedance/seedance-v1.0-lite-t2v": {
-        "attachment": false,
-        "description": "Seedance v1.0 Lite Text-to-Video 是由 vercel 提供的人工智能模型。",
-        "family": "seed",
-        "id": "bytedance/seedance-v1.0-lite-t2v",
-        "last_updated": "2025-06-01",
-        "limit": {
-          "context": 0,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "video"
-          ]
-        },
-        "name": "Seedance v1.0 Lite Text-to-Video",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-06-01",
         "temperature": true,
         "tool_call": false
       },
