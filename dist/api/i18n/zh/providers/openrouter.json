@@ -2152,7 +2152,7 @@
       "last_updated": "2025-08-26",
       "limit": {
         "context": 32768,
-        "output": 8192
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -2537,8 +2537,8 @@
       "id": "google/gemini-3.1-flash-image",
       "last_updated": "2026-06-18",
       "limit": {
-        "context": 65536,
-        "output": 65536
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -5105,6 +5105,7 @@
     "moonshotai/kimi-k2-thinking": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.6,
         "input": 0.6,
         "output": 2.5
       },
@@ -9905,6 +9906,7 @@
     "qwen/qwen3.5-35b-a3b": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.05,
         "input": 0.14,
         "output": 1
       },
@@ -9914,7 +9916,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 81920
       },
       "modalities": {
         "input": [
@@ -10550,6 +10552,37 @@
       "release_date": "2025-12-08",
       "structured_output": false,
       "temperature": true,
+      "tool_call": true
+    },
+    "sakana/fugu-ultra": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 30
+      },
+      "description": "Fugu Ultra 是由 openrouter 提供的人工智能模型。",
+      "id": "sakana/fugu-ultra",
+      "last_updated": "2026-06-24",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Fugu Ultra",
+      "open_weights": false,
+      "reasoning": true,
+      "release_date": "2026-06-24",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "sao10k/l3-lunaris-8b": {
@@ -11242,8 +11275,7 @@
     "xiaomi/mimo-v2.5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0028,
-        "input": 0.14,
+        "input": 0.105,
         "output": 0.28
       },
       "description": "MiMo-V2.5 是由 openrouter 提供的人工智能模型。",
@@ -11255,7 +11287,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1048576,
+        "context": 32000,
         "output": 131072
       },
       "modalities": {
@@ -11647,7 +11679,7 @@
     "z-ai/glm-5.1": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.49,
+        "cache_read": 0.182,
         "input": 0.98,
         "output": 3.08
       },
