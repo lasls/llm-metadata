@@ -42599,6 +42599,54 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": true
+      },
+      "zai-org/GLM-5.2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.18,
+          "input": 0.95,
+          "output": 3
+        },
+        "description": "GLM-5.2 is an AI model provided by deepinfra.",
+        "family": "glm",
+        "id": "zai-org/GLM-5.2",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 1048576,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Deep Infra",
@@ -49733,67 +49781,6 @@
           }
         ],
         "release_date": "2026-04-02",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "meta-llama/Llama-3.1-8B-Instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.1,
-          "output": 0.1
-        },
-        "description": "Llama 3.1 8B Instruct is an AI model provided by friendli.",
-        "family": "llama",
-        "id": "meta-llama/Llama-3.1-8B-Instruct",
-        "last_updated": "2025-12-23",
-        "limit": {
-          "context": 131072,
-          "output": 8000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.1 8B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-08-01",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "meta-llama/Llama-3.3-70B-Instruct": {
-        "attachment": true,
-        "cost": {
-          "input": 0.6,
-          "output": 0.6
-        },
-        "description": "Llama 3.3 70B Instruct is an AI model provided by friendli.",
-        "family": "llama",
-        "id": "meta-llama/Llama-3.3-70B-Instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2025-12-23",
-        "limit": {
-          "context": 131072,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.3 70B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-08-01",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -128412,7 +128399,6 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "max": 63999,
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -128456,7 +128442,6 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "max": 31999,
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -128508,7 +128493,6 @@
             ]
           },
           {
-            "max": 63999,
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -128561,7 +128545,6 @@
             ]
           },
           {
-            "max": 127999,
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -128720,7 +128703,6 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "max": 63999,
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -128783,7 +128765,6 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "max": 63999,
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -128837,7 +128818,6 @@
             ]
           },
           {
-            "max": 63999,
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -129482,7 +129462,15 @@
         "name": "GLM-5.2",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-06-13",
         "structured_output": true,
         "temperature": true,
@@ -129956,6 +129944,7 @@
           {
             "type": "effort",
             "values": [
+              "none",
               "low",
               "medium",
               "high",
@@ -131584,7 +131573,15 @@
         "name": "GLM-5.2",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-06-13",
         "structured_output": true,
         "temperature": true,
@@ -132028,7 +132025,15 @@
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 81920,
+            "type": "budget_tokens"
+          }
+        ],
         "release_date": "2026-02-16",
         "status": "deprecated",
         "temperature": true,
@@ -132085,7 +132090,15 @@
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 81920,
+            "type": "budget_tokens"
+          }
+        ],
         "release_date": "2026-04-02",
         "temperature": true,
         "tool_call": true
@@ -132120,7 +132133,15 @@
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 262144,
+            "type": "budget_tokens"
+          }
+        ],
         "release_date": "2026-05-21",
         "temperature": true,
         "tool_call": true
@@ -132175,7 +132196,15 @@
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "max": 262144,
+            "type": "budget_tokens"
+          }
+        ],
         "release_date": "2026-06-02",
         "temperature": true,
         "tool_call": true
