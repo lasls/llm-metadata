@@ -79421,7 +79421,7 @@
           "input": 0,
           "output": 0
         },
-        "description": "Claude Haiku 4.5 (Free) 是由 llmgateway 提供的人工智能模型。",
+        "description": "Claude Haiku 4.5 (latest) 是由 llmgateway 提供的人工智能模型。",
         "family": "claude-haiku",
         "id": "claude-haiku-4-5-free",
         "knowledge": "2025-02-28",
@@ -79439,7 +79439,7 @@
             "text"
           ]
         },
-        "name": "Claude Haiku 4.5 (Free)",
+        "name": "Claude Haiku 4.5 (latest)",
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-10-15",
@@ -133248,59 +133248,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "anthropic/claude-opus-4.6-fast": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 3,
-          "cache_write": 37.5,
-          "input": 30,
-          "output": 150
-        },
-        "description": "Claude Opus 4.6 (Fast) 是由 openrouter 提供的人工智能模型。",
-        "family": "claude-opus",
-        "id": "anthropic/claude-opus-4.6-fast",
-        "last_updated": "2026-04-07",
-        "limit": {
-          "context": 1000000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Opus 4.6 (Fast)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high",
-              "max"
-            ]
-          },
-          {
-            "max": 127999,
-            "min": 1024,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2026-04-07",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "anthropic/claude-opus-4.7": {
         "attachment": true,
         "cost": {
@@ -143306,8 +143253,7 @@
       "stepfun/step-3.5-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.02,
-          "input": 0.09,
+          "input": 0.1,
           "output": 0.3
         },
         "description": "Step 3.5 Flash 是由 openrouter 提供的人工智能模型。",
@@ -143316,7 +143262,7 @@
         "last_updated": "2026-02-13",
         "limit": {
           "context": 262144,
-          "output": 16384
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -144310,7 +144256,7 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.18,
-          "input": 0.95,
+          "input": 0.94,
           "output": 3
         },
         "description": "GLM-5.2 是由 openrouter 提供的人工智能模型。",
@@ -167004,19 +166950,19 @@
         "tool_call": true
       },
       "hf:Qwen/Qwen3.5-397B-A17B": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.6,
           "input": 0.6,
-          "output": 3
+          "output": 3.6
         },
-        "description": "Qwen3.5-97B-A17B 是由 synthetic 提供的人工智能模型。",
+        "description": "Qwen3.5 397B-A17B 是由 synthetic 提供的人工智能模型。",
         "family": "qwen",
         "id": "hf:Qwen/Qwen3.5-397B-A17B",
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-02-11",
+        "last_updated": "2026-02-15",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -167030,12 +166976,61 @@
             "text"
           ]
         },
-        "name": "Qwen3.5-97B-A17B",
+        "name": "Qwen3.5 397B-A17B",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-02-11",
-        "status": "beta",
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-02-15",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "hf:Qwen/Qwen3.6-27B": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.45,
+          "input": 0.45,
+          "output": 3.6
+        },
+        "description": "Qwen3.6 27B 是由 synthetic 提供的人工智能模型。",
+        "family": "qwen",
+        "id": "hf:Qwen/Qwen3.6-27B",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 27B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-04-22",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -167132,6 +167127,7 @@
       "hf:openai/gpt-oss-120b": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.1,
           "input": 0.1,
           "output": 0.1
         },
@@ -167140,7 +167136,7 @@
         "id": "hf:openai/gpt-oss-120b",
         "last_updated": "2025-08-05",
         "limit": {
-          "context": 128000,
+          "context": 131072,
           "output": 32768
         },
         "modalities": {
@@ -167171,10 +167167,11 @@
       "hf:zai-org/GLM-4.7": {
         "attachment": false,
         "cost": {
-          "input": 0.55,
+          "cache_read": 0.45,
+          "input": 0.45,
           "output": 2.19
         },
-        "description": "GLM 4.7 是由 synthetic 提供的人工智能模型。",
+        "description": "GLM-4.7 是由 synthetic 提供的人工智能模型。",
         "family": "glm",
         "id": "hf:zai-org/GLM-4.7",
         "interleaved": {
@@ -167183,8 +167180,8 @@
         "knowledge": "2025-04",
         "last_updated": "2025-12-22",
         "limit": {
-          "context": 200000,
-          "output": 64000
+          "context": 202752,
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -167194,17 +167191,12 @@
             "text"
           ]
         },
-        "name": "GLM 4.7",
+        "name": "GLM-4.7",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high"
-            ]
+            "type": "toggle"
           }
         ],
         "release_date": "2025-12-22",
@@ -167214,17 +167206,18 @@
       "hf:zai-org/GLM-4.7-Flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.06,
-          "input": 0.06,
-          "output": 0.4
+          "cache_read": 0.1,
+          "input": 0.1,
+          "output": 0.5
         },
         "description": "GLM-4.7-Flash 是由 synthetic 提供的人工智能模型。",
-        "family": "glm",
+        "family": "glm-flash",
         "id": "hf:zai-org/GLM-4.7-Flash",
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-01-18",
+        "knowledge": "2025-04",
+        "last_updated": "2026-01-19",
         "limit": {
           "context": 196608,
           "output": 65536
@@ -167242,16 +167235,10 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high"
-            ]
+            "type": "toggle"
           }
         ],
-        "release_date": "2026-01-18",
-        "structured_output": true,
+        "release_date": "2026-01-19",
         "temperature": true,
         "tool_call": true
       },
@@ -167262,13 +167249,13 @@
           "input": 1,
           "output": 3
         },
-        "description": "GLM 5.1 是由 synthetic 提供的人工智能模型。",
+        "description": "GLM-5.1 是由 synthetic 提供的人工智能模型。",
         "family": "glm",
         "id": "hf:zai-org/GLM-5.1",
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-04-12",
+        "last_updated": "2026-04-07",
         "limit": {
           "context": 196608,
           "output": 65536
@@ -167281,20 +167268,59 @@
             "text"
           ]
         },
-        "name": "GLM 5.1",
+        "name": "GLM-5.1",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-04-07",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "hf:zai-org/GLM-5.2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 1.4,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "GLM-5.2 是由 synthetic 提供的人工智能模型。",
+        "family": "glm",
+        "id": "hf:zai-org/GLM-5.2",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 524288,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.2",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
             "type": "effort",
             "values": [
-              "low",
-              "medium",
-              "high"
+              "none",
+              "high",
+              "xhigh"
             ]
           }
         ],
-        "release_date": "2026-03-27",
+        "release_date": "2026-06-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -185068,9 +185094,9 @@
       "mimo-v2-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.01,
-          "input": 0.1,
-          "output": 0.3
+          "cache_read": 0.0028,
+          "input": 0.14,
+          "output": 0.28
         },
         "description": "Xiaomi MiMo-V2-Flash 是小米专为极致推理效率自研的总参数 309B(激活 15B)的 MoE 模型，通过引入 Hybrid 注意力架构创新 及 多层 MTP 推理加速， 在多个 Agent 测评基准上进入全球开源模型 Top 2;代码能力超过所有开源模型，比肩标杆闭源模型 Claude 4.5 Sonnet，但推理价格仅为其2.5% 且生成速度提升至 2倍，成功将大模型效果和推理效率推向极致。",
         "family": "mimo",
@@ -185079,7 +185105,7 @@
           "field": "reasoning_content"
         },
         "knowledge": "2024-12-01",
-        "last_updated": "2026-02-04",
+        "last_updated": "2026-06-24",
         "limit": {
           "context": 262144,
           "output": 65536
@@ -185108,9 +185134,9 @@
       "mimo-v2-omni": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.08,
-          "input": 0.4,
-          "output": 2
+          "cache_read": 0.0028,
+          "input": 0.14,
+          "output": 0.28
         },
         "description": "MiMo-V2-Omni 是由 xiaomi 提供的人工智能模型。",
         "family": "mimo",
@@ -185119,7 +185145,7 @@
           "field": "reasoning_content"
         },
         "knowledge": "2024-12",
-        "last_updated": "2026-03-18",
+        "last_updated": "2026-06-24",
         "limit": {
           "context": 262144,
           "output": 131072
@@ -185152,25 +185178,9 @@
       "mimo-v2-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.2,
-          "context_over_200k": {
-            "cache_read": 0.4,
-            "input": 2,
-            "output": 6
-          },
-          "input": 1,
-          "output": 3,
-          "tiers": [
-            {
-              "cache_read": 0.4,
-              "input": 2,
-              "output": 6,
-              "tier": {
-                "size": 256000,
-                "type": "context"
-              }
-            }
-          ]
+          "cache_read": 0.0036,
+          "input": 0.435,
+          "output": 0.87
         },
         "description": "Xiaomi MiMo-V2-Pro 是一款专为现实世界中高强度 Agent 工作场景打造的顶尖大语言模型。建立在上一代 Flash 模型的坚实基座之上，通过在更广泛任务中的持续算力扩展，MiMo-V2-Pro 将能力从基础的代码编写跨越至端到端的复杂任务执行。它能够在无人工干预的情况下，自主进行长程规划、编排复杂工作流，并跨越 OpenClaw 等不同的智能体框架精准调用工具以交付最终结果。MiMo-V2-Pro 在 Artificial Analysis 综合智能排行榜上高居全球第八、国内第二，且在通用 Agent 和工具调用等多项核心基准测试中与 GPT5.2、Gemini 3.0 Pro 稳居同一梯队。此外，MiMo-V2-Pro 具有极高的推理与生成效率，因为它采用了优化的 7:1 混合注意力架构和轻量级 MTP 层，在支持 1M 超长上下文的同时，将前沿模型的使用成本大幅降低至同类竞品的五分之一。",
         "family": "mimo",
@@ -185179,7 +185189,7 @@
           "field": "reasoning_content"
         },
         "knowledge": "2024-12",
-        "last_updated": "2026-03-18",
+        "last_updated": "2026-06-24",
         "limit": {
           "context": 1048576,
           "output": 131072
@@ -185208,25 +185218,9 @@
       "mimo-v2.5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.08,
-          "context_over_200k": {
-            "cache_read": 0.16,
-            "input": 0.8,
-            "output": 4
-          },
-          "input": 0.4,
-          "output": 2,
-          "tiers": [
-            {
-              "cache_read": 0.16,
-              "input": 0.8,
-              "output": 4,
-              "tier": {
-                "size": 256000,
-                "type": "context"
-              }
-            }
-          ]
+          "cache_read": 0.0028,
+          "input": 0.14,
+          "output": 0.28
         },
         "description": "mimo-v2.5， 原生全模态模型，支持文本、图像、视频和音频理解，具备强大的 Agent 能力",
         "family": "mimo",
@@ -185235,7 +185229,7 @@
           "field": "reasoning_content"
         },
         "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
+        "last_updated": "2026-06-24",
         "limit": {
           "context": 1048576,
           "output": 131072
@@ -185266,25 +185260,9 @@
       "mimo-v2.5-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.2,
-          "context_over_200k": {
-            "cache_read": 0.4,
-            "input": 2,
-            "output": 6
-          },
-          "input": 1,
-          "output": 3,
-          "tiers": [
-            {
-              "cache_read": 0.4,
-              "input": 2,
-              "output": 6,
-              "tier": {
-                "size": 256000,
-                "type": "context"
-              }
-            }
-          ]
+          "cache_read": 0.0036,
+          "input": 0.435,
+          "output": 0.87
         },
         "description": "MiMo-V2.5-Pro专为突破复杂软件工程与极致长程任务的边界而生。相较于上一代产品，它在通用智能体能力上实现了全方位跃升，将人机协作范式推向了真正的“自主交付”。它能够在无人工干预的情况下，稳定驾驭单次高达近千轮工具调用的超大跨度工作流，不仅能精准捕捉超长上下文中的隐性要求，更展现出卓越的全局架构规划与自我纠错纪律。在核心的 Agent 场景与长程复杂任务维度上，MiMo-V2.5-Pro 已具备与 Claude Opus 4.6、GPT-5.4 等全球第一梯队模型正面较量的硬核实力。凭借这种极高的执行置信度与长周期逻辑一致性，它已完全能够摆脱“辅助”标签，在真实业务中承担起真正严肃的专业级工作。",
         "family": "mimo",
@@ -185293,7 +185271,7 @@
           "field": "reasoning_content"
         },
         "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
+        "last_updated": "2026-06-24",
         "limit": {
           "context": 1048576,
           "output": 131072
