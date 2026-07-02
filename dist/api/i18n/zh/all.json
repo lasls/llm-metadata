@@ -17146,6 +17146,52 @@
         "temperature": true,
         "tool_call": true
       },
+      "anthropic.claude-fable-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 50
+        },
+        "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+        "family": "claude-fable",
+        "id": "anthropic.claude-fable-5",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-06-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Fable 5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-06-09",
+        "temperature": false,
+        "tool_call": true
+      },
       "anthropic.claude-haiku-4-5-20251001-v1:0": {
         "attachment": true,
         "cost": {
@@ -17950,7 +17996,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -18367,7 +18414,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -20368,7 +20416,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -32645,6 +32694,49 @@
     "id": "cerebras",
     "lobeIcon": "Cerebras",
     "models": {
+      "gemma-4-31b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.99,
+          "output": 1.49
+        },
+        "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
+        "family": "gemma",
+        "id": "gemma-4-31b",
+        "last_updated": "2026-07-01",
+        "limit": {
+          "context": 131072,
+          "output": 40960
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 31B IT",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-04-02",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -51927,6 +52019,12 @@
       },
       "claude-sonnet-5": {
         "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 2.5,
+          "input": 2,
+          "output": 10
+        },
         "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
         "family": "claude-sonnet",
         "id": "claude-sonnet-5",
@@ -129341,7 +129439,6 @@
           }
         ],
         "release_date": "2026-06-09",
-        "status": "deprecated",
         "temperature": false,
         "tool_call": true
       },
@@ -133081,7 +133178,7 @@
             "text"
           ]
         },
-        "name": "MiniMax-M3 (3x usage)",
+        "name": "MiniMax-M3",
         "open_weights": true,
         "provider": {
           "npm": "@ai-sdk/anthropic"
@@ -133734,6 +133831,53 @@
         "release_date": "2024-03-13",
         "structured_output": false,
         "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-fable-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 50
+        },
+        "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+        "family": "claude-fable",
+        "id": "anthropic/claude-fable-5",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-06-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Fable 5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-06-09",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       },
       "anthropic/claude-haiku-4.5": {
@@ -135048,8 +135192,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.135,
-          "input": 0.2,
-          "output": 0.77
+          "input": 0.24,
+          "output": 0.9
         },
         "description": "DeepSeek chat model for instruction following, coding, and analysis",
         "family": "deepseek",
@@ -135323,9 +135467,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.02,
-          "input": 0.098,
-          "output": 0.196
+          "cache_read": 0.018,
+          "input": 0.09,
+          "output": 0.18
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -135336,8 +135480,8 @@
         "knowledge": "2025-05",
         "last_updated": "2026-04-24",
         "limit": {
-          "context": 1048575,
-          "output": 65536
+          "context": 1048576,
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -137583,9 +137727,8 @@
       "minimax/minimax-m2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.03,
           "input": 0.255,
-          "output": 1
+          "output": 1.02
         },
         "description": "Efficient open MiniMax model built for coding agents and tool-heavy workflows",
         "family": "minimax",
@@ -137595,8 +137738,8 @@
         },
         "last_updated": "2025-10-27",
         "limit": {
-          "context": 196608,
-          "output": 196608
+          "context": 204800,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -137650,8 +137793,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.03,
-          "input": 0.29,
-          "output": 0.95
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "Earlier MiniMax agent model for practical coding and productivity tasks",
         "family": "minimax",
@@ -137661,8 +137804,8 @@
         },
         "last_updated": "2025-12-23",
         "limit": {
-          "context": 196608,
-          "output": 196608
+          "context": 204800,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -137677,7 +137820,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-12-23",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -138484,7 +138627,7 @@
       "moonshotai/kimi-k2-thinking": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.6,
+          "cache_read": 0.15,
           "input": 0.6,
           "output": 2.5
         },
@@ -138498,7 +138641,7 @@
         "last_updated": "2025-11-06",
         "limit": {
           "context": 262144,
-          "output": 262144
+          "output": 100352
         },
         "modalities": {
           "input": [
@@ -142502,7 +142645,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-07-25",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -142576,9 +142719,8 @@
       "qwen/qwen3-30b-a3b-thinking-2507": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.08,
-          "input": 0.08,
-          "output": 0.4
+          "input": 0.13,
+          "output": 1.56
         },
         "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
         "family": "qwen",
@@ -142586,8 +142728,8 @@
         "knowledge": "2025-06-30",
         "last_updated": "2025-08-28",
         "limit": {
-          "context": 131072,
-          "output": 131072
+          "context": 81920,
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -142602,7 +142744,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-08-28",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -142645,9 +142787,8 @@
       "qwen/qwen3-8b": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.05,
-          "input": 0.05,
-          "output": 0.4
+          "input": 0.117,
+          "output": 0.455
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -142655,7 +142796,7 @@
         "knowledge": "2025-03-31",
         "last_updated": "2025-04-28",
         "limit": {
-          "context": 40960,
+          "context": 131072,
           "output": 8192
         },
         "modalities": {
@@ -142675,7 +142816,7 @@
           }
         ],
         "release_date": "2025-04-28",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -171188,49 +171329,6 @@
         "release_date": "2026-03-24",
         "tool_call": false
       },
-      "arcee-trinity-large-thinking": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.075,
-          "input": 0.3125,
-          "output": 1.125
-        },
-        "description": "Flagship model for demanding analysis, coding, and production agent workflows",
-        "family": "trinity",
-        "id": "arcee-trinity-large-thinking",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-06-11",
-        "limit": {
-          "context": 256000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Trinity Large Thinking",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-04-02",
-        "structured_output": true,
-        "tool_call": true
-      },
       "claude-fable-5": {
         "attachment": true,
         "cost": {
@@ -171542,6 +171640,41 @@
         "release_date": "2026-02-17",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "claude-sonnet-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+        "family": "claude-sonnet",
+        "id": "claude-sonnet-5",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-07-01",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-06-29",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       },
       "deepseek-v3.2": {
@@ -175517,6 +175650,54 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-11-04",
+        "temperature": true,
+        "tool_call": true
+      },
+      "anthropic/claude-fable-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 50
+        },
+        "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+        "family": "claude-fable",
+        "id": "anthropic/claude-fable-5",
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-06-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Fable 5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-07-01",
         "temperature": true,
         "tool_call": true
       },
