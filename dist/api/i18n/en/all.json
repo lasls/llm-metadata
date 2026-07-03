@@ -10923,6 +10923,42 @@
         "temperature": true,
         "tool_call": true
       },
+      "glm-5.2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.275,
+          "cache_write": 0,
+          "input": 1.1,
+          "output": 3.851
+        },
+        "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+        "family": "glm",
+        "id": "glm-5.2",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "kimi-k2-thinking": {
         "attachment": false,
         "cost": {
@@ -136755,7 +136791,7 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.018,
-          "input": 0.089,
+          "input": 0.09,
           "output": 0.18
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
@@ -146608,8 +146644,9 @@
       "z-ai/glm-5.1": {
         "attachment": false,
         "cost": {
-          "input": 0.975,
-          "output": 4.3
+          "cache_read": 0.1794,
+          "input": 0.966,
+          "output": 3.036
         },
         "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
         "family": "glm",
@@ -146619,7 +146656,7 @@
         },
         "last_updated": "2026-04-07",
         "limit": {
-          "context": 65536,
+          "context": 200000,
           "output": 128000
         },
         "modalities": {
@@ -170344,6 +170381,63 @@
     "name": "Tencent Coding Plan (China)",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "tencent-token-plan": {
+    "api": "https://api.lkeap.cloud.tencent.com/plan/v3",
+    "doc": "https://cloud.tencent.com/document/product/1823/130060",
+    "env": [
+      "TENCENT_TOKEN_PLAN_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/tencent-token-plan.svg",
+    "id": "tencent-token-plan",
+    "models": {
+      "hy3": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+        "family": "Hy",
+        "id": "hy3",
+        "last_updated": "2026-07-06",
+        "limit": {
+          "context": 256000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-06",
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Tencent Token Plan",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "tencent-tokenhub": {
     "api": "https://tokenhub.tencentmaas.com/v1",
     "doc": "https://cloud.tencent.com/document/product/1823/130050",
@@ -170353,6 +170447,50 @@
     "iconURL": "https://models.dev/logos/tencent-tokenhub.svg",
     "id": "tencent-tokenhub",
     "models": {
+      "hy3": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+        "family": "Hy",
+        "id": "hy3",
+        "last_updated": "2026-07-06",
+        "limit": {
+          "context": 256000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-06",
+        "temperature": true,
+        "tool_call": true
+      },
       "hy3-preview": {
         "attachment": false,
         "cost": {
@@ -185933,16 +186071,16 @@
       "zai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.3,
-          "input": 1.5,
-          "output": 4.5
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
         "id": "zai/glm-5.2",
         "last_updated": "2026-06-13",
         "limit": {
-          "context": 1000000,
+          "context": 1040000,
           "output": 128000
         },
         "modalities": {
