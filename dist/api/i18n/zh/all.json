@@ -42303,7 +42303,7 @@
         "id": "Qwen/Qwen3.5-122B-A10B",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 16384,
+          "context": 262144,
           "output": 65536
         },
         "modalities": {
@@ -49582,7 +49582,7 @@
       "accounts/fireworks/models/glm-5p2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.26,
+          "cache_read": 0.14,
           "input": 1.4,
           "output": 4.4
         },
@@ -73426,6 +73426,43 @@
         "temperature": true,
         "tool_call": true
       },
+      "minimax/minimax-m3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
+        "family": "minimax",
+        "id": "minimax/minimax-m3",
+        "last_updated": "2026-06-30",
+        "limit": {
+          "context": 1048576,
+          "output": 512000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax: MiniMax M3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-06-01",
+        "temperature": true,
+        "tool_call": true
+      },
       "mistralai/codestral-2508": {
         "attachment": false,
         "cost": {
@@ -81439,102 +81476,6 @@
         "reasoning": false,
         "release_date": "2024-01-01",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "claude-3-7-sonnet": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-        "family": "claude",
-        "id": "claude-3-7-sonnet",
-        "last_updated": "2025-02-24",
-        "limit": {
-          "context": 200000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude 3.7 Sonnet",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high"
-            ]
-          },
-          {
-            "max": 8191,
-            "min": 1024,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-02-24",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "claude-3-7-sonnet-20250219": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-        "family": "claude-sonnet",
-        "id": "claude-3-7-sonnet-20250219",
-        "knowledge": "2024-10-31",
-        "last_updated": "2025-02-19",
-        "limit": {
-          "context": 200000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Sonnet 3.7",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high"
-            ]
-          },
-          {
-            "max": 8191,
-            "min": 1024,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-02-19",
         "temperature": true,
         "tool_call": true
       },
@@ -135088,66 +135029,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "aion-labs/aion-1.0": {
-        "attachment": false,
-        "cost": {
-          "input": 4,
-          "output": 8
-        },
-        "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
-        "id": "aion-labs/aion-1.0",
-        "last_updated": "2025-02-04",
-        "limit": {
-          "context": 131072,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Aion-1.0",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-02-04",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "aion-labs/aion-1.0-mini": {
-        "attachment": false,
-        "cost": {
-          "input": 0.7,
-          "output": 1.4
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "id": "aion-labs/aion-1.0-mini",
-        "last_updated": "2025-02-04",
-        "limit": {
-          "context": 131072,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Aion-1.0-Mini",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-02-04",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
       "aion-labs/aion-2.0": {
         "attachment": false,
         "cost": {
@@ -135177,7 +135058,7 @@
         "release_date": "2026-02-23",
         "structured_output": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "aion-labs/aion-rp-llama-3.1-8b": {
         "attachment": false,
@@ -135936,7 +135817,7 @@
         ],
         "release_date": "2026-05-28",
         "structured_output": true,
-        "temperature": false,
+        "temperature": true,
         "tool_call": true
       },
       "anthropic/claude-opus-4.8-fast": {
@@ -140525,7 +140406,7 @@
         "release_date": "2026-06-08",
         "structured_output": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "nousresearch/hermes-3-llama-3.1-405b": {
         "attachment": false,
@@ -146158,9 +146039,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.14,
-          "output": 0.58
+          "cache_read": 0.5,
+          "input": 0.2,
+          "output": 0.8
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "hy3",
@@ -147105,9 +146986,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.16874,
-          "input": 0.9086,
-          "output": 2.8556
+          "cache_read": 0.18,
+          "input": 0.93,
+          "output": 3
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -147118,7 +146999,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -147315,7 +147196,7 @@
         ],
         "release_date": "2026-04-21",
         "structured_output": true,
-        "temperature": false,
+        "temperature": true,
         "tool_call": true
       },
       "~anthropic/claude-sonnet-latest": {
@@ -186927,6 +186808,49 @@
         "temperature": true,
         "tool_call": true
       },
+      "glm-5.2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.3,
+          "input": 1.2,
+          "output": 4.2
+        },
+        "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+        "family": "glm",
+        "id": "glm-5.2",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gpt-5-mini": {
         "attachment": true,
         "cost": {
@@ -187363,11 +187287,142 @@
         "temperature": true,
         "tool_call": true
       },
+      "Qwen/Qwen3.5-397B-A17B": {
+        "attachment": true,
+        "cost": {
+          "input": 0.3,
+          "output": 2
+        },
+        "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
+        "family": "qwen",
+        "id": "Qwen/Qwen3.5-397B-A17B",
+        "last_updated": "2026-02-15",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 397B-A17B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-02-15",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen/Qwen3.6-27B": {
+        "attachment": true,
+        "cost": {
+          "input": 0.3,
+          "output": 2
+        },
+        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+        "family": "qwen",
+        "id": "Qwen/Qwen3.6-27B",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 27B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-04-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "XiaomiMiMo/MiMo-V2.5-Pro": {
+        "attachment": false,
+        "cost": {
+          "input": 0.55,
+          "output": 1.65
+        },
+        "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+        "family": "mimo",
+        "id": "XiaomiMiMo/MiMo-V2.5-Pro",
+        "knowledge": "2024-12",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.5-Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-ai/DeepSeek-V4-Flash": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 1
+        },
+        "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+        "family": "deepseek-flash",
+        "id": "deepseek-ai/DeepSeek-V4-Flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "moonshotai/Kimi-K2.6": {
         "attachment": true,
         "cost": {
-          "input": 0.15,
-          "output": 0.6
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -187428,36 +187483,6 @@
         "release_date": "2025-12-01",
         "temperature": true,
         "tool_call": true
-      },
-      "nvidia/Llama-3.1-Nemotron-Safety-Guard-8B-v3": {
-        "attachment": false,
-        "cost": {
-          "input": 0.01,
-          "output": 0.01
-        },
-        "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
-        "family": "llama",
-        "id": "nvidia/Llama-3.1-Nemotron-Safety-Guard-8B-v3",
-        "knowledge": "2023-12",
-        "last_updated": "2025-10-28",
-        "limit": {
-          "context": 8192,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.1 Nemotron Safety Guard",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-10-28",
-        "temperature": true,
-        "tool_call": false
       },
       "nvidia/Nemotron-3-Nano-Omni-30B-A3B-Reasoning-BF16": {
         "attachment": false,
@@ -187521,21 +187546,21 @@
         "temperature": true,
         "tool_call": true
       },
-      "zai-org/GLM-5.1-FP8": {
+      "zai-org/GLM-5.2-FP8": {
         "attachment": false,
         "cost": {
           "input": 0.85,
           "output": 3.1
         },
-        "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+        "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
-        "id": "zai-org/GLM-5.1-FP8",
+        "id": "zai-org/GLM-5.2-FP8",
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-04-07",
+        "last_updated": "2026-06-13",
         "limit": {
-          "context": 200000,
+          "context": 393216,
           "output": 131072
         },
         "modalities": {
@@ -187546,11 +187571,11 @@
             "text"
           ]
         },
-        "name": "GLM-5.1",
+        "name": "GLM-5.2",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [],
-        "release_date": "2026-04-07",
+        "release_date": "2026-06-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -189134,50 +189159,6 @@
     "iconURL": "https://models.dev/logos/xiaomi-token-plan-ams.svg",
     "id": "xiaomi-token-plan-ams",
     "models": {
-      "mimo-v2-omni": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "MiMo omni model for text, image, video, audio, and agents",
-        "family": "mimo",
-        "id": "mimo-v2-omni",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-03-18",
-        "limit": {
-          "context": 262144,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2-Omni",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-03-18",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "mimo-v2-pro": {
         "attachment": false,
         "cost": {
@@ -189424,50 +189405,6 @@
     "iconURL": "https://models.dev/logos/xiaomi-token-plan-cn.svg",
     "id": "xiaomi-token-plan-cn",
     "models": {
-      "mimo-v2-omni": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "MiMo omni model for text, image, video, audio, and agents",
-        "family": "mimo",
-        "id": "mimo-v2-omni",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-03-18",
-        "limit": {
-          "context": 262144,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2-Omni",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-03-18",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "mimo-v2-pro": {
         "attachment": false,
         "cost": {
@@ -189714,50 +189651,6 @@
     "iconURL": "https://models.dev/logos/xiaomi-token-plan-sgp.svg",
     "id": "xiaomi-token-plan-sgp",
     "models": {
-      "mimo-v2-omni": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0,
-          "input": 0,
-          "output": 0
-        },
-        "description": "MiMo omni model for text, image, video, audio, and agents",
-        "family": "mimo",
-        "id": "mimo-v2-omni",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-03-18",
-        "limit": {
-          "context": 262144,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2-Omni",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-03-18",
-        "status": "deprecated",
-        "temperature": true,
-        "tool_call": true
-      },
       "mimo-v2-pro": {
         "attachment": false,
         "cost": {
@@ -190004,6 +189897,54 @@
     "iconURL": "https://models.dev/logos/xpersona.svg",
     "id": "xpersona",
     "models": {
+      "claude-fable-5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 18,
+          "reasoning": 18
+        },
+        "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+        "family": "claude-fable",
+        "id": "claude-fable-5",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-01-31",
+        "last_updated": "2026-06-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Fable 5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-06-09",
+        "temperature": false,
+        "tool_call": true
+      },
       "xpersona-frieren-coder": {
         "attachment": false,
         "cost": {
