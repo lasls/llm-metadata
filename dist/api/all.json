@@ -79154,6 +79154,7 @@
           "output": 0
         },
         "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
+        "family": "laguna",
         "id": "poolside/laguna-m.1:free",
         "last_updated": "2026-06-13",
         "limit": {
@@ -79169,10 +79170,11 @@
           ]
         },
         "name": "Poolside: Laguna M.1 (free)",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-28",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -79183,6 +79185,7 @@
           "output": 0
         },
         "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
+        "family": "laguna",
         "id": "poolside/laguna-xs.2:free",
         "last_updated": "2026-06-13",
         "limit": {
@@ -79198,10 +79201,11 @@
           ]
         },
         "name": "Poolside: Laguna XS.2 (free)",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-28",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -86546,6 +86550,150 @@
           }
         ],
         "release_date": "2026-04-23",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.6-luna": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.1,
+          "input": 1,
+          "output": 6
+        },
+        "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
+        "family": "gpt-nano",
+        "id": "gpt-5.6-luna",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Luna",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.6-sol": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 5,
+          "output": 30
+        },
+        "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
+        "family": "gpt",
+        "id": "gpt-5.6-sol",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Sol",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.6-terra": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 15
+        },
+        "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
+        "family": "gpt-mini",
+        "id": "gpt-5.6-terra",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Terra",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -95133,6 +95281,7 @@
       "muse-spark-1.1": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.15,
           "input": 1.25,
           "output": 4.25
         },
@@ -114205,15 +114354,15 @@
       "poolside/laguna-m.1": {
         "attachment": false,
         "cost": {
-          "input": 0.1,
-          "output": 0.3
+          "input": 0.2,
+          "output": 0.4
         },
-        "description": "General-purpose chat model for instruction following, writing, and analysis",
+        "description": "Poolside's flagship agentic coding model for long-horizon work",
+        "family": "laguna",
         "id": "poolside/laguna-m.1",
-        "last_updated": "2026-04-29",
+        "last_updated": "2026-06-13",
         "limit": {
-          "context": 128000,
-          "input": 128000,
+          "context": 262144,
           "output": 32768
         },
         "modalities": {
@@ -114225,24 +114374,26 @@
           ]
         },
         "name": "Laguna M.1",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-29",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-04-28",
         "structured_output": false,
-        "tool_call": false
+        "temperature": true,
+        "tool_call": true
       },
       "poolside/laguna-xs.2": {
         "attachment": false,
         "cost": {
-          "input": 0.1,
-          "output": 0.3
+          "input": 0.2,
+          "output": 0.4
         },
-        "description": "General-purpose chat model for instruction following, writing, and analysis",
+        "description": "Agentic coding model from Poolside in the XS size class for local deployment",
+        "family": "laguna",
         "id": "poolside/laguna-xs.2",
-        "last_updated": "2026-04-29",
+        "last_updated": "2026-06-13",
         "limit": {
-          "context": 128000,
-          "input": 128000,
+          "context": 262144,
           "output": 32768
         },
         "modalities": {
@@ -114254,11 +114405,13 @@
           ]
         },
         "name": "Laguna XS.2",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-29",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-04-28",
         "structured_output": false,
-        "tool_call": false
+        "temperature": true,
+        "tool_call": true
       },
       "qvq-max": {
         "attachment": true,
@@ -138150,7 +138303,7 @@
         "knowledge": "2024-06-30",
         "last_updated": "2024-10-22",
         "limit": {
-          "context": 16384,
+          "context": 32768,
           "output": 2048
         },
         "modalities": {
@@ -139106,7 +139259,7 @@
         "knowledge": "2025-03-31",
         "last_updated": "2025-06-30",
         "limit": {
-          "context": 123000,
+          "context": 131072,
           "output": 16000
         },
         "modalities": {
@@ -139540,7 +139693,7 @@
         "knowledge": "2025-09",
         "last_updated": "2026-02-28",
         "limit": {
-          "context": 128000,
+          "context": 131072,
           "output": 16000
         },
         "modalities": {
@@ -139640,7 +139793,7 @@
         "knowledge": "2024-07",
         "last_updated": "2025-05-29",
         "limit": {
-          "context": 64000,
+          "context": 163840,
           "output": 16000
         },
         "modalities": {
@@ -139705,7 +139858,7 @@
         "knowledge": "2024-07-31",
         "last_updated": "2025-01-23",
         "limit": {
-          "context": 8192,
+          "context": 128000,
           "output": 8192
         },
         "modalities": {
@@ -139775,7 +139928,7 @@
         "knowledge": "2024-07",
         "last_updated": "2025-12-01",
         "limit": {
-          "context": 128000,
+          "context": 131072,
           "output": 64000
         },
         "modalities": {
@@ -140643,7 +140796,7 @@
         "knowledge": "2025-01",
         "last_updated": "2026-02-19",
         "limit": {
-          "context": 1048576,
+          "context": 1048756,
           "output": 65536
         },
         "modalities": {
@@ -140931,7 +141084,7 @@
         "id": "google/gemma-4-26b-a4b-it:free",
         "last_updated": "2026-04-02",
         "limit": {
-          "context": 131072,
+          "context": 262144,
           "output": 32768
         },
         "modalities": {
@@ -141653,7 +141806,7 @@
         "knowledge": "2023-12-31",
         "last_updated": "2024-09-25",
         "limit": {
-          "context": 60000,
+          "context": 131072,
           "output": 60000
         },
         "modalities": {
@@ -141777,7 +141930,7 @@
         "knowledge": "2023-12",
         "last_updated": "2024-12-06",
         "limit": {
-          "context": 65536,
+          "context": 131072,
           "output": 131072
         },
         "modalities": {
@@ -141840,7 +141993,7 @@
         "knowledge": "2024-08-31",
         "last_updated": "2025-04-05",
         "limit": {
-          "context": 327680,
+          "context": 10000000,
           "output": 16384
         },
         "modalities": {
@@ -141934,7 +142087,7 @@
         "knowledge": "2024-04-30",
         "last_updated": "2024-04-16",
         "limit": {
-          "context": 65535,
+          "context": 65536,
           "output": 8000
         },
         "modalities": {
@@ -142132,7 +142285,7 @@
         },
         "last_updated": "2026-02-12",
         "limit": {
-          "context": 196608,
+          "context": 204800,
           "output": 196608
         },
         "modalities": {
@@ -142163,7 +142316,7 @@
         "id": "minimax/minimax-m2.7",
         "last_updated": "2026-03-18",
         "limit": {
-          "context": 196608,
+          "context": 204800,
           "output": 196608
         },
         "modalities": {
@@ -142195,8 +142348,8 @@
         "id": "minimax/minimax-m3",
         "last_updated": "2026-06-01",
         "limit": {
-          "context": 524288,
-          "output": 512000
+          "context": 1048576,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -142970,7 +143123,7 @@
         "knowledge": "2025-01",
         "last_updated": "2026-01",
         "limit": {
-          "context": 256000,
+          "context": 262144,
           "output": 256000
         },
         "modalities": {
@@ -142994,8 +143147,8 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.14,
-          "input": 0.65,
+          "cache_read": 0.15,
+          "input": 0.66,
           "output": 3.41
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
@@ -143495,7 +143648,7 @@
         "id": "nvidia/nemotron-3-super-120b-a12b",
         "last_updated": "2026-03-11",
         "limit": {
-          "context": 262144,
+          "context": 1000000,
           "output": 16384
         },
         "modalities": {
@@ -143537,7 +143690,7 @@
         "id": "nvidia/nemotron-3-super-120b-a12b:free",
         "last_updated": "2026-03-11",
         "limit": {
-          "context": 262144,
+          "context": 1000000,
           "output": 262144
         },
         "modalities": {
@@ -143580,7 +143733,7 @@
         "id": "nvidia/nemotron-3-ultra-550b-a55b",
         "last_updated": "2026-06-04",
         "limit": {
-          "context": 262144,
+          "context": 1000000,
           "output": 16384
         },
         "modalities": {
@@ -146779,9 +146932,10 @@
           "input": 0.2,
           "output": 0.4
         },
-        "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+        "description": "Poolside's flagship agentic coding model for long-horizon work",
+        "family": "laguna",
         "id": "poolside/laguna-m.1",
-        "last_updated": "2026-04-28",
+        "last_updated": "2026-06-13",
         "limit": {
           "context": 262144,
           "output": 32768
@@ -146810,11 +146964,12 @@
           "output": 0
         },
         "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
+        "family": "laguna",
         "id": "poolside/laguna-m.1:free",
         "interleaved": {
           "field": "reasoning_content"
         },
-        "last_updated": "2026-04-28",
+        "last_updated": "2026-06-13",
         "limit": {
           "context": 262144,
           "output": 32768
@@ -146843,7 +146998,8 @@
           "input": 0.06,
           "output": 0.12
         },
-        "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+        "description": "Agentic coding model from Poolside in the XS size class for local deployment",
+        "family": "laguna",
         "id": "poolside/laguna-xs-2.1",
         "last_updated": "2026-07-02",
         "limit": {
@@ -146874,6 +147030,7 @@
           "output": 0
         },
         "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
+        "family": "laguna",
         "id": "poolside/laguna-xs-2.1:free",
         "last_updated": "2026-07-02",
         "limit": {
@@ -146909,7 +147066,7 @@
         "knowledge": "2024-06-30",
         "last_updated": "2024-09-19",
         "limit": {
-          "context": 32768,
+          "context": 131072,
           "output": 16384
         },
         "modalities": {
@@ -146940,7 +147097,7 @@
         "knowledge": "2024-06-30",
         "last_updated": "2024-10-16",
         "limit": {
-          "context": 32768,
+          "context": 131072,
           "output": 32768
         },
         "modalities": {
@@ -146971,7 +147128,7 @@
         "knowledge": "2024-06-30",
         "last_updated": "2024-11-11",
         "limit": {
-          "context": 32768,
+          "context": 128000,
           "output": 32768
         },
         "modalities": {
@@ -147106,7 +147263,7 @@
         "knowledge": "2024-06-30",
         "last_updated": "2025-02-01",
         "limit": {
-          "context": 128000,
+          "context": 131072,
           "output": 128000
         },
         "modalities": {
@@ -147138,7 +147295,7 @@
         "knowledge": "2025-03-31",
         "last_updated": "2025-04-28",
         "limit": {
-          "context": 40960,
+          "context": 131702,
           "output": 40960
         },
         "modalities": {
@@ -147246,7 +147403,7 @@
         "knowledge": "2025-06-30",
         "last_updated": "2025-07-25",
         "limit": {
-          "context": 131072,
+          "context": 262144,
           "output": 262144
         },
         "modalities": {
@@ -147278,7 +147435,7 @@
         "knowledge": "2025-03-31",
         "last_updated": "2025-04-28",
         "limit": {
-          "context": 40960,
+          "context": 131072,
           "output": 16384
         },
         "modalities": {
@@ -147314,7 +147471,7 @@
         "knowledge": "2025-06-30",
         "last_updated": "2025-07-29",
         "limit": {
-          "context": 128000,
+          "context": 131072,
           "output": 32000
         },
         "modalities": {
@@ -147345,7 +147502,7 @@
         "knowledge": "2025-06-30",
         "last_updated": "2025-08-28",
         "limit": {
-          "context": 81920,
+          "context": 131072,
           "output": 32768
         },
         "modalities": {
@@ -147377,7 +147534,7 @@
         "knowledge": "2025-04",
         "last_updated": "2025-04",
         "limit": {
-          "context": 40960,
+          "context": 131072,
           "output": 16384
         },
         "modalities": {
@@ -147449,7 +147606,7 @@
         "knowledge": "2025-06-30",
         "last_updated": "2025-07-23",
         "limit": {
-          "context": 262144,
+          "context": 1048576,
           "output": 65536
         },
         "modalities": {
@@ -147608,7 +147765,7 @@
         "knowledge": "2025-06-30",
         "last_updated": "2025-07-23",
         "limit": {
-          "context": 262000,
+          "context": 1048576,
           "output": 262000
         },
         "modalities": {
@@ -147771,7 +147928,7 @@
         "knowledge": "2025-04",
         "last_updated": "2025-09",
         "limit": {
-          "context": 131072,
+          "context": 262144,
           "output": 32768
         },
         "modalities": {
@@ -147869,7 +148026,7 @@
         "knowledge": "2025-03-31",
         "last_updated": "2025-10-06",
         "limit": {
-          "context": 131072,
+          "context": 262144,
           "output": 32768
         },
         "modalities": {
@@ -147933,7 +148090,7 @@
         "id": "qwen/qwen3-vl-32b-instruct",
         "last_updated": "2025-10-23",
         "limit": {
-          "context": 131072,
+          "context": 262144,
           "output": 32768
         },
         "modalities": {
@@ -147964,7 +148121,7 @@
         "id": "qwen/qwen3-vl-8b-instruct",
         "last_updated": "2025-10-14",
         "limit": {
-          "context": 131072,
+          "context": 256000,
           "output": 32768
         },
         "modalities": {
@@ -147995,7 +148152,7 @@
         "id": "qwen/qwen3-vl-8b-thinking",
         "last_updated": "2025-10-14",
         "limit": {
-          "context": 131072,
+          "context": 256000,
           "output": 32768
         },
         "modalities": {
@@ -148140,7 +148297,7 @@
         "id": "qwen/qwen3.5-397b-a17b",
         "last_updated": "2026-02-15",
         "limit": {
-          "context": 131072,
+          "context": 256000,
           "output": 64000
         },
         "modalities": {
@@ -148343,7 +148500,7 @@
         "id": "qwen/qwen3.6-27b",
         "last_updated": "2026-04-22",
         "limit": {
-          "context": 262140,
+          "context": 262144,
           "output": 262140
         },
         "modalities": {
@@ -149599,7 +149756,7 @@
         "knowledge": "2024-12",
         "last_updated": "2026-04-22",
         "limit": {
-          "context": 32000,
+          "context": 1048576,
           "output": 131072
         },
         "modalities": {
@@ -150003,7 +150160,7 @@
         },
         "last_updated": "2026-04-07",
         "limit": {
-          "context": 200000,
+          "context": 202752,
           "output": 128000
         },
         "modalities": {
@@ -150038,7 +150195,7 @@
         },
         "last_updated": "2026-06-13",
         "limit": {
-          "context": 101376,
+          "context": 1048576,
           "output": 101376
         },
         "modalities": {
@@ -150391,8 +150548,8 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.14,
-          "input": 0.65,
+          "cache_read": 0.15,
+          "input": 0.66,
           "output": 3.41
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
@@ -159744,7 +159901,8 @@
           "input": 0,
           "output": 0
         },
-        "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+        "description": "Poolside's flagship agentic coding model for long-horizon work",
+        "family": "laguna",
         "id": "poolside/laguna-m.1",
         "interleaved": {
           "field": "reasoning_content"
@@ -159763,22 +159921,47 @@
           ]
         },
         "name": "Laguna M.1",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "minimal",
-              "low",
-              "medium",
-              "high",
-              "xhigh"
-            ]
-          }
-        ],
+        "reasoning_options": [],
         "release_date": "2026-04-28",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "poolside/laguna-xs-2.1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Agentic coding model from Poolside in the XS size class for local deployment",
+        "family": "laguna",
+        "id": "poolside/laguna-xs-2.1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-07-02",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Laguna XS 2.1",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-07-02",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -159790,7 +159973,8 @@
           "input": 0,
           "output": 0
         },
-        "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+        "description": "Agentic coding model from Poolside in the XS size class for local deployment",
+        "family": "laguna",
         "id": "poolside/laguna-xs.2",
         "interleaved": {
           "field": "reasoning_content"
@@ -159811,20 +159995,9 @@
         "name": "Laguna XS.2",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "minimal",
-              "low",
-              "medium",
-              "high",
-              "xhigh"
-            ]
-          }
-        ],
+        "reasoning_options": [],
         "release_date": "2026-04-28",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       }
@@ -178598,6 +178771,276 @@
         "temperature": false,
         "tool_call": true
       },
+      "openai-gpt-56-luna": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 7.5
+        },
+        "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+        "family": "gpt-nano",
+        "id": "openai-gpt-56-luna",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Luna",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-56-luna-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 1.25,
+          "output": 7.5
+        },
+        "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+        "family": "gpt-nano",
+        "id": "openai-gpt-56-luna-pro",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Luna Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-56-sol": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.625,
+          "input": 6.25,
+          "output": 37.5
+        },
+        "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+        "family": "gpt",
+        "id": "openai-gpt-56-sol",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Sol",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-56-sol-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.625,
+          "input": 6.25,
+          "output": 37.5
+        },
+        "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+        "family": "gpt",
+        "id": "openai-gpt-56-sol-pro",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Sol Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-56-terra": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3125,
+          "input": 3.125,
+          "output": 18.75
+        },
+        "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+        "family": "gpt-mini",
+        "id": "openai-gpt-56-terra",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Terra",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai-gpt-56-terra-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3125,
+          "input": 3.125,
+          "output": 18.75
+        },
+        "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+        "family": "gpt-mini",
+        "id": "openai-gpt-56-terra-pro",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Terra Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "openai-gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -182459,7 +182902,7 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0028,
+          "cache_read": 0.028,
           "input": 0.14,
           "output": 0.28
         },
@@ -184249,7 +184692,9 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
