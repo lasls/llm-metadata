@@ -22402,8 +22402,8 @@
         "cost": {
           "cache_read": 0.16,
           "cache_write": 0,
-          "input": 0.75,
-          "output": 3.5
+          "input": 0.84,
+          "output": 3.99
         },
         "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
         "family": "kimi-k2",
@@ -22465,6 +22465,39 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-07",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/GLM-5.2-FP8": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "cache_write": 0,
+          "input": 1.2,
+          "output": 4.2
+        },
+        "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+        "family": "glm",
+        "id": "zai-org/GLM-5.2-FP8",
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 202752,
+          "output": 202752
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-06-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -50185,7 +50218,7 @@
         "release_date": "2026-04-24",
         "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "deepseek-v4-pro": {
         "attachment": false,
@@ -50236,7 +50269,7 @@
         "release_date": "2026-04-24",
         "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "fugu-ultra": {
         "attachment": true,
@@ -50685,7 +50718,7 @@
         "release_date": "2026-04-22",
         "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "mimo-v2-5-pro": {
         "attachment": false,
@@ -50722,7 +50755,7 @@
         "release_date": "2026-04-22",
         "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "minimax-m2-7": {
         "attachment": false,
@@ -50786,7 +50819,7 @@
         "release_date": "2026-03-18",
         "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "minimax-m3": {
         "attachment": true,
@@ -51469,7 +51502,7 @@
         "release_date": "2026-04-20",
         "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "qwen3-6-plus": {
         "attachment": true,
@@ -51680,7 +51713,7 @@
         "release_date": "2025-09-23",
         "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "step-3-5-flash": {
         "attachment": false,
@@ -70484,6 +70517,231 @@
       }
     },
     "name": "Inference",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "inferx": {
+    "api": "https://model.inferx.net/v1",
+    "doc": "https://model.inferx.net/endpoints",
+    "env": [
+      "INFERX_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/inferx.svg",
+    "id": "inferx",
+    "models": {
+      "google/gemma-4-31b-it-fp8": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
+        "family": "gemma",
+        "id": "google/gemma-4-31b-it-fp8",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 31B IT FP8",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-04-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3-coder-next-fp8": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen coding model for software agents, repository edits, and code reasoning",
+        "family": "qwen",
+        "id": "qwen/qwen3-coder-next-fp8",
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-03",
+        "limit": {
+          "context": 256144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Next FP8",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-02-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3-coder-next-fp8-1m": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen coding model for software agents, repository edits, and code reasoning",
+        "family": "qwen",
+        "id": "qwen/qwen3-coder-next-fp8-1m",
+        "knowledge": "2025-04",
+        "last_updated": "2026-02-03",
+        "limit": {
+          "context": 1024000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 Coder Next FP8 1M",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-02-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3.5-122b-a10b-nvfp4": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+        "family": "qwen",
+        "id": "qwen/qwen3.5-122b-a10b-nvfp4",
+        "last_updated": "2026-02-23",
+        "limit": {
+          "context": 256144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 122B A10B NVFP4",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-02-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3.6-27b-fp8": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+        "family": "qwen",
+        "id": "qwen/qwen3.6-27b-fp8",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 27B FP8",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-04-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen3.6-35b-a3b-fp8": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+        "family": "qwen",
+        "id": "qwen/qwen3.6-35b-a3b-fp8",
+        "last_updated": "2026-04-17",
+        "limit": {
+          "context": 262000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 35B A3B FP8",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-04-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "InferX",
     "npm": "@ai-sdk/openai-compatible"
   },
   "io-net": {
@@ -90671,99 +90929,6 @@
         "structured_output": false,
         "temperature": true,
         "tool_call": false
-      },
-      "mimo-v2-omni": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.08,
-          "input": 0.4,
-          "output": 2
-        },
-        "description": "MiMo omni model for text, image, video, audio, and agents",
-        "family": "mimo",
-        "id": "mimo-v2-omni",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-03-18",
-        "limit": {
-          "context": 256000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "audio",
-            "video",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2-Omni",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-03-18",
-        "temperature": true,
-        "tool_call": true
-      },
-      "mimo-v2-pro": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.2,
-          "context_over_200k": {
-            "cache_read": 0.4,
-            "input": 2,
-            "output": 6
-          },
-          "input": 1,
-          "output": 3,
-          "tiers": [
-            {
-              "cache_read": 0.4,
-              "input": 2,
-              "output": 6,
-              "tier": {
-                "size": 256000,
-                "type": "context"
-              }
-            }
-          ]
-        },
-        "description": "Earlier MiMo Pro model for multimodal agents, reasoning, and code tasks",
-        "family": "mimo",
-        "id": "mimo-v2-pro",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-03-18",
-        "limit": {
-          "context": 1000000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2-Pro",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-03-18",
-        "temperature": true,
-        "tool_call": true
       },
       "mimo-v2.5": {
         "attachment": true,
@@ -143796,9 +143961,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0168,
-          "input": 0.084,
-          "output": 0.168
+          "cache_read": 0.0154,
+          "input": 0.077,
+          "output": 0.154
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -145474,37 +145639,6 @@
         "temperature": true,
         "tool_call": false
       },
-      "meta-llama/llama-3-8b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.14,
-          "output": 0.14
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta-llama/llama-3-8b-instruct",
-        "knowledge": "2023-12-31",
-        "last_updated": "2024-04-18",
-        "limit": {
-          "context": 8192,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3 8B Instruct",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-04-18",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": false
-      },
       "meta-llama/llama-3.1-70b-instruct": {
         "attachment": false,
         "cost": {
@@ -146989,9 +147123,9 @@
       "moonshotai/kimi-k2.7-code": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.159,
+          "cache_read": 0.15,
           "input": 0.72,
-          "output": 3.49
+          "output": 3.5
         },
         "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
         "family": "kimi-k2",
@@ -153988,9 +154122,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.078,
-          "input": 0.42,
-          "output": 1.32
+          "cache_read": 0.065,
+          "input": 0.35,
+          "output": 1.1
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -154001,7 +154135,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 128000
         },
         "modalities": {
           "input": [
