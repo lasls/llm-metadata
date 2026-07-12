@@ -1,22 +1,21 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.01,
+    "cache_read": 0.5,
     "cache_write": 0,
-    "input": 0.14,
-    "output": 0.28
+    "input": 3,
+    "output": 10.25
   },
-  "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
-  "family": "deepseek-flash",
-  "id": "deepseek-v4-flash",
+  "description": "The same model served for high TPS.",
+  "family": "glm",
+  "id": "glm5.2-fast",
   "interleaved": {
     "field": "reasoning_content"
   },
-  "knowledge": "2025-05",
-  "last_updated": "2026-05-30",
+  "last_updated": "2026-06-13",
   "limit": {
-    "context": 1000000,
-    "output": 384000
+    "context": 1048576,
+    "output": 131072
   },
   "modalities": {
     "input": [
@@ -26,7 +25,7 @@
       "text"
     ]
   },
-  "name": "DeepSeek V4 Flash",
+  "name": "GLM5.2-Fast",
   "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
@@ -36,12 +35,15 @@
     {
       "type": "effort",
       "values": [
+        "none",
+        "low",
+        "medium",
         "high",
         "max"
       ]
     }
   ],
-  "release_date": "2026-04-24",
+  "release_date": "2026-06-13",
   "structured_output": true,
   "temperature": true,
   "tool_call": true
