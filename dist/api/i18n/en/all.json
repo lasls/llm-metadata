@@ -5480,7 +5480,7 @@
           "output": 6
         },
         "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "gpt-5.6-luna",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -5514,7 +5514,7 @@
           "output": 30
         },
         "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "gpt-5.6-sol",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -5548,7 +5548,7 @@
           "output": 15
         },
         "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "gpt-5.6-terra",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -6672,7 +6672,7 @@
           "output": 6
         },
         "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "gpt-5.6-luna",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -6721,7 +6721,7 @@
           "output": 30
         },
         "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "gpt-5.6-sol",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -6770,7 +6770,7 @@
           "output": 15
         },
         "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "gpt-5.6-terra",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -33804,6 +33804,75 @@
     "name": "Berget.AI",
     "npm": "@ai-sdk/openai-compatible"
   },
+  "blueclaw": {
+    "api": "https://openai.blueclaw.network/v1",
+    "doc": "https://blueclaw.network",
+    "env": [
+      "BLUECLAW_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/blueclaw.svg",
+    "id": "blueclaw",
+    "models": {
+      "Qwen/Qwen3.6-35B-A3B-FP8": {
+        "attachment": false,
+        "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+        "family": "qwen",
+        "id": "Qwen/Qwen3.6-35B-A3B-FP8",
+        "last_updated": "2026-04-17",
+        "limit": {
+          "context": 131072,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 35B A3B FP8",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-04-17",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "Qwen3.6-27B": {
+        "attachment": false,
+        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+        "family": "qwen",
+        "id": "Qwen3.6-27B",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 196608,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.6 27B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-04-22",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      }
+    },
+    "name": "Blue Claw",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "cerebras": {
     "doc": "https://inference-docs.cerebras.ai/models/overview",
     "env": [
@@ -43892,6 +43961,416 @@
       }
     },
     "name": "CrossModel",
+    "npm": "@ai-sdk/openai-compatible"
+  },
+  "daoxe": {
+    "api": "https://daoxe.com/v1",
+    "doc": "https://daoxe.com/pricing",
+    "env": [
+      "DAOXE_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/daoxe.svg",
+    "id": "daoxe",
+    "models": {
+      "claude-haiku-4-5-20251001": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.1,
+          "cache_write": 5,
+          "input": 1,
+          "output": 5
+        },
+        "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
+        "family": "claude-haiku",
+        "id": "claude-haiku-4-5-20251001",
+        "knowledge": "2025-02-28",
+        "last_updated": "2025-10-15",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Haiku 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2025-10-15",
+        "temperature": true,
+        "tool_call": true
+      },
+      "claude-opus-4-8": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "input": 5,
+          "output": 25
+        },
+        "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
+        "family": "claude-opus",
+        "id": "claude-opus-4-8",
+        "knowledge": "2026-01",
+        "last_updated": "2026-05-28",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Opus 4.8",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-05-28",
+        "temperature": false,
+        "tool_call": true
+      },
+      "claude-sonnet-4-6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
+        "family": "claude-sonnet",
+        "id": "claude-sonnet-4-6",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-13",
+        "limit": {
+          "context": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-02-17",
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3.1-pro-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 2,
+          "output": 12
+        },
+        "description": "Reasoning-first Gemini preview for agentic coding and complex problem solving",
+        "family": "gemini-pro",
+        "id": "gemini-3.1-pro-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Pro Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-02-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-5.4": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 15
+        },
+        "description": "Agent-ready GPT for coding and computer-use workflows at a lower cost",
+        "family": "gpt",
+        "id": "gpt-5.4",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-05",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.4",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-03-05",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gpt-5.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 5,
+          "output": 30
+        },
+        "description": "Default frontier GPT for coding, computer use, research, and knowledge work",
+        "family": "gpt",
+        "id": "gpt-5.5",
+        "knowledge": "2025-12-01",
+        "last_updated": "2026-04-23",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-04-23",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "grok-4.3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 1.25,
+          "output": 2.5
+        },
+        "description": "xAI's default Grok for chat, coding, agentic tools, and lower hallucination risk",
+        "family": "grok",
+        "id": "grok-4.3",
+        "last_updated": "2026-04-17",
+        "limit": {
+          "context": 1000000,
+          "output": 30000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.3",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-04-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 2,
+          "output": 6
+        },
+        "description": "xAI's latest Grok for chat, coding, agentic tools, and lower hallucination risk",
+        "family": "grok",
+        "id": "grok-4.5",
+        "last_updated": "2026-07-08",
+        "limit": {
+          "context": 500000,
+          "output": 500000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1,
+          "input": 0.6,
+          "output": 3
+        },
+        "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
+        "family": "kimi-k2",
+        "id": "kimi-k2.5",
+        "knowledge": "2025-01",
+        "last_updated": "2026-01",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.5",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-01",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      }
+    },
+    "name": "DaoXE",
     "npm": "@ai-sdk/openai-compatible"
   },
   "databricks": {
@@ -57902,7 +58381,7 @@
           ]
         },
         "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "gpt-5.6-luna",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -57966,7 +58445,7 @@
           ]
         },
         "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "gpt-5.6-sol",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -58030,7 +58509,7 @@
           ]
         },
         "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "gpt-5.6-terra",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -90359,7 +90838,7 @@
           "output": 6
         },
         "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "gpt-5.6-luna",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -90408,7 +90887,7 @@
           "output": 30
         },
         "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "gpt-5.6-sol",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -90457,7 +90936,7 @@
           "output": 15
         },
         "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "gpt-5.6-terra",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -125660,7 +126139,7 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "neon": {
-    "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/mlflow/v1",
+    "api": "${NEON_AI_GATEWAY_BASE_URL}/v1",
     "doc": "https://neon.com/docs",
     "env": [
       "NEON_AI_GATEWAY_BASE_URL",
@@ -137213,7 +137692,7 @@
             }
           }
         },
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "gpt-5.6",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -137306,7 +137785,7 @@
             }
           }
         },
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "gpt-5.6-luna",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -137399,7 +137878,7 @@
             }
           }
         },
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "gpt-5.6-sol",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -137492,7 +137971,7 @@
             }
           }
         },
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "gpt-5.6-terra",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -140320,7 +140799,7 @@
           ]
         },
         "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "gpt-5.6-luna",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -140390,7 +140869,7 @@
           ]
         },
         "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "gpt-5.6-sol",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -140460,7 +140939,7 @@
           ]
         },
         "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "gpt-5.6-terra",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -150191,7 +150670,7 @@
           "output": 6
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "openai/gpt-5.6-luna",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -150240,7 +150719,7 @@
           "output": 6
         },
         "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "openai/gpt-5.6-luna-pro",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -150289,7 +150768,7 @@
           "output": 30
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "openai/gpt-5.6-sol",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -150338,7 +150817,7 @@
           "output": 30
         },
         "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "openai/gpt-5.6-sol-pro",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -150387,7 +150866,7 @@
           "output": 15
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "openai/gpt-5.6-terra",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -150436,7 +150915,7 @@
           "output": 15
         },
         "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "openai/gpt-5.6-terra-pro",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -173563,7 +174042,7 @@
           "output": 4.2
         },
         "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "gpt-5.6-luna",
         "interleaved": {
           "field": "reasoning_content"
@@ -173601,7 +174080,7 @@
           "output": 15
         },
         "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "gpt-5.6-sol",
         "interleaved": {
           "field": "reasoning_content"
@@ -173639,7 +174118,7 @@
           "output": 9
         },
         "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "gpt-5.6-terra",
         "interleaved": {
           "field": "reasoning_content"
@@ -187662,7 +188141,7 @@
           "output": 7.5
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "openai-gpt-56-luna",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -187709,7 +188188,7 @@
           "output": 7.5
         },
         "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
-        "family": "gpt-nano",
+        "family": "gpt-luna",
         "id": "openai-gpt-56-luna-pro",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -187756,7 +188235,7 @@
           "output": 37.5
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "openai-gpt-56-sol",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -187803,7 +188282,7 @@
           "output": 37.5
         },
         "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "openai-gpt-56-sol-pro",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -187850,7 +188329,7 @@
           "output": 18.75
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "openai-gpt-56-terra",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -187897,7 +188376,7 @@
           "output": 18.75
         },
         "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
-        "family": "gpt-mini",
+        "family": "gpt-terra",
         "id": "openai-gpt-56-terra-pro",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -196312,7 +196791,7 @@
           "output": 6
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
+        "family": "gpt-luna",
         "id": "openai/gpt-5.6-luna",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -196361,7 +196840,7 @@
           "output": 30
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "openai/gpt-5.6-sol",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -196410,7 +196889,7 @@
           "output": 15
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
+        "family": "gpt-terra",
         "id": "openai/gpt-5.6-terra",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -199959,7 +200438,7 @@
           "output": 6
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
+        "family": "gpt-luna",
         "id": "gpt-5.6-luna",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -200008,7 +200487,7 @@
           "output": 30
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
+        "family": "gpt-sol",
         "id": "gpt-5.6-sol",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -200057,7 +200536,7 @@
           "output": 15
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-        "family": "gpt",
+        "family": "gpt-terra",
         "id": "gpt-5.6-terra",
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
@@ -206860,6 +207339,207 @@
         "temperature": false,
         "tool_call": true
       },
+      "openai/gpt-5.6-luna": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.1,
+          "cache_write": 1.25,
+          "context_over_200k": {
+            "cache_read": 0.2,
+            "cache_write": 2.5,
+            "input": 2,
+            "output": 9
+          },
+          "input": 1,
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.2,
+              "cache_write": 2.5,
+              "input": 2,
+              "output": 9,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
+        "family": "gpt-luna",
+        "id": "openai/gpt-5.6-luna",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Luna",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.6-sol": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 6.25,
+          "context_over_200k": {
+            "cache_read": 1,
+            "cache_write": 12.5,
+            "input": 10,
+            "output": 45
+          },
+          "input": 5,
+          "output": 30,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 45,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
+        "family": "gpt-sol",
+        "id": "openai/gpt-5.6-sol",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Sol",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "openai/gpt-5.6-terra": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 3.125,
+          "context_over_200k": {
+            "cache_read": 0.5,
+            "cache_write": 6.25,
+            "input": 5,
+            "output": 22.5
+          },
+          "input": 2.5,
+          "output": 15,
+          "tiers": [
+            {
+              "cache_read": 0.5,
+              "cache_write": 6.25,
+              "input": 5,
+              "output": 22.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
+        "family": "gpt-terra",
+        "id": "openai/gpt-5.6-terra",
+        "knowledge": "2026-02-16",
+        "last_updated": "2026-07-09",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-5.6 Terra",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-09",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "qwen/qwen3-coder-plus": {
         "attachment": false,
         "cost": {
@@ -207876,6 +208556,65 @@
           }
         ],
         "release_date": "2026-04-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "x-ai/grok-4.5": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "context_over_200k": {
+            "cache_read": 1,
+            "input": 4,
+            "output": 12
+          },
+          "input": 2,
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "xAI's latest Grok for chat, coding, agentic tools, and lower hallucination risk",
+        "family": "grok",
+        "id": "x-ai/grok-4.5",
+        "last_updated": "2026-07-08",
+        "limit": {
+          "context": 500000,
+          "output": 500000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-08",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
