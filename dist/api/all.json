@@ -23307,10 +23307,10 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1,
+          "cache_read": 0.2,
           "cache_write": 0,
-          "input": 0.25,
-          "output": 0.4
+          "input": 0.5,
+          "output": 0.8
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -23390,10 +23390,10 @@
       "moonshotai/kimi-k2.7-code": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
+          "cache_read": 0.17,
           "cache_write": 0,
-          "input": 1,
-          "output": 4.4
+          "input": 0.85,
+          "output": 3.8
         },
         "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
         "family": "kimi-k2",
@@ -44743,6 +44743,48 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-06-12",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "moonshot/kimi-k3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "family": "kimi-k3",
+        "id": "moonshot/kimi-k3",
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-16",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -142871,6 +142913,9 @@
         },
         "name": "Grok 4.5",
         "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -144289,6 +144334,9 @@
         },
         "name": "Grok 4.5",
         "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/openai"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -148022,8 +148070,8 @@
       "google/gemma-4-26b-a4b-it": {
         "attachment": true,
         "cost": {
-          "input": 0.1,
-          "output": 0.3
+          "input": 0.07,
+          "output": 0.34
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -148031,7 +148079,7 @@
         "last_updated": "2026-04-02",
         "limit": {
           "context": 262144,
-          "output": 256000
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -149140,8 +149188,9 @@
       "minimax/minimax-m2": {
         "attachment": false,
         "cost": {
-          "input": 0.255,
-          "output": 1.02
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "Efficient open MiniMax model built for coding agents and tool-heavy workflows",
         "family": "minimax",
@@ -150116,9 +150165,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.16,
-          "input": 0.95,
-          "output": 4
+          "cache_read": 0.144,
+          "input": 0.684,
+          "output": 3.42
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -150153,9 +150202,9 @@
       "moonshotai/kimi-k2.7-code": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "input": 1,
-          "output": 4.4
+          "cache_read": 0.17,
+          "input": 0.85,
+          "output": 3.8
         },
         "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
         "family": "kimi-k2",
@@ -154228,8 +154277,8 @@
       "qwen/qwen3-14b": {
         "attachment": false,
         "cost": {
-          "input": 0.12,
-          "output": 0.24
+          "input": 0.2275,
+          "output": 0.91
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -154238,7 +154287,7 @@
         "last_updated": "2025-04-28",
         "limit": {
           "context": 131702,
-          "output": 16384
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -156608,7 +156657,7 @@
       "x-ai/grok-4.5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
+          "cache_read": 0.3,
           "context_over_200k": {
             "cache_read": 1,
             "input": 4,
@@ -157140,9 +157189,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.07696,
-          "input": 0.4144,
-          "output": 1.3024
+          "cache_read": 0.04784,
+          "input": 0.2576,
+          "output": 0.8096
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -157647,7 +157696,7 @@
       "~x-ai/grok-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
+          "cache_read": 0.3,
           "input": 2,
           "output": 6
         },
@@ -186125,6 +186174,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-25",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -186222,6 +186272,7 @@
           }
         ],
         "release_date": "2026-02-16",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -186530,6 +186581,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-12-05",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -186990,6 +187042,7 @@
           }
         ],
         "release_date": "2026-02-11",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -187026,6 +187079,7 @@
           }
         ],
         "release_date": "2026-04-07",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -189881,9 +189935,9 @@
       "grok-4-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.57,
+          "cache_read": 0.34,
           "context_over_200k": {
-            "cache_read": 1.13,
+            "cache_read": 0.68,
             "input": 4.53,
             "output": 13.6
           },
@@ -189891,7 +189945,7 @@
           "output": 6.8,
           "tiers": [
             {
-              "cache_read": 1.13,
+              "cache_read": 0.68,
               "input": 4.53,
               "output": 13.6,
               "tier": {
@@ -196873,128 +196927,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-07-23",
-        "temperature": true,
-        "tool_call": true
-      },
-      "meta/llama-3.2-11b": {
-        "attachment": true,
-        "cost": {
-          "input": 0.16,
-          "output": 0.16
-        },
-        "description": "Open Llama multimodal model for image understanding and text reasoning",
-        "family": "llama",
-        "id": "meta/llama-3.2-11b",
-        "knowledge": "2023-12",
-        "last_updated": "2024-09-25",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.2 11B Vision Instruct",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-09-25",
-        "temperature": true,
-        "tool_call": true
-      },
-      "meta/llama-3.2-1b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.1,
-          "output": 0.1
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta/llama-3.2-1b",
-        "knowledge": "2023-12",
-        "last_updated": "2024-09-18",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.2 1B Instruct",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-09-25",
-        "temperature": true,
-        "tool_call": false
-      },
-      "meta/llama-3.2-3b": {
-        "attachment": false,
-        "cost": {
-          "input": 0.15,
-          "output": 0.15
-        },
-        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-        "family": "llama",
-        "id": "meta/llama-3.2-3b",
-        "knowledge": "2023-12",
-        "last_updated": "2024-09-18",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.2 3B Instruct",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-09-25",
-        "temperature": true,
-        "tool_call": false
-      },
-      "meta/llama-3.2-90b": {
-        "attachment": true,
-        "cost": {
-          "input": 0.72,
-          "output": 0.72
-        },
-        "description": "Open Llama multimodal model for image understanding and text reasoning",
-        "family": "llama",
-        "id": "meta/llama-3.2-90b",
-        "knowledge": "2023-12",
-        "last_updated": "2024-09-25",
-        "limit": {
-          "context": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama 3.2 90B Vision Instruct",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-09-25",
         "temperature": true,
         "tool_call": true
       },
@@ -205305,7 +205237,7 @@
       "grok-4.5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
+          "cache_read": 0.3,
           "context_over_200k": {
             "cache_read": 1,
             "input": 4,
