@@ -95290,7 +95290,6 @@
           {
             "type": "effort",
             "values": [
-              "none",
               "minimal",
               "low",
               "medium",
@@ -101963,7 +101962,6 @@
           {
             "type": "effort",
             "values": [
-              "none",
               "minimal",
               "low",
               "medium",
@@ -132933,6 +132931,91 @@
         "temperature": true,
         "tool_call": true
       },
+      "moonshotai/kimi-k2.7-code": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.19,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+        "family": "kimi-k2",
+        "id": "moonshotai/kimi-k2.7-code",
+        "knowledge": "2025-01",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.7 Code",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-06-12",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "family": "kimi-k3",
+        "id": "moonshotai/kimi-k3",
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-16",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "nousresearch/hermes-2-pro-llama-3-8b": {
         "attachment": false,
         "cost": {
@@ -146223,7 +146306,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-01",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -148673,6 +148756,42 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": false
+      },
+      "meituan/longcat-2.0": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.006,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+        "family": "longcat",
+        "id": "meituan/longcat-2.0",
+        "last_updated": "2026-07-20",
+        "limit": {
+          "context": 1048756,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "LongCat 2.0",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-07-20",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
       },
       "meta-llama/llama-3.1-70b-instruct": {
         "attachment": false,
@@ -157010,9 +157129,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.18174,
-          "input": 0.9786,
-          "output": 3.0756
+          "cache_read": 0.17992,
+          "input": 0.9688,
+          "output": 3.0448
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -196877,7 +196996,6 @@
           {
             "type": "effort",
             "values": [
-              "none",
               "minimal",
               "low",
               "medium",
@@ -201547,7 +201665,7 @@
       "xai/grok-4.5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
+          "cache_read": 0.3,
           "input": 2,
           "output": 6
         },
@@ -209217,6 +209335,53 @@
           ]
         },
         "name": "Kimi K3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-16",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "moonshotai/kimi-k3-free": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "family": "kimi-k3",
+        "id": "moonshotai/kimi-k3-free",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3 (Free)",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
