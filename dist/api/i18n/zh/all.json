@@ -156129,8 +156129,9 @@
       "qwen/qwen3-next-80b-a3b-instruct": {
         "attachment": false,
         "cost": {
-          "input": 0.0975,
-          "output": 0.78
+          "cache_read": 0.07,
+          "input": 0.1,
+          "output": 1.1
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -156139,7 +156140,7 @@
         "last_updated": "2025-09",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -157642,7 +157643,7 @@
         "last_updated": "2023-07-22",
         "limit": {
           "context": 6144,
-          "output": 4096
+          "output": 2048
         },
         "modalities": {
           "input": [
@@ -158397,9 +158398,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.15314,
-          "input": 0.8246,
-          "output": 2.5916
+          "cache_read": 0.15236,
+          "input": 0.8204,
+          "output": 2.5784
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -190809,7 +190810,8 @@
           "input": [
             "text",
             "image",
-            "audio"
+            "audio",
+            "video"
           ],
           "output": [
             "text"
@@ -190844,7 +190846,8 @@
           "input": [
             "text",
             "image",
-            "audio"
+            "audio",
+            "video"
           ],
           "output": [
             "text"
@@ -193157,6 +193160,38 @@
           }
         ],
         "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3-6-35b-a3b": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.15,
+          "output": 1
+        },
+        "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+        "family": "qwen",
+        "id": "qwen3-6-35b-a3b",
+        "last_updated": "2026-07-22",
+        "limit": {
+          "context": 256000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.6 35B A3B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-07-20",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
