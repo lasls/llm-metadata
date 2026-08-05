@@ -1,32 +1,48 @@
 {
-  "attachment": false,
+  "attachment": true,
   "cost": {
-    "input": 3.307,
-    "output": 16.536
+    "cache_read": 0.29,
+    "cache_write": 3.624,
+    "input": 2.898,
+    "output": 14.493
   },
   "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
   "family": "claude-sonnet",
   "id": "claude-sonnet-4",
-  "knowledge": "2025-03",
+  "knowledge": "2025-03-31",
   "last_updated": "2025-05-22",
   "limit": {
     "context": 200000,
-    "output": 64000
+    "output": 200000
   },
   "modalities": {
     "input": [
       "text",
-      "image",
-      "pdf"
+      "image"
     ],
     "output": [
       "text"
     ]
   },
-  "name": "Claude Sonnet 4",
+  "name": "Claude Sonnet 4 (latest)",
   "open_weights": false,
-  "reasoning": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "min": 1024,
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2025-05-22",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }
