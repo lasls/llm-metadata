@@ -12797,7 +12797,8 @@
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -15643,7 +15644,8 @@
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -17651,7 +17653,8 @@
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -18614,7 +18617,8 @@
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -25615,26 +25619,6 @@
           "output": 25
         },
         "description": "High-end Claude for difficult coding, planning, and slower expert reasoning",
-        "experimental": {
-          "modes": {
-            "fast": {
-              "cost": {
-                "cache_read": 3,
-                "cache_write": 37.5,
-                "input": 30,
-                "output": 150
-              },
-              "provider": {
-                "body": {
-                  "speed": "fast"
-                },
-                "headers": {
-                  "anthropic-beta": "fast-mode-2026-02-01"
-                }
-              }
-            }
-          }
-        },
         "family": "claude-opus",
         "id": "claude-opus-4-6",
         "knowledge": "2025-05-31",
@@ -25685,26 +25669,6 @@
           "output": 25
         },
         "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
-        "experimental": {
-          "modes": {
-            "fast": {
-              "cost": {
-                "cache_read": 3,
-                "cache_write": 37.5,
-                "input": 30,
-                "output": 150
-              },
-              "provider": {
-                "body": {
-                  "speed": "fast"
-                },
-                "headers": {
-                  "anthropic-beta": "fast-mode-2026-02-01"
-                }
-              }
-            }
-          }
-        },
         "family": "claude-opus",
         "id": "claude-opus-4-7",
         "knowledge": "2026-01-31",
@@ -30689,6 +30653,48 @@
         "release_date": "2026-04-22",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k2.7-code": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.19,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+        "family": "kimi-k2",
+        "id": "kimi-k2.7-code",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-01",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.7 Code",
+        "open_weights": true,
+        "provider": {
+          "api": "https://${AZURE_RESOURCE_NAME}.services.ai.azure.com/models",
+          "npm": "@ai-sdk/openai-compatible",
+          "shape": "completions"
+        },
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-06-12",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       },
       "llama-3.3-70b-instruct": {
@@ -48340,7 +48346,8 @@
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -51485,7 +51492,8 @@
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -58868,7 +58876,8 @@
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -62636,38 +62645,6 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-02-12",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "Qwen/Qwen3-235B-A22B-Instruct-2507": {
-        "attachment": false,
-        "cost": {
-          "input": 0.2,
-          "output": 0.8
-        },
-        "description": "Large open Qwen MoE for multilingual reasoning, coding, and tool use",
-        "family": "qwen",
-        "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
-        "knowledge": "2025-04",
-        "last_updated": "2026-01-29",
-        "limit": {
-          "context": 262144,
-          "output": 262144
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 235B A22B Instruct 2507",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-07-29",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -78475,7 +78452,7 @@
         "cost": {
           "cache_write": 0.062,
           "input": 0.124,
-          "output": 0.4
+          "output": 0.42
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -78505,9 +78482,9 @@
       "glm-5": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.41,
-          "input": 0.82,
-          "output": 2.548
+          "cache_write": 0.425,
+          "input": 0.85,
+          "output": 2.742
         },
         "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
         "family": "glm",
@@ -78616,9 +78593,9 @@
       "gpt-oss-120b": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.083,
-          "input": 0.166,
-          "output": 0.632
+          "cache_write": 0.094,
+          "input": 0.188,
+          "output": 0.73
         },
         "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
         "family": "gpt-oss",
@@ -78657,9 +78634,9 @@
       "kimi-k2.5": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.279,
-          "input": 0.558,
-          "output": 2.94
+          "cache_write": 0.275,
+          "input": 0.55,
+          "output": 2.89
         },
         "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
         "family": "kimi-k2",
@@ -78840,9 +78817,9 @@
       "llama-4-maverick-17b-128e-instruct-fp8": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.142,
-          "input": 0.284,
-          "output": 0.934
+          "cache_write": 0.137,
+          "input": 0.274,
+          "output": 0.8992
         },
         "description": "Open multimodal Llama for strong reasoning with efficient everyday serving",
         "family": "llama",
@@ -78871,9 +78848,9 @@
       "minimax-m2.7": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.218,
-          "input": 0.436,
-          "output": 1.72
+          "cache_write": 0.205,
+          "input": 0.41,
+          "output": 1.52
         },
         "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
         "family": "minimax",
@@ -79202,7 +79179,7 @@
         "tool_call": true
       },
       "qwen3.8-max": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.25,
           "input": 2,
@@ -79218,7 +79195,8 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -91952,7 +91930,7 @@
         "last_updated": "2026-07-23",
         "limit": {
           "context": 131072,
-          "output": 16384
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -92713,7 +92691,7 @@
             "text"
           ]
         },
-        "name": "Meta: Muse Spark 1.2",
+        "name": "Muse Spark 1.2",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -99192,7 +99170,8 @@
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -101120,8 +101099,8 @@
         "id": "z-ai/glm-5.2",
         "last_updated": "2026-06-13",
         "limit": {
-          "context": 262144,
-          "output": 262144
+          "context": 1024000,
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -133038,9 +133017,9 @@
       "inclusionai/ling-3.0-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.012,
-          "input": 0.06,
-          "output": 0.18
+          "cache_read": 0.015,
+          "input": 0.075,
+          "output": 0.22
         },
         "description": "Ling-3.0-flash is a 124B-parameter Mixture-of-Experts model with approximately 5.1B parameters active per token. It prioritizes token efficiency and production-scale agentic inference, helping coding and tool-using agents complete more work within constrained latency and serving budgets.",
         "family": "ling",
@@ -133069,9 +133048,9 @@
       "inclusionai/ling-3.0-flash:thinking": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.012,
-          "input": 0.06,
-          "output": 0.18
+          "cache_read": 0.015,
+          "input": 0.075,
+          "output": 0.22
         },
         "description": "Ling-3.0-flash Thinking enables visible reasoning on inclusionAI's token-efficient 124B-parameter Mixture-of-Experts model for harder coding, tool use, planning, and production-scale agent workflows.",
         "family": "ling",
@@ -133999,7 +133978,7 @@
           "input": 1.25,
           "output": 4.25
         },
-        "description": "Meta's Muse Spark 1.2 is a multimodal reasoning model for complex agentic and coding tasks, with tool calling, structured output, and a one-million-token context window.",
+        "description": "Muse Spark 1.2 is a coding-focused update to Muse Spark 1.1 with improvements in code generation, complex debugging, codebase understanding, and end-to-end developer workflows.",
         "family": "muse",
         "id": "meta/muse-spark-1.2",
         "last_updated": "2026-08-05",
@@ -134013,8 +133992,8 @@
             "text",
             "image",
             "video",
-            "audio",
-            "pdf"
+            "pdf",
+            "audio"
           ],
           "output": [
             "text"
@@ -134026,6 +134005,7 @@
         "reasoning_options": [],
         "release_date": "2026-08-05",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "meta/muse-spark-1.2-contributor": {
@@ -140540,7 +140520,8 @@
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -147176,7 +147157,7 @@
         "name": "GPT-5",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147227,7 +147208,7 @@
         "name": "GPT-5.1",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147278,7 +147259,7 @@
         "name": "GPT-5.2",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147331,7 +147312,7 @@
         "name": "GPT-5.3 Codex",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147400,7 +147381,7 @@
         "name": "GPT-5.4",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147452,7 +147433,7 @@
         "name": "GPT-5.4 mini",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147504,7 +147485,7 @@
         "name": "GPT-5.4 nano",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147573,7 +147554,7 @@
         "name": "GPT-5.5",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147621,7 +147602,7 @@
         "name": "GPT-5.5 Pro",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147688,7 +147669,7 @@
         "name": "GPT-5.6 Luna",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147758,7 +147739,7 @@
         "name": "GPT-5.6 Sol",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147828,7 +147809,7 @@
         "name": "GPT-5.6 Terra",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147881,7 +147862,7 @@
         "name": "GPT-5 Mini",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -147932,7 +147913,7 @@
         "name": "GPT-5 Nano",
         "open_weights": false,
         "provider": {
-          "api": "${NEON_AI_GATEWAY_BASE_URL}/ai-gateway/openai/v1",
+          "api": "${NEON_AI_GATEWAY_BASE_URL}/openai/v1",
           "npm": "@ai-sdk/openai",
           "shape": "responses"
         },
@@ -159570,6 +159551,7 @@
           }
         ],
         "release_date": "2025-08-05",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -169769,9 +169751,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0992,
-          "input": 0.589,
-          "output": 2.48
+          "cache_read": 0.096,
+          "input": 0.57,
+          "output": 2.4
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -175506,7 +175488,8 @@
           "input": [
             "text",
             "image",
-            "video"
+            "video",
+            "pdf"
           ],
           "output": [
             "text"
@@ -177024,9 +177007,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.14,
-          "input": 0.76,
-          "output": 2.42
+          "cache_read": 0.104,
+          "input": 0.56,
+          "output": 1.76
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -177037,7 +177020,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 262144
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -212140,6 +212123,52 @@
         "release_date": "2026-01",
         "temperature": true,
         "tool_call": true
+      },
+      "solar-pro4": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "Upstage's flagship model, specialized for agentic use",
+        "family": "solar-pro",
+        "id": "solar-pro4",
+        "knowledge": "2026-02",
+        "last_updated": "2026-08-06",
+        "limit": {
+          "context": 524288,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Solar Pro 4",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-06",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Upstage",
@@ -217868,52 +217897,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "anthropic/claude-opus-5-fast": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 50
-        },
-        "description": "Strongest Claude Opus model for coding, agents, and professional work",
-        "family": "claude-opus",
-        "id": "anthropic/claude-opus-5-fast",
-        "knowledge": "2026-05",
-        "last_updated": "2026-07-24",
-        "limit": {
-          "context": 1000000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Opus 5 (Fast)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-07-24",
-        "temperature": false,
-        "tool_call": true
-      },
       "anthropic/claude-sonnet-4": {
         "attachment": true,
         "cost": {
@@ -220894,6 +220877,8 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-08-05",
+        "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "meta/muse-spark-1.2-contributor": {
