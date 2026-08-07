@@ -300,7 +300,8 @@
       "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
       "id": "alibaba/qwen3-coder-next",
-      "last_updated": "2026-02-19",
+      "knowledge": "2025-09",
+      "last_updated": "2026-02-03",
       "limit": {
         "context": 256000,
         "output": 256000
@@ -318,6 +319,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-07-22",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -704,7 +706,7 @@
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "alibaba/qwen3.5-flash",
-      "last_updated": "2026-02-24",
+      "last_updated": "2026-02-23",
       "limit": {
         "context": 1000000,
         "output": 64000
@@ -733,6 +735,7 @@
         }
       ],
       "release_date": "2026-02-24",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -2510,6 +2513,30 @@
       "temperature": true,
       "tool_call": false
     },
+    "bytedance/seedance-2.5": {
+      "attachment": false,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "family": "seed",
+      "id": "bytedance/seedance-2.5",
+      "last_updated": "2026-08-07",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Seedance 2.5",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-08-07",
+      "tool_call": false
+    },
     "bytedance/seedance-v1.0-pro": {
       "attachment": false,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
@@ -2977,6 +3004,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-12-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": false
     },
@@ -3132,6 +3160,102 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "fish-audio/s1": {
+      "attachment": false,
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "family": "o",
+      "id": "fish-audio/s1",
+      "last_updated": "2025-10-20",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "S1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-10-20",
+      "tool_call": false
+    },
+    "fish-audio/s2-pro": {
+      "attachment": false,
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "family": "o",
+      "id": "fish-audio/s2-pro",
+      "last_updated": "2026-03-09",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "S2 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-09",
+      "tool_call": false
+    },
+    "fish-audio/s2.1-pro": {
+      "attachment": false,
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "family": "o",
+      "id": "fish-audio/s2.1-pro",
+      "last_updated": "2026-07-28",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "S2.1 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-07-28",
+      "tool_call": false
+    },
+    "fish-audio/transcribe-1": {
+      "attachment": false,
+      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "family": "o",
+      "id": "fish-audio/transcribe-1",
+      "last_updated": "2026-03-01",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Transcribe-1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-01",
+      "tool_call": false
     },
     "google/gemini-2.5-flash": {
       "attachment": true,
@@ -4204,19 +4328,20 @@
       "temperature": true,
       "tool_call": true
     },
-    "inclusionai/ling-3.0-flash-free": {
+    "inclusionai/ling-3.0-flash": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.012,
+        "input": 0.06,
+        "output": 0.18
       },
       "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "ling",
-      "id": "inclusionai/ling-3.0-flash-free",
-      "last_updated": "2026-07-23",
+      "id": "inclusionai/ling-3.0-flash",
+      "last_updated": "2026-08-06",
       "limit": {
         "context": 256000,
-        "output": 256000
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -4230,7 +4355,32 @@
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-07-23",
+      "release_date": "2026-08-06",
+      "tool_call": true
+    },
+    "inclusionai/ling-3.0-tiny-free": {
+      "attachment": false,
+      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
+      "family": "ling",
+      "id": "inclusionai/ling-3.0-tiny-free",
+      "last_updated": "2026-08-06",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.0 Tiny (Free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-08-06",
       "tool_call": true
     },
     "interfaze/interfaze-beta": {
@@ -10483,8 +10633,8 @@
       "id": "zai/glm-5.1",
       "last_updated": "2026-04-07",
       "limit": {
-        "context": 202000,
-        "output": 202000
+        "context": 202800,
+        "output": 64000
       },
       "modalities": {
         "input": [

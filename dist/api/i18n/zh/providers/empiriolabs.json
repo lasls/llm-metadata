@@ -7,6 +7,58 @@
   "iconURL": "https://models.dev/logos/empiriolabs.svg",
   "id": "empiriolabs",
   "models": {
+    "deepseek-v3-2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.57,
+        "input": 0.57,
+        "output": 1.71
+      },
+      "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes, sparse attention, and tool-use",
+      "family": "deepseek",
+      "id": "deepseek-v3-2",
+      "knowledge": "2024-07",
+      "last_updated": "2025-12-01",
+      "limit": {
+        "context": 128000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "max": 393216,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-12-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek-v4-flash": {
       "attachment": false,
       "cost": {
@@ -1224,6 +1276,44 @@
           "max": 32768,
           "min": 1024,
           "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-02-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-5-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.09,
+        "input": 0.09,
+        "output": 0.368
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen3-5-flash",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
         }
       ],
       "release_date": "2026-02-23",
