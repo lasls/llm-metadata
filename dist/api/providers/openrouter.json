@@ -597,7 +597,7 @@
         }
       ],
       "release_date": "2025-08-05",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -2563,7 +2563,7 @@
       "last_updated": "2025-12-17",
       "limit": {
         "context": 1048576,
-        "output": 65535
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -3745,16 +3745,16 @@
     "inclusionai/ling-3.0-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.075,
-        "output": 0.22
+        "cache_read": 0.0042,
+        "input": 0.021,
+        "output": 0.063
       },
       "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "ling",
       "id": "inclusionai/ling-3.0-flash",
       "last_updated": "2026-07-23",
       "limit": {
-        "context": 131072,
+        "context": 262144,
         "output": 32768
       },
       "modalities": {
@@ -3774,16 +3774,16 @@
       "temperature": true,
       "tool_call": true
     },
-    "inclusionai/ling-3.0-flash:free": {
+    "inclusionai/ling-3.0-tiny:free": {
       "attachment": false,
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
       "family": "ling",
-      "id": "inclusionai/ling-3.0-flash:free",
-      "last_updated": "2026-07-23",
+      "id": "inclusionai/ling-3.0-tiny:free",
+      "last_updated": "2026-08-06",
       "limit": {
         "context": 262144,
         "output": 32768
@@ -3796,20 +3796,11 @@
           "text"
         ]
       },
-      "name": "Ling-3.0-flash (free)",
-      "open_weights": true,
+      "name": "Ling 3.0 Tiny (free)",
+      "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-07-23",
+      "reasoning_options": [],
+      "release_date": "2026-08-06",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -5903,8 +5894,8 @@
     "nvidia/nemotron-3-super-120b-a12b": {
       "attachment": false,
       "cost": {
-        "input": 0.085,
-        "output": 0.4
+        "input": 0.3,
+        "output": 0.9
       },
       "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
       "family": "nemotron",
@@ -10201,8 +10192,8 @@
     "qwen/qwen3-vl-235b-a22b-thinking": {
       "attachment": true,
       "cost": {
-        "input": 0.98,
-        "output": 3.95
+        "input": 0.4,
+        "output": 4
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -10393,8 +10384,8 @@
     "qwen/qwen3.5-122b-a10b": {
       "attachment": true,
       "cost": {
-        "input": 0.26,
-        "output": 2.08
+        "input": 0.29,
+        "output": 2.4
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -10402,7 +10393,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 81920
       },
       "modalities": {
         "input": [
@@ -10774,6 +10765,7 @@
     "qwen/qwen3.6-35b-a3b": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.05,
         "input": 0.14,
         "output": 1
       },
@@ -11166,8 +11158,7 @@
         "input": [
           "text",
           "image",
-          "video",
-          "pdf"
+          "video"
         ],
         "output": [
           "text"
@@ -12685,9 +12676,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.104,
-        "input": 0.56,
-        "output": 1.76
+        "cache_read": 0.1014,
+        "input": 0.546,
+        "output": 1.716
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -12698,7 +12689,7 @@
       "last_updated": "2026-06-13",
       "limit": {
         "context": 1048576,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
