@@ -42520,6 +42520,51 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-3.5-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.033,
+          "input": 0.33,
+          "output": 2.749
+        },
+        "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+        "family": "gemini-flash-lite",
+        "id": "gemini-3.5-flash-lite",
+        "knowledge": "2026-03",
+        "last_updated": "2026-07-21",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.5 Flash Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemma-3-27b-it": {
         "attachment": true,
         "cost": {
@@ -65381,9 +65426,9 @@
       "kimi-k3": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.19,
-          "input": 0.95,
-          "output": 4
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
         },
         "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
         "family": "kimi-k3",
@@ -78540,9 +78585,9 @@
       "deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.04,
-          "input": 0.2,
-          "output": 0.4
+          "cache_read": 0.032664,
+          "input": 0.152432,
+          "output": 0.304864
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -78550,7 +78595,7 @@
         "knowledge": "2025-05",
         "last_updated": "2026-08-02",
         "limit": {
-          "context": 1000000,
+          "context": 1048576,
           "output": 384000
         },
         "modalities": {
@@ -78568,6 +78613,7 @@
           {
             "type": "effort",
             "values": [
+              "none",
               "high",
               "xhigh"
             ]
@@ -78734,9 +78780,9 @@
       "gpt-oss-120b": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.094,
-          "input": 0.188,
-          "output": 0.73
+          "cache_write": 0.089,
+          "input": 0.178,
+          "output": 0.71
         },
         "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
         "family": "gpt-oss",
@@ -78989,9 +79035,9 @@
       "minimax-m2.7": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.205,
-          "input": 0.41,
-          "output": 1.52
+          "cache_write": 0.218,
+          "input": 0.436,
+          "output": 1.72
         },
         "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
         "family": "minimax",
@@ -90488,7 +90534,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -92457,7 +92503,7 @@
         "last_updated": "2023-08-02",
         "limit": {
           "context": 8000,
-          "output": 2000
+          "output": 6000
         },
         "modalities": {
           "input": [
@@ -98360,8 +98406,8 @@
         "knowledge": "2025-04",
         "last_updated": "2025-09",
         "limit": {
-          "context": 128000,
-          "output": 32768
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -100395,7 +100441,7 @@
         "last_updated": "2023-07-22",
         "limit": {
           "context": 6144,
-          "output": 2048
+          "output": 6144
         },
         "modalities": {
           "input": [
@@ -101242,8 +101288,8 @@
         "id": "z-ai/glm-5.2",
         "last_updated": "2026-06-13",
         "limit": {
-          "context": 262144,
-          "output": 262144
+          "context": 1048576,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -105003,41 +105049,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "gpt-5-chat-latest": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.125,
-          "input": 1.25,
-          "output": 10
-        },
-        "description": "Chat-tuned GPT model for conversational assistance, writing, and tool workflows",
-        "family": "gpt-codex",
-        "id": "gpt-5-chat-latest",
-        "knowledge": "2024-09-30",
-        "last_updated": "2025-08-07",
-        "limit": {
-          "context": 400000,
-          "input": 272000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-5 Chat (latest)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-08-07",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": false
-      },
       "gpt-5-mini": {
         "attachment": true,
         "cost": {
@@ -107922,6 +107933,53 @@
           }
         ],
         "release_date": "2026-04-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "muse-spark-1.2": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 1.25,
+          "output": 4.25
+        },
+        "description": "Muse Spark 1.2 is a coding-focused update to Muse Spark 1.1 with improvements in code generation, complex debugging, codebase understanding, and end-to-end developer workflows.",
+        "family": "muse",
+        "id": "muse-spark-1.2",
+        "last_updated": "2026-08-05",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Muse Spark 1.2",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-08-05",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -125510,9 +125568,9 @@
       "TheDrummer/Cydonia-24B-v4.3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.05015,
-          "input": 0.1003,
-          "output": 0.1207
+          "cache_read": 0.06,
+          "input": 0.12,
+          "output": 0.15
         },
         "description": "General-purpose chat model for instruction following, writing, and analysis",
         "id": "TheDrummer/Cydonia-24B-v4.3",
@@ -134114,7 +134172,18 @@
         "name": "Muse Spark 1.1",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
         "release_date": "2026-04-08",
         "structured_output": false,
         "temperature": true,
@@ -134151,7 +134220,18 @@
         "name": "Muse Spark 1.2",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
         "release_date": "2026-08-05",
         "structured_output": true,
         "temperature": true,
@@ -134188,7 +134268,18 @@
         "name": "Muse Spark 1.2 Contributor (Data Used for Training)",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
         "release_date": "2026-08-05",
         "structured_output": true,
         "tool_call": true
@@ -147189,6 +147280,101 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-3-5-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+        "family": "gemini-flash-lite",
+        "id": "gemini-3-5-flash-lite",
+        "knowledge": "2026-03",
+        "last_updated": "2026-07-21",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.5 Flash Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3-6-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 1.5,
+          "input_audio": 1.5,
+          "output": 7.5
+        },
+        "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+        "family": "gemini-flash",
+        "id": "gemini-3-6-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-07-21",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.6 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-3-flash": {
         "attachment": true,
         "cost": {
@@ -147766,6 +147952,24 @@
       },
       "gpt-5-5-pro": {
         "attachment": true,
+        "cost": {
+          "context_over_200k": {
+            "input": 60,
+            "output": 270
+          },
+          "input": 30,
+          "output": 180,
+          "tiers": [
+            {
+              "input": 60,
+              "output": 270,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
+        },
         "description": "Highest-accuracy GPT-5.5 tier for slower, precision-heavy reasoning and coding",
         "family": "gpt-pro",
         "id": "gpt-5-5-pro",
@@ -148243,6 +148447,55 @@
         ],
         "release_date": "2026-07-15",
         "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "family": "kimi-k3",
+        "id": "kimi-k3",
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-16",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       },
       "llama-4-maverick": {
@@ -149034,8 +149287,48 @@
         "reasoning_options": [
           {
             "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
           }
         ],
+        "release_date": "2026-07-16",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k3-fast": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Kimi K3 with thinking disabled for low-latency tool calling, vision, and JSON work",
+        "family": "kimi-k3",
+        "id": "kimi-k3-fast",
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1048560,
+          "output": 1048560
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3 Fast",
+        "open_weights": true,
+        "reasoning": false,
         "release_date": "2026-07-16",
         "structured_output": true,
         "temperature": false,
@@ -169085,9 +169378,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.01764,
-          "input": 0.0882,
-          "output": 0.1764
+          "cache_read": 0.028,
+          "input": 0.14,
+          "output": 0.28
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -169099,7 +169392,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -170932,7 +171225,7 @@
         "last_updated": "2023-08-02",
         "limit": {
           "context": 8000,
-          "output": 2000
+          "output": 6000
         },
         "modalities": {
           "input": [
@@ -172401,9 +172694,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0992,
-          "input": 0.589,
-          "output": 2.48
+          "cache_read": 0.0976,
+          "input": 0.5795,
+          "output": 2.44
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -172875,8 +173168,8 @@
       "nvidia/nemotron-3-super-120b-a12b": {
         "attachment": false,
         "cost": {
-          "input": 0.3,
-          "output": 0.9
+          "input": 0.085,
+          "output": 0.4
         },
         "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
         "family": "nemotron",
@@ -177119,7 +177412,7 @@
         "last_updated": "2025-09",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -178854,7 +179147,7 @@
         "last_updated": "2023-07-22",
         "limit": {
           "context": 6144,
-          "output": 2048
+          "output": 6144
         },
         "modalities": {
           "input": [
@@ -179658,9 +179951,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.14,
-          "input": 0.76,
-          "output": 2.42
+          "cache_read": 0.09854,
+          "input": 0.5306,
+          "output": 1.6676
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -179671,7 +179964,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 262144
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -229540,6 +229833,55 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek-v4-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.15,
+          "output": 0.3,
+          "reasoning": 0.3
+        },
+        "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-07-31",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-31",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "deepseek-v4-pro": {
         "attachment": false,
         "cost": {
@@ -230287,6 +230629,40 @@
         "release_date": "2026-07-09",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
+        "family": "kimi-k3",
+        "id": "kimi-k3",
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-07-16",
+        "structured_output": true,
+        "temperature": false,
         "tool_call": true
       }
     },

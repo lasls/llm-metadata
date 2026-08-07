@@ -51,6 +51,55 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek-v4-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.3,
+        "reasoning": 0.3
+      },
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-07-31",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-31",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek-v4-pro": {
       "attachment": false,
       "cost": {
@@ -798,6 +847,40 @@
       "release_date": "2026-07-09",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
+      "family": "kimi-k3",
+      "id": "kimi-k3",
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     }
   },
