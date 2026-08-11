@@ -41643,6 +41643,159 @@
     "name": "Cohere",
     "npm": "@ai-sdk/cohere"
   },
+  "coralbricks": {
+    "api": "https://inference.coralbricks.ai/v1",
+    "doc": "https://www.coralbricks.ai/docs",
+    "env": [
+      "CORAL_API_KEY"
+    ],
+    "iconURL": "https://models.dev/logos/coralbricks.svg",
+    "id": "coralbricks",
+    "models": {
+      "glm-5.2-fp4": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "input": 1.12,
+          "output": 4.4
+        },
+        "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+        "family": "glm",
+        "id": "glm-5.2-fp4",
+        "interleaved": true,
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.2 FP4",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gpt-oss-120b": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "input": 0.12,
+          "output": 0.6
+        },
+        "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+        "family": "gpt-oss",
+        "id": "gpt-oss-120b",
+        "interleaved": true,
+        "last_updated": "2025-08-05",
+        "limit": {
+          "context": 131072,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT OSS 120B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2025-08-05",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "kimi-k3": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "family": "kimi-k3",
+        "id": "kimi-k3",
+        "interleaved": true,
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-16",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      }
+    },
+    "name": "CoralBricks",
+    "npm": "@ai-sdk/openai-compatible"
+  },
   "cortecs": {
     "api": "https://api.cortecs.ai/v1",
     "doc": "https://api.cortecs.ai/v1/models",
@@ -70993,7 +71146,7 @@
           "input": 0.1596,
           "output": 0.399
         },
-        "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+        "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
         "id": "deepseek-v4-flash-0731",
         "knowledge": "2025-05",
@@ -92551,7 +92704,7 @@
         "id": "meta-llama/llama-4-maverick",
         "last_updated": "2025-04-05",
         "limit": {
-          "context": 128000,
+          "context": 1048576,
           "output": 16384
         },
         "modalities": {
@@ -97970,8 +98123,8 @@
         "knowledge": "2025-04",
         "last_updated": "2025-04",
         "limit": {
-          "context": 160000,
-          "output": 32768
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -102476,38 +102629,6 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-10-15",
-        "temperature": true,
-        "tool_call": true
-      },
-      "claude-haiku-4-5-free": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Fast Claude lane for lightweight agents, office tasks, and responsive chat",
-        "family": "claude-haiku",
-        "id": "claude-haiku-4-5-free",
-        "knowledge": "2025-02-28",
-        "last_updated": "2025-10-15",
-        "limit": {
-          "context": 200000,
-          "output": 200000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Haiku 4.5 (latest)",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-10-15",
-        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -124868,75 +124989,6 @@
         "release_date": "2025-08-05",
         "structured_output": false,
         "temperature": true,
-        "tool_call": false
-      },
-      "TEE/kimi-k2.5": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "input": 0.6,
-          "output": 3
-        },
-        "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
-        "family": "kimi-k2",
-        "id": "TEE/kimi-k2.5",
-        "knowledge": "2025-01",
-        "last_updated": "2026-01",
-        "limit": {
-          "context": 128000,
-          "input": 128000,
-          "output": 65535
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2.5 TEE",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2026-01",
-        "structured_output": false,
-        "temperature": false,
-        "tool_call": false
-      },
-      "TEE/kimi-k2.5-thinking": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "input": 0.6,
-          "output": 3
-        },
-        "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
-        "family": "kimi-k2",
-        "id": "TEE/kimi-k2.5-thinking",
-        "knowledge": "2025-01",
-        "last_updated": "2026-01",
-        "limit": {
-          "context": 128000,
-          "input": 128000,
-          "output": 65535
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2.5 Thinking TEE",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-01",
-        "structured_output": false,
-        "temperature": false,
         "tool_call": false
       },
       "TEE/kimi-k2.6": {
@@ -169640,9 +169692,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.003625,
-          "input": 0.435,
-          "output": 0.87
+          "cache_read": 0.054365,
+          "input": 0.64432,
+          "output": 1.28864
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -169654,7 +169706,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -171708,6 +171760,49 @@
         "temperature": true,
         "tool_call": false
       },
+      "meta/muse-glimmer-30b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.04,
+          "input": 0.35,
+          "output": 1.5
+        },
+        "description": "Open Llama multimodal model for image understanding and text reasoning",
+        "family": "muse",
+        "id": "meta/muse-glimmer-30b",
+        "last_updated": "2026-08-09",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Muse Glimmer 30B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-08-09",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "meta/muse-spark-1.1": {
         "attachment": true,
         "cost": {
@@ -172871,9 +172966,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0976,
-          "input": 0.5795,
-          "output": 2.44
+          "cache_read": 0.16,
+          "input": 0.95,
+          "output": 4
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -177233,7 +177328,7 @@
         "attachment": false,
         "cost": {
           "input": 0.07,
-          "output": 0.27
+          "output": 0.28
         },
         "description": "Smaller Qwen coder for efficient local agents and repo-level fixes",
         "family": "qwen",
@@ -177242,7 +177337,7 @@
         "last_updated": "2025-04",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -177914,8 +178009,9 @@
       "qwen/qwen3.5-397b-a17b": {
         "attachment": true,
         "cost": {
-          "input": 0.39,
-          "output": 2.34
+          "cache_read": 0.3,
+          "input": 0.5,
+          "output": 3.6
         },
         "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
         "family": "qwen",
@@ -177923,7 +178019,7 @@
         "last_updated": "2026-02-15",
         "limit": {
           "context": 262144,
-          "output": 65536
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -179341,6 +179437,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "upstage/solar-pro4": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.006,
+          "input": 0.03,
+          "output": 0.12
+        },
+        "description": "Flagship model for demanding analysis, coding, and production agent workflows",
+        "family": "solar",
+        "id": "upstage/solar-pro4",
+        "last_updated": "2026-08-10",
+        "limit": {
+          "context": 524288,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Solar Pro 4",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "writer/palmyra-x5": {
         "attachment": false,
         "cost": {
@@ -180060,9 +180188,9 @@
       "z-ai/glm-5.1": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1768,
-          "input": 0.952,
-          "output": 2.992
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
         },
         "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
         "family": "glm",
@@ -180095,9 +180223,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.10114,
-          "input": 0.5446,
-          "output": 1.7116
+          "cache_read": 0.14,
+          "input": 0.76,
+          "output": 2.42
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -180108,7 +180236,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -194558,6 +194686,36 @@
     "iconURL": "https://models.dev/logos/privatemode-ai.svg",
     "id": "privatemode-ai",
     "models": {
+      "deepseek-ocr-2": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.09,
+          "input": 0.89,
+          "output": 1.47
+        },
+        "description": "High-accuracy OCR model for extracting text from documents, screenshots, receipts, and natural scenes",
+        "id": "deepseek-ocr-2",
+        "last_updated": "2026-01-27",
+        "limit": {
+          "context": 8192,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek OCR 2",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-01-27",
+        "status": "beta",
+        "tool_call": false
+      },
       "gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -232588,6 +232746,42 @@
           }
         ],
         "release_date": "2026-06-04",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.1,
+          "output": 0.25
+        },
+        "description": "Nemotron 3.5 Lightning is an MoE model built for fast, reliable agentic tasks across use cases such as financial services, cybersecurity, telecom, and retail.",
+        "family": "nemotron",
+        "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B",
+        "last_updated": "2026-08-11",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nemotron 3.5 Lightning",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-08-11",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
