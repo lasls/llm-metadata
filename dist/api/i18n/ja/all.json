@@ -23637,8 +23637,26 @@
         "cost": {
           "cache_read": 0.022,
           "cache_write": 0.275,
+          "context_over_200k": {
+            "cache_read": 0.044,
+            "cache_write": 0.55,
+            "input": 0.44,
+            "output": 1.98
+          },
           "input": 0.22,
-          "output": 1.32
+          "output": 1.32,
+          "tiers": [
+            {
+              "cache_read": 0.044,
+              "cache_write": 0.55,
+              "input": 0.44,
+              "output": 1.98,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
         "family": "gpt-luna",
@@ -23646,7 +23664,8 @@
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
         "limit": {
-          "context": 272000,
+          "context": 1050000,
+          "input": 922000,
           "output": 128000
         },
         "modalities": {
@@ -23689,9 +23708,27 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.55,
-          "cache_write": 6.88,
+          "cache_write": 6.875,
+          "context_over_200k": {
+            "cache_read": 1.1,
+            "cache_write": 13.75,
+            "input": 11,
+            "output": 49.5
+          },
           "input": 5.5,
-          "output": 33
+          "output": 33,
+          "tiers": [
+            {
+              "cache_read": 1.1,
+              "cache_write": 13.75,
+              "input": 11,
+              "output": 49.5,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
         "family": "gpt-sol",
@@ -23699,7 +23736,8 @@
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
         "limit": {
-          "context": 272000,
+          "context": 1050000,
+          "input": 922000,
           "output": 128000
         },
         "modalities": {
@@ -23743,8 +23781,26 @@
         "cost": {
           "cache_read": 0.22,
           "cache_write": 2.75,
+          "context_over_200k": {
+            "cache_read": 0.44,
+            "cache_write": 5.5,
+            "input": 4.4,
+            "output": 19.8
+          },
           "input": 2.2,
-          "output": 13.2
+          "output": 13.2,
+          "tiers": [
+            {
+              "cache_read": 0.44,
+              "cache_write": 5.5,
+              "input": 4.4,
+              "output": 19.8,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
         },
         "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
         "family": "gpt-terra",
@@ -23752,7 +23808,8 @@
         "knowledge": "2026-02-16",
         "last_updated": "2026-07-09",
         "limit": {
-          "context": 272000,
+          "context": 1050000,
+          "input": 922000,
           "output": 128000
         },
         "modalities": {
@@ -90641,7 +90698,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -92703,7 +92760,7 @@
         "id": "meta-llama/llama-4-maverick",
         "last_updated": "2025-04-05",
         "limit": {
-          "context": 1048576,
+          "context": 128000,
           "output": 16384
         },
         "modalities": {
@@ -92784,6 +92841,51 @@
         "structured_output": false,
         "temperature": true,
         "tool_call": false
+      },
+      "meta/muse-glimmer-30b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.04,
+          "input": 0.35,
+          "output": 1.5
+        },
+        "description": "Muse Glimmer 30B is a dense, open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark and optimized for autonomous agents on consumer hardware. It is suited for long-horizon...",
+        "family": "muse",
+        "id": "meta/muse-glimmer-30b",
+        "knowledge": "2026-01-04",
+        "last_updated": "2026-08-10",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Muse Glimmer 30B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-08-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
       },
       "meta/muse-spark-1.1": {
         "attachment": true,
@@ -94074,7 +94176,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video"
           ],
           "output": [
             "text"
@@ -98353,8 +98456,8 @@
         "knowledge": "2025-04",
         "last_updated": "2025-09",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -98756,7 +98859,7 @@
         "last_updated": "2026-02-15",
         "limit": {
           "context": 262144,
-          "output": 65536
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -99499,6 +99602,47 @@
           }
         ],
         "release_date": "2026-06-15",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "sakana/sakana-namazu": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Sakana Namazu is a Japanese-specialized reasoning model from Sakana AI, based on Kimi K2.6 with additional training for Japanese language and business contexts. It is suited for Japanese instruction following,...",
+        "id": "sakana/sakana-namazu",
+        "last_updated": "2026-08-11",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Sakana: Sakana Namazu",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-11",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -100446,6 +100590,46 @@
         "temperature": true,
         "tool_call": true
       },
+      "upstage/solar-pro4": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "Solar Pro 4 is a large language model from Upstage. It is suited for agentic workflows, office productivity, document-intensive work, and coding.",
+        "family": "solar",
+        "id": "upstage/solar-pro4",
+        "last_updated": "2026-08-10",
+        "limit": {
+          "context": 524288,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Upstage: Solar Pro 4",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "writer/palmyra-x5": {
         "attachment": false,
         "cost": {
@@ -101235,8 +101419,8 @@
         "id": "z-ai/glm-5.2",
         "last_updated": "2026-06-13",
         "limit": {
-          "context": 1048576,
-          "output": 131072
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -101493,9 +101677,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.01596,
-          "input": 0.0798,
-          "output": 0.1596
+          "cache_read": 0.0252,
+          "input": 0.079996,
+          "output": 0.252
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
@@ -101645,7 +101829,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video"
           ],
           "output": [
             "text"
@@ -143311,8 +143496,7 @@
         "modalities": {
           "input": [
             "text",
-            "image",
-            "video"
+            "image"
           ],
           "output": [
             "text"
@@ -166157,6 +166341,7 @@
           }
         ],
         "release_date": "2026-06-09",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -169691,9 +169876,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.054365,
-          "input": 0.64432,
-          "output": 1.28864
+          "cache_read": 0.054122,
+          "input": 0.64144,
+          "output": 1.28288
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -171766,10 +171951,11 @@
           "input": 0.35,
           "output": 1.5
         },
-        "description": "Open Llama multimodal model for image understanding and text reasoning",
+        "description": "Muse Glimmer is a 30-billion-parameter open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark for always-on local agents, tool use, coding, and image understanding.",
         "family": "muse",
         "id": "meta/muse-glimmer-30b",
-        "last_updated": "2026-08-09",
+        "knowledge": "2026-01-04",
+        "last_updated": "2026-08-10",
         "limit": {
           "context": 131072,
           "output": 131072
@@ -171797,7 +171983,7 @@
             ]
           }
         ],
-        "release_date": "2026-08-09",
+        "release_date": "2026-08-10",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -177650,7 +177836,7 @@
         "last_updated": "2025-09",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -178874,6 +179060,47 @@
           }
         ],
         "release_date": "2026-06-15",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "sakana/sakana-namazu": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 0.95,
+          "output": 4
+        },
+        "description": "Multi-agent model for routing expert agents across complex analytical tasks",
+        "id": "sakana/sakana-namazu",
+        "last_updated": "2026-08-11",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Sakana Namazu",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-11",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -180482,9 +180709,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.01596,
-          "input": 0.0798,
-          "output": 0.1596
+          "cache_read": 0.0252,
+          "input": 0.079996,
+          "output": 0.252
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -224636,6 +224863,50 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-04-05",
+        "temperature": true,
+        "tool_call": true
+      },
+      "meta/muse-glimmer-30b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.04,
+          "input": 0.35,
+          "output": 1.5
+        },
+        "description": "Muse Glimmer is a 30-billion-parameter open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark for always-on local agents, tool use, coding, and image understanding.",
+        "family": "muse",
+        "id": "meta/muse-glimmer-30b",
+        "knowledge": "2026-01-04",
+        "last_updated": "2026-08-10",
+        "limit": {
+          "context": 131072,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Muse Glimmer 30B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-08-10",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },

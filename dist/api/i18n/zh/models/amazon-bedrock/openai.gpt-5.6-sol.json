@@ -2,9 +2,27 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.55,
-    "cache_write": 6.88,
+    "cache_write": 6.875,
+    "context_over_200k": {
+      "cache_read": 1.1,
+      "cache_write": 13.75,
+      "input": 11,
+      "output": 49.5
+    },
     "input": 5.5,
-    "output": 33
+    "output": 33,
+    "tiers": [
+      {
+        "cache_read": 1.1,
+        "cache_write": 13.75,
+        "input": 11,
+        "output": 49.5,
+        "tier": {
+          "size": 272000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
   "family": "gpt-sol",
@@ -12,7 +30,8 @@
   "knowledge": "2026-02-16",
   "last_updated": "2026-07-09",
   "limit": {
-    "context": 272000,
+    "context": 1050000,
+    "input": 922000,
     "output": 128000
   },
   "modalities": {

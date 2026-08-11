@@ -3,8 +3,26 @@
   "cost": {
     "cache_read": 0.22,
     "cache_write": 2.75,
+    "context_over_200k": {
+      "cache_read": 0.44,
+      "cache_write": 5.5,
+      "input": 4.4,
+      "output": 19.8
+    },
     "input": 2.2,
-    "output": 13.2
+    "output": 13.2,
+    "tiers": [
+      {
+        "cache_read": 0.44,
+        "cache_write": 5.5,
+        "input": 4.4,
+        "output": 19.8,
+        "tier": {
+          "size": 272000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
   "family": "gpt-terra",
@@ -12,7 +30,8 @@
   "knowledge": "2026-02-16",
   "last_updated": "2026-07-09",
   "limit": {
-    "context": 272000,
+    "context": 1050000,
+    "input": 922000,
     "output": 128000
   },
   "modalities": {

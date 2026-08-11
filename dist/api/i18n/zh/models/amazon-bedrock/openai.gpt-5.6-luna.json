@@ -3,8 +3,26 @@
   "cost": {
     "cache_read": 0.022,
     "cache_write": 0.275,
+    "context_over_200k": {
+      "cache_read": 0.044,
+      "cache_write": 0.55,
+      "input": 0.44,
+      "output": 1.98
+    },
     "input": 0.22,
-    "output": 1.32
+    "output": 1.32,
+    "tiers": [
+      {
+        "cache_read": 0.044,
+        "cache_write": 0.55,
+        "input": 0.44,
+        "output": 1.98,
+        "tier": {
+          "size": 272000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
   "family": "gpt-luna",
@@ -12,7 +30,8 @@
   "knowledge": "2026-02-16",
   "last_updated": "2026-07-09",
   "limit": {
-    "context": 272000,
+    "context": 1050000,
+    "input": 922000,
     "output": 128000
   },
   "modalities": {
