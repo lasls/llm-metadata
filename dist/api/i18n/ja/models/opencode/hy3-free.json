@@ -8,7 +8,10 @@
   "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
   "family": "hy3-free",
   "id": "hy3-free",
-  "last_updated": "2026-06-26",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-07-06",
   "limit": {
     "context": 190000,
     "output": 64000
@@ -24,9 +27,21 @@
   "name": "Hy3 Free",
   "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
-  "release_date": "2026-06-26",
-  "status": "deprecated",
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "release_date": "2026-07-06",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }
