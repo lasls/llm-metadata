@@ -12,7 +12,7 @@
       "cost": {
         "cache_read": 0.05,
         "cache_write": 0,
-        "input": 0.15,
+        "input": 0.22,
         "output": 0.9
       },
       "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
@@ -49,13 +49,58 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek-ai/DeepSeek-V4-Flash-0731": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0,
+        "input": 0.13,
+        "output": 0.28
+      },
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "family": "deepseek-flash",
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-07-31",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-31",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "moonshotai/Kimi-K2.6": {
       "attachment": true,
       "cost": {
         "cache_read": 0.2,
         "cache_write": 0,
-        "input": 0.66,
-        "output": 3.5
+        "input": 0.6,
+        "output": 3.41
       },
       "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
       "family": "kimi-k2",
@@ -87,52 +132,13 @@
       "temperature": true,
       "tool_call": true
     },
-    "moonshotai/Kimi-K2.6-Fast": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.4,
-        "cache_write": 0,
-        "input": 1.32,
-        "output": 7
-      },
-      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
-      "family": "kimi-k2",
-      "id": "moonshotai/Kimi-K2.6-Fast",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2025-01",
-      "last_updated": "2026-04-21",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2.6 Fast",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-04-21",
-      "status": "alpha",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "moonshotai/Kimi-K2.7-Code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.2,
+        "cache_read": 0.15,
         "cache_write": 0,
-        "input": 0.75,
-        "output": 3.5
+        "input": 0.67,
+        "output": 3.4
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
@@ -161,60 +167,16 @@
       "reasoning_options": [],
       "release_date": "2026-06-12",
       "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "zai-org/GLM-5.1-FP8": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.26,
-        "cache_write": 0,
-        "input": 1.4,
-        "output": 4.4
-      },
-      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
-      "family": "glm",
-      "id": "zai-org/GLM-5.1-FP8",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-04-07",
-      "limit": {
-        "context": 202752,
-        "output": 202752
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5.1",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-04-07",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "zai-org/GLM-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.26,
+        "cache_read": 0.17,
         "cache_write": 0,
-        "input": 1.2,
-        "output": 4.2
+        "input": 0.75,
+        "output": 2.9
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -224,8 +186,8 @@
       },
       "last_updated": "2026-06-13",
       "limit": {
-        "context": 1000000,
-        "output": 131072
+        "context": 1048576,
+        "output": 1048576
       },
       "modalities": {
         "input": [
@@ -248,6 +210,7 @@
         }
       ],
       "release_date": "2026-06-13",
+      "status": "alpha",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
