@@ -47197,6 +47197,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -47236,6 +47239,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -47283,6 +47289,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -47329,6 +47338,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -47374,6 +47386,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -47457,7 +47472,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1000000,
-          "output": 65000
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -47478,7 +47493,7 @@
             "type": "effort",
             "values": [
               "high",
-              "xhigh"
+              "max"
             ]
           }
         ],
@@ -47502,7 +47517,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1000000,
-          "output": 65000
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -47523,7 +47538,7 @@
             "type": "effort",
             "values": [
               "high",
-              "xhigh"
+              "max"
             ]
           }
         ],
@@ -47570,6 +47585,8 @@
           {
             "type": "effort",
             "values": [
+              "none",
+              "minimal",
               "low",
               "medium",
               "high"
@@ -47619,6 +47636,8 @@
           {
             "type": "effort",
             "values": [
+              "none",
+              "minimal",
               "low",
               "medium",
               "high"
@@ -47683,6 +47702,8 @@
           {
             "type": "effort",
             "values": [
+              "none",
+              "minimal",
               "low",
               "medium",
               "high"
@@ -48068,7 +48089,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video"
           ],
           "output": [
             "text"
@@ -48107,7 +48129,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video"
           ],
           "output": [
             "text"
@@ -48146,7 +48169,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video"
           ],
           "output": [
             "text"
@@ -48194,6 +48218,8 @@
           {
             "type": "effort",
             "values": [
+              "low",
+              "high",
               "max"
             ]
           }
@@ -48766,9 +48792,6 @@
         "reasoning_options": [
           {
             "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2026-04-27",
@@ -48827,9 +48850,6 @@
         "reasoning_options": [
           {
             "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2026-04-02",
@@ -48892,9 +48912,6 @@
         "reasoning_options": [
           {
             "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2026-07-15",
@@ -48932,9 +48949,6 @@
         "reasoning_options": [
           {
             "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2026-05-21",
@@ -48993,9 +49007,6 @@
         "reasoning_options": [
           {
             "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2026-06-02",
@@ -49037,6 +49048,14 @@
             "type": "toggle"
           },
           {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "xhigh"
+            ]
+          },
+          {
             "type": "budget_tokens"
           }
         ],
@@ -49073,6 +49092,9 @@
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -49134,6 +49156,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -49294,6 +49319,15 @@
         "reasoning_options": [
           {
             "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-04-22",
@@ -49332,6 +49366,15 @@
         "reasoning_options": [
           {
             "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-04-22",
@@ -94102,6 +94145,44 @@
         "temperature": true,
         "tool_call": true
       },
+      "liquid/lfm-2.5-2.6b:free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "LFM2.5-2.6B is a compact reasoning model from Liquid AI. It is suited for agent workflows, data extraction, RAG, and long-context processing. Liquid advises against using it for agentic coding or...",
+        "family": "liquid",
+        "id": "liquid/lfm-2.5-2.6b:free",
+        "last_updated": "2026-08-11",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "LiquidAI: LFM2.5-2.6B (free)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "mancer/weaver": {
         "attachment": false,
         "cost": {
@@ -96376,7 +96457,7 @@
         "release_date": "2026-08-11",
         "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "nvidia/nemotron-3.5-lightning:free": {
         "attachment": false,
@@ -100511,7 +100592,7 @@
         "last_updated": "2026-02-15",
         "limit": {
           "context": 262144,
-          "output": 262144
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -101074,7 +101155,6 @@
             "values": [
               "low",
               "medium",
-              "high",
               "xhigh"
             ]
           }
@@ -102873,7 +102953,7 @@
         "knowledge": "2025-04",
         "last_updated": "2025-09-30",
         "limit": {
-          "context": 204800,
+          "context": 202752,
           "output": 131072
         },
         "modalities": {
@@ -108190,7 +108270,7 @@
       "grok-4-3": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3125,
+          "cache_read": 0.2,
           "context_over_200k": {
             "cache_read": 0.4,
             "input": 2.5,
@@ -108249,7 +108329,7 @@
       "grok-4-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
+          "cache_read": 0.3,
           "input": 2,
           "output": 6
         },
@@ -108285,6 +108365,50 @@
         ],
         "release_date": "2026-07-08",
         "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "grok-4-6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 2,
+          "output": 6
+        },
+        "description": "xAI's frontier model for long-running agents, coding, knowledge work, and visual projects",
+        "family": "grok",
+        "id": "grok-4-6",
+        "knowledge": "2026-02-01",
+        "last_updated": "2026-08-12",
+        "limit": {
+          "context": 500000,
+          "output": 500000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-08-12",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -112840,8 +112964,7 @@
         "modalities": {
           "input": [
             "text",
-            "image",
-            "pdf"
+            "image"
           ],
           "output": [
             "text"
@@ -113840,6 +113963,7 @@
       "deepseek/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.0028,
           "input": 0.14,
           "output": 0.28
         },
@@ -113850,7 +113974,7 @@
         "last_updated": "2026-07-31",
         "limit": {
           "context": 1000000,
-          "output": 393216
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -113919,6 +114043,54 @@
           }
         ],
         "release_date": "2026-04-24",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v4-pro-0813": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.003625,
+          "input": 0.435,
+          "output": 0.87
+        },
+        "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+        "family": "deepseek-thinking",
+        "id": "deepseek/deepseek-v4-pro-0813",
+        "last_updated": "2026-08-12",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro 0813",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-12",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -117776,7 +117948,7 @@
         "tool_call": true
       },
       "qwen/qwen3.5-122b-a10b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.023,
           "input": 0.115,
@@ -117787,12 +117959,13 @@
         "id": "qwen/qwen3.5-122b-a10b",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -117849,7 +118022,7 @@
         "tool_call": true
       },
       "qwen/qwen3.5-35b-a3b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.020357,
           "input": 0.057,
@@ -117860,12 +118033,13 @@
         "id": "qwen/qwen3.5-35b-a3b",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -118613,8 +118787,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.5,
-          "input": 2,
-          "output": 6
+          "input": 1.5,
+          "output": 4.5
         },
         "description": "xAI's frontier model for long-running agents, coding, knowledge work, and visual projects",
         "family": "grok",
@@ -137510,6 +137684,88 @@
         "temperature": true,
         "tool_call": true
       },
+      "nvidia/nemotron-3.5-lightning": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.05,
+          "output": 0.2
+        },
+        "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
+        "family": "nemotron",
+        "id": "nvidia/nemotron-3.5-lightning",
+        "last_updated": "2026-08-11",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nvidia Nemotron 3.5 Lightning",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nvidia/nemotron-3.5-lightning:thinking": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.05,
+          "output": 0.2
+        },
+        "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
+        "family": "nemotron",
+        "id": "nvidia/nemotron-3.5-lightning:thinking",
+        "last_updated": "2026-08-11",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nvidia Nemotron 3.5 Lightning Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "openai/gpt-3.5-turbo": {
         "attachment": false,
         "cost": {
@@ -141893,50 +142149,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-08-03",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "qwen3.8-max-preview": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.15,
-          "cache_write": 2,
-          "input": 1.5,
-          "output": 5
-        },
-        "description": "Preview Qwen flagship for million-token multimodal reasoning and long-horizon agentic workflows",
-        "family": "qwen",
-        "id": "qwen3.8-max-preview",
-        "last_updated": "2026-07-19",
-        "limit": {
-          "context": 991000,
-          "input": 991000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.8 Max Preview",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-07-19",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -172888,6 +173100,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "liquid/lfm-2.5-2.6b:free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
+        "family": "liquid",
+        "id": "liquid/lfm-2.5-2.6b:free",
+        "last_updated": "2026-08-11",
+        "limit": {
+          "context": 128000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "LFM2.5-2.6B (free)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-11",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "mancer/weaver": {
         "attachment": false,
         "cost": {
@@ -174414,9 +174657,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0976,
-          "input": 0.5795,
-          "output": 2.44
+          "cache_read": 0.16,
+          "input": 0.95,
+          "output": 4
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -175114,7 +175357,7 @@
         "id": "nvidia/nemotron-3.5-lightning",
         "last_updated": "2026-08-11",
         "limit": {
-          "context": 262144,
+          "context": 1000000,
           "output": 262144
         },
         "modalities": {
@@ -175136,7 +175379,7 @@
         "release_date": "2026-08-11",
         "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "nvidia/nemotron-3.5-lightning:free": {
         "attachment": false,
@@ -179510,8 +179753,9 @@
       "qwen/qwen3.5-35b-a3b": {
         "attachment": true,
         "cost": {
-          "input": 0.14,
-          "output": 1
+          "cache_read": 0.25,
+          "input": 0.25,
+          "output": 1.25
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -179547,9 +179791,9 @@
       "qwen/qwen3.5-397b-a17b": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
-          "input": 0.5,
-          "output": 3.6
+          "cache_read": 0.045,
+          "input": 0.45,
+          "output": 3
         },
         "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
         "family": "qwen",
@@ -179557,7 +179801,7 @@
         "last_updated": "2026-02-15",
         "limit": {
           "context": 262144,
-          "output": 262144
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -180223,7 +180467,6 @@
             "values": [
               "low",
               "medium",
-              "high",
               "xhigh"
             ]
           }
@@ -181660,9 +181903,9 @@
       "z-ai/glm-4.6": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.11,
-          "input": 0.55,
-          "output": 2.2
+          "cache_read": 0.1,
+          "input": 0.5,
+          "output": 2
         },
         "description": "Late GLM-4 workhorse for coding agents, reasoning, and structured tasks",
         "family": "glm",
@@ -181905,9 +182148,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.091,
-          "input": 0.49,
-          "output": 1.54
+          "cache_read": 0.1,
+          "input": 0.5,
+          "output": 3.15
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -219586,6 +219829,36 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-01-15",
+        "structured_output": true,
+        "tool_call": true
+      },
+      "nvidia-nemotron-3-5-lightning-30b-a3b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.1,
+          "output": 0.25
+        },
+        "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
+        "family": "nemotron",
+        "id": "nvidia-nemotron-3-5-lightning-30b-a3b",
+        "last_updated": "2026-08-12",
+        "limit": {
+          "context": 1000000,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "NVIDIA Nemotron 3.5 Lightning 30B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-12",
         "structured_output": true,
         "tool_call": true
       },
