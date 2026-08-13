@@ -47492,7 +47492,10 @@
           {
             "type": "effort",
             "values": [
+              "low",
+              "medium",
               "high",
+              "xhigh",
               "max"
             ]
           }
@@ -47537,7 +47540,10 @@
           {
             "type": "effort",
             "values": [
+              "low",
+              "medium",
               "high",
+              "xhigh",
               "max"
             ]
           }
@@ -49177,10 +49183,10 @@
       "x-ai/grok-4.5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
+          "cache_read": 0.3,
           "cache_write": 2,
           "context_over_200k": {
-            "cache_read": 1,
+            "cache_read": 0.6,
             "cache_write": 4,
             "input": 4,
             "output": 12
@@ -49189,7 +49195,7 @@
           "output": 6,
           "tiers": [
             {
-              "cache_read": 1,
+              "cache_read": 0.6,
               "cache_write": 4,
               "input": 4,
               "output": 12,
@@ -49231,6 +49237,69 @@
           }
         ],
         "release_date": "2026-07-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "x-ai/grok-4.6": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 2,
+          "context_over_200k": {
+            "cache_read": 1,
+            "cache_write": 4,
+            "input": 4,
+            "output": 12
+          },
+          "input": 2,
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 4,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "xAI's frontier model for long-running agents, coding, knowledge work, and visual projects",
+        "family": "grok",
+        "id": "x-ai/grok-4.6",
+        "knowledge": "2026-02-01",
+        "last_updated": "2026-08-12",
+        "limit": {
+          "context": 500000,
+          "output": 500000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.6",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-08-12",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -69614,6 +69683,53 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-3.7-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "input_audio": 0.75,
+          "output": 3.75
+        },
+        "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
+        "family": "gemini-flash",
+        "id": "gemini-3.7-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.7 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-embedding-001": {
         "attachment": false,
         "cost": {
@@ -71521,6 +71637,53 @@
           }
         ],
         "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3.7-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "input_audio": 0.75,
+          "output": 3.75
+        },
+        "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
+        "family": "gemini-flash",
+        "id": "gemini-3.7-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.7 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -80148,9 +80311,9 @@
       "deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.032664,
-          "input": 0.152432,
-          "output": 0.304864
+          "cache_read": 0.04,
+          "input": 0.2,
+          "output": 0.4
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -80158,7 +80321,7 @@
         "knowledge": "2025-05",
         "last_updated": "2026-08-02",
         "limit": {
-          "context": 1048576,
+          "context": 1000000,
           "output": 384000
         },
         "modalities": {
@@ -80176,7 +80339,6 @@
           {
             "type": "effort",
             "values": [
-              "none",
               "low",
               "high",
               "xhigh"
@@ -80232,9 +80394,9 @@
       "gemma-4-26b-a4b-it": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.058,
-          "input": 0.116,
-          "output": 0.408
+          "cache_write": 0.063,
+          "input": 0.126,
+          "output": 0.42
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -80346,7 +80508,7 @@
         "cost": {
           "cache_write": 0.094,
           "input": 0.188,
-          "output": 0.73
+          "output": 0.7
         },
         "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
         "family": "gpt-oss",
@@ -80385,9 +80547,9 @@
       "kimi-k2.5": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.279,
-          "input": 0.558,
-          "output": 2.94
+          "cache_write": 0.266,
+          "input": 0.532,
+          "output": 2.8
         },
         "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
         "family": "kimi-k2",
@@ -80599,9 +80761,9 @@
       "minimax-m2.7": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.218,
-          "input": 0.436,
-          "output": 1.66
+          "cache_write": 0.235,
+          "input": 0.47,
+          "output": 1.76
         },
         "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
         "family": "minimax",
@@ -93217,11 +93379,11 @@
       "google/gemini-3.6-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.15,
-          "cache_write": 0.083333,
-          "input": 1.5,
-          "output": 7.5,
-          "reasoning": 7.5
+          "cache_read": 0.075,
+          "cache_write": 0.041667,
+          "input": 0.75,
+          "output": 3.75,
+          "reasoning": 3.75
         },
         "description": "Gemini 3.6 Flash is a high-efficiency model from Google for coding, agentic workflows, and web and app development. It is designed to produce polished outputs with fewer unnecessary edits and...",
         "family": "gemini-flash",
@@ -93259,6 +93421,54 @@
           }
         ],
         "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.7-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 0.041667,
+          "input": 0.75,
+          "output": 3.75,
+          "reasoning": 3.75
+        },
+        "description": "Gemini 3.7 Flash is a multimodal model from Google for fast agentic workflows, coding, and complex multi-step reasoning. It is designed for tasks that require responsive performance and reliable multi-step...",
+        "family": "gemini-flash",
+        "id": "google/gemini-3.7-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.7 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -94844,7 +95054,7 @@
         "id": "minimax/minimax-m2.5",
         "last_updated": "2026-02-12",
         "limit": {
-          "context": 65536,
+          "context": 196608,
           "output": 196608
         },
         "modalities": {
@@ -102903,9 +103113,9 @@
       "z-ai/glm-4.6": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.11,
-          "input": 0.55,
-          "output": 2.2
+          "cache_read": 0.1,
+          "input": 0.5,
+          "output": 2
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -102987,9 +103197,9 @@
       "z-ai/glm-4.7": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.11,
-          "input": 0.6,
-          "output": 2.2
+          "cache_read": 0.08,
+          "input": 0.4,
+          "output": 1.75
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -103029,7 +103239,7 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.01,
-          "input": 0.07,
+          "input": 0.06,
           "output": 0.4
         },
         "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
@@ -103070,8 +103280,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.2,
-          "input": 1,
-          "output": 3.2
+          "input": 0.95,
+          "output": 2.55
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -103150,7 +103360,7 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.26,
-          "input": 1.38,
+          "input": 1.4,
           "output": 4.4
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
@@ -103198,7 +103408,7 @@
         "id": "z-ai/glm-5.2",
         "last_updated": "2026-06-13",
         "limit": {
-          "context": 262144,
+          "context": 1048576,
           "output": 131072
         },
         "modalities": {
@@ -103456,16 +103666,16 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0252,
-          "input": 0.079996,
-          "output": 0.252
+          "cache_read": 0.016,
+          "input": 0.072,
+          "output": 0.144
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
         "id": "~deepseek/deepseek-v4-flash-latest",
         "last_updated": "2026-08-01",
         "limit": {
-          "context": 1048576,
+          "context": 262144,
           "output": 262144
         },
         "modalities": {
@@ -103498,11 +103708,11 @@
       "~google/gemini-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.15,
-          "cache_write": 0.083333,
-          "input": 1.5,
-          "output": 7.5,
-          "reasoning": 7.5
+          "cache_read": 0.0375,
+          "cache_write": 0.020833,
+          "input": 0.375,
+          "output": 1.875,
+          "reasoning": 1.875
         },
         "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
         "family": "gemini-flash",
@@ -103531,7 +103741,6 @@
           {
             "type": "effort",
             "values": [
-              "minimal",
               "low",
               "medium",
               "high"
@@ -103593,17 +103802,17 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.29,
-          "input": 2.8,
-          "output": 14
+          "cache_read": 0.24,
+          "input": 2.4,
+          "output": 12
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
         "id": "~moonshotai/kimi-latest",
         "last_updated": "2026-04-27",
         "limit": {
-          "context": 1048576,
-          "output": 1048576
+          "context": 974842,
+          "output": 974842
         },
         "modalities": {
           "input": [
@@ -104556,7 +104765,18 @@
         "name": "Claude Haiku 4.5 (latest)",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2025-10-15",
         "temperature": true,
         "tool_call": true
@@ -104591,7 +104811,18 @@
         "name": "Claude Haiku 4.5",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2025-10-15",
         "temperature": true,
         "tool_call": true
@@ -104628,18 +104859,19 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "max": 31999,
+            "min": 1024,
+            "type": "budget_tokens"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
               "medium",
               "high",
-              "xhigh"
+              "xhigh",
+              "max"
             ]
-          },
-          {
-            "max": 31999,
-            "min": 1024,
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2025-08-05",
@@ -104678,18 +104910,19 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "max": 31999,
+            "min": 1024,
+            "type": "budget_tokens"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
               "medium",
               "high",
-              "xhigh"
+              "xhigh",
+              "max"
             ]
-          },
-          {
-            "max": 31999,
-            "min": 1024,
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2025-11-01",
@@ -104733,6 +104966,7 @@
               "low",
               "medium",
               "high",
+              "xhigh",
               "max"
             ]
           }
@@ -104911,6 +105145,11 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "max": 63999,
+            "min": 1024,
+            "type": "budget_tokens"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -104919,11 +105158,6 @@
               "xhigh",
               "max"
             ]
-          },
-          {
-            "max": 63999,
-            "min": 1024,
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2025-09-29",
@@ -104962,6 +105196,11 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "max": 63999,
+            "min": 1024,
+            "type": "budget_tokens"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -104970,11 +105209,6 @@
               "xhigh",
               "max"
             ]
-          },
-          {
-            "max": 63999,
-            "min": 1024,
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2025-09-29",
@@ -105013,6 +105247,11 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "max": 63999,
+            "min": 1024,
+            "type": "budget_tokens"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -105021,11 +105260,6 @@
               "xhigh",
               "max"
             ]
-          },
-          {
-            "max": 63999,
-            "min": 1024,
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2026-02-17",
@@ -105241,7 +105475,20 @@
         "name": "DeepSeek V4 Flash",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-04-24",
         "structured_output": true,
         "temperature": true,
@@ -105277,7 +105524,20 @@
         "name": "DeepSeek V4 Pro",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-04-24",
         "structured_output": true,
         "temperature": true,
@@ -105314,6 +105574,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "ernie-4.5-vl-424b-a47b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.42,
+          "output": 1.25
+        },
+        "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+        "family": "ernie",
+        "id": "ernie-4.5-vl-424b-a47b",
+        "last_updated": "2025-06-30",
+        "limit": {
+          "context": 123000,
+          "output": 123000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "ERNIE 4.5 VL 424B A47B",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2025-06-30",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      },
       "fugu-ultra": {
         "attachment": true,
         "cost": {
@@ -105340,7 +105632,16 @@
         "name": "Fugu Ultra",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-06-22",
         "structured_output": false,
         "temperature": true,
@@ -105379,18 +105680,17 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "max": 24576,
+            "min": 1,
+            "type": "budget_tokens"
+          },
+          {
             "type": "effort",
             "values": [
-              "minimal",
               "low",
               "medium",
               "high"
             ]
-          },
-          {
-            "max": 24576,
-            "min": 1,
-            "type": "budget_tokens"
           }
         ],
         "release_date": "2025-06-17",
@@ -105759,10 +106059,10 @@
       "gemini-3.6-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.15,
+          "cache_read": 0.075,
           "cache_write": 0.08333,
-          "input": 1.5,
-          "output": 7.5
+          "input": 0.75,
+          "output": 3.75
         },
         "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
         "family": "gemini-flash",
@@ -105936,7 +106236,20 @@
         "name": "Gemma 4 31B IT",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-04-02",
         "structured_output": true,
         "temperature": true,
@@ -106402,7 +106715,15 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
           }
         ],
         "release_date": "2026-02-12",
@@ -106452,10 +106773,10 @@
       "glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1375,
+          "cache_read": 0.111,
           "cache_write": 0,
           "input": 0.55,
-          "output": 1.9255
+          "output": 1.784
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -106481,12 +106802,14 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
-          },
-          {
             "type": "effort",
             "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
               "high",
+              "xhigh",
               "max"
             ]
           }
@@ -107094,9 +107417,11 @@
             "type": "effort",
             "values": [
               "none",
+              "minimal",
               "low",
               "medium",
-              "high"
+              "high",
+              "xhigh"
             ]
           }
         ],
@@ -108275,6 +108600,7 @@
           {
             "type": "effort",
             "values": [
+              "none",
               "low",
               "medium",
               "high"
@@ -108360,6 +108686,7 @@
           {
             "type": "effort",
             "values": [
+              "minimal",
               "low",
               "medium",
               "high",
@@ -108527,7 +108854,16 @@
         "name": "Hy3",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2026-07-06",
         "temperature": true,
         "tool_call": true
@@ -108630,7 +108966,20 @@
         "name": "Kimi K2.5",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-01",
         "structured_output": true,
         "temperature": false,
@@ -108725,7 +109074,9 @@
             "values": [
               "low",
               "medium",
-              "high"
+              "high",
+              "xhigh",
+              "max"
             ]
           }
         ],
@@ -108772,7 +109123,9 @@
             "values": [
               "low",
               "medium",
-              "high"
+              "high",
+              "xhigh",
+              "max"
             ]
           }
         ],
@@ -108813,6 +109166,7 @@
           {
             "type": "effort",
             "values": [
+              "none",
               "minimal",
               "low",
               "medium",
@@ -108855,7 +109209,19 @@
         "name": "Kimi K3",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-07-16",
         "structured_output": true,
         "temperature": false,
@@ -108887,7 +109253,14 @@
         "name": "InclusionAI Ling 3.0 Flash",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none"
+            ]
+          }
+        ],
         "release_date": "2026-08-02",
         "structured_output": false,
         "temperature": true,
@@ -109187,7 +109560,13 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-04-22",
@@ -109242,7 +109621,13 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-04-22",
@@ -109305,7 +109690,18 @@
         "name": "MiniMax-M2",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2025-10-27",
         "temperature": true,
         "tool_call": true
@@ -109335,7 +109731,18 @@
         "name": "MiniMax-M2.1",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2025-12-23",
         "temperature": true,
         "tool_call": true
@@ -109365,7 +109772,18 @@
         "name": "MiniMax M2.1 Lightning",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2025-12-23",
         "structured_output": false,
         "temperature": true,
@@ -109398,7 +109816,18 @@
         "name": "MiniMax-M2.5",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-02-12",
         "temperature": true,
         "tool_call": true
@@ -109430,7 +109859,18 @@
         "name": "MiniMax-M2.5-highspeed",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-02-13",
         "temperature": true,
         "tool_call": true
@@ -109505,7 +109945,18 @@
         "name": "MiniMax-M2.7-highspeed",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-03-18",
         "temperature": true,
         "tool_call": true
@@ -110793,7 +111244,19 @@
         "name": "Qwen3-Next 80B-A3B (Thinking)",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2025-09",
         "temperature": true,
         "tool_call": true
@@ -111021,7 +111484,20 @@
         "name": "Qwen3.6 35B-A3B",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-04-17",
         "structured_output": true,
         "temperature": true,
@@ -111056,7 +111532,20 @@
         "name": "Qwen3.6 Flash",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-04-27",
         "structured_output": true,
         "temperature": true,
@@ -111143,7 +111632,20 @@
         "name": "Qwen3.6 Plus",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-04-02",
         "temperature": true,
         "tool_call": true
@@ -111175,7 +111677,20 @@
         "name": "Qwen3.7 Flash",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-07-27",
         "structured_output": false,
         "temperature": true,
@@ -111208,7 +111723,20 @@
         "name": "Qwen3.7 Max",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-05-21",
         "temperature": true,
         "tool_call": true
@@ -111243,7 +111771,20 @@
         "name": "Qwen3.7 Plus",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-06-02",
         "temperature": true,
         "tool_call": true
@@ -111321,7 +111862,20 @@
         "name": "Qwen3.5 397B-A17B",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-02-15",
         "structured_output": true,
         "temperature": true,
@@ -111496,6 +112050,50 @@
         ],
         "release_date": "2025-12-18",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "seed-2-1-turbo": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 2.5
+        },
+        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+        "family": "seed",
+        "id": "seed-2-1-turbo",
+        "last_updated": "2026-08-10",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Seed 2.1 Turbo",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-10",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -114793,6 +115391,43 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemini-3.7-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        },
+        "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
+        "family": "gemini-flash",
+        "id": "google/gemini-3.7-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.7 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "google/gemini-embedding-001": {
         "attachment": false,
         "cost": {
@@ -117908,7 +118543,7 @@
         "tool_call": true
       },
       "qwen/qwen3.5-122b-a10b": {
-        "attachment": true,
+        "attachment": false,
         "cost": {
           "cache_read": 0.023,
           "input": 0.115,
@@ -117919,13 +118554,12 @@
         "id": "qwen/qwen3.5-122b-a10b",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 256000,
-          "output": 64000
+          "context": 131072,
+          "output": 32768
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -117982,7 +118616,7 @@
         "tool_call": true
       },
       "qwen/qwen3.5-35b-a3b": {
-        "attachment": true,
+        "attachment": false,
         "cost": {
           "cache_read": 0.020357,
           "input": 0.057,
@@ -117993,13 +118627,12 @@
         "id": "qwen/qwen3.5-35b-a3b",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 256000,
-          "output": 64000
+          "context": 131072,
+          "output": 32768
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -125431,11 +126064,12 @@
         },
         "name": "DeepSeek V4 Flash TEE",
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
+        "reasoning_options": [],
         "release_date": "2026-04-24",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "TEE/gemma-3-27b-it": {
         "attachment": false,
@@ -125966,39 +126600,6 @@
         "release_date": "2025-07-03",
         "structured_output": false,
         "tool_call": false
-      },
-      "TEE/minimax-m2.5": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.1,
-          "input": 0.2,
-          "output": 1.38
-        },
-        "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
-        "family": "minimax",
-        "id": "TEE/minimax-m2.5",
-        "last_updated": "2026-02-12",
-        "limit": {
-          "context": 196608,
-          "input": 196608,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax M2.5 TEE",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-02-12",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
       },
       "TEE/muse-glimmer-30b": {
         "attachment": true,
@@ -133660,6 +134261,55 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemini-3.7-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0375,
+          "cache_write": 0.041667,
+          "input": 0.375,
+          "output": 1.875
+        },
+        "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
+        "family": "gemini-flash",
+        "id": "google/gemini-3.7-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.7 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "google/gemini-flash-latest": {
         "attachment": true,
         "cost": {
@@ -134435,81 +135085,6 @@
           }
         ],
         "release_date": "2026-07-23",
-        "structured_output": false,
-        "tool_call": true
-      },
-      "inclusionai/ling-3.0-tiny": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.01,
-          "input": 0.1,
-          "output": 0.2
-        },
-        "description": "Ling 3.0 Tiny is a compact 7.9B-parameter Mixture-of-Experts model with 1.3B parameters active per token. It is designed for responsive agents, reliable instruction following, natural multi-turn conversations, long-context work, and function calling at low inference cost.",
-        "family": "ling",
-        "id": "inclusionai/ling-3.0-tiny",
-        "last_updated": "2026-08-09",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Ling 3.0 Tiny",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-08-09",
-        "structured_output": false,
-        "tool_call": true
-      },
-      "inclusionai/ling-3.0-tiny:thinking": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.01,
-          "input": 0.1,
-          "output": 0.2
-        },
-        "description": "Ling 3.0 Tiny Thinking enables visible reasoning on inclusionAI's compact 7.9B-parameter Mixture-of-Experts model for harder agent tasks, coding, planning, function calling, and long-context workflows.",
-        "family": "ling",
-        "id": "inclusionai/ling-3.0-tiny:thinking",
-        "last_updated": "2026-08-09",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Ling 3.0 Tiny Thinking",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "minimal",
-              "low",
-              "medium",
-              "high",
-              "xhigh"
-            ]
-          }
-        ],
-        "release_date": "2026-08-09",
         "structured_output": false,
         "tool_call": true
       },
@@ -171013,7 +171588,7 @@
         "knowledge": "2024-07",
         "last_updated": "2025-05-29",
         "limit": {
-          "context": 163840,
+          "context": 64000,
           "output": 16000
         },
         "modalities": {
@@ -172307,11 +172882,11 @@
       "google/gemini-3.6-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.15,
-          "cache_write": 0.083333,
-          "input": 1.5,
-          "output": 7.5,
-          "reasoning": 7.5
+          "cache_read": 0.075,
+          "cache_write": 0.041667,
+          "input": 0.75,
+          "output": 3.75,
+          "reasoning": 3.75
         },
         "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
         "family": "gemini-flash",
@@ -172349,6 +172924,54 @@
           }
         ],
         "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.7-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0375,
+          "cache_write": 0.020833,
+          "input": 0.375,
+          "output": 1.875,
+          "reasoning": 1.875
+        },
+        "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+        "family": "gemini-flash",
+        "id": "google/gemini-3.7-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.7 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -173802,8 +174425,8 @@
       "minimax/minimax-m2.5": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.06,
-          "input": 0.225,
+          "cache_read": 0.05,
+          "input": 0.22,
           "output": 0.9
         },
         "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
@@ -174643,9 +175266,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.16,
-          "input": 0.95,
-          "output": 4
+          "cache_read": 0.0944,
+          "input": 0.5605,
+          "output": 2.36
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -182100,9 +182723,9 @@
       "z-ai/glm-5.1": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.26,
-          "input": 1.4,
-          "output": 4.4
+          "cache_read": 0.1768,
+          "input": 0.952,
+          "output": 2.992
         },
         "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
         "family": "glm",
@@ -182135,9 +182758,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0945,
-          "input": 0.63,
-          "output": 1.98
+          "cache_read": 0.08,
+          "input": 0.4,
+          "output": 2.52
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -182404,9 +183027,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0252,
-          "input": 0.079996,
-          "output": 0.252
+          "cache_read": 0.016,
+          "input": 0.072,
+          "output": 0.144
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -182448,11 +183071,11 @@
       "~google/gemini-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.15,
-          "cache_write": 0.083333,
-          "input": 1.5,
-          "output": 7.5,
-          "reasoning": 7.5
+          "cache_read": 0.0375,
+          "cache_write": 0.020833,
+          "input": 0.375,
+          "output": 1.875,
+          "reasoning": 1.875
         },
         "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
         "family": "gemini-flash",
@@ -182482,7 +183105,6 @@
           {
             "type": "effort",
             "values": [
-              "minimal",
               "low",
               "medium",
               "high"
@@ -182561,9 +183183,9 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.29,
-          "input": 2.8,
-          "output": 14
+          "cache_read": 0.24,
+          "input": 2.4,
+          "output": 12
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -182571,7 +183193,7 @@
         "last_updated": "2026-04-27",
         "limit": {
           "context": 1048576,
-          "output": 1048576
+          "output": 974842
         },
         "modalities": {
           "input": [
@@ -202101,6 +202723,108 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-3.7-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        },
+        "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
+        "family": "gemini-flash",
+        "id": "gemini-3.7-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65535
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.7 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          },
+          {
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-08-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "gemini-3.7-flash@eu": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        },
+        "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
+        "family": "gemini-flash",
+        "id": "gemini-3.7-flash@eu",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65535
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.7 Flash (EU)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          },
+          {
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-08-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "glm-5.2": {
         "attachment": false,
         "cost": {
@@ -220939,6 +221663,36 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen-3-8-2-4t-a95b": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.3125,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+        "family": "qwen",
+        "id": "qwen-3-8-2-4t-a95b",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 3.8 2.4T",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-12",
+        "tool_call": false
+      },
       "qwen-3-8-max": {
         "attachment": true,
         "cost": {
@@ -222819,6 +223573,47 @@
         ],
         "release_date": "2026-06-02",
         "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen3.8-2.4t-a95b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 2.5,
+          "input": 2,
+          "output": 6
+        },
+        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+        "family": "qwen",
+        "id": "alibaba/qwen3.8-2.4t-a95b",
+        "last_updated": "2026-08-02",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 2.4T A95B",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-08-02",
         "tool_call": true
       },
       "alibaba/qwen3.8-max": {
@@ -225777,6 +226572,50 @@
           }
         ],
         "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.7-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "output": 3.75
+        },
+        "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+        "family": "gemini",
+        "id": "google/gemini-3.7-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.7 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
