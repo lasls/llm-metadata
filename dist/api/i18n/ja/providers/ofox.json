@@ -352,6 +352,50 @@
       "temperature": false,
       "tool_call": true
     },
+    "anthropic/claude-sonnet-4.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+      "family": "claude-sonnet",
+      "id": "anthropic/claude-sonnet-4.5",
+      "knowledge": "2025-07-31",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5 (latest)",
+      "open_weights": false,
+      "provider": {
+        "api": "https://api.ofox.ai/anthropic/v1",
+        "npm": "@ai-sdk/anthropic"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-09-29",
+      "temperature": true,
+      "tool_call": true
+    },
     "anthropic/claude-sonnet-4.6": {
       "attachment": true,
       "cost": {
@@ -522,6 +566,37 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-04-03",
+      "temperature": true,
+      "tool_call": true
+    },
+    "bailian/qwen-plus": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.023,
+        "input": 0.12,
+        "output": 0.29
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "bailian/qwen-plus",
+      "knowledge": "2024-04",
+      "last_updated": "2025-09-11",
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen Plus",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-01-25",
       "temperature": true,
       "tool_call": true
     },
@@ -789,6 +864,48 @@
         ]
       },
       "name": "Qwen3.5 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-02-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "bailian/qwen3.5-35b-a3b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.29,
+        "input": 0.29,
+        "output": 1.83
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "bailian/qwen3.5-35b-a3b",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 35B-A3B",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -1352,6 +1469,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek/deepseek-v4-pro-0813": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0037,
+        "input": 0.45,
+        "output": 0.88
+      },
+      "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+      "family": "deepseek-thinking",
+      "id": "deepseek/deepseek-v4-pro-0813",
+      "last_updated": "2026-08-12",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro 0813",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "google/gemini-2.5-flash": {
       "attachment": true,
       "cost": {
@@ -1798,6 +1958,196 @@
       "temperature": true,
       "tool_call": true
     },
+    "minimax/m2-her": {
+      "attachment": false,
+      "cost": {
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax M2 variant tuned for conversational and character-driven agent interactions",
+      "family": "minimax",
+      "id": "minimax/m2-her",
+      "last_updated": "2026-01-23",
+      "limit": {
+        "context": 200000,
+        "output": 131000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2 Her",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-01-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Efficient open MiniMax model built for coding agents and tool-heavy workflows",
+      "family": "minimax",
+      "id": "minimax/minimax-m2",
+      "last_updated": "2025-10-27",
+      "limit": {
+        "context": 196608,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-10-27",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Earlier MiniMax agent model for practical coding and productivity tasks",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.1",
+      "last_updated": "2025-12-23",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-12-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.1-lightning": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.3,
+        "output": 2.4
+      },
+      "description": "Earlier MiniMax agent model for practical coding and productivity tasks",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.1-lightning",
+      "last_updated": "2025-12-23",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.1 Lightning",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-12-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.5",
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-02-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.5-lightning": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.3,
+        "output": 2.4
+      },
+      "description": "High-speed MiniMax model for low-latency coding and agent workflows",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.5-lightning",
+      "last_updated": "2026-02-13",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.5 Lightning",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-02-13",
+      "temperature": true,
+      "tool_call": true
+    },
     "minimax/minimax-m2.7": {
       "attachment": false,
       "cost": {
@@ -1827,6 +2177,71 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.7-highspeed": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.06,
+        "cache_write": 0.375,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "Low-latency M2.7 variant for interactive coding plans and agent loops",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.7-highspeed",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.7-highspeed",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-03-18",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.12,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
+      "family": "minimax",
+      "id": "minimax/minimax-m3",
+      "last_updated": "2026-06-01",
+      "limit": {
+        "context": 512000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-01",
       "temperature": true,
       "tool_call": true
     },
@@ -2265,6 +2680,44 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-5-nano": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.05,
+        "output": 0.4
+      },
+      "description": "Tiny GPT-5 lane for routing, extraction, classification, and bulk jobs",
+      "family": "gpt-nano",
+      "id": "openai/gpt-5-nano",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5 Nano",
+      "open_weights": false,
+      "provider": {
+        "api": "https://api.ofox.ai/v1",
+        "npm": "@ai-sdk/openai"
+      },
+      "reasoning": false,
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-5.1": {
       "attachment": true,
       "cost": {
@@ -2506,6 +2959,108 @@
         }
       ],
       "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.3-codex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.18,
+        "input": 1.75,
+        "output": 14
+      },
+      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5.3-codex",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.3 Codex",
+      "open_weights": false,
+      "provider": {
+        "api": "https://api.ofox.ai/v1",
+        "npm": "@ai-sdk/openai"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-02-05",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.4": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2.5,
+        "output": 15
+      },
+      "description": "Agent-ready GPT for coding and computer-use workflows at a lower cost",
+      "family": "gpt",
+      "id": "openai/gpt-5.4",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-05",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.4",
+      "open_weights": false,
+      "provider": {
+        "api": "https://api.ofox.ai/v1",
+        "npm": "@ai-sdk/openai"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-03-05",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -2865,6 +3420,442 @@
       "release_date": "2026-07-09",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-1-6": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.023,
+        "input": 0.12,
+        "output": 0.29
+      },
+      "description": "ByteDance Seed model for long-context reasoning, instruction following, and tool-assisted tasks",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-1-6",
+      "last_updated": "2025-10-15",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 1.6",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-10-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-1-6-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0043,
+        "input": 0.03,
+        "output": 0.22
+      },
+      "description": "Low-latency ByteDance Seed model for high-throughput chat, extraction, and lightweight tool use",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-1-6-flash",
+      "last_updated": "2025-08-28",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 1.6 Flash",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-08-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-1-6-vision": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.023,
+        "input": 0.12,
+        "output": 1.15
+      },
+      "description": "ByteDance Seed multimodal model for image understanding, visual reasoning, and tool-assisted tasks",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-1-6-vision",
+      "last_updated": "2025-08-15",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 1.6 Vision",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-08-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-1-8": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.023,
+        "input": 0.12,
+        "output": 0.29
+      },
+      "description": "ByteDance Seed model for multimodal reasoning, long-context analysis, and agent workflows",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-1-8",
+      "last_updated": "2025-12-28",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 1.8",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-12-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-2.0-code": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.14,
+        "cache_write": 0.0024,
+        "input": 0.67,
+        "output": 3.36
+      },
+      "description": "ByteDance Seed coding model for multimodal software engineering and long-running agents",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-2.0-code",
+      "last_updated": "2026-02-14",
+      "limit": {
+        "context": 256000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.0 Code",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-2.0-lite": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.0024,
+        "input": 0.13,
+        "output": 0.76
+      },
+      "description": "Cost-efficient ByteDance Seed 2.0 model for production chat, analysis, and structured generation",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-2.0-lite",
+      "last_updated": "2026-02-14",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.0 Lite",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-2.0-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.02,
+        "cache_write": 0.0024,
+        "input": 0.06,
+        "output": 0.56
+      },
+      "description": "Lightweight ByteDance Seed 2.0 model for low-latency multimodal reasoning and high-volume tasks",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-2.0-mini",
+      "last_updated": "2026-02-14",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.0 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-2.0-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.14,
+        "cache_write": 0.0024,
+        "input": 0.67,
+        "output": 3.36
+      },
+      "description": "Flagship ByteDance Seed 2.0 model for complex multimodal reasoning and long-horizon agent workflows",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-2.0-pro",
+      "last_updated": "2026-02-14",
+      "limit": {
+        "context": 256000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.0 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-2.1-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.177,
+        "cache_write": 0.0025,
+        "input": 0.884,
+        "output": 4.42
+      },
+      "description": "Flagship ByteDance Seed 2.1 model for complex multimodal reasoning, coding, and agents",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-2.1-pro",
+      "last_updated": "2026-06-23",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.1 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-2.1-turbo": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.085,
+        "cache_write": 0.0024,
+        "input": 0.442,
+        "output": 2.212
+      },
+      "description": "Faster ByteDance Seed 2.1 model for multimodal reasoning and latency-sensitive agent workflows",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-2.1-turbo",
+      "last_updated": "2026-06-23",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.1 Turbo",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-character": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.024,
+        "cache_write": 0.0025,
+        "input": 0.177,
+        "output": 0.884
+      },
+      "description": "ByteDance Seed model optimized for character-driven dialogue and consistent conversational behavior",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-character",
+      "last_updated": "2026-06-23",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed Character",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "volcengine/doubao-seed-evolving": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.177,
+        "cache_write": 0.0025,
+        "input": 0.884,
+        "output": 4.42
+      },
+      "description": "Rolling ByteDance Seed model for rapidly updated reasoning, coding, and agent capabilities",
+      "family": "seed",
+      "id": "volcengine/doubao-seed-evolving",
+      "last_updated": "2026-06-23",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed Evolving",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-23",
+      "temperature": true,
       "tool_call": true
     },
     "x-ai/grok-4.1-fast": {
