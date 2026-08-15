@@ -109651,9 +109651,8 @@
       "qwen/qwen-plus-2025-07-28:thinking": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.5,
-          "input": 0.4,
-          "output": 1.2
+          "input": 0.26,
+          "output": 0.78
         },
         "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
         "family": "qwen",
@@ -151221,37 +151220,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen/Qwen3-235B-A22B-Instruct-2507-TEE": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.065,
-          "input": 0.13,
-          "output": 0.5
-        },
-        "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
-        "family": "qwen",
-        "id": "qwen/Qwen3-235B-A22B-Instruct-2507-TEE",
-        "last_updated": "2025-07-25",
-        "limit": {
-          "context": 256000,
-          "input": 256000,
-          "output": 262144
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen 3 235b A22B 2507 (TEE)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-07-25",
-        "structured_output": true,
-        "tool_call": true
-      },
       "qwen/Qwen3-235B-A22B-Thinking-2507": {
         "attachment": false,
         "cost": {
@@ -155957,6 +155925,89 @@
           }
         ],
         "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-5.3": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "family": "glm",
+        "id": "zai-org/glm-5.3",
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.3 Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "zai-org/glm-5.3:thinking": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "family": "glm",
+        "id": "zai-org/glm-5.3:thinking",
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.3 Preview Thinking",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -183288,9 +183339,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.013412,
-          "input": 0.06706,
-          "output": 0.13412
+          "cache_read": 0.012852,
+          "input": 0.06426,
+          "output": 0.12852
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -190821,19 +190872,16 @@
       "qwen/qwen-plus-2025-07-28:thinking": {
         "attachment": false,
         "cost": {
-          "cache_write": 0.5,
           "context_over_200k": {
-            "cache_write": 1.5,
-            "input": 1.2,
-            "output": 3.6
+            "input": 0.78,
+            "output": 2.34
           },
-          "input": 0.4,
-          "output": 1.2,
+          "input": 0.26,
+          "output": 0.78,
           "tiers": [
             {
-              "cache_write": 1.5,
-              "input": 1.2,
-              "output": 3.6,
+              "input": 0.78,
+              "output": 2.34,
               "tier": {
                 "size": 256000,
                 "type": "context"
@@ -194334,9 +194382,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.091,
-          "input": 0.49,
-          "output": 1.54
+          "cache_read": 0.0858,
+          "input": 0.462,
+          "output": 1.452
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -213281,7 +213329,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.55,
-          "cache_write": 6.88,
+          "cache_write": 6.875,
           "input": 5.5,
           "output": 27.5
         },
@@ -214180,22 +214228,22 @@
       "gemini-3.1-flash-lite@eu": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.025,
-          "cache_write": 0.08333,
+          "cache_read": 0.0275,
+          "cache_write": 0.091663,
           "context_over_200k": {
-            "cache_read": 0.025,
-            "cache_write": 0.08333,
-            "input": 0.5,
-            "output": 2.25
+            "cache_read": 0.0275,
+            "cache_write": 0.091663,
+            "input": 0.55,
+            "output": 2.475
           },
-          "input": 0.25,
-          "output": 1.5,
+          "input": 0.275,
+          "output": 1.65,
           "tiers": [
             {
-              "cache_read": 0.025,
-              "cache_write": 0.08333,
-              "input": 0.5,
-              "output": 2.25,
+              "cache_read": 0.0275,
+              "cache_write": 0.091663,
+              "input": 0.55,
+              "output": 2.475,
               "tier": {
                 "size": 200000,
                 "type": "context"
@@ -214301,10 +214349,10 @@
       "gemini-3.5-flash@eu": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.15,
-          "cache_write": 1.583,
-          "input": 1.5,
-          "output": 9
+          "cache_read": 0.165,
+          "cache_write": 1.7413,
+          "input": 1.65,
+          "output": 9.9
         },
         "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
         "family": "gemini-flash",
@@ -214455,9 +214503,9 @@
       "gemini-3.7-flash@eu": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.075,
-          "input": 0.75,
-          "output": 3.75
+          "cache_read": 0.0825,
+          "input": 0.825,
+          "output": 4.125
         },
         "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
         "family": "gemini-flash",
