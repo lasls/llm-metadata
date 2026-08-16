@@ -36862,6 +36862,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "Qwen/Qwen3.8-27B-TEE": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.039999999999999994,
+          "input": 0.4,
+          "output": 3
+        },
+        "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+        "family": "qwen",
+        "id": "Qwen/Qwen3.8-27B-TEE",
+        "last_updated": "2026-08-16",
+        "limit": {
+          "context": 262144,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 27B TEE",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-08-16",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": false
+      },
       "deepseek-ai/DeepSeek-V3.2-TEE": {
         "attachment": false,
         "cost": {
@@ -114338,17 +114369,17 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.013412,
-          "input": 0.06706,
-          "output": 0.13412
+          "cache_read": 0.01314,
+          "input": 0.0657,
+          "output": 0.1314
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
         "id": "~deepseek/deepseek-v4-flash-latest",
         "last_updated": "2026-08-01",
         "limit": {
-          "context": 1024000,
-          "output": 384000
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -136759,38 +136790,6 @@
         "structured_output": false,
         "tool_call": false
       },
-      "TEE/deepseek-v3.1": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.5,
-          "input": 1,
-          "output": 2.5
-        },
-        "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes",
-        "family": "deepseek",
-        "id": "TEE/deepseek-v3.1",
-        "last_updated": "2025-08-21",
-        "limit": {
-          "context": 164000,
-          "input": 164000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V3.1 TEE",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-08-21",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
       "TEE/deepseek-v3.2": {
         "attachment": false,
         "cost": {
@@ -136854,6 +136853,39 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "TEE/deepseek-v4-pro-0813": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.132,
+          "input": 1.32,
+          "output": 3.96
+        },
+        "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+        "family": "deepseek-thinking",
+        "id": "TEE/deepseek-v4-pro-0813",
+        "last_updated": "2026-08-12",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro 0813 TEE",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-12",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -142147,90 +142179,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek/deepseek-v4-flash-0731-cheaper": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.014,
-          "input": 0.14,
-          "output": 0.28
-        },
-        "description": "DeepSeek V4 Flash 0731 Cheaper is the same re-post-trained Mixture-of-Experts model with a 1M-token context window. This route goes directly to DeepSeek to use its lower cached-input pricing. ⚠️ Privacy and logging guarantees are limited.",
-        "family": "deepseek",
-        "id": "deepseek/deepseek-v4-flash-0731-cheaper",
-        "last_updated": "2026-08-01",
-        "limit": {
-          "context": 1048576,
-          "input": 1048576,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Flash 0731 Cheaper",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-08-01",
-        "structured_output": true,
-        "tool_call": true
-      },
-      "deepseek/deepseek-v4-flash-0731-cheaper:thinking": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.014,
-          "input": 0.14,
-          "output": 0.28
-        },
-        "description": "DeepSeek V4 Flash 0731 Cheaper Thinking enables reasoning by default on the same re-post-trained Mixture-of-Experts model with a 1M-token context window. This route goes directly to DeepSeek to use its lower cached-input pricing. ⚠️ Privacy and logging guarantees are limited.",
-        "family": "deepseek",
-        "id": "deepseek/deepseek-v4-flash-0731-cheaper:thinking",
-        "last_updated": "2026-08-01",
-        "limit": {
-          "context": 1048576,
-          "input": 1048576,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Flash 0731 Cheaper (Thinking)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-08-01",
-        "structured_output": true,
-        "tool_call": true
-      },
       "deepseek/deepseek-v4-flash-0731:thinking": {
         "attachment": false,
         "cost": {
@@ -142489,88 +142437,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek/deepseek-v4-pro-cheaper": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.003625,
-          "input": 0.435,
-          "output": 0.87
-        },
-        "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
-        "family": "deepseek",
-        "id": "deepseek/deepseek-v4-pro-cheaper",
-        "last_updated": "2026-04-25",
-        "limit": {
-          "context": 1048576,
-          "input": 1048576,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Pro Cheaper",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-04-25",
-        "structured_output": true,
-        "tool_call": true
-      },
-      "deepseek/deepseek-v4-pro-cheaper:thinking": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.003625,
-          "input": 0.435,
-          "output": 0.87
-        },
-        "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
-        "family": "deepseek",
-        "id": "deepseek/deepseek-v4-pro-cheaper:thinking",
-        "last_updated": "2026-04-25",
-        "limit": {
-          "context": 1048576,
-          "input": 1048576,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Pro Cheaper (Thinking)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-04-25",
-        "structured_output": true,
-        "tool_call": true
-      },
       "deepseek/deepseek-v4-pro:thinking": {
         "attachment": false,
         "cost": {
@@ -142645,14 +142511,15 @@
         "structured_output": false,
         "tool_call": false
       },
-      "dots-studio/dots-3-note-preview:free": {
+      "dots-studio/dots-3-note-preview": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.05,
+          "input": 0.1,
+          "output": 0.2
         },
-        "description": "Dots Studio's open-weight multimodal Mixture-of-Experts model activates 16B of 280B parameters for long-context reasoning, coding, visual and document understanding, tool use, and long-horizon agent workflows.",
-        "id": "dots-studio/dots-3-note-preview:free",
+        "description": "Dots Studio's open-weight multimodal Mixture-of-Experts model activates 16B of 280B parameters for long-context reasoning, coding, visual and document understanding, tool use, and long-horizon agent workflows. Prompts and completions of this model may be logged.",
+        "id": "dots-studio/dots-3-note-preview",
         "last_updated": "2026-08-15",
         "limit": {
           "context": 393216,
@@ -152865,6 +152732,39 @@
         "structured_output": false,
         "tool_call": false
       },
+      "qwen3.5-0.8b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.06,
+          "output": 0.12
+        },
+        "description": "Qwen3.5 0.8B is a lightweight open-weight multimodal model from Alibaba for fast reasoning, visual understanding, tool use, and JSON output.",
+        "family": "qwen3.5",
+        "id": "qwen3.5-0.8b",
+        "last_updated": "2026-08-16",
+        "limit": {
+          "context": 262144,
+          "input": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 0.8B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-16",
+        "structured_output": true,
+        "tool_call": true
+      },
       "qwen3.5-122b-a10b": {
         "attachment": false,
         "cost": {
@@ -153011,6 +152911,39 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen3.5-2b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.04,
+          "input": 0.08,
+          "output": 0.16
+        },
+        "description": "Qwen3.5 2B is a small open-weight multimodal model from Alibaba for efficient reasoning, coding, visual understanding, tool use, and JSON output.",
+        "family": "qwen3.5",
+        "id": "qwen3.5-2b",
+        "last_updated": "2026-08-16",
+        "limit": {
+          "context": 262144,
+          "input": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 2B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-16",
+        "structured_output": true,
+        "tool_call": true
+      },
       "qwen3.5-35b-a3b": {
         "attachment": true,
         "cost": {
@@ -153084,6 +153017,39 @@
         "release_date": "2026-02-23",
         "structured_output": false,
         "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.5-4b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.1,
+          "output": 0.2
+        },
+        "description": "Qwen3.5 4B is a compact open-weight multimodal model from Alibaba for reasoning, coding, visual understanding, tool use, and structured output.",
+        "family": "qwen3.5",
+        "id": "qwen3.5-4b",
+        "last_updated": "2026-08-16",
+        "limit": {
+          "context": 262144,
+          "input": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.5 4B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-16",
+        "structured_output": true,
         "tool_call": true
       },
       "qwen3.5-flash": {
@@ -153519,6 +153485,74 @@
         ],
         "release_date": "2026-06-02",
         "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.8-27b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 0.4,
+          "output": 3
+        },
+        "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+        "family": "qwen",
+        "id": "qwen3.8-27b",
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 262144,
+          "input": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 27B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.8-27b:thinking": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "input": 0.4,
+          "output": 3
+        },
+        "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+        "family": "qwen",
+        "id": "qwen3.8-27b:thinking",
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 262144,
+          "input": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 27B Thinking",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-08-14",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -170793,9 +170827,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0037,
-          "input": 0.45,
-          "output": 0.88
+          "cache_read": 0.044,
+          "input": 1.32,
+          "output": 3.96
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -170837,9 +170871,9 @@
       "deepseek/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0037,
-          "input": 0.45,
-          "output": 0.88
+          "cache_read": 0.044,
+          "input": 1.32,
+          "output": 3.96
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -171169,7 +171203,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.15,
-          "cache_write": 0.83,
+          "cache_write": 0.083,
           "input": 1.5,
           "input_audio": 3,
           "output": 9
@@ -181576,9 +181610,6 @@
         },
         "name": "Qwen3.5 Plus",
         "open_weights": false,
-        "provider": {
-          "npm": "@ai-sdk/anthropic"
-        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -181641,9 +181672,6 @@
         },
         "name": "Qwen3.6 Plus",
         "open_weights": false,
-        "provider": {
-          "npm": "@ai-sdk/anthropic"
-        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -181684,9 +181712,6 @@
         },
         "name": "Qwen3.7 Max",
         "open_weights": false,
-        "provider": {
-          "npm": "@ai-sdk/anthropic"
-        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -181747,9 +181772,6 @@
         },
         "name": "Qwen3.7 Plus",
         "open_weights": false,
-        "provider": {
-          "npm": "@ai-sdk/anthropic"
-        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -181792,9 +181814,6 @@
         },
         "name": "Qwen3.8 Max",
         "open_weights": false,
-        "provider": {
-          "npm": "@ai-sdk/anthropic"
-        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -184041,9 +184060,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.012572,
-          "input": 0.06286,
-          "output": 0.12572
+          "cache_read": 0.012292,
+          "input": 0.06146,
+          "output": 0.12292
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -186579,7 +186598,7 @@
       "minimax/minimax-m1": {
         "attachment": false,
         "cost": {
-          "input": 0.4,
+          "input": 0.55,
           "output": 2.2
         },
         "description": "MiniMax model for chat, coding, office work, and agentic tasks",
@@ -187552,9 +187571,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.15,
-          "input": 0.65,
-          "output": 3.41
+          "cache_read": 0.0912,
+          "input": 0.5415,
+          "output": 2.28
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -192915,9 +192934,9 @@
       "qwen/qwen3.6-27b": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.03,
-          "input": 0.3,
-          "output": 2
+          "cache_read": 0.12,
+          "input": 0.6,
+          "output": 3.6
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -192925,7 +192944,7 @@
         "last_updated": "2026-04-22",
         "limit": {
           "context": 262144,
-          "output": 65536
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -195353,9 +195372,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.013412,
-          "input": 0.06706,
-          "output": 0.13412
+          "cache_read": 0.0126,
+          "input": 0.063,
+          "output": 0.126
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -195363,7 +195382,7 @@
         "last_updated": "2026-08-01",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -246040,8 +246059,7 @@
         "modalities": {
           "input": [
             "text",
-            "image",
-            "pdf"
+            "image"
           ],
           "output": [
             "text"
