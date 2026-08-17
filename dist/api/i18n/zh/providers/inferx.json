@@ -7,19 +7,18 @@
   "iconURL": "https://models.dev/logos/inferx.svg",
   "id": "inferx",
   "models": {
-    "google/gemma-4-31b-it-fp8": {
+    "Agents-A1": {
       "attachment": true,
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
-      "family": "gemma",
-      "id": "google/gemma-4-31b-it-fp8",
-      "last_updated": "2026-04-02",
+      "description": "35B MoE agentic model built for long-horizon search, engineering, and scientific reasoning tasks",
+      "id": "Agents-A1",
+      "last_updated": "2026-06-26",
       "limit": {
-        "context": 262144,
-        "output": 32768
+        "context": 262000,
+        "output": 100000
       },
       "modalities": {
         "input": [
@@ -30,58 +29,166 @@
           "text"
         ]
       },
-      "name": "Gemma 4 31B IT FP8",
+      "name": "Agents-A1",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-04-02",
-      "structured_output": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-26",
+      "tool_call": true
+    },
+    "Devstral-2-123B-Instruct-2512-int4-AutoRound": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Mistral's coding-agent model for repository work, terminal tasks, and software fixes",
+      "family": "devstral",
+      "id": "Devstral-2-123B-Instruct-2512-int4-AutoRound",
+      "knowledge": "2025-12",
+      "last_updated": "2025-12-09",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Devstral-2-123B-Instruct-2512-int4-AutoRound",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-09",
       "temperature": true,
       "tool_call": true
     },
-    "qwen/qwen3.5-122b-a10b-nvfp4": {
+    "Ornith-1.0-35B-FP8": {
       "attachment": true,
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "description": "Large coding-reasoning model for agentic software tasks and RL search",
+      "family": "ornith",
+      "id": "Ornith-1.0-35B-FP8",
+      "last_updated": "2026-06-25",
+      "limit": {
+        "context": 262000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ornith-1.0-35B-FP8",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-25",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen3-Coder-Next-FP8": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
-      "id": "qwen/qwen3.5-122b-a10b-nvfp4",
-      "last_updated": "2026-02-23",
+      "id": "Qwen3-Coder-Next-FP8",
+      "knowledge": "2025-04",
+      "last_updated": "2026-02-03",
       "limit": {
         "context": 256144,
         "output": 65536
       },
       "modalities": {
         "input": [
-          "text",
-          "image",
-          "video",
-          "audio"
+          "text"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Qwen3.5 122B A10B NVFP4",
+      "name": "Qwen3 Coder Next FP8",
       "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-02-23",
+      "reasoning": false,
+      "release_date": "2026-02-03",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "qwen/qwen3.6-27b-fp8": {
+    "Qwen3-Coder-Next-FP8-no-thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
+      "family": "qwen",
+      "id": "Qwen3-Coder-Next-FP8-no-thinking",
+      "knowledge": "2025-04",
+      "last_updated": "2026-02-03",
+      "limit": {
+        "context": 260000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3-Coder-Next-FP8-no-thinking",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-02-03",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen3-Embedding-8B": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "family": "text-embedding",
+      "id": "Qwen3-Embedding-8B",
+      "last_updated": "2025-06-05",
+      "limit": {
+        "context": 32768,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3-Embedding-8B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-06-05",
+      "temperature": false,
+      "tool_call": false
+    },
+    "Qwen3.6-27B-FP8": {
       "attachment": true,
       "cost": {
         "input": 0,
@@ -89,7 +196,7 @@
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
-      "id": "qwen/qwen3.6-27b-fp8",
+      "id": "Qwen3.6-27B-FP8",
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
@@ -119,7 +226,7 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen/qwen3.6-35b-a3b-fp8": {
+    "Qwen3.6-35B-A3B-FP8": {
       "attachment": true,
       "cost": {
         "input": 0,
@@ -127,7 +234,7 @@
       },
       "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
       "family": "qwen",
-      "id": "qwen/qwen3.6-35b-a3b-fp8",
+      "id": "Qwen3.6-35B-A3B-FP8",
       "last_updated": "2026-04-17",
       "limit": {
         "context": 262000,
@@ -157,51 +264,53 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen3-coder-next-fp8": {
-      "attachment": false,
+    "Qwen3.6-35B-A3B-fp8-no-thinking": {
+      "attachment": true,
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
+      "description": "Qwen3.6-35B-A3B-fp8 disable thinking",
       "family": "qwen",
-      "id": "qwen3-coder-next-fp8",
-      "knowledge": "2025-04",
-      "last_updated": "2026-02-03",
+      "id": "Qwen3.6-35B-A3B-fp8-no-thinking",
+      "last_updated": "2026-04-17",
       "limit": {
-        "context": 256144,
+        "context": 262000,
         "output": 65536
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video",
+          "audio"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Qwen3 Coder Next FP8",
+      "name": "Qwen3.6-35B-A3B-fp8-no-thinking",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-02-03",
+      "release_date": "2026-04-17",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "qwen3-coder-next-fp8-1m": {
+    "deepseek-v4-flash": {
       "attachment": false,
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
-      "family": "qwen",
-      "id": "qwen3-coder-next-fp8-1m",
-      "knowledge": "2025-04",
-      "last_updated": "2026-02-03",
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
       "limit": {
-        "context": 1024000,
-        "output": 65536
+        "context": 1000000,
+        "output": 100000
       },
       "modalities": {
         "input": [
@@ -211,11 +320,82 @@
           "text"
         ]
       },
-      "name": "Qwen3 Coder Next FP8 1M",
+      "name": "deepseek-v4-flash",
       "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-02-03",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-24",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemma-4-31B-it-fp8": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
+      "family": "gemma",
+      "id": "gemma-4-31B-it-fp8",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B IT FP8",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mimo-v25": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Open MiMo model for multimodal coding agents and long-context automation",
+      "family": "mimo",
+      "id": "mimo-v25",
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1000000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "mimo-v25",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-22",
       "temperature": true,
       "tool_call": true
     }

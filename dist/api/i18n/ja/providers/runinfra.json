@@ -1,0 +1,173 @@
+{
+  "api": "https://api.runinfra.ai/v1",
+  "doc": "https://runinfra.ai/docs",
+  "env": [
+    "RUNINFRA_GATEWAY_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/runinfra.svg",
+  "id": "runinfra",
+  "models": {
+    "Inferact/Qwen3.8-2.4T-A95B-NVFP4": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 2,
+        "output": 6
+      },
+      "description": "Open-weight sparse MoE (2.4T total, 95B active), the open-weight twin of Qwen3.8 Max for coding, research, complex reasoning, and agentic workflows",
+      "family": "qwen",
+      "id": "Inferact/Qwen3.8-2.4T-A95B-NVFP4",
+      "last_updated": "2026-08-12",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 2.4T A95B (NVFP4)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-12",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.8-27B": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.8-27B",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V4-Flash-0731": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.13,
+        "output": 0.27
+      },
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "family": "deepseek-flash",
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "knowledge": "2025-05",
+      "last_updated": "2026-07-31",
+      "limit": {
+        "context": 1048576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-31",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0.15
+      },
+      "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
+      "family": "nemotron",
+      "id": "nvidia/NVIDIA-Nemotron-3.5-Lightning-30B-A3B-BF16",
+      "last_updated": "2026-08-11",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "RunInfra",
+  "npm": "@ai-sdk/openai-compatible"
+}

@@ -51,9 +51,9 @@
     "deepseek-v4-flash-0731": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.032664,
-        "input": 0.152432,
-        "output": 0.304864
+        "cache_read": 0.04,
+        "input": 0.2,
+        "output": 0.4
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -61,7 +61,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-08-02",
       "limit": {
-        "context": 1048576,
+        "context": 1000000,
         "output": 384000
       },
       "modalities": {
@@ -79,7 +79,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "high",
             "xhigh"
@@ -202,6 +201,37 @@
       "reasoning_options": [],
       "release_date": "2026-04-30",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5": {
+      "attachment": false,
+      "cost": {
+        "cache_write": 0.38,
+        "input": 0.76,
+        "output": 2.356
+      },
+      "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
+      "family": "glm",
+      "id": "glm-5",
+      "last_updated": "2026-08-16",
+      "limit": {
+        "context": 202752,
+        "output": 20275
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-13",
       "temperature": true,
       "tool_call": true
     },
@@ -439,9 +469,9 @@
     "kimi-k3": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.32664,
-        "input": 3.2664,
-        "output": 16.332
+        "cache_write": 0.3,
+        "input": 3,
+        "output": 15
       },
       "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
       "family": "kimi-k3",
