@@ -2224,9 +2224,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.01652,
-        "input": 0.0826,
-        "output": 0.1652
+        "cache_read": 0.01596,
+        "input": 0.0798,
+        "output": 0.1596
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -5703,9 +5703,9 @@
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.16,
-        "input": 0.95,
-        "output": 4
+        "cache_read": 0.0944,
+        "input": 0.5605,
+        "output": 2.36
       },
       "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
       "family": "kimi-k2",
@@ -13238,9 +13238,9 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.221,
-        "input": 1.19,
-        "output": 3.74
+        "cache_read": 0.091,
+        "input": 0.49,
+        "output": 1.54
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -13251,7 +13251,7 @@
       "last_updated": "2026-06-13",
       "limit": {
         "context": 1048576,
-        "output": 262144
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -13262,6 +13262,48 @@
         ]
       },
       "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.2:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+      "family": "glm",
+      "id": "z-ai/glm-5.2:free",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.2 (free)",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [

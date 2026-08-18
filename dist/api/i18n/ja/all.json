@@ -62400,9 +62400,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.22,
-          "output": 0.66
+          "cache_read": 0.014,
+          "input": 0.44,
+          "output": 1.32
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -62443,9 +62443,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.022,
-          "input": 0.66,
-          "output": 1.98
+          "cache_read": 0.044,
+          "input": 1.32,
+          "output": 3.96
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -63982,8 +63982,8 @@
       "ionos/meta-llama/Llama-3.3-70B-Instruct": {
         "attachment": false,
         "cost": {
-          "input": 0.753545,
-          "output": 0.753545
+          "input": 0.75244,
+          "output": 0.75244
         },
         "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
         "family": "llama",
@@ -64013,8 +64013,8 @@
       "ionos/openai/gpt-oss-120b": {
         "attachment": false,
         "cost": {
-          "input": 0.173895,
-          "output": 0.753545
+          "input": 0.17364,
+          "output": 0.75244
         },
         "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
         "family": "gpt-oss",
@@ -64757,7 +64757,7 @@
         "id": "nebius/nvidia/Nemotron-3-Ultra-550b-a55b",
         "last_updated": "2026-06-04",
         "limit": {
-          "context": 8000,
+          "context": 1048576,
           "output": 128000
         },
         "modalities": {
@@ -66820,8 +66820,8 @@
       "qwen/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "input": 1.452,
-          "output": 4.356
+          "input": 0.66,
+          "output": 1.98
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -67432,8 +67432,8 @@
       "scaleway/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "input": 0.46372,
-          "output": 0.927441
+          "input": 0.46304,
+          "output": 0.92608
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -67474,8 +67474,8 @@
       "scaleway/gpt-oss-120b": {
         "attachment": false,
         "cost": {
-          "input": 0.173895,
-          "output": 0.69558
+          "input": 0.17364,
+          "output": 0.69456
         },
         "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
         "family": "gpt-oss",
@@ -67514,8 +67514,8 @@
       "scaleway/llama-3.3-70b-instruct": {
         "attachment": false,
         "cost": {
-          "input": 1.043371,
-          "output": 1.043371
+          "input": 1.04184,
+          "output": 1.04184
         },
         "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
         "family": "llama",
@@ -92550,16 +92550,16 @@
       "glm-5.1": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.283088,
-          "input": 1.52432,
-          "output": 4.79072
+          "cache_write": 0.68,
+          "input": 1.36,
+          "output": 4.4
         },
         "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
         "family": "glm",
         "id": "glm-5.1",
         "last_updated": "2026-07-22",
         "limit": {
-          "context": 202800,
+          "context": 202750,
           "output": 3276
         },
         "modalities": {
@@ -92573,15 +92573,7 @@
         "name": "GLM-5.1",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "high",
-              "max"
-            ]
-          }
-        ],
+        "reasoning_options": [],
         "release_date": "2026-06-04",
         "structured_output": true,
         "temperature": true,
@@ -116424,7 +116416,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 262144
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -116435,6 +116427,46 @@
           ]
         },
         "name": "GLM-5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-5.2:free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "GLM 5.2 is a large-scale reasoning model from Z.ai. It supports text input and output with a 1M-token context window, and is suited for long-horizon agent workflows, project-level software engineering,...",
+        "family": "glm",
+        "id": "z-ai/glm-5.2:free",
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Z.ai: GLM 5.2 (free)",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
@@ -140925,8 +140957,7 @@
         "modalities": {
           "input": [
             "text",
-            "image",
-            "video"
+            "image"
           ],
           "output": [
             "text"
@@ -187410,9 +187441,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.01652,
-          "input": 0.0826,
-          "output": 0.1652
+          "cache_read": 0.01596,
+          "input": 0.0798,
+          "output": 0.1596
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -190889,9 +190920,9 @@
       "moonshotai/kimi-k2.6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.16,
-          "input": 0.95,
-          "output": 4
+          "cache_read": 0.0944,
+          "input": 0.5605,
+          "output": 2.36
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -198424,9 +198455,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.221,
-          "input": 1.19,
-          "output": 3.74
+          "cache_read": 0.091,
+          "input": 0.49,
+          "output": 1.54
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -198437,7 +198468,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 262144
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -198448,6 +198479,48 @@
           ]
         },
         "name": "GLM-5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-5.2:free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+        "family": "glm",
+        "id": "z-ai/glm-5.2:free",
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 256000,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.2 (free)",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
@@ -221524,6 +221597,36 @@
         "temperature": false,
         "tool_call": false
       },
+      "gemini-embedding-2": {
+        "attachment": true,
+        "description": "Multimodal embedding model mapping text, images, video, audio, and PDFs into a unified embedding space",
+        "family": "gemini",
+        "id": "gemini-embedding-2",
+        "knowledge": "2025-11",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 3072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Embedding 2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "temperature": false,
+        "tool_call": false
+      },
       "gpt-4.1": {
         "attachment": true,
         "cost": {
@@ -222089,6 +222192,42 @@
         "release_date": "2026-07-09",
         "structured_output": true,
         "temperature": false,
+        "tool_call": true
+      },
+      "mistralai--mistral-medium": {
+        "attachment": true,
+        "description": "Balanced Mistral model for enterprise assistants, multilingual work, and tools",
+        "family": "mistral-medium",
+        "id": "mistralai--mistral-medium",
+        "last_updated": "2026-04-29",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Mistral Medium 3.5",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-04-29",
+        "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "mistralai--mistral-medium-instruct": {
@@ -223461,15 +223600,59 @@
     "name": "SCNet Token Plan",
     "npm": "@ai-sdk/openai-compatible"
   },
-  "scx": {
+  "scx-ai": {
     "api": "https://api.scx.ai/v1",
     "doc": "https://platform.scx.ai/docs",
     "env": [
       "SCX_API_KEY"
     ],
-    "iconURL": "https://models.dev/logos/scx.svg",
-    "id": "scx",
+    "iconURL": "https://models.dev/logos/scx-ai.svg",
+    "id": "scx-ai",
     "models": {
+      "GLM-5.2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.111,
+          "input": 0.55,
+          "output": 1.784
+        },
+        "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+        "family": "glm",
+        "id": "GLM-5.2",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-06-13",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.2",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-06-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "MiniMax-M2.7": {
         "attachment": false,
         "cost": {
@@ -223480,10 +223663,11 @@
         "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
         "family": "minimax",
         "id": "MiniMax-M2.7",
+        "interleaved": true,
         "last_updated": "2026-03-18",
         "limit": {
-          "context": 192000,
-          "output": 64000
+          "context": 196608,
+          "output": 196608
         },
         "modalities": {
           "input": [
@@ -223511,6 +223695,55 @@
         "temperature": true,
         "tool_call": true
       },
+      "Qwen3.8-Max": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.17,
+          "cache_write": 2.5,
+          "input": 1.815,
+          "output": 5.4461
+        },
+        "description": "2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows",
+        "family": "qwen",
+        "id": "Qwen3.8-Max",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-03",
+        "limit": {
+          "context": 1000000,
+          "input": 983616,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-08-03",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -223520,6 +223753,9 @@
         "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
         "family": "gpt-oss",
         "id": "gpt-oss-120b",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2025-08-05",
         "limit": {
           "context": 131072,
