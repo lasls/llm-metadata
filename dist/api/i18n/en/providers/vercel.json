@@ -6477,6 +6477,11 @@
     },
     "nvidia/nemotron-3.5-lightning": {
       "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.05,
+        "output": 0.2
+      },
       "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
       "family": "nemotron",
       "id": "nvidia/nemotron-3.5-lightning",
@@ -11724,9 +11729,9 @@
     "zai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.275,
-        "input": 1.1,
-        "output": 3.851
+        "cache_read": 0.16,
+        "input": 0.8,
+        "output": 2.55
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -11803,6 +11808,47 @@
         }
       ],
       "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai/glm-5.3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "zai/glm-5.3",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1000000,
+        "output": 12800
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.3",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
