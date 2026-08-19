@@ -7,36 +7,6 @@
   "iconURL": "https://models.dev/logos/kilo.svg",
   "id": "kilo",
   "models": {
-    "ai21/jamba-large-1.7": {
-      "attachment": false,
-      "cost": {
-        "input": 2,
-        "output": 8
-      },
-      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
-      "family": "jamba",
-      "id": "ai21/jamba-large-1.7",
-      "last_updated": "2025-08-08",
-      "limit": {
-        "context": 256000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "AI21: Jamba Large 1.7",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-08",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "aion-labs/aion-2.0": {
       "attachment": false,
       "cost": {
@@ -3825,7 +3795,7 @@
           "text"
         ]
       },
-      "name": "inclusionAI: Ling-2.6-1T",
+      "name": "inclusionAI: Ling-2.6-1T (retires Aug 24)",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-04-23",
@@ -3856,7 +3826,7 @@
           "text"
         ]
       },
-      "name": "inclusionAI: Ling-2.6-flash",
+      "name": "inclusionAI: Ling-2.6-flash (retires Aug 24)",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-04-21",
@@ -3927,7 +3897,7 @@
           "text"
         ]
       },
-      "name": "inclusionAI: Ring-2.6-1T",
+      "name": "inclusionAI: Ring-2.6-1T (retires Aug 24)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -4951,7 +4921,7 @@
       "id": "minimax/minimax-m2.5",
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 196608,
+        "context": 65536,
         "output": 196608
       },
       "modalities": {
@@ -5911,7 +5881,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "high",
             "max"
@@ -8221,6 +8190,54 @@
       "release_date": "2026-07-09",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.6-sol-discounted": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 3.125,
+        "input": 2.5,
+        "output": 15,
+        "reasoning": 0
+      },
+      "description": "GPT-5.6 Sol served by OpenAI through Vercel AI Gateway at 50% lower cost than other available inference providers. This promotion runs through September 18, 2026.",
+      "family": "gpt",
+      "id": "openai/gpt-5.6-sol-discounted",
+      "last_updated": "2025-08-26",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-5.6 Sol (50% off)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2025-08-26",
+      "structured_output": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.6-sol-pro": {
@@ -11818,54 +11835,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "stealth/gpt-5.6-sol": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.4,
-        "cache_write": 5,
-        "input": 4,
-        "output": 24,
-        "reasoning": 0
-      },
-      "description": "Your prompts and completions may be retained and used to train or improve the provider's services. This third-party-served variant of GPT-5.6 Sol is offered at 20% lower cost than standard GPT-5.6 Sol pricing and is not served by OpenAI or Kilo Code.",
-      "family": "gpt",
-      "id": "stealth/gpt-5.6-sol",
-      "last_updated": "2025-08-26",
-      "limit": {
-        "context": 1050000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Stealth: GPT-5.6 Sol (20% off)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2025-08-26",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "stealth/qwen3.6-plus": {
       "attachment": true,
       "cost": {
@@ -13962,6 +13931,47 @@
       ],
       "release_date": "2026-07-08",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "~z-ai/glm-latest": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "This model always redirects to the latest GLM model from Z.ai.",
+      "family": "glm",
+      "id": "~z-ai/glm-latest",
+      "last_updated": "2026-08-19",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Z.ai: GLM Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-19",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     }
