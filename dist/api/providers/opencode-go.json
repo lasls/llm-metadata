@@ -257,22 +257,22 @@
     "gpt-5.6-luna": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.01,
-        "cache_write": 0.125,
+        "cache_read": 0.02,
+        "cache_write": 0.25,
         "context_over_200k": {
-          "cache_read": 0.02,
-          "cache_write": 0.25,
-          "input": 0.2,
-          "output": 0.9
+          "cache_read": 0.04,
+          "cache_write": 0.5,
+          "input": 0.4,
+          "output": 1.8
         },
-        "input": 0.1,
-        "output": 0.6,
+        "input": 0.2,
+        "output": 1.2,
         "tiers": [
           {
-            "cache_read": 0.02,
-            "cache_write": 0.25,
-            "input": 0.2,
-            "output": 0.9,
+            "cache_read": 0.04,
+            "cache_write": 0.5,
+            "input": 0.4,
+            "output": 1.8,
             "tier": {
               "size": 272000,
               "type": "context"
@@ -300,7 +300,7 @@
           "text"
         ]
       },
-      "name": "GPT-5.6 Luna (2x usage)",
+      "name": "GPT-5.6 Luna",
       "open_weights": false,
       "provider": {
         "npm": "@ai-sdk/openai"
@@ -871,6 +871,56 @@
         }
       ],
       "release_date": "2026-05-31",
+      "temperature": true,
+      "tool_call": true
+    },
+    "muse-spark-1.2": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.002,
+        "input": 0.1,
+        "output": 0.2
+      },
+      "description": "Muse Spark 1.2 is a coding-focused update to Muse Spark 1.1 with improvements in code generation, complex debugging, codebase understanding, and end-to-end developer workflows.",
+      "family": "muse",
+      "id": "muse-spark-1.2",
+      "last_updated": "2026-08-05",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Muse Spark 1.2",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/openai"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-05",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
