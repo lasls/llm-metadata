@@ -1035,22 +1035,23 @@
     "alibaba/qwen3.8-27b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.01,
-        "input": 0.1,
-        "output": 0.4
+        "cache_read": 0.11,
+        "input": 0.55,
+        "output": 3.3
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "alibaba/qwen3.8-27b",
       "last_updated": "2026-08-14",
       "limit": {
-        "context": 262144,
-        "output": 262133
+        "context": 1000000,
+        "output": 131072
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -3358,6 +3359,30 @@
       "release_date": "2025-10-20",
       "tool_call": false
     },
+    "fish-audio/s1-free": {
+      "attachment": false,
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "family": "o",
+      "id": "fish-audio/s1-free",
+      "last_updated": "2025-10-20",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "S1 (Free)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-10-20",
+      "tool_call": false
+    },
     "fish-audio/s2-pro": {
       "attachment": false,
       "description": "Speech generation model for controllable voice, narration, and audio delivery",
@@ -3377,6 +3402,30 @@
         ]
       },
       "name": "S2 Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-09",
+      "tool_call": false
+    },
+    "fish-audio/s2-pro-free": {
+      "attachment": false,
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "family": "o",
+      "id": "fish-audio/s2-pro-free",
+      "last_updated": "2026-03-09",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "S2 Pro (Free)",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-03-09",
@@ -3406,6 +3455,30 @@
       "release_date": "2026-07-28",
       "tool_call": false
     },
+    "fish-audio/s2.1-pro-free": {
+      "attachment": false,
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "family": "o",
+      "id": "fish-audio/s2.1-pro-free",
+      "last_updated": "2026-07-28",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "S2.1 Pro (Free)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-07-28",
+      "tool_call": false
+    },
     "fish-audio/transcribe-1": {
       "attachment": false,
       "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
@@ -3425,6 +3498,30 @@
         ]
       },
       "name": "Transcribe-1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-01",
+      "tool_call": false
+    },
+    "fish-audio/transcribe-1-free": {
+      "attachment": false,
+      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "family": "o",
+      "id": "fish-audio/transcribe-1-free",
+      "last_updated": "2026-03-01",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Transcribe-1 (Free)",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-03-01",
@@ -11437,112 +11534,6 @@
         }
       ],
       "release_date": "2025-09-30",
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai/glm-4.6v": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.3,
-        "output": 0.9
-      },
-      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
-      "family": "glm",
-      "id": "zai/glm-4.6v",
-      "knowledge": "2025-04",
-      "last_updated": "2025-12-08",
-      "limit": {
-        "context": 128000,
-        "output": 24000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM-4.6V",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-12-08",
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai/glm-4.6v-flash": {
-      "attachment": true,
-      "description": "Lightweight GLM vision model for visual reasoning, documents, and multimodal agents",
-      "family": "glm",
-      "id": "zai/glm-4.6v-flash",
-      "last_updated": "2025-12-08",
-      "limit": {
-        "context": 128000,
-        "output": 24000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM-4.6V-Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-12-08",
-      "temperature": true,
-      "tool_call": true
-    },
-    "zai/glm-4.6v-flash-free": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Lightweight GLM vision model for visual reasoning, documents, and multimodal agents",
-      "family": "glm",
-      "id": "zai/glm-4.6v-flash-free",
-      "last_updated": "2025-12-08",
-      "limit": {
-        "context": 128000,
-        "output": 24000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM-4.6V-Flash (Free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-12-08",
       "temperature": true,
       "tool_call": true
     },
