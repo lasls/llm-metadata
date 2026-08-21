@@ -2205,48 +2205,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek/deepseek-v4-flash:discounted": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.0028,
-        "input": 0.14,
-        "output": 0.28,
-        "reasoning": 0
-      },
-      "description": "This DeepSeek V4 Flash endpoint provides the lowest cost for multi-turn conversations for this model. This is accomplished with an exceptionally low cache read price. By using this endpoint you agree prompts and completions may be retained by DeepSeek and used to train future models.",
-      "family": "deepseek",
-      "id": "deepseek/deepseek-v4-flash:discounted",
-      "last_updated": "2025-08-26",
-      "limit": {
-        "context": 1048576,
-        "output": 384000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek: DeepSeek V4 Flash 0731 (lowest price)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "release_date": "2025-08-26",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
@@ -2328,48 +2286,6 @@
       ],
       "release_date": "2026-08-12",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "deepseek/deepseek-v4-pro:discounted": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.003625,
-        "input": 0.435,
-        "output": 0.87,
-        "reasoning": 0
-      },
-      "description": "This DeepSeek V4 Pro endpoint provides the lowest cost for multi-turn conversations for this model. This is accomplished with an exceptionally low cache read price. By using this endpoint you agree prompts and completions may be retained by DeepSeek and used to train future models.",
-      "family": "deepseek",
-      "id": "deepseek/deepseek-v4-pro:discounted",
-      "last_updated": "2025-08-26",
-      "limit": {
-        "context": 1048576,
-        "output": 384000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek: DeepSeek V4 Pro 0813 (lowest price)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "release_date": "2025-08-26",
-      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -3496,8 +3412,8 @@
     "google/gemma-4-26b-a4b-it": {
       "attachment": true,
       "cost": {
-        "input": 0.07,
-        "output": 0.34
+        "input": 0.05,
+        "output": 0.25
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3547,7 +3463,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -4218,6 +4134,36 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "mancer/weaver": {
+      "attachment": false,
+      "cost": {
+        "input": 0.5,
+        "output": 0.75
+      },
+      "description": "An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.",
+      "family": "alpha",
+      "id": "mancer/weaver",
+      "last_updated": "2023-08-02",
+      "limit": {
+        "context": 8000,
+        "output": 6000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mancer: Weaver (alpha)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2023-08-02",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
     },
     "meituan/longcat-2.0": {
       "attachment": false,
@@ -6176,6 +6122,7 @@
     "nvidia/nemotron-3-nano-30b-a3b": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.025,
         "input": 0.05,
         "output": 0.2
       },
@@ -10555,7 +10502,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -11254,10 +11201,10 @@
     "qwen/qwen3.8-27b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.11,
-        "cache_write": 0.6875,
-        "input": 0.55,
-        "output": 3.3
+        "cache_read": 0.115,
+        "cache_write": 0.71875,
+        "input": 0.575,
+        "output": 3.45
       },
       "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
       "family": "qwen",
@@ -11832,6 +11779,48 @@
         }
       ],
       "release_date": "2025-08-26",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "stealth/ox-alpha": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Ox Alpha is a reasoning model designed for coding, sustained agentic work, and production workloads. It is suited for long-horizon software engineering, complex reasoning, and workflows that combine text with...",
+      "family": "alpha",
+      "id": "stealth/ox-alpha",
+      "last_updated": "2026-08-20",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ox Alpha",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-20",
       "structured_output": false,
       "temperature": true,
       "tool_call": true

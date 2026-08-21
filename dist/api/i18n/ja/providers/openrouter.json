@@ -2193,9 +2193,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.01624,
-        "input": 0.0812,
-        "output": 0.1624
+        "cache_read": 0.01652,
+        "input": 0.0826,
+        "output": 0.1652
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -3650,8 +3650,8 @@
     "google/gemma-4-31b-it": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.09,
+        "cache_read": 0.1,
+        "input": 0.1,
         "output": 0.34
       },
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
@@ -3660,7 +3660,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -4177,6 +4177,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "mancer/weaver": {
+      "attachment": false,
+      "cost": {
+        "input": 0.5,
+        "output": 0.75
+      },
+      "description": "General-purpose chat model for instruction following, writing, and analysis",
+      "family": "alpha",
+      "id": "mancer/weaver",
+      "knowledge": "2023-06-30",
+      "last_updated": "2023-08-02",
+      "limit": {
+        "context": 8000,
+        "output": 6000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Weaver (alpha)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2023-08-02",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
     "meituan/longcat-2.0": {
       "attachment": false,
       "cost": {
@@ -4469,8 +4500,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.04,
-        "input": 0.35,
-        "output": 1.5
+        "input": 0.3,
+        "output": 1.1
       },
       "description": "Muse Glimmer is a 30-billion-parameter open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark for always-on local agents, tool use, coding, and image understanding.",
       "family": "muse",
@@ -5703,9 +5734,9 @@
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0944,
-        "input": 0.5605,
-        "output": 2.36
+        "cache_read": 0.16,
+        "input": 0.95,
+        "output": 4
       },
       "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
       "family": "kimi-k2",
@@ -5740,9 +5771,9 @@
     "moonshotai/kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.15,
-        "input": 0.71,
-        "output": 3.5
+        "cache_read": 0.17,
+        "input": 0.67,
+        "output": 3.4
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
@@ -10732,7 +10763,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -11926,6 +11957,48 @@
       "temperature": true,
       "tool_call": false
     },
+    "stealth/ox-alpha": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "family": "alpha",
+      "id": "stealth/ox-alpha",
+      "last_updated": "2026-08-20",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ox Alpha",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-20",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "stepfun/step-3.5-flash": {
       "attachment": false,
       "cost": {
@@ -12355,7 +12428,7 @@
       "id": "thinkingmachines/inkling-small",
       "last_updated": "2026-07-30",
       "limit": {
-        "context": 524288,
+        "context": 1048576,
         "output": 262144
       },
       "modalities": {
