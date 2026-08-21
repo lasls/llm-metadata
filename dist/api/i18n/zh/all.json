@@ -57354,8 +57354,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.2,
-          "input": 0.75,
-          "output": 2.4
+          "input": 1,
+          "output": 3.2
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -57399,7 +57399,7 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.26,
-          "input": 0.975,
+          "input": 1.3,
           "output": 4.3
         },
         "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
@@ -57516,8 +57516,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.203,
-          "input": 0.375,
-          "output": 2.025
+          "input": 0.5,
+          "output": 2.7
         },
         "description": "Kimi model for long-context chat, coding, and agentic reasoning",
         "family": "kimi-k2",
@@ -57563,8 +57563,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.19,
-          "input": 0.76,
-          "output": 3.2
+          "input": 0.95,
+          "output": 4
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi-k2",
@@ -57790,8 +57790,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.06,
-          "input": 0.225,
-          "output": 0.9
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "MiniMax model for chat, coding, office work, and agentic tasks",
         "family": "minimax-m2.5",
@@ -58125,8 +58125,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.06,
-          "input": 0.165,
-          "output": 0.3575
+          "input": 0.3,
+          "output": 0.65
         },
         "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
         "family": "nemotron",
@@ -59461,8 +59461,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.111,
-          "input": 0.3025,
-          "output": 1.925
+          "input": 0.55,
+          "output": 3.5
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen3.5",
@@ -59502,7 +59502,7 @@
         "tool_call": true
       },
       "qwen3.8-max": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.2,
           "input": 2,
@@ -59518,13 +59518,15 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image",
+            "video"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Qwen3.8-2.4T-A95B",
+        "name": "Qwen3.8-Max",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -62659,9 +62661,9 @@
       "fireworks_ai/accounts/fireworks/models/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
-          "input": 0.14,
-          "output": 0.28
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -64388,8 +64390,8 @@
       "mistral/codestral-latest": {
         "attachment": false,
         "cost": {
-          "input": 1,
-          "output": 3
+          "input": 0.3,
+          "output": 0.9
         },
         "description": "Mistral code model for completions, refactors, and developer IDE workflows",
         "family": "codestral",
@@ -64737,8 +64739,8 @@
       "mistral/mistral-small-latest": {
         "attachment": true,
         "cost": {
-          "input": 0.06,
-          "output": 0.18
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
         "family": "mistral-small",
@@ -66951,8 +66953,8 @@
       "qwen/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "input": 0.242,
-          "output": 0.726
+          "input": 0.40172,
+          "output": 1.20516
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -66986,15 +66988,15 @@
           }
         ],
         "release_date": "2026-07-31",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
       "qwen/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "input": 0.726,
-          "output": 2.178
+          "input": 1.20516,
+          "output": 3.61548
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -107397,7 +107399,7 @@
         "id": "liquid/lfm-2.5-2.6b:free",
         "last_updated": "2026-08-11",
         "limit": {
-          "context": 128000,
+          "context": 65536,
           "output": 8192
         },
         "modalities": {
@@ -108127,8 +108129,8 @@
         "id": "minimax/minimax-m2.5",
         "last_updated": "2026-02-12",
         "limit": {
-          "context": 65536,
-          "output": 196608
+          "context": 198000,
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -112914,8 +112916,8 @@
         "id": "qwen/qwen3-14b",
         "last_updated": "2025-04-28",
         "limit": {
-          "context": 40960,
-          "output": 16384
+          "context": 131072,
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -116960,17 +116962,17 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.014,
+          "cache_read": 0.02,
           "input": 0.065,
-          "output": 0.14
+          "output": 0.18
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
         "id": "~deepseek/deepseek-v4-flash-latest",
         "last_updated": "2026-08-01",
         "limit": {
-          "context": 262144,
-          "output": 262144
+          "context": 1048576,
+          "output": 1048576
         },
         "modalities": {
           "input": [
@@ -148658,7 +148660,7 @@
         "tool_call": true
       },
       "qwen/qwen3.5-35b-a3b": {
-        "attachment": true,
+        "attachment": false,
         "cost": {
           "cache_read": 0.020357,
           "input": 0.057,
@@ -148669,13 +148671,12 @@
         "id": "qwen/qwen3.5-35b-a3b",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 256000,
-          "output": 64000
+          "context": 131072,
+          "output": 32768
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -148695,7 +148696,7 @@
         "tool_call": true
       },
       "qwen/qwen3.5-397b-a17b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.0344,
           "input": 0.172,
@@ -148706,12 +148707,13 @@
         "id": "qwen/qwen3.5-397b-a17b",
         "last_updated": "2026-02-15",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -205506,7 +205508,7 @@
         "id": "liquid/lfm-2.5-2.6b:free",
         "last_updated": "2026-08-11",
         "limit": {
-          "context": 128000,
+          "context": 65536,
           "output": 8192
         },
         "modalities": {
@@ -206211,9 +206213,9 @@
       "minimax/minimax-m2.5": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.06,
-          "input": 0.225,
-          "output": 0.9
+          "cache_read": 0.03,
+          "input": 0.27,
+          "output": 0.95
         },
         "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
         "family": "minimax",
@@ -206224,7 +206226,7 @@
         "last_updated": "2026-02-12",
         "limit": {
           "context": 204800,
-          "output": 196608
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -211190,8 +211192,8 @@
       "qwen/qwen3-14b": {
         "attachment": false,
         "cost": {
-          "input": 0.12,
-          "output": 0.24
+          "input": 0.2275,
+          "output": 0.91
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -211200,7 +211202,7 @@
         "last_updated": "2025-04-28",
         "limit": {
           "context": 131072,
-          "output": 16384
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -215072,9 +215074,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.014,
+          "cache_read": 0.02,
           "input": 0.065,
-          "output": 0.14
+          "output": 0.18
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -215082,7 +215084,7 @@
         "last_updated": "2026-08-01",
         "limit": {
           "context": 1310720,
-          "output": 262144
+          "output": 1048576
         },
         "modalities": {
           "input": [
@@ -271166,6 +271168,90 @@
         "release_date": "2026-05-29",
         "temperature": true,
         "tool_call": true
+      },
+      "tencent/hy-mt2-lite": {
+        "attachment": false,
+        "cost": {
+          "input": 0.044,
+          "output": 0.177
+        },
+        "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+        "family": "Hy",
+        "id": "tencent/hy-mt2-lite",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 8000,
+          "output": 4000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Tencent Hy-MT2-Lite",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-06-12",
+        "tool_call": false
+      },
+      "tencent/hy-mt2-plus": {
+        "attachment": false,
+        "cost": {
+          "input": 0.074,
+          "output": 0.295
+        },
+        "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+        "family": "Hy",
+        "id": "tencent/hy-mt2-plus",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 8000,
+          "output": 4000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Tencent Hy-MT2-Plus",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-06-12",
+        "tool_call": false
+      },
+      "tencent/hy-mt2-pro": {
+        "attachment": false,
+        "cost": {
+          "input": 0.074,
+          "output": 0.295
+        },
+        "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+        "family": "Hy",
+        "id": "tencent/hy-mt2-pro",
+        "last_updated": "2026-05-21",
+        "limit": {
+          "context": 8000,
+          "output": 4000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Tencent Hy-MT2-Pro",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-05-21",
+        "tool_call": false
       },
       "tencent/hy3": {
         "attachment": false,
