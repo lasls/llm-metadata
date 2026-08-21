@@ -9593,11 +9593,11 @@
         "input": 0.75,
         "output": 3.75
       },
-      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
       "family": "gemini-flash",
       "id": "google/gemini-flash-latest",
-      "knowledge": "2025-01",
-      "last_updated": "2026-05-19",
+      "knowledge": "2026-03",
+      "last_updated": "2026-08-13",
       "limit": {
         "context": 1048756,
         "input": 1048756,
@@ -9627,7 +9627,7 @@
           ]
         }
       ],
-      "release_date": "2026-05-19",
+      "release_date": "2026-08-13",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
@@ -9640,11 +9640,11 @@
         "input": 0.3,
         "output": 2.5
       },
-      "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
+      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash-lite",
       "id": "google/gemini-flash-lite-latest",
-      "knowledge": "2025-01",
-      "last_updated": "2026-05-07",
+      "knowledge": "2026-03",
+      "last_updated": "2026-07-21",
       "limit": {
         "context": 1048576,
         "input": 1048576,
@@ -9676,7 +9676,7 @@
           ]
         }
       ],
-      "release_date": "2026-05-07",
+      "release_date": "2026-07-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -9728,9 +9728,9 @@
     "google/gemma-4-26b-a4b-it": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.065,
-        "input": 0.13,
-        "output": 0.4
+        "cache_read": 0.04,
+        "input": 0.08,
+        "output": 0.33
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -9800,9 +9800,9 @@
     "google/gemma-4-31b-it": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.1,
-        "output": 0.35
+        "cache_read": 0.04,
+        "input": 0.08,
+        "output": 0.33
       },
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
@@ -17111,6 +17111,70 @@
       "structured_output": false,
       "temperature": true,
       "tool_call": false
+    },
+    "qwen/qwen3.6-35b-a3b-uncensored": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Qwen 3.6 35B A3B Uncensored is an FP8 open-weight mixture-of-experts model tuned for fewer refusals across chat, coding, tool use, and multimodal tasks.",
+      "family": "qwen3.6",
+      "id": "qwen/qwen3.6-35b-a3b-uncensored",
+      "last_updated": "2026-08-21",
+      "limit": {
+        "context": 65536,
+        "input": 65536,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3.6 35B A3B Uncensored",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-08-21",
+      "structured_output": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.8-27b-uncensored": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.18,
+        "output": 0.5
+      },
+      "description": "Qwen 3.8 27B Uncensored is an FP8 open-weight multimodal model tuned for fewer refusals across chat, coding, tool use, and long-context work.",
+      "family": "qwen",
+      "id": "qwen/qwen3.8-27b-uncensored",
+      "last_updated": "2026-08-21",
+      "limit": {
+        "context": 131072,
+        "input": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3.8 27B Uncensored",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-08-21",
+      "structured_output": true,
+      "tool_call": true
     },
     "qwen25-vl-72b-instruct": {
       "attachment": true,
