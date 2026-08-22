@@ -2366,9 +2366,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.007,
-        "input": 0.22,
-        "output": 0.66
+        "cache_read": 0.014,
+        "input": 0.44,
+        "output": 1.32
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -2376,7 +2376,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1048576,
+        "context": 1000000,
         "output": 384000
       },
       "modalities": {
@@ -2452,9 +2452,9 @@
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.022,
-        "input": 0.66,
-        "output": 1.98
+        "cache_read": 0.044,
+        "input": 1.32,
+        "output": 3.96
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2462,7 +2462,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1048576,
+        "context": 1000000,
         "output": 384000
       },
       "modalities": {
@@ -2494,9 +2494,9 @@
     "fireworks_ai/accounts/fireworks/models/deepseek-v4-flash-0731": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.028,
-        "input": 0.14,
-        "output": 0.28
+        "cache_read": 0.007,
+        "input": 0.22,
+        "output": 0.66
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -4722,6 +4722,49 @@
       "temperature": false,
       "tool_call": true
     },
+    "nebius/deepseek-ai/DeepSeek-V4-Flash-0731": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.14,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "family": "deepseek-flash",
+      "id": "nebius/deepseek-ai/DeepSeek-V4-Flash-0731",
+      "knowledge": "2025-05",
+      "last_updated": "2026-07-31",
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-31",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "nebius/meta-llama/Llama-3.3-70B-Instruct": {
       "attachment": false,
       "cost": {
@@ -5986,22 +6029,22 @@
     "openai/gpt-5.6-sol": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.5,
-        "cache_write": 6.25,
+        "cache_read": 0.4,
+        "cache_write": 5,
         "context_over_200k": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 45
+          "cache_read": 0.8,
+          "cache_write": 10,
+          "input": 8,
+          "output": 30
         },
-        "input": 5,
-        "output": 30,
+        "input": 4,
+        "output": 20,
         "tiers": [
           {
-            "cache_read": 1,
-            "cache_write": 12.5,
-            "input": 10,
-            "output": 45,
+            "cache_read": 0.8,
+            "cache_write": 10,
+            "input": 8,
+            "output": 30,
             "tier": {
               "size": 272000,
               "type": "context"
@@ -6120,22 +6163,22 @@
     "openai/gpt-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.5,
-        "cache_write": 6.25,
+        "cache_read": 0.4,
+        "cache_write": 5,
         "context_over_200k": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 45
+          "cache_read": 0.8,
+          "cache_write": 10,
+          "input": 8,
+          "output": 30
         },
-        "input": 5,
-        "output": 30,
+        "input": 4,
+        "output": 20,
         "tiers": [
           {
-            "cache_read": 1,
-            "cache_write": 12.5,
-            "input": 10,
-            "output": 45,
+            "cache_read": 0.8,
+            "cache_write": 10,
+            "input": 8,
+            "output": 30,
             "tier": {
               "size": 272000,
               "type": "context"
@@ -6786,8 +6829,8 @@
     "qwen/deepseek-v4-flash-0731": {
       "attachment": false,
       "cost": {
-        "input": 0.20086,
-        "output": 0.60258
+        "input": 0.352,
+        "output": 1.056
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -6828,8 +6871,8 @@
     "qwen/deepseek-v4-pro-0813": {
       "attachment": false,
       "cost": {
-        "input": 0.60258,
-        "output": 1.80774
+        "input": 1.1616,
+        "output": 3.4848
       },
       "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
       "family": "deepseek-thinking",
