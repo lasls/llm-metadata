@@ -1853,37 +1853,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepcogito/cogito-v2.1-671b": {
-      "attachment": false,
-      "cost": {
-        "input": 1.25,
-        "output": 1.25
-      },
-      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
-      "family": "cogito",
-      "id": "deepcogito/cogito-v2.1-671b",
-      "last_updated": "2025-11-13",
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Cogito v2.1 671B",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-11-13",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "deepseek/deepseek-chat": {
       "attachment": false,
       "cost": {
@@ -1949,9 +1918,9 @@
     "deepseek/deepseek-chat-v3.1": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.25,
-        "output": 0.95
+        "cache_read": 0.55,
+        "input": 0.55,
+        "output": 1.65
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -1960,7 +1929,7 @@
       "last_updated": "2025-08-21",
       "limit": {
         "context": 163840,
-        "output": 32768
+        "output": 161000
       },
       "modalities": {
         "input": [
@@ -2120,9 +2089,9 @@
     "deepseek/deepseek-v3.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1345,
-        "input": 0.269,
-        "output": 0.4
+        "cache_read": 0.13,
+        "input": 0.26,
+        "output": 0.38
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -2131,7 +2100,7 @@
       "last_updated": "2025-12-01",
       "limit": {
         "context": 163840,
-        "output": 65536
+        "output": 163840
       },
       "modalities": {
         "input": [
@@ -2193,9 +2162,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.015932,
-        "input": 0.07966,
-        "output": 0.15932
+        "cache_read": 0.015652,
+        "input": 0.07826,
+        "output": 0.15652
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -2330,9 +2299,9 @@
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.135,
-        "input": 1.6,
-        "output": 3.2
+        "cache_read": 0.045748,
+        "input": 0.54897,
+        "output": 1.09794
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2344,7 +2313,7 @@
       "last_updated": "2026-04-24",
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 384000
       },
       "modalities": {
         "input": [
@@ -4679,6 +4648,53 @@
       "temperature": true,
       "tool_call": true
     },
+    "meta/muse-spark-1.2-contributor": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.002,
+        "input": 0.1,
+        "output": 0.2
+      },
+      "description": "Open Llama multimodal model for image understanding and text reasoning",
+      "family": "muse",
+      "id": "meta/muse-spark-1.2-contributor",
+      "last_updated": "2026-08-21",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Muse Spark 1.2 Contributor",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "microsoft/phi-4": {
       "attachment": false,
       "cost": {
@@ -4907,9 +4923,9 @@
     "minimax/minimax-m2.5": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.03,
+        "cache_read": 0.027,
         "input": 0.27,
-        "output": 0.95
+        "output": 1.08
       },
       "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
       "family": "minimax",
@@ -4920,7 +4936,7 @@
       "last_updated": "2026-02-12",
       "limit": {
         "context": 204800,
-        "output": 32768
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -5546,8 +5562,8 @@
     "mistralai/mistral-small-3.2-24b-instruct": {
       "attachment": true,
       "cost": {
-        "input": 0.09375,
-        "output": 0.25
+        "input": 0.075,
+        "output": 0.2
       },
       "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral-small",
@@ -5555,7 +5571,7 @@
       "knowledge": "2023-10-31",
       "last_updated": "2025-06-20",
       "limit": {
-        "context": 256000,
+        "context": 131072,
         "output": 16384
       },
       "modalities": {
@@ -5779,9 +5795,9 @@
     "moonshotai/kimi-k2.6": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0976,
-        "input": 0.5795,
-        "output": 2.44
+        "cache_read": 0.0944,
+        "input": 0.5605,
+        "output": 2.36
       },
       "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
       "family": "kimi-k2",
@@ -8294,22 +8310,22 @@
     "openai/gpt-5.6-sol": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 3.125,
+        "cache_read": 0.2,
+        "cache_write": 2.5,
         "context_over_200k": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 22.5
+          "cache_read": 0.4,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
         },
-        "input": 2.5,
-        "output": 15,
+        "input": 2,
+        "output": 10,
         "tiers": [
           {
-            "cache_read": 0.5,
-            "cache_write": 6.25,
-            "input": 5,
-            "output": 22.5,
+            "cache_read": 0.4,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
             "tier": {
               "size": 272000,
               "type": "context"
@@ -8361,22 +8377,22 @@
     "openai/gpt-5.6-sol-pro": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 3.125,
+        "cache_read": 0.2,
+        "cache_write": 2.5,
         "context_over_200k": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 22.5
+          "cache_read": 0.4,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
         },
-        "input": 2.5,
-        "output": 15,
+        "input": 2,
+        "output": 10,
         "tiers": [
           {
-            "cache_read": 0.5,
-            "cache_write": 6.25,
-            "input": 5,
-            "output": 22.5,
+            "cache_read": 0.4,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
             "tier": {
               "size": 272000,
               "type": "context"
@@ -8721,46 +8737,6 @@
         ]
       },
       "name": "GPT OSS 20B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-08-05",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-oss-20b:free": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
-      "family": "gpt-oss",
-      "id": "openai/gpt-oss-20b:free",
-      "last_updated": "2025-08-05",
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "gpt-oss-20b (free)",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -11567,7 +11543,7 @@
       "last_updated": "2026-08-12",
       "limit": {
         "context": 1048576,
-        "output": 262144
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -12504,6 +12480,96 @@
       ],
       "release_date": "2026-07-30",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/inkling-small:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "family": "ling",
+      "id": "thinkingmachines/inkling-small:free",
+      "last_updated": "2026-07-30",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling Small (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-30",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/inkling:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "family": "ling",
+      "id": "thinkingmachines/inkling:free",
+      "last_updated": "2026-07-15",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-15",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -13970,22 +14036,22 @@
     "~openai/gpt-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 3.125,
+        "cache_read": 0.2,
+        "cache_write": 2.5,
         "context_over_200k": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 22.5
+          "cache_read": 0.4,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
         },
-        "input": 2.5,
-        "output": 15,
+        "input": 2,
+        "output": 10,
         "tiers": [
           {
-            "cache_read": 0.5,
-            "cache_write": 6.25,
-            "input": 5,
-            "output": 22.5,
+            "cache_read": 0.4,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
             "tier": {
               "size": 272000,
               "type": "context"
