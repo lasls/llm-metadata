@@ -1,17 +1,16 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.01,
-    "input": 0.05,
-    "output": 0.2
+    "input": 0,
+    "output": 0
   },
   "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
   "family": "nemotron",
   "id": "nvidia/nemotron-3.5-lightning",
   "last_updated": "2026-08-11",
   "limit": {
-    "context": 262144,
-    "output": 131072
+    "context": 1000000,
+    "output": 32768
   },
   "modalities": {
     "input": [
@@ -27,6 +26,11 @@
   "reasoning_options": [
     {
       "type": "toggle"
+    },
+    {
+      "max": 32768,
+      "min": 1,
+      "type": "budget_tokens"
     }
   ],
   "release_date": "2026-08-11",
