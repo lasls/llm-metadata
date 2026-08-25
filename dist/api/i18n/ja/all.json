@@ -96806,7 +96806,7 @@
           "cache_read": 0.2,
           "cache_write": 0,
           "input": 0.57,
-          "output": 3.41
+          "output": 3.39
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -104927,9 +104927,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.44,
-          "output": 1.32
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
         "family": "deepseek-flash",
@@ -111339,9 +111339,8 @@
       "openai/gpt-oss-20b": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.03,
-          "input": 0.03,
-          "output": 0.13
+          "input": 0.02,
+          "output": 0.1
         },
         "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
         "family": "gpt-oss",
@@ -114073,7 +114072,7 @@
         "id": "qwen/qwen3.8-27b",
         "last_updated": "2026-08-14",
         "limit": {
-          "context": 262144,
+          "context": 1000000,
           "output": 131072
         },
         "modalities": {
@@ -114154,6 +114153,7 @@
       "rekaai/reka-edge": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.1,
           "input": 0.1,
           "output": 0.1
         },
@@ -114186,6 +114186,7 @@
       "rekaai/reka-flash-3": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.1,
           "input": 0.1,
           "output": 0.2
         },
@@ -116655,7 +116656,7 @@
         "cost": {
           "cache_read": 0.008,
           "input": 0.035,
-          "output": 0.075
+          "output": 0.1
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
@@ -155286,7 +155287,15 @@
         "name": "GLM 4.6 Derestricted v5",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2025-12-23",
         "structured_output": false,
         "tool_call": true
@@ -155350,7 +155359,15 @@
         "name": "Gemma 4 31B Claude 4.6 Opus Reasoning Distilled",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2026-05-01",
         "structured_output": false,
         "tool_call": true
@@ -155385,7 +155402,11 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-05-01",
@@ -155422,7 +155443,11 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-05-01",
@@ -155459,7 +155484,11 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-05-01",
@@ -155478,8 +155507,8 @@
         "id": "Gemma-4-31B-MeroMero-v2",
         "last_updated": "2026-08-23",
         "limit": {
-          "context": 65536,
-          "input": 65536,
+          "context": 262144,
+          "input": 262144,
           "output": 32768
         },
         "modalities": {
@@ -155511,8 +155540,8 @@
         "id": "Gemma-4-31B-MeroMero-v2:thinking",
         "last_updated": "2026-08-24",
         "limit": {
-          "context": 65536,
-          "input": 65536,
+          "context": 262144,
+          "input": 262144,
           "output": 32768
         },
         "modalities": {
@@ -155562,7 +155591,11 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-05-01",
@@ -156035,12 +156068,11 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
-          },
-          {
-            "max": 81920,
-            "min": 1024,
-            "type": "budget_tokens"
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-04-30",
@@ -156077,12 +156109,11 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
-          },
-          {
-            "max": 81920,
-            "min": 1024,
-            "type": "budget_tokens"
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-04-30",
@@ -161878,9 +161909,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.44,
-          "output": 1.32
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -164867,8 +164898,8 @@
         "id": "google/gemma-4-26b-a4b-uncensored",
         "last_updated": "2026-08-22",
         "limit": {
-          "context": 131072,
-          "input": 131072,
+          "context": 262144,
+          "input": 262144,
           "output": 32768
         },
         "modalities": {
@@ -164900,8 +164931,8 @@
         "id": "google/gemma-4-26b-a4b-uncensored:thinking",
         "last_updated": "2026-08-24",
         "limit": {
-          "context": 131072,
-          "input": 131072,
+          "context": 262144,
+          "input": 262144,
           "output": 32768
         },
         "modalities": {
@@ -170911,8 +170942,8 @@
         "id": "ornith-ai/ornith-1.5-9b",
         "last_updated": "2026-08-23",
         "limit": {
-          "context": 131072,
-          "input": 131072,
+          "context": 262144,
+          "input": 262144,
           "output": 32768
         },
         "modalities": {
@@ -170944,8 +170975,8 @@
         "id": "ornith-ai/ornith-1.5-9b:thinking",
         "last_updated": "2026-08-24",
         "limit": {
-          "context": 131072,
-          "input": 131072,
+          "context": 262144,
+          "input": 262144,
           "output": 32768
         },
         "modalities": {
@@ -172286,8 +172317,8 @@
         "id": "qwen/qwen3.6-35b-a3b-uncensored",
         "last_updated": "2026-08-21",
         "limit": {
-          "context": 65536,
-          "input": 65536,
+          "context": 262144,
+          "input": 262144,
           "output": 32768
         },
         "modalities": {
@@ -172319,8 +172350,8 @@
         "id": "qwen/qwen3.6-35b-a3b-uncensored:thinking",
         "last_updated": "2026-08-24",
         "limit": {
-          "context": 65536,
-          "input": 65536,
+          "context": 262144,
+          "input": 262144,
           "output": 32768
         },
         "modalities": {
@@ -204693,9 +204724,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.017721,
-          "input": 0.088606,
-          "output": 0.177212
+          "cache_read": 0.01708,
+          "input": 0.0854,
+          "output": 0.1708
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -204785,9 +204816,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.44,
-          "output": 1.32
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -204830,9 +204861,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.065859,
-          "input": 0.790308,
-          "output": 1.580616
+          "cache_read": 0.048256,
+          "input": 0.579072,
+          "output": 1.158144
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -214005,9 +214036,10 @@
       "qwen/qwen3.8-27b": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.05,
-          "input": 0.4,
-          "output": 3
+          "cache_read": 0.085,
+          "cache_write": 0.53125,
+          "input": 0.425,
+          "output": 2.55
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -214097,6 +214129,7 @@
       "rekaai/reka-edge": {
         "attachment": true,
         "cost": {
+          "cache_read": 0.1,
           "input": 0.1,
           "output": 0.1
         },
@@ -214129,6 +214162,7 @@
       "rekaai/reka-flash-3": {
         "attachment": false,
         "cost": {
+          "cache_read": 0.1,
           "input": 0.1,
           "output": 0.2
         },
@@ -216297,7 +216331,7 @@
         "cost": {
           "cache_read": 0.008,
           "input": 0.035,
-          "output": 0.075
+          "output": 0.1
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
