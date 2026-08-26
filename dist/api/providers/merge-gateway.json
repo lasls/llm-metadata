@@ -1265,7 +1265,21 @@
       "name": "DeepSeek V4 Pro 0423",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-23",
       "structured_output": false,
       "temperature": true,
@@ -4457,8 +4471,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.5,
-        "input": 4,
-        "output": 24
+        "input": 5,
+        "output": 30
       },
       "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
       "family": "gpt-sol",
@@ -4802,7 +4816,17 @@
       "name": "o4 Mini",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2025-04-16",
       "structured_output": true,
       "temperature": false,
@@ -5347,7 +5371,7 @@
       "tool_call": true
     },
     "qwen/qwen3.5-122b-a10b": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "cache_read": 0.023,
         "input": 0.115,
@@ -5358,13 +5382,12 @@
       "id": "qwen/qwen3.5-122b-a10b",
       "last_updated": "2026-02-23",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
