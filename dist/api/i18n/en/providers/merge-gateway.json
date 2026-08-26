@@ -3293,7 +3293,23 @@
       "name": "Kimi K3",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-07-16",
       "structured_output": true,
       "temperature": false,
@@ -3861,7 +3877,7 @@
       "reasoning": false,
       "release_date": "2025-08-07",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": false
     },
     "openai/gpt-5-mini": {
@@ -3999,7 +4015,7 @@
       ],
       "release_date": "2025-11-13",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.1-chat-latest": {
@@ -4080,7 +4096,7 @@
       ],
       "release_date": "2025-12-11",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.2-chat-latest": {
@@ -4227,7 +4243,7 @@
       ],
       "release_date": "2026-03-05",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.4-mini": {
@@ -4290,7 +4306,7 @@
       ],
       "release_date": "2026-03-17",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.4-nano": {
@@ -4337,7 +4353,7 @@
       ],
       "release_date": "2026-03-17",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.5": {
@@ -5371,7 +5387,7 @@
       "tool_call": true
     },
     "qwen/qwen3.5-122b-a10b": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.023,
         "input": 0.115,
@@ -5382,12 +5398,13 @@
       "id": "qwen/qwen3.5-122b-a10b",
       "last_updated": "2026-02-23",
       "limit": {
-        "context": 131072,
-        "output": 32768
+        "context": 256000,
+        "output": 64000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -5407,7 +5424,7 @@
       "tool_call": true
     },
     "qwen/qwen3.5-27b": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "cache_read": 0.0172,
         "input": 0.086,
@@ -5418,13 +5435,12 @@
       "id": "qwen/qwen3.5-27b",
       "last_updated": "2026-02-23",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -5444,7 +5460,7 @@
       "tool_call": true
     },
     "qwen/qwen3.5-35b-a3b": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "cache_read": 0.020357,
         "input": 0.057,
@@ -5455,13 +5471,12 @@
       "id": "qwen/qwen3.5-35b-a3b",
       "last_updated": "2026-02-23",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -5481,7 +5496,7 @@
       "tool_call": true
     },
     "qwen/qwen3.5-397b-a17b": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "cache_read": 0.0344,
         "input": 0.172,
@@ -5492,13 +5507,12 @@
       "id": "qwen/qwen3.5-397b-a17b",
       "last_updated": "2026-02-15",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -6808,6 +6822,50 @@
         }
       ],
       "release_date": "2026-08-14",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai/glm-5.3-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.25
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm",
+      "id": "zai/glm-5.3-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
       "structured_output": false,
       "temperature": true,
       "tool_call": true

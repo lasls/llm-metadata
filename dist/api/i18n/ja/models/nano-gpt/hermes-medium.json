@@ -1,17 +1,17 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.1575,
-    "input": 0.315,
-    "output": 1.26
+    "cache_read": 0.26,
+    "input": 1.4,
+    "output": 4.4
   },
   "description": "Compact GPT model for low-latency assistance and high-volume workloads",
   "family": "hermes",
   "id": "hermes-medium",
   "last_updated": "2026-05-11",
   "limit": {
-    "context": 204800,
-    "input": 204800,
+    "context": 1048576,
+    "input": 1048576,
     "output": 131072
   },
   "modalities": {
@@ -25,7 +25,16 @@
   "name": "Hermes Medium",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "high",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-05-11",
   "structured_output": true,
   "tool_call": true

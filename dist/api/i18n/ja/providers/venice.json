@@ -449,10 +449,10 @@
     "claude-sonnet-5": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
+        "cache_read": 0.2,
+        "cache_write": 2.5000000000000004,
+        "input": 2,
+        "output": 10.000000000000002
       },
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
@@ -863,9 +863,9 @@
     "gemini-3-6-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.1875,
-        "input": 1.875,
-        "output": 9.375
+        "cache_read": 0.09375,
+        "input": 0.9375,
+        "output": 4.6875
       },
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
@@ -899,9 +899,9 @@
     "gemini-3-7-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.1875,
-        "input": 1.875,
-        "output": 9.375
+        "cache_read": 0.09375,
+        "input": 0.9375,
+        "output": 4.6875
       },
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
@@ -2242,7 +2242,7 @@
       ],
       "release_date": "2025-12-13",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai-gpt-52-codex": {
@@ -2334,7 +2334,7 @@
       ],
       "release_date": "2026-02-24",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai-gpt-54": {
@@ -2380,7 +2380,7 @@
       ],
       "release_date": "2026-03-05",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai-gpt-54-mini": {
@@ -2426,7 +2426,7 @@
       ],
       "release_date": "2026-03-27",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai-gpt-54-pro": {
@@ -3620,49 +3620,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "stealth-ox-alpha": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
-      },
-      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
-      "family": "alpha",
-      "id": "stealth-ox-alpha",
-      "last_updated": "2026-08-21",
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Ox Alpha",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-08-21",
-      "structured_output": true,
-      "tool_call": true
-    },
     "venice-uncensored-1-2": {
       "attachment": true,
       "cost": {
@@ -3806,6 +3763,50 @@
         }
       ],
       "release_date": "2026-08-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai-glm-5-3-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.01875,
+        "input": 0.09375,
+        "output": 0.3125
+      },
+      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+      "family": "glm",
+      "id": "z-ai-glm-5-3-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.3 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-08-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

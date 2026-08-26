@@ -797,9 +797,9 @@
     "deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.014,
-        "input": 0.076,
-        "output": 0.153
+        "cache_read": 0.0097,
+        "input": 0.051,
+        "output": 0.104
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -2299,6 +2299,50 @@
       "temperature": true,
       "tool_call": true
     },
+    "glm-5.3-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm",
+      "id": "glm-5.3-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gpt-3.5-turbo": {
       "attachment": false,
       "cost": {
@@ -2845,7 +2889,7 @@
       ],
       "release_date": "2025-11-13",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "gpt-5.1-codex": {
@@ -2979,7 +3023,7 @@
       ],
       "release_date": "2025-12-11",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "gpt-5.2-codex": {
@@ -3114,7 +3158,7 @@
       ],
       "release_date": "2026-02-05",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "gpt-5.4": {
@@ -3161,7 +3205,7 @@
       ],
       "release_date": "2026-03-05",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "gpt-5.4-mini": {
@@ -3207,7 +3251,7 @@
       ],
       "release_date": "2026-03-17",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "gpt-5.4-nano": {
@@ -3253,7 +3297,7 @@
       ],
       "release_date": "2026-03-17",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "gpt-5.4-pro": {
@@ -5101,7 +5145,7 @@
       "last_updated": "2025-10-27",
       "limit": {
         "context": 196608,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -5398,7 +5442,7 @@
       "last_updated": "2026-06-01",
       "limit": {
         "context": 1048576,
-        "output": 128000
+        "output": 512000
       },
       "modalities": {
         "input": [

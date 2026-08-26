@@ -3260,6 +3260,49 @@
       "temperature": true,
       "tool_call": false
     },
+    "alibaba/qwen3.8-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.016,
+        "cache_write": 0.2,
+        "input": 0.16,
+        "output": 0.47
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "alibaba/qwen3.8-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 991808,
+        "input": 991808,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "tool_call": true
+    },
     "amazon/nova-2-lite-v1": {
       "attachment": false,
       "cost": {
@@ -5903,25 +5946,23 @@
       "tool_call": true
     },
     "claw-high": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
-        "cache_read": 2.5,
-        "input": 5,
-        "output": 25
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "id": "claw-high",
       "last_updated": "2026-05-11",
       "limit": {
-        "context": 1000000,
-        "input": 1000000,
-        "output": 128000
+        "context": 1048576,
+        "input": 1048576,
+        "output": 131072
       },
       "modalities": {
         "input": [
-          "text",
-          "image",
-          "pdf"
+          "text"
         ],
         "output": [
           "text"
@@ -5930,18 +5971,27 @@
       "name": "Claw High",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-11",
       "structured_output": true,
       "tool_call": true
     },
     "claw-low": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
-        "cache_read": 0.025,
+        "cache_read": 0.26,
         "cache_write": 0.08333,
-        "input": 0.25,
-        "output": 1.5
+        "input": 1.4,
+        "output": 4.4
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "id": "claw-low",
@@ -5949,14 +5999,11 @@
       "limit": {
         "context": 1048576,
         "input": 1048576,
-        "output": 65536
+        "output": 131072
       },
       "modalities": {
         "input": [
-          "text",
-          "image",
-          "video",
-          "pdf"
+          "text"
         ],
         "output": [
           "text"
@@ -5965,7 +6012,16 @@
       "name": "Claw Low",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-11",
       "structured_output": true,
       "tool_call": true
@@ -5973,16 +6029,16 @@
     "claw-medium": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1575,
-        "input": 0.315,
-        "output": 1.26
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "id": "claw-medium",
       "last_updated": "2026-05-11",
       "limit": {
-        "context": 204800,
-        "input": 204800,
+        "context": 1048576,
+        "input": 1048576,
         "output": 131072
       },
       "modalities": {
@@ -5996,7 +6052,16 @@
       "name": "Claw Medium",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-11",
       "structured_output": true,
       "tool_call": true
@@ -10148,26 +10213,24 @@
       "tool_call": true
     },
     "hermes-high": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
-        "cache_read": 2.5,
-        "input": 5,
-        "output": 25
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "hermes",
       "id": "hermes-high",
       "last_updated": "2026-05-11",
       "limit": {
-        "context": 1000000,
-        "input": 1000000,
-        "output": 128000
+        "context": 1048576,
+        "input": 1048576,
+        "output": 131072
       },
       "modalities": {
         "input": [
-          "text",
-          "image",
-          "pdf"
+          "text"
         ],
         "output": [
           "text"
@@ -10176,18 +10239,27 @@
       "name": "Hermes High",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-11",
       "structured_output": true,
       "tool_call": true
     },
     "hermes-low": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
-        "cache_read": 0.025,
+        "cache_read": 0.26,
         "cache_write": 0.08333,
-        "input": 0.25,
-        "output": 1.5
+        "input": 1.4,
+        "output": 4.4
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "hermes",
@@ -10196,14 +10268,11 @@
       "limit": {
         "context": 1048576,
         "input": 1048576,
-        "output": 65536
+        "output": 131072
       },
       "modalities": {
         "input": [
-          "text",
-          "image",
-          "video",
-          "pdf"
+          "text"
         ],
         "output": [
           "text"
@@ -10212,7 +10281,16 @@
       "name": "Hermes Low",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-11",
       "structured_output": true,
       "tool_call": true
@@ -10220,17 +10298,17 @@
     "hermes-medium": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1575,
-        "input": 0.315,
-        "output": 1.26
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "family": "hermes",
       "id": "hermes-medium",
       "last_updated": "2026-05-11",
       "limit": {
-        "context": 204800,
-        "input": 204800,
+        "context": 1048576,
+        "input": 1048576,
         "output": 131072
       },
       "modalities": {
@@ -10244,7 +10322,16 @@
       "name": "Hermes Medium",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-05-11",
       "structured_output": true,
       "tool_call": true
@@ -14409,7 +14496,7 @@
       ],
       "release_date": "2025-11-13",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.1-2025-11-13": {
@@ -14634,7 +14721,7 @@
       ],
       "release_date": "2025-12-11",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.2-codex": {
@@ -14726,7 +14813,7 @@
       ],
       "release_date": "2026-02-05",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.4": {
@@ -14773,7 +14860,7 @@
       ],
       "release_date": "2026-03-05",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.4-mini": {
@@ -14820,7 +14907,7 @@
       ],
       "release_date": "2026-03-17",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.4-nano": {
@@ -14867,7 +14954,7 @@
       ],
       "release_date": "2026-03-17",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.5": {
@@ -19222,48 +19309,6 @@
       "structured_output": false,
       "tool_call": false
     },
-    "stealth/ox-alpha": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.05,
-        "output": 0.05
-      },
-      "description": "Ox Alpha is an experimental stealth model with long-context reasoning, vision, tool calling, and structured output support. Prompts and responses are logged and retained by the provider.",
-      "family": "alpha",
-      "id": "stealth/ox-alpha",
-      "last_updated": "2026-08-21",
-      "limit": {
-        "context": 1000000,
-        "input": 1000000,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Ox Alpha",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-08-21",
-      "structured_output": true,
-      "tool_call": true
-    },
     "step-r1-v-mini": {
       "attachment": false,
       "cost": {
@@ -20794,6 +20839,50 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-03-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.3-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.25
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm",
+      "id": "z-ai/glm-5.3-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.3 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

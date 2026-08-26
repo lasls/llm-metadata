@@ -1,24 +1,22 @@
 {
-  "attachment": true,
+  "attachment": false,
   "cost": {
-    "cache_read": 2.5,
-    "input": 5,
-    "output": 25
+    "cache_read": 0.26,
+    "input": 1.4,
+    "output": 4.4
   },
   "description": "Compact GPT model for low-latency assistance and high-volume workloads",
   "family": "hermes",
   "id": "hermes-high",
   "last_updated": "2026-05-11",
   "limit": {
-    "context": 1000000,
-    "input": 1000000,
-    "output": 128000
+    "context": 1048576,
+    "input": 1048576,
+    "output": 131072
   },
   "modalities": {
     "input": [
-      "text",
-      "image",
-      "pdf"
+      "text"
     ],
     "output": [
       "text"
@@ -27,7 +25,16 @@
   "name": "Hermes High",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "high",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-05-11",
   "structured_output": true,
   "tool_call": true
