@@ -87,9 +87,9 @@
     "deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.026,
-        "input": 0.104,
-        "output": 0.207
+        "cache_read": 0.028,
+        "input": 0.14,
+        "output": 0.28
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -115,12 +115,105 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "high",
             "max"
           ]
         }
       ],
       "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4-flash-flex": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0182,
+        "input": 0.091,
+        "output": 0.182
+      },
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-flash-flex",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1048560,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash Flex",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4-pro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.1,
+        "input": 1,
+        "output": 3
+      },
+      "description": "Open MoE flagship with million-token context for coding and long agent runs",
+      "family": "deepseek-thinking",
+      "id": "deepseek-v4-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1048560,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-24",
+      "status": "beta",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -777,6 +870,56 @@
       "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "qwen-3.8-27b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 0.45,
+        "output": 3.2
+      },
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+      "family": "qwen",
+      "id": "qwen-3.8-27b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 262128,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-08-14",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "qwen3.5-397b-fast": {

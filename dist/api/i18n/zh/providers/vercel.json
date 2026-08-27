@@ -5318,6 +5318,31 @@
       "temperature": true,
       "tool_call": true
     },
+    "meta/muse-image-1.0": {
+      "attachment": true,
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "family": "muse",
+      "id": "meta/muse-image-1.0",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Muse Image 1.0",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-08-26",
+      "tool_call": false
+    },
     "meta/muse-spark-1.1": {
       "attachment": false,
       "cost": {
@@ -7312,7 +7337,16 @@
       "name": "GPT-5-Codex",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-09-15",
       "structured_output": true,
       "temperature": false,
@@ -10447,7 +10481,7 @@
       "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
       "family": "grok",
       "id": "spacexai/grok-4.3",
-      "last_updated": "2026-04-30",
+      "last_updated": "2026-04-17",
       "limit": {
         "context": 1000000,
         "output": 1000000
@@ -10465,8 +10499,19 @@
       "name": "Grok 4.3",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-04-30",
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-17",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "spacexai/grok-4.5": {
@@ -10497,8 +10542,19 @@
       "name": "Grok 4.5",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-07-08",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "spacexai/grok-4.6": {
@@ -10511,6 +10567,7 @@
       "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
       "family": "grok",
       "id": "spacexai/grok-4.6",
+      "knowledge": "2026-02-01",
       "last_updated": "2026-08-12",
       "limit": {
         "context": 500000,
@@ -10528,8 +10585,19 @@
       "name": "Grok 4.6",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-08-12",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "spacexai/grok-build-0.1": {
@@ -10542,7 +10610,7 @@
       "description": "Grok coding model for agentic engineering, edits, and codebase workflows",
       "family": "grok-build",
       "id": "spacexai/grok-build-0.1",
-      "last_updated": "2026-05-20",
+      "last_updated": "2026-04-16",
       "limit": {
         "context": 256000,
         "output": 256000
@@ -10560,7 +10628,9 @@
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-05-20",
+      "release_date": "2026-04-16",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "spacexai/grok-imagine-image": {
@@ -10609,6 +10679,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-08-07",
+      "temperature": false,
       "tool_call": false
     },
     "spacexai/grok-imagine-video": {
@@ -10640,7 +10711,7 @@
       "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "grok",
       "id": "spacexai/grok-imagine-video-1.5",
-      "last_updated": "2026-06-22",
+      "last_updated": "2026-05-30",
       "limit": {
         "context": 0,
         "output": 0
@@ -10656,7 +10727,8 @@
       "name": "Grok Imagine Video 1.5",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-06-22",
+      "release_date": "2026-05-30",
+      "temperature": false,
       "tool_call": false
     },
     "spacexai/grok-imagine-video-1.5-preview": {
@@ -11947,9 +12019,9 @@
     "zai/glm-5.3-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.075,
-        "output": 0.25
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
       },
       "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
       "family": "glm",
