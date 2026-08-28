@@ -2015,7 +2015,7 @@
       "last_updated": "2025-12-01",
       "limit": {
         "context": 163840,
-        "output": 147456
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -2169,9 +2169,9 @@
     "deepseek/deepseek-v4-flash-vision-exp": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.014,
-        "input": 0.44,
-        "output": 1.32
+        "cache_read": 0.007,
+        "input": 0.22,
+        "output": 0.66
       },
       "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
       "family": "deepseek-flash",
@@ -3427,9 +3427,9 @@
     "google/gemma-4-31b-it": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.09,
-        "output": 0.34
+        "cache_read": 0.01,
+        "input": 0.08,
+        "output": 0.35
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -6870,7 +6870,7 @@
       "last_updated": "2025-04-14",
       "limit": {
         "context": 1047576,
-        "output": 32768
+        "output": 942818
       },
       "modalities": {
         "input": [
@@ -10547,7 +10547,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 81920
       },
       "modalities": {
         "input": [
@@ -10876,7 +10876,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
-        "output": 81920
+        "output": 235929
       },
       "modalities": {
         "input": [
@@ -11256,7 +11256,7 @@
       "id": "qwen/qwen3.8-27b",
       "last_updated": "2026-08-14",
       "limit": {
-        "context": 262144,
+        "context": 1000000,
         "output": 131072
       },
       "modalities": {
@@ -12174,9 +12174,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.035,
-        "input": 0.14,
-        "output": 0.58
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
@@ -12292,6 +12292,47 @@
       ],
       "release_date": "2026-07-06",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "tencent/hy4-preview": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.042,
+        "input": 0.834,
+        "output": 2.501
+      },
+      "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
+      "family": "Hy",
+      "id": "tencent/hy4-preview",
+      "last_updated": "2026-08-28",
+      "limit": {
+        "context": 1048576,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy4 preview",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-08-28",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -13575,7 +13616,7 @@
         }
       ],
       "release_date": "2026-08-14",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -14167,9 +14208,9 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.26,
-        "input": 1.4,
-        "output": 4.4
+        "cache_read": 0.6,
+        "input": 1.2,
+        "output": 1.2
       },
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "family": "glm",
@@ -14177,7 +14218,7 @@
       "last_updated": "2026-08-19",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -14201,7 +14242,7 @@
         }
       ],
       "release_date": "2026-08-19",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }

@@ -1964,6 +1964,59 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen3.8-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.016,
+        "cache_write": 0.2,
+        "input": 0.15,
+        "output": 0.47
+      },
+      "description": "Qwen3.8-Flash 是通义千问的多模态 MoE 模型,也是 Qwen4 架构的先行版本:总参数 125B、每 token 仅激活 6B,配 51B N-gram Embedding 与 GDN + QSA 混合注意力,在保持效果的同时把推理成本压到同级模型的一个零头。支持文本 / 图片 / 视频输入,百万级上下文、单次最长输出 131K token,默认开启深度思考且可一键关闭。适合编程助手、Agent 编排、图文与超长文档理解、长视频分析等对上下文与单价同时敏感的场景。",
+      "family": "qwen",
+      "id": "qwen3.8-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        },
+        {
+          "max": 262144,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "tool_call": true
+    },
     "qwen3.8-max": {
       "attachment": true,
       "cost": {

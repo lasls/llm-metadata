@@ -1535,9 +1535,9 @@
         }
       ],
       "release_date": "2026-02-14",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "deepinfra/ByteDance/Seed-2.0-mini": {
       "attachment": true,
@@ -1579,9 +1579,9 @@
         }
       ],
       "release_date": "2026-02-14",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "deepinfra/deepseek-ai/DeepSeek-R1": {
       "attachment": false,
@@ -2199,6 +2199,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepinfra/tencent/Hy3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.035,
+        "input": 0.14,
+        "output": 0.58
+      },
+      "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+      "family": "Hy",
+      "id": "deepinfra/tencent/Hy3",
+      "last_updated": "2026-07-06",
+      "limit": {
+        "context": 262144,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepinfra/thinkingmachines/Inkling": {
       "attachment": true,
       "cost": {
@@ -2733,47 +2774,6 @@
       ],
       "release_date": "2025-08-05",
       "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "fireworks_ai/gpt-oss-20b": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.035,
-        "input": 0.07,
-        "output": 0.3
-      },
-      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
-      "family": "gpt-oss",
-      "id": "fireworks_ai/gpt-oss-20b",
-      "last_updated": "2025-08-05",
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT OSS 20B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-08-05",
-      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3825,38 +3825,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "google/lyria-3-clip-preview": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Music generation model for short 30-second clips, loops, and previews from text or image prompts",
-      "family": "lyria",
-      "id": "google/lyria-3-clip-preview",
-      "last_updated": "2026-03-25",
-      "limit": {
-        "context": 1048576,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text",
-          "audio"
-        ]
-      },
-      "name": "Lyria 3 Clip Preview",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-03-25",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "groq/openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
@@ -3942,8 +3910,8 @@
     "ionos/meta-llama/Llama-3.3-70B-Instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.756925,
-        "output": 0.756925
+        "input": 0.756795,
+        "output": 0.756795
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -3973,8 +3941,8 @@
     "ionos/openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.174675,
-        "output": 0.756925
+        "input": 0.174645,
+        "output": 0.756795
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -4558,6 +4526,37 @@
         }
       ],
       "release_date": "2026-03-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral/voxtral-small-latest": {
+      "attachment": true,
+      "cost": {
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "Instruct model with native audio input for speech understanding and tool use",
+      "family": "voxtral",
+      "id": "mistral/voxtral-small-latest",
+      "last_updated": "2025-07-15",
+      "limit": {
+        "context": 32768,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Voxtral Small (latest)",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-15",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -7464,6 +7463,50 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3.8-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.016,
+        "cache_write": 0.2,
+        "input": 0.16,
+        "output": 0.47
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen/qwen3.8-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "tool_call": true
+    },
     "qwen/qwen3.8-max": {
       "attachment": true,
       "cost": {
@@ -7544,8 +7587,8 @@
     "scaleway/deepseek-v4-flash-0731": {
       "attachment": false,
       "cost": {
-        "input": 0.4658,
-        "output": 0.9316
+        "input": 0.46572,
+        "output": 0.93144
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -7586,8 +7629,8 @@
     "scaleway/gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "input": 0.174675,
-        "output": 0.6987
+        "input": 0.174645,
+        "output": 0.69858
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -7626,8 +7669,8 @@
     "scaleway/llama-3.3-70b-instruct": {
       "attachment": false,
       "cost": {
-        "input": 1.04805,
-        "output": 1.04805
+        "input": 1.04787,
+        "output": 1.04787
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",

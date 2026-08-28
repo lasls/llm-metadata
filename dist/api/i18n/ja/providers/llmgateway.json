@@ -4544,9 +4544,9 @@
     "kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.19,
-        "input": 0.95,
-        "output": 4
+        "cache_read": 0.18,
+        "input": 0.89,
+        "output": 3.71
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
@@ -4577,6 +4577,8 @@
         {
           "type": "effort",
           "values": [
+            "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -4642,9 +4644,9 @@
     "kimi-k3": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.3,
-        "input": 3,
-        "output": 15
+        "cache_read": 0.28,
+        "input": 2.83,
+        "output": 14.13
       },
       "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
       "family": "kimi-k3",
@@ -7298,6 +7300,53 @@
       ],
       "release_date": "2026-06-02",
       "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.8-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.016,
+        "cache_write": 0.2,
+        "input": 0.15,
+        "output": 0.47
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen3.8-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
       "tool_call": true
     },
     "qwen3.8-max": {
