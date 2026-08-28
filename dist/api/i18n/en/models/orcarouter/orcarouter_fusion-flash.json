@@ -1,0 +1,36 @@
+{
+  "attachment": false,
+  "description": "Budget Fusion panel that runs Gemini 3.5 Flash, MiniMax M2.7 and GLM 5.1 in parallel on hard requests, then has a Claude Opus 4.8 judge return the strongest single answer verbatim. Cost-sensitive fan-out over a 200K window.",
+  "family": "model-router",
+  "id": "orcarouter/fusion-flash",
+  "last_updated": "2026-06-15",
+  "limit": {
+    "context": 200000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "OrcaRouter Fusion Flash",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "release_date": "2026-06-15",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}

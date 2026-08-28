@@ -8,9 +8,7 @@
   "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
   "family": "kimi-k3",
   "id": "kimi-k3",
-  "interleaved": {
-    "field": "reasoning_content"
-  },
+  "interleaved": true,
   "last_updated": "2026-07-16",
   "limit": {
     "context": 1048560,
@@ -30,15 +28,16 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
-    },
-    {
       "type": "effort",
       "values": [
+        "none",
         "low",
         "high",
         "max"
       ]
+    },
+    {
+      "type": "budget_tokens"
     }
   ],
   "release_date": "2026-07-16",

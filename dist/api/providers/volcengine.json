@@ -201,6 +201,9 @@
       "description": "Low-latency ByteDance Seed model for high-throughput chat, extraction, and lightweight tool use",
       "family": "seed",
       "id": "doubao-seed-1-6-flash-250828",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2025-08-28",
       "limit": {
         "context": 256000,
@@ -217,7 +220,12 @@
       },
       "name": "Seed 1.6 Flash",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-08-28",
       "temperature": true,
       "tool_call": true
@@ -252,6 +260,9 @@
       "description": "ByteDance Seed multimodal model for image understanding, visual reasoning, and tool-assisted tasks",
       "family": "seed",
       "id": "doubao-seed-1-6-vision-250815",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2025-08-15",
       "limit": {
         "context": 256000,
@@ -268,7 +279,12 @@
       },
       "name": "Seed 1.6 Vision",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-08-15",
       "temperature": true,
       "tool_call": true
@@ -447,7 +463,7 @@
       "last_updated": "2026-02-14",
       "limit": {
         "context": 256000,
-        "output": 32000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -516,7 +532,7 @@
       "last_updated": "2026-02-14",
       "limit": {
         "context": 256000,
-        "output": 32000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -767,10 +783,7 @@
           "values": [
             "minimal",
             "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],

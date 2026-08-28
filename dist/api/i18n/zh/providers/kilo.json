@@ -2169,9 +2169,9 @@
     "deepseek/deepseek-v4-flash-vision-exp": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.007,
-        "input": 0.22,
-        "output": 0.66
+        "cache_read": 0.014,
+        "input": 0.44,
+        "output": 1.32
       },
       "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
       "family": "deepseek-flash",
@@ -2263,8 +2263,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "last_updated": "2026-08-22",
       "limit": {
-        "context": 1048575,
-        "output": 943717
+        "context": 1048576,
+        "output": 384000
       },
       "modalities": {
         "input": [
@@ -3702,6 +3702,45 @@
       "temperature": true,
       "tool_call": true
     },
+    "inclusionai/ling-3.0-flash-fin:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
+      "family": "ling",
+      "id": "inclusionai/ling-3.0-flash-fin:free",
+      "last_updated": "2026-08-27",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.0 Flash Fin (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-08-27",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "kilo-auto/balanced": {
       "attachment": true,
       "cost": {
@@ -4274,7 +4313,7 @@
       "attachment": true,
       "cost": {
         "input": 0.2,
-        "output": 0.696
+        "output": 0.8
       },
       "description": "Open multimodal Llama model for strong reasoning and fast responses",
       "family": "llama",
@@ -5116,36 +5155,6 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
-    },
-    "mistralai/ministral-8b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.11,
-        "output": 0.11
-      },
-      "description": "Ministral 8B is an 8B parameter model featuring a unique interleaved sliding-window attention pattern for faster, memory-efficient inference. Designed for edge use cases, it supports up to 128k context length...",
-      "family": "ministral",
-      "id": "mistralai/ministral-8b",
-      "last_updated": "2024-10-17",
-      "limit": {
-        "context": 128000,
-        "output": 102400
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral: Ministral 8B",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-10-17",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
     },
     "mistralai/ministral-8b-2512": {
       "attachment": true,
@@ -6370,8 +6379,8 @@
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
       "last_updated": "2026-06-04",
       "limit": {
-        "context": 512288,
-        "output": 461059
+        "context": 262144,
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -6492,7 +6501,7 @@
       "last_updated": "2026-08-11",
       "limit": {
         "context": 262144,
-        "output": 131072
+        "output": 235929
       },
       "modalities": {
         "input": [
@@ -10867,7 +10876,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 81920
       },
       "modalities": {
         "input": [
@@ -11205,8 +11214,8 @@
       "id": "qwen/qwen3.8-2.4t-a95b",
       "last_updated": "2026-08-12",
       "limit": {
-        "context": 1048576,
-        "output": 131072
+        "context": 1000000,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -11247,7 +11256,7 @@
       "id": "qwen/qwen3.8-27b",
       "last_updated": "2026-08-14",
       "limit": {
-        "context": 1000000,
+        "context": 262144,
         "output": 131072
       },
       "modalities": {
@@ -12312,35 +12321,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-09-27",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
-    "thedrummer/rocinante-12b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.25,
-        "output": 0.5
-      },
-      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-      "id": "thedrummer/rocinante-12b",
-      "last_updated": "2024-09-30",
-      "limit": {
-        "context": 65536,
-        "output": 58982
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "TheDrummer: Rocinante 12B",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-09-30",
       "structured_output": true,
       "temperature": true,
       "tool_call": false
@@ -13602,9 +13582,9 @@
     "z-ai/glm-5.3-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.075,
-        "output": 0.25
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
       },
       "description": "GLM-5.3-Flash is a native multimodal model from Z.ai. It is suited for efficient coding and long-horizon agent tasks. Its hybrid sparse and linear attention architecture maintains accurate long-context behavior while...",
       "family": "glm",

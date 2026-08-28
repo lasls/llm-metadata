@@ -7,83 +7,6 @@
   "iconURL": "https://models.dev/logos/neuralwatt.svg",
   "id": "neuralwatt",
   "models": {
-    "Qwen/Qwen3.5-397B-A17B-FP8": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.1725,
-        "input": 0.69,
-        "output": 4.14
-      },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
-      "family": "qwen",
-      "id": "Qwen/Qwen3.5-397B-A17B-FP8",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-02-01",
-      "limit": {
-        "context": 262128,
-        "output": 262128
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.5 397B A17B FP8",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-02-01",
-      "temperature": true,
-      "tool_call": true
-    },
-    "Qwen/Qwen3.6-35B-A3B": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.0725,
-        "input": 0.29,
-        "output": 1.15
-      },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
-      "family": "qwen3.6",
-      "id": "Qwen/Qwen3.6-35B-A3B",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-04-01",
-      "limit": {
-        "context": 131056,
-        "output": 131056
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.6 35B A3B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-04-01",
-      "temperature": true,
-      "tool_call": true
-    },
     "deepseek-v4-flash": {
       "attachment": false,
       "cost": {
@@ -94,6 +17,7 @@
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
       "id": "deepseek-v4-flash",
+      "interleaved": true,
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
@@ -136,6 +60,7 @@
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
       "id": "deepseek-v4-flash-flex",
+      "interleaved": true,
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
@@ -178,9 +103,7 @@
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
       "id": "deepseek-v4-pro",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
+      "interleaved": true,
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
@@ -221,13 +144,14 @@
     "gemma-4-31b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.036,
+        "cache_read": 0.0144,
         "input": 0.144,
         "output": 0.42
       },
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
       "id": "gemma-4-31b",
+      "interleaved": true,
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262128,
@@ -247,7 +171,11 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "max"
+          ]
         }
       ],
       "release_date": "2026-04-02",
@@ -258,13 +186,14 @@
     "glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.3625,
+        "cache_read": 0.145,
         "input": 1.45,
         "output": 4.5
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
       "id": "glm-5.2",
+      "interleaved": true,
       "last_updated": "2026-06-17",
       "limit": {
         "context": 1048560,
@@ -283,17 +212,10 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "none",
-            "minimal",
-            "low",
-            "medium",
             "high",
-            "xhigh",
             "max"
           ]
         },
@@ -302,19 +224,21 @@
         }
       ],
       "release_date": "2026-06-17",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
     "glm-5.2-fast": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.3625,
+        "cache_read": 0.145,
         "input": 1.45,
         "output": 4.5
       },
       "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
       "family": "glm",
       "id": "glm-5.2-fast",
+      "interleaved": true,
       "last_updated": "2026-06-17",
       "limit": {
         "context": 1048560,
@@ -330,21 +254,36 @@
       },
       "name": "GLM 5.2 Fast",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-06-17",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
     "glm-5.2-flex": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.18125,
-        "input": 0.725,
-        "output": 2.25
+        "cache_read": 0.09425,
+        "input": 0.9425,
+        "output": 2.925
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
       "id": "glm-5.2-flex",
+      "interleaved": true,
       "last_updated": "2026-06-17",
       "limit": {
         "context": 1048560,
@@ -363,17 +302,10 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "none",
-            "minimal",
-            "low",
-            "medium",
             "high",
-            "xhigh",
             "max"
           ]
         },
@@ -382,23 +314,25 @@
         }
       ],
       "release_date": "2026-06-17",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
     "glm-5.2-short": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.3625,
+        "cache_read": 0.145,
         "input": 1.45,
         "output": 4.5
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
       "id": "glm-5.2-short",
+      "interleaved": true,
       "last_updated": "2026-06-17",
       "limit": {
         "context": 199984,
-        "output": 199984
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -413,17 +347,10 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "none",
-            "minimal",
-            "low",
-            "medium",
             "high",
-            "xhigh",
             "max"
           ]
         },
@@ -432,23 +359,25 @@
         }
       ],
       "release_date": "2026-06-17",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
     "glm-5.2-short-fast": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.3625,
+        "cache_read": 0.145,
         "input": 1.45,
         "output": 4.5
       },
       "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
       "family": "glm",
       "id": "glm-5.2-short-fast",
+      "interleaved": true,
       "last_updated": "2026-06-17",
       "limit": {
         "context": 199984,
-        "output": 199984
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -460,25 +389,40 @@
       },
       "name": "GLM 5.2 Short Fast",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-06-17",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
     "glm-5.2-short-fast-flex": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.18125,
-        "input": 0.725,
-        "output": 2.25
+        "cache_read": 0.09425,
+        "input": 0.9425,
+        "output": 2.925
       },
       "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
       "family": "glm",
       "id": "glm-5.2-short-fast-flex",
+      "interleaved": true,
       "last_updated": "2026-06-17",
       "limit": {
         "context": 199984,
-        "output": 199984
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -490,25 +434,40 @@
       },
       "name": "GLM 5.2 Short Fast Flex",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-06-17",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
     "glm-5.2-short-flex": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.18125,
-        "input": 0.725,
-        "output": 2.25
+        "cache_read": 0.09425,
+        "input": 0.9425,
+        "output": 2.925
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
       "id": "glm-5.2-short-flex",
+      "interleaved": true,
       "last_updated": "2026-06-17",
       "limit": {
         "context": 199984,
-        "output": 199984
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -523,17 +482,10 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
             "none",
-            "minimal",
-            "low",
-            "medium",
             "high",
-            "xhigh",
             "max"
           ]
         },
@@ -542,20 +494,23 @@
         }
       ],
       "release_date": "2026-06-17",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
-    "kimi-k2.5-fast": {
+    "kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.52,
-        "output": 2.59
+        "cache_read": 0.095,
+        "input": 0.95,
+        "output": 4
       },
-      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
-      "id": "kimi-k2.5-fast",
-      "last_updated": "2026-01-27",
+      "id": "kimi-k2.7-code",
+      "interleaved": true,
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
       "limit": {
         "context": 262128,
         "output": 262128
@@ -569,98 +524,74 @@
           "text"
         ]
       },
-      "name": "Kimi K2.5 Fast",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-01-27",
-      "temperature": true,
-      "tool_call": true
-    },
-    "kimi-k2.6-fast": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.1725,
-        "input": 0.69,
-        "output": 3.22
-      },
-      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
-      "family": "kimi-k2",
-      "id": "kimi-k2.6-fast",
-      "last_updated": "2026-04-21",
-      "limit": {
-        "context": 262128,
-        "output": 262128
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2.6 Fast",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-04-21",
-      "temperature": true,
-      "tool_call": true
-    },
-    "kimi-k2.6-flex": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.08625,
-        "input": 0.345,
-        "output": 1.61
-      },
-      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
-      "family": "kimi-k2",
-      "id": "kimi-k2.6-flex",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-04-21",
-      "limit": {
-        "context": 262128,
-        "output": 262128
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2.6 Flex",
+      "name": "Kimi K2.7 Code",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-04-21",
-      "temperature": true,
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k2.7-code-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.095,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Kimi K2.7 Code with reasoning capped to a short budget for lower latency; reasoning cannot be disabled on this model",
+      "family": "kimi-k2",
+      "id": "kimi-k2.7-code-fast",
+      "interleaved": true,
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262128,
+        "output": 262128
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code Fast",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "kimi-k2.7-code-flex": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.11875,
-        "input": 0.475,
-        "output": 2
+        "cache_read": 0.06175,
+        "input": 0.6175,
+        "output": 2.6
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
       "id": "kimi-k2.7-code-flex",
+      "interleaved": true,
       "knowledge": "2025-01",
       "last_updated": "2026-06-12",
       "limit": {
-        "context": 262144,
-        "output": 262144
+        "context": 262128,
+        "output": 262128
       },
       "modalities": {
         "input": [
@@ -674,7 +605,11 @@
       "name": "Kimi K2.7 Code Flex",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": false,
@@ -690,9 +625,7 @@
       "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
       "family": "kimi-k3",
       "id": "kimi-k3",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
+      "interleaved": true,
       "last_updated": "2026-07-16",
       "limit": {
         "context": 1048560,
@@ -712,15 +645,16 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "high",
             "max"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-07-16",
@@ -760,23 +694,21 @@
       "temperature": false,
       "tool_call": true
     },
-    "moonshotai/Kimi-K2.5": {
+    "kimi-k3-flex": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.52,
-        "output": 2.59
+        "cache_read": 0.195,
+        "input": 1.95,
+        "output": 9.75
       },
-      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
-      "family": "kimi-k2",
-      "id": "moonshotai/Kimi-K2.5",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-01-27",
+      "description": "Kimi K3 on the flex tier: discounted, best-effort latency, requests may be held under load",
+      "family": "kimi-k3",
+      "id": "kimi-k3-flex",
+      "interleaved": true,
+      "last_updated": "2026-07-16",
       "limit": {
-        "context": 262128,
-        "output": 262128
+        "context": 1048560,
+        "output": 1048560
       },
       "modalities": {
         "input": [
@@ -787,87 +719,24 @@
           "text"
         ]
       },
-      "name": "Kimi K2.5",
+      "name": "Kimi K3 Flex",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-01-27",
-      "temperature": true,
-      "tool_call": true
-    },
-    "moonshotai/Kimi-K2.6": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.1725,
-        "input": 0.69,
-        "output": 3.22
-      },
-      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
-      "family": "kimi-k2",
-      "id": "moonshotai/Kimi-K2.6",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-04-21",
-      "limit": {
-        "context": 262128,
-        "output": 262128
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2.6",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        },
         {
-          "type": "toggle"
+          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-04-21",
-      "temperature": true,
-      "tool_call": true
-    },
-    "moonshotai/Kimi-K2.7-Code": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.2375,
-        "input": 0.95,
-        "output": 4
-      },
-      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
-      "family": "kimi-k2",
-      "id": "moonshotai/Kimi-K2.7-Code",
-      "knowledge": "2025-01",
-      "last_updated": "2026-06-12",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2.7 Code",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-06-12",
+      "release_date": "2026-07-16",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -882,9 +751,7 @@
       "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
       "family": "qwen",
       "id": "qwen-3.8-27b",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
+      "interleaved": true,
       "last_updated": "2026-08-14",
       "limit": {
         "context": 262128,
@@ -922,40 +789,55 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen3.5-397b-fast": {
-      "attachment": false,
+    "qwen3.6-35b": {
+      "attachment": true,
       "cost": {
-        "cache_read": 0.1725,
-        "input": 0.69,
-        "output": 4.14
+        "cache_read": 0.029,
+        "input": 0.29,
+        "output": 1.15
       },
-      "description": "Efficient Qwen model for fast chat, extraction, and high-volume workloads",
+      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
       "family": "qwen",
-      "id": "qwen3.5-397b-fast",
-      "last_updated": "2026-02-01",
+      "id": "qwen3.6-35b",
+      "interleaved": true,
+      "last_updated": "2026-04-17",
       "limit": {
-        "context": 262128,
-        "output": 262128
+        "context": 131056,
+        "output": 131056
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Qwen3.5 397B Fast",
+      "name": "Qwen3.6 35B",
       "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-02-01",
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-17",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "qwen3.6-35b-fast": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0725,
+        "cache_read": 0.029,
         "input": 0.29,
         "output": 1.15
       },
@@ -980,6 +862,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-04-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     }

@@ -1,0 +1,524 @@
+{
+  "api": "https://api.tokengo.com/v1",
+  "doc": "https://www.tokengo.com/docs",
+  "env": [
+    "TOKENGO_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/tokengo.svg",
+  "id": "tokengo",
+  "models": {
+    "deepseek/deepseek-v3.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.19,
+        "output": 0.71
+      },
+      "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3.1",
+      "last_updated": "2025-08-21",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek-V3.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-08-21",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v3.2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.2174,
+        "output": 0.326
+      },
+      "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes, sparse attention, and tool-use",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3.2",
+      "knowledge": "2024-07",
+      "last_updated": "2025-12-01",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V3.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-12-01",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.028,
+        "input": 0.098,
+        "output": 0.196
+      },
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+      "family": "deepseek-flash",
+      "id": "deepseek/deepseek-v4-flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4-pro": {
+      "attachment": false,
+      "cost": {
+        "input": 0.435,
+        "output": 0.87
+      },
+      "description": "Open MoE flagship with million-token context for coding and long agent runs",
+      "family": "deepseek-thinking",
+      "id": "deepseek/deepseek-v4-pro",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.5",
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-02-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k2.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.16,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
+      "family": "kimi-k2",
+      "id": "moonshotai/kimi-k2.6",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.6",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "moonshotai/kimi-k3",
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "qwen/qwen3.5-397b-a17b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 0.4,
+        "output": 2.65
+      },
+      "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
+      "family": "qwen",
+      "id": "qwen/qwen3.5-397b-a17b",
+      "last_updated": "2026-02-15",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 397B-A17B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2226,
+        "input": 0.89,
+        "output": 3.2647
+      },
+      "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
+      "family": "glm",
+      "id": "z-ai/glm-5",
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+      "family": "glm",
+      "id": "z-ai/glm-5.1",
+      "last_updated": "2026-04-07",
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "family": "glm",
+      "id": "z-ai/glm-5.2",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "z-ai/glm-5.3",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.3-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.025
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm",
+      "id": "z-ai/glm-5.3-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "TokenGo",
+  "npm": "@ai-sdk/openai-compatible"
+}
