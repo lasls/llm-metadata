@@ -994,7 +994,7 @@
     "alibaba/qwen3.8-2.4t-a95b": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.2,
+        "cache_read": 0.25,
         "input": 2,
         "output": 6
       },
@@ -1004,7 +1004,7 @@
       "last_updated": "2026-08-12",
       "limit": {
         "context": 262144,
-        "output": 131072
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -1036,9 +1036,10 @@
     "alibaba/qwen3.8-27b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.11,
-        "input": 0.55,
-        "output": 3.3
+        "cache_read": 0.1,
+        "cache_write": 0.625,
+        "input": 0.5,
+        "output": 3
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -1388,6 +1389,31 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-08-23",
+      "tool_call": false
+    },
+    "alibaba/wan-v3.0-video-prime": {
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "family": "o",
+      "id": "alibaba/wan-v3.0-video-prime",
+      "last_updated": "2026-08-28",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Wan v3.0 Video Prime",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-08-28",
       "tool_call": false
     },
     "amazon/nova-2-lite": {
@@ -5815,8 +5841,8 @@
       "id": "minimax/minimax-m3",
       "last_updated": "2026-06-01",
       "limit": {
-        "context": 1000000,
-        "output": 1000000
+        "context": 512000,
+        "output": 512000
       },
       "modalities": {
         "input": [
@@ -6445,7 +6471,7 @@
     "moonshotai/kimi-k2.7-code": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.19,
+        "cache_read": 0.16,
         "input": 0.95,
         "output": 4
       },
@@ -6753,9 +6779,9 @@
     "nvidia/nemotron-3.5-lightning": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.05,
+        "cache_read": 0.01,
         "input": 0.05,
-        "output": 0.15
+        "output": 0.2
       },
       "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
       "family": "nemotron",
@@ -11091,17 +11117,17 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.035,
+        "input": 0.14,
+        "output": 0.58
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
       "id": "tencent/hy3",
       "last_updated": "2026-07-06",
       "limit": {
-        "context": 256000,
-        "output": 128000
+        "context": 262144,
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -12083,7 +12109,7 @@
     "zai/glm-5.3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.26,
+        "cache_read": 0.14,
         "input": 1.4,
         "output": 4.4
       },
@@ -12093,7 +12119,7 @@
       "last_updated": "2026-08-14",
       "limit": {
         "context": 1000000,
-        "output": 12800
+        "output": 1000000
       },
       "modalities": {
         "input": [
