@@ -55899,9 +55899,9 @@
       "zai-org/GLM-5.3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.26,
-          "input": 1.4,
-          "output": 4.4
+          "cache_read": 0.24,
+          "input": 1.2,
+          "output": 4
         },
         "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
         "family": "glm",
@@ -63405,8 +63405,8 @@
       "flexai/gpt-oss-20b": {
         "attachment": false,
         "cost": {
-          "input": 0.03,
-          "output": 0.13
+          "input": 0.02,
+          "output": 0.1
         },
         "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
         "family": "gpt-oss",
@@ -65146,7 +65146,7 @@
         "knowledge": "2025-05",
         "last_updated": "2026-07-31",
         "limit": {
-          "context": 1048576,
+          "context": 1024000,
           "output": 384000
         },
         "modalities": {
@@ -68084,7 +68084,7 @@
         "release_date": "2026-07-31",
         "structured_output": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "scaleway/gpt-oss-120b": {
         "attachment": false,
@@ -68124,7 +68124,7 @@
         "release_date": "2025-08-05",
         "structured_output": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "scaleway/llama-3.3-70b-instruct": {
         "attachment": false,
@@ -68155,7 +68155,7 @@
         "release_date": "2024-12-06",
         "structured_output": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "tensorx/deepseek/deepseek-v4-flash-0731": {
         "attachment": false,
@@ -68196,6 +68196,48 @@
           }
         ],
         "release_date": "2026-07-31",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "tensorx/deepseek/deepseek-v4-pro-0813": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 2,
+          "output": 4
+        },
+        "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+        "family": "deepseek-thinking",
+        "id": "tensorx/deepseek/deepseek-v4-pro-0813",
+        "last_updated": "2026-08-22",
+        "limit": {
+          "context": 1048576,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro 0813",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-12",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -106898,7 +106940,7 @@
         "last_updated": "2025-12-01",
         "limit": {
           "context": 163840,
-          "output": 147456
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -108310,8 +108352,8 @@
       "google/gemma-4-31b-it": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.01,
-          "input": 0.08,
+          "cache_read": 0.1,
+          "input": 0.07,
           "output": 0.35
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
@@ -119091,17 +119133,17 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.26,
-          "input": 1.25,
-          "output": 4.4
+          "cache_read": 0.24,
+          "input": 1.2,
+          "output": 4
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
         "id": "~z-ai/glm-latest",
         "last_updated": "2026-08-19",
         "limit": {
-          "context": 262144,
-          "output": 131072
+          "context": 1048576,
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -168298,6 +168340,38 @@
         "structured_output": false,
         "tool_call": true
       },
+      "google/gemma-4-31b-it-gemsicle": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.04,
+          "input": 0.08,
+          "output": 0.33
+        },
+        "description": "Gemsicle is a multimodal Gemma 4 31B creative finetune for expressive dialogue, long-form storytelling, and roleplay.",
+        "family": "gemma",
+        "id": "google/gemma-4-31b-it-gemsicle",
+        "last_updated": "2026-08-29",
+        "limit": {
+          "context": 262144,
+          "input": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemsicle",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-08-29",
+        "structured_output": false,
+        "tool_call": true
+      },
       "google/gemma-4-31b-it-isometry": {
         "attachment": true,
         "cost": {
@@ -178784,37 +178858,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-01-01",
-        "structured_output": false,
-        "tool_call": false
-      },
-      "yi-lightning": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.1003,
-          "input": 0.2006,
-          "output": 0.2006
-        },
-        "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-        "family": "yi",
-        "id": "yi-lightning",
-        "last_updated": "2024-10-16",
-        "limit": {
-          "context": 12000,
-          "input": 12000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Yi Lightning",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-06-15",
         "structured_output": false,
         "tool_call": false
       },
@@ -208693,9 +208736,9 @@
       "deepseek/deepseek-v3.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.13,
-          "input": 0.26,
-          "output": 0.38
+          "cache_read": 0.1345,
+          "input": 0.269,
+          "output": 0.4
         },
         "description": "DeepSeek chat model for instruction following, coding, and analysis",
         "family": "deepseek",
@@ -208704,7 +208747,7 @@
         "last_updated": "2025-12-01",
         "limit": {
           "context": 163840,
-          "output": 147456
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -208766,9 +208809,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.017248,
-          "input": 0.08624,
-          "output": 0.17248
+          "cache_read": 0.016744,
+          "input": 0.08372,
+          "output": 0.16744
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -208903,9 +208946,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.060117,
-          "input": 0.721404,
-          "output": 1.442808
+          "cache_read": 0.052505,
+          "input": 0.630054,
+          "output": 1.260108
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -220766,9 +220809,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.26,
-          "input": 1.25,
-          "output": 4.4
+          "cache_read": 0.24,
+          "input": 1.2,
+          "output": 4
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -220776,7 +220819,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1310720,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
