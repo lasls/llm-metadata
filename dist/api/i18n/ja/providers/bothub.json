@@ -1,0 +1,90 @@
+{
+  "api": "https://openai.bothub.ru/v1",
+  "doc": "https://bothub.ru/models",
+  "env": [
+    "BOTHUB_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/bothub.svg",
+  "id": "bothub",
+  "models": {
+    "gemma-4-31b-it:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
+      "family": "gemma",
+      "id": "gemma-4-31b-it:free",
+      "interleaved": true,
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B IT (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron-3-ultra-550b-a55b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
+      "family": "nemotron",
+      "id": "nemotron-3-ultra-550b-a55b:free",
+      "interleaved": true,
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Ultra (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-04",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Bothub",
+  "npm": "@ai-sdk/openai-compatible"
+}
