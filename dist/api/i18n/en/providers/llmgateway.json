@@ -691,41 +691,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "cosmos3-super-reasoner": {
-      "attachment": true,
-      "cost": {
-        "input": 0.1,
-        "output": 0.3
-      },
-      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
-      "id": "cosmos3-super-reasoner",
-      "last_updated": "2026-06-01",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Cosmos 3 Super Reasoner",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-06-01",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "custom": {
       "attachment": true,
       "cost": {
@@ -1586,37 +1551,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "gemma-3-27b": {
-      "attachment": true,
-      "cost": {
-        "input": 0.1,
-        "output": 0.3
-      },
-      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
-      "family": "gemma",
-      "id": "gemma-3-27b",
-      "last_updated": "2025-03-12",
-      "limit": {
-        "context": 110000,
-        "output": 110000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemma 3 27B",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-03-12",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "gemma-4-26b-a4b-it": {
       "attachment": true,
       "cost": {
@@ -2375,8 +2309,12 @@
         {
           "type": "effort",
           "values": [
+            "none",
+            "minimal",
             "low",
+            "medium",
             "high",
+            "xhigh",
             "max"
           ]
         }
@@ -4263,76 +4201,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "hermes-4-405b": {
-      "attachment": false,
-      "cost": {
-        "input": 1,
-        "output": 3
-      },
-      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
-      "family": "hermes",
-      "id": "hermes-4-405b",
-      "last_updated": "2025-08-26",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Hermes 4 405B",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-08-26",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "hermes-4-70b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.13,
-        "output": 0.4
-      },
-      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
-      "family": "hermes",
-      "id": "hermes-4-70b",
-      "last_updated": "2025-08-26",
-      "limit": {
-        "context": 131072,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Hermes 4 70B",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-08-26",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "hy3": {
       "attachment": false,
       "cost": {
@@ -4834,36 +4702,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "llama-3.1-nemotron-ultra-253b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.6,
-        "output": 1.8
-      },
-      "description": "Flagship Nemotron model for high-throughput reasoning and complex agents",
-      "family": "nemotron",
-      "id": "llama-3.1-nemotron-ultra-253b",
-      "last_updated": "2025-04-07",
-      "limit": {
-        "context": 128000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.1 Nemotron Ultra 253B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-04-07",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "llama-3.2-11b-instruct": {
       "attachment": false,
       "cost": {
@@ -4927,7 +4765,7 @@
     "llama-3.3-70b-instruct": {
       "attachment": true,
       "cost": {
-        "input": 0.13,
+        "input": 0.135,
         "output": 0.4
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
@@ -5144,36 +4982,6 @@
         }
       ],
       "release_date": "2026-04-22",
-      "temperature": true,
-      "tool_call": true
-    },
-    "minicpm-v-4.5": {
-      "attachment": true,
-      "cost": {
-        "input": 0.658,
-        "output": 1.11
-      },
-      "description": "Multimodal model for analyzing text, images, documents, and rich media",
-      "id": "minicpm-v-4.5",
-      "last_updated": "2025-08-26",
-      "limit": {
-        "context": 32000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniCPM-V 4.5",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-26",
-      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -5830,112 +5638,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "nemotron-3-nano-30b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.06,
-        "output": 0.24
-      },
-      "description": "Compact Nemotron model for efficient reasoning and deployable AI agents",
-      "family": "nemotron",
-      "id": "nemotron-3-nano-30b",
-      "last_updated": "2025-12-15",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nemotron 3 Nano 30B",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-12-15",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "nemotron-3-nano-omni": {
-      "attachment": true,
-      "cost": {
-        "input": 0.06,
-        "output": 0.24
-      },
-      "description": "Omni-modal model for text, vision, audio, and multimodal agent tasks",
-      "family": "nemotron",
-      "id": "nemotron-3-nano-omni",
-      "last_updated": "2026-04-28",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nemotron 3 Nano Omni",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-04-28",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "nemotron-3-super-120b": {
-      "attachment": false,
-      "cost": {
-        "input": 0.3,
-        "output": 0.9
-      },
-      "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
-      "family": "nemotron",
-      "id": "nemotron-3-super-120b",
-      "last_updated": "2026-03-11",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nemotron 3 Super 120B",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-03-11",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "nemotron-3-ultra-550b": {
       "attachment": false,
       "cost": {
@@ -6320,37 +6022,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen2-5-vl-72b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.25,
-        "output": 0.75
-      },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
-      "family": "qwen",
-      "id": "qwen2-5-vl-72b-instruct",
-      "knowledge": "2024-04",
-      "last_updated": "2024-09",
-      "limit": {
-        "context": 32000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen2.5-VL 72B Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-09",
-      "temperature": true,
-      "tool_call": true
-    },
     "qwen3-235b-a22b-fp8": {
       "attachment": false,
       "cost": {
@@ -6447,41 +6118,11 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen3-30b-a3b-instruct-2507": {
-      "attachment": false,
-      "cost": {
-        "input": 0.1,
-        "output": 0.3
-      },
-      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
-      "family": "qwen",
-      "id": "qwen3-30b-a3b-instruct-2507",
-      "last_updated": "2025-07-08",
-      "limit": {
-        "context": 262000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 30B A3B Instruct (2507)",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-07-08",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "qwen3-32b": {
       "attachment": false,
       "cost": {
-        "input": 0.1,
-        "output": 0.3,
+        "input": 0.36,
+        "output": 0.87,
         "reasoning": 8.4
       },
       "description": "Dense open Qwen model for self-hosted chat, reasoning, and coding",
