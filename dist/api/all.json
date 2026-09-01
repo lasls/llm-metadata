@@ -64518,8 +64518,8 @@
       "flexai/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "input": 0.08,
-          "output": 0.18
+          "input": 0.03,
+          "output": 0.1
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -66287,6 +66287,39 @@
         "structured_output": true,
         "temperature": false,
         "tool_call": true
+      },
+      "moonshot/kimi-k2.7-code-highspeed": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.38,
+          "input": 1.9,
+          "output": 8
+        },
+        "description": "Lower-latency Kimi Code variant for interactive edits and coding-agent loops",
+        "family": "kimi-k2",
+        "id": "moonshot/kimi-k2.7-code-highspeed",
+        "knowledge": "2025-01",
+        "last_updated": "2026-06-12",
+        "limit": {
+          "context": 262144,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K2.7 Code Highspeed",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-06-12",
+        "structured_output": false,
+        "temperature": false,
+        "tool_call": false
       },
       "moonshot/kimi-k3": {
         "attachment": true,
@@ -83746,50 +83779,6 @@
         "release_date": "2026-06-30",
         "temperature": true,
         "tool_call": false
-      },
-      "gemini-robotics-er-1.6-preview": {
-        "attachment": true,
-        "cost": {
-          "input": 1,
-          "input_audio": 2,
-          "output": 5
-        },
-        "description": "Vision-language model for embodied reasoning: spatial understanding, task planning, and physical-world agentic robotics",
-        "family": "gemini",
-        "id": "gemini-robotics-er-1.6-preview",
-        "knowledge": "2025-01",
-        "last_updated": "2026-04-14",
-        "limit": {
-          "context": 131072,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video",
-            "audio"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini Robotics-ER 1.6 Preview",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "min": 0,
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2026-04-14",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
       },
       "gemma-4-26b-a4b-it": {
         "attachment": true,
@@ -108534,8 +108523,8 @@
         "knowledge": "2025-05",
         "last_updated": "2026-04-24",
         "limit": {
-          "context": 1024000,
-          "output": 384000
+          "context": 1048576,
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -108575,7 +108564,7 @@
         "id": "deepseek/deepseek-v4-pro-0813",
         "last_updated": "2026-08-22",
         "limit": {
-          "context": 1048576,
+          "context": 1024000,
           "output": 384000
         },
         "modalities": {
@@ -109852,8 +109841,8 @@
         "id": "gryphe/mythomax-l2-13b",
         "last_updated": "2023-07-02",
         "limit": {
-          "context": 4096,
-          "output": 3686
+          "context": 8192,
+          "output": 7372
         },
         "modalities": {
           "input": [
@@ -116070,7 +116059,7 @@
         "last_updated": "2025-07-21",
         "limit": {
           "context": 262144,
-          "output": 235929
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -118494,9 +118483,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.035,
+          "input": 0.14,
+          "output": 0.58
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -165187,9 +165176,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.22,
-          "output": 0.66
+          "cache_read": 0.014,
+          "input": 0.44,
+          "output": 1.32
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -168892,6 +168881,47 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2026-04-29",
+        "structured_output": true,
+        "tool_call": true
+      },
+      "ibm-granite/granite-4.2-8b": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.1,
+          "output": 0.15
+        },
+        "description": "IBM Granite 4.2 8B is an Apache 2.0-licensed dense model with native step-by-step reasoning and specialized training for agentic work. It can plan before acting, sequence tools, navigate codebases, work in terminals, and verify results across coding, search, mathematics, science, and complex instruction-following tasks.",
+        "family": "granite",
+        "id": "ibm-granite/granite-4.2-8b",
+        "last_updated": "2026-08-31",
+        "limit": {
+          "context": 131072,
+          "input": 131072,
+          "output": 117964
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Granite 4.2 8B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-31",
         "structured_output": true,
         "tool_call": true
       },
@@ -208649,9 +208679,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.22,
-          "output": 0.66
+          "cache_read": 0.014,
+          "input": 0.44,
+          "output": 1.32
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -208694,9 +208724,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.085623,
-          "input": 1.02747,
-          "output": 2.05494
+          "cache_read": 0.135,
+          "input": 1.6,
+          "output": 3.2
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -208708,7 +208738,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -208741,9 +208771,9 @@
       "deepseek/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.022,
-          "input": 0.66,
-          "output": 1.98
+          "cache_read": 0.03718,
+          "input": 1.1154,
+          "output": 3.3462
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -210161,8 +210191,8 @@
       "gryphe/mythomax-l2-13b": {
         "attachment": false,
         "cost": {
-          "input": 0.06,
-          "output": 0.06
+          "input": 0.4,
+          "output": 0.6
         },
         "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
         "id": "gryphe/mythomax-l2-13b",
@@ -210170,7 +210200,7 @@
         "last_updated": "2023-07-02",
         "limit": {
           "context": 8192,
-          "output": 3686
+          "output": 7372
         },
         "modalities": {
           "input": [
@@ -216207,9 +216237,8 @@
       "qwen/qwen3-235b-a22b-2507": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0175,
-          "input": 0.0875,
-          "output": 0.35
+          "input": 0.09,
+          "output": 0.55
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -216218,7 +216247,7 @@
         "last_updated": "2025-07-21",
         "limit": {
           "context": 262144,
-          "output": 235929
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -218456,9 +218485,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -244246,26 +244275,8 @@
         "cost": {
           "cache_read": 0.2,
           "cache_write": 4.5,
-          "context_over_200k": {
-            "cache_read": 0.2,
-            "cache_write": 4.5,
-            "input": 4,
-            "output": 18
-          },
           "input": 2,
-          "output": 12,
-          "tiers": [
-            {
-              "cache_read": 0.2,
-              "cache_write": 4.5,
-              "input": 4,
-              "output": 18,
-              "tier": {
-                "size": 200000,
-                "type": "context"
-              }
-            }
-          ]
+          "output": 12
         },
         "description": "Nano Banana Pro for higher-fidelity image generation and design-heavy edits",
         "family": "gemini-pro",
@@ -244312,22 +244323,8 @@
       "gemini-3.1-flash-image": {
         "attachment": true,
         "cost": {
-          "context_over_200k": {
-            "input": 0.5,
-            "output": 2
-          },
           "input": 0.5,
-          "output": 2,
-          "tiers": [
-            {
-              "input": 0.5,
-              "output": 2,
-              "tier": {
-                "size": 200000,
-                "type": "context"
-              }
-            }
-          ]
+          "output": 2
         },
         "description": "Image model for prompt-driven generation, editing, and visual design workflows",
         "family": "gemini-flash",
@@ -244378,26 +244375,8 @@
         "cost": {
           "cache_read": 0.025,
           "cache_write": 0.08333,
-          "context_over_200k": {
-            "cache_read": 0.025,
-            "cache_write": 0.08333,
-            "input": 0.5,
-            "output": 2.25
-          },
           "input": 0.25,
-          "output": 1.5,
-          "tiers": [
-            {
-              "cache_read": 0.025,
-              "cache_write": 0.08333,
-              "input": 0.5,
-              "output": 2.25,
-              "tier": {
-                "size": 200000,
-                "type": "context"
-              }
-            }
-          ]
+          "output": 1.5
         },
         "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
         "family": "gemini-flash-lite",
@@ -244448,26 +244427,8 @@
         "cost": {
           "cache_read": 0.0275,
           "cache_write": 0.091663,
-          "context_over_200k": {
-            "cache_read": 0.0275,
-            "cache_write": 0.091663,
-            "input": 0.55,
-            "output": 2.475
-          },
           "input": 0.275,
-          "output": 1.65,
-          "tiers": [
-            {
-              "cache_read": 0.0275,
-              "cache_write": 0.091663,
-              "input": 0.55,
-              "output": 2.475,
-              "tier": {
-                "size": 200000,
-                "type": "context"
-              }
-            }
-          ]
+          "output": 1.65
         },
         "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
         "family": "gemini-flash-lite",
@@ -244519,8 +244480,8 @@
           "cache_read": 0.2,
           "cache_write": 4.5,
           "context_over_200k": {
-            "cache_read": 0.2,
-            "cache_write": 4.5,
+            "cache_read": 0.4,
+            "cache_write": 9,
             "input": 4,
             "output": 18
           },
@@ -244528,8 +244489,8 @@
           "output": 12,
           "tiers": [
             {
-              "cache_read": 0.2,
-              "cache_write": 4.5,
+              "cache_read": 0.4,
+              "cache_write": 9,
               "input": 4,
               "output": 18,
               "tier": {
@@ -267727,10 +267688,10 @@
       "claude-sonnet-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "cache_write": 2.5000000000000004,
-          "input": 2,
-          "output": 10.000000000000002
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
         },
         "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
         "family": "claude-sonnet",
