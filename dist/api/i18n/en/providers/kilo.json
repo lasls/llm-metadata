@@ -697,54 +697,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "anthropic/claude-opus-4.7-fast": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 3,
-        "cache_write": 37.5,
-        "input": 30,
-        "output": 150
-      },
-      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
-      "family": "claude-opus",
-      "id": "anthropic/claude-opus-4.7-fast",
-      "knowledge": "2026-01-31",
-      "last_updated": "2026-04-16",
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Opus 4.7",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-04-16",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "anthropic/claude-opus-4.8": {
       "attachment": true,
       "cost": {
@@ -793,54 +745,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "anthropic/claude-opus-4.8-fast": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 1,
-        "cache_write": 12.5,
-        "input": 10,
-        "output": 50
-      },
-      "description": "Fast-mode variant of [Opus 4.8](/anthropic/claude-opus-4.8) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 4.8. Learn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode",
-      "family": "claude-opus",
-      "id": "anthropic/claude-opus-4.8-fast",
-      "knowledge": "2026-01",
-      "last_updated": "2026-05-28",
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Opus 4.8",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-05-28",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "anthropic/claude-opus-5": {
       "attachment": true,
       "cost": {
@@ -887,54 +791,6 @@
       "release_date": "2026-07-24",
       "structured_output": true,
       "temperature": true,
-      "tool_call": true
-    },
-    "anthropic/claude-opus-5-fast": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 1,
-        "cache_write": 12.5,
-        "input": 10,
-        "output": 50
-      },
-      "description": "Fast-mode variant of [Opus 5](/anthropic/claude-opus-5) - identical capabilities with higher output speed at 2x pricing relative to regular Opus 5. Learn more in Anthropic's docs: https://platform.claude.com/docs/en/build-with-claude/fast-mode",
-      "family": "claude-opus",
-      "id": "anthropic/claude-opus-5-fast",
-      "knowledge": "2026-05",
-      "last_updated": "2026-07-24",
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Opus 5",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-07-24",
-      "structured_output": true,
-      "temperature": false,
       "tool_call": true
     },
     "anthropic/claude-sonnet-4": {
@@ -3631,6 +3487,48 @@
         }
       ],
       "release_date": "2026-03-04",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inception/mercury-2.5-preview": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.2,
+        "output": 0.75
+      },
+      "description": "Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception. Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving...",
+      "family": "mercury",
+      "id": "inception/mercury-2.5-preview",
+      "last_updated": "2026-08-31",
+      "limit": {
+        "context": 260000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inception: Mercury 2.5 Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-08-31",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -13787,9 +13685,9 @@
     "~deepseek/deepseek-v4-flash-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.013,
-        "input": 0.05,
-        "output": 0.16
+        "cache_read": 0.009996,
+        "input": 0.04998,
+        "output": 0.09996
       },
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "family": "deepseek",
@@ -13797,7 +13695,7 @@
       "last_updated": "2026-08-01",
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 131072
       },
       "modalities": {
         "input": [
