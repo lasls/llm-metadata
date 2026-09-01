@@ -39418,9 +39418,9 @@
       "Qwen/Qwen3.8-27B-TEE": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.03499999999999999,
-          "input": 0.35,
-          "output": 2.75
+          "cache_read": 0.031999999999999994,
+          "input": 0.32,
+          "output": 2.5
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -45398,8 +45398,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.045,
-          "input": 0.446,
-          "output": 2.228
+          "input": 0.478,
+          "output": 2.392
         },
         "description": "Mistral coding agent model for repository tasks and software engineering workflows",
         "family": "devstral",
@@ -45407,7 +45407,7 @@
         "knowledge": "2025-12",
         "last_updated": "2025-12-09",
         "limit": {
-          "context": 262000,
+          "context": 256000,
           "output": 262000
         },
         "modalities": {
@@ -47248,7 +47248,7 @@
         },
         "last_updated": "2026-02-12",
         "limit": {
-          "context": 196680,
+          "context": 196000,
           "output": 196608
         },
         "modalities": {
@@ -47546,38 +47546,6 @@
         "release_date": "2024-11-01",
         "structured_output": true,
         "temperature": true,
-        "tool_call": true
-      },
-      "mistral-medium-2508": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.045,
-          "input": 0.446,
-          "output": 2.228
-        },
-        "description": "Mistral Medium 2508 is a frontier-class multimodal LLM with a 128,000 token context window, optimized for reasoning, coding, and multimodal tasks.",
-        "id": "mistral-medium-2508",
-        "last_updated": "2024-08-07",
-        "limit": {
-          "context": 128000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "mistral-medium-2508",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2024-08-07",
-        "structured_output": true,
-        "temperature": false,
         "tool_call": true
       },
       "mistral-medium-3.5": {
@@ -64512,6 +64480,47 @@
           }
         ],
         "release_date": "2026-03-11",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      },
+      "flexai/Step-3.7-Flash": {
+        "attachment": true,
+        "cost": {
+          "input": 0.2,
+          "output": 1.15
+        },
+        "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
+        "id": "flexai/Step-3.7-Flash",
+        "knowledge": "2026-03-01",
+        "last_updated": "2026-05-29",
+        "limit": {
+          "context": 262144,
+          "output": 256000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 3.7 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-05-29",
         "structured_output": false,
         "temperature": true,
         "tool_call": false
@@ -101340,26 +101349,64 @@
     "iconURL": "https://models.dev/logos/iteracompute.svg",
     "id": "iteracompute",
     "models": {
+      "iteracompute/ornith-1.5-35b-a3b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.3,
+          "output": 3
+        },
+        "description": "Mixture-of-experts coding-reasoning model for agentic software tasks, tool use, and image understanding",
+        "family": "ornith",
+        "id": "iteracompute/ornith-1.5-35b-a3b",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-23",
+        "limit": {
+          "context": 327680,
+          "input": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ornith 1.5 35B A3B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-08-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "iteracompute/qwen3.8-27b": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.1,
-          "input": 0.35,
-          "output": 3
+          "input": 0.3,
+          "output": 2.5
         },
         "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
         "family": "qwen",
         "id": "iteracompute/qwen3.8-27b",
         "last_updated": "2026-08-14",
         "limit": {
-          "context": 262144,
-          "output": 32768
+          "context": 327680,
+          "input": 262144,
+          "output": 65536
         },
         "modalities": {
           "input": [
             "text",
-            "image",
-            "video"
+            "image"
           ],
           "output": [
             "text"
@@ -106690,7 +106737,7 @@
       "anthracite-org/magnum-v4-72b": {
         "attachment": false,
         "cost": {
-          "input": 3,
+          "input": 2.5,
           "output": 5
         },
         "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
@@ -108565,7 +108612,7 @@
         "id": "deepseek/deepseek-v4-pro-0813",
         "last_updated": "2026-08-22",
         "limit": {
-          "context": 1024000,
+          "context": 1048576,
           "output": 384000
         },
         "modalities": {
@@ -109842,8 +109889,8 @@
         "id": "gryphe/mythomax-l2-13b",
         "last_updated": "2023-07-02",
         "limit": {
-          "context": 8192,
-          "output": 7372
+          "context": 4096,
+          "output": 3686
         },
         "modalities": {
           "input": [
@@ -110361,7 +110408,7 @@
       "mancer/weaver": {
         "attachment": false,
         "cost": {
-          "input": 0.5,
+          "input": 0.4,
           "output": 0.75
         },
         "description": "An attempt to recreate Claude-style verbosity, but don't expect the same level of coherence or memory. Meant for use in roleplay/narrative situations.",
@@ -110663,8 +110710,8 @@
         "id": "meta-llama/llama-4-scout",
         "last_updated": "2025-04-05",
         "limit": {
-          "context": 131072,
-          "output": 8192
+          "context": 327680,
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -111218,10 +111265,8 @@
       "minimax/minimax-m2.7:free": {
         "attachment": false,
         "cost": {
-          "cache_read": 0,
           "input": 0,
-          "output": 0,
-          "reasoning": 0
+          "output": 0
         },
         "description": "MiniMax-M2.7 is a next-generation large language model designed for autonomous, real-world productivity and continuous improvement. Built to actively participate in its own evolution, M2.7 integrates advanced agentic capabilities through multi-agent...",
         "family": "minimax",
@@ -111229,7 +111274,7 @@
         "last_updated": "2026-03-18",
         "limit": {
           "context": 196608,
-          "output": 196608
+          "output": 176947
         },
         "modalities": {
           "input": [
@@ -111300,10 +111345,8 @@
       "minimax/minimax-m3:free": {
         "attachment": true,
         "cost": {
-          "cache_read": 0,
           "input": 0,
-          "output": 0,
-          "reasoning": 0
+          "output": 0
         },
         "description": "MiniMax-M3 is a multimodal foundation model from MiniMax. It supports text, image, and video inputs with text output, a 1M-token context window, and is suited for long-horizon agentic work, coding,...",
         "family": "minimax",
@@ -111311,12 +111354,13 @@
         "last_updated": "2026-06-01",
         "limit": {
           "context": 1048576,
-          "output": 1048576
+          "output": 943718
         },
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video"
           ],
           "output": [
             "text"
@@ -112319,7 +112363,7 @@
             "text"
           ]
         },
-        "name": "Nex AGI: Nex-N2-Mini",
+        "name": "Nex AGI: Nex-N2-Mini (retires Sep 8)",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -112360,7 +112404,7 @@
             "text"
           ]
         },
-        "name": "Nex AGI: Nex-N2-Pro",
+        "name": "Nex AGI: Nex-N2-Pro (retires Sep 8)",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -116060,7 +116104,7 @@
         "last_updated": "2025-07-21",
         "limit": {
           "context": 262144,
-          "output": 16384
+          "output": 235929
         },
         "modalities": {
           "input": [
@@ -118878,7 +118922,7 @@
       "undi95/remm-slerp-l2-13b": {
         "attachment": false,
         "cost": {
-          "input": 0.45,
+          "input": 0.35,
           "output": 0.65
         },
         "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
@@ -165180,9 +165224,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.44,
-          "output": 1.32
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -206801,7 +206845,7 @@
       "anthracite-org/magnum-v4-72b": {
         "attachment": false,
         "cost": {
-          "input": 3,
+          "input": 2.5,
           "output": 5
         },
         "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
@@ -208684,9 +208728,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.44,
-          "output": 1.32
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -208776,9 +208820,9 @@
       "deepseek/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.03718,
-          "input": 1.1154,
-          "output": 3.3462
+          "cache_read": 0.022,
+          "input": 0.66,
+          "output": 1.98
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -210196,8 +210240,8 @@
       "gryphe/mythomax-l2-13b": {
         "attachment": false,
         "cost": {
-          "input": 0.4,
-          "output": 0.6
+          "input": 0.06,
+          "output": 0.06
         },
         "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
         "id": "gryphe/mythomax-l2-13b",
@@ -210205,7 +210249,7 @@
         "last_updated": "2023-07-02",
         "limit": {
           "context": 8192,
-          "output": 7372
+          "output": 3686
         },
         "modalities": {
           "input": [
@@ -210534,7 +210578,7 @@
       "mancer/weaver": {
         "attachment": false,
         "cost": {
-          "input": 0.5,
+          "input": 0.4,
           "output": 0.75
         },
         "description": "General-purpose chat model for instruction following, writing, and analysis",
@@ -210793,9 +210837,8 @@
       "meta-llama/llama-4-scout": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.055,
-          "input": 0.11,
-          "output": 0.34
+          "input": 0.1,
+          "output": 0.3
         },
         "description": "Open multimodal Llama model for long-context analysis and efficient agents",
         "family": "llama",
@@ -210804,7 +210847,7 @@
         "last_updated": "2025-04-05",
         "limit": {
           "context": 1310720,
-          "output": 8192
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -216242,8 +216285,9 @@
       "qwen/qwen3-235b-a22b-2507": {
         "attachment": false,
         "cost": {
-          "input": 0.09,
-          "output": 0.55
+          "cache_read": 0.0175,
+          "input": 0.0875,
+          "output": 0.35
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -216252,7 +216296,7 @@
         "last_updated": "2025-07-21",
         "limit": {
           "context": 262144,
-          "output": 16384
+          "output": 235929
         },
         "modalities": {
           "input": [
@@ -266707,44 +266751,6 @@
     "iconURL": "https://models.dev/logos/vancine.svg",
     "id": "vancine",
     "models": {
-      "LongCat-2.0": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.0048,
-          "input": 0.24,
-          "output": 0.96
-        },
-        "description": "Meituan LongCat-2.0, a reasoning model with tool calling and a 1M-token context window",
-        "family": "longcat",
-        "id": "LongCat-2.0",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-06-30",
-        "limit": {
-          "context": 1000000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "LongCat-2.0",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-06-30",
-        "temperature": true,
-        "tool_call": true
-      },
       "MiniMax-M3": {
         "attachment": true,
         "cost": {
@@ -267099,45 +267105,6 @@
         "release_date": "2026-07-16",
         "structured_output": true,
         "temperature": false,
-        "tool_call": true
-      },
-      "mimo-v2.5-pro": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.00288,
-          "input": 0.348,
-          "output": 0.696
-        },
-        "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
-        "family": "mimo",
-        "id": "mimo-v2.5-pro",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-12",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiMo-V2.5-Pro",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-04-22",
-        "temperature": true,
         "tool_call": true
       },
       "qwen3.8-flash": {
@@ -283123,6 +283090,42 @@
           }
         ],
         "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2.5-pro-ultraspeed": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.0108,
+          "input": 1.305,
+          "output": 2.61
+        },
+        "description": "MiMo pro model for strong multimodal reasoning and agent execution",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.5-pro-ultraspeed",
+        "knowledge": "2024-12",
+        "last_updated": "2026-06-09",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2.5 Pro UltraSpeed",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-06-08",
         "temperature": true,
         "tool_call": true
       },
