@@ -58090,6 +58090,51 @@
         "temperature": false,
         "tool_call": true
       },
+      "anthropic-claude-fable-5.1": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 50
+        },
+        "description": "Claude model for demanding reasoning and long-horizon agentic work",
+        "family": "claude-fable",
+        "id": "anthropic-claude-fable-5.1",
+        "knowledge": "2026-06",
+        "last_updated": "2026-09-01",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Anthropic Claude Fable 5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-01",
+        "temperature": false,
+        "tool_call": true
+      },
       "anthropic-claude-haiku-4.5": {
         "attachment": true,
         "cost": {
@@ -62136,19 +62181,19 @@
         "temperature": false,
         "tool_call": true
       },
-      "anthropic/claude-fable-latest": {
+      "anthropic/claude-fable-5-1": {
         "attachment": true,
         "cost": {
-          "cache_read": 1,
+          "cache_read": 0.25,
           "cache_write": 12.5,
           "input": 10,
           "output": 50
         },
-        "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+        "description": "Claude model for demanding reasoning and long-horizon agentic work",
         "family": "claude-fable",
-        "id": "anthropic/claude-fable-latest",
-        "knowledge": "2026-01-31",
-        "last_updated": "2026-06-09",
+        "id": "anthropic/claude-fable-5-1",
+        "knowledge": "2026-06",
+        "last_updated": "2026-09-01",
         "limit": {
           "context": 1000000,
           "output": 128000
@@ -62163,7 +62208,7 @@
             "text"
           ]
         },
-        "name": "Claude Fable 5",
+        "name": "Claude Fable 5.1",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -62178,7 +62223,54 @@
             ]
           }
         ],
-        "release_date": "2026-06-09",
+        "release_date": "2026-09-01",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "anthropic/claude-fable-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 50
+        },
+        "description": "Claude model for demanding reasoning and long-horizon agentic work",
+        "family": "claude-fable",
+        "id": "anthropic/claude-fable-latest",
+        "knowledge": "2026-06",
+        "last_updated": "2026-09-01",
+        "limit": {
+          "context": 1000000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Fable 5.1",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-01",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -63278,6 +63370,93 @@
         "reasoning": false,
         "release_date": "2024-12-02",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "databricks/databricks-deepseek-v4-flash-0731": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.028,
+          "cache_write": 0.14,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+        "family": "deepseek-flash",
+        "id": "databricks/databricks-deepseek-v4-flash-0731",
+        "knowledge": "2025-05",
+        "last_updated": "2026-07-31",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash 0731",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-07-31",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "databricks/databricks-deepseek-v4-pro-0813": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.13202,
+          "cache_write": 1.31999,
+          "input": 1.31999,
+          "output": 3.95997
+        },
+        "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+        "family": "deepseek-thinking",
+        "id": "databricks/databricks-deepseek-v4-pro-0813",
+        "last_updated": "2026-08-22",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro 0813",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-12",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -77024,9 +77203,9 @@
       "accounts/fireworks/models/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
-          "input": 0.14,
-          "output": 0.28
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -107240,6 +107419,7 @@
         "description": "Claude Fable 5.1 improves on Claude Fable 5 across the board, with the biggest gains in agentic coding, long-running agentic workflows, and knowledge work: long code refactors, front-end and visual...",
         "family": "claude-fable",
         "id": "anthropic/claude-fable-5.1",
+        "knowledge": "2026-06",
         "last_updated": "2026-09-01",
         "limit": {
           "context": 1000000,
@@ -107255,7 +107435,7 @@
             "text"
           ]
         },
-        "name": "Anthropic: Claude Fable 5.1 ($$$$)",
+        "name": "Claude Fable 5.1",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -108452,8 +108632,8 @@
         "id": "deepseek/deepseek-chat-v3.1",
         "last_updated": "2025-08-21",
         "limit": {
-          "context": 161000,
-          "output": 144900
+          "context": 163840,
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -108858,8 +109038,8 @@
         "knowledge": "2025-05",
         "last_updated": "2026-04-24",
         "limit": {
-          "context": 1048576,
-          "output": 393216
+          "context": 1024000,
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -108899,7 +109079,7 @@
         "id": "deepseek/deepseek-v4-pro-0813",
         "last_updated": "2026-08-22",
         "limit": {
-          "context": 1048576,
+          "context": 1024000,
           "output": 384000
         },
         "modalities": {
@@ -113062,8 +113242,8 @@
         "id": "nvidia/nemotron-3-ultra-550b-a55b",
         "last_updated": "2026-06-04",
         "limit": {
-          "context": 262144,
-          "output": 16384
+          "context": 256000,
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -117897,8 +118077,8 @@
         "id": "qwen/qwen3.8-2.4t-a95b",
         "last_updated": "2026-08-12",
         "limit": {
-          "context": 1000000,
-          "output": 262144
+          "context": 262144,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -118857,9 +119037,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.035,
+          "input": 0.14,
+          "output": 0.58
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -120192,7 +120372,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 262144
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -120533,9 +120713,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.009996,
-          "input": 0.04998,
-          "output": 0.09996
+          "cache_read": 0.013,
+          "input": 0.05,
+          "output": 0.16
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
@@ -120543,7 +120723,7 @@
         "last_updated": "2026-08-01",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -146908,7 +147088,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "pdf"
           ],
           "output": [
             "text"
@@ -146930,9 +147111,9 @@
           }
         ],
         "release_date": "2026-09-01",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": false,
-        "tool_call": false
+        "tool_call": true
       },
       "anthropic/claude-haiku-4-5-20251001": {
         "attachment": true,
@@ -152302,7 +152483,7 @@
         "tool_call": true
       },
       "qwen/qwen3.5-27b": {
-        "attachment": true,
+        "attachment": false,
         "cost": {
           "cache_read": 0.0172,
           "input": 0.086,
@@ -152313,13 +152494,12 @@
         "id": "qwen/qwen3.5-27b",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 256000,
-          "output": 64000
+          "context": 131072,
+          "output": 32768
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -162185,9 +162365,10 @@
           "input": 10,
           "output": 50
         },
-        "description": "Claude Fable 5.1 improves on Fable 5 across agentic coding, long-running workflows, front-end and visual code generation, finance, analysis, and knowledge work, with more concise plans and summaries. Anthropic retains prompts and outputs for 30 days; Zero Data Retention is not available.",
+        "description": "Claude model for demanding reasoning and long-horizon agentic work",
         "family": "claude-fable",
         "id": "anthropic/claude-fable-5.1",
+        "knowledge": "2026-06",
         "last_updated": "2026-09-01",
         "limit": {
           "context": 1000000,
@@ -162221,6 +162402,7 @@
         ],
         "release_date": "2026-09-01",
         "structured_output": true,
+        "temperature": false,
         "tool_call": true
       },
       "anthropic/claude-fable-latest": {
@@ -165741,9 +165923,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.22,
-          "output": 0.66
+          "cache_read": 0.014,
+          "input": 0.44,
+          "output": 1.32
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -201297,55 +201479,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "claude-fable-5-1": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.25,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 50
-        },
-        "description": "Claude model for demanding reasoning and long-horizon agentic work",
-        "family": "claude-fable",
-        "id": "claude-fable-5-1",
-        "knowledge": "2026-06",
-        "last_updated": "2026-09-01",
-        "limit": {
-          "context": 1000000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude Fable 5.1",
-        "open_weights": false,
-        "provider": {
-          "npm": "@ai-sdk/anthropic"
-        },
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-09-01",
-        "temperature": false,
-        "tool_call": true
-      },
       "claude-haiku-4-5": {
         "attachment": true,
         "cost": {
@@ -207572,6 +207705,7 @@
         "description": "Claude model for creative writing, analysis, and controlled agent workflows",
         "family": "claude-fable",
         "id": "anthropic/claude-fable-5.1",
+        "knowledge": "2026-06",
         "last_updated": "2026-09-01",
         "limit": {
           "context": 1000000,
@@ -208892,9 +209026,9 @@
       "deepseek/deepseek-chat-v3.1": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.55,
-          "input": 0.55,
-          "output": 1.65
+          "cache_read": 0.13,
+          "input": 0.25,
+          "output": 0.95
         },
         "description": "DeepSeek chat model for instruction following, coding, and analysis",
         "family": "deepseek",
@@ -208903,7 +209037,7 @@
         "last_updated": "2025-08-21",
         "limit": {
           "context": 163840,
-          "output": 144900
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -209140,9 +209274,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.014644,
-          "input": 0.07322,
-          "output": 0.14644
+          "cache_read": 0.017721,
+          "input": 0.088606,
+          "output": 0.177212
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -209232,9 +209366,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.22,
-          "output": 0.66
+          "cache_read": 0.014,
+          "input": 0.44,
+          "output": 1.32
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -209277,9 +209411,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.135,
-          "input": 1.6,
-          "output": 3.2
+          "cache_read": 0.086855,
+          "input": 1.04226,
+          "output": 2.08452
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -209291,7 +209425,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1048576,
-          "output": 393216
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -209324,9 +209458,9 @@
       "deepseek/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.022,
-          "input": 0.66,
-          "output": 1.98
+          "cache_read": 0.03718,
+          "input": 1.1154,
+          "output": 3.3462
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -213367,9 +213501,9 @@
       "nvidia/nemotron-3-ultra-550b-a55b": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1,
-          "input": 0.5,
-          "output": 2.2
+          "cache_read": 0.1875,
+          "input": 0.625,
+          "output": 3.125
         },
         "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
         "family": "nemotron",
@@ -213377,7 +213511,7 @@
         "last_updated": "2026-06-04",
         "limit": {
           "context": 262144,
-          "output": 16384
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -218388,7 +218522,7 @@
       "qwen/qwen3.8-2.4t-a95b": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.25,
+          "cache_read": 0.2,
           "input": 2,
           "output": 6
         },
@@ -218398,7 +218532,7 @@
         "last_updated": "2026-08-12",
         "limit": {
           "context": 1048576,
-          "output": 262144
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -219080,9 +219214,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -220423,9 +220557,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.221,
-          "input": 1.19,
-          "output": 3.74
+          "cache_read": 0.1932,
+          "input": 0.966,
+          "output": 3.036
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -220436,7 +220570,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 262144
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -220817,9 +220951,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.009996,
-          "input": 0.04998,
-          "output": 0.09996
+          "cache_read": 0.013,
+          "input": 0.05,
+          "output": 0.16
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -220827,7 +220961,7 @@
         "last_updated": "2026-08-01",
         "limit": {
           "context": 1310720,
-          "output": 131072
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -268013,10 +268147,10 @@
       "claude-fable-5-1": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.25,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 50
+          "cache_read": 0.3,
+          "cache_write": 15,
+          "input": 12,
+          "output": 60
         },
         "description": "Claude model for creative writing, analysis, and controlled agent workflows",
         "family": "claude-fable",
@@ -268120,7 +268254,17 @@
         "name": "Claude Opus 4.6",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-02-05",
         "structured_output": true,
         "temperature": true,
@@ -268155,7 +268299,18 @@
         "name": "Claude Opus 4.7",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-04-16",
         "structured_output": true,
         "temperature": false,
@@ -268190,7 +268345,18 @@
         "name": "Claude Opus 4.8",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-05-28",
         "structured_output": true,
         "temperature": false,
@@ -268225,7 +268391,18 @@
         "name": "Claude Opus 4.8 Fast",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-05-28",
         "structured_output": true,
         "temperature": false,
@@ -268260,7 +268437,18 @@
         "name": "Claude Opus 5",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-07-23",
         "structured_output": true,
         "temperature": false,
@@ -268295,7 +268483,18 @@
         "name": "Claude Opus 5 Fast",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-07-23",
         "structured_output": true,
         "temperature": false,
@@ -268365,7 +268564,17 @@
         "name": "Claude Sonnet 4.6",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-02-17",
         "structured_output": true,
         "temperature": true,
@@ -268400,7 +268609,18 @@
         "name": "Claude Sonnet 5",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-06-29",
         "structured_output": true,
         "temperature": false,
@@ -268479,7 +268699,17 @@
         "name": "DeepSeek V4 Flash 0423",
         "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2026-04-24",
         "structured_output": true,
         "temperature": true,
@@ -273800,7 +274030,8 @@
         "description": "Claude model for creative writing, analysis, and controlled agent workflows",
         "family": "claude-fable",
         "id": "anthropic/claude-fable-5.1",
-        "last_updated": "2026-08-31",
+        "knowledge": "2026-06",
+        "last_updated": "2026-09-01",
         "limit": {
           "context": 1000000,
           "output": 128000
@@ -273830,7 +274061,8 @@
             ]
           }
         ],
-        "release_date": "2026-08-31",
+        "release_date": "2026-09-01",
+        "temperature": false,
         "tool_call": true
       },
       "anthropic/claude-haiku-4.5": {
@@ -275259,36 +275491,6 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-01-20",
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek/deepseek-v3": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.135,
-          "input": 0.27,
-          "output": 1.12
-        },
-        "description": "DeepSeek chat model for instruction following, coding, and analysis",
-        "family": "deepseek",
-        "id": "deepseek/deepseek-v3",
-        "last_updated": "2024-12-26",
-        "limit": {
-          "context": 163840,
-          "output": 163840
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V3 0324",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2024-12-26",
         "temperature": true,
         "tool_call": true
       },

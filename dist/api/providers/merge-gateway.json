@@ -111,7 +111,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -133,9 +134,9 @@
         }
       ],
       "release_date": "2026-09-01",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": false,
-      "tool_call": false
+      "tool_call": true
     },
     "anthropic/claude-haiku-4-5-20251001": {
       "attachment": true,
@@ -5505,7 +5506,7 @@
       "tool_call": true
     },
     "qwen/qwen3.5-27b": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "cache_read": 0.0172,
         "input": 0.086,
@@ -5516,13 +5517,12 @@
       "id": "qwen/qwen3.5-27b",
       "last_updated": "2026-02-23",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"

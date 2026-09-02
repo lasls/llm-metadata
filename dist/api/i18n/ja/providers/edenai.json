@@ -183,19 +183,19 @@
       "temperature": false,
       "tool_call": true
     },
-    "anthropic/claude-fable-latest": {
+    "anthropic/claude-fable-5-1": {
       "attachment": true,
       "cost": {
-        "cache_read": 1,
+        "cache_read": 0.25,
         "cache_write": 12.5,
         "input": 10,
         "output": 50
       },
-      "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+      "description": "Claude model for demanding reasoning and long-horizon agentic work",
       "family": "claude-fable",
-      "id": "anthropic/claude-fable-latest",
-      "knowledge": "2026-01-31",
-      "last_updated": "2026-06-09",
+      "id": "anthropic/claude-fable-5-1",
+      "knowledge": "2026-06",
+      "last_updated": "2026-09-01",
       "limit": {
         "context": 1000000,
         "output": 128000
@@ -210,7 +210,7 @@
           "text"
         ]
       },
-      "name": "Claude Fable 5",
+      "name": "Claude Fable 5.1",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -225,7 +225,54 @@
           ]
         }
       ],
-      "release_date": "2026-06-09",
+      "release_date": "2026-09-01",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "anthropic/claude-fable-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 50
+      },
+      "description": "Claude model for demanding reasoning and long-horizon agentic work",
+      "family": "claude-fable",
+      "id": "anthropic/claude-fable-latest",
+      "knowledge": "2026-06",
+      "last_updated": "2026-09-01",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Fable 5.1",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-01",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -1325,6 +1372,93 @@
       "reasoning": false,
       "release_date": "2024-12-02",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "databricks/databricks-deepseek-v4-flash-0731": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.028,
+        "cache_write": 0.14,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "family": "deepseek-flash",
+      "id": "databricks/databricks-deepseek-v4-flash-0731",
+      "knowledge": "2025-05",
+      "last_updated": "2026-07-31",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-31",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "databricks/databricks-deepseek-v4-pro-0813": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.13202,
+        "cache_write": 1.31999,
+        "input": 1.31999,
+        "output": 3.95997
+      },
+      "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+      "family": "deepseek-thinking",
+      "id": "databricks/databricks-deepseek-v4-pro-0813",
+      "last_updated": "2026-08-22",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro 0813",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-12",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
