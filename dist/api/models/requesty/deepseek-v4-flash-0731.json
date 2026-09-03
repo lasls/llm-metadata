@@ -1,9 +1,9 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.014,
-    "input": 0.076,
-    "output": 0.153
+    "cache_read": 0.07,
+    "input": 0.14,
+    "output": 0.28
   },
   "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
   "family": "deepseek-flash",
@@ -12,7 +12,7 @@
   "last_updated": "2026-07-31",
   "limit": {
     "context": 1048576,
-    "output": 384000
+    "output": 131072
   },
   "modalities": {
     "input": [
@@ -24,7 +24,22 @@
   },
   "name": "DeepSeek V4 Flash 0731",
   "open_weights": true,
-  "reasoning": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "max"
+      ]
+    },
+    {
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2026-07-31",
   "structured_output": true,
   "temperature": true,
