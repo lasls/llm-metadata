@@ -3299,8 +3299,8 @@
         "input": 2,
         "output": 6
       },
-      "description": "Qwen3.8 Max 0902 is Alibaba's September 2 checkpoint of its flagship Qwen3.8 Max model for coding, knowledge work, data analysis, and long-running agent workflows. It supports text, image, video, PDF input, selectable thinking, tool calling, structured output, and a near-million-token context window.",
-      "family": "qwen3.8-max",
+      "description": "2026-09-02 upgraded snapshot of Qwen3.8 Max with stronger coding, collaborative agents, and multimodal document understanding",
+      "family": "qwen",
       "id": "alibaba/qwen3.8-max-0902",
       "last_updated": "2026-09-02",
       "limit": {
@@ -3333,6 +3333,7 @@
       ],
       "release_date": "2026-09-02",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "amazon/nova-2-lite-v1": {
@@ -6996,9 +6997,9 @@
     "deepseek/deepseek-v4-flash-vision-exp": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.014,
-        "input": 0.44,
-        "output": 1.32
+        "cache_read": 0.007,
+        "input": 0.22,
+        "output": 0.66
       },
       "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
       "family": "deepseek-flash",
@@ -11457,7 +11458,7 @@
       "id": "meta/muse-spark-1.1",
       "last_updated": "2026-07-09",
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "input": 1000000,
         "output": 65536
       },
@@ -11592,7 +11593,7 @@
         "input": 1.25,
         "output": 4.25
       },
-      "description": "Meta's Muse Spark 1.3 is a frontier multimodal reasoning model for long-horizon coding and agentic workflows, with strong gains in computer use, browsing, professional tool use, codebase understanding, instruction following, and million-token retrieval. It accepts text, images, audio, video, and files, supports tool calling and structured output, and always reasons before answering.",
+      "description": "Muse Spark 1.3 is a multimodal reasoning model from Meta for long-running agentic, multi-agent, and coding workflows. It improves long-horizon agent collaboration, instruction following, and coding efficiency relative to Muse Spark 1.2.",
       "family": "muse",
       "id": "meta/muse-spark-1.3",
       "last_updated": "2026-09-02",
@@ -11606,8 +11607,8 @@
           "text",
           "image",
           "video",
-          "audio",
-          "pdf"
+          "pdf",
+          "audio"
         ],
         "output": [
           "text"
@@ -11630,6 +11631,7 @@
       ],
       "release_date": "2026-09-02",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "meta/muse-spark-1.3-contributor": {
@@ -15789,6 +15791,72 @@
       "structured_output": true,
       "tool_call": true
     },
+    "ornith-ai/ornith-1.5-9b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.1,
+        "output": 0.2
+      },
+      "description": "Ornith 1.5 9B is an FP8 dense open-weight model built for agentic coding, tool use, visual understanding, and efficient long-context work. This variant disables thinking for faster direct responses.",
+      "family": "ornith",
+      "id": "ornith-ai/ornith-1.5-9b",
+      "last_updated": "2026-07-29",
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ornith 1.5 9B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-29",
+      "structured_output": true,
+      "tool_call": true
+    },
+    "ornith-ai/ornith-1.5-9b:thinking": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.1,
+        "output": 0.2
+      },
+      "description": "Ornith 1.5 9B with thinking enabled for more deliberate agentic coding, tool use, visual understanding, and long-context work.",
+      "family": "ornith",
+      "id": "ornith-ai/ornith-1.5-9b:thinking",
+      "last_updated": "2026-07-29",
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ornith 1.5 9B Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-29",
+      "structured_output": true,
+      "tool_call": true
+    },
     "pamanseau/OpenReasoning-Nemotron-32B": {
       "attachment": false,
       "cost": {
@@ -17065,6 +17133,72 @@
       "structured_output": false,
       "temperature": true,
       "tool_call": false
+    },
+    "qwen/qwen3.6-35b-a3b-uncensored": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.15,
+        "output": 0.95
+      },
+      "description": "Qwen 3.6 35B A3B Uncensored is an NVFP4 open-weight mixture-of-experts model LoRA-tuned for fewer refusals across chat, coding, tool use, and multimodal tasks.",
+      "family": "qwen3.6",
+      "id": "qwen/qwen3.6-35b-a3b-uncensored",
+      "last_updated": "2026-07-29",
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3.6 35B A3B Uncensored",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-29",
+      "structured_output": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.6-35b-a3b-uncensored:thinking": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.15,
+        "output": 0.95
+      },
+      "description": "Qwen 3.6 35B A3B Uncensored with thinking enabled for more deliberate coding, multimodal analysis, tool use, and complex chat tasks.",
+      "family": "qwen3.6",
+      "id": "qwen/qwen3.6-35b-a3b-uncensored:thinking",
+      "last_updated": "2026-07-29",
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3.6 35B A3B Uncensored Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-29",
+      "structured_output": true,
+      "tool_call": true
     },
     "qwen/qwen3.8-2.4t-a95b": {
       "attachment": true,
