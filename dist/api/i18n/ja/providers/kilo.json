@@ -6401,8 +6401,8 @@
       "id": "nvidia/nemotron-3-ultra-550b-a55b",
       "last_updated": "2026-06-04",
       "limit": {
-        "context": 202800,
-        "output": 182520
+        "context": 256000,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -6469,6 +6469,46 @@
       "structured_output": false,
       "temperature": true,
       "tool_call": true
+    },
+    "nvidia/nemotron-3.5-content-safety": {
+      "attachment": true,
+      "cost": {
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "NVIDIA Nemotron 3.5 Content Safety is a compact 4B-parameter multimodal guardrail model from NVIDIA, fine-tuned from Google Gemma-3-4B. It moderates both inputs to and responses from LLMs and VLMs, accepting...",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-3.5-content-safety",
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 131072,
+        "output": 117964
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Content Safety",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-04",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
     },
     "nvidia/nemotron-3.5-content-safety:free": {
       "attachment": true,
@@ -12197,9 +12237,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.020625,
-        "input": 0.0825,
-        "output": 0.33
+        "cache_read": 0.035,
+        "input": 0.14,
+        "output": 0.58
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
@@ -12600,7 +12640,7 @@
       "last_updated": "2023-07-22",
       "limit": {
         "context": 6144,
-        "output": 4096
+        "output": 5529
       },
       "modalities": {
         "input": [
@@ -14190,9 +14230,9 @@
     "~z-ai/glm-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.01425,
-        "input": 0.07125,
-        "output": 0.2375
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.25
       },
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "family": "glm-flash",
@@ -14200,7 +14240,7 @@
       "last_updated": "2026-08-27",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -14233,17 +14273,17 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1886,
-        "input": 1.148,
-        "output": 3.608
+        "cache_read": 0.1,
+        "input": 1.15,
+        "output": 3.5
       },
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "family": "glm",
       "id": "~z-ai/glm-latest",
       "last_updated": "2026-08-19",
       "limit": {
-        "context": 1048576,
-        "output": 943718
+        "context": 262144,
+        "output": 235929
       },
       "modalities": {
         "input": [
