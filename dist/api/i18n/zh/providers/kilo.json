@@ -3471,37 +3471,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "ibm-granite/granite-4.1-8b": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.05,
-        "output": 0.1
-      },
-      "description": "Tool-capable chat model for instruction following and agentic application workflows",
-      "family": "granite",
-      "id": "ibm-granite/granite-4.1-8b",
-      "last_updated": "2026-04-30",
-      "limit": {
-        "context": 131072,
-        "output": 117964
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "IBM: Granite 4.1 8B",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-04-30",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "ibm-granite/granite-4.2-8b": {
       "attachment": false,
       "cost": {
@@ -3650,7 +3619,7 @@
           "text"
         ]
       },
-      "name": "Ling-3.0-flash",
+      "name": "inclusionAI: Ling 3.0 Flash",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -3690,7 +3659,7 @@
           "text"
         ]
       },
-      "name": "Ling 3.0 Flash Fin",
+      "name": "inclusionAI: Ling 3.0 Flash Fin",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -3729,7 +3698,7 @@
           "text"
         ]
       },
-      "name": "Ling 3.0 Flash Fin (free)",
+      "name": "inclusionAI: Ling 3.0 Flash Fin (free)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -3742,6 +3711,45 @@
         }
       ],
       "release_date": "2026-08-27",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inclusionai/ling-3.0-flash-sante:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Ling 3.0 Flash Sante is a health and medicine-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for...",
+      "family": "ling",
+      "id": "inclusionai/ling-3.0-flash-sante:free",
+      "last_updated": "2026-09-04",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "inclusionAI: Ling 3.0 Flash Sante (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-04",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -4559,7 +4567,8 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -4606,7 +4615,8 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -8482,6 +8492,52 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-6-astra": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 50
+      },
+      "description": "GPT-6 Astra is a frontier reasoning model from OpenAI, suited for complex reasoning, coding, and agentic workflows.",
+      "family": "gpt",
+      "id": "openai/gpt-6-astra",
+      "last_updated": "2026-09-04",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-6 Astra ($$$$)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-04",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-audio": {
       "attachment": true,
       "cost": {
@@ -10692,7 +10748,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -10939,7 +10995,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -12237,9 +12293,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.035,
-        "input": 0.14,
-        "output": 0.58
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",

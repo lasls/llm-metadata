@@ -1988,9 +1988,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.017612,
-        "input": 0.08806,
-        "output": 0.17612
+        "cache_read": 0.017556,
+        "input": 0.08778,
+        "output": 0.17556
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -2125,9 +2125,9 @@
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.085188,
-        "input": 1.02225,
-        "output": 2.0445
+        "cache_read": 0.083491,
+        "input": 1.001892,
+        "output": 2.003784
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -3696,37 +3696,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "ibm-granite/granite-4.1-8b": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.05,
-        "output": 0.1
-      },
-      "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
-      "family": "granite",
-      "id": "ibm-granite/granite-4.1-8b",
-      "last_updated": "2026-04-30",
-      "limit": {
-        "context": 131072,
-        "output": 117964
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Granite 4.1 8B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-04-30",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "ibm-granite/granite-4.2-8b": {
       "attachment": false,
       "cost": {
@@ -3875,7 +3844,7 @@
           "text"
         ]
       },
-      "name": "Ling-3.0-flash",
+      "name": "Ling 3.0 Flash",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -3955,6 +3924,41 @@
         }
       ],
       "release_date": "2026-08-27",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inclusionai/ling-3.0-flash-sante:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "ling",
+      "id": "inclusionai/ling-3.0-flash-sante:free",
+      "last_updated": "2026-09-04",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.0 Flash Sante (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-09-04",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -4597,7 +4601,8 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -4644,7 +4649,8 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -8579,6 +8585,134 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-6-astra": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "context_over_200k": {
+          "cache_read": 2,
+          "cache_write": 25,
+          "input": 20,
+          "output": 75
+        },
+        "input": 10,
+        "output": 50,
+        "tiers": [
+          {
+            "cache_read": 2,
+            "cache_write": 25,
+            "input": 20,
+            "output": 75,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+      "family": "gpt",
+      "id": "openai/gpt-6-astra",
+      "last_updated": "2026-09-04",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Astra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-04",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6-astra-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "context_over_200k": {
+          "cache_read": 2,
+          "cache_write": 25,
+          "input": 20,
+          "output": 75
+        },
+        "input": 10,
+        "output": 50,
+        "tiers": [
+          {
+            "cache_read": 2,
+            "cache_write": 25,
+            "input": 20,
+            "output": 75,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+      "family": "gpt",
+      "id": "openai/gpt-6-astra-pro",
+      "last_updated": "2026-09-04",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Astra Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-04",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-audio": {
       "attachment": true,
       "cost": {
@@ -10802,9 +10936,8 @@
     "qwen/qwen3.5-35b-a3b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "input": 0.25,
-        "output": 1.25
+        "input": 0.08,
+        "output": 0.75
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -10812,7 +10945,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -11058,9 +11191,9 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.12,
-        "input": 0.6,
-        "output": 3.6
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 2
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -11068,7 +11201,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -12141,9 +12274,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
