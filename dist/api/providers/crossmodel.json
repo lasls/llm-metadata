@@ -1684,22 +1684,22 @@
     "openai/gpt-5.6-sol": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.5,
-        "cache_write": 6.25,
+        "cache_read": 0.4,
+        "cache_write": 5,
         "context_over_200k": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 45
+          "cache_read": 0.8,
+          "cache_write": 10,
+          "input": 8,
+          "output": 30
         },
-        "input": 5,
-        "output": 30,
+        "input": 4,
+        "output": 20,
         "tiers": [
           {
-            "cache_read": 1,
-            "cache_write": 12.5,
-            "input": 10,
-            "output": 45,
+            "cache_read": 0.8,
+            "cache_write": 10,
+            "input": 8,
+            "output": 30,
             "tier": {
               "size": 272000,
               "type": "context"
@@ -1809,6 +1809,70 @@
         }
       ],
       "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6-astra": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "context_over_200k": {
+          "cache_read": 2,
+          "cache_write": 25,
+          "input": 20,
+          "output": 75
+        },
+        "input": 10,
+        "output": 50,
+        "tiers": [
+          {
+            "cache_read": 2,
+            "cache_write": 25,
+            "input": 20,
+            "output": 75,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "GPT-6 Astra is OpenAI's most capable model for complex reasoning, coding, computer use, research, and document creation.",
+      "family": "gpt-astra",
+      "id": "openai/gpt-6-astra",
+      "last_updated": "2026-09-04",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Astra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-04",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
