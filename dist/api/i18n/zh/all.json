@@ -69385,8 +69385,8 @@
       "qwen/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "input": 0.352,
-          "output": 1.056
+          "input": 0.176,
+          "output": 0.528
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -69427,8 +69427,8 @@
       "qwen/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "input": 1.122,
-          "output": 3.366
+          "input": 0.5808,
+          "output": 1.7424
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -96360,6 +96360,50 @@
         "temperature": true,
         "tool_call": true
       },
+      "inkling": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.185096,
+          "input": 1.0888,
+          "output": 4.40964
+        },
+        "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
+        "family": "ling",
+        "id": "inkling",
+        "last_updated": "2026-09-05",
+        "limit": {
+          "context": 1048576,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Inkling",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-08-15",
+        "temperature": true,
+        "tool_call": true
+      },
       "kimi-k2-thinking": {
         "attachment": false,
         "cost": {
@@ -118598,7 +118642,7 @@
         "id": "qwen/qwen3.5-35b-a3b",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 262144,
+          "context": 256000,
           "output": 16384
         },
         "modalities": {
@@ -120144,9 +120188,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.14,
-          "output": 0.58
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -123867,9 +123911,9 @@
       "deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0097,
-          "input": 0.051,
-          "output": 0.104
+          "cache_read": 0.01,
+          "input": 0.05,
+          "output": 0.1
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -136351,9 +136395,9 @@
       "consensusprotocol/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1,
-          "input": 0.07,
-          "output": 0.16
+          "cache_read": 0.01,
+          "input": 0.05,
+          "output": 0.1
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -155928,9 +155972,9 @@
       "zai/glm-5.3-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.015,
-          "input": 0.075,
-          "output": 0.25
+          "cache_read": 0.003,
+          "input": 0.015,
+          "output": 0.05
         },
         "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
         "family": "glm",
@@ -162023,37 +162067,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-01-01",
-        "structured_output": false,
-        "tool_call": false
-      },
-      "NousResearch/Hermes-4-70B:thinking": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.1003,
-          "input": 0.2006,
-          "output": 0.3995
-        },
-        "description": "General-purpose chat model for instruction following, writing, and analysis",
-        "family": "nousresearch",
-        "id": "NousResearch/Hermes-4-70B:thinking",
-        "last_updated": "2025-09-17",
-        "limit": {
-          "context": 128000,
-          "input": 128000,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Hermes 4 (Thinking)",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-09-17",
         "structured_output": false,
         "tool_call": false
       },
@@ -176267,10 +176280,10 @@
       "openai/gpt-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "cache_write": 2.5,
-          "input": 2,
-          "output": 10
+          "cache_read": 1,
+          "cache_write": 12.5,
+          "input": 10,
+          "output": 50
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
         "family": "gpt",
@@ -176298,7 +176311,6 @@
           {
             "type": "effort",
             "values": [
-              "none",
               "low",
               "medium",
               "high",
@@ -211205,9 +211217,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.016996,
-          "input": 0.08498,
-          "output": 0.16996
+          "cache_read": 0.016772,
+          "input": 0.08386,
+          "output": 0.16772
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -211342,9 +211354,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.072515,
-          "input": 0.870174,
-          "output": 1.740348
+          "cache_read": 0.068281,
+          "input": 0.819366,
+          "output": 1.638732
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -211389,9 +211401,9 @@
       "deepseek/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.037356,
-          "input": 1.12068,
-          "output": 3.36204
+          "cache_read": 0.019316,
+          "input": 0.57948,
+          "output": 1.73844
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -220153,8 +220165,9 @@
       "qwen/qwen3.5-35b-a3b": {
         "attachment": true,
         "cost": {
-          "input": 0.08,
-          "output": 0.75
+          "cache_read": 0.15625,
+          "input": 0.3125,
+          "output": 1.25
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -221491,9 +221504,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.033,
-          "input": 0.132,
-          "output": 0.528
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
