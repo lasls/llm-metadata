@@ -1989,9 +1989,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.017416,
-        "input": 0.08708,
-        "output": 0.17416
+        "cache_read": 0.0168,
+        "input": 0.084,
+        "output": 0.168
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -2126,9 +2126,9 @@
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.079605,
-        "input": 0.95526,
-        "output": 1.91052
+        "cache_read": 0.079011,
+        "input": 0.948126,
+        "output": 1.896252
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2173,9 +2173,9 @@
     "deepseek/deepseek-v4-pro-0813": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.022,
-        "input": 0.66,
-        "output": 1.98
+        "cache_read": 0.057948,
+        "input": 0.57948,
+        "output": 1.73844
       },
       "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
       "family": "deepseek-thinking",
@@ -2183,7 +2183,7 @@
       "last_updated": "2026-08-22",
       "limit": {
         "context": 1048576,
-        "output": 384000
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -3780,17 +3780,17 @@
       "temperature": true,
       "tool_call": true
     },
-    "inception/mercury-2.5-preview": {
+    "inception/mercury-2.5": {
       "attachment": false,
       "cost": {
         "cache_read": 0.004,
         "input": 0.04,
         "output": 0.15
       },
-      "description": "Preview model for early access evaluation, prototyping, and compatibility testing",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "family": "mercury",
-      "id": "inception/mercury-2.5-preview",
-      "last_updated": "2026-08-31",
+      "id": "inception/mercury-2.5",
+      "last_updated": "2026-09-08",
       "limit": {
         "context": 260000,
         "output": 65536
@@ -3803,7 +3803,7 @@
           "text"
         ]
       },
-      "name": "Mercury 2.5 Preview",
+      "name": "Mercury 2.5",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -3817,7 +3817,7 @@
           ]
         }
       ],
-      "release_date": "2026-08-31",
+      "release_date": "2026-09-08",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -4756,7 +4756,7 @@
     "minimax/minimax-m1": {
       "attachment": false,
       "cost": {
-        "input": 0.55,
+        "input": 0.4,
         "output": 2.2
       },
       "description": "MiniMax model for chat, coding, office work, and agentic tasks",
@@ -5697,6 +5697,7 @@
     "moonshotai/kimi-k2-thinking": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.15,
         "input": 0.6,
         "output": 2.5
       },
@@ -5710,7 +5711,7 @@
       "last_updated": "2025-11-06",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 100352
       },
       "modalities": {
         "input": [
@@ -5950,6 +5951,87 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "nex-agi/nex-n2.5-mini:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "agi",
+      "id": "nex-agi/nex-n2.5-mini:free",
+      "last_updated": "2026-09-08",
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nex-N2.5-Mini (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nex-agi/nex-n2.5-pro:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "family": "agi",
+      "id": "nex-agi/nex-n2.5-pro:free",
+      "last_updated": "2026-09-08",
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nex-N2.5-Pro (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "nousresearch/hermes-3-llama-3.1-405b": {
       "attachment": false,
@@ -12134,9 +12216,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",

@@ -4740,7 +4740,7 @@
       "reasoning": false,
       "release_date": "2024-01-01",
       "structured_output": false,
-      "tool_call": true
+      "tool_call": false
     },
     "brave": {
       "attachment": false,
@@ -4909,7 +4909,7 @@
       "tool_call": true
     },
     "bytedance-seed/seed-2.0-lite": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.125,
         "input": 0.25,
@@ -4926,7 +4926,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -7924,6 +7926,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio"
         ],
         "output": [
@@ -7969,6 +7972,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio"
         ],
         "output": [
@@ -8144,6 +8148,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio",
           "pdf"
         ],
@@ -8428,6 +8433,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio"
         ],
         "output": [
@@ -9531,6 +9537,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio"
         ],
         "output": [
@@ -9577,6 +9584,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio"
         ],
         "output": [
@@ -9673,6 +9681,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio"
         ],
         "output": [
@@ -9719,6 +9728,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio"
         ],
         "output": [
@@ -9764,6 +9774,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio"
         ],
         "output": [
@@ -9835,6 +9846,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio"
         ],
         "output": [
@@ -9931,6 +9943,7 @@
         "input": [
           "text",
           "image",
+          "video",
           "audio"
         ],
         "output": [
@@ -10009,7 +10022,7 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.075,
-        "cache_write": 0.075,
+        "cache_write": 0.041667,
         "input": 0.75,
         "output": 3.75
       },
@@ -10058,7 +10071,7 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.075,
-        "cache_write": 0.075,
+        "cache_write": 0.041667,
         "input": 0.75,
         "output": 3.75
       },
@@ -10263,7 +10276,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -10301,7 +10315,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -10335,7 +10350,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -10373,7 +10389,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -10925,7 +10942,7 @@
       "reasoning": false,
       "release_date": "2025-12-15",
       "structured_output": false,
-      "tool_call": true
+      "tool_call": false
     },
     "liquid/lfm-2.5-2.6b": {
       "attachment": false,
@@ -11418,7 +11435,9 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "audio"
         ],
         "output": [
           "text"
@@ -13294,96 +13313,6 @@
       "structured_output": true,
       "tool_call": true
     },
-    "nex-agi/nex-n2-mini": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.0025,
-        "input": 0.025,
-        "output": 0.1
-      },
-      "description": "Nex AGI's open-source agentic mixture-of-experts model in the Nex N2 family. It accepts text and image input and is built for coding, tool use, structured outputs, and optional reasoning with a 256K context window.",
-      "family": "agi",
-      "id": "nex-agi/nex-n2-mini",
-      "last_updated": "2026-06-24",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 235929
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nex N2 Mini",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "release_date": "2026-06-24",
-      "structured_output": true,
-      "tool_call": true
-    },
-    "nex-agi/nex-n2-pro": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.25,
-        "input": 0.5,
-        "output": 2.5
-      },
-      "description": "Nex AGI's open-source agentic reasoning model, post-trained on Qwen3.5-397B-A17B. It is built for agentic coding, software engineering, deep research, tool use, and long-horizon tasks with a 256K context window.",
-      "family": "agi",
-      "id": "nex-agi/nex-n2-pro",
-      "last_updated": "2026-06-04",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 235929
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nex N2 Pro",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "release_date": "2026-06-04",
-      "structured_output": true,
-      "tool_call": true
-    },
     "nothingiisreal/L3.1-70B-Celeste-V0.1-BF16": {
       "attachment": false,
       "cost": {
@@ -13510,40 +13439,6 @@
       "structured_output": false,
       "temperature": true,
       "tool_call": false
-    },
-    "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.0525,
-        "input": 0.105,
-        "output": 0.42
-      },
-      "description": "Open Nemotron omni model combining reasoning with text, vision, and audio",
-      "family": "nemotron",
-      "id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
-      "last_updated": "2026-04-28",
-      "limit": {
-        "context": 256000,
-        "input": 256000,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nvidia Nemotron 3 Nano Omni",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-04-28",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
     },
     "nvidia/nemotron-3-super-120b-a12b": {
       "attachment": false,
@@ -17079,7 +16974,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -18418,7 +18314,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -18452,7 +18349,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -18638,9 +18536,9 @@
     "sarvam-105b": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.028,
-        "input": 0.045,
-        "output": 0.177
+        "cache_read": 0.0336,
+        "input": 0.054,
+        "output": 0.2124
       },
       "description": "Flagship Indian-language reasoning model for enterprise multilingual applications",
       "family": "sarvam",
@@ -19197,7 +19095,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "audio"
         ],
         "output": [
           "text"
@@ -19230,7 +19129,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "audio"
         ],
         "output": [
           "text"
@@ -19956,6 +19856,7 @@
         "input": [
           "text",
           "image",
+          "audio",
           "video"
         ],
         "output": [
@@ -20171,6 +20072,7 @@
         "input": [
           "text",
           "image",
+          "audio",
           "video"
         ],
         "output": [
@@ -20603,7 +20505,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -21296,9 +21199,9 @@
     "z-ai/glm-5.3-flash-uncensored": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.125,
-        "input": 0.25,
-        "output": 1
+        "cache_read": 0.175,
+        "input": 0.35,
+        "output": 1.4
       },
       "description": "GLM 5.3 Flash Uncensored is an uncensored fine-tune of the efficient 320B mixture-of-experts reasoning model, built for unrestricted chat, creative writing, coding, agentic work, tool use, and long-context tasks.",
       "family": "glm",
@@ -21427,7 +21330,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -21460,7 +21364,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"

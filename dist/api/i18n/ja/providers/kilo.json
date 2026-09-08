@@ -2099,8 +2099,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "last_updated": "2026-08-22",
       "limit": {
-        "context": 1024000,
-        "output": 384000
+        "context": 1048576,
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -3555,7 +3555,7 @@
       "temperature": true,
       "tool_call": true
     },
-    "inception/mercury-2.5-preview": {
+    "inception/mercury-2.5": {
       "attachment": false,
       "cost": {
         "cache_read": 0.02,
@@ -3564,8 +3564,8 @@
       },
       "description": "Mercury 2.5 is the fastest reasoning LLM, and the latest diffusion LLM (dLLM) from Inception. Instead of generating tokens sequentially, Mercury 2.5 produces and refines multiple tokens in parallel, achieving...",
       "family": "mercury",
-      "id": "inception/mercury-2.5-preview",
-      "last_updated": "2026-08-31",
+      "id": "inception/mercury-2.5",
+      "last_updated": "2026-09-08",
       "limit": {
         "context": 260000,
         "output": 65536
@@ -3578,7 +3578,7 @@
           "text"
         ]
       },
-      "name": "Inception: Mercury 2.5 Preview",
+      "name": "Inception: Mercury 2.5",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -3592,7 +3592,7 @@
           ]
         }
       ],
-      "release_date": "2026-08-31",
+      "release_date": "2026-09-08",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -5685,7 +5685,7 @@
       "last_updated": "2025-11-06",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 100352
       },
       "modalities": {
         "input": [
@@ -5938,6 +5938,87 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "nex-agi/nex-n2.5-mini:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+      "family": "agi",
+      "id": "nex-agi/nex-n2.5-mini:free",
+      "last_updated": "2026-09-08",
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nex AGI: Nex-N2.5-Mini (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nex-agi/nex-n2.5-pro:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+      "family": "agi",
+      "id": "nex-agi/nex-n2.5-pro:free",
+      "last_updated": "2026-09-08",
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nex AGI: Nex-N2.5-Pro (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "nousresearch/hermes-3-llama-3.1-405b": {
       "attachment": false,
@@ -12181,9 +12262,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
