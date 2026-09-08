@@ -7228,6 +7228,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek/deepseek-v4.1-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03124,
+        "input": 0.1562,
+        "output": 0.3124
+      },
+      "description": "DeepSeek V4.1 Flash supports text and image input, reasoning, tool calling, and structured output with a 1M-token context window. This is a rate-limited beta with limited capacity, intended for testing rather than production use. Assume prompts and responses are logged by the provider and may be used for model training or service improvement. Do not send sensitive or confidential data.",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v4.1-flash",
+      "last_updated": "2026-09-08",
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-08",
+      "structured_output": true,
+      "tool_call": true
+    },
     "doubao-1.5-pro-256k": {
       "attachment": false,
       "cost": {
@@ -16074,39 +16117,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "poolside/laguna-xs-2.1": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.0315,
-        "input": 0.063,
-        "output": 0.126
-      },
-      "description": "Agentic coding model from Poolside in the XS size class for local deployment",
-      "family": "laguna",
-      "id": "poolside/laguna-xs-2.1",
-      "last_updated": "2026-07-02",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Laguna XS 2.1",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-07-02",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "qvq-max": {
       "attachment": true,
       "cost": {
@@ -20143,68 +20153,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "yi-large": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 1.598,
-        "input": 3.196,
-        "output": 3.196
-      },
-      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-      "family": "yi",
-      "id": "yi-large",
-      "last_updated": "2024-05-13",
-      "limit": {
-        "context": 32000,
-        "input": 32000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Yi Large",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-01-01",
-      "structured_output": false,
-      "tool_call": false
-    },
-    "yi-medium-200k": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 1.2495,
-        "input": 2.499,
-        "output": 2.499
-      },
-      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-      "family": "yi",
-      "id": "yi-medium-200k",
-      "last_updated": "2024-03-01",
-      "limit": {
-        "context": 200000,
-        "input": 200000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Yi Medium 200k",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-01-01",
-      "structured_output": false,
-      "tool_call": false
-    },
     "z-ai/GLM-4.5-Air": {
       "attachment": false,
       "cost": {
@@ -21307,9 +21255,9 @@
     "z-ai/glm-5.3-flash-uncensored": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.014,
-        "input": 0.07,
-        "output": 0.21
+        "cache_read": 0.125,
+        "input": 0.25,
+        "output": 1
       },
       "description": "GLM 5.3 Flash Uncensored is an uncensored fine-tune of the efficient 320B mixture-of-experts reasoning model, built for unrestricted chat, creative writing, coding, agentic work, tool use, and long-context tasks.",
       "family": "glm",

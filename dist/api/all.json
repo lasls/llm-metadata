@@ -69505,8 +69505,8 @@
       "qwen/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "input": 0.176,
-          "output": 0.528
+          "input": 0.352,
+          "output": 1.056
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -69547,8 +69547,8 @@
       "qwen/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "input": 0.5808,
-          "output": 1.7424
+          "input": 1.122,
+          "output": 3.366
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -110081,7 +110081,7 @@
         "last_updated": "2026-07-31",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -110198,7 +110198,7 @@
       "deepseek/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.132,
+          "cache_read": 0.044,
           "input": 1.32,
           "output": 3.96
         },
@@ -168109,6 +168109,49 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek/deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03124,
+          "input": 0.1562,
+          "output": 0.3124
+        },
+        "description": "DeepSeek V4.1 Flash supports text and image input, reasoning, tool calling, and structured output with a 1M-token context window. This is a rate-limited beta with limited capacity, intended for testing rather than production use. Assume prompts and responses are logged by the provider and may be used for model training or service improvement. Do not send sensitive or confidential data.",
+        "family": "deepseek",
+        "id": "deepseek/deepseek-v4.1-flash",
+        "last_updated": "2026-09-08",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-08",
+        "structured_output": true,
+        "tool_call": true
+      },
       "doubao-1.5-pro-256k": {
         "attachment": false,
         "cost": {
@@ -176955,39 +176998,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "poolside/laguna-xs-2.1": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.0315,
-          "input": 0.063,
-          "output": 0.126
-        },
-        "description": "Agentic coding model from Poolside in the XS size class for local deployment",
-        "family": "laguna",
-        "id": "poolside/laguna-xs-2.1",
-        "last_updated": "2026-07-02",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Laguna XS 2.1",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-07-02",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "qvq-max": {
         "attachment": true,
         "cost": {
@@ -181024,68 +181034,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "yi-large": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 1.598,
-          "input": 3.196,
-          "output": 3.196
-        },
-        "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-        "family": "yi",
-        "id": "yi-large",
-        "last_updated": "2024-05-13",
-        "limit": {
-          "context": 32000,
-          "input": 32000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Yi Large",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-01-01",
-        "structured_output": false,
-        "tool_call": false
-      },
-      "yi-medium-200k": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 1.2495,
-          "input": 2.499,
-          "output": 2.499
-        },
-        "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-        "family": "yi",
-        "id": "yi-medium-200k",
-        "last_updated": "2024-03-01",
-        "limit": {
-          "context": 200000,
-          "input": 200000,
-          "output": 4096
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Yi Medium 200k",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2024-01-01",
-        "structured_output": false,
-        "tool_call": false
-      },
       "z-ai/GLM-4.5-Air": {
         "attachment": false,
         "cost": {
@@ -182188,9 +182136,9 @@
       "z-ai/glm-5.3-flash-uncensored": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.07,
-          "output": 0.21
+          "cache_read": 0.125,
+          "input": 0.25,
+          "output": 1
         },
         "description": "GLM 5.3 Flash Uncensored is an uncensored fine-tune of the efficient 320B mixture-of-experts reasoning model, built for unrestricted chat, creative writing, coding, agentic work, tool use, and long-context tasks.",
         "family": "glm",
@@ -211310,9 +211258,9 @@
       "deepseek/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
-          "input": 0.14,
-          "output": 0.28
+          "cache_read": 0.016,
+          "input": 0.065,
+          "output": 0.18
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -211321,7 +211269,7 @@
         "last_updated": "2026-07-31",
         "limit": {
           "context": 1310720,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -241773,6 +241721,90 @@
         "status": "beta",
         "tool_call": false
       },
+      "glm-5.3": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1733,
+          "input": 1.791,
+          "output": 8.9436
+        },
+        "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "family": "glm",
+        "id": "glm-5.3",
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 256000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-latest": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.1733,
+          "input": 1.791,
+          "output": 8.9436
+        },
+        "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "family": "glm",
+        "id": "glm-latest",
+        "last_updated": "2026-08-14",
+        "limit": {
+          "context": 256000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM (latest)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
+        "status": "beta",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gpt-oss-120b": {
         "attachment": false,
         "cost": {
@@ -247013,8 +247045,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.07,
-          "input": 0.14,
-          "output": 0.28
+          "input": 0.28,
+          "output": 0.56
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -247060,8 +247092,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.07,
-          "input": 0.14,
-          "output": 0.28
+          "input": 0.28,
+          "output": 0.56
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -247107,8 +247139,8 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.07,
-          "input": 0.14,
-          "output": 0.28
+          "input": 0.28,
+          "output": 0.56
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -248739,7 +248771,7 @@
         "cost": {
           "cache_read": 0.07,
           "input": 0.2,
-          "output": 0.5
+          "output": 0.6
         },
         "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
         "family": "glm",
@@ -248788,7 +248820,7 @@
         "cost": {
           "cache_read": 0.07,
           "input": 0.2,
-          "output": 0.5
+          "output": 0.6
         },
         "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
         "family": "glm",
@@ -250701,9 +250733,9 @@
       "kimi-k3": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.225,
-          "input": 2.25,
-          "output": 11.25
+          "cache_read": 0.45,
+          "input": 3,
+          "output": 15
         },
         "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
         "family": "kimi-k3",
@@ -250749,9 +250781,9 @@
       "kimi-k3@eu": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.225,
-          "input": 2.25,
-          "output": 11.25
+          "cache_read": 0.45,
+          "input": 3,
+          "output": 15
         },
         "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
         "family": "kimi-k3",
@@ -253032,9 +253064,9 @@
       "thinkingcap-qwen3.6-27b": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.26,
+          "cache_read": 0.05,
           "input": 0.4,
-          "output": 3
+          "output": 2.6
         },
         "description": "ThinkingCap-Qwen3.6-27B is a reasoning tuned model from BottlecapAI built on Qwen3.6 27B. It supports extended thinking with tool calling and a 256K context window. Served via Sference.",
         "family": "qwen3.6",
@@ -253077,9 +253109,9 @@
       "thinkingcap-qwen3.6-27b@eu": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.26,
+          "cache_read": 0.05,
           "input": 0.4,
-          "output": 3
+          "output": 2.6
         },
         "description": "ThinkingCap-Qwen3.6-27B is a reasoning tuned model from BottlecapAI built on Qwen3.6 27B. It supports extended thinking with tool calling and a 256K context window. Served via Sference.",
         "family": "qwen3.6",
@@ -295723,8 +295755,7 @@
         "interleaved": {
           "field": "reasoning_content"
         },
-        "knowledge": "2025-01",
-        "last_updated": "2026-04-15",
+        "last_updated": "2026-08-26",
         "limit": {
           "context": 1000000,
           "output": 131072
@@ -295745,12 +295776,13 @@
           {
             "type": "effort",
             "values": [
+              "low",
               "high",
               "max"
             ]
           }
         ],
-        "release_date": "2026-04-15",
+        "release_date": "2026-08-26",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
