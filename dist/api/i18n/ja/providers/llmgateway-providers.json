@@ -1765,6 +1765,53 @@
       "temperature": false,
       "tool_call": true
     },
+    "aws-bedrock/claude-fable-5-1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 50
+      },
+      "description": "Claude model for demanding reasoning and long-horizon agentic work",
+      "family": "claude-fable",
+      "id": "aws-bedrock/claude-fable-5-1",
+      "knowledge": "2026-06",
+      "last_updated": "2026-09-01",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Fable 5.1 (AWS Bedrock)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-01",
+      "structured_output": false,
+      "temperature": false,
+      "tool_call": true
+    },
     "aws-bedrock/claude-haiku-4-5": {
       "attachment": true,
       "cost": {
@@ -5673,7 +5720,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 524288,
+        "context": 1000000,
         "output": 393216
       },
       "modalities": {
@@ -5700,6 +5747,48 @@
       ],
       "release_date": "2026-04-24",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "consensusprotocol/gemma-4-31b-it": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.25
+      },
+      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
+      "family": "gemma",
+      "id": "consensusprotocol/gemma-4-31b-it",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B IT (Consensus Protocol)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -14793,6 +14882,88 @@
         }
       ],
       "release_date": "2025-09",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "vichar-ai/glm-5.3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "vichar-ai/glm-5.3",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1048000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 (vichar-ai)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "vichar-ai/glm-5.3-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm",
+      "id": "vichar-ai/glm-5.3-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1048000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 Flash (vichar-ai)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
       "structured_output": false,
       "temperature": true,
       "tool_call": true

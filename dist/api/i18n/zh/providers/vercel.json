@@ -3307,9 +3307,8 @@
     "deepseek/deepseek-v3.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.028,
-        "input": 0.28,
-        "output": 0.42
+        "input": 0.62,
+        "output": 1.85
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -3576,20 +3575,21 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek/deepseek-v4.1-flash-beta": {
+    "deepseek/deepseek-v4.1-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.007,
-        "input": 0.22,
-        "output": 0.66
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
       },
-      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
-      "family": "deepseek",
-      "id": "deepseek/deepseek-v4.1-flash-beta",
-      "last_updated": "2026-09-08",
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "deepseek/deepseek-v4.1-flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
       "limit": {
-        "context": 1000000,
-        "output": 384000
+        "context": 1048576,
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -3600,8 +3600,8 @@
           "text"
         ]
       },
-      "name": "DeepSeek V4.1 Flash Beta",
-      "open_weights": false,
+      "name": "DeepSeek V4.1 Flash",
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -3615,7 +3615,9 @@
           ]
         }
       ],
-      "release_date": "2026-09-08",
+      "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "fish-audio/s1": {
