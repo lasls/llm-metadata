@@ -52707,10 +52707,10 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0135,
-          "cache_write": 0.405,
-          "input": 0.405,
-          "output": 1.215
+          "cache_read": 0.0054,
+          "cache_write": 0.27,
+          "input": 0.27,
+          "output": 1.08
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -52755,10 +52755,10 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0135,
-          "cache_write": 0.405,
-          "input": 0.405,
-          "output": 1.215
+          "cache_read": 0.0054,
+          "cache_write": 0.27,
+          "input": 0.27,
+          "output": 1.08
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -52844,6 +52844,55 @@
           }
         ],
         "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0054,
+          "cache_write": 0.27,
+          "input": 0.27,
+          "output": 1.08
+        },
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
+        "id": "deepseek/deepseek-v4.1-flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -69887,6 +69936,48 @@
         "temperature": true,
         "tool_call": true
       },
+      "nebius/deepseek-ai/DeepSeek-V4-Pro-0813": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 1.32,
+          "input": 1.32,
+          "output": 3.96
+        },
+        "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+        "family": "deepseek-thinking",
+        "id": "nebius/deepseek-ai/DeepSeek-V4-Pro-0813",
+        "last_updated": "2026-08-22",
+        "limit": {
+          "context": 979000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro 0813 (Nebius)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-12",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "nebius/meta-llama/Llama-3.3-70B-Instruct": {
         "attachment": false,
         "cost": {
@@ -72016,8 +72107,8 @@
       "qwen/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "input": 0.176,
-          "output": 0.528
+          "input": 0.352,
+          "output": 1.056
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -72058,8 +72149,8 @@
       "qwen/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "input": 0.5808,
-          "output": 1.7424
+          "input": 1.122,
+          "output": 3.366
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -112942,6 +113033,50 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek/deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.006,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the cost-efficient tier of the V4.1 family. DeepSeek reports that it exceeds V4 Pro on performance, speed, and task...",
+        "family": "deepseek-flash",
+        "id": "deepseek/deepseek-v4.1-flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1048576,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "dots-studio/dots-3-note-preview:free": {
         "attachment": true,
         "cost": {
@@ -124372,7 +124507,7 @@
         "id": "z-ai/glm-5.2",
         "last_updated": "2026-06-13",
         "limit": {
-          "context": 1048576,
+          "context": 1000000,
           "output": 131072
         },
         "modalities": {
@@ -125030,9 +125165,9 @@
       "~z-ai/glm-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.07,
-          "output": 0.2333
+          "cache_read": 0.015,
+          "input": 0.075,
+          "output": 0.25
         },
         "description": "This model always redirects to the latest model in the GLM Flash family.",
         "family": "glm-flash",
@@ -125073,9 +125208,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.2067,
-          "input": 1.113,
-          "output": 3.498
+          "cache_read": 0.2015,
+          "input": 1.085,
+          "output": 3.41
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
@@ -126806,49 +126941,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek-v4-flash-vision-exp": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.0028,
-          "input": 0.14,
-          "output": 0.28
-        },
-        "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
-        "family": "deepseek-flash",
-        "id": "deepseek-v4-flash-vision-exp",
-        "last_updated": "2026-08-21",
-        "limit": {
-          "context": 1050000,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Flash Vision Exp",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-08-21",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "deepseek-v4-pro": {
         "attachment": false,
         "cost": {
@@ -126894,6 +126986,50 @@
           }
         ],
         "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4.1-flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1050000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -139957,95 +140093,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek/deepseek-v4-flash": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.0028,
-          "input": 0.14,
-          "output": 0.28
-        },
-        "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
-        "family": "deepseek-flash",
-        "id": "deepseek/deepseek-v4-flash",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2025-05",
-        "last_updated": "2026-04-24",
-        "limit": {
-          "context": 1050000,
-          "output": 393216
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Flash (DeepSeek)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-04-24",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek/deepseek-v4-flash-vision-exp": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.0028,
-          "input": 0.14,
-          "output": 0.28
-        },
-        "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
-        "family": "deepseek-flash",
-        "id": "deepseek/deepseek-v4-flash-vision-exp",
-        "last_updated": "2026-08-21",
-        "limit": {
-          "context": 1050000,
-          "output": 393216
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Flash Vision Exp (DeepSeek)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-08-21",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
@@ -140087,6 +140134,50 @@
           }
         ],
         "release_date": "2026-04-24",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
+        "id": "deepseek/deepseek-v4.1-flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1050000,
+          "output": 393216
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash (DeepSeek)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -170683,10 +170774,11 @@
           "input": 0.1562,
           "output": 0.3124
         },
-        "description": "DeepSeek V4.1 Flash supports text and image input, reasoning, tool calling, and structured output with a 1M-token context window. This is a rate-limited beta with limited capacity, intended for testing rather than production use. Assume prompts and responses are logged by the provider and may be used for model training or service improvement. Do not send sensitive or confidential data.",
-        "family": "deepseek",
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
         "id": "deepseek/deepseek-v4.1-flash",
-        "last_updated": "2026-09-08",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
         "limit": {
           "context": 1000000,
           "input": 1000000,
@@ -170702,7 +170794,7 @@
           ]
         },
         "name": "DeepSeek V4.1 Flash",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -170715,8 +170807,9 @@
             ]
           }
         ],
-        "release_date": "2026-09-08",
+        "release_date": "2026-09-10",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "deepseek/deepseek-v4.1-flash:thinking": {
@@ -170726,10 +170819,11 @@
           "input": 0.1562,
           "output": 0.3124
         },
-        "description": "DeepSeek V4.1 Flash supports text and image input, reasoning, tool calling, and structured output with a 1M-token context window. This is a rate-limited beta with limited capacity, intended for testing rather than production use. Assume prompts and responses are logged by the provider and may be used for model training or service improvement. Do not send sensitive or confidential data.",
-        "family": "deepseek",
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
         "id": "deepseek/deepseek-v4.1-flash:thinking",
-        "last_updated": "2026-09-08",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
         "limit": {
           "context": 1000000,
           "input": 1000000,
@@ -170745,7 +170839,7 @@
           ]
         },
         "name": "DeepSeek V4.1 Flash Thinking",
-        "open_weights": false,
+        "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -170758,8 +170852,9 @@
             ]
           }
         ],
-        "release_date": "2026-09-08",
+        "release_date": "2026-09-10",
         "structured_output": true,
+        "temperature": true,
         "tool_call": true
       },
       "doubao-1.5-pro-256k": {
@@ -179330,72 +179425,6 @@
         "structured_output": true,
         "tool_call": true
       },
-      "ornith-ai/ornith-1.5-9b": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.05,
-          "input": 0.1,
-          "output": 0.2
-        },
-        "description": "Ornith 1.5 9B is an FP8 dense open-weight model built for agentic coding, tool use, visual understanding, and efficient long-context work. This variant disables thinking for faster direct responses.",
-        "family": "ornith",
-        "id": "ornith-ai/ornith-1.5-9b",
-        "last_updated": "2026-07-29",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Ornith 1.5 9B",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-07-29",
-        "structured_output": true,
-        "tool_call": true
-      },
-      "ornith-ai/ornith-1.5-9b:thinking": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.05,
-          "input": 0.1,
-          "output": 0.2
-        },
-        "description": "Ornith 1.5 9B with thinking enabled for more deliberate agentic coding, tool use, visual understanding, and long-context work.",
-        "family": "ornith",
-        "id": "ornith-ai/ornith-1.5-9b:thinking",
-        "last_updated": "2026-07-29",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Ornith 1.5 9B Thinking",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-07-29",
-        "structured_output": true,
-        "tool_call": true
-      },
       "pamanseau/OpenReasoning-Nemotron-32B": {
         "attachment": false,
         "cost": {
@@ -180673,72 +180702,6 @@
         "structured_output": false,
         "temperature": true,
         "tool_call": false
-      },
-      "qwen/qwen3.6-35b-a3b-uncensored": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.075,
-          "input": 0.15,
-          "output": 0.95
-        },
-        "description": "Qwen 3.6 35B A3B Uncensored is an NVFP4 open-weight mixture-of-experts model LoRA-tuned for fewer refusals across chat, coding, tool use, and multimodal tasks.",
-        "family": "qwen3.6",
-        "id": "qwen/qwen3.6-35b-a3b-uncensored",
-        "last_updated": "2026-07-29",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen 3.6 35B A3B Uncensored",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-07-29",
-        "structured_output": true,
-        "tool_call": true
-      },
-      "qwen/qwen3.6-35b-a3b-uncensored:thinking": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.075,
-          "input": 0.15,
-          "output": 0.95
-        },
-        "description": "Qwen 3.6 35B A3B Uncensored with thinking enabled for more deliberate coding, multimodal analysis, tool use, and complex chat tasks.",
-        "family": "qwen3.6",
-        "id": "qwen/qwen3.6-35b-a3b-uncensored:thinking",
-        "last_updated": "2026-07-29",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen 3.6 35B A3B Uncensored Thinking",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-07-29",
-        "structured_output": true,
-        "tool_call": true
       },
       "qwen/qwen3.8-2.4t-a95b": {
         "attachment": true,
@@ -202055,9 +202018,9 @@
       "z-ai/glm-5.2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.182,
-          "input": 0.98,
-          "output": 3.08
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -202095,9 +202058,9 @@
       "z-ai/glm-5.3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.234,
-          "input": 1.26,
-          "output": 3.96
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
         },
         "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
         "family": "glm",
@@ -202136,9 +202099,9 @@
       "z-ai/glm-5.3-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.015,
-          "input": 0.075,
-          "output": 0.25
+          "cache_read": 0.03,
+          "input": 0.15,
+          "output": 0.5
         },
         "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
         "family": "glm",
@@ -209988,12 +209951,58 @@
     "iconURL": "https://models.dev/logos/opencode-go.svg",
     "id": "opencode-go",
     "models": {
+      "deepseek-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
+        "id": "deepseek-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.22,
-          "output": 0.66
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -210036,9 +210045,9 @@
       "deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.22,
-          "output": 0.66
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -211231,6 +211240,7 @@
           }
         ],
         "release_date": "2026-09-04",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -213951,6 +213961,52 @@
         ],
         "release_date": "2026-08-12",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek/deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.006,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+        "family": "deepseek-flash",
+        "id": "deepseek/deepseek-v4.1-flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1048576,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -225350,9 +225406,9 @@
       "z-ai/glm-5.3-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.07,
-          "output": 0.2333
+          "cache_read": 0.015,
+          "input": 0.075,
+          "output": 0.25
         },
         "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
         "family": "glm",
@@ -225989,9 +226045,9 @@
       "~z-ai/glm-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.07,
-          "output": 0.2333
+          "cache_read": 0.015,
+          "input": 0.075,
+          "output": 0.25
         },
         "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
         "family": "glm-flash",
@@ -226032,9 +226088,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.2067,
-          "input": 1.113,
-          "output": 3.498
+          "cache_read": 0.2015,
+          "input": 1.085,
+          "output": 3.41
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -275697,9 +275753,9 @@
       "mercury-2-5": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.025,
-          "input": 0.25,
-          "output": 0.9375
+          "cache_read": 0.004999999999999999,
+          "input": 0.04999999999999999,
+          "output": 0.18749999999999994
         },
         "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
         "family": "mercury",

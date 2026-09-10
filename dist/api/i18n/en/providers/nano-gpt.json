@@ -7154,10 +7154,11 @@
         "input": 0.1562,
         "output": 0.3124
       },
-      "description": "DeepSeek V4.1 Flash supports text and image input, reasoning, tool calling, and structured output with a 1M-token context window. This is a rate-limited beta with limited capacity, intended for testing rather than production use. Assume prompts and responses are logged by the provider and may be used for model training or service improvement. Do not send sensitive or confidential data.",
-      "family": "deepseek",
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
       "id": "deepseek/deepseek-v4.1-flash",
-      "last_updated": "2026-09-08",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
       "limit": {
         "context": 1000000,
         "input": 1000000,
@@ -7173,7 +7174,7 @@
         ]
       },
       "name": "DeepSeek V4.1 Flash",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -7186,8 +7187,9 @@
           ]
         }
       ],
-      "release_date": "2026-09-08",
+      "release_date": "2026-09-10",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "deepseek/deepseek-v4.1-flash:thinking": {
@@ -7197,10 +7199,11 @@
         "input": 0.1562,
         "output": 0.3124
       },
-      "description": "DeepSeek V4.1 Flash supports text and image input, reasoning, tool calling, and structured output with a 1M-token context window. This is a rate-limited beta with limited capacity, intended for testing rather than production use. Assume prompts and responses are logged by the provider and may be used for model training or service improvement. Do not send sensitive or confidential data.",
-      "family": "deepseek",
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
       "id": "deepseek/deepseek-v4.1-flash:thinking",
-      "last_updated": "2026-09-08",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
       "limit": {
         "context": 1000000,
         "input": 1000000,
@@ -7216,7 +7219,7 @@
         ]
       },
       "name": "DeepSeek V4.1 Flash Thinking",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -7229,8 +7232,9 @@
           ]
         }
       ],
-      "release_date": "2026-09-08",
+      "release_date": "2026-09-10",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "doubao-1.5-pro-256k": {
@@ -15801,72 +15805,6 @@
       "structured_output": true,
       "tool_call": true
     },
-    "ornith-ai/ornith-1.5-9b": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.1,
-        "output": 0.2
-      },
-      "description": "Ornith 1.5 9B is an FP8 dense open-weight model built for agentic coding, tool use, visual understanding, and efficient long-context work. This variant disables thinking for faster direct responses.",
-      "family": "ornith",
-      "id": "ornith-ai/ornith-1.5-9b",
-      "last_updated": "2026-07-29",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Ornith 1.5 9B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-07-29",
-      "structured_output": true,
-      "tool_call": true
-    },
-    "ornith-ai/ornith-1.5-9b:thinking": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.1,
-        "output": 0.2
-      },
-      "description": "Ornith 1.5 9B with thinking enabled for more deliberate agentic coding, tool use, visual understanding, and long-context work.",
-      "family": "ornith",
-      "id": "ornith-ai/ornith-1.5-9b:thinking",
-      "last_updated": "2026-07-29",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Ornith 1.5 9B Thinking",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-07-29",
-      "structured_output": true,
-      "tool_call": true
-    },
     "pamanseau/OpenReasoning-Nemotron-32B": {
       "attachment": false,
       "cost": {
@@ -17144,72 +17082,6 @@
       "structured_output": false,
       "temperature": true,
       "tool_call": false
-    },
-    "qwen/qwen3.6-35b-a3b-uncensored": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.075,
-        "input": 0.15,
-        "output": 0.95
-      },
-      "description": "Qwen 3.6 35B A3B Uncensored is an NVFP4 open-weight mixture-of-experts model LoRA-tuned for fewer refusals across chat, coding, tool use, and multimodal tasks.",
-      "family": "qwen3.6",
-      "id": "qwen/qwen3.6-35b-a3b-uncensored",
-      "last_updated": "2026-07-29",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen 3.6 35B A3B Uncensored",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-07-29",
-      "structured_output": true,
-      "tool_call": true
-    },
-    "qwen/qwen3.6-35b-a3b-uncensored:thinking": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.075,
-        "input": 0.15,
-        "output": 0.95
-      },
-      "description": "Qwen 3.6 35B A3B Uncensored with thinking enabled for more deliberate coding, multimodal analysis, tool use, and complex chat tasks.",
-      "family": "qwen3.6",
-      "id": "qwen/qwen3.6-35b-a3b-uncensored:thinking",
-      "last_updated": "2026-07-29",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen 3.6 35B A3B Uncensored Thinking",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-07-29",
-      "structured_output": true,
-      "tool_call": true
     },
     "qwen/qwen3.8-2.4t-a95b": {
       "attachment": true,
