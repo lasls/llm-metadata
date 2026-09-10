@@ -13806,7 +13806,7 @@
       "tags": []
     },
     {
-      "description": "Qwen3-Coder-30B-A3B-Instruct 是一个拥有305亿参数的专家混合（MoE）模型，配备128个专家（每次前向传播激活8个），专为高级代码生成、存储库级理解和代理工具使用而设计。基于Qwen3架构构建，支持256K令牌的原生上下文长度（通过Yarn可扩展至100万），在涉及函数调用、浏览器使用和结构化代码补全的任务中表现出色。",
+      "description": "Smaller Qwen coder for efficient local agents and repo-level fixes",
       "firm": "alibaba",
       "flags": {
         "attachment": false,
@@ -13842,7 +13842,7 @@
       "tags": []
     },
     {
-      "description": "Qwen3-Coder-480B-A35B-Instruct 是由Qwen推出的尖端开源编程模型，在智能体编程（Agentic Coding）、浏览器自动化及核心开发任务中达到与Claude Sonnet同等的性能水平。该模型原生支持256K上下文窗口（通过YaRN技术可扩展至1M token），擅长仓库级代码分析，并针对Qwen Code、CLINE等平台设计了专用函数调用协议——使其成为复杂实际开发工作流的理想选择。",
+      "description": "Open Qwen coding heavyweight for repository reasoning and agentic engineering",
       "firm": "alibaba",
       "flags": {
         "attachment": false,
@@ -14026,7 +14026,7 @@
       "tags": []
     },
     {
-      "description": "Qwen3-Next采用高度稀疏的混合专家(MoE)架构设计：模型总参数量达800亿，但每次推理仅激活约30亿参数。实验数据显示，在全局负载均衡机制下，保持激活专家数量不变而持续增加总专家参数量，能有效降低训练损失。相比前代Qwen3的MoE架构（128个总专家，8个路由专家），Qwen3-Next将专家规模扩展至512个，创新采用\"10个路由专家+1个共享专家\"的组合方案，在最大化资源利用率的同时确保性能无损。\n特别值得注意的是，Qwen3-Next-80B-A3B-Instruct版本在性能表现上已接近我们的旗舰模型Qwen3-235B-A22B-Instruct-2507，并在处理超长上下文（最高支持256K tokens）的任务中展现出显著优势。\n",
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "firm": "alibaba",
       "flags": {
         "attachment": false,
@@ -14062,7 +14062,7 @@
       "tags": []
     },
     {
-      "description": "\nQwen3-Next采用高度稀疏的混合专家（MoE）架构设计：总参数量达800亿，但每个推理步骤仅激活约30亿参数。实验表明，在全局负载均衡机制下，保持激活专家数量不变而增加总专家参数量，能够持续降低训练损失。相较于Qwen3的MoE结构（128个总专家，8个路由专家），Qwen3-Next将规模扩展至512个总专家，创新性地采用\"10个路由专家+1个共享专家\"的组合策略——在最大化资源利用率的同时确保模型性能不受影响。\n其中，Qwen3-Next-80B-A3B-Thinking在复杂推理任务中表现卓越：其性能不仅超越更高成本的Qwen3-30B-A3B-Thinking-2507和Qwen3-32B-Thinking等模型，在多项基准测试中更胜过闭源的Gemini-2.5-Flash-Thinking，并逼近我们的旗舰模型Qwen3-235B-A22B-Thinking-2507的性能水平。\n",
+      "description": "Efficient Qwen thinking model for local reasoning, math, and coding agents",
       "firm": "alibaba",
       "flags": {
         "attachment": false,
@@ -46158,6 +46158,42 @@
       "tags": []
     },
     {
+      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+      "firm": "cloudflare-workers-ai",
+      "flags": {
+        "attachment": false,
+        "audio": false,
+        "image": false,
+        "open_weights": true,
+        "reasoning": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "icon": "lb:cloudflare-color",
+      "id": "@cf/zai-org/glm-5.3",
+      "knowledge": null,
+      "lastUpdated": "2026-08-14",
+      "maxCtxTokens": 1310720,
+      "maxOutputTokens": 1310720,
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Glm 5.3",
+      "price": {
+        "cacheRead": 0.26,
+        "cacheWrite": null,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "releaseDate": "2026-08-14",
+      "tags": []
+    },
+    {
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "firm": "cloudflare-workers-ai",
       "flags": {
@@ -56063,7 +56099,7 @@
       },
       "name": "DeepSeek V4 Flash Vision Exp",
       "price": {
-        "cacheRead": 0.14,
+        "cacheRead": 0.014,
         "cacheWrite": null,
         "input": 0.44,
         "output": 1.32
@@ -59818,8 +59854,8 @@
       "price": {
         "cacheRead": 0.285,
         "cacheWrite": null,
-        "input": 2.85,
-        "output": 14.25
+        "input": 2.55,
+        "output": 12.95
       },
       "releaseDate": "2026-07-16",
       "tags": []
@@ -105619,10 +105655,10 @@
       },
       "name": "Z.ai: GLM Flash Latest",
       "price": {
-        "cacheRead": 0.015,
+        "cacheRead": 0.014,
         "cacheWrite": null,
-        "input": 0.075,
-        "output": 0.25
+        "input": 0.07,
+        "output": 0.2333
       },
       "releaseDate": "2026-08-27",
       "tags": []
@@ -107169,8 +107205,8 @@
       "id": "deepseek/deepseek-chat",
       "knowledge": "2025-09",
       "lastUpdated": "2026-02-28",
-      "maxCtxTokens": 163840,
-      "maxOutputTokens": 16384,
+      "maxCtxTokens": 128000,
+      "maxOutputTokens": 16000,
       "modalities": {
         "input": [
           "text"
@@ -107183,8 +107219,8 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.32,
-        "output": 0.89
+        "input": 0.2574,
+        "output": 1.0287
       },
       "releaseDate": "2025-12-01",
       "tags": []
@@ -107638,8 +107674,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "knowledge": null,
       "lastUpdated": "2026-08-22",
-      "maxCtxTokens": 1048576,
-      "maxOutputTokens": 393216,
+      "maxCtxTokens": 1024000,
+      "maxOutputTokens": 384000,
       "modalities": {
         "input": [
           "text"
@@ -110314,8 +110350,8 @@
       "id": "minimax/minimax-m2.5",
       "knowledge": null,
       "lastUpdated": "2026-02-12",
-      "maxCtxTokens": 200000,
-      "maxOutputTokens": 128000,
+      "maxCtxTokens": 204800,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -111203,7 +111239,7 @@
       "knowledge": "2024-08",
       "lastUpdated": "2025-11-06",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 235929,
+      "maxOutputTokens": 100352,
       "modalities": {
         "input": [
           "text"
@@ -115228,8 +115264,8 @@
       "id": "qwen/qwen3-30b-a3b-instruct-2507",
       "knowledge": null,
       "lastUpdated": "2025-07-29",
-      "maxCtxTokens": 128000,
-      "maxOutputTokens": 32000,
+      "maxCtxTokens": 262144,
+      "maxOutputTokens": 235929,
       "modalities": {
         "input": [
           "text"
@@ -115956,7 +115992,7 @@
       "knowledge": null,
       "lastUpdated": "2026-02-23",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 81920,
+      "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text",
@@ -117493,10 +117529,10 @@
       },
       "name": "Hy3",
       "price": {
-        "cacheRead": 0.020625,
+        "cacheRead": 0.033,
         "cacheWrite": null,
-        "input": 0.0825,
-        "output": 0.33
+        "input": 0.132,
+        "output": 0.528
       },
       "releaseDate": "2026-07-06",
       "tags": []
@@ -117697,8 +117733,8 @@
       "id": "thinkingmachines/inkling",
       "knowledge": null,
       "lastUpdated": "2026-07-15",
-      "maxCtxTokens": 524288,
-      "maxOutputTokens": 471859,
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 32768,
       "modalities": {
         "input": [
           "text",
@@ -118659,8 +118695,8 @@
       "id": "z-ai/glm-5.2",
       "knowledge": null,
       "lastUpdated": "2026-06-13",
-      "maxCtxTokens": 1024000,
-      "maxOutputTokens": 128000,
+      "maxCtxTokens": 1048576,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -157929,10 +157965,10 @@
       },
       "name": "DeepSeek V4 Flash Vision Exp",
       "price": {
-        "cacheRead": 0.007,
+        "cacheRead": 0.014,
         "cacheWrite": null,
-        "input": 0.22,
-        "output": 0.66
+        "input": 0.44,
+        "output": 1.32
       },
       "releaseDate": "2026-08-21",
       "tags": []
@@ -200536,10 +200572,10 @@
       },
       "name": "GLM Flash Latest",
       "price": {
-        "cacheRead": 0.015,
+        "cacheRead": 0.014,
         "cacheWrite": null,
-        "input": 0.075,
-        "output": 0.25
+        "input": 0.07,
+        "output": 0.2333
       },
       "releaseDate": "2026-08-27",
       "tags": []
@@ -200560,7 +200596,7 @@
       "id": "~z-ai/glm-latest",
       "knowledge": null,
       "lastUpdated": "2026-08-19",
-      "maxCtxTokens": 1048576,
+      "maxCtxTokens": 1310720,
       "maxOutputTokens": 128000,
       "modalities": {
         "input": [
@@ -202086,7 +202122,7 @@
       "knowledge": "2025-09",
       "lastUpdated": "2026-02-28",
       "maxCtxTokens": 163840,
-      "maxOutputTokens": 16384,
+      "maxOutputTokens": 16000,
       "modalities": {
         "input": [
           "text"
@@ -202099,8 +202135,8 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.32,
-        "output": 0.89
+        "input": 0.2574,
+        "output": 1.0287
       },
       "releaseDate": "2025-12-01",
       "tags": []
@@ -202421,10 +202457,10 @@
       },
       "name": "DeepSeek V4 Flash",
       "price": {
-        "cacheRead": 0.014,
+        "cacheRead": 0.017721,
         "cacheWrite": null,
-        "input": 0.07,
-        "output": 0.14
+        "input": 0.088606,
+        "output": 0.177212
       },
       "releaseDate": "2026-04-24",
       "tags": []
@@ -202530,10 +202566,10 @@
       },
       "name": "DeepSeek V4 Pro",
       "price": {
-        "cacheRead": 0.0725,
+        "cacheRead": 0.079605,
         "cacheWrite": null,
-        "input": 0.87,
-        "output": 1.74
+        "input": 0.95526,
+        "output": 1.91052
       },
       "releaseDate": "2026-04-24",
       "tags": []
@@ -202555,7 +202591,7 @@
       "knowledge": null,
       "lastUpdated": "2026-08-22",
       "maxCtxTokens": 1048576,
-      "maxOutputTokens": 393216,
+      "maxOutputTokens": 384000,
       "modalities": {
         "input": [
           "text"
@@ -202566,10 +202602,10 @@
       },
       "name": "DeepSeek V4 Pro 0813",
       "price": {
-        "cacheRead": 0.018438,
+        "cacheRead": 0.03498,
         "cacheWrite": null,
-        "input": 0.57948,
-        "output": 1.73844
+        "input": 1.0494,
+        "output": 3.1482
       },
       "releaseDate": "2026-08-12",
       "tags": []
@@ -205115,7 +205151,7 @@
       "knowledge": null,
       "lastUpdated": "2026-02-12",
       "maxCtxTokens": 204800,
-      "maxOutputTokens": 128000,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -205126,10 +205162,10 @@
       },
       "name": "MiniMax-M2.5",
       "price": {
-        "cacheRead": 0.027,
+        "cacheRead": 0.03,
         "cacheWrite": null,
-        "input": 0.27,
-        "output": 1.08
+        "input": 0.3,
+        "output": 1.2
       },
       "releaseDate": "2026-02-12",
       "tags": []
@@ -206003,7 +206039,7 @@
       "knowledge": "2024-08",
       "lastUpdated": "2025-11-06",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 235929,
+      "maxOutputTokens": 100352,
       "modalities": {
         "input": [
           "text"
@@ -206014,7 +206050,7 @@
       },
       "name": "Kimi K2 Thinking",
       "price": {
-        "cacheRead": null,
+        "cacheRead": 0.15,
         "cacheWrite": null,
         "input": 0.6,
         "output": 2.5
@@ -210014,7 +210050,7 @@
       "knowledge": "2025-06-30",
       "lastUpdated": "2025-07-29",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 32000,
+      "maxOutputTokens": 235929,
       "modalities": {
         "input": [
           "text"
@@ -210027,8 +210063,8 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.04815,
-        "output": 0.19305
+        "input": 0.09,
+        "output": 0.3
       },
       "releaseDate": "2025-07-29",
       "tags": []
@@ -210741,7 +210777,7 @@
       "knowledge": null,
       "lastUpdated": "2026-02-23",
       "maxCtxTokens": 262144,
-      "maxOutputTokens": 81920,
+      "maxOutputTokens": 65536,
       "modalities": {
         "input": [
           "text",
@@ -210756,8 +210792,8 @@
       "price": {
         "cacheRead": null,
         "cacheWrite": null,
-        "input": 0.29,
-        "output": 2.4
+        "input": 0.26,
+        "output": 2.08
       },
       "releaseDate": "2026-02-23",
       "tags": []
@@ -212052,10 +212088,10 @@
       },
       "name": "Hy3",
       "price": {
-        "cacheRead": 0.020625,
+        "cacheRead": 0.033,
         "cacheWrite": null,
-        "input": 0.0825,
-        "output": 0.33
+        "input": 0.132,
+        "output": 0.528
       },
       "releaseDate": "2026-07-06",
       "tags": []
@@ -212257,7 +212293,7 @@
       "knowledge": null,
       "lastUpdated": "2026-07-15",
       "maxCtxTokens": 1048576,
-      "maxOutputTokens": 471859,
+      "maxOutputTokens": 32768,
       "modalities": {
         "input": [
           "text",
@@ -213219,7 +213255,7 @@
       "knowledge": null,
       "lastUpdated": "2026-06-13",
       "maxCtxTokens": 1048576,
-      "maxOutputTokens": 128000,
+      "maxOutputTokens": 131072,
       "modalities": {
         "input": [
           "text"
@@ -213230,10 +213266,10 @@
       },
       "name": "GLM-5.2",
       "price": {
-        "cacheRead": 0.052,
+        "cacheRead": 0.1932,
         "cacheWrite": null,
-        "input": 0.28,
-        "output": 0.88
+        "input": 0.966,
+        "output": 3.036
       },
       "releaseDate": "2026-06-13",
       "tags": []
@@ -213254,7 +213290,7 @@
       "id": "z-ai/glm-5.3",
       "knowledge": null,
       "lastUpdated": "2026-08-14",
-      "maxCtxTokens": 1048576,
+      "maxCtxTokens": 1310720,
       "maxOutputTokens": 943718,
       "modalities": {
         "input": [
@@ -213304,10 +213340,10 @@
       },
       "name": "GLM-5.3-Flash",
       "price": {
-        "cacheRead": 0.015,
+        "cacheRead": 0.014,
         "cacheWrite": null,
-        "input": 0.075,
-        "output": 0.25
+        "input": 0.07,
+        "output": 0.2333
       },
       "releaseDate": "2026-08-26",
       "tags": []
@@ -259634,10 +259670,10 @@
       },
       "name": "Mercury 2.5",
       "price": {
-        "cacheRead": 0.004999999999999999,
+        "cacheRead": 0.025,
         "cacheWrite": null,
-        "input": 0.04999999999999999,
-        "output": 0.18749999999999994
+        "input": 0.25,
+        "output": 0.9375
       },
       "releaseDate": "2026-09-08",
       "tags": []
@@ -260820,6 +260856,44 @@
         "output": 3.2
       },
       "releaseDate": "2026-08-17",
+      "tags": []
+    },
+    {
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "firm": "venice",
+      "flags": {
+        "attachment": true,
+        "audio": false,
+        "image": true,
+        "open_weights": false,
+        "reasoning": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "icon": "lb:veniceai",
+      "id": "qwen-3-8-flash",
+      "knowledge": null,
+      "lastUpdated": "2026-09-10",
+      "maxCtxTokens": 1000000,
+      "maxOutputTokens": 131072,
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen 3.8 Flash",
+      "price": {
+        "cacheRead": 0.014,
+        "cacheWrite": null,
+        "input": 0.14,
+        "output": 0.49
+      },
+      "releaseDate": "2026-09-10",
       "tags": []
     },
     {
@@ -273880,42 +273954,6 @@
       "tags": []
     },
     {
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
-      "firm": "vercel",
-      "flags": {
-        "attachment": false,
-        "audio": false,
-        "image": false,
-        "open_weights": false,
-        "reasoning": false,
-        "temperature": false,
-        "tool_call": false
-      },
-      "icon": "lb:vercel-color",
-      "id": "spacexai/grok-imagine-video-1.5-preview",
-      "knowledge": null,
-      "lastUpdated": "2026-05-30",
-      "maxCtxTokens": 0,
-      "maxOutputTokens": 0,
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "name": "Grok Imagine Video 1.5 Preview",
-      "price": {
-        "cacheRead": null,
-        "cacheWrite": null,
-        "input": null,
-        "output": null
-      },
-      "releaseDate": "2026-05-30",
-      "tags": []
-    },
-    {
       "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
       "firm": "vercel",
       "flags": {
@@ -279527,7 +279565,7 @@
       "tags": []
     },
     {
-      "description": "Xiaomi MiMo-V2-Flash 是小米专为极致推理效率自研的总参数 309B(激活 15B)的 MoE 模型，通过引入 Hybrid 注意力架构创新 及 多层 MTP 推理加速， 在多个 Agent 测评基准上进入全球开源模型 Top 2;代码能力超过所有开源模型，比肩标杆闭源模型 Claude 4.5 Sonnet，但推理价格仅为其2.5% 且生成速度提升至 2倍，成功将大模型效果和推理效率推向极致。",
+      "description": "Legacy model retained for compatibility with older integrations",
       "firm": "xiaomi",
       "flags": {
         "attachment": false,
@@ -279603,7 +279641,7 @@
       "tags": []
     },
     {
-      "description": "Xiaomi MiMo-V2-Pro 是一款专为现实世界中高强度 Agent 工作场景打造的顶尖大语言模型。建立在上一代 Flash 模型的坚实基座之上，通过在更广泛任务中的持续算力扩展，MiMo-V2-Pro 将能力从基础的代码编写跨越至端到端的复杂任务执行。它能够在无人工干预的情况下，自主进行长程规划、编排复杂工作流，并跨越 OpenClaw 等不同的智能体框架精准调用工具以交付最终结果。MiMo-V2-Pro 在 Artificial Analysis 综合智能排行榜上高居全球第八、国内第二，且在通用 Agent 和工具调用等多项核心基准测试中与 GPT5.2、Gemini 3.0 Pro 稳居同一梯队。此外，MiMo-V2-Pro 具有极高的推理与生成效率，因为它采用了优化的 7:1 混合注意力架构和轻量级 MTP 层，在支持 1M 超长上下文的同时，将前沿模型的使用成本大幅降低至同类竞品的五分之一。",
+      "description": "Earlier MiMo Pro model for multimodal agents, reasoning, and code tasks",
       "firm": "xiaomi",
       "flags": {
         "attachment": false,
@@ -280996,7 +281034,7 @@
       "tags": []
     },
     {
-      "description": "GLM-4.5系列模型是专为智能体（Agent）研发的基座模型。旗舰款GLM-4.5拥有3550亿总参数（320亿激活参数），通过融合推理、编程与智能体能力，满足复杂场景需求。\n作为混合推理系统，它提供双工作模式：\n- 思考模式：支持复杂推理、工具调用和策略规划\n- 即时响应模式：实现低延迟交互，快速生成反馈\n该架构在保持高性能的同时，为动态智能体环境提供自适应解决方案。",
+      "description": "Hybrid-reasoning GLM release that made the 4.5 line broadly useful",
       "firm": "zai",
       "flags": {
         "attachment": false,
