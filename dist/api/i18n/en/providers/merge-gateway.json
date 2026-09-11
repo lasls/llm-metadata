@@ -1199,6 +1199,54 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek/deepseek-v4-flash-0423": {
+      "attachment": false,
+      "cost": {
+        "input": 0.139,
+        "output": 0.278
+      },
+      "description": "Initial DeepSeek V4 Flash snapshot for economical reasoning, coding, and million-token agent workloads",
+      "family": "deepseek-flash",
+      "id": "deepseek/deepseek-v4-flash-0423",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-23",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0423",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-23",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
     "deepseek/deepseek-v4-flash-0731": {
       "attachment": false,
       "cost": {
@@ -2400,6 +2448,102 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "google/gemma-3-12b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.09,
+        "output": 0.29
+      },
+      "description": "Open multimodal Gemma instruction model for multilingual text generation and image understanding",
+      "family": "gemma",
+      "id": "google/gemma-3-12b-it",
+      "knowledge": "2024-08",
+      "last_updated": "2025-03-12",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 12B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-12",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemma-3-27b-it": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.04,
+        "input": 0.08,
+        "output": 0.45
+      },
+      "description": "Largest open Gemma 3 instruction model for multilingual text generation and visual understanding",
+      "family": "gemma",
+      "id": "google/gemma-3-27b-it",
+      "knowledge": "2024-08",
+      "last_updated": "2025-03-12",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 27B IT",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-12",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
+    "google/gemma-3-4b-it": {
+      "attachment": true,
+      "cost": {
+        "input": 0.04,
+        "output": 0.08
+      },
+      "description": "Open multimodal Gemma instruction model for efficient text generation and image understanding",
+      "family": "gemma",
+      "id": "google/gemma-3-4b-it",
+      "knowledge": "2024-08",
+      "last_updated": "2025-03-12",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 3 4B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-12",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
     },
     "google/gemma-4-26b-a4b-it": {
       "attachment": false,
@@ -4919,6 +5063,39 @@
       "temperature": true,
       "tool_call": false
     },
+    "openai/gpt-oss-safeguard-20b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0,
+        "cache_write": 0,
+        "input": 0.07,
+        "output": 0.2
+      },
+      "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-safeguard-20b",
+      "last_updated": "2025-10-29",
+      "limit": {
+        "context": 4096,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS Safeguard 20B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-10-29",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
     "openai/o1": {
       "attachment": true,
       "cost": {
@@ -5669,7 +5846,7 @@
       "tool_call": true
     },
     "qwen/qwen3.5-27b": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "cache_read": 0.0172,
         "input": 0.086,
@@ -5680,13 +5857,12 @@
       "id": "qwen/qwen3.5-27b",
       "last_updated": "2026-02-23",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -5743,7 +5919,7 @@
       "tool_call": true
     },
     "qwen/qwen3.5-397b-a17b": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
         "cache_read": 0.0344,
         "input": 0.172,
@@ -5754,13 +5930,12 @@
       "id": "qwen/qwen3.5-397b-a17b",
       "last_updated": "2026-02-15",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"

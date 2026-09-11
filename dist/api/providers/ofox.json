@@ -1569,6 +1569,51 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek/deepseek-v4-flash-0423": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.028,
+        "input": 0.19,
+        "output": 0.51
+      },
+      "description": "Initial DeepSeek V4 Flash snapshot for economical reasoning, coding, and million-token agent workloads",
+      "family": "deepseek-flash",
+      "id": "deepseek/deepseek-v4-flash-0423",
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-23",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0423",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek/deepseek-v4-flash-0731": {
       "attachment": false,
       "cost": {
@@ -1707,7 +1752,7 @@
     "deepseek/deepseek-v4-pro-0423": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.044,
+        "cache_read": 0.15,
         "input": 1.32,
         "output": 3.96
       },
@@ -1888,7 +1933,7 @@
     "google/gemini-2.5-flash-lite": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.025,
+        "cache_read": 0.01,
         "cache_write": 1,
         "input": 0.1,
         "input_audio": 0.3,
@@ -2331,6 +2376,56 @@
         }
       ],
       "release_date": "2026-08-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-3.8-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "cache_write": 0.0415,
+        "input": 0.75,
+        "input_audio": 0.75,
+        "output": 3.75
+      },
+      "description": "Google's most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows",
+      "family": "gemini-flash",
+      "id": "google/gemini-3.8-flash",
+      "last_updated": "2026-09-02",
+      "limit": {
+        "context": 1000000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 3.8 Flash",
+      "open_weights": false,
+      "provider": {
+        "api": "https://api.ofox.ai/gemini/v1beta",
+        "npm": "@ai-sdk/google"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-02",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3851,6 +3946,46 @@
       "temperature": false,
       "tool_call": true
     },
+    "qwen/qwen-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0043,
+        "cache_write": 0.027,
+        "input": 0.022,
+        "output": 0.22
+      },
+      "description": "Efficient Qwen model for fast chat, extraction, and high-volume workloads",
+      "family": "qwen",
+      "id": "qwen/qwen-flash",
+      "knowledge": "2024-04",
+      "last_updated": "2025-07-28",
+      "limit": {
+        "context": 1000000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-07-28",
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen/qwen-max": {
       "attachment": false,
       "cost": {
@@ -3917,7 +4052,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.0086,
-        "input": 0.05,
+        "input": 0.043,
         "output": 0.09
       },
       "description": "Efficient Qwen model for fast chat, extraction, and high-volume workloads",
@@ -3947,7 +4082,7 @@
     "qwen/qwen-vl-max": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.046,
+        "cache_read": 0.023,
         "input": 0.23,
         "output": 0.58
       },
@@ -4357,8 +4492,8 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
-        "input": 0.6,
-        "output": 3.6
+        "input": 0.43,
+        "output": 2.57
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -4522,10 +4657,10 @@
     "qwen/qwen3.7-max": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.5,
-        "cache_write": 3.125,
-        "input": 2.5,
-        "output": 7.5
+        "cache_read": 0.17,
+        "cache_write": 2.14,
+        "input": 1.71,
+        "output": 5.14
       },
       "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
       "family": "qwen",
@@ -4603,10 +4738,10 @@
     "qwen/qwen3.8-27b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.05,
-        "cache_write": 0.5625,
-        "input": 0.45,
-        "output": 3.2
+        "cache_read": 0.043,
+        "cache_write": 0.63,
+        "input": 0.5,
+        "output": 1.71
       },
       "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
       "family": "qwen",
@@ -4645,10 +4780,10 @@
     "qwen/qwen3.8-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.016,
-        "cache_write": 0.2,
-        "input": 0.15,
-        "output": 0.47
+        "cache_read": 0.011,
+        "cache_write": 0.14,
+        "input": 0.11,
+        "output": 0.39
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -4686,10 +4821,10 @@
     "qwen/qwen3.8-max": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 2.5,
-        "input": 2,
-        "output": 6
+        "cache_read": 0.17,
+        "cache_write": 2.14,
+        "input": 1.71,
+        "output": 5.14
       },
       "description": "2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows",
       "family": "qwen",
@@ -4738,10 +4873,10 @@
     "qwen/qwen3.8-max-0902": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 2.5,
-        "input": 2,
-        "output": 6
+        "cache_read": 0.17,
+        "cache_write": 2.14,
+        "input": 1.71,
+        "output": 5.14
       },
       "description": "2026-09-02 upgraded snapshot of Qwen3.8 Max with stronger coding, collaborative agents, and multimodal document understanding",
       "family": "qwen",
@@ -5436,8 +5571,8 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.11,
-        "input": 0.4,
-        "output": 1.9
+        "input": 0.6,
+        "output": 2.2
       },
       "description": "Late GLM-4 workhorse for coding agents, reasoning, and structured tasks",
       "family": "glm",
@@ -5471,9 +5606,9 @@
     "z-ai/glm-4.7": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.08,
+        "cache_read": 0.11,
         "input": 0.4,
-        "output": 2
+        "output": 2.2
       },
       "description": "Mature GLM model for dependable coding, reasoning, and structured agent tasks",
       "family": "glm",
@@ -5507,9 +5642,9 @@
     "z-ai/glm-4.7-flashx": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.015,
+        "cache_read": 0.01,
         "input": 0.072,
-        "output": 0.43
+        "output": 0.4
       },
       "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
       "family": "glm-flash",

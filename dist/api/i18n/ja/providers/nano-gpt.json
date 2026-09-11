@@ -10944,6 +10944,36 @@
       "structured_output": false,
       "tool_call": false
     },
+    "lightonai/LightOnOCR-2-1B": {
+      "attachment": true,
+      "cost": {
+        "input": 0.1785,
+        "output": 0.3465
+      },
+      "description": "LightOnOCR 2 hosted by IONOS in Berlin, Germany. Zero data retention.",
+      "id": "lightonai/LightOnOCR-2-1B",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 32768,
+        "input": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LightOnOCR 2",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-09-10",
+      "structured_output": false,
+      "tool_call": true
+    },
     "liquid/lfm-2.5-2.6b": {
       "attachment": false,
       "cost": {
@@ -11208,6 +11238,36 @@
       "structured_output": false,
       "tool_call": false
     },
+    "meta-llama/llama-3.1-405b-instruct": {
+      "attachment": false,
+      "cost": {
+        "input": 2.0265,
+        "output": 2.0265
+      },
+      "description": "Llama 3.1 405B hosted by IONOS in Berlin, Germany. Zero data retention.",
+      "family": "llama",
+      "id": "meta-llama/llama-3.1-405b-instruct",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 131072,
+        "input": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3.1 405B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-09-10",
+      "structured_output": false,
+      "tool_call": true
+    },
     "meta-llama/llama-3.1-8b-instruct": {
       "attachment": false,
       "cost": {
@@ -11239,7 +11299,7 @@
       "release_date": "2024-07-23",
       "structured_output": false,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "meta-llama/llama-3.2-3b-instruct": {
       "attachment": true,
@@ -12565,6 +12625,36 @@
       "release_date": "2024-01-01",
       "structured_output": false,
       "tool_call": false
+    },
+    "mistralai/mistral-small-24b-instruct-2501": {
+      "attachment": false,
+      "cost": {
+        "input": 0.1155,
+        "output": 0.3465
+      },
+      "description": "Mistral Small 24B hosted by IONOS in Berlin, Germany. Zero data retention.",
+      "family": "mistral-small",
+      "id": "mistralai/mistral-small-24b-instruct-2501",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 32768,
+        "input": 32768,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Small 24B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-09-10",
+      "structured_output": false,
+      "tool_call": true
     },
     "mistralai/mistral-small-4-119b-2603": {
       "attachment": true,
@@ -15291,8 +15381,9 @@
           ]
         }
       ],
-      "release_date": "2026-02-23",
+      "release_date": "2025-10-29",
       "structured_output": false,
+      "temperature": true,
       "tool_call": false
     },
     "openai/o1": {
@@ -18349,12 +18440,55 @@
       "temperature": true,
       "tool_call": true
     },
+    "sakana/fugu-max": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2,
+        "output": 6
+      },
+      "description": "Sakana AI's cost-performance Fugu model uses learned multi-agent orchestration to route tasks across expert models for reasoning, coding, and tool use.",
+      "family": "fugu",
+      "id": "sakana/fugu-max",
+      "last_updated": "2026-09-11",
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Fugu Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-11",
+      "structured_output": true,
+      "tool_call": true
+    },
     "sakana/fugu-ultra": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.525,
-        "input": 5.25,
-        "output": 31.5
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 30
       },
       "description": "Quality-first multi-agent model for hard research, analysis, and competitions",
       "family": "fugu",
@@ -18395,9 +18529,9 @@
     "sakana/fugu-ultra-v1.1": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.525,
-        "input": 5.25,
-        "output": 31.5
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 30
       },
       "description": "Sakana AI's upgraded Fugu Ultra release with stronger coding, agentic task execution, and advanced reasoning through dynamic orchestration of frontier models.",
       "family": "fugu",
