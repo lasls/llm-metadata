@@ -2098,8 +2098,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "last_updated": "2026-08-22",
       "limit": {
-        "context": 1048576,
-        "output": 943718
+        "context": 1024000,
+        "output": 384000
       },
       "modalities": {
         "input": [
@@ -3801,6 +3801,48 @@
       "temperature": true,
       "tool_call": true
     },
+    "inclusionai/ling-3.0-flash-vl": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.012,
+        "input": 0.06,
+        "output": 0.18
+      },
+      "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
+      "family": "ling",
+      "id": "inclusionai/ling-3.0-flash-vl",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "inclusionAI: Ling 3.0 Flash VL",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "inclusionai/ling-3.0-flash-vl:free": {
       "attachment": true,
       "cost": {
@@ -4199,7 +4241,7 @@
       "last_updated": "2024-07-23",
       "limit": {
         "context": 131072,
-        "output": 8192
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -4963,8 +5005,8 @@
       "id": "minimax/minimax-m2.5",
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 204800,
-        "output": 131072
+        "context": 200000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -14251,18 +14293,18 @@
       "temperature": true,
       "tool_call": true
     },
-    "~openai/gpt-latest": {
+    "~openai/gpt-astra-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.2,
-        "cache_write": 2.5,
-        "input": 2,
-        "output": 10
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "input": 10,
+        "output": 50
       },
-      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-      "family": "gpt",
-      "id": "~openai/gpt-latest",
-      "last_updated": "2026-04-27",
+      "description": "This model always redirects to the latest model in the OpenAI GPT Astra family.",
+      "family": "gpt-astra",
+      "id": "~openai/gpt-astra-latest",
+      "last_updated": "2026-09-11",
       "limit": {
         "context": 1050000,
         "output": 128000
@@ -14277,7 +14319,53 @@
           "text"
         ]
       },
-      "name": "OpenAI GPT Latest",
+      "name": "OpenAI GPT Astra Latest ($$$$)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "~openai/gpt-luna-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.02,
+        "cache_write": 0.25,
+        "input": 0.2,
+        "output": 1.2
+      },
+      "description": "This model always redirects to the latest model in the OpenAI GPT Luna family.",
+      "family": "gpt-luna",
+      "id": "~openai/gpt-luna-latest",
+      "last_updated": "2026-09-11",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI GPT Luna Latest",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -14293,7 +14381,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-27",
+      "release_date": "2026-09-11",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -14339,6 +14427,100 @@
         }
       ],
       "release_date": "2026-04-27",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "~openai/gpt-sol-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "description": "This model always redirects to the latest model in the OpenAI GPT Sol family.",
+      "family": "gpt-sol",
+      "id": "~openai/gpt-sol-latest",
+      "last_updated": "2026-09-11",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI GPT Sol Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-11",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "~openai/gpt-terra-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 12
+      },
+      "description": "This model always redirects to the latest model in the OpenAI GPT Terra family.",
+      "family": "gpt-terra",
+      "id": "~openai/gpt-terra-latest",
+      "last_updated": "2026-09-11",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI GPT Terra Latest",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-11",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -14433,17 +14615,17 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.194,
-        "input": 0.97,
-        "output": 3.3077
+        "cache_read": 0.13,
+        "input": 0.7,
+        "output": 2.2
       },
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "family": "glm",
       "id": "~z-ai/glm-latest",
       "last_updated": "2026-08-19",
       "limit": {
-        "context": 1048576,
-        "output": 943718
+        "context": 1024000,
+        "output": 128000
       },
       "modalities": {
         "input": [
