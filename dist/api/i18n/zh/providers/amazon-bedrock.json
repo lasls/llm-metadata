@@ -3732,9 +3732,10 @@
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
+      "description": "Efficient open MiniMax model built for coding agents and tool-heavy workflows",
       "family": "minimax",
       "id": "minimax.minimax-m2",
+      "interleaved": true,
       "last_updated": "2025-10-27",
       "limit": {
         "context": 204608,
@@ -3748,12 +3749,12 @@
           "text"
         ]
       },
-      "name": "MiniMax M2",
+      "name": "MiniMax-M2",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-10-27",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3763,9 +3764,10 @@
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
+      "description": "Earlier MiniMax agent model for practical coding and productivity tasks",
       "family": "minimax",
       "id": "minimax.minimax-m2.1",
+      "interleaved": true,
       "last_updated": "2025-12-23",
       "limit": {
         "context": 204800,
@@ -3779,12 +3781,12 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.1",
+      "name": "MiniMax-M2.1",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-12-23",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3794,9 +3796,10 @@
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
+      "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
       "family": "minimax",
       "id": "minimax.minimax-m2.5",
+      "interleaved": true,
       "last_updated": "2026-03-18",
       "limit": {
         "context": 196608,
@@ -3810,12 +3813,12 @@
           "text"
         ]
       },
-      "name": "MiniMax M2.5",
+      "name": "MiniMax-M2.5",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-03-18",
-      "structured_output": false,
+      "release_date": "2026-02-12",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -4101,10 +4104,11 @@
         "input": 0.6,
         "output": 2.5
       },
-      "description": "Kimi reasoning model for long-horizon research, planning, and tool use",
+      "description": "Thinking Kimi model for slower research passes, planning, and hard technical questions",
       "family": "kimi-thinking",
       "id": "moonshot.kimi-k2-thinking",
       "interleaved": true,
+      "knowledge": "2024-08",
       "last_updated": "2025-12-02",
       "limit": {
         "context": 262143,
@@ -4122,25 +4126,26 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2025-12-02",
+      "release_date": "2025-11-06",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "moonshotai.kimi-k2.5": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 0.6,
         "output": 3
       },
-      "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
-      "family": "kimi",
+      "description": "Earlier Kimi frontier model for long-context agents, coding, and multimodal work",
+      "family": "kimi-k2",
       "id": "moonshotai.kimi-k2.5",
       "interleaved": true,
+      "knowledge": "2025-01",
       "last_updated": "2026-02-06",
       "limit": {
         "context": 262143,
-        "output": 16000
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -4154,14 +4159,18 @@
       "name": "Kimi K2.5",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-02-06",
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-01-27",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "nvidia.nemotron-nano-12b-v2": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 0.2,
         "output": 0.6
@@ -4169,10 +4178,10 @@
       "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
       "family": "nemotron",
       "id": "nvidia.nemotron-nano-12b-v2",
-      "last_updated": "2024-12-01",
+      "last_updated": "2025-10-28",
       "limit": {
         "context": 128000,
-        "output": 4096
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -4184,9 +4193,9 @@
         ]
       },
       "name": "NVIDIA Nemotron Nano 12B v2 VL BF16",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-12-01",
+      "release_date": "2025-10-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -4202,8 +4211,8 @@
       "id": "nvidia.nemotron-nano-3-30b",
       "last_updated": "2025-12-23",
       "limit": {
-        "context": 128000,
-        "output": 4096
+        "context": 262144,
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -4217,7 +4226,7 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2025-12-23",
+      "release_date": "2025-12-15",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -4231,10 +4240,10 @@
       "description": "Compact Nemotron model for efficient reasoning and deployable AI agents",
       "family": "nemotron",
       "id": "nvidia.nemotron-nano-9b-v2",
-      "last_updated": "2024-12-01",
+      "last_updated": "2025-08-18",
       "limit": {
-        "context": 128000,
-        "output": 4096
+        "context": 131072,
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -4245,9 +4254,9 @@
         ]
       },
       "name": "NVIDIA Nemotron Nano 9B v2",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-12-01",
+      "release_date": "2025-08-18",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -6711,12 +6720,10 @@
         "input": 0.6,
         "output": 2.2
       },
-      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+      "description": "Mature GLM model for dependable coding, reasoning, and structured agent tasks",
       "family": "glm",
       "id": "zai.glm-4.7",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
+      "interleaved": true,
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
@@ -6734,7 +6741,11 @@
       "name": "GLM-4.7",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-12-22",
       "structured_output": true,
       "temperature": true,
@@ -6746,9 +6757,10 @@
         "input": 0.07,
         "output": 0.4
       },
-      "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+      "description": "Budget GLM lane for fast coding help, routing, and everyday automation",
       "family": "glm-flash",
       "id": "zai.glm-4.7-flash",
+      "interleaved": true,
       "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
@@ -6766,7 +6778,11 @@
       "name": "GLM-4.7-Flash",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-01-19",
       "structured_output": true,
       "temperature": true,
@@ -6778,16 +6794,14 @@
         "input": 1,
         "output": 3.2
       },
-      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+      "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
       "family": "glm",
       "id": "zai.glm-5",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
+      "interleaved": true,
       "last_updated": "2026-03-18",
       "limit": {
         "context": 202752,
-        "output": 101376
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -6800,8 +6814,12 @@
       "name": "GLM-5",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-03-18",
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-12",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
