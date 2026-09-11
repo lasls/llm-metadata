@@ -173,12 +173,55 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek-v4.1-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4.1-flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1048576,
+        "output": 26214
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gemma-4-26b-a4b-it": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.053,
-        "input": 0.106,
-        "output": 0.368
+        "cache_read": 0.061,
+        "input": 0.122,
+        "output": 0.42
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -208,7 +251,7 @@
     "glm-5": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.43,
+        "cache_read": 0.43,
         "input": 0.86,
         "output": 2.784
       },
@@ -239,9 +282,9 @@
     "glm-5.1": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.693,
-        "input": 1.386,
-        "output": 4.356
+        "cache_read": 0.663,
+        "input": 1.326,
+        "output": 4.22
       },
       "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
       "family": "glm",
@@ -309,7 +352,7 @@
       "tool_call": true
     },
     "glm-5.3": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.283088,
         "input": 1.52432,
@@ -325,7 +368,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -394,9 +438,9 @@
     "gpt-oss-120b": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.09,
-        "input": 0.18,
-        "output": 0.61
+        "cache_read": 0.089,
+        "input": 0.178,
+        "output": 0.68
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -483,7 +527,7 @@
     "kimi-k2-thinking": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.3,
+        "cache_read": 0.3,
         "input": 0.6,
         "output": 2.5
       },
@@ -515,7 +559,7 @@
     "kimi-k2.5": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.2792,
+        "cache_read": 0.2792,
         "input": 0.5584,
         "output": 2.935
       },
@@ -667,7 +711,7 @@
     "llama-3.3-70b-instruct": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.3033,
+        "cache_read": 0.3033,
         "input": 0.6066,
         "output": 1.0386
       },
@@ -698,7 +742,7 @@
     "llama-4-maverick-17b-128e-instruct-fp8": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.137,
+        "cache_read": 0.137,
         "input": 0.274,
         "output": 0.8992
       },
@@ -729,9 +773,9 @@
     "minimax-m2.7": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.229,
-        "input": 0.458,
-        "output": 1.712
+        "cache_read": 0.202,
+        "input": 0.404,
+        "output": 1.496
       },
       "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
       "family": "minimax",
@@ -801,7 +845,7 @@
     "qwen3-coder-480b-a35b-instruct-int4-mixed-ar": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.2225,
+        "cache_read": 0.2225,
         "input": 0.445,
         "output": 2.145
       },
@@ -832,7 +876,7 @@
     "qwen3-next-80b-a3b-instruct": {
       "attachment": false,
       "cost": {
-        "cache_write": 0.05875,
+        "cache_read": 0.05875,
         "input": 0.1175,
         "output": 1.136
       },
