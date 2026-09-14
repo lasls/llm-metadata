@@ -23,7 +23,7 @@
       "last_updated": "2026-02-12",
       "limit": {
         "context": 196608,
-        "output": 196608
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -36,7 +36,11 @@
       "name": "MiniMax-M2.5",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-12",
       "structured_output": true,
       "temperature": true,
@@ -49,16 +53,17 @@
         "input": 0.5,
         "output": 1.5
       },
-      "description": "DeepSeek chat model for instruction following, coding, and analysis",
+      "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes, sparse attention, and tool-use",
       "family": "deepseek",
       "id": "deepseek-ai/DeepSeek-V3.2",
       "interleaved": {
         "field": "reasoning_content"
       },
+      "knowledge": "2024-07",
       "last_updated": "2025-12-01",
       "limit": {
         "context": 163840,
-        "output": 163840
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -68,12 +73,15 @@
           "text"
         ]
       },
-      "name": "DeepSeek-V3.2",
+      "name": "DeepSeek V3.2",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2025-12-01",
@@ -90,6 +98,9 @@
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
       "id": "google/gemma-4-31B-it",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
@@ -110,6 +121,9 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-04-02",
@@ -133,7 +147,7 @@
       "last_updated": "2026-04-07",
       "limit": {
         "context": 202752,
-        "output": 202752
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -146,7 +160,14 @@
       "name": "GLM-5.1",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,
@@ -167,7 +188,7 @@
       },
       "last_updated": "2026-06-13",
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 131072
       },
       "modalities": {
@@ -183,11 +204,17 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
             "high",
             "max"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-06-13",
@@ -198,9 +225,9 @@
     "zai-org/GLM-5.3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.26,
-        "input": 1.4,
-        "output": 4.4
+        "cache_read": 0.234,
+        "input": 1.26,
+        "output": 3.96
       },
       "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
       "family": "glm",
@@ -211,7 +238,7 @@
       "last_updated": "2026-08-14",
       "limit": {
         "context": 1048576,
-        "output": 1048576
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -234,12 +261,59 @@
           ]
         },
         {
-          "max": 1048576,
-          "min": -1,
           "type": "budget_tokens"
         }
       ],
       "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai-org/GLM-5.3-Flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm",
+      "id": "zai-org/GLM-5.3-Flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-08-26",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

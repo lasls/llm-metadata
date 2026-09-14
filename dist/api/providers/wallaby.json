@@ -1,0 +1,60 @@
+{
+  "api": "https://api.wallabytoken.com/v1",
+  "doc": "https://wallabytoken.com/docs",
+  "env": [
+    "WALLABY_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/wallaby.svg",
+  "id": "wallaby",
+  "models": {
+    "moonshotai/kimi-k3": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.27,
+        "input": 2.7,
+        "output": 13.5
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "moonshotai/kimi-k3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    }
+  },
+  "name": "Wallaby",
+  "npm": "@ai-sdk/openai-compatible"
+}
