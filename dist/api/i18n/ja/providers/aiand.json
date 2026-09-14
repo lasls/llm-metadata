@@ -10,12 +10,16 @@
     "deepseek-ai/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.08,
         "input": 0.15,
         "output": 0.25
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
       "id": "deepseek-ai/deepseek-v4-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
@@ -38,11 +42,8 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
-            "low",
-            "medium",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
@@ -54,12 +55,16 @@
     "deepseek-ai/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.25,
         "input": 1,
         "output": 2.5
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
       "id": "deepseek-ai/deepseek-v4-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
@@ -82,11 +87,8 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
-            "low",
-            "medium",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
@@ -98,12 +100,16 @@
     "google/gemma-4-31b-it": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.05,
         "input": 0.2,
         "output": 0.5
       },
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
       "id": "google/gemma-4-31b-it",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
@@ -128,11 +134,7 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "xhigh"
+            "high"
           ]
         }
       ],
@@ -144,12 +146,16 @@
     "moonshotai/kimi-k2.7-code": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.2,
         "input": 0.75,
         "output": 3.5
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
       "id": "moonshotai/kimi-k2.7-code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2025-01",
       "last_updated": "2026-06-12",
       "limit": {
@@ -173,12 +179,7 @@
         {
           "type": "effort",
           "values": [
-            "none",
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "xhigh"
+            "high"
           ]
         }
       ],
@@ -197,6 +198,9 @@
       "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
       "family": "kimi-k3",
       "id": "moonshotai/kimi-k3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-07-16",
       "limit": {
         "context": 1048576,
@@ -233,12 +237,16 @@
     "motif-technologies/motif-3": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.2,
         "input": 0.5,
         "output": 2
       },
       "description": "Motif 3 is a large-scale, decoder-only Mixture-of-Experts (MoE) language model with 314 billion total parameters and 13.2 billion parameters activated per token.",
       "id": "motif-technologies/motif-3",
-      "last_updated": "2026-08-12",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-11",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -254,7 +262,15 @@
       "name": "Motif 3",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-08-12",
       "structured_output": false,
       "temperature": false,
@@ -263,12 +279,16 @@
     "openai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.08,
         "input": 0.15,
         "output": 0.6
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-120b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
@@ -303,12 +323,16 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.2,
         "input": 0.32,
         "output": 3.2
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen/qwen3.6-27b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
@@ -333,11 +357,7 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "xhigh"
+            "high"
           ]
         }
       ],
@@ -356,6 +376,9 @@
       "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
       "family": "qwen",
       "id": "qwen/qwen3.8-27b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-08-14",
       "limit": {
         "context": 262144,
@@ -394,12 +417,16 @@
     "zai-org/glm-5.2": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.3,
         "input": 1,
         "output": 4
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
       "id": "zai-org/glm-5.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-06-13",
       "limit": {
         "context": 1048576,
@@ -421,11 +448,8 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
-            "low",
-            "medium",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
@@ -444,6 +468,9 @@
       "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
       "family": "glm",
       "id": "zai-org/glm-5.3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-08-14",
       "limit": {
         "context": 1048576,
@@ -464,9 +491,8 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
-            "xhigh",
+            "high",
             "max"
           ]
         }

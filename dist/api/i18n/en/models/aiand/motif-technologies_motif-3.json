@@ -1,12 +1,16 @@
 {
   "attachment": false,
   "cost": {
+    "cache_read": 0.2,
     "input": 0.5,
     "output": 2
   },
   "description": "Motif 3 is a large-scale, decoder-only Mixture-of-Experts (MoE) language model with 314 billion total parameters and 13.2 billion parameters activated per token.",
   "id": "motif-technologies/motif-3",
-  "last_updated": "2026-08-12",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-09-11",
   "limit": {
     "context": 262144,
     "output": 262144
@@ -22,7 +26,15 @@
   "name": "Motif 3",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-08-12",
   "structured_output": false,
   "temperature": false,

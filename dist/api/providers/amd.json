@@ -20,7 +20,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-07-31",
       "limit": {
-        "context": 1000000,
+        "context": 1048576,
         "output": 384000
       },
       "modalities": {
@@ -99,16 +99,63 @@
       "temperature": true,
       "tool_call": true
     },
-    "MiniCPM5-1B": {
+    "DeepSeek-V4.1-Flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0028,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "DeepSeek-V4.1-Flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "MiniCPM5-2B": {
       "attachment": false,
       "cost": {
         "cache_read": 0.124,
         "input": 0.124,
         "output": 0.7425
       },
-      "description": "Dense 1B-class open-source model for on-device and resource-constrained use, with native long-context support, Think / No Think chat modes, and tool calling",
-      "id": "MiniCPM5-1B",
-      "last_updated": "2026-05-19",
+      "description": "Dense 2B-class open-source model for on-device and resource-constrained use, with native long-context support, tool calling, and agentic tasks",
+      "id": "MiniCPM5-2B",
+      "last_updated": "2026-09-12",
       "limit": {
         "context": 131072,
         "output": 131072
@@ -121,7 +168,38 @@
           "text"
         ]
       },
-      "name": "MiniCPM5-1B",
+      "name": "MiniCPM5-2B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-09-06",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen3.8-27B": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+      "family": "qwen",
+      "id": "Qwen3.8-27B",
+      "interleaved": true,
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -129,12 +207,12 @@
           "type": "effort",
           "values": [
             "low",
-            "medium",
-            "high"
+            "medium"
           ]
         }
       ],
-      "release_date": "2026-05-19",
+      "release_date": "2026-08-14",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
