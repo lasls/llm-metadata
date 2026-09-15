@@ -20426,6 +20426,56 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "cache_write": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4.1-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "glm-5": {
         "attachment": false,
         "cost": {
@@ -24191,6 +24241,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -24232,6 +24285,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -24252,8 +24308,8 @@
         "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
         "family": "claude-opus",
         "id": "anthropic.claude-opus-4-5-20251101-v1:0",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-08-01",
+        "knowledge": "2025-05",
+        "last_updated": "2025-11-01",
         "limit": {
           "context": 200000,
           "output": 64000
@@ -24273,6 +24329,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -24285,7 +24344,7 @@
             "type": "budget_tokens"
           }
         ],
-        "release_date": "2025-11-24",
+        "release_date": "2025-11-01",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -24293,10 +24352,10 @@
       "anthropic.claude-opus-4-6-v1": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
         "description": "High-end Claude for difficult coding, planning, and slower expert reasoning",
         "family": "claude-opus",
@@ -24321,6 +24380,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -24348,7 +24410,7 @@
           "input": 5,
           "output": 25
         },
-        "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+        "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
         "family": "claude-opus",
         "id": "anthropic.claude-opus-4-7",
         "knowledge": "2026-01-31",
@@ -24371,6 +24433,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -24418,6 +24483,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -24463,6 +24531,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -24510,6 +24581,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -24522,10 +24596,10 @@
       "anthropic.claude-sonnet-4-6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
+          "cache_read": 0.33,
+          "cache_write": 4.125,
+          "input": 3.3,
+          "output": 16.5
         },
         "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
         "family": "claude-sonnet",
@@ -24534,7 +24608,7 @@
         "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
-          "output": 64000
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -24550,6 +24624,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -24615,7 +24692,7 @@
           }
         ],
         "release_date": "2026-06-30",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": false,
         "tool_call": true
       },
@@ -24721,13 +24798,57 @@
         "temperature": true,
         "tool_call": true
       },
+      "apac.anthropic.claude-sonnet-4-20250514-v1:0": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+        "family": "claude-sonnet",
+        "id": "apac.anthropic.claude-sonnet-4-20250514-v1:0",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4 (APAC)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "min": 1024,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2025-05-22",
+        "status": "deprecated",
+        "temperature": true,
+        "tool_call": true
+      },
       "au.anthropic.claude-haiku-4-5-20251001-v1:0": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.1,
-          "cache_write": 1.25,
-          "input": 1,
-          "output": 5
+          "cache_read": 0.11,
+          "cache_write": 1.375,
+          "input": 1.1,
+          "output": 5.5
         },
         "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
         "family": "claude-haiku",
@@ -24753,6 +24874,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -24765,16 +24889,16 @@
       "au.anthropic.claude-opus-4-6-v1": {
         "attachment": true,
         "cost": {
-          "cache_read": 1.65,
-          "cache_write": 20.625,
-          "input": 16.5,
-          "output": 82.5
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
-        "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+        "description": "High-end Claude for difficult coding, planning, and slower expert reasoning",
         "family": "claude-opus",
         "id": "au.anthropic.claude-opus-4-6-v1",
-        "knowledge": "2025-05",
-        "last_updated": "2026-02-05",
+        "knowledge": "2025-05-31",
+        "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
           "output": 128000
@@ -24793,6 +24917,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -24844,6 +24971,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -24861,10 +24991,10 @@
       "au.anthropic.claude-opus-4-8": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
         "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
         "family": "claude-opus",
@@ -24890,6 +25020,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -24907,10 +25040,10 @@
       "au.anthropic.claude-opus-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
         "description": "Strongest Claude Opus model for coding, agents, and professional work",
         "family": "claude-opus",
@@ -24936,6 +25069,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -24953,10 +25089,10 @@
       "au.anthropic.claude-sonnet-4-5-20250929-v1:0": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
+          "cache_read": 0.33,
+          "cache_write": 4.125,
+          "input": 3.3,
+          "output": 16.5
         },
         "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
         "family": "claude-sonnet",
@@ -24982,6 +25118,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -24999,11 +25138,11 @@
           "input": 3.3,
           "output": 16.5
         },
-        "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+        "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
         "family": "claude-sonnet",
         "id": "au.anthropic.claude-sonnet-4-6",
-        "knowledge": "2025-08",
-        "last_updated": "2026-02-17",
+        "knowledge": "2025-08-31",
+        "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
           "output": 128000
@@ -25022,6 +25161,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -25044,10 +25186,10 @@
       "au.anthropic.claude-sonnet-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "cache_write": 2.5,
-          "input": 2,
-          "output": 10
+          "cache_read": 0.22,
+          "cache_write": 2.75,
+          "input": 2.2,
+          "output": 11
         },
         "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
         "family": "claude-sonnet",
@@ -25087,7 +25229,7 @@
           }
         ],
         "release_date": "2026-06-30",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": false,
         "tool_call": true
       },
@@ -25458,6 +25600,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -25478,8 +25623,8 @@
         "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
         "family": "claude-opus",
         "id": "eu.anthropic.claude-opus-4-5-20251101-v1:0",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-08-01",
+        "knowledge": "2025-05",
+        "last_updated": "2025-11-01",
         "limit": {
           "context": 200000,
           "output": 64000
@@ -25499,6 +25644,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -25511,7 +25659,7 @@
             "type": "budget_tokens"
           }
         ],
-        "release_date": "2025-11-24",
+        "release_date": "2025-11-01",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -25548,6 +25696,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -25574,7 +25725,7 @@
           "input": 5.5,
           "output": 27.5
         },
-        "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+        "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
         "family": "claude-opus",
         "id": "eu.anthropic.claude-opus-4-7",
         "knowledge": "2026-01-31",
@@ -25597,6 +25748,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -25644,6 +25798,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -25690,6 +25847,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -25702,6 +25862,50 @@
         ],
         "release_date": "2026-07-24",
         "temperature": false,
+        "tool_call": true
+      },
+      "eu.anthropic.claude-sonnet-4-20250514-v1:0": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+        "family": "claude-sonnet",
+        "id": "eu.anthropic.claude-sonnet-4-20250514-v1:0",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4 (EU)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "min": 1024,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2025-05-22",
+        "status": "deprecated",
+        "temperature": true,
         "tool_call": true
       },
       "eu.anthropic.claude-sonnet-4-5-20250929-v1:0": {
@@ -25736,6 +25940,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -25760,7 +25967,7 @@
         "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
-          "output": 64000
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -25776,6 +25983,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -25841,7 +26051,7 @@
           }
         ],
         "release_date": "2026-06-30",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": false,
         "tool_call": true
       },
@@ -26047,6 +26257,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -26067,8 +26280,8 @@
         "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
         "family": "claude-opus",
         "id": "global.anthropic.claude-opus-4-5-20251101-v1:0",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-08-01",
+        "knowledge": "2025-05",
+        "last_updated": "2025-11-01",
         "limit": {
           "context": 200000,
           "output": 64000
@@ -26088,6 +26301,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -26100,7 +26316,7 @@
             "type": "budget_tokens"
           }
         ],
-        "release_date": "2025-11-24",
+        "release_date": "2025-11-01",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -26137,6 +26353,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -26163,7 +26382,7 @@
           "input": 5,
           "output": 25
         },
-        "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+        "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
         "family": "claude-opus",
         "id": "global.anthropic.claude-opus-4-7",
         "knowledge": "2026-01-31",
@@ -26186,6 +26405,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -26233,6 +26455,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -26279,6 +26504,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -26291,6 +26519,50 @@
         ],
         "release_date": "2026-07-24",
         "temperature": false,
+        "tool_call": true
+      },
+      "global.anthropic.claude-sonnet-4-20250514-v1:0": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "cache_write": 3.75,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+        "family": "claude-sonnet",
+        "id": "global.anthropic.claude-sonnet-4-20250514-v1:0",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4 (Global)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "min": 1024,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2025-05-22",
+        "status": "deprecated",
+        "temperature": true,
         "tool_call": true
       },
       "global.anthropic.claude-sonnet-4-5-20250929-v1:0": {
@@ -26325,6 +26597,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -26349,7 +26624,7 @@
         "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
-          "output": 64000
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -26365,6 +26640,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -26430,7 +26708,7 @@
           }
         ],
         "release_date": "2026-06-30",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": false,
         "tool_call": true
       },
@@ -27160,10 +27438,10 @@
       "jp.anthropic.claude-haiku-4-5-20251001-v1:0": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.1,
-          "cache_write": 1.25,
-          "input": 1,
-          "output": 5
+          "cache_read": 0.11,
+          "cache_write": 1.375,
+          "input": 1.1,
+          "output": 5.5
         },
         "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
         "family": "claude-haiku",
@@ -27189,6 +27467,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -27201,10 +27482,10 @@
       "jp.anthropic.claude-opus-4-7": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
         "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
         "family": "claude-opus",
@@ -27230,6 +27511,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -27247,10 +27531,10 @@
       "jp.anthropic.claude-opus-4-8": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
         "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
         "family": "claude-opus",
@@ -27276,6 +27560,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -27293,10 +27580,10 @@
       "jp.anthropic.claude-opus-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
         "description": "Strongest Claude Opus model for coding, agents, and professional work",
         "family": "claude-opus",
@@ -27322,6 +27609,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -27339,10 +27629,10 @@
       "jp.anthropic.claude-sonnet-4-5-20250929-v1:0": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
+          "cache_read": 0.33,
+          "cache_write": 4.125,
+          "input": 3.3,
+          "output": 16.5
         },
         "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
         "family": "claude-sonnet",
@@ -27368,6 +27658,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -27380,10 +27673,10 @@
       "jp.anthropic.claude-sonnet-4-6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
+          "cache_read": 0.33,
+          "cache_write": 4.125,
+          "input": 3.3,
+          "output": 16.5
         },
         "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
         "family": "claude-sonnet",
@@ -27392,7 +27685,7 @@
         "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
-          "output": 64000
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -27408,6 +27701,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -27430,10 +27726,10 @@
       "jp.anthropic.claude-sonnet-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "cache_write": 2.5,
-          "input": 2,
-          "output": 10
+          "cache_read": 0.22,
+          "cache_write": 2.75,
+          "input": 2.2,
+          "output": 11
         },
         "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
         "family": "claude-sonnet",
@@ -27473,7 +27769,7 @@
           }
         ],
         "release_date": "2026-06-30",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": false,
         "tool_call": true
       },
@@ -29331,10 +29627,10 @@
       "us.anthropic.claude-fable-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 50
+          "cache_read": 1.1,
+          "cache_write": 13.75,
+          "input": 11,
+          "output": 55
         },
         "description": "Claude model for creative writing, analysis, and controlled agent workflows",
         "family": "claude-fable",
@@ -29423,10 +29719,10 @@
       "us.anthropic.claude-haiku-4-5-20251001-v1:0": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.1,
-          "cache_write": 1.25,
-          "input": 1,
-          "output": 5
+          "cache_read": 0.11,
+          "cache_write": 1.375,
+          "input": 1.1,
+          "output": 5.5
         },
         "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
         "family": "claude-haiku",
@@ -29451,6 +29747,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "min": 1024,
             "type": "budget_tokens"
@@ -29493,6 +29792,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -29505,16 +29807,16 @@
       "us.anthropic.claude-opus-4-5-20251101-v1:0": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
         "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
         "family": "claude-opus",
         "id": "us.anthropic.claude-opus-4-5-20251101-v1:0",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-08-01",
+        "knowledge": "2025-05",
+        "last_updated": "2025-11-01",
         "limit": {
           "context": 200000,
           "output": 64000
@@ -29534,6 +29836,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -29546,7 +29851,7 @@
             "type": "budget_tokens"
           }
         ],
-        "release_date": "2025-11-24",
+        "release_date": "2025-11-01",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -29554,10 +29859,10 @@
       "us.anthropic.claude-opus-4-6-v1": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
         "description": "High-end Claude for difficult coding, planning, and slower expert reasoning",
         "family": "claude-opus",
@@ -29583,6 +29888,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -29604,12 +29912,12 @@
       "us.anthropic.claude-opus-4-7": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
-        "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+        "description": "Stronger Opus tier for advanced software work and high-stakes reasoning",
         "family": "claude-opus",
         "id": "us.anthropic.claude-opus-4-7",
         "knowledge": "2026-01-31",
@@ -29633,6 +29941,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -29650,10 +29961,10 @@
       "us.anthropic.claude-opus-4-8": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
         "description": "Top Claude Opus tier for the hardest reasoning, coding, and long-horizon agents",
         "family": "claude-opus",
@@ -29679,6 +29990,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -29696,10 +30010,10 @@
       "us.anthropic.claude-opus-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.5,
-          "cache_write": 6.25,
-          "input": 5,
-          "output": 25
+          "cache_read": 0.55,
+          "cache_write": 6.875,
+          "input": 5.5,
+          "output": 27.5
         },
         "description": "Strongest Claude Opus model for coding, agents, and professional work",
         "family": "claude-opus",
@@ -29725,6 +30039,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "type": "effort",
             "values": [
               "low",
@@ -29739,13 +30056,57 @@
         "temperature": false,
         "tool_call": true
       },
-      "us.anthropic.claude-sonnet-4-5-20250929-v1:0": {
+      "us.anthropic.claude-sonnet-4-20250514-v1:0": {
         "attachment": true,
         "cost": {
           "cache_read": 0.3,
           "cache_write": 3.75,
           "input": 3,
           "output": 15
+        },
+        "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+        "family": "claude-sonnet",
+        "id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
+        "knowledge": "2025-03-31",
+        "last_updated": "2025-05-22",
+        "limit": {
+          "context": 200000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Claude Sonnet 4 (US)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "min": 1024,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2025-05-22",
+        "status": "deprecated",
+        "temperature": true,
+        "tool_call": true
+      },
+      "us.anthropic.claude-sonnet-4-5-20250929-v1:0": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.33,
+          "cache_write": 4.125,
+          "input": 3.3,
+          "output": 16.5
         },
         "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
         "family": "claude-sonnet",
@@ -29771,6 +30132,9 @@
         "reasoning": true,
         "reasoning_options": [
           {
+            "type": "toggle"
+          },
+          {
             "min": 1024,
             "type": "budget_tokens"
           }
@@ -29783,10 +30147,10 @@
       "us.anthropic.claude-sonnet-4-6": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
-          "cache_write": 3.75,
-          "input": 3,
-          "output": 15
+          "cache_read": 0.33,
+          "cache_write": 4.125,
+          "input": 3.3,
+          "output": 16.5
         },
         "description": "Claude workhorse for coding agents, careful analysis, and production cost control",
         "family": "claude-sonnet",
@@ -29795,7 +30159,7 @@
         "last_updated": "2026-03-13",
         "limit": {
           "context": 1000000,
-          "output": 64000
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -29811,6 +30175,9 @@
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
+          {
+            "type": "toggle"
+          },
           {
             "type": "effort",
             "values": [
@@ -29833,10 +30200,10 @@
       "us.anthropic.claude-sonnet-5": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "cache_write": 2.5,
-          "input": 2,
-          "output": 10
+          "cache_read": 0.22,
+          "cache_write": 2.75,
+          "input": 2.2,
+          "output": 11
         },
         "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
         "family": "claude-sonnet",
@@ -29876,7 +30243,7 @@
           }
         ],
         "release_date": "2026-06-30",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": false,
         "tool_call": true
       },
@@ -83183,6 +83550,48 @@
         "temperature": true,
         "tool_call": true
       },
+      "accounts/fireworks/models/deepseek-v4-pro": {
+        "attachment": false,
+        "description": "Open MoE flagship with million-token context for coding and long agent runs",
+        "family": "deepseek-thinking",
+        "id": "accounts/fireworks/models/deepseek-v4-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-04-24",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Pro",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-04-24",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "accounts/fireworks/models/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
@@ -83760,6 +84169,49 @@
         "temperature": false,
         "tool_call": true
       },
+      "accounts/fireworks/models/minimax-m2p7": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.059,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
+        "family": "minimax",
+        "id": "accounts/fireworks/models/minimax-m2p7",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-03-18",
+        "limit": {
+          "context": 196608,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M2.7",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-03-18",
+        "temperature": true,
+        "tool_call": true
+      },
       "accounts/fireworks/models/minimax-m3": {
         "attachment": false,
         "cost": {
@@ -84105,6 +84557,133 @@
         "temperature": true,
         "tool_call": true
       },
+      "accounts/fireworks/routers/deepseek-flash-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
+        },
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.00875,
+                "input": 0.275,
+                "output": 0.825
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
+        "family": "deepseek-flash",
+        "id": "accounts/fireworks/routers/deepseek-flash-latest",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek Flash Latest",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "accounts/fireworks/routers/deepseek-pro-latest": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.044,
+          "input": 1.32,
+          "output": 3.96
+        },
+        "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.055,
+                "input": 1.65,
+                "output": 4.95
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
+        "family": "deepseek-thinking",
+        "id": "accounts/fireworks/routers/deepseek-pro-latest",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-22",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek Pro Latest",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-12",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "accounts/fireworks/routers/glm-5p2-fast": {
         "attachment": false,
         "cost": {
@@ -84194,6 +84773,208 @@
         "temperature": true,
         "tool_call": true
       },
+      "accounts/fireworks/routers/glm-fast-latest": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.39,
+          "input": 2.1,
+          "output": 6.6
+        },
+        "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "family": "glm",
+        "id": "accounts/fireworks/routers/glm-fast-latest",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 1048572,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.3 Fast (Latest)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-28",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "accounts/fireworks/routers/glm-flash-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.15,
+          "output": 0.5
+        },
+        "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+        "family": "glm",
+        "id": "accounts/fireworks/routers/glm-flash-latest",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 1048573,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM Flash Latest (GLM 5.3 Flash)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "accounts/fireworks/routers/glm-latest": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.26,
+          "input": 1.4,
+          "output": 4.4
+        },
+        "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.325,
+                "input": 1.75,
+                "output": 5.5
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
+        "family": "glm",
+        "id": "accounts/fireworks/routers/glm-latest",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 1048573,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM Latest",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-14",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "accounts/fireworks/routers/kimi-fast-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.45,
+          "input": 4.5,
+          "output": 22.5
+        },
+        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "family": "kimi-k3",
+        "id": "accounts/fireworks/routers/kimi-fast-latest",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi Fast Latest",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          },
+          {
+            "min": 1024,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-07-27",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "accounts/fireworks/routers/kimi-k3-fast": {
         "attachment": true,
         "cost": {
@@ -84245,6 +85026,134 @@
         "release_date": "2026-07-27",
         "structured_output": true,
         "temperature": false,
+        "tool_call": true
+      },
+      "accounts/fireworks/routers/kimi-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.375,
+                "input": 3.75,
+                "output": 18.75
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
+        "family": "kimi-k3",
+        "id": "accounts/fireworks/routers/kimi-latest",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi Latest",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          },
+          {
+            "min": 1024,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-07-27",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "accounts/fireworks/routers/minimax-latest": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.06,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.09,
+                "input": 0.45,
+                "output": 1.8
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
+        "family": "minimax",
+        "id": "accounts/fireworks/routers/minimax-latest",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 512000,
+          "output": 512000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax Latest",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-06-12",
+        "temperature": true,
         "tool_call": true
       }
     },
@@ -102307,7 +103216,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1000000,
-          "output": 13107
+          "output": 32768
         },
         "modalities": {
           "input": [
@@ -102484,7 +103393,7 @@
         "last_updated": "2026-08-31",
         "limit": {
           "context": 1048576,
-          "output": 262144
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -126775,9 +127684,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.14,
-          "output": 0.58
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -130763,6 +131672,47 @@
         ],
         "release_date": "2025-09-29",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4-1-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+        "family": "deepseek",
+        "id": "deepseek-v4-1-flash",
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V4.1-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-15",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -143810,7 +144760,18 @@
         },
         "name": "DeepSeek V4.1 Flash (Consensus Protocol)",
         "open_weights": true,
-        "reasoning": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
         "release_date": "2026-09-10",
         "structured_output": false,
         "temperature": true,
@@ -151093,6 +152054,47 @@
         "release_date": "2026-07-16",
         "structured_output": true,
         "temperature": false,
+        "tool_call": true
+      },
+      "runware/deepseek-v4-1-flash": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+        "family": "deepseek",
+        "id": "runware/deepseek-v4-1-flash",
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek-V4.1-Flash (Runware)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-15",
+        "structured_output": false,
+        "temperature": true,
         "tool_call": true
       },
       "runware/deepseek-v4-flash": {
@@ -163936,7 +164938,7 @@
         "tool_call": true
       },
       "qwen/qwen3.5-397b-a17b": {
-        "attachment": true,
+        "attachment": false,
         "cost": {
           "cache_read": 0.0344,
           "input": 0.172,
@@ -163947,13 +164949,12 @@
         "id": "qwen/qwen3.5-397b-a17b",
         "last_updated": "2026-02-15",
         "limit": {
-          "context": 256000,
-          "output": 64000
+          "context": 131072,
+          "output": 32768
         },
         "modalities": {
           "input": [
-            "text",
-            "image"
+            "text"
           ],
           "output": [
             "text"
@@ -221241,9 +222242,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.017416,
-          "input": 0.08708,
-          "output": 0.17416
+          "cache_read": 0.015876,
+          "input": 0.07938,
+          "output": 0.15876
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -231625,9 +232626,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.033,
-          "input": 0.132,
-          "output": 0.528
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -273540,7 +274541,7 @@
       }
     },
     "name": "Standard Compute",
-    "npm": "@ai-sdk/openai-compatible"
+    "npm": "@openrouter/ai-sdk-provider"
   },
   "stepfun": {
     "api": "https://api.stepfun.com/v1",
@@ -275963,6 +276964,44 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek/deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.13,
+          "input": 0.5,
+          "output": 1.5
+        },
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
+        "id": "deepseek/deepseek-v4.1-flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1048576,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "minimax/minimax-m2.5": {
         "attachment": false,
         "cost": {
@@ -277321,52 +278360,6 @@
         ],
         "release_date": "2026-09-10",
         "status": "beta",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek-v4-flash": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.06,
-          "input": 0.3,
-          "output": 0.7
-        },
-        "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
-        "family": "deepseek-flash",
-        "id": "deepseek-v4-flash",
-        "knowledge": "2025-05",
-        "last_updated": "2026-07-31",
-        "limit": {
-          "context": 1048576,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Flash 0731",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "minimal",
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-07-31",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -291254,6 +292247,66 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": true
+      },
+      "google/gemini-3.8-live": {
+        "attachment": false,
+        "cost": {
+          "input": 0.75,
+          "output": 4.5
+        },
+        "description": "Speech generation model for controllable voice, narration, and audio delivery",
+        "family": "gemini",
+        "id": "google/gemini-3.8-live",
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "audio"
+          ],
+          "output": [
+            "text",
+            "audio"
+          ]
+        },
+        "name": "Gemini 3.8 Live",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-09-15",
+        "tool_call": false
+      },
+      "google/gemini-3.8-live-extended-thinking": {
+        "attachment": false,
+        "cost": {
+          "input": 0.75,
+          "output": 4.5
+        },
+        "description": "Speech generation model for controllable voice, narration, and audio delivery",
+        "family": "gemini",
+        "id": "google/gemini-3.8-live-extended-thinking",
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "audio"
+          ],
+          "output": [
+            "text",
+            "audio"
+          ]
+        },
+        "name": "Gemini 3.8 Live Extended Thinking",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-09-15",
+        "tool_call": false
       },
       "google/gemini-embedding-001": {
         "attachment": false,
