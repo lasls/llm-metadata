@@ -6376,70 +6376,10 @@
       "temperature": true,
       "tool_call": false
     },
-    "mistral/devstral-2": {
-      "attachment": false,
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "Mistral coding agent model for repository tasks and software engineering workflows",
-      "family": "devstral",
-      "id": "mistral/devstral-2",
-      "knowledge": "2024-10",
-      "last_updated": "2025-12-09",
-      "limit": {
-        "context": 256000,
-        "output": 256000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral 2",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-12-09",
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistral/devstral-small-2": {
-      "attachment": false,
-      "cost": {
-        "input": 0.1,
-        "output": 0.3
-      },
-      "description": "Mistral coding agent model for repository tasks and software engineering workflows",
-      "family": "devstral",
-      "id": "mistral/devstral-small-2",
-      "knowledge": "2024-10",
-      "last_updated": "2025-05-07",
-      "limit": {
-        "context": 256000,
-        "output": 256000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral Small 2",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-12-09",
-      "temperature": true,
-      "tool_call": true
-    },
     "mistral/ministral-14b": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.02,
         "input": 0.2,
         "output": 0.2
       },
@@ -6449,7 +6389,7 @@
       "knowledge": "2024-10",
       "last_updated": "2025-12-01",
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 256000
       },
       "modalities": {
@@ -6557,6 +6497,7 @@
     "mistral/mistral-large-3": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.05,
         "input": 0.5,
         "output": 1.5
       },
@@ -6566,7 +6507,7 @@
       "knowledge": "2024-10",
       "last_updated": "2025-12-02",
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 256000
       },
       "modalities": {
@@ -6585,40 +6526,10 @@
       "temperature": true,
       "tool_call": false
     },
-    "mistral/mistral-medium": {
-      "attachment": true,
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "family": "mistral-medium",
-      "id": "mistral/mistral-medium",
-      "knowledge": "2024-10",
-      "last_updated": "2025-05-07",
-      "limit": {
-        "context": 128000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Medium 3.1",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-05-07",
-      "temperature": true,
-      "tool_call": true
-    },
     "mistral/mistral-medium-3.5": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.15,
         "input": 1.5,
         "output": 7.5
       },
@@ -6627,7 +6538,7 @@
       "id": "mistral/mistral-medium-3.5",
       "last_updated": "2026-05-21",
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 256000
       },
       "modalities": {
@@ -6658,8 +6569,8 @@
     "mistral/mistral-nemo": {
       "attachment": false,
       "cost": {
-        "input": 0.15,
-        "output": 0.15
+        "input": 0.04,
+        "output": 0.17
       },
       "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral-nemo",
@@ -6667,13 +6578,12 @@
       "knowledge": "2024-04",
       "last_updated": "2024-07-01",
       "limit": {
-        "context": 128000,
-        "output": 128000
+        "context": 60288,
+        "output": 16000
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
@@ -6689,8 +6599,9 @@
     "mistral/mistral-small": {
       "attachment": true,
       "cost": {
-        "input": 0.1,
-        "output": 0.3
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.6
       },
       "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral-small",
@@ -6698,7 +6609,7 @@
       "knowledge": "2025-06",
       "last_updated": "2026-03-16",
       "limit": {
-        "context": 32000,
+        "context": 262144,
         "output": 4000
       },
       "modalities": {
@@ -6714,37 +6625,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-09-17",
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistral/pixtral-12b": {
-      "attachment": true,
-      "cost": {
-        "input": 0.15,
-        "output": 0.15
-      },
-      "description": "Mistral vision-language model for image understanding and multimodal chat",
-      "family": "pixtral",
-      "id": "mistral/pixtral-12b",
-      "knowledge": "2024-09",
-      "last_updated": "2024-09-01",
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Pixtral 12B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-09-01",
       "temperature": true,
       "tool_call": true
     },
