@@ -6,6 +6,22 @@
     "output": 0.5
   },
   "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+  "experimental": {
+    "modes": {
+      "priority": {
+        "cost": {
+          "cache_read": 0.0375,
+          "input": 0.1875,
+          "output": 0.625
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "glm",
   "id": "accounts/fireworks/models/glm-5p3-flash",
   "interleaved": {
@@ -19,9 +35,7 @@
   "modalities": {
     "input": [
       "text",
-      "image",
-      "video",
-      "pdf"
+      "image"
     ],
     "output": [
       "text"

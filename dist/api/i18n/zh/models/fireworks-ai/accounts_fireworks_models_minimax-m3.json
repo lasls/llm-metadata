@@ -1,11 +1,27 @@
 {
-  "attachment": true,
+  "attachment": false,
   "cost": {
     "cache_read": 0.06,
     "input": 0.3,
     "output": 1.2
   },
   "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
+  "experimental": {
+    "modes": {
+      "priority": {
+        "cost": {
+          "cache_read": 0.09,
+          "input": 0.45,
+          "output": 1.8
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "minimax",
   "id": "accounts/fireworks/models/minimax-m3",
   "interleaved": {
@@ -18,9 +34,7 @@
   },
   "modalities": {
     "input": [
-      "text",
-      "image",
-      "video"
+      "text"
     ],
     "output": [
       "text"

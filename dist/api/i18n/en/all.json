@@ -69528,9 +69528,9 @@
       "deepseek/deepseek-chat": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.028,
-          "input": 0.28,
-          "output": 0.42
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "DeepSeek chat model for instruction following, coding, and analysis",
         "family": "deepseek",
@@ -69558,11 +69558,11 @@
         "tool_call": true
       },
       "deepseek/deepseek-v4-flash": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.44,
-          "output": 1.32
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -69575,7 +69575,8 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -69603,16 +69604,16 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.22,
-          "output": 0.66
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
         "id": "deepseek/deepseek-v4-flash-vision-exp",
         "last_updated": "2026-08-21",
         "limit": {
-          "context": 1048576,
+          "context": 1000000,
           "output": 384000
         },
         "modalities": {
@@ -69646,9 +69647,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.044,
-          "input": 1.32,
-          "output": 3.96
+          "cache_read": 0.022,
+          "input": 0.66,
+          "output": 1.98
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -83080,6 +83081,22 @@
           "output": 0.66
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.00875,
+                "input": 0.275,
+                "output": 0.825
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "deepseek-flash",
         "id": "accounts/fireworks/models/deepseek-v4-flash-0731",
         "interleaved": {
@@ -83176,6 +83193,22 @@
           "output": 3.96
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.055,
+                "input": 1.65,
+                "output": 4.95
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "deepseek-thinking",
         "id": "accounts/fireworks/models/deepseek-v4-pro-0813",
         "interleaved": {
@@ -83222,6 +83255,22 @@
           "output": 0.66
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.00875,
+                "input": 0.275,
+                "output": 0.825
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "deepseek-flash",
         "id": "accounts/fireworks/models/deepseek-v4p1-flash",
         "interleaved": {
@@ -83271,6 +83320,22 @@
           "output": 4.4
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.175,
+                "input": 1.75,
+                "output": 5.5
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "glm",
         "id": "accounts/fireworks/models/glm-5p2",
         "interleaved": {
@@ -83316,6 +83381,22 @@
           "output": 4.4
         },
         "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.325,
+                "input": 1.75,
+                "output": 5.5
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "glm",
         "id": "accounts/fireworks/models/glm-5p3",
         "interleaved": {
@@ -83360,6 +83441,22 @@
           "output": 0.5
         },
         "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.0375,
+                "input": 0.1875,
+                "output": 0.625
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "glm",
         "id": "accounts/fireworks/models/glm-5p3-flash",
         "interleaved": {
@@ -83373,9 +83470,7 @@
         "modalities": {
           "input": [
             "text",
-            "image",
-            "video",
-            "pdf"
+            "image"
           ],
           "output": [
             "text"
@@ -83407,6 +83502,22 @@
           "output": 0.6
         },
         "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.018,
+                "input": 0.18,
+                "output": 0.72
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "gpt-oss",
         "id": "accounts/fireworks/models/gpt-oss-120b",
         "last_updated": "2026-06-16",
@@ -83480,6 +83591,22 @@
           "output": 4
         },
         "description": "Kimi reasoning model for long-horizon research, planning, and tool use",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.22,
+                "input": 1.5,
+                "output": 6
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "kimi-thinking",
         "id": "accounts/fireworks/models/kimi-k2p6",
         "interleaved": {
@@ -83519,6 +83646,22 @@
           "output": 4
         },
         "description": "Kimi coding model for software agents, refactors, and repository reasoning",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.285,
+                "input": 1.425,
+                "output": 6
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "kimi-k2",
         "id": "accounts/fireworks/models/kimi-k2p7-code",
         "interleaved": {
@@ -83558,6 +83701,22 @@
           "output": 15
         },
         "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.375,
+                "input": 3.75,
+                "output": 18.75
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "kimi-k3",
         "id": "accounts/fireworks/models/kimi-k3",
         "interleaved": {
@@ -83604,13 +83763,29 @@
         "tool_call": true
       },
       "accounts/fireworks/models/minimax-m3": {
-        "attachment": true,
+        "attachment": false,
         "cost": {
           "cache_read": 0.06,
           "input": 0.3,
           "output": 1.2
         },
         "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.09,
+                "input": 0.45,
+                "output": 1.8
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "minimax",
         "id": "accounts/fireworks/models/minimax-m3",
         "interleaved": {
@@ -83623,9 +83798,7 @@
         },
         "modalities": {
           "input": [
-            "text",
-            "image",
-            "video"
+            "text"
           ],
           "output": [
             "text"
@@ -83722,7 +83895,7 @@
       "accounts/fireworks/models/nemotron-3-ultra-nvfp4": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.119,
+          "cache_read": 0.12,
           "input": 0.6,
           "output": 2.4
         },
@@ -83883,13 +84056,29 @@
         "tool_call": true
       },
       "accounts/fireworks/models/qwen3p8-max": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.25,
           "input": 2,
           "output": 6
         },
         "description": "2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows",
+        "experimental": {
+          "modes": {
+            "priority": {
+              "cost": {
+                "cache_read": 0.375,
+                "input": 3,
+                "output": 9
+              },
+              "provider": {
+                "body": {
+                  "service_tier": "priority"
+                }
+              }
+            }
+          }
+        },
         "family": "qwen",
         "id": "accounts/fireworks/models/qwen3p8-max",
         "last_updated": "2026-08-03",
@@ -83899,7 +84088,8 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -128262,9 +128452,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.088,
-          "input": 0.96,
-          "output": 2.88
+          "cache_read": 0.022,
+          "input": 0.66,
+          "output": 1.98
         },
         "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
         "family": "deepseek",
@@ -128272,7 +128462,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -128803,17 +128993,17 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.15,
-          "input": 0.9,
-          "output": 3
+          "cache_read": 0.1755,
+          "input": 0.8775,
+          "output": 2.97
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
         "id": "~z-ai/glm-latest",
         "last_updated": "2026-08-19",
         "limit": {
-          "context": 1048576,
-          "output": 131072
+          "context": 262144,
+          "output": 235929
         },
         "modalities": {
           "input": [
@@ -176300,9 +176490,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.44,
-          "output": 1.32
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -176559,7 +176749,7 @@
       "deepseek/deepseek-v4.1-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.006,
+          "cache_read": 0.003,
           "input": 0.1,
           "output": 0.4
         },
@@ -176604,7 +176794,7 @@
       "deepseek/deepseek-v4.1-flash:thinking": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.006,
+          "cache_read": 0.003,
           "input": 0.1,
           "output": 0.4
         },
@@ -179488,7 +179678,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.075,
-          "cache_write": 0.075,
+          "cache_write": 0.041667,
           "input": 0.75,
           "output": 3.75
         },
@@ -179603,6 +179793,7 @@
           "input": [
             "text",
             "image",
+            "video",
             "audio"
           ],
           "output": [
@@ -221276,9 +221467,9 @@
       "deepseek/deepseek-v4.1-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.006,
-          "input": 0.3,
-          "output": 1.2
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -233172,9 +233363,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.088,
-          "input": 0.96,
-          "output": 2.88
+          "cache_read": 0.022,
+          "input": 0.66,
+          "output": 1.98
         },
         "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
         "family": "deepseek",
@@ -233182,7 +233373,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -233829,9 +234020,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.15,
-          "input": 0.9,
-          "output": 3
+          "cache_read": 0.1755,
+          "input": 0.8775,
+          "output": 2.97
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -233839,7 +234030,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1310720,
-          "output": 131072
+          "output": 235929
         },
         "modalities": {
           "input": [
