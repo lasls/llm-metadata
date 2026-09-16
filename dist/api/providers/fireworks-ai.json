@@ -122,7 +122,28 @@
     },
     "accounts/fireworks/models/deepseek-v4-pro": {
       "attachment": false,
+      "cost": {
+        "cache_read": 0.6,
+        "input": 1.2,
+        "output": 1.2
+      },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
+      "experimental": {
+        "modes": {
+          "priority": {
+            "cost": {
+              "cache_read": 0.6,
+              "input": 1.2,
+              "output": 1.2
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
       "family": "deepseek-thinking",
       "id": "accounts/fireworks/models/deepseek-v4-pro",
       "interleaved": {
@@ -434,7 +455,7 @@
           }
         }
       },
-      "family": "glm",
+      "family": "glm-flash",
       "id": "accounts/fireworks/models/glm-5p3-flash",
       "interleaved": {
         "field": "reasoning_content"
@@ -742,8 +763,8 @@
     "accounts/fireworks/models/minimax-m2p7": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.059,
-        "input": 0.3,
+        "cache_read": 0.6,
+        "input": 1.2,
         "output": 1.2
       },
       "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
@@ -767,6 +788,11 @@
       },
       "name": "MiniMax-M2.7",
       "open_weights": true,
+      "provider": {
+        "body": {
+          "service_tier": "priority"
+        }
+      },
       "reasoning": true,
       "reasoning_options": [
         {
@@ -789,7 +815,7 @@
         "input": 0.3,
         "output": 1.2
       },
-      "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
+      "description": "Fireworks text-only MiniMax coding model for long-context reasoning and agent tasks",
       "experimental": {
         "modes": {
           "priority": {
@@ -1395,7 +1421,23 @@
         "output": 0.5
       },
       "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
-      "family": "glm",
+      "experimental": {
+        "modes": {
+          "priority": {
+            "cost": {
+              "cache_read": 0.0375,
+              "input": 0.1875,
+              "output": 0.625
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
+      "family": "glm-flash",
       "id": "accounts/fireworks/routers/glm-flash-latest",
       "interleaved": {
         "field": "reasoning_content"
@@ -1723,6 +1765,58 @@
         }
       ],
       "release_date": "2026-06-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "accounts/fireworks/routers/qwen-max-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2,
+        "output": 6
+      },
+      "description": "2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows",
+      "experimental": {
+        "modes": {
+          "priority": {
+            "cost": {
+              "cache_read": 0.375,
+              "input": 3,
+              "output": 9
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
+      "family": "qwen",
+      "id": "accounts/fireworks/routers/qwen-max-latest",
+      "last_updated": "2026-09-16",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen Max Latest (Qwen3.8 Max)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-03",
       "temperature": true,
       "tool_call": true
     }
