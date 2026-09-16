@@ -5977,7 +5977,7 @@
       "tool_call": true
     },
     "consensusprotocol/deepseek-v4.1-flash": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "cache_read": 0.005,
         "input": 0.2,
@@ -5994,7 +5994,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -6007,9 +6008,9 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "high",
+            "xhigh",
             "max"
           ]
         }
@@ -6017,7 +6018,7 @@
       "release_date": "2026-09-10",
       "structured_output": false,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "consensusprotocol/gemma-4-31b-it": {
       "attachment": false,
@@ -13387,6 +13388,53 @@
       ],
       "release_date": "2026-04-24",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "runware/deepseek-v4.1-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "runware/deepseek-v4.1-flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash (Runware)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },

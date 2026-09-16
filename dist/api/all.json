@@ -63390,7 +63390,7 @@
         "tool_call": true
       },
       "deepseek-v4.1-flash": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.006,
           "input": 0.3,
@@ -63407,7 +63407,8 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -103419,9 +103420,9 @@
       "glm-5": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.43,
-          "input": 0.86,
-          "output": 2.752
+          "cache_read": 0.465,
+          "input": 0.93,
+          "output": 2.878
         },
         "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
         "family": "glm",
@@ -103531,7 +103532,7 @@
         "id": "glm-5.3",
         "last_updated": "2026-08-31",
         "limit": {
-          "context": 1048576,
+          "context": 1000000,
           "output": 128000
         },
         "modalities": {
@@ -103940,9 +103941,9 @@
       "minimax-m2.7": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.209,
-          "input": 0.418,
-          "output": 1.588
+          "cache_read": 0.242,
+          "input": 0.484,
+          "output": 1.852
         },
         "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
         "family": "minimax",
@@ -127854,9 +127855,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.14,
-          "output": 0.58
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -129144,7 +129145,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 128000
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -144905,7 +144906,7 @@
         "tool_call": true
       },
       "consensusprotocol/deepseek-v4.1-flash": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.005,
           "input": 0.2,
@@ -144922,7 +144923,8 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -144935,9 +144937,9 @@
           {
             "type": "effort",
             "values": [
-              "none",
               "low",
               "high",
+              "xhigh",
               "max"
             ]
           }
@@ -144945,7 +144947,7 @@
         "release_date": "2026-09-10",
         "structured_output": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "consensusprotocol/gemma-4-31b-it": {
         "attachment": false,
@@ -152315,6 +152317,53 @@
         ],
         "release_date": "2026-04-24",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "runware/deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.01,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
+        "id": "runware/deepseek-v4.1-flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1048576,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash (Runware)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -222268,9 +222317,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.017416,
-          "input": 0.08708,
-          "output": 0.17416
+          "cache_read": 0.016184,
+          "input": 0.08092,
+          "output": 0.16184
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -226249,9 +226298,9 @@
       "moonshotai/kimi-k3": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.302644,
-          "input": 2.648138,
-          "output": 13.282724
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi-k3",
@@ -232683,9 +232732,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.033,
-          "input": 0.132,
-          "output": 0.528
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -234039,7 +234088,7 @@
         "last_updated": "2026-06-13",
         "limit": {
           "context": 1048576,
-          "output": 128000
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -288248,8 +288297,8 @@
         "knowledge": "2025-04",
         "last_updated": "2025-09",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 262114,
+          "output": 262114
         },
         "modalities": {
           "input": [
@@ -288278,8 +288327,8 @@
         "knowledge": "2025-04",
         "last_updated": "2025-09",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 262144,
+          "output": 262144
         },
         "modalities": {
           "input": [
@@ -288830,7 +288879,6 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.25,
-          "cache_write": 2.5,
           "input": 2,
           "output": 6
         },
@@ -288839,7 +288887,7 @@
         "id": "alibaba/qwen3.8-max",
         "last_updated": "2026-07-19",
         "limit": {
-          "context": 1000000,
+          "context": 262144,
           "output": 128000
         },
         "modalities": {
@@ -291292,9 +291340,9 @@
       "deepseek/deepseek-v4.1-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.015,
-          "input": 0.15,
-          "output": 0.6
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
         "family": "deepseek-flash",
@@ -291302,8 +291350,8 @@
         "knowledge": "2025-05",
         "last_updated": "2026-09-10",
         "limit": {
-          "context": 1000000,
-          "output": 384000
+          "context": 1048576,
+          "output": 32768
         },
         "modalities": {
           "input": [
