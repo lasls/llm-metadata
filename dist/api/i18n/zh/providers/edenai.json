@@ -10,6 +10,7 @@
     "amazon/amazon.nova-lite-v1:0": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.015,
         "input": 0.06,
         "output": 0.24
       },
@@ -43,6 +44,7 @@
     "amazon/amazon.nova-lite-v1:0@us": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.015,
         "input": 0.06,
         "output": 0.24
       },
@@ -76,6 +78,7 @@
     "amazon/amazon.nova-micro-v1:0": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.00875,
         "input": 0.035,
         "output": 0.14
       },
@@ -107,6 +110,7 @@
     "amazon/amazon.nova-micro-v1:0@us": {
       "attachment": false,
       "cost": {
+        "cache_read": 0.00875,
         "input": 0.035,
         "output": 0.14
       },
@@ -138,6 +142,7 @@
     "amazon/amazon.nova-pro-v1:0": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.2,
         "input": 0.8,
         "output": 3.2
       },
@@ -171,6 +176,7 @@
     "amazon/amazon.nova-pro-v1:0@us": {
       "attachment": true,
       "cost": {
+        "cache_read": 0.2,
         "input": 0.8,
         "output": 3.2
       },
@@ -5888,6 +5894,50 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "nebius/deepseek-ai/DeepSeek-V4.1-Flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.3,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "nebius/deepseek-ai/DeepSeek-V4.1-Flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1048000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash (Nebius)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
     },
     "nebius/google/gemma-3-27b-it": {
       "attachment": true,
