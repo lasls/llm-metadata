@@ -1,26 +1,26 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.19,
-    "input": 0.95,
-    "output": 4
+    "cache_read": 0.03,
+    "input": 0.15,
+    "output": 0.5
   },
-  "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
-  "family": "kimi-k2",
+  "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+  "family": "glm-flash",
   "id": "umans-coder",
   "interleaved": {
     "field": "reasoning_content"
   },
-  "knowledge": "2025-01",
-  "last_updated": "2026-06-12",
+  "last_updated": "2026-08-26",
   "limit": {
-    "context": 262144,
-    "output": 32768
+    "context": 1048576,
+    "output": 131071
   },
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "video"
     ],
     "output": [
       "text"
@@ -29,8 +29,17 @@
   "name": "Umans Coder",
   "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
-  "release_date": "2026-06-12",
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "high",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-08-26",
   "structured_output": true,
   "temperature": false,
   "tool_call": true

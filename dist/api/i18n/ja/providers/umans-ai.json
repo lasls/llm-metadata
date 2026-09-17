@@ -10,26 +10,26 @@
     "umans-coder": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.19,
-        "input": 0.95,
-        "output": 4
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
       },
-      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
-      "family": "kimi-k2",
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
       "id": "umans-coder",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-01",
-      "last_updated": "2026-06-12",
+      "last_updated": "2026-08-26",
       "limit": {
-        "context": 262144,
-        "output": 32768
+        "context": 1048576,
+        "output": 131071
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -38,8 +38,17 @@
       "name": "Umans Coder",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-06-12",
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -186,71 +195,23 @@
       "temperature": false,
       "tool_call": true
     },
-    "umans-glm-5.2": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.26,
-        "input": 1.4,
-        "output": 4.4
-      },
-      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
-      "family": "glm",
-      "id": "umans-glm-5.2",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-06-13",
-      "limit": {
-        "context": 405504,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5.2",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-06-13",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "umans-kimi-k2.7": {
+    "umans-glm-5.3-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.19,
-        "input": 0.95,
-        "output": 4
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
       },
-      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
-      "family": "kimi-k2",
-      "id": "umans-kimi-k2.7",
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "umans-glm-5.3-flash",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-01",
-      "last_updated": "2026-06-12",
+      "last_updated": "2026-08-26",
       "limit": {
-        "context": 262144,
-        "output": 32768
+        "context": 1048576,
+        "output": 131071
       },
       "modalities": {
         "input": [
@@ -262,13 +223,22 @@
           "text"
         ]
       },
-      "name": "Kimi K2.7 Code",
+      "name": "GLM 5.3 Flash",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-06-12",
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "umans-kimi-k3": {
