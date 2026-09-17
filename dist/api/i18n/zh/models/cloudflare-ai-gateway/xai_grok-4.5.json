@@ -2,8 +2,24 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.3,
+    "context_over_200k": {
+      "cache_read": 0.6,
+      "input": 4,
+      "output": 12
+    },
     "input": 2,
-    "output": 6
+    "output": 6,
+    "tiers": [
+      {
+        "cache_read": 0.6,
+        "input": 4,
+        "output": 12,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "xAI's Grok model for chat, coding, agentic tools, and lower hallucination risk",
   "family": "grok",
