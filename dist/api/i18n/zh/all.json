@@ -16810,9 +16810,9 @@
       "deepseek-v4.1-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.278,
-          "output": 1.111
+          "cache_read": 0.01488,
+          "input": 0.29754,
+          "output": 1.19015
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
         "family": "deepseek-flash",
@@ -125814,6 +125814,46 @@
         "temperature": true,
         "tool_call": true
       },
+      "prism-ml/ternary-bonsai-2-27b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.075,
+          "output": 0.5
+        },
+        "description": "Bonsai 2 27B is a 27B-parameter reasoning model from PrismML derived from Qwen3.8-27B. It supports coding, mathematics, tool calling, and image understanding with a 262K-token context window. Ternary compression shrinks...",
+        "id": "prism-ml/ternary-bonsai-2-27b",
+        "last_updated": "2026-09-18",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "PrismML: Ternary Bonsai 2 27B",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "medium",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-09-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen/qwen-2.5-72b-instruct": {
         "attachment": false,
         "cost": {
@@ -128643,9 +128683,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.14,
-          "output": 0.58
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -129081,6 +129121,9 @@
             "type": "effort",
             "values": [
               "none",
+              "minimal",
+              "low",
+              "medium",
               "high"
             ]
           }
@@ -129121,7 +129164,12 @@
             "type": "effort",
             "values": [
               "none",
-              "high"
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
             ]
           }
         ],
@@ -130044,8 +130092,8 @@
         "id": "z-ai/glm-5.3",
         "last_updated": "2026-08-14",
         "limit": {
-          "context": 1048575,
-          "output": 943717
+          "context": 1048576,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -130345,17 +130393,17 @@
       "~deepseek/deepseek-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.015,
-          "input": 0.15,
-          "output": 0.6
+          "cache_read": 0.0042,
+          "input": 0.14,
+          "output": 0.42
         },
         "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
         "family": "deepseek-flash",
         "id": "~deepseek/deepseek-flash-latest",
         "last_updated": "2026-09-14",
         "limit": {
-          "context": 1000000,
-          "output": 393216
+          "context": 1048576,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -130929,17 +130977,17 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.15,
-          "input": 0.9,
-          "output": 3
+          "cache_read": 0.146625,
+          "input": 0.8925,
+          "output": 2.805
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
         "id": "~z-ai/glm-latest",
         "last_updated": "2026-08-19",
         "limit": {
-          "context": 1000000,
-          "output": 131072
+          "context": 1048576,
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -166033,7 +166081,7 @@
         "tool_call": true
       },
       "qwen/qwen3.5-122b-a10b": {
-        "attachment": false,
+        "attachment": true,
         "cost": {
           "cache_read": 0.023,
           "input": 0.115,
@@ -166044,12 +166092,13 @@
         "id": "qwen/qwen3.5-122b-a10b",
         "last_updated": "2026-02-23",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 256000,
+          "output": 64000
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -223785,9 +223834,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.009968,
-          "input": 0.04984,
-          "output": 0.09968
+          "cache_read": 0.0098,
+          "input": 0.049,
+          "output": 0.098
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -231532,6 +231581,48 @@
         "temperature": true,
         "tool_call": true
       },
+      "prism-ml/ternary-bonsai-2-27b": {
+        "attachment": true,
+        "cost": {
+          "input": 0.075,
+          "output": 0.5
+        },
+        "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+        "id": "prism-ml/ternary-bonsai-2-27b",
+        "last_updated": "2026-09-18",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ternary Bonsai 2 27B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "medium",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-09-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen/qwen-2.5-72b-instruct": {
         "attachment": false,
         "cost": {
@@ -234224,9 +234315,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.033,
-          "input": 0.132,
-          "output": 0.528
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -234708,7 +234799,14 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
           }
         ],
         "release_date": "2026-01-27",
@@ -234744,7 +234842,16 @@
         "reasoning": true,
         "reasoning_options": [
           {
-            "type": "toggle"
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
           }
         ],
         "release_date": "2026-08-10",
@@ -235686,9 +235793,9 @@
       "z-ai/glm-5.3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.26,
-          "input": 1.4,
-          "output": 4.4
+          "cache_read": 0.169,
+          "input": 0.91,
+          "output": 2.86
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -235696,7 +235803,7 @@
         "last_updated": "2026-08-14",
         "limit": {
           "context": 1310720,
-          "output": 943717
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -235992,9 +236099,9 @@
       "~deepseek/deepseek-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.015,
-          "input": 0.15,
-          "output": 0.6
+          "cache_read": 0.0042,
+          "input": 0.14,
+          "output": 0.42
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -236002,7 +236109,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 393216
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -236694,9 +236801,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.15,
-          "input": 0.9,
-          "output": 3
+          "cache_read": 0.146625,
+          "input": 0.8925,
+          "output": 2.805
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -236704,7 +236811,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1310720,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
