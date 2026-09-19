@@ -6334,9 +6334,9 @@
       "id": "deepseek/deepseek-v4-flash-latest",
       "last_updated": "2026-08-02",
       "limit": {
-        "context": 1048576,
-        "input": 1048576,
-        "output": 384000
+        "context": 1000000,
+        "input": 1000000,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -11763,38 +11763,6 @@
       "structured_output": false,
       "tool_call": false
     },
-    "mistralai/mistral-large-3-675b-instruct-2512": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.5,
-        "input": 1,
-        "output": 3
-      },
-      "description": "Flagship Mistral model for advanced reasoning, coding, and multilingual work",
-      "family": "mistral-large",
-      "id": "mistralai/mistral-large-3-675b-instruct-2512",
-      "last_updated": "2025-12-02",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 256000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Large 3 675B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-25",
-      "structured_output": false,
-      "tool_call": false
-    },
     "mistralai/mistral-medium-3": {
       "attachment": true,
       "cost": {
@@ -15671,6 +15639,46 @@
       "release_date": "2026-07-21",
       "structured_output": false,
       "temperature": true,
+      "tool_call": true
+    },
+    "prism-ml/ternary-bonsai-2-27b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0375,
+        "input": 0.075,
+        "output": 0.5
+      },
+      "description": "Ternary Bonsai 2 27B is a 27B-parameter reasoning model from PrismML derived from Qwen3.8-27B. It supports coding, mathematics, tool calling, and image understanding with a 262K-token context window.",
+      "id": "prism-ml/ternary-bonsai-2-27b",
+      "last_updated": "2026-09-18",
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ternary Bonsai 2 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-18",
+      "structured_output": true,
       "tool_call": true
     },
     "qvq-max": {

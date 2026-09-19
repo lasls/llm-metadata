@@ -13113,6 +13113,55 @@
         "temperature": true,
         "tool_call": true
       },
+      "ox-alpha": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+        "family": "glm-flash",
+        "id": "ox-alpha",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ox Alpha",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3.6-flash": {
         "attachment": true,
         "cost": {
@@ -118266,8 +118315,8 @@
         "knowledge": "2025-05",
         "last_updated": "2026-04-24",
         "limit": {
-          "context": 1048576,
-          "output": 393216
+          "context": 1024000,
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -122614,8 +122663,8 @@
         "id": "nvidia/nemotron-3-ultra-550b-a55b",
         "last_updated": "2026-06-04",
         "limit": {
-          "context": 256000,
-          "output": 32768
+          "context": 202800,
+          "output": 182520
         },
         "modalities": {
           "input": [
@@ -122775,7 +122824,7 @@
         "last_updated": "2026-08-11",
         "limit": {
           "context": 262144,
-          "output": 131072
+          "output": 235929
         },
         "modalities": {
           "input": [
@@ -128681,9 +128730,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -130391,9 +130440,9 @@
       "~deepseek/deepseek-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0042,
-          "input": 0.14,
-          "output": 0.42
+          "cache_read": 0.00405,
+          "input": 0.135,
+          "output": 0.54
         },
         "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
         "family": "deepseek-flash",
@@ -130401,7 +130450,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -130476,9 +130525,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.00175,
-          "input": 0.055,
-          "output": 0.165
+          "cache_read": 0.00161,
+          "input": 0.0506,
+          "output": 0.1518
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
@@ -130975,9 +131024,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.146625,
-          "input": 0.8925,
-          "output": 2.805
+          "cache_read": 0.16562,
+          "input": 0.8918,
+          "output": 2.8028
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
@@ -130985,7 +131034,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -178681,9 +178730,9 @@
         "id": "deepseek/deepseek-v4-flash-latest",
         "last_updated": "2026-08-02",
         "limit": {
-          "context": 1048576,
-          "input": 1048576,
-          "output": 384000
+          "context": 1000000,
+          "input": 1000000,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -184110,38 +184159,6 @@
         "structured_output": false,
         "tool_call": false
       },
-      "mistralai/mistral-large-3-675b-instruct-2512": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.5,
-          "input": 1,
-          "output": 3
-        },
-        "description": "Flagship Mistral model for advanced reasoning, coding, and multilingual work",
-        "family": "mistral-large",
-        "id": "mistralai/mistral-large-3-675b-instruct-2512",
-        "last_updated": "2025-12-02",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 256000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Mistral Large 3 675B",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-12-25",
-        "structured_output": false,
-        "tool_call": false
-      },
       "mistralai/mistral-medium-3": {
         "attachment": true,
         "cost": {
@@ -188018,6 +188035,46 @@
         "release_date": "2026-07-21",
         "structured_output": false,
         "temperature": true,
+        "tool_call": true
+      },
+      "prism-ml/ternary-bonsai-2-27b": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0375,
+          "input": 0.075,
+          "output": 0.5
+        },
+        "description": "Ternary Bonsai 2 27B is a 27B-parameter reasoning model from PrismML derived from Qwen3.8-27B. It supports coding, mathematics, tool calling, and image understanding with a 262K-token context window.",
+        "id": "prism-ml/ternary-bonsai-2-27b",
+        "last_updated": "2026-09-18",
+        "limit": {
+          "context": 262144,
+          "input": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ternary Bonsai 2 27B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "medium",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-09-18",
+        "structured_output": true,
         "tool_call": true
       },
       "qvq-max": {
@@ -223828,9 +223885,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0098,
-          "input": 0.049,
-          "output": 0.098
+          "cache_read": 0.009688,
+          "input": 0.04844,
+          "output": 0.09688
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -224009,9 +224066,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.135,
-          "input": 1.6,
-          "output": 3.2
+          "cache_read": 0.055463,
+          "input": 0.66555,
+          "output": 1.3311
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -224023,7 +224080,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1048576,
-          "output": 393216
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -228271,9 +228328,9 @@
       "nvidia/nemotron-3-ultra-550b-a55b": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1875,
-          "input": 0.625,
-          "output": 3.125
+          "cache_read": 0.12,
+          "input": 0.6,
+          "output": 2.4
         },
         "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
         "family": "nemotron",
@@ -228281,7 +228338,7 @@
         "last_updated": "2026-06-04",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 182520
         },
         "modalities": {
           "input": [
@@ -228435,7 +228492,7 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.04,
-          "input": 0.08,
+          "input": 0.07,
           "output": 0.2
         },
         "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
@@ -228444,7 +228501,7 @@
         "last_updated": "2026-08-11",
         "limit": {
           "context": 262144,
-          "output": 131072
+          "output": 235929
         },
         "modalities": {
           "input": [
@@ -232590,8 +232647,8 @@
       "qwen/qwen3-vl-30b-a3b-instruct": {
         "attachment": true,
         "cost": {
-          "input": 0.13,
-          "output": 0.52
+          "input": 0.2,
+          "output": 0.7
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -234309,9 +234366,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -236093,9 +236150,9 @@
       "~deepseek/deepseek-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0042,
-          "input": 0.14,
-          "output": 0.42
+          "cache_read": 0.00405,
+          "input": 0.135,
+          "output": 0.54
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -236103,7 +236160,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -236182,9 +236239,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.00175,
-          "input": 0.055,
-          "output": 0.165
+          "cache_read": 0.00161,
+          "input": 0.0506,
+          "output": 0.1518
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -236795,9 +236852,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.146625,
-          "input": 0.8925,
-          "output": 2.805
+          "cache_read": 0.16562,
+          "input": 0.8918,
+          "output": 2.8028
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -236805,7 +236862,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1310720,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -287822,22 +287879,22 @@
       "openai-gpt-56-sol": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.25,
-          "cache_write": 3.125,
+          "cache_read": 0.5,
+          "cache_write": 6.25,
           "context_over_200k": {
-            "cache_read": 0.5,
-            "cache_write": 6.25,
-            "input": 5,
-            "output": 18.75
+            "cache_read": 1,
+            "cache_write": 12.5,
+            "input": 10,
+            "output": 37.5
           },
-          "input": 2.5,
-          "output": 12.5,
+          "input": 5,
+          "output": 25,
           "tiers": [
             {
-              "cache_read": 0.5,
-              "cache_write": 6.25,
-              "input": 5,
-              "output": 18.75,
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
               "tier": {
                 "size": 272000,
                 "type": "context"
@@ -287887,22 +287944,22 @@
       "openai-gpt-56-sol-pro": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.25,
-          "cache_write": 3.125,
+          "cache_read": 0.5,
+          "cache_write": 6.25,
           "context_over_200k": {
-            "cache_read": 0.5,
-            "cache_write": 6.25,
-            "input": 5,
-            "output": 18.75
+            "cache_read": 1,
+            "cache_write": 12.5,
+            "input": 10,
+            "output": 37.5
           },
-          "input": 2.5,
-          "output": 12.5,
+          "input": 5,
+          "output": 25,
           "tiers": [
             {
-              "cache_read": 0.5,
-              "cache_write": 6.25,
-              "input": 5,
-              "output": 18.75,
+              "cache_read": 1,
+              "cache_write": 12.5,
+              "input": 10,
+              "output": 37.5,
               "tier": {
                 "size": 272000,
                 "type": "context"
@@ -293146,29 +293203,6 @@
         "release_date": "2025-10-20",
         "tool_call": false
       },
-      "fish-audio/s1-free": {
-        "attachment": false,
-        "description": "Speech generation model for controllable voice, narration, and audio delivery",
-        "id": "fish-audio/s1-free",
-        "last_updated": "2025-10-20",
-        "limit": {
-          "context": 0,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "S1 (Free)",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-10-20",
-        "tool_call": false
-      },
       "fish-audio/s2-pro": {
         "attachment": false,
         "description": "Speech generation model for controllable voice, narration, and audio delivery",
@@ -293187,29 +293221,6 @@
           ]
         },
         "name": "S2 Pro",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-03-09",
-        "tool_call": false
-      },
-      "fish-audio/s2-pro-free": {
-        "attachment": false,
-        "description": "Speech generation model for controllable voice, narration, and audio delivery",
-        "id": "fish-audio/s2-pro-free",
-        "last_updated": "2026-03-09",
-        "limit": {
-          "context": 0,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "S2 Pro (Free)",
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-03-09",
@@ -293238,29 +293249,6 @@
         "release_date": "2026-07-28",
         "tool_call": false
       },
-      "fish-audio/s2.1-pro-free": {
-        "attachment": false,
-        "description": "Speech generation model for controllable voice, narration, and audio delivery",
-        "id": "fish-audio/s2.1-pro-free",
-        "last_updated": "2026-07-28",
-        "limit": {
-          "context": 0,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "audio"
-          ]
-        },
-        "name": "S2.1 Pro (Free)",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-07-28",
-        "tool_call": false
-      },
       "fish-audio/transcribe-1": {
         "attachment": false,
         "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
@@ -293279,29 +293267,6 @@
           ]
         },
         "name": "Transcribe-1",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-03-01",
-        "tool_call": false
-      },
-      "fish-audio/transcribe-1-free": {
-        "attachment": false,
-        "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
-        "id": "fish-audio/transcribe-1-free",
-        "last_updated": "2026-03-01",
-        "limit": {
-          "context": 0,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "audio"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Transcribe-1 (Free)",
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-03-01",
