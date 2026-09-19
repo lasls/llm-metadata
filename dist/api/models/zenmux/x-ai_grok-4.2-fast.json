@@ -1,13 +1,25 @@
 {
   "attachment": true,
   "cost": {
-    "input": 3,
-    "output": 9
+    "cache_read": 0.2,
+    "input": 2,
+    "output": 6,
+    "tiers": [
+      {
+        "cache_read": 0.2,
+        "input": 4,
+        "output": 12,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
   },
-  "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
+  "description": "Reasoning Grok for document-heavy analysis and long-horizon tool use",
+  "family": "grok",
   "id": "x-ai/grok-4.2-fast",
-  "knowledge": "2025-08-31",
-  "last_updated": "2026-03-20",
+  "last_updated": "2026-03-09",
   "limit": {
     "context": 2000000,
     "output": 30000
@@ -15,8 +27,7 @@
   "modalities": {
     "input": [
       "text",
-      "image",
-      "video"
+      "image"
     ],
     "output": [
       "text"
@@ -24,9 +35,9 @@
   },
   "name": "Grok 4.2 Fast",
   "open_weights": false,
-  "reasoning": true,
-  "reasoning_options": [],
-  "release_date": "2026-03-20",
+  "reasoning": false,
+  "release_date": "2026-03-09",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

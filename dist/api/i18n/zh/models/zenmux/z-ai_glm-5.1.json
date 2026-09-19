@@ -3,17 +3,29 @@
   "cost": {
     "cache_read": 0.1903,
     "input": 0.8781,
-    "output": 3.5126
+    "output": 3.5126,
+    "tiers": [
+      {
+        "cache_read": 0.2927,
+        "input": 1.1709,
+        "output": 4.098,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
   },
-  "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+  "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+  "family": "glm",
   "id": "z-ai/glm-5.1",
   "interleaved": {
     "field": "reasoning_content"
   },
-  "last_updated": "2026-04-03",
+  "last_updated": "2026-04-07",
   "limit": {
     "context": 200000,
-    "output": 131072
+    "output": 128000
   },
   "modalities": {
     "input": [
@@ -23,15 +35,15 @@
       "text"
     ]
   },
-  "name": "GLM-5.1",
-  "open_weights": false,
+  "name": "GLM 5.1",
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
       "type": "toggle"
     }
   ],
-  "release_date": "2026-04-03",
+  "release_date": "2026-04-07",
   "structured_output": true,
   "temperature": true,
   "tool_call": true

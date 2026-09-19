@@ -1,17 +1,29 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.03,
-    "input": 0.14,
-    "output": 0.42
+    "cache_read": 0.0291,
+    "input": 0.1456,
+    "output": 0.4367,
+    "tiers": [
+      {
+        "cache_read": 0.0582,
+        "input": 0.2911,
+        "output": 0.8734,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+  "family": "glm",
   "id": "z-ai/glm-4.6v",
-  "knowledge": "2025-01-01",
+  "knowledge": "2025-04",
   "last_updated": "2025-12-08",
   "limit": {
     "context": 200000,
-    "output": 64000
+    "output": 128000
   },
   "modalities": {
     "input": [
@@ -24,9 +36,13 @@
     ]
   },
   "name": "GLM 4.6V",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    }
+  ],
   "release_date": "2025-12-08",
   "temperature": true,
   "tool_call": true

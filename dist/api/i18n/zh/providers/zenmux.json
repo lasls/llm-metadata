@@ -3745,155 +3745,28 @@
       "temperature": true,
       "tool_call": true
     },
-    "x-ai/grok-4": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
-      "id": "x-ai/grok-4",
-      "knowledge": "2025-01-01",
-      "last_updated": "2025-07-09",
-      "limit": {
-        "context": 256000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok 4",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-07-09",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "x-ai/grok-4-fast": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.2,
-        "output": 0.5
-      },
-      "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
-      "id": "x-ai/grok-4-fast",
-      "knowledge": "2025-01-01",
-      "last_updated": "2025-09-19",
-      "limit": {
-        "context": 2000000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok 4 Fast",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-09-19",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "x-ai/grok-4.1-fast": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.2,
-        "output": 0.5
-      },
-      "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
-      "id": "x-ai/grok-4.1-fast",
-      "knowledge": "2025-01-01",
-      "last_updated": "2025-11-20",
-      "limit": {
-        "context": 2000000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok 4.1 Fast",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-11-20",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
-    "x-ai/grok-4.1-fast-non-reasoning": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.05,
-        "input": 0.2,
-        "output": 0.5
-      },
-      "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
-      "id": "x-ai/grok-4.1-fast-non-reasoning",
-      "knowledge": "2025-01-01",
-      "last_updated": "2025-11-20",
-      "limit": {
-        "context": 2000000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok 4.1 Fast Non Reasoning",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-11-20",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
     "x-ai/grok-4.2-fast": {
       "attachment": true,
       "cost": {
-        "input": 3,
-        "output": 9
+        "cache_read": 0.2,
+        "input": 2,
+        "output": 6,
+        "tiers": [
+          {
+            "cache_read": 0.2,
+            "input": 4,
+            "output": 12,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
+      "description": "Reasoning Grok for document-heavy analysis and long-horizon tool use",
+      "family": "grok",
       "id": "x-ai/grok-4.2-fast",
-      "knowledge": "2025-08-31",
-      "last_updated": "2026-03-20",
+      "last_updated": "2026-03-09",
       "limit": {
         "context": 2000000,
         "output": 30000
@@ -3901,8 +3774,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "video"
+          "image"
         ],
         "output": [
           "text"
@@ -3910,22 +3782,34 @@
       },
       "name": "Grok 4.2 Fast",
       "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-03-20",
+      "reasoning": false,
+      "release_date": "2026-03-09",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "x-ai/grok-4.2-fast-non-reasoning": {
       "attachment": true,
       "cost": {
-        "input": 3,
-        "output": 9
+        "cache_read": 0.2,
+        "input": 2,
+        "output": 6,
+        "tiers": [
+          {
+            "cache_read": 0.2,
+            "input": 4,
+            "output": 12,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
+      "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
+      "family": "grok",
       "id": "x-ai/grok-4.2-fast-non-reasoning",
-      "knowledge": "2025-08-31",
-      "last_updated": "2026-03-20",
+      "last_updated": "2026-03-09",
       "limit": {
         "context": 2000000,
         "output": 30000
@@ -3933,8 +3817,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "video"
+          "image"
         ],
         "output": [
           "text"
@@ -3943,7 +3826,8 @@
       "name": "Grok 4.2 Fast Non Reasoning",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-03-20",
+      "release_date": "2026-03-09",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3951,10 +3835,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.2,
-        "cache_write": 0,
         "context_over_200k": {
           "cache_read": 0.4,
-          "cache_write": 0,
           "input": 2.5,
           "output": 5
         },
@@ -3963,7 +3845,6 @@
         "tiers": [
           {
             "cache_read": 0.4,
-            "cache_write": 0,
             "input": 2.5,
             "output": 5,
             "tier": {
@@ -4069,6 +3950,66 @@
       "temperature": true,
       "tool_call": true
     },
+    "x-ai/grok-4.6": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 4,
+          "output": 12
+        },
+        "input": 2,
+        "output": 6,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 4,
+            "output": 12,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "xAI's frontier model for long-running agents, coding, knowledge work, and visual projects",
+      "family": "grok",
+      "id": "x-ai/grok-4.6",
+      "knowledge": "2026-02-01",
+      "last_updated": "2026-08-12",
+      "limit": {
+        "context": 500000,
+        "output": 500000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.6",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "x-ai/grok-build-0.1": {
       "attachment": true,
       "cost": {
@@ -4087,8 +4028,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
@@ -4096,44 +4036,85 @@
       },
       "name": "Grok Build 0.1",
       "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
+      "reasoning": false,
       "release_date": "2026-04-16",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
-    "x-ai/grok-code-fast-1": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.02,
-        "input": 0.2,
-        "output": 1.5
-      },
-      "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
-      "id": "x-ai/grok-code-fast-1",
-      "knowledge": "2025-01-01",
-      "last_updated": "2025-08-26",
+    "x-ai/grok-imagine-image-2.0": {
+      "attachment": true,
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "family": "grok",
+      "id": "x-ai/grok-imagine-image-2.0",
+      "last_updated": "2026-08-07",
       "limit": {
-        "context": 256000,
-        "output": 64000
+        "context": 66000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "Grok Imagine Image 2.0",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-08-07",
+      "temperature": false,
+      "tool_call": false
+    },
+    "x-ai/grok-voice-stt-1.0": {
+      "attachment": true,
+      "description": "Grok Voice STT 1.0 is xAI's speech-to-text model. It supports transcription with word-level timestamps, optional speaker diarization, and multichannel audio.",
+      "id": "x-ai/grok-voice-stt-1.0",
+      "last_updated": "2026-08-04",
+      "limit": {
+        "context": 15000,
+        "output": 15000
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok Voice STT 1.0",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-08-04",
+      "temperature": false,
+      "tool_call": false
+    },
+    "x-ai/grok-voice-tts-1.0": {
+      "attachment": false,
+      "description": "Convert text into spoken audio with a single API call. The API supports a rich set of expressive voices, inline speech tags for fine-grained delivery control, and output formats from high-fidelity MP3 to telephony-optimized μ-law.",
+      "id": "x-ai/grok-voice-tts-1.0",
+      "last_updated": "2026-07-31",
+      "limit": {
+        "context": 15000,
+        "output": 15000
       },
       "modalities": {
         "input": [
           "text"
         ],
         "output": [
-          "text"
+          "audio"
         ]
       },
-      "name": "Grok Code Fast 1",
+      "name": "Grok Voice TTS 1.0",
       "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-08-26",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
+      "reasoning": false,
+      "release_date": "2026-07-31",
+      "temperature": false,
+      "tool_call": false
     },
     "xiaomi/mimo-v2-flash": {
       "attachment": false,
@@ -4379,17 +4360,29 @@
     "z-ai/glm-4.5": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.07,
-        "input": 0.35,
-        "output": 1.54
+        "cache_read": 0.0582,
+        "input": 0.2911,
+        "output": 1.1645,
+        "tiers": [
+          {
+            "cache_read": 0.1165,
+            "input": 0.5823,
+            "output": 2.3291,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+      "description": "Hybrid-reasoning GLM release that made the 4.5 line broadly useful",
+      "family": "glm",
       "id": "z-ai/glm-4.5",
-      "knowledge": "2025-01-01",
-      "last_updated": "2025-07-25",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-28",
       "limit": {
         "context": 128000,
-        "output": 64000
+        "output": 96000
       },
       "modalities": {
         "input": [
@@ -4400,31 +4393,44 @@
         ]
       },
       "name": "GLM 4.5",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
-      "release_date": "2025-07-25",
+      "release_date": "2025-07-28",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "z-ai/glm-4.5-air": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.02,
-        "input": 0.11,
-        "output": 0.56
+        "cache_read": 0.0233,
+        "input": 0.1165,
+        "output": 0.2911,
+        "tiers": [
+          {
+            "cache_read": 0.0349,
+            "input": 0.1747,
+            "output": 1.1645,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+      "description": "Lighter GLM-4.5 variant for fast coding assistance and cheaper agents",
+      "family": "glm-air",
       "id": "z-ai/glm-4.5-air",
-      "knowledge": "2025-01-01",
-      "last_updated": "2025-07-25",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-28",
       "limit": {
         "context": 128000,
-        "output": 64000
+        "output": 96000
       },
       "modalities": {
         "input": [
@@ -4435,31 +4441,43 @@
         ]
       },
       "name": "GLM 4.5 Air",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
-      "release_date": "2025-07-25",
+      "release_date": "2025-07-28",
       "temperature": true,
       "tool_call": true
     },
     "z-ai/glm-4.6": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.07,
-        "input": 0.35,
-        "output": 1.54
+        "cache_read": 0.0582,
+        "input": 0.2911,
+        "output": 1.1645,
+        "tiers": [
+          {
+            "cache_read": 0.1165,
+            "input": 0.5823,
+            "output": 2.3291,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+      "description": "Late GLM-4 workhorse for coding agents, reasoning, and structured tasks",
+      "family": "glm",
       "id": "z-ai/glm-4.6",
-      "knowledge": "2025-01-01",
+      "knowledge": "2025-04",
       "last_updated": "2025-09-30",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4470,27 +4488,44 @@
         ]
       },
       "name": "GLM 4.6",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-09-30",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "z-ai/glm-4.6v": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.14,
-        "output": 0.42
+        "cache_read": 0.0291,
+        "input": 0.1456,
+        "output": 0.4367,
+        "tiers": [
+          {
+            "cache_read": 0.0582,
+            "input": 0.2911,
+            "output": 0.8734,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+      "family": "glm",
       "id": "z-ai/glm-4.6v",
-      "knowledge": "2025-01-01",
+      "knowledge": "2025-04",
       "last_updated": "2025-12-08",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4503,9 +4538,13 @@
         ]
       },
       "name": "GLM 4.6V",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-12-08",
       "temperature": true,
       "tool_call": true
@@ -4513,17 +4552,28 @@
     "z-ai/glm-4.6v-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0043,
-        "input": 0.02,
-        "output": 0.21
+        "cache_read": 0.0044,
+        "input": 0.0218,
+        "output": 0.2184,
+        "tiers": [
+          {
+            "cache_read": 0.0044,
+            "input": 0.0437,
+            "output": 0.4367,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+      "description": "Lightweight GLM vision model for visual reasoning, documents, and multimodal agents",
+      "family": "glm-flash",
       "id": "z-ai/glm-4.6v-flash",
-      "knowledge": "2025-01-01",
       "last_updated": "2025-12-08",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4536,9 +4586,13 @@
         ]
       },
       "name": "GLM 4.6V FlashX",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-12-08",
       "temperature": true,
       "tool_call": true
@@ -4546,31 +4600,48 @@
     "z-ai/glm-4.6v-flash-free": {
       "attachment": true,
       "cost": {
+        "cache_read": 0,
         "input": 0,
-        "output": 0
+        "output": 0,
+        "tiers": [
+          {
+            "cache_read": 0,
+            "input": 0,
+            "output": 0,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+      "description": "Lightweight GLM vision model for visual reasoning, documents, and multimodal agents",
+      "family": "glm-flash",
       "id": "z-ai/glm-4.6v-flash-free",
-      "knowledge": "2025-01-01",
       "last_updated": "2025-12-08",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
       "name": "GLM 4.6V Flash (Free)",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2025-12-08",
       "temperature": true,
       "tool_call": true
@@ -4578,20 +4649,32 @@
     "z-ai/glm-4.7": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.06,
-        "input": 0.28,
-        "output": 1.14
+        "cache_read": 0.0582,
+        "input": 0.2911,
+        "output": 1.1645,
+        "tiers": [
+          {
+            "cache_read": 0.1165,
+            "input": 0.5823,
+            "output": 2.3291,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+      "description": "Mature GLM model for dependable coding, reasoning, and structured agent tasks",
+      "family": "glm",
       "id": "z-ai/glm-4.7",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-01-01",
-      "last_updated": "2025-12-23",
+      "knowledge": "2025-04",
+      "last_updated": "2025-12-22",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4602,29 +4685,36 @@
         ]
       },
       "name": "GLM 4.7",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-12-23",
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2025-12-22",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "z-ai/glm-4.7-flash-free": {
       "attachment": false,
       "cost": {
+        "cache_read": 0,
         "input": 0,
         "output": 0
       },
-      "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+      "description": "Budget GLM lane for fast coding help, routing, and everyday automation",
+      "family": "glm-flash",
       "id": "z-ai/glm-4.7-flash-free",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-01-01",
+      "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4635,9 +4725,13 @@
         ]
       },
       "name": "GLM 4.7 Flash (Free)",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-01-19",
       "temperature": true,
       "tool_call": true
@@ -4645,20 +4739,21 @@
     "z-ai/glm-4.7-flashx": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.01,
-        "input": 0.07,
-        "output": 0.42
+        "cache_read": 0.0146,
+        "input": 0.0728,
+        "output": 0.4367
       },
       "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+      "family": "glm-flash",
       "id": "z-ai/glm-4.7-flashx",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-01-01",
+      "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4669,9 +4764,13 @@
         ]
       },
       "name": "GLM 4.7 FlashX",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-01-19",
       "temperature": true,
       "tool_call": true
@@ -4681,14 +4780,25 @@
       "cost": {
         "cache_read": 0.14,
         "input": 0.58,
-        "output": 2.6
+        "output": 2.6,
+        "tiers": [
+          {
+            "cache_read": 0.22,
+            "input": 0.87,
+            "output": 3.18,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+      "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
+      "family": "glm",
       "id": "z-ai/glm-5",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-01-01",
       "last_updated": "2026-02-12",
       "limit": {
         "context": 200000,
@@ -4705,21 +4815,41 @@
       "name": "GLM 5",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-02-12",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "z-ai/glm-5-turbo": {
-      "attachment": true,
+      "attachment": false,
       "cost": {
-        "input": 0.88,
-        "output": 3.48
+        "cache_read": 0.174,
+        "input": 0.73,
+        "output": 3.19,
+        "tiers": [
+          {
+            "cache_read": 0.261,
+            "input": 1.02,
+            "output": 3.77,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+      "description": "Faster GLM-5 lane for coding agents that need lower latency",
+      "family": "glm",
       "id": "z-ai/glm-5-turbo",
-      "knowledge": "2025-01-01",
-      "last_updated": "2026-03-20",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-03-16",
       "limit": {
         "context": 200000,
         "output": 128000
@@ -4735,8 +4865,13 @@
       "name": "GLM 5 Turbo",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-03-20",
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-03-16",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -4745,17 +4880,29 @@
       "cost": {
         "cache_read": 0.1903,
         "input": 0.8781,
-        "output": 3.5126
+        "output": 3.5126,
+        "tiers": [
+          {
+            "cache_read": 0.2927,
+            "input": 1.1709,
+            "output": 4.098,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+      "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
+      "family": "glm",
       "id": "z-ai/glm-5.1",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-04-03",
+      "last_updated": "2026-04-07",
       "limit": {
         "context": 200000,
-        "output": 131072
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4765,15 +4912,15 @@
           "text"
         ]
       },
-      "name": "GLM-5.1",
-      "open_weights": false,
+      "name": "GLM 5.1",
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
-      "release_date": "2026-04-03",
+      "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -4781,17 +4928,20 @@
     "z-ai/glm-5.2": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.26,
-        "input": 1.4,
-        "output": 4.5
+        "cache_read": 0.182,
+        "input": 0.98,
+        "output": 3.08
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
       "id": "z-ai/glm-5.2",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-06-13",
       "limit": {
         "context": 1000000,
-        "output": 131072
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4818,20 +4968,23 @@
       "temperature": true,
       "tool_call": true
     },
-    "z-ai/glm-5.2-free": {
+    "z-ai/glm-5.3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "input": 0,
-        "output": 0
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
       },
-      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
       "family": "glm",
-      "id": "z-ai/glm-5.2-free",
-      "last_updated": "2026-06-13",
+      "id": "z-ai/glm-5.3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
       "limit": {
         "context": 1000000,
-        "output": 131072
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4841,19 +4994,114 @@
           "text"
         ]
       },
-      "name": "GLM 5.2 (Free)",
+      "name": "GLM 5.3",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
+            "low",
             "high",
             "max"
           ]
         }
       ],
-      "release_date": "2026-06-13",
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.3-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "z-ai/glm-5.3-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.3 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.3-flashx": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.375,
+        "output": 1.25
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "z-ai/glm-5.3-flashx",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.3 FlashX",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -4863,9 +5111,21 @@
       "cost": {
         "cache_read": 0.1743,
         "input": 0.726,
-        "output": 3.1946
+        "output": 3.1946,
+        "tiers": [
+          {
+            "cache_read": 0.2614,
+            "input": 1.0165,
+            "output": 3.7754,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+      "description": "Fast GLM vision model for screenshots, documents, and multimodal agent tasks",
+      "family": "glm",
       "id": "z-ai/glm-5v-turbo",
       "interleaved": {
         "field": "reasoning_content"
@@ -4889,10 +5149,38 @@
       "name": "GLM 5V Turbo",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-04-01",
       "temperature": true,
       "tool_call": true
+    },
+    "z-ai/glm-image": {
+      "attachment": false,
+      "description": "GLM-Image is an image generation model adopts a hybrid autoregressive + diffusion decoder architecture. In general image generation quality, GLM‑Image aligns with mainstream latent diffusion approaches, but it shows significant advantages in text-rendering and knowledge‑intensive generation scenarios. It performs especially well in tasks requiring precise semantic understanding and complex information expression, while maintaining strong capabilities in high‑fidelity and fine‑grained detail generation. In addition to text‑to‑image generation, GLM‑Image also supports a rich set of image‑to‑image tasks including image editing, style transfer, identity‑preserving generation, and multi‑subject consistency.",
+      "id": "z-ai/glm-image",
+      "last_updated": "2026-01-19",
+      "limit": {
+        "context": 10240,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GLM-Image",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-19",
+      "temperature": false,
+      "tool_call": false
     }
   },
   "name": "ZenMux",

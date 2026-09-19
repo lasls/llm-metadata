@@ -1,13 +1,28 @@
 {
-  "attachment": true,
+  "attachment": false,
   "cost": {
-    "input": 0.88,
-    "output": 3.48
+    "cache_read": 0.174,
+    "input": 0.73,
+    "output": 3.19,
+    "tiers": [
+      {
+        "cache_read": 0.261,
+        "input": 1.02,
+        "output": 3.77,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
   },
-  "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+  "description": "Faster GLM-5 lane for coding agents that need lower latency",
+  "family": "glm",
   "id": "z-ai/glm-5-turbo",
-  "knowledge": "2025-01-01",
-  "last_updated": "2026-03-20",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-03-16",
   "limit": {
     "context": 200000,
     "output": 128000
@@ -23,8 +38,13 @@
   "name": "GLM 5 Turbo",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
-  "release_date": "2026-03-20",
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    }
+  ],
+  "release_date": "2026-03-16",
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }

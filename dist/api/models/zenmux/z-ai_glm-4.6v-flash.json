@@ -1,17 +1,28 @@
 {
   "attachment": true,
   "cost": {
-    "cache_read": 0.0043,
-    "input": 0.02,
-    "output": 0.21
+    "cache_read": 0.0044,
+    "input": 0.0218,
+    "output": 0.2184,
+    "tiers": [
+      {
+        "cache_read": 0.0044,
+        "input": 0.0437,
+        "output": 0.4367,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
   },
-  "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+  "description": "Lightweight GLM vision model for visual reasoning, documents, and multimodal agents",
+  "family": "glm-flash",
   "id": "z-ai/glm-4.6v-flash",
-  "knowledge": "2025-01-01",
   "last_updated": "2025-12-08",
   "limit": {
     "context": 200000,
-    "output": 64000
+    "output": 128000
   },
   "modalities": {
     "input": [
@@ -24,9 +35,13 @@
     ]
   },
   "name": "GLM 4.6V FlashX",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    }
+  ],
   "release_date": "2025-12-08",
   "temperature": true,
   "tool_call": true

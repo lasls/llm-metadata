@@ -3,9 +3,21 @@
   "cost": {
     "cache_read": 0.1743,
     "input": 0.726,
-    "output": 3.1946
+    "output": 3.1946,
+    "tiers": [
+      {
+        "cache_read": 0.2614,
+        "input": 1.0165,
+        "output": 3.7754,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
   },
-  "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+  "description": "Fast GLM vision model for screenshots, documents, and multimodal agent tasks",
+  "family": "glm",
   "id": "z-ai/glm-5v-turbo",
   "interleaved": {
     "field": "reasoning_content"
@@ -29,7 +41,11 @@
   "name": "GLM 5V Turbo",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    }
+  ],
   "release_date": "2026-04-01",
   "temperature": true,
   "tool_call": true

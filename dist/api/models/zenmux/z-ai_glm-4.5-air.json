@@ -1,17 +1,29 @@
 {
   "attachment": false,
   "cost": {
-    "cache_read": 0.02,
-    "input": 0.11,
-    "output": 0.56
+    "cache_read": 0.0233,
+    "input": 0.1165,
+    "output": 0.2911,
+    "tiers": [
+      {
+        "cache_read": 0.0349,
+        "input": 0.1747,
+        "output": 1.1645,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      }
+    ]
   },
-  "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
+  "description": "Lighter GLM-4.5 variant for fast coding assistance and cheaper agents",
+  "family": "glm-air",
   "id": "z-ai/glm-4.5-air",
-  "knowledge": "2025-01-01",
-  "last_updated": "2025-07-25",
+  "knowledge": "2025-04",
+  "last_updated": "2025-07-28",
   "limit": {
     "context": 128000,
-    "output": 64000
+    "output": 96000
   },
   "modalities": {
     "input": [
@@ -22,14 +34,14 @@
     ]
   },
   "name": "GLM 4.5 Air",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
       "type": "toggle"
     }
   ],
-  "release_date": "2025-07-25",
+  "release_date": "2025-07-28",
   "temperature": true,
   "tool_call": true
 }
