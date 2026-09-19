@@ -11006,6 +11006,54 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek-v4-flash-vision-exp": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0031,
+          "input": 0.155,
+          "output": 0.62
+        },
+        "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4-flash-vision-exp",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-01",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash Vision Exp",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
@@ -13514,6 +13562,58 @@
         "release_date": "2026-08-12",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.8-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.014075,
+          "cache_write": 0.175937,
+          "input": 0.1126,
+          "output": 0.380025
+        },
+        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+        "family": "qwen",
+        "id": "qwen3.8-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "xhigh"
+            ]
+          },
+          {
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": true,
         "tool_call": true
       },
       "qwen3.8-max": {
@@ -122209,9 +122309,9 @@
       "moonshotai/kimi-k3": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.23,
-          "input": 2.1,
-          "output": 10.95
+          "cache_read": 0.17,
+          "input": 1.7,
+          "output": 8.5
         },
         "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
         "family": "kimi-k3",
@@ -122816,7 +122916,7 @@
       "nvidia/nemotron-3.5-lightning": {
         "attachment": false,
         "cost": {
-          "input": 0.065,
+          "input": 0.04,
           "output": 0.18
         },
         "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
@@ -124518,54 +124618,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "openai/gpt-5.6-sol-discounted": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.2,
-          "cache_write": 2.5,
-          "input": 2,
-          "output": 10,
-          "reasoning": 0
-        },
-        "description": "GPT-5.6 Sol served by OpenAI through Vercel AI Gateway at 50% lower cost than other available inference providers. This promotion runs through September 18, 2026.",
-        "family": "gpt",
-        "id": "openai/gpt-5.6-sol-discounted",
-        "last_updated": "2025-08-26",
-        "limit": {
-          "context": 1050000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "OpenAI: GPT-5.6 Sol (50% off)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2025-08-26",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "openai/gpt-5.6-sol-pro": {
         "attachment": true,
         "cost": {
@@ -124950,8 +125002,8 @@
       "openai/gpt-oss-20b": {
         "attachment": false,
         "cost": {
-          "input": 0.02,
-          "output": 0.1
+          "input": 0.018,
+          "output": 0.09
         },
         "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
         "family": "gpt-oss",
@@ -130212,6 +130264,49 @@
         "temperature": true,
         "tool_call": true
       },
+      "z-ai/glm-5.3-flashx": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.37,
+          "output": 1.25
+        },
+        "description": "GLM-5.3-FlashX is the high-speed variant of Z.ai's GLM-5.3-Flash, a native multimodal model delivering inference speeds of up to 200 tokens/s. Built on the same hybrid sparse and linear attention architecture...",
+        "family": "glm",
+        "id": "z-ai/glm-5.3-flashx",
+        "last_updated": "2026-09-18",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Z.ai: GLM 5.3 FlashX",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-18",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "z-ai/glm-5v-turbo": {
         "attachment": true,
         "cost": {
@@ -130441,9 +130536,9 @@
       "~deepseek/deepseek-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.00405,
-          "input": 0.135,
-          "output": 0.54
+          "cache_read": 0.0026,
+          "input": 0.13,
+          "output": 0.52
         },
         "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
         "family": "deepseek-flash",
@@ -130526,17 +130621,17 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.00161,
-          "input": 0.0506,
-          "output": 0.1518
+          "cache_read": 0.016,
+          "input": 0.04,
+          "output": 0.08
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
         "id": "~deepseek/deepseek-v4-flash-latest",
         "last_updated": "2026-08-01",
         "limit": {
-          "context": 1024000,
-          "output": 384000
+          "context": 1048576,
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -130662,9 +130757,9 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.23,
-          "input": 2.1,
-          "output": 10.95
+          "cache_read": 0.17,
+          "input": 1.7,
+          "output": 8.5
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -182106,6 +182201,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemma4-31b-splituntied": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.1,
+          "output": 0.3
+        },
+        "description": "Blazed-Forge's Split-Untied is a text-only Gemma 4 31B community finetune with an untied BF16 output head, built for creative writing, roleplay, expressive dialogue, and tool use.",
+        "family": "gemma",
+        "id": "google/gemma4-31b-splituntied",
+        "last_updated": "2026-09-17",
+        "limit": {
+          "context": 262144,
+          "input": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 31B Split-Untied",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-09-17",
+        "structured_output": false,
+        "tool_call": true
+      },
       "hermes-high": {
         "attachment": false,
         "cost": {
@@ -190659,37 +190785,6 @@
         "release_date": "2024-01-01",
         "structured_output": false,
         "tool_call": false
-      },
-      "slowburn/gemma4-31b-splituntied": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.05,
-          "input": 0.1,
-          "output": 0.3
-        },
-        "description": "Slowburn's Split-Untied is a text-only Gemma 4 31B community finetune with an untied BF16 output head, built for creative writing, roleplay, expressive dialogue, and tool use.",
-        "family": "gemma",
-        "id": "slowburn/gemma4-31b-splituntied",
-        "last_updated": "2026-09-17",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemma 4 31B Split-Untied",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2026-09-17",
-        "structured_output": false,
-        "tool_call": true
       },
       "soob3123/GrayLine-Qwen3-8B": {
         "attachment": false,
@@ -216317,6 +216412,52 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.006,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4.1-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "gemini-3-flash": {
         "attachment": true,
         "cost": {
@@ -218528,6 +218669,64 @@
         "temperature": true,
         "tool_call": true
       },
+      "jev-1.13": {
+        "attachment": false,
+        "cost": {
+          "input": 0.042,
+          "output": 0
+        },
+        "description": "System One model for fast, typed probabilistic decisions over text or structured state",
+        "id": "jev-1.13",
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 64000,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Jev 1.13",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-09-15",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": false
+      },
+      "jev-1.13-free": {
+        "attachment": false,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "System One model for fast, typed probabilistic decisions over text or structured state",
+        "id": "jev-1.13-free",
+        "last_updated": "2026-09-15",
+        "limit": {
+          "context": 64000,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Jev 1.13 Free",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-09-15",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": false
+      },
       "jev-latest": {
         "attachment": false,
         "cost": {
@@ -219975,6 +220174,59 @@
         ],
         "release_date": "2026-04-02",
         "status": "deprecated",
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen3.8-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.016,
+          "cache_write": 0.2,
+          "input": 0.15,
+          "output": 0.47
+        },
+        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+        "family": "qwen",
+        "id": "qwen3.8-flash",
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 Flash",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/anthropic"
+        },
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "xhigh"
+            ]
+          },
+          {
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -223890,9 +224142,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.009688,
-          "input": 0.04844,
-          "output": 0.09688
+          "cache_read": 0.009072,
+          "input": 0.04536,
+          "output": 0.09072
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -223937,9 +224189,9 @@
       "deepseek/deepseek-v4-flash-0731": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.012,
-          "input": 0.06,
-          "output": 0.12
+          "cache_read": 0.016,
+          "input": 0.04,
+          "output": 0.08
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -224071,9 +224323,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.055463,
-          "input": 0.66555,
-          "output": 1.3311
+          "cache_read": 0.041949,
+          "input": 0.503382,
+          "output": 1.006764
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -227881,9 +228133,9 @@
       "moonshotai/kimi-k3": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.23,
-          "input": 2.1,
-          "output": 10.95
+          "cache_read": 0.17,
+          "input": 1.7,
+          "output": 8.5
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi-k3",
@@ -235930,6 +236182,49 @@
         "temperature": true,
         "tool_call": true
       },
+      "z-ai/glm-5.3-flashx": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.37,
+          "output": 1.25
+        },
+        "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+        "family": "glm",
+        "id": "z-ai/glm-5.3-flashx",
+        "last_updated": "2026-09-18",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM 5.3 FlashX",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-18",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "z-ai/glm-5v-turbo": {
         "attachment": true,
         "cost": {
@@ -236155,9 +236450,9 @@
       "~deepseek/deepseek-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.00405,
-          "input": 0.135,
-          "output": 0.54
+          "cache_read": 0.0026,
+          "input": 0.13,
+          "output": 0.52
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -236244,9 +236539,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.00161,
-          "input": 0.0506,
-          "output": 0.1518
+          "cache_read": 0.016,
+          "input": 0.04,
+          "output": 0.08
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -236254,7 +236549,7 @@
         "last_updated": "2026-08-01",
         "limit": {
           "context": 1310720,
-          "output": 384000
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -236400,9 +236695,9 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.23,
-          "input": 2.1,
-          "output": 10.95
+          "cache_read": 0.17,
+          "input": 1.7,
+          "output": 8.5
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -298423,10 +298718,10 @@
       "openai/gpt-5.6-sol": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
-          "cache_write": 2.5,
-          "input": 2,
-          "output": 10
+          "cache_read": 0.4,
+          "cache_write": 5,
+          "input": 4,
+          "output": 20
         },
         "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
         "family": "gpt-sol",
@@ -298472,10 +298767,10 @@
       "openai/gpt-5.6-sol-fast": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.4,
-          "cache_write": 5,
-          "input": 4,
-          "output": 20
+          "cache_read": 0.8,
+          "cache_write": 10,
+          "input": 8,
+          "output": 40
         },
         "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
         "family": "gpt-sol",
@@ -309748,10 +310043,10 @@
       "glm-5.3-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.015,
+          "cache_read": 0.03,
           "cache_write": 0,
-          "input": 0.075,
-          "output": 0.25
+          "input": 0.15,
+          "output": 0.5
         },
         "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
         "family": "glm-flash",
@@ -309789,6 +310084,54 @@
           }
         ],
         "release_date": "2026-08-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-flashx": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 0,
+          "input": 0.37,
+          "output": 1.25
+        },
+        "description": "High-speed GLM-5.3-Flash serving option for coding and agent workflows",
+        "family": "glm-flash",
+        "id": "glm-5.3-flashx",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-18",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-FlashX",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-18",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -315678,10 +316021,10 @@
       "glm-5.3-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.015,
+          "cache_read": 0.03,
           "cache_write": 0,
-          "input": 0.075,
-          "output": 0.25
+          "input": 0.15,
+          "output": 0.5
         },
         "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
         "family": "glm-flash",
@@ -315719,6 +316062,54 @@
           }
         ],
         "release_date": "2026-08-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-flashx": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 0,
+          "input": 0.37,
+          "output": 1.25
+        },
+        "description": "High-speed GLM-5.3-Flash serving option for coding and agent workflows",
+        "family": "glm-flash",
+        "id": "glm-5.3-flashx",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-18",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-FlashX",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-18",
         "structured_output": true,
         "temperature": true,
         "tool_call": true

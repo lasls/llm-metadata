@@ -1279,6 +1279,54 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek-v4-flash-vision-exp": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0031,
+        "input": 0.155,
+        "output": 0.62
+      },
+      "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-flash-vision-exp",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-01",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash Vision Exp",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek-v4-pro-0813": {
       "attachment": false,
       "cost": {
@@ -3787,6 +3835,58 @@
       "release_date": "2026-08-12",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.8-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.014075,
+        "cache_write": 0.175937,
+        "input": 0.1126,
+        "output": 0.380025
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen3.8-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
       "tool_call": true
     },
     "qwen3.8-max": {

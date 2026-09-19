@@ -933,6 +933,52 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek-v4.1-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4.1-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gemini-3-flash": {
       "attachment": true,
       "cost": {
@@ -3144,6 +3190,64 @@
       "temperature": true,
       "tool_call": true
     },
+    "jev-1.13": {
+      "attachment": false,
+      "cost": {
+        "input": 0.042,
+        "output": 0
+      },
+      "description": "System One model for fast, typed probabilistic decisions over text or structured state",
+      "id": "jev-1.13",
+      "last_updated": "2026-09-15",
+      "limit": {
+        "context": 64000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Jev 1.13",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-09-15",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": false
+    },
+    "jev-1.13-free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "System One model for fast, typed probabilistic decisions over text or structured state",
+      "id": "jev-1.13-free",
+      "last_updated": "2026-09-15",
+      "limit": {
+        "context": 64000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Jev 1.13 Free",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-09-15",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": false
+    },
     "jev-latest": {
       "attachment": false,
       "cost": {
@@ -4591,6 +4695,59 @@
       ],
       "release_date": "2026-04-02",
       "status": "deprecated",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.8-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.016,
+        "cache_write": 0.2,
+        "input": 0.15,
+        "output": 0.47
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "qwen3.8-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Flash",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/anthropic"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
