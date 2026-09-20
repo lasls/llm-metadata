@@ -47789,36 +47789,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "typesafe/jev": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0,
-          "input": 0.042,
-          "output": 0
-        },
-        "description": "System One model for fast, typed probabilistic decisions over text or structured state",
-        "id": "typesafe/jev",
-        "last_updated": "2026-09-15",
-        "limit": {
-          "context": 32000,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Jev",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-09-15",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": false
-      },
       "unbiased/pareto": {
         "attachment": true,
         "cost": {
@@ -118464,8 +118434,8 @@
         "id": "deepseek/deepseek-v4-pro-0813",
         "last_updated": "2026-08-22",
         "limit": {
-          "context": 1024000,
-          "output": 384000
+          "context": 1048576,
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -122923,7 +122893,7 @@
       "nvidia/nemotron-3.5-lightning": {
         "attachment": false,
         "cost": {
-          "input": 0.04,
+          "input": 0.065,
           "output": 0.18
         },
         "description": "NVIDIA Nemotron 3.5 Lightning is an open mixture-of-experts model from NVIDIA, with 3B active parameters out of 30B total. It is suited for high-throughput agentic workloads and specialized tasks that...",
@@ -127396,8 +127366,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.05,
-          "input": 0.1,
-          "output": 0.9
+          "input": 0.15,
+          "output": 1
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -128790,9 +128760,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.033,
-          "input": 0.132,
-          "output": 0.528
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -130586,17 +130556,17 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.018348,
-          "input": 0.55044,
-          "output": 1.65132
+          "cache_read": 0.0168,
+          "input": 0.528,
+          "output": 1.584
         },
         "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
         "family": "deepseek",
         "id": "~deepseek/deepseek-pro-latest",
         "last_updated": "2026-09-14",
         "limit": {
-          "context": 1024000,
-          "output": 384000
+          "context": 1048576,
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -131127,9 +131097,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.15678,
-          "input": 0.8442,
-          "output": 2.6532
+          "cache_read": 0.15444,
+          "input": 0.8316,
+          "output": 2.6136
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
@@ -144847,7 +144817,7 @@
       "baidu/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.044,
+          "cache_read": 0.014,
           "input": 0.44,
           "output": 1.32
         },
@@ -144896,7 +144866,7 @@
       "baidu/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.132,
+          "cache_read": 0.042,
           "input": 1.32,
           "output": 3.96
         },
@@ -144939,6 +144909,53 @@
         ],
         "release_date": "2026-04-24",
         "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "baidu/deepseek-v4.1-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.006,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
+        "id": "baidu/deepseek-v4.1-flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
+        "limit": {
+          "context": 1048576,
+          "output": 393216
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash (Baidu)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -191324,37 +191341,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "typesafe/jev-latest": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.021,
-          "input": 0.042,
-          "output": 0
-        },
-        "description": "System One model for fast, typed probabilistic decisions over text or structured state",
-        "id": "typesafe/jev-latest",
-        "last_updated": "2026-09-15",
-        "limit": {
-          "context": 32000,
-          "input": 32000,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Jev Latest",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-09-15",
-        "structured_output": false,
-        "temperature": false,
-        "tool_call": false
-      },
       "unbiased/pareto": {
         "attachment": true,
         "cost": {
@@ -218950,93 +218936,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "jev-1.13": {
-        "attachment": false,
-        "cost": {
-          "input": 0.042,
-          "output": 0
-        },
-        "description": "System One model for fast, typed probabilistic decisions over text or structured state",
-        "id": "jev-1.13",
-        "last_updated": "2026-09-15",
-        "limit": {
-          "context": 64000,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Jev 1.13",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-09-15",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": false
-      },
-      "jev-1.13-free": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "System One model for fast, typed probabilistic decisions over text or structured state",
-        "id": "jev-1.13-free",
-        "last_updated": "2026-09-15",
-        "limit": {
-          "context": 64000,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Jev 1.13 Free",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-09-15",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": false
-      },
-      "jev-latest": {
-        "attachment": false,
-        "cost": {
-          "input": 0.042,
-          "output": 0
-        },
-        "description": "System One model for fast, typed probabilistic decisions over text or structured state",
-        "id": "jev-latest",
-        "last_updated": "2026-09-15",
-        "limit": {
-          "context": 64000,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Jev",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-09-15",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": false
-      },
       "kimi-k2": {
         "attachment": false,
         "cost": {
@@ -220628,7 +220527,7 @@
   },
   "opencode-go": {
     "api": "https://opencode.ai/zen/go/v1",
-    "doc": "https://opencode.ai/docs/zen",
+    "doc": "https://opencode.ai/docs/go",
     "env": [
       "OPENCODE_API_KEY"
     ],
@@ -221660,7 +221559,8 @@
       "minimax-m2.5": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.03,
+          "cache_read": 0.06,
+          "cache_write": 0.375,
           "input": 0.3,
           "output": 1.2
         },
@@ -221697,6 +221597,7 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.06,
+          "cache_write": 0.375,
           "input": 0.3,
           "output": 1.2
         },
@@ -224422,9 +224323,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.007168,
-          "input": 0.03584,
-          "output": 0.07168
+          "cache_read": 0.007112,
+          "input": 0.03556,
+          "output": 0.07112
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -224606,9 +224507,9 @@
       "deepseek/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.018348,
-          "input": 0.55044,
-          "output": 1.65132
+          "cache_read": 0.0168,
+          "input": 0.528,
+          "output": 1.584
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -224616,7 +224517,7 @@
         "last_updated": "2026-08-22",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -233140,8 +233041,8 @@
       "qwen/qwen3-vl-30b-a3b-instruct": {
         "attachment": true,
         "cost": {
-          "input": 0.2,
-          "output": 0.7
+          "input": 0.13,
+          "output": 0.52
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -233668,8 +233569,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.05,
-          "input": 0.1,
-          "output": 0.9
+          "input": 0.15,
+          "output": 1
         },
         "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
         "family": "qwen",
@@ -234860,9 +234761,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.033,
-          "input": 0.132,
-          "output": 0.528
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -236338,9 +236239,9 @@
       "z-ai/glm-5.3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1638,
-          "input": 0.882,
-          "output": 2.772
+          "cache_read": 0.169,
+          "input": 0.91,
+          "output": 2.86
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -236732,9 +236633,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.018348,
-          "input": 0.55044,
-          "output": 1.65132
+          "cache_read": 0.0168,
+          "input": 0.528,
+          "output": 1.584
         },
         "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
         "family": "deepseek",
@@ -236742,7 +236643,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -237389,9 +237290,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.15678,
-          "input": 0.8442,
-          "output": 2.6532
+          "cache_read": 0.15444,
+          "input": 0.8316,
+          "output": 2.6136
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -301952,35 +301853,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "typesafe-ai/jev": {
-        "attachment": false,
-        "cost": {
-          "input": 0.042,
-          "output": 0
-        },
-        "description": "System One model for fast, typed probabilistic decisions over text or structured state",
-        "id": "typesafe-ai/jev",
-        "last_updated": "2026-09-15",
-        "limit": {
-          "context": 32000,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Jev",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-09-15",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": false
-      },
       "voyage/rerank-2.5": {
         "attachment": false,
         "description": "Reranking model for improving retrieval quality in search and recommendation systems",
@@ -304478,35 +304350,6 @@
         "structured_output": true,
         "temperature": false,
         "tool_call": true
-      },
-      "jev": {
-        "attachment": false,
-        "cost": {
-          "input": 0.042,
-          "output": 0
-        },
-        "description": "System One model for fast, typed probabilistic decisions over text or structured state",
-        "id": "jev",
-        "last_updated": "2026-09-15",
-        "limit": {
-          "context": 64000,
-          "output": 0
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Jev",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-09-15",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": false
       },
       "kimi-k3": {
         "attachment": true,
