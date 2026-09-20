@@ -6592,9 +6592,9 @@
     "deepseek/deepseek-v4.1-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.003,
-        "input": 0.1,
-        "output": 0.4
+        "cache_read": 0.006,
+        "input": 0.13,
+        "output": 0.52
       },
       "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
       "family": "deepseek-flash",
@@ -6637,9 +6637,9 @@
     "deepseek/deepseek-v4.1-flash:thinking": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.003,
-        "input": 0.1,
-        "output": 0.4
+        "cache_read": 0.006,
+        "input": 0.13,
+        "output": 0.52
       },
       "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
       "family": "deepseek-flash",
@@ -16039,7 +16039,7 @@
       "reasoning": false,
       "release_date": "2024-01-01",
       "structured_output": false,
-      "tool_call": false
+      "tool_call": true
     },
     "qwen/qwen3-235b-a22b": {
       "attachment": true,
@@ -16137,7 +16137,7 @@
       "release_date": "2025-04-28",
       "structured_output": false,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "qwen/qwen3-30b-a3b-instruct-2507": {
       "attachment": false,
@@ -16233,7 +16233,7 @@
       "reasoning": false,
       "release_date": "2024-01-01",
       "structured_output": false,
-      "tool_call": false
+      "tool_call": true
     },
     "qwen/qwen3-coder": {
       "attachment": false,
@@ -17817,9 +17817,9 @@
     "qwen/qwen3.8-27b-uncensored": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.18,
-        "input": 0.2,
-        "output": 1.7
+        "cache_read": 0.125,
+        "input": 0.15,
+        "output": 1.2
       },
       "description": "Qwen 3.8 27B Uncensored is an NVFP4 open-weight multimodal model LoRA-tuned for fewer refusals across chat, coding, reasoning, tool use, and long-context work.",
       "family": "qwen",
@@ -17850,9 +17850,9 @@
     "qwen/qwen3.8-27b-uncensored:thinking": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.18,
-        "input": 0.2,
-        "output": 1.7
+        "cache_read": 0.125,
+        "input": 0.15,
+        "output": 1.2
       },
       "description": "Qwen 3.8 27B Uncensored with thinking enabled for more deliberate creative work, coding, multimodal analysis, tool use, and long-context problem solving.",
       "family": "qwen",
@@ -18617,6 +18617,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "stepfun/step-5-preview": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 1,
+        "output": 2.7
+      },
+      "description": "Step 5 Preview is StepFun's 600B sparse MoE frontier model for production-scale agents, activating 27B parameters per token. It is built for software engineering, long-horizon tool use, research, professional knowledge work, and finance, with native text, image, and video understanding and a 1M-token context window. ⚠️ Note: This model routes through StepFun, so privacy and logging guarantees may be limited.",
+      "family": "step",
+      "id": "stepfun/step-5-preview",
+      "last_updated": "2026-09-20",
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 5 Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-20",
+      "structured_output": true,
+      "tool_call": true
+    },
     "tencent/hy3": {
       "attachment": false,
       "cost": {
@@ -18860,6 +18903,37 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "typesafe/jev-latest": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.021,
+        "input": 0.042,
+        "output": 0
+      },
+      "description": "System One model for fast, typed probabilistic decisions over text or structured state",
+      "id": "typesafe/jev-latest",
+      "last_updated": "2026-09-15",
+      "limit": {
+        "context": 32000,
+        "input": 32000,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Jev Latest",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-09-15",
+      "structured_output": false,
+      "temperature": false,
+      "tool_call": false
     },
     "unbiased/pareto": {
       "attachment": true,
