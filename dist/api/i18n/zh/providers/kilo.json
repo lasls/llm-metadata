@@ -2056,7 +2056,7 @@
       "last_updated": "2026-08-22",
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 384000
       },
       "modalities": {
         "input": [
@@ -5907,9 +5907,9 @@
     "moonshotai/kimi-k3": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.17,
-        "input": 1.7,
-        "output": 8.5
+        "cache_read": 0.3,
+        "input": 3,
+        "output": 15
       },
       "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
       "family": "kimi-k3",
@@ -13333,6 +13333,137 @@
       "temperature": true,
       "tool_call": true
     },
+    "xiaomi/mimo-v2.6-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0028,
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "MiMo-V2.6-Flash is an open-source foundation model developed by Xiaomi. Built on a Mixture-of-Experts architecture with 309B total parameters and 15B activated per token, it employs a hybrid attention mechanism for...",
+      "family": "mimo",
+      "id": "xiaomi/mimo-v2.6-flash",
+      "knowledge": "2026-09-22",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.6-Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomi/mimo-v2.6-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0036,
+        "input": 0.435,
+        "output": 0.87
+      },
+      "description": "MiMo-V2.6-Pro is the flagship foundation model developed by Xiaomi. Built at a scale of over 1T parameters, it is designed to push the ceiling of capability for the most demanding...",
+      "family": "mimo",
+      "id": "xiaomi/mimo-v2.6-pro",
+      "knowledge": "2026-09-22",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.6-Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomi/mimo-v2.6-pro-ultraspeed": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.036,
+        "input": 4.35,
+        "output": 8.7
+      },
+      "description": "MiMo-V2.6-Pro-UltraSpeed is the fast speed edition of Xiaomi's flagship foundation model, MiMo-V2.6-Pro. Built from the same 1T MiMo-V2.6-Pro checkpoint, it matches the original model in quality while delivering roughly 10x...",
+      "family": "mimo",
+      "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
+      "last_updated": "2026-09-21",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Xiaomi: MiMo-V2.6-Pro-UltraSpeed",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "z-ai/glm-4.5": {
       "attachment": false,
       "cost": {
@@ -13877,7 +14008,7 @@
       "last_updated": "2026-08-26",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 102400
       },
       "modalities": {
         "input": [
@@ -14222,17 +14353,17 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.018186,
-        "input": 0.57156,
-        "output": 1.71468
+        "cache_read": 0.018216,
+        "input": 0.54648,
+        "output": 1.63944
       },
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "family": "deepseek",
       "id": "~deepseek/deepseek-pro-latest",
       "last_updated": "2026-09-14",
       "limit": {
-        "context": 1048576,
-        "output": 393216
+        "context": 1024000,
+        "output": 384000
       },
       "modalities": {
         "input": [
@@ -14264,9 +14395,9 @@
     "~deepseek/deepseek-v4-flash-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.016,
+        "cache_read": 0.01,
         "input": 0.04,
-        "output": 0.16
+        "output": 0.2
       },
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "family": "deepseek",
@@ -14720,7 +14851,7 @@
     "~z-ai/glm-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.015,
+        "cache_read": 0.02,
         "input": 0.075,
         "output": 0.25
       },
@@ -14730,7 +14861,7 @@
       "last_updated": "2026-08-27",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 102400
       },
       "modalities": {
         "input": [
