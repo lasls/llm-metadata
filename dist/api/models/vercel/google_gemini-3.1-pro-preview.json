@@ -2,8 +2,24 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.2,
+    "context_over_200k": {
+      "cache_read": 0.4,
+      "input": 4,
+      "output": 18
+    },
     "input": 2,
-    "output": 12
+    "output": 12,
+    "tiers": [
+      {
+        "cache_read": 0.4,
+        "input": 4,
+        "output": 18,
+        "tier": {
+          "size": 200001,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Reasoning-first Gemini preview for agentic coding and complex problem solving",
   "family": "gemini-pro",

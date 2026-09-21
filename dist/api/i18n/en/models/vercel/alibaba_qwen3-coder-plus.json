@@ -3,7 +3,36 @@
   "cost": {
     "cache_read": 0.2,
     "input": 1,
-    "output": 5
+    "output": 5,
+    "tiers": [
+      {
+        "cache_read": 0.36,
+        "input": 1.8,
+        "output": 9,
+        "tier": {
+          "size": 32001,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 0.6,
+        "input": 3,
+        "output": 15,
+        "tier": {
+          "size": 128001,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 1.2,
+        "input": 6,
+        "output": 60,
+        "tier": {
+          "size": 256001,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Hosted Qwen coder for software agents, repo edits, and long-context code",
   "family": "qwen",

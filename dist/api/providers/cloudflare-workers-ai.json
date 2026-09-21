@@ -15,7 +15,7 @@
         "input": 0.351,
         "output": 0.555
       },
-      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "description": "Gemma 3 27B tuned by AI Singapore for Southeast Asian languages and instruction following",
       "family": "gemma",
       "id": "@cf/aisingapore/gemma-sea-lion-v4-27b-it",
       "last_updated": "2025-09-23",
@@ -100,11 +100,10 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
+            "low",
             "high",
             "max"
           ]
@@ -143,11 +142,10 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
+            "low",
             "high",
             "max"
           ]
@@ -187,13 +185,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
-            "low",
-            "medium",
+            "none",
             "high"
           ]
         }
@@ -212,7 +206,7 @@
       "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "granite",
       "id": "@cf/ibm-granite/granite-4.0-h-micro",
-      "last_updated": "2025-10-07",
+      "last_updated": "2025-10-02",
       "limit": {
         "context": 131000,
         "output": 131000
@@ -228,7 +222,7 @@
       "name": "Granite 4.0 H Micro",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-10-07",
+      "release_date": "2025-10-02",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -461,7 +455,8 @@
       "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral-small",
       "id": "@cf/mistralai/mistral-small-3.1-24b-instruct",
-      "last_updated": "2025-03-18",
+      "knowledge": "2024-06",
+      "last_updated": "2025-03-17",
       "limit": {
         "context": 128000,
         "output": 128000
@@ -477,7 +472,7 @@
       "name": "Mistral Small 3.1 24B Instruct",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-03-18",
+      "release_date": "2025-03-17",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -515,13 +510,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
-            "low",
-            "medium",
+            "none",
             "high"
           ]
         }
@@ -559,19 +550,7 @@
       "name": "Kimi K2.7 Code",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
+      "reasoning_options": [],
       "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": true,
@@ -862,14 +841,6 @@
       "reasoning_options": [
         {
           "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
         }
       ],
       "release_date": "2026-01-19",
@@ -905,14 +876,11 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
-            "low",
-            "medium",
-            "high"
+            "none",
+            "high",
+            "max"
           ]
         }
       ],
@@ -934,7 +902,7 @@
       "last_updated": "2026-08-14",
       "limit": {
         "context": 1310720,
-        "output": 1310720
+        "output": 1048576
       },
       "modalities": {
         "input": [
@@ -952,8 +920,8 @@
           "type": "effort",
           "values": [
             "low",
-            "medium",
-            "high"
+            "high",
+            "max"
           ]
         }
       ],
@@ -989,7 +957,16 @@
       "name": "Glm 5.3 Flash",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-08-26",
       "structured_output": true,
       "temperature": true,
