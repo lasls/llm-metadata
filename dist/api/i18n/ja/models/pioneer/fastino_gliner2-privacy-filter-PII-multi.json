@@ -8,10 +8,13 @@
   },
   "description": "Tool-capable chat model for instruction following and agentic application workflows",
   "id": "fastino/gliner2-privacy-filter-PII-multi",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "last_updated": "2026-04-30",
   "limit": {
     "context": 8192,
-    "output": 4096
+    "output": 8192
   },
   "modalities": {
     "input": [
@@ -23,7 +26,17 @@
   },
   "name": "GLiNER2 Privacy Filter PII (Multi)",
   "open_weights": false,
-  "reasoning": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-04-30",
   "temperature": true,
   "tool_call": true

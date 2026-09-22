@@ -235,9 +235,9 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-03-12",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "amazon/google.gemma-3-12b-it@us": {
       "attachment": true,
@@ -267,9 +267,9 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-03-12",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "amazon/google.gemma-3-27b-it": {
       "attachment": true,
@@ -299,9 +299,9 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-03-12",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "amazon/google.gemma-3-27b-it@us": {
       "attachment": true,
@@ -331,9 +331,9 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-03-12",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "amazon/google.gemma-3-4b-it": {
       "attachment": true,
@@ -365,7 +365,7 @@
       "release_date": "2025-03-12",
       "structured_output": false,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "amazon/google.gemma-3-4b-it@us": {
       "attachment": true,
@@ -397,7 +397,7 @@
       "release_date": "2025-03-12",
       "structured_output": false,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "amazon/mistral.pixtral-large-2502-v1:0": {
       "attachment": false,
@@ -595,7 +595,7 @@
       "knowledge": "2024-08",
       "last_updated": "2025-11-06",
       "limit": {
-        "context": 128000,
+        "context": 256000,
         "output": 262144
       },
       "modalities": {
@@ -611,9 +611,9 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-11-06",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "amazon/moonshotai.kimi-k2.5": {
       "attachment": true,
@@ -684,9 +684,9 @@
         }
       ],
       "release_date": "2025-10-29",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "amazon/openai.gpt-oss-safeguard-20b@us": {
       "attachment": false,
@@ -724,9 +724,9 @@
         }
       ],
       "release_date": "2025-10-29",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "amazon/zai.glm-4.7-flash": {
       "attachment": false,
@@ -740,7 +740,7 @@
       "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
-        "context": 200000,
+        "context": 203000,
         "output": 131072
       },
       "modalities": {
@@ -756,7 +756,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-01-19",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -772,7 +772,7 @@
       "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
-        "context": 200000,
+        "context": 203000,
         "output": 131072
       },
       "modalities": {
@@ -788,7 +788,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-01-19",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -3178,9 +3178,9 @@
     "deepinfra/tencent/Hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.035,
-        "input": 0.14,
-        "output": 0.58
+        "cache_read": 0.033,
+        "input": 0.13,
+        "output": 0.53
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -11049,6 +11049,67 @@
         }
       ],
       "release_date": "2026-08-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "xai/grok-4.7": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 0.8,
+          "input": 3.2,
+          "output": 9.6
+        },
+        "input": 2,
+        "output": 6,
+        "tiers": [
+          {
+            "cache_read": 0.8,
+            "input": 3.2,
+            "output": 9.6,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "xAI's frontier model for long-running agents, coding, knowledge work, and visual projects",
+      "family": "grok",
+      "id": "xai/grok-4.7",
+      "knowledge": "2026-05",
+      "last_updated": "2026-09-21",
+      "limit": {
+        "context": 500000,
+        "output": 500000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.7",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

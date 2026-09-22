@@ -58070,6 +58070,69 @@
         "temperature": true,
         "tool_call": true
       },
+      "x-ai/grok-4.7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "cache_write": 2,
+          "context_over_200k": {
+            "cache_read": 1,
+            "cache_write": 4,
+            "input": 4,
+            "output": 12
+          },
+          "input": 2,
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 1,
+              "cache_write": 4,
+              "input": 4,
+              "output": 12,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "xAI's frontier model for long-running agents, coding, knowledge work, and visual projects",
+        "family": "grok",
+        "id": "x-ai/grok-4.7",
+        "knowledge": "2026-05",
+        "last_updated": "2026-09-21",
+        "limit": {
+          "context": 500000,
+          "output": 500000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-09-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "x-ai/grok-build-0.1": {
         "attachment": true,
         "cost": {
@@ -58208,6 +58271,98 @@
         ],
         "release_date": "2026-04-22",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2.6-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.004,
+          "cache_write": 0.16,
+          "input": 0.16,
+          "output": 0.32
+        },
+        "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.6-flash",
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2.6-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.005,
+          "cache_write": 0.47,
+          "input": 0.47,
+          "output": 0.94
+        },
+        "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.6-pro",
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
         "temperature": true,
         "tool_call": true
       },
@@ -68437,9 +68592,9 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-03-12",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "amazon/google.gemma-3-12b-it@us": {
         "attachment": true,
@@ -68469,9 +68624,9 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-03-12",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "amazon/google.gemma-3-27b-it": {
         "attachment": true,
@@ -68501,9 +68656,9 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-03-12",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "amazon/google.gemma-3-27b-it@us": {
         "attachment": true,
@@ -68533,9 +68688,9 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-03-12",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "amazon/google.gemma-3-4b-it": {
         "attachment": true,
@@ -68567,7 +68722,7 @@
         "release_date": "2025-03-12",
         "structured_output": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "amazon/google.gemma-3-4b-it@us": {
         "attachment": true,
@@ -68599,7 +68754,7 @@
         "release_date": "2025-03-12",
         "structured_output": false,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "amazon/mistral.pixtral-large-2502-v1:0": {
         "attachment": false,
@@ -68797,7 +68952,7 @@
         "knowledge": "2024-08",
         "last_updated": "2025-11-06",
         "limit": {
-          "context": 128000,
+          "context": 256000,
           "output": 262144
         },
         "modalities": {
@@ -68813,9 +68968,9 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-11-06",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "amazon/moonshotai.kimi-k2.5": {
         "attachment": true,
@@ -68886,9 +69041,9 @@
           }
         ],
         "release_date": "2025-10-29",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "amazon/openai.gpt-oss-safeguard-20b@us": {
         "attachment": false,
@@ -68926,9 +69081,9 @@
           }
         ],
         "release_date": "2025-10-29",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
-        "tool_call": false
+        "tool_call": true
       },
       "amazon/zai.glm-4.7-flash": {
         "attachment": false,
@@ -68942,7 +69097,7 @@
         "knowledge": "2025-04",
         "last_updated": "2026-01-19",
         "limit": {
-          "context": 200000,
+          "context": 203000,
           "output": 131072
         },
         "modalities": {
@@ -68958,7 +69113,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-01-19",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -68974,7 +69129,7 @@
         "knowledge": "2025-04",
         "last_updated": "2026-01-19",
         "limit": {
-          "context": 200000,
+          "context": 203000,
           "output": 131072
         },
         "modalities": {
@@ -68990,7 +69145,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-01-19",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -71380,9 +71535,9 @@
       "deepinfra/tencent/Hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.14,
-          "output": 0.58
+          "cache_read": 0.033,
+          "input": 0.13,
+          "output": 0.53
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -79255,6 +79410,67 @@
         "temperature": true,
         "tool_call": true
       },
+      "xai/grok-4.7": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "context_over_200k": {
+            "cache_read": 0.8,
+            "input": 3.2,
+            "output": 9.6
+          },
+          "input": 2,
+          "output": 6,
+          "tiers": [
+            {
+              "cache_read": 0.8,
+              "input": 3.2,
+              "output": 9.6,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "xAI's frontier model for long-running agents, coding, knowledge work, and visual projects",
+        "family": "grok",
+        "id": "xai/grok-4.7",
+        "knowledge": "2026-05",
+        "last_updated": "2026-09-21",
+        "limit": {
+          "context": 500000,
+          "output": 500000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.7",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-09-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "xai/grok-build-0.1": {
         "attachment": true,
         "cost": {
@@ -80900,6 +81116,45 @@
           }
         ],
         "release_date": "2026-09-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2-6-pro-ultraspeed": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 21.75,
+          "input": 21.75,
+          "output": 43.5
+        },
+        "description": "MiMo pro model for strong multimodal reasoning and agent execution",
+        "family": "mimo",
+        "id": "mimo-v2-6-pro-ultraspeed",
+        "last_updated": "2026-09-21",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2.6 Pro UltraSpeed",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-21",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -119375,7 +119630,7 @@
         "id": "deepseek/deepseek-v4-pro-0813",
         "last_updated": "2026-08-22",
         "limit": {
-          "context": 1048576,
+          "context": 1024000,
           "output": 384000
         },
         "modalities": {
@@ -121350,37 +121605,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "kwaipilot/kat-coder-pro-v2": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.06,
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
-        "family": "kat-coder",
-        "id": "kwaipilot/kat-coder-pro-v2",
-        "last_updated": "2026-03-27",
-        "limit": {
-          "context": 262144,
-          "output": 144000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kwaipilot: KAT-Coder-Pro V2",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-03-27",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "kwaipilot/kat-coder-pro-v2.5": {
         "attachment": false,
         "cost": {
@@ -123327,6 +123551,48 @@
         "temperature": true,
         "tool_call": false
       },
+      "nex-agi/nex-n2.5-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0025,
+          "input": 0.025,
+          "output": 0.1
+        },
+        "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+        "family": "agi",
+        "id": "nex-agi/nex-n2.5-mini",
+        "last_updated": "2026-09-08",
+        "limit": {
+          "context": 262144,
+          "output": 235929
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nex AGI: Nex-N2.5-Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": false
+      },
       "nex-agi/nex-n2.5-mini:free": {
         "attachment": true,
         "cost": {
@@ -123351,6 +123617,48 @@
           ]
         },
         "name": "Nex AGI: Nex-N2.5-Mini (free)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nex-agi/nex-n2.5-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.015,
+          "input": 0.075,
+          "output": 0.25
+        },
+        "description": "Nex-N2.5 is an agentic model built to turn goals into working, verified outcomes. Its core strength is agentic coding within a visual feedback loop: it can explore codebases, implement multi-file...",
+        "family": "agi",
+        "id": "nex-agi/nex-n2.5-pro",
+        "last_updated": "2026-09-08",
+        "limit": {
+          "context": 262144,
+          "output": 235929
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nex AGI: Nex-N2.5-Pro",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -127663,8 +127971,8 @@
         "knowledge": "2025-04",
         "last_updated": "2025-09",
         "limit": {
-          "context": 131072,
-          "output": 32768
+          "context": 262144,
+          "output": 235929
         },
         "modalities": {
           "input": [
@@ -130767,7 +131075,7 @@
             "text"
           ]
         },
-        "name": "Xiaomi: MiMo-V2.6-Pro-UltraSpeed",
+        "name": "MiMo-V2.6-Pro-UltraSpeed",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -131673,9 +131981,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.018621,
-          "input": 0.558624,
-          "output": 1.675872
+          "cache_read": 0.019954,
+          "input": 0.59862,
+          "output": 1.79586
         },
         "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
         "family": "deepseek",
@@ -131717,7 +132025,7 @@
         "cost": {
           "cache_read": 0.008,
           "input": 0.03,
-          "output": 0.8
+          "output": 1
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
@@ -132171,7 +132479,7 @@
       "~z-ai/glm-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.02,
+          "cache_read": 0.015,
           "input": 0.075,
           "output": 0.25
         },
@@ -132181,7 +132489,7 @@
         "last_updated": "2026-08-27",
         "limit": {
           "context": 1048576,
-          "output": 102400
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -132214,9 +132522,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.13,
-          "input": 0.7,
-          "output": 2.2
+          "cache_read": 0.107525,
+          "input": 0.6545,
+          "output": 2.057
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
@@ -132224,7 +132532,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -138769,6 +139077,98 @@
           }
         ],
         "release_date": "2026-04-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.6-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0028,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+        "family": "mimo",
+        "id": "mimo-v2.6-flash",
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.6-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0036,
+          "input": 0.435,
+          "output": 0.87
+        },
+        "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+        "family": "mimo",
+        "id": "mimo-v2.6-pro",
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
         "temperature": true,
         "tool_call": true
       },
@@ -158154,6 +158554,100 @@
         "temperature": true,
         "tool_call": true
       },
+      "xiaomi/mimo-v2.6-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0028,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.6-flash",
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2.6 Flash (Xiaomi)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2.6-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0036,
+          "input": 0.435,
+          "output": 0.87
+        },
+        "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.6-pro",
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2.6 Pro (Xiaomi)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "zai/glm-4-32b-0414-128k": {
         "attachment": false,
         "cost": {
@@ -176532,8 +177026,8 @@
       "abliteration-ai/abliterated-model": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
-          "input": 3,
+          "cache_read": 0.1,
+          "input": 1,
           "output": 3
         },
         "description": "Abliteration.ai's multimodal reasoning model supports text and image input, structured output, automatic prompt caching, and a 262K-token context window.",
@@ -176577,8 +177071,8 @@
       "abliteration-ai/abliterated-model-large": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.5,
-          "input": 5,
+          "cache_read": 0.3,
+          "input": 3,
           "output": 5
         },
         "description": "Abliteration.ai's large text reasoning model is derived from GLM-5.2 and supports native tool calling, structured output, automatic prompt caching, and a one-million-token context window.",
@@ -176621,8 +177115,8 @@
       "abliteration-ai/abliterated-model-large-v2": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.5,
-          "input": 5,
+          "cache_read": 0.3,
+          "input": 3,
           "output": 5
         },
         "description": "Abliteration.ai's default large text reasoning model is derived from GLM-5.3 for harder reasoning and evaluation workloads, with automatic prompt caching and a one-million-token context window.",
@@ -180089,9 +180583,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.44,
-          "output": 1.32
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -193542,6 +194036,143 @@
           }
         ],
         "release_date": "2026-04-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2.6-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0028,
+          "cache_write": 0,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.6-flash",
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2.6 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2.6-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0036,
+          "cache_write": 0,
+          "input": 0.435,
+          "output": 0.87
+        },
+        "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.6-pro",
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2.6 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2.6-pro-ultraspeed": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.036,
+          "cache_write": 0,
+          "input": 4.35,
+          "output": 8.7
+        },
+        "description": "MiMo pro model for strong multimodal reasoning and agent execution",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "last_updated": "2026-09-21",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2.6 Pro UltraSpeed",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-21",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -221279,6 +221910,7 @@
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-24",
+        "status": "deprecated",
         "temperature": true,
         "tool_call": true
       },
@@ -226349,9 +226981,9 @@
       "deepseek/deepseek-v4-pro-0813": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.044,
-          "input": 1.32,
-          "output": 3.96
+          "cache_read": 0.019954,
+          "input": 0.59862,
+          "output": 1.79586
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -226393,9 +227025,9 @@
       "deepseek/deepseek-v4.1-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.006,
-          "input": 0.3,
-          "output": 1.2
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -228260,37 +228892,6 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": false
-      },
-      "kwaipilot/kat-coder-pro-v2": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.06,
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
-        "family": "kat-coder",
-        "id": "kwaipilot/kat-coder-pro-v2",
-        "last_updated": "2026-03-27",
-        "limit": {
-          "context": 262144,
-          "output": 144000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "KAT-Coder-Pro V2",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-03-27",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
       },
       "kwaipilot/kat-coder-pro-v2.5": {
         "attachment": false,
@@ -230215,6 +230816,48 @@
         "temperature": true,
         "tool_call": false
       },
+      "nex-agi/nex-n2.5-mini": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0025,
+          "input": 0.025,
+          "output": 0.1
+        },
+        "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+        "family": "agi",
+        "id": "nex-agi/nex-n2.5-mini",
+        "last_updated": "2026-09-08",
+        "limit": {
+          "context": 262144,
+          "output": 235929
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nex-N2.5-Mini",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": false
+      },
       "nex-agi/nex-n2.5-mini:free": {
         "attachment": true,
         "cost": {
@@ -230239,6 +230882,48 @@
           ]
         },
         "name": "Nex-N2.5-Mini (free)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-08",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nex-agi/nex-n2.5-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.015,
+          "input": 0.075,
+          "output": 0.25
+        },
+        "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+        "family": "agi",
+        "id": "nex-agi/nex-n2.5-pro",
+        "last_updated": "2026-09-08",
+        "limit": {
+          "context": 262144,
+          "output": 235929
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Nex-N2.5-Pro",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
@@ -234796,7 +235481,7 @@
         "last_updated": "2025-09",
         "limit": {
           "context": 262144,
-          "output": 32768
+          "output": 235929
         },
         "modalities": {
           "input": [
@@ -238262,9 +238947,9 @@
       "z-ai/glm-5.3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1456,
-          "input": 0.784,
-          "output": 2.464
+          "cache_read": 0.156,
+          "input": 0.84,
+          "output": 2.64
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -238656,9 +239341,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.018621,
-          "input": 0.558624,
-          "output": 1.675872
+          "cache_read": 0.019954,
+          "input": 0.59862,
+          "output": 1.79586
         },
         "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
         "family": "deepseek",
@@ -238700,9 +239385,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.012,
+          "cache_read": 0.008,
           "input": 0.03,
-          "output": 0.8
+          "output": 1
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -239270,7 +239955,7 @@
       "~z-ai/glm-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.02,
+          "cache_read": 0.015,
           "input": 0.075,
           "output": 0.25
         },
@@ -239280,7 +239965,7 @@
         "last_updated": "2026-08-27",
         "limit": {
           "context": 1310720,
-          "output": 102400
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -239313,9 +239998,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.14534,
-          "input": 0.7826,
-          "output": 2.4596
+          "cache_read": 0.107525,
+          "input": 0.6545,
+          "output": 2.057
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -239323,7 +240008,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1310720,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -250360,10 +251045,13 @@
         },
         "description": "Tool-capable chat model for instruction following and agentic application workflows",
         "id": "fastino/gliguard-LLMGuardrails-300M",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-04-30",
         "limit": {
           "context": 8192,
-          "output": 4096
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -250375,7 +251063,17 @@
         },
         "name": "GLiGuard LLM Guardrails 300M",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2026-04-30",
         "temperature": true,
         "tool_call": true
@@ -250390,10 +251088,13 @@
         },
         "description": "Tool-capable chat model for instruction following and agentic application workflows",
         "id": "fastino/gliner2-base-v1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2025-06-30",
         "limit": {
           "context": 8192,
-          "output": 4096
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -250405,7 +251106,17 @@
         },
         "name": "GLiNER2 Base",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2025-06-30",
         "temperature": true,
         "tool_call": true
@@ -250420,10 +251131,13 @@
         },
         "description": "Flagship model for demanding analysis, coding, and production agent workflows",
         "id": "fastino/gliner2-large-v1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2025-06-30",
         "limit": {
           "context": 8192,
-          "output": 4096
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -250435,7 +251149,17 @@
         },
         "name": "GLiNER2 Large",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2025-06-30",
         "temperature": true,
         "tool_call": true
@@ -250450,10 +251174,13 @@
         },
         "description": "Flagship model for demanding analysis, coding, and production agent workflows",
         "id": "fastino/gliner2-multi-large-v1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2025-11-30",
         "limit": {
           "context": 8192,
-          "output": 4096
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -250465,7 +251192,17 @@
         },
         "name": "GLiNER2 Multi Large",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2025-11-30",
         "temperature": true,
         "tool_call": true
@@ -250480,10 +251217,13 @@
         },
         "description": "Tool-capable chat model for instruction following and agentic application workflows",
         "id": "fastino/gliner2-multi-v1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2025-11-30",
         "limit": {
           "context": 8192,
-          "output": 4096
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -250495,7 +251235,17 @@
         },
         "name": "GLiNER2 Multi",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2025-11-30",
         "temperature": true,
         "tool_call": true
@@ -250510,10 +251260,13 @@
         },
         "description": "Tool-capable chat model for instruction following and agentic application workflows",
         "id": "fastino/gliner2-privacy-filter-PII-multi",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
         "last_updated": "2026-04-30",
         "limit": {
           "context": 8192,
-          "output": 4096
+          "output": 8192
         },
         "modalities": {
           "input": [
@@ -250525,7 +251278,17 @@
         },
         "name": "GLiNER2 Privacy Filter PII (Multi)",
         "open_weights": false,
-        "reasoning": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
         "release_date": "2026-04-30",
         "temperature": true,
         "tool_call": true
@@ -282068,6 +282831,680 @@
         "structured_output": true,
         "temperature": false,
         "tool_call": true
+      },
+      "google/gemini-3-flash-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.5,
+          "input_audio": 1,
+          "output": 3
+        },
+        "description": "New Gemini flash lane bringing frontier-style multimodal reasoning to cheaper runs",
+        "family": "gemini-flash",
+        "id": "google/gemini-3-flash-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2025-12-17",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3 Flash Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2025-12-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.1-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.025,
+          "input": 0.25,
+          "input_audio": 0.5,
+          "output": 1.5
+        },
+        "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
+        "family": "gemini-flash-lite",
+        "id": "google/gemini-3.1-flash-lite",
+        "knowledge": "2025-01",
+        "last_updated": "2026-05-07",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Flash Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-05-07",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.1-pro-preview": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18
+          },
+          "input": 2,
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Reasoning-first Gemini preview for agentic coding and complex problem solving",
+        "family": "gemini-pro",
+        "id": "google/gemini-3.1-pro-preview",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Pro Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-02-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.1-pro-preview-customtools": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18
+          },
+          "input": 2,
+          "output": 12,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 4,
+              "output": 18,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Advanced Gemini model for complex reasoning, coding, and multimodal analysis",
+        "family": "gemini-pro",
+        "id": "google/gemini-3.1-pro-preview-customtools",
+        "knowledge": "2025-01",
+        "last_updated": "2026-02-19",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.1 Pro Preview Custom Tools",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-02-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.5-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.15,
+          "input": 1.5,
+          "input_audio": 1.5,
+          "output": 9
+        },
+        "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+        "family": "gemini-flash",
+        "id": "google/gemini-3.5-flash",
+        "knowledge": "2025-01",
+        "last_updated": "2026-05-19",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.5 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-05-19",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.5-flash-lite": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+        "family": "gemini-flash-lite",
+        "id": "google/gemini-3.5-flash-lite",
+        "knowledge": "2026-03",
+        "last_updated": "2026-07-21",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.5 Flash Lite",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.6-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "input_audio": 0.75,
+          "output": 3.75
+        },
+        "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+        "family": "gemini-flash",
+        "id": "google/gemini-3.6-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-07-21",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.6 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.7-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "input_audio": 0.75,
+          "output": 3.75
+        },
+        "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
+        "family": "gemini-flash",
+        "id": "google/gemini-3.7-flash",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.7 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-3.8-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "input_audio": 0.75,
+          "output": 3.75
+        },
+        "description": "Google's most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows",
+        "family": "gemini-flash",
+        "id": "google/gemini-3.8-flash",
+        "last_updated": "2026-09-02",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 3.8 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-embedding-001": {
+        "attachment": false,
+        "cost": {
+          "input": 0.15,
+          "output": 0
+        },
+        "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+        "family": "gemini",
+        "id": "google/gemini-embedding-001",
+        "knowledge": "2025-05",
+        "last_updated": "2025-05-20",
+        "limit": {
+          "context": 2048,
+          "output": 1
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Embedding 001",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2025-05-20",
+        "temperature": false,
+        "tool_call": false
+      },
+      "google/gemini-embedding-2": {
+        "attachment": false,
+        "cost": {
+          "input": 0.2,
+          "output": 0
+        },
+        "description": "Multimodal embedding model mapping text, images, video, audio, and PDFs into a unified embedding space",
+        "family": "gemini",
+        "id": "google/gemini-embedding-2",
+        "knowledge": "2025-11",
+        "last_updated": "2026-04-22",
+        "limit": {
+          "context": 8192,
+          "output": 1
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Embedding 2",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-04-22",
+        "temperature": false,
+        "tool_call": false
+      },
+      "google/gemini-flash-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.75,
+          "input_audio": 0.75,
+          "output": 3.75
+        },
+        "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
+        "family": "gemini-flash",
+        "id": "google/gemini-flash-latest",
+        "knowledge": "2026-03",
+        "last_updated": "2026-08-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Flash Latest",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemini-flash-lite-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 2.5
+        },
+        "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+        "family": "gemini-flash-lite",
+        "id": "google/gemini-flash-lite-latest",
+        "knowledge": "2026-03",
+        "last_updated": "2026-07-21",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini Flash-Lite Latest",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-07-21",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemma-4-26b-a4b-it": {
+        "attachment": true,
+        "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+        "family": "gemma",
+        "id": "google/gemma-4-26b-a4b-it",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 26B A4B IT",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-04-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "google/gemma-4-31b-it": {
+        "attachment": true,
+        "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
+        "family": "gemma",
+        "id": "google/gemma-4-31b-it",
+        "last_updated": "2026-04-02",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 31B IT",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-04-02",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Tempr",
@@ -312915,6 +314352,133 @@
         "status": "beta",
         "temperature": true,
         "tool_call": true
+      },
+      "mimo-v2.6-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0028,
+          "input": 0.14,
+          "output": 0.28
+        },
+        "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+        "family": "mimo",
+        "id": "mimo-v2.6-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.6-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.0036,
+          "input": 0.435,
+          "output": 0.87
+        },
+        "description": "MiMo Pro model for multimodal coding agents and long-context automation",
+        "family": "mimo",
+        "id": "mimo-v2.6-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.6-pro-ultraspeed": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.036,
+          "input": 4.35,
+          "output": 8.7
+        },
+        "description": "MiMo pro model for strong multimodal reasoning and agent execution",
+        "family": "mimo",
+        "id": "mimo-v2.6-pro-ultraspeed",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-21",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Pro-UltraSpeed",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-21",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Xiaomi",
@@ -313161,6 +314725,92 @@
         "reasoning": false,
         "release_date": "2026-04-22",
         "tool_call": false
+      },
+      "mimo-v2.6-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+        "family": "mimo",
+        "id": "mimo-v2.6-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.6-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+        "family": "mimo",
+        "id": "mimo-v2.6-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-22",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Xiaomi Token Plan (Europe)",
@@ -313407,6 +315057,92 @@
         "reasoning": false,
         "release_date": "2026-04-22",
         "tool_call": false
+      },
+      "mimo-v2.6-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+        "family": "mimo",
+        "id": "mimo-v2.6-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.6-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+        "family": "mimo",
+        "id": "mimo-v2.6-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-22",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Xiaomi Token Plan (China)",
@@ -313653,6 +315389,92 @@
         "reasoning": false,
         "release_date": "2026-04-22",
         "tool_call": false
+      },
+      "mimo-v2.6-flash": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+        "family": "mimo",
+        "id": "mimo-v2.6-flash",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-22",
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.6-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+        "family": "mimo",
+        "id": "mimo-v2.6-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-09-22",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo-V2.6-Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-09-22",
+        "temperature": true,
+        "tool_call": true
       }
     },
     "name": "Xiaomi Token Plan (Singapore)",
