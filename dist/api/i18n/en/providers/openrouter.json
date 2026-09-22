@@ -19,7 +19,7 @@
       "id": "aion-labs/aion-2.0",
       "last_updated": "2026-02-23",
       "limit": {
-        "context": 1048576,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -50,7 +50,7 @@
       "id": "aion-labs/aion-3.0",
       "last_updated": "2026-07-07",
       "limit": {
-        "context": 1048576,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -81,7 +81,7 @@
       "id": "aion-labs/aion-3.0-mini",
       "last_updated": "2026-07-07",
       "limit": {
-        "context": 1048576,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -809,6 +809,53 @@
         }
       ],
       "release_date": "2026-07-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "anthropic/claude-opus-5.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 5,
+        "input": 4,
+        "output": 20
+      },
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-5.5",
+      "knowledge": "2026-06",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 5.5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -2085,9 +2132,9 @@
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.078025,
-        "input": 0.936294,
-        "output": 1.872588
+        "cache_read": 0.073936,
+        "input": 0.887226,
+        "output": 1.774452
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2176,9 +2223,9 @@
     "deepseek/deepseek-v4.1-flash": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.003,
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.1,
+        "input": 0.1,
+        "output": 0.8
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -2187,7 +2234,7 @@
       "last_updated": "2026-09-10",
       "limit": {
         "context": 1048576,
-        "output": 384000
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -8688,6 +8735,270 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-6-luna": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "context_over_200k": {
+          "cache_read": 0.02,
+          "cache_write": 0.25,
+          "input": 0.2,
+          "output": 0.75
+        },
+        "input": 0.1,
+        "output": 0.5,
+        "tiers": [
+          {
+            "cache_read": 0.02,
+            "cache_write": 0.25,
+            "input": 0.2,
+            "output": 0.75,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+      "family": "gpt-luna",
+      "id": "openai/gpt-6-luna",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Luna",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6-luna-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "context_over_200k": {
+          "cache_read": 0.02,
+          "cache_write": 0.25,
+          "input": 0.2,
+          "output": 0.75
+        },
+        "input": 0.1,
+        "output": 0.5,
+        "tiers": [
+          {
+            "cache_read": 0.02,
+            "cache_write": 0.25,
+            "input": 0.2,
+            "output": 0.75,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+      "family": "gpt",
+      "id": "openai/gpt-6-luna-pro",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Luna Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6-sol": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
+        },
+        "input": 2,
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+      "family": "gpt-sol",
+      "id": "openai/gpt-6-sol",
+      "knowledge": "2026-04-20",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Sol",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6-sol-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
+        },
+        "input": 2,
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+      "family": "gpt",
+      "id": "openai/gpt-6-sol-pro",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Sol Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-audio": {
       "attachment": true,
       "cost": {
@@ -11208,9 +11519,9 @@
     "qwen/qwen3.6-27b": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.3,
-        "output": 2
+        "cache_read": 0.15,
+        "input": 0.32,
+        "output": 2.7
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -11218,7 +11529,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 262140
       },
       "modalities": {
         "input": [
@@ -11813,6 +12124,48 @@
         }
       ],
       "release_date": "2026-09-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.8-omni-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.016,
+        "input": 0.15,
+        "output": 0.47
+      },
+      "description": "Qwen omni model for text, vision, audio, and multimodal agent tasks",
+      "family": "qwen",
+      "id": "qwen/qwen3.8-omni-flash",
+      "last_updated": "2026-09-17",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Omni Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-09-17",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -12439,9 +12792,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -14347,10 +14700,10 @@
     "~anthropic/claude-opus-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.5,
-        "cache_write": 6.25,
-        "input": 5,
-        "output": 25
+        "cache_read": 0.2,
+        "cache_write": 5,
+        "input": 4,
+        "output": 20
       },
       "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
@@ -14374,9 +14727,6 @@
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
-        {
-          "type": "toggle"
-        },
         {
           "type": "effort",
           "values": [
@@ -14446,9 +14796,9 @@
     "~deepseek/deepseek-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0036,
-        "input": 0.12,
-        "output": 0.48
+        "cache_read": 0.1,
+        "input": 0.1,
+        "output": 0.8
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -14491,9 +14841,9 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.019052,
-        "input": 0.57156,
-        "output": 1.71468
+        "cache_read": 0.012726,
+        "input": 0.39996,
+        "output": 1.19988
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek",
@@ -14501,7 +14851,7 @@
       "last_updated": "2026-09-14",
       "limit": {
         "context": 1048576,
-        "output": 384000
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -14537,7 +14887,7 @@
       "cost": {
         "cache_read": 0.008,
         "input": 0.03,
-        "output": 1
+        "output": 0.8
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek",
@@ -14691,9 +15041,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.15,
-        "input": 1.5,
-        "output": 7.5
+        "cache_read": 0.3,
+        "input": 1.4989,
+        "output": 10.758
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -14801,22 +15151,22 @@
     "~openai/gpt-luna-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.02,
-        "cache_write": 0.25,
+        "cache_read": 0.01,
+        "cache_write": 0.125,
         "context_over_200k": {
-          "cache_read": 0.04,
-          "cache_write": 0.5,
-          "input": 0.4,
-          "output": 1.8
+          "cache_read": 0.02,
+          "cache_write": 0.25,
+          "input": 0.2,
+          "output": 0.75
         },
-        "input": 0.2,
-        "output": 1.2,
+        "input": 0.1,
+        "output": 0.5,
         "tiers": [
           {
-            "cache_read": 0.04,
-            "cache_write": 0.5,
-            "input": 0.4,
-            "output": 1.8,
+            "cache_read": 0.02,
+            "cache_write": 0.25,
+            "input": 0.2,
+            "output": 0.75,
             "tier": {
               "size": 272000,
               "type": "context"

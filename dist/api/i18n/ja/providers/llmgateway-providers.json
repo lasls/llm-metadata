@@ -1650,6 +1650,53 @@
       "temperature": false,
       "tool_call": true
     },
+    "anthropic/claude-opus-5-5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 5,
+        "input": 4,
+        "output": 20
+      },
+      "description": "Claude model for long-running agentic coding and knowledge work",
+      "family": "claude-opus",
+      "id": "anthropic/claude-opus-5-5",
+      "knowledge": "2026-06",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 5.5 (Anthropic)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "anthropic/claude-sonnet-4-5": {
       "attachment": true,
       "cost": {
@@ -6487,6 +6534,48 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepinfra/glm-5.3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1.2,
+        "output": 4
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "deepinfra/glm-5.3",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 (DeepInfra)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepinfra/hy3": {
       "attachment": false,
       "cost": {
@@ -6525,6 +6614,100 @@
         }
       ],
       "release_date": "2026-07-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepinfra/inkling": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.16,
+        "input": 0.95,
+        "output": 4.05
+      },
+      "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
+      "family": "ling",
+      "id": "deepinfra/inkling",
+      "last_updated": "2026-07-15",
+      "limit": {
+        "context": 524288,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling (DeepInfra)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-15",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
+    "deepinfra/inkling-small": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.45,
+        "output": 1.2
+      },
+      "description": "Multimodal MoE reasoning model (276B total, 12B active) for text, image, and audio",
+      "family": "ling",
+      "id": "deepinfra/inkling-small",
+      "last_updated": "2026-07-30",
+      "limit": {
+        "context": 524288,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling Small (DeepInfra)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-30",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -6698,6 +6881,52 @@
       "temperature": true,
       "tool_call": false
     },
+    "deepinfra/muse-glimmer-30b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.04,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Muse Glimmer is a 30-billion-parameter open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark for always-on local agents, tool use, coding, and image understanding.",
+      "family": "muse",
+      "id": "deepinfra/muse-glimmer-30b",
+      "knowledge": "2026-01-04",
+      "last_updated": "2026-08-10",
+      "limit": {
+        "context": 131072,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Muse Glimmer 30B (DeepInfra)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepinfra/nemotron-3-ultra-550b": {
       "attachment": true,
       "cost": {
@@ -6727,6 +6956,47 @@
       "reasoning": false,
       "release_date": "2026-06-01",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepinfra/nemotron-3.5-lightning": {
+      "attachment": false,
+      "cost": {
+        "input": 0.08,
+        "output": 0.2
+      },
+      "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
+      "family": "nemotron",
+      "id": "deepinfra/nemotron-3.5-lightning",
+      "last_updated": "2026-08-11",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Lightning (DeepInfra)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-08-11",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -6820,6 +7090,140 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-02-23",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepinfra/qwen3.8-2.4t-a95b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 2,
+        "output": 6
+      },
+      "description": "Open-weight sparse MoE (2.4T total, 95B active), the open-weight twin of Qwen3.8 Max for coding, research, complex reasoning, and agentic workflows",
+      "family": "qwen",
+      "id": "deepinfra/qwen3.8-2.4t-a95b",
+      "last_updated": "2026-08-12",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 2.4T A95B (DeepInfra)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepinfra/qwen3.8-27b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.2,
+        "output": 2.5
+      },
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+      "family": "qwen",
+      "id": "deepinfra/qwen3.8-27b",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B (DeepInfra)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepinfra/step-3.7-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.04,
+        "input": 0.2,
+        "output": 1.15
+      },
+      "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
+      "id": "deepinfra/step-3.7-flash",
+      "knowledge": "2026-03-01",
+      "last_updated": "2026-05-29",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 3.7 Flash (DeepInfra)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-05-29",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -11642,6 +12046,51 @@
       "temperature": true,
       "tool_call": true
     },
+    "novita/qwen3.8-2.4t-a95b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2,
+        "output": 6
+      },
+      "description": "Open-weight sparse MoE (2.4T total, 95B active), the open-weight twin of Qwen3.8 Max for coding, research, complex reasoning, and agentic workflows",
+      "family": "qwen",
+      "id": "novita/qwen3.8-2.4t-a95b",
+      "last_updated": "2026-08-12",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 2.4T A95B (NovitaAI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "novita/qwen3.8-27b": {
       "attachment": false,
       "cost": {
@@ -11806,6 +12255,52 @@
         }
       ],
       "release_date": "2026-02-16",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "novita/step-3.7-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.04,
+        "input": 0.2,
+        "output": 1.15
+      },
+      "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
+      "id": "novita/step-3.7-flash",
+      "knowledge": "2026-03-01",
+      "last_updated": "2026-05-29",
+      "limit": {
+        "context": 262144,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 3.7 Flash (NovitaAI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-05-29",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -12983,6 +13478,104 @@
         }
       ],
       "release_date": "2026-09-03",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6-luna": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.5
+      },
+      "description": "OpenAI's most efficient model for focused, high-volume tasks",
+      "family": "gpt-luna",
+      "id": "openai/gpt-6-luna",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Luna (OpenAI)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6-sol": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "description": "OpenAI model for complex coding and agentic workflows",
+      "family": "gpt-sol",
+      "id": "openai/gpt-6-sol",
+      "knowledge": "2026-04-20",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Sol (OpenAI)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -15464,6 +16057,96 @@
       "temperature": true,
       "tool_call": false
     },
+    "together-ai/glm-5.3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "together-ai/glm-5.3",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1048576,
+        "output": 943717
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 (Together AI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "together-ai/glm-5.3-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "together-ai/glm-5.3-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1048576,
+        "output": 943717
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 Flash (Together AI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "together-ai/gpt-oss-120b": {
       "attachment": false,
       "cost": {
@@ -15501,6 +16184,53 @@
       ],
       "release_date": "2025-08-05",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "together-ai/inkling": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.17,
+        "input": 1,
+        "output": 4.05
+      },
+      "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
+      "family": "ling",
+      "id": "together-ai/inkling",
+      "last_updated": "2026-07-15",
+      "limit": {
+        "context": 524288,
+        "output": 471859
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling (Together AI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-15",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -15577,6 +16307,94 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "together-ai/muse-glimmer-30b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.04,
+        "input": 0.35,
+        "output": 1.5
+      },
+      "description": "Muse Glimmer is a 30-billion-parameter open-weight multimodal model from Meta Superintelligence Labs, distilled from Muse Spark for always-on local agents, tool use, coding, and image understanding.",
+      "family": "muse",
+      "id": "together-ai/muse-glimmer-30b",
+      "knowledge": "2026-01-04",
+      "last_updated": "2026-08-10",
+      "limit": {
+        "context": 131072,
+        "output": 117964
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Muse Glimmer 30B (Together AI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "together-ai/qwen3.8-2.4t-a95b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2,
+        "output": 6
+      },
+      "description": "Open-weight sparse MoE (2.4T total, 95B active), the open-weight twin of Qwen3.8 Max for coding, research, complex reasoning, and agentic workflows",
+      "family": "qwen",
+      "id": "together-ai/qwen3.8-2.4t-a95b",
+      "last_updated": "2026-08-12",
+      "limit": {
+        "context": 1010000,
+        "output": 909000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 2.4T A95B (Together AI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "vertex-anthropic/claude-haiku-4-5": {
       "attachment": true,
