@@ -30365,7 +30365,7 @@
         "knowledge": "2025-08-31",
         "last_updated": "2026-06-01",
         "limit": {
-          "context": 272000,
+          "context": 1000000,
           "output": 128000
         },
         "modalities": {
@@ -39617,9 +39617,9 @@
         "knowledge": "2025-12-01",
         "last_updated": "2026-05-28",
         "limit": {
-          "context": 128000,
-          "input": 111616,
-          "output": 16384
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -43092,9 +43092,9 @@
         "knowledge": "2025-12-01",
         "last_updated": "2026-05-28",
         "limit": {
-          "context": 128000,
-          "input": 111616,
-          "output": 16384
+          "context": 400000,
+          "input": 272000,
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -123429,9 +123429,9 @@
       "inclusionai/ling-3.0-flash-vl": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.012,
-          "input": 0.06,
-          "output": 0.18
+          "cache_read": 0.015,
+          "input": 0.075,
+          "output": 0.22
         },
         "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
         "family": "ling",
@@ -123465,47 +123465,6 @@
         ],
         "release_date": "2026-09-10",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "inclusionai/ling-3.0-flash-vl:free": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
-        "family": "ling",
-        "id": "inclusionai/ling-3.0-flash-vl:free",
-        "last_updated": "2026-09-10",
-        "limit": {
-          "context": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "inclusionAI: Ling 3.0 Flash VL (free)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-09-10",
-        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -124795,39 +124754,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-08-01",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "mistralai/devstral-2512": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.04,
-          "input": 0.4,
-          "output": 2
-        },
-        "description": "Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing in agentic coding. It is a 123B-parameter dense transformer model supporting a 256K context window. Devstral 2 supports exploring...",
-        "family": "devstral",
-        "id": "mistralai/devstral-2512",
-        "knowledge": "2025-12",
-        "last_updated": "2025-12-09",
-        "limit": {
-          "context": 262144,
-          "output": 209715
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Devstral 2",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-12-09",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -131455,6 +131381,51 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen/qwen3.8-max-prime": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 4,
+          "output": 12
+        },
+        "description": "Qwen3.8 Max Prime is a higher-throughput variant of Qwen3.8 Max from Alibaba's Qwen team, served as a separate SKU at a higher price point. It accepts text, image, and video...",
+        "family": "qwen3.8-max",
+        "id": "qwen/qwen3.8-max-prime",
+        "last_updated": "2026-09-23",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen: Qwen3.8 Max Prime",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-09-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen/qwen3.8-omni-flash": {
         "attachment": true,
         "cost": {
@@ -132124,6 +132095,50 @@
         "temperature": true,
         "tool_call": true
       },
+      "stealth/space-bunny-alpha": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Space Bunny Alpha is an anonymous large model with blazing-fast inference, strong coding capabilities and native multimodal input support. It delivers adjustable reasoning effort, and a 1M-token context window. Space...",
+        "family": "alpha",
+        "id": "stealth/space-bunny-alpha",
+        "last_updated": "2026-09-23",
+        "limit": {
+          "context": 1000000,
+          "output": 524288
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Space Bunny Alpha",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-23",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "stepfun/step-3.5-flash": {
         "attachment": false,
         "cost": {
@@ -132381,9 +132396,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.033,
-          "input": 0.13,
-          "output": 0.53
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -134084,7 +134099,7 @@
       "z-ai/glm-5.3-flashx": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.075,
+          "cache_read": 0.09,
           "input": 0.37,
           "output": 1.25
         },
@@ -134395,9 +134410,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.012726,
-          "input": 0.39996,
-          "output": 1.19988
+          "cache_read": 0.012516,
+          "input": 0.39336,
+          "output": 1.18008
         },
         "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
         "family": "deepseek",
@@ -149048,6 +149063,104 @@
           }
         ],
         "release_date": "2026-09-04",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "azure/gpt-6-luna": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.01,
+          "cache_write": 0.125,
+          "input": 0.1,
+          "output": 0.5
+        },
+        "description": "OpenAI's most efficient model for focused, high-volume tasks",
+        "family": "gpt-luna",
+        "id": "azure/gpt-6-luna",
+        "knowledge": "2026-05-18",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-6 Luna (Azure)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "azure/gpt-6-sol": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 2.5,
+          "input": 2,
+          "output": 10
+        },
+        "description": "OpenAI model for complex coding and agentic workflows",
+        "family": "gpt-sol",
+        "id": "azure/gpt-6-sol",
+        "knowledge": "2026-04-20",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-6 Sol (Azure)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -181085,7 +181198,7 @@
         "reasoning_options": [],
         "release_date": "2026-09-23",
         "structured_output": false,
-        "tool_call": false
+        "tool_call": true
       },
       "aion-labs/aion-3.5-mini": {
         "attachment": false,
@@ -181116,7 +181229,7 @@
         "reasoning_options": [],
         "release_date": "2026-09-23",
         "structured_output": false,
-        "tool_call": false
+        "tool_call": true
       },
       "aion-labs/aion-rp-llama-3.1-8b": {
         "attachment": false,
@@ -228234,6 +228347,76 @@
         "temperature": false,
         "tool_call": true
       },
+      "gpt-6-luna": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.01,
+          "cache_write": 0.125,
+          "context_over_200k": {
+            "cache_read": 0.02,
+            "cache_write": 0.25,
+            "input": 0.2,
+            "output": 0.75
+          },
+          "input": 0.1,
+          "output": 0.5,
+          "tiers": [
+            {
+              "cache_read": 0.02,
+              "cache_write": 0.25,
+              "input": 0.2,
+              "output": 0.75,
+              "tier": {
+                "size": 272000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "OpenAI's most efficient model for focused, high-volume tasks",
+        "family": "gpt-luna",
+        "id": "gpt-6-luna",
+        "knowledge": "2026-05-18",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1050000,
+          "input": 922000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GPT-6 Luna",
+        "open_weights": false,
+        "provider": {
+          "npm": "@ai-sdk/openai"
+        },
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "grok-4.5": {
         "attachment": true,
         "cost": {
@@ -231874,9 +232057,9 @@
       "deepseek/deepseek-v4-flash": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.016492,
-          "input": 0.08246,
-          "output": 0.16492
+          "cache_read": 0.015568,
+          "input": 0.07784,
+          "output": 0.15568
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
         "family": "deepseek-flash",
@@ -232011,9 +232194,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.079431,
-          "input": 0.953172,
-          "output": 1.906344
+          "cache_read": 0.078866,
+          "input": 0.946386,
+          "output": 1.892772
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -233847,7 +234030,7 @@
         "id": "inclusionai/ling-3.0-flash-vl",
         "last_updated": "2026-09-10",
         "limit": {
-          "context": 131072,
+          "context": 262144,
           "output": 32768
         },
         "modalities": {
@@ -233870,43 +234053,6 @@
         ],
         "release_date": "2026-09-10",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "inclusionai/ling-3.0-flash-vl:free": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
-        "family": "ling",
-        "id": "inclusionai/ling-3.0-flash-vl:free",
-        "last_updated": "2026-09-10",
-        "limit": {
-          "context": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Ling 3.0 Flash VL (free)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-09-10",
-        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -234998,39 +235144,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-08-01",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "mistralai/devstral-2512": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.04,
-          "input": 0.4,
-          "output": 2
-        },
-        "description": "Mistral coding agent model for repository tasks and software engineering workflows",
-        "family": "devstral",
-        "id": "mistralai/devstral-2512",
-        "knowledge": "2025-12",
-        "last_updated": "2025-12-09",
-        "limit": {
-          "context": 262144,
-          "output": 209715
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Devstral 2",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-12-09",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -242007,6 +242120,51 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen/qwen3.8-max-prime": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.5,
+          "input": 4,
+          "output": 12
+        },
+        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+        "family": "qwen3.8-max",
+        "id": "qwen/qwen3.8-max-prime",
+        "last_updated": "2026-09-23",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 Max Prime",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-09-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen/qwen3.8-omni-flash": {
         "attachment": true,
         "cost": {
@@ -242467,6 +242625,50 @@
         "temperature": true,
         "tool_call": false
       },
+      "stealth/space-bunny-alpha": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+        "family": "alpha",
+        "id": "stealth/space-bunny-alpha",
+        "last_updated": "2026-09-23",
+        "limit": {
+          "context": 1000000,
+          "output": 524288
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Space Bunny Alpha",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-23",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "stepfun/step-3.5-flash": {
         "attachment": false,
         "cost": {
@@ -242671,9 +242873,9 @@
       "tencent/hy3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.033,
-          "input": 0.132,
-          "output": 0.528
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -244456,7 +244658,7 @@
       "z-ai/glm-5.3-flashx": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.075,
+          "cache_read": 0.09,
           "input": 0.37,
           "output": 1.25
         },
@@ -244763,9 +244965,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.012726,
-          "input": 0.39996,
-          "output": 1.19988
+          "cache_read": 0.012516,
+          "input": 0.39336,
+          "output": 1.18008
         },
         "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
         "family": "deepseek",
@@ -296325,16 +296527,7 @@
         "name": "Aion 3.0",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
+        "reasoning_options": [],
         "release_date": "2026-07-08",
         "structured_output": true,
         "tool_call": true
@@ -296364,17 +296557,68 @@
         "name": "Aion 3.0 Mini",
         "open_weights": false,
         "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
+        "reasoning_options": [],
         "release_date": "2026-07-08",
+        "structured_output": true,
+        "tool_call": true
+      },
+      "aion-labs-aion-3-5": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.9375,
+          "input": 3.75,
+          "output": 7.5
+        },
+        "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+        "id": "aion-labs-aion-3-5",
+        "last_updated": "2026-09-23",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Aion 3.5",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-09-23",
+        "structured_output": true,
+        "tool_call": true
+      },
+      "aion-labs-aion-3-5-mini": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.225,
+          "input": 0.875,
+          "output": 1.75
+        },
+        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+        "id": "aion-labs-aion-3-5-mini",
+        "last_updated": "2026-09-23",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Aion 3.5 Mini",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-09-23",
         "structured_output": true,
         "tool_call": true
       },
@@ -305924,6 +306168,64 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemini-3.8-flash-lite-tts": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 0.5,
+          "output": 6
+        },
+        "description": "Speech generation model for controllable voice, narration, and audio delivery",
+        "family": "gemini",
+        "id": "google/gemini-3.8-flash-lite-tts",
+        "last_updated": "2026-09-23",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "Gemini 3.8 Flash-Lite TTS",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-09-23",
+        "tool_call": false
+      },
+      "google/gemini-3.8-flash-tts": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.125,
+          "input": 0.5,
+          "output": 9
+        },
+        "description": "Speech generation model for controllable voice, narration, and audio delivery",
+        "family": "gemini",
+        "id": "google/gemini-3.8-flash-tts",
+        "last_updated": "2026-09-23",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "audio"
+          ]
+        },
+        "name": "Gemini 3.8 Flash TTS",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-09-23",
+        "tool_call": false
+      },
       "google/gemini-3.8-live": {
         "attachment": false,
         "cost": {
@@ -306574,8 +306876,9 @@
       "inclusionai/ling-3.0-flash-vl": {
         "attachment": true,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.015,
+          "input": 0.075,
+          "output": 0.22
         },
         "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
         "family": "ling",
@@ -306595,40 +306898,6 @@
           ]
         },
         "name": "Ling 3.0 Flash VL",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2026-09-08",
-        "tool_call": true
-      },
-      "inclusionai/ling-3.0-flash-vl-free": {
-        "attachment": true,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
-        "family": "ling",
-        "id": "inclusionai/ling-3.0-flash-vl-free",
-        "last_updated": "2026-09-08",
-        "limit": {
-          "context": 256000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Ling 3.0 Flash VL (Free)",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -312592,6 +312861,30 @@
         "reasoning": false,
         "release_date": "2026-05-14",
         "temperature": true,
+        "tool_call": false
+      },
+      "recraft/recraft-v4.1-flash": {
+        "attachment": false,
+        "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+        "family": "recraft",
+        "id": "recraft/recraft-v4.1-flash",
+        "last_updated": "2026-09-23",
+        "limit": {
+          "context": 0,
+          "output": 0
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "image"
+          ]
+        },
+        "name": "Recraft V4.1 Flash",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-09-23",
         "tool_call": false
       },
       "recraft/recraft-v4.1-pro": {

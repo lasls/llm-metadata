@@ -2112,9 +2112,9 @@
     "deepseek/deepseek-v4-flash": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.016492,
-        "input": 0.08246,
-        "output": 0.16492
+        "cache_read": 0.015568,
+        "input": 0.07784,
+        "output": 0.15568
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -2249,9 +2249,9 @@
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.079431,
-        "input": 0.953172,
-        "output": 1.906344
+        "cache_read": 0.078866,
+        "input": 0.946386,
+        "output": 1.892772
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -4085,7 +4085,7 @@
       "id": "inclusionai/ling-3.0-flash-vl",
       "last_updated": "2026-09-10",
       "limit": {
-        "context": 131072,
+        "context": 262144,
         "output": 32768
       },
       "modalities": {
@@ -4108,43 +4108,6 @@
       ],
       "release_date": "2026-09-10",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "inclusionai/ling-3.0-flash-vl:free": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
-      "family": "ling",
-      "id": "inclusionai/ling-3.0-flash-vl:free",
-      "last_updated": "2026-09-10",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Ling 3.0 Flash VL (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-09-10",
-      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -5236,39 +5199,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-08-01",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistralai/devstral-2512": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.04,
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "Mistral coding agent model for repository tasks and software engineering workflows",
-      "family": "devstral",
-      "id": "mistralai/devstral-2512",
-      "knowledge": "2025-12",
-      "last_updated": "2025-12-09",
-      "limit": {
-        "context": 262144,
-        "output": 209715
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral 2",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-09",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -12245,6 +12175,51 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3.8-max-prime": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 4,
+        "output": 12
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen3.8-max",
+      "id": "qwen/qwen3.8-max-prime",
+      "last_updated": "2026-09-23",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Max Prime",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen/qwen3.8-omni-flash": {
       "attachment": true,
       "cost": {
@@ -12705,6 +12680,50 @@
       "temperature": true,
       "tool_call": false
     },
+    "stealth/space-bunny-alpha": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "family": "alpha",
+      "id": "stealth/space-bunny-alpha",
+      "last_updated": "2026-09-23",
+      "limit": {
+        "context": 1000000,
+        "output": 524288
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Space Bunny Alpha",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-23",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "stepfun/step-3.5-flash": {
       "attachment": false,
       "cost": {
@@ -12909,9 +12928,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -14694,7 +14713,7 @@
     "z-ai/glm-5.3-flashx": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.075,
+        "cache_read": 0.09,
         "input": 0.37,
         "output": 1.25
       },
@@ -15001,9 +15020,9 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.012726,
-        "input": 0.39996,
-        "output": 1.19988
+        "cache_read": 0.012516,
+        "input": 0.39336,
+        "output": 1.18008
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek",

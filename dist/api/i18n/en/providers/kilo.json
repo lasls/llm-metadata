@@ -3884,9 +3884,9 @@
     "inclusionai/ling-3.0-flash-vl": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.012,
-        "input": 0.06,
-        "output": 0.18
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.22
       },
       "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
       "family": "ling",
@@ -3920,47 +3920,6 @@
       ],
       "release_date": "2026-09-10",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "inclusionai/ling-3.0-flash-vl:free": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
-      "family": "ling",
-      "id": "inclusionai/ling-3.0-flash-vl:free",
-      "last_updated": "2026-09-10",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "inclusionAI: Ling 3.0 Flash VL (free)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-09-10",
-      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -5250,39 +5209,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-08-01",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistralai/devstral-2512": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.04,
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "Devstral 2 is a state-of-the-art open-source model by Mistral AI specializing in agentic coding. It is a 123B-parameter dense transformer model supporting a 256K context window. Devstral 2 supports exploring...",
-      "family": "devstral",
-      "id": "mistralai/devstral-2512",
-      "knowledge": "2025-12",
-      "last_updated": "2025-12-09",
-      "limit": {
-        "context": 262144,
-        "output": 209715
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Devstral 2",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-12-09",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -11910,6 +11836,51 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3.8-max-prime": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 4,
+        "output": 12
+      },
+      "description": "Qwen3.8 Max Prime is a higher-throughput variant of Qwen3.8 Max from Alibaba's Qwen team, served as a separate SKU at a higher price point. It accepts text, image, and video...",
+      "family": "qwen3.8-max",
+      "id": "qwen/qwen3.8-max-prime",
+      "last_updated": "2026-09-23",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen3.8 Max Prime",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen/qwen3.8-omni-flash": {
       "attachment": true,
       "cost": {
@@ -12579,6 +12550,50 @@
       "temperature": true,
       "tool_call": true
     },
+    "stealth/space-bunny-alpha": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Space Bunny Alpha is an anonymous large model with blazing-fast inference, strong coding capabilities and native multimodal input support. It delivers adjustable reasoning effort, and a 1M-token context window. Space...",
+      "family": "alpha",
+      "id": "stealth/space-bunny-alpha",
+      "last_updated": "2026-09-23",
+      "limit": {
+        "context": 1000000,
+        "output": 524288
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Space Bunny Alpha",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-23",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "stepfun/step-3.5-flash": {
       "attachment": false,
       "cost": {
@@ -12836,9 +12851,9 @@
     "tencent/hy3": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.13,
-        "output": 0.53
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
@@ -14539,7 +14554,7 @@
     "z-ai/glm-5.3-flashx": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.075,
+        "cache_read": 0.09,
         "input": 0.37,
         "output": 1.25
       },
@@ -14850,9 +14865,9 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.012726,
-        "input": 0.39996,
-        "output": 1.19988
+        "cache_read": 0.012516,
+        "input": 0.39336,
+        "output": 1.18008
       },
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "family": "deepseek",
