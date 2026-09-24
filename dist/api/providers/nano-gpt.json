@@ -6443,9 +6443,9 @@
     "deepseek/deepseek-v4-flash-vision-exp": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.007,
-        "input": 0.22,
-        "output": 0.66
+        "cache_read": 0.014,
+        "input": 0.44,
+        "output": 1.32
       },
       "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
       "family": "deepseek-flash",
@@ -14824,10 +14824,10 @@
     "openai/gpt-6-luna": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.005,
-        "cache_write": 0.0625,
-        "input": 0.05,
-        "output": 0.25
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.5
       },
       "description": "OpenAI's most efficient model for focused, high-volume tasks",
       "family": "gpt-luna",
@@ -14873,10 +14873,10 @@
     "openai/gpt-6-luna-pro": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.005,
-        "cache_write": 0.0625,
-        "input": 0.05,
-        "output": 0.25
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.5
       },
       "description": "GPT-6 Luna Pro uses the same underlying model as GPT-6 Luna with Pro reasoning mode enabled for higher-quality responses on complex tasks.",
       "family": "gpt",
@@ -18409,6 +18409,52 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3.8-max-prime": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.5,
+        "input": 4,
+        "output": 12
+      },
+      "description": "High-throughput edition of Qwen3.8 Max for coding, professional work, multimodal understanding, and long-running agent workflows",
+      "family": "qwen3.8-max",
+      "id": "qwen/qwen3.8-max-prime",
+      "last_updated": "2026-09-23",
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Max Prime",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen/qwen3.8-max:thinking": {
       "attachment": true,
       "cost": {
@@ -18854,6 +18900,50 @@
       "release_date": "2025-05-23",
       "structured_output": false,
       "tool_call": false
+    },
+    "stealth/space-bunny-alpha": {
+      "attachment": true,
+      "cost": {
+        "input": 0.05,
+        "output": 0.15
+      },
+      "description": "Space Bunny Alpha is an anonymous stealth preview model for coding and multimodal tasks. It accepts text, images, and video, supports tool calling and structured output, and always reasons with adjustable effort across a 1M-token context window.",
+      "family": "alpha",
+      "id": "stealth/space-bunny-alpha",
+      "last_updated": "2026-09-23",
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 524288
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Space Bunny Alpha",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-23",
+      "structured_output": true,
+      "tool_call": true
     },
     "stepfun-ai/step-3.5-flash": {
       "attachment": false,

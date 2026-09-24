@@ -2954,7 +2954,7 @@
       "last_updated": "2026-07-16",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -3457,7 +3457,7 @@
       "knowledge": "2024-08",
       "last_updated": "2025-03-12",
       "limit": {
-        "context": 202752,
+        "context": 131072,
         "output": 8192
       },
       "modalities": {
@@ -4409,7 +4409,7 @@
       "interleaved": true,
       "last_updated": "2025-12-23",
       "limit": {
-        "context": 204800,
+        "context": 196608,
         "output": 131072
       },
       "modalities": {
@@ -4473,7 +4473,7 @@
       "knowledge": "2025-12",
       "last_updated": "2025-12-09",
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 8192
       },
       "modalities": {
@@ -4629,7 +4629,7 @@
       "knowledge": "2024-11",
       "last_updated": "2025-12-02",
       "limit": {
-        "context": 256000,
+        "context": 262144,
         "output": 8192
       },
       "modalities": {
@@ -4754,7 +4754,7 @@
       "knowledge": "2024-08",
       "last_updated": "2025-12-02",
       "limit": {
-        "context": 262143,
+        "context": 262144,
         "output": 16000
       },
       "modalities": {
@@ -4787,7 +4787,7 @@
       "knowledge": "2025-01",
       "last_updated": "2026-02-06",
       "limit": {
-        "context": 262143,
+        "context": 262144,
         "output": 16384
       },
       "modalities": {
@@ -4823,7 +4823,7 @@
       "id": "nvidia.nemotron-nano-12b-v2",
       "last_updated": "2025-10-28",
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 8192
       },
       "modalities": {
@@ -4999,7 +4999,7 @@
       "knowledge": "2025-12-01",
       "last_updated": "2026-06-01",
       "limit": {
-        "context": 272000,
+        "context": 1000000,
         "output": 128000
       },
       "modalities": {
@@ -5324,6 +5324,150 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai.gpt-6-luna": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.011,
+        "cache_write": 0.1375,
+        "context_over_200k": {
+          "cache_read": 0.022,
+          "cache_write": 0.275,
+          "input": 0.22,
+          "output": 0.825
+        },
+        "input": 0.11,
+        "output": 0.55,
+        "tiers": [
+          {
+            "cache_read": 0.022,
+            "cache_write": 0.275,
+            "input": 0.22,
+            "output": 0.825,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "OpenAI's most efficient model for focused, high-volume tasks",
+      "family": "gpt-luna",
+      "id": "openai.gpt-6-luna",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Luna",
+      "open_weights": false,
+      "provider": {
+        "api": "https://bedrock-mantle.${AWS_REGION}.api.aws/openai/v1",
+        "npm": "@ai-sdk/amazon-bedrock/mantle",
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai.gpt-6-sol": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.22,
+        "cache_write": 2.75,
+        "context_over_200k": {
+          "cache_read": 0.44,
+          "cache_write": 5.5,
+          "input": 4.4,
+          "output": 16.5
+        },
+        "input": 2.2,
+        "output": 11,
+        "tiers": [
+          {
+            "cache_read": 0.44,
+            "cache_write": 5.5,
+            "input": 4.4,
+            "output": 16.5,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "OpenAI model for complex coding and agentic workflows",
+      "family": "gpt-sol",
+      "id": "openai.gpt-6-sol",
+      "knowledge": "2026-04-20",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Sol",
+      "open_weights": false,
+      "provider": {
+        "api": "https://bedrock-mantle.${AWS_REGION}.api.aws/openai/v1",
+        "npm": "@ai-sdk/amazon-bedrock/mantle",
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai.gpt-oss-120b": {
       "attachment": false,
       "cost": {
@@ -5335,8 +5479,8 @@
       "id": "openai.gpt-oss-120b",
       "last_updated": "2025-08-05",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 131072,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -5380,8 +5524,8 @@
       "id": "openai.gpt-oss-120b-1:0",
       "last_updated": "2025-08-05",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 131072,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -5420,8 +5564,8 @@
       "id": "openai.gpt-oss-20b",
       "last_updated": "2025-08-05",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 131072,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -5465,8 +5609,8 @@
       "id": "openai.gpt-oss-20b-1:0",
       "last_updated": "2025-08-05",
       "limit": {
-        "context": 128000,
-        "output": 16384
+        "context": 131072,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -6961,7 +7105,7 @@
       "last_updated": "2026-07-16",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -7652,7 +7796,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
-        "context": 204800,
+        "context": 202752,
         "output": 131072
       },
       "modalities": {
@@ -7689,7 +7833,7 @@
       "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
-        "context": 200000,
+        "context": 202752,
         "output": 131072
       },
       "modalities": {
