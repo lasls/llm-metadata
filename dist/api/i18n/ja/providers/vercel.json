@@ -68,7 +68,17 @@
       "name": "Qwen3 235B A22B Instruct 2507",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-04-28",
       "temperature": true,
       "tool_call": true
@@ -849,7 +859,16 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
         },
         {
           "max": 81920,
@@ -912,7 +931,16 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
         },
         {
           "max": 81920,
@@ -1016,7 +1044,16 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
         },
         {
           "max": 131072,
@@ -1079,7 +1116,23 @@
       "name": "Qwen 3.7 Flash",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-07-15",
       "structured_output": true,
       "temperature": true,
@@ -1114,7 +1167,16 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
         },
         {
           "max": 262144,
@@ -1176,7 +1238,16 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
         },
         {
           "max": 262144,
@@ -1309,6 +1380,14 @@
           "type": "toggle"
         },
         {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        },
+        {
           "type": "budget_tokens"
         }
       ],
@@ -1344,6 +1423,9 @@
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
+        {
+          "type": "toggle"
+        },
         {
           "type": "effort",
           "values": [
@@ -1488,12 +1570,9 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "xhigh"
           ]
         }
       ],
@@ -1978,16 +2057,17 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
             "xhigh"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-06-09",
@@ -2028,12 +2108,15 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
-            "xhigh",
-            "max"
+            "xhigh"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-09-01",
@@ -2114,7 +2197,15 @@
       "name": "Claude Opus 4",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-05-22",
       "temperature": true,
       "tool_call": true
@@ -2152,10 +2243,15 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         },
         {
-          "min": 1024,
           "type": "budget_tokens"
         }
       ],
@@ -2196,18 +2292,16 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
-            "high"
+            "high",
+            "max"
           ]
         },
         {
-          "min": 1024,
           "type": "budget_tokens"
         }
       ],
@@ -2247,16 +2341,17 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
             "xhigh"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-04-16",
@@ -2295,16 +2390,17 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
             "xhigh"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-05-28",
@@ -2343,16 +2439,17 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
             "xhigh"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-05-28",
@@ -2393,12 +2490,15 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
-            "xhigh",
-            "max"
+            "xhigh"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-07-24",
@@ -2439,12 +2539,15 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
-            "xhigh",
-            "max"
+            "xhigh"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-07-24",
@@ -2591,7 +2694,15 @@
       "name": "Claude Sonnet 4",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-05-22",
       "temperature": true,
       "tool_call": true
@@ -2688,18 +2799,16 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
-            "high"
+            "high",
+            "max"
           ]
         },
         {
-          "min": 1024,
           "type": "budget_tokens"
         }
       ],
@@ -2739,16 +2848,17 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high",
             "xhigh"
           ]
+        },
+        {
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-06-30",
@@ -2759,12 +2869,12 @@
       "attachment": false,
       "cost": {
         "input": 0.25,
-        "output": 0.8999999999999999
+        "output": 0.9
       },
       "description": "Reasoning-optimized 398B MoE agent model with extended thinking for long-horizon and multi-turn tool use",
       "family": "trinity",
       "id": "arcee-ai/trinity-large-thinking",
-      "last_updated": "2026-04-03",
+      "last_updated": "2026-05-28",
       "limit": {
         "context": 262100,
         "output": 80000
@@ -2780,7 +2890,17 @@
       "name": "Trinity Large Thinking",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-01",
       "temperature": true,
       "tool_call": true
@@ -3196,12 +3316,9 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],
@@ -3670,7 +3787,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2025-08-21",
@@ -3706,7 +3829,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2025-09-22",
@@ -3771,7 +3900,17 @@
       "name": "DeepSeek V3.2 Thinking",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-12-01",
       "temperature": true,
       "tool_call": true
@@ -3805,13 +3944,12 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
-            "high",
-            "xhigh"
+            "none",
+            "low",
+            "medium",
+            "high"
           ]
         }
       ],
@@ -3847,7 +3985,17 @@
       "name": "DeepSeek V4 Flash 0731",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-07-31",
       "structured_output": true,
       "temperature": true,
@@ -3882,13 +4030,12 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
-            "high",
-            "xhigh"
+            "none",
+            "low",
+            "medium",
+            "high"
           ]
         }
       ],
@@ -3926,13 +4073,11 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
@@ -3969,13 +4114,11 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
@@ -4014,13 +4157,11 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
@@ -4232,11 +4373,15 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         },
         {
-          "max": 24576,
-          "min": 512,
           "type": "budget_tokens"
         }
       ],
@@ -4337,9 +4482,7 @@
         {
           "type": "effort",
           "values": [
-            "minimal",
             "low",
-            "medium",
             "high"
           ]
         }
@@ -4414,7 +4557,7 @@
         {
           "type": "effort",
           "values": [
-            "minimal",
+            "low",
             "high"
           ]
         }
@@ -4456,7 +4599,7 @@
         {
           "type": "effort",
           "values": [
-            "minimal",
+            "low",
             "high"
           ]
         }
@@ -4498,9 +4641,7 @@
         {
           "type": "effort",
           "values": [
-            "minimal",
             "low",
-            "medium",
             "high"
           ]
         }
@@ -4539,7 +4680,15 @@
       "name": "Gemini 3.1 Flash Lite Image (Nano Banana 2 Lite)",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-06-30",
       "structured_output": false,
       "temperature": true,
@@ -4595,7 +4744,6 @@
           "type": "effort",
           "values": [
             "low",
-            "medium",
             "high"
           ]
         }
@@ -4638,9 +4786,7 @@
         {
           "type": "effort",
           "values": [
-            "minimal",
             "low",
-            "medium",
             "high"
           ]
         }
@@ -4683,9 +4829,7 @@
         {
           "type": "effort",
           "values": [
-            "minimal",
             "low",
-            "medium",
             "high"
           ]
         }
@@ -4780,9 +4924,7 @@
         {
           "type": "effort",
           "values": [
-            "minimal",
             "low",
-            "medium",
             "high"
           ]
         }
@@ -4826,7 +4968,6 @@
           "type": "effort",
           "values": [
             "low",
-            "medium",
             "high"
           ]
         }
@@ -4864,7 +5005,15 @@
       "name": "Gemini 3.8 Flash",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-09-02",
       "structured_output": true,
       "temperature": true,
@@ -5067,7 +5216,17 @@
       "name": "Gemini Omni Flash Preview",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-06-30",
       "temperature": true,
       "tool_call": false
@@ -5447,7 +5606,11 @@
       "name": "Ling 3.0 Flash",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-08-06",
       "tool_call": true
     },
@@ -5542,7 +5705,17 @@
       "name": "Ling 3.0 Flash Sante",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-09-04",
       "tool_call": true
     },
@@ -5571,7 +5744,17 @@
       "name": "Ling 3.0 Flash Sante (Free)",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-09-04",
       "tool_call": true
     },
@@ -6090,10 +6273,10 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
-            "high",
-            "xhigh"
+            "high"
           ]
         }
       ],
@@ -6200,7 +6383,18 @@
       "name": "Muse Spark 1.2",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-08-05",
       "structured_output": true,
       "temperature": true,
@@ -6285,8 +6479,7 @@
             "low",
             "medium",
             "high",
-            "xhigh",
-            "max"
+            "xhigh"
           ]
         }
       ],
@@ -6400,7 +6593,6 @@
       "family": "minimax",
       "id": "minimax/minimax-m2",
       "interleaved": true,
-      "knowledge": "2024-10",
       "last_updated": "2025-10-27",
       "limit": {
         "context": 205000,
@@ -6417,7 +6609,11 @@
       "name": "MiniMax M2",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-10-27",
       "temperature": true,
       "tool_call": true
@@ -6450,7 +6646,11 @@
       "name": "MiniMax M2.1",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-12-23",
       "temperature": true,
       "tool_call": true
@@ -6483,7 +6683,11 @@
       "name": "MiniMax M2.1 Lightning",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-12-23",
       "temperature": true,
       "tool_call": true
@@ -6515,7 +6719,11 @@
       "name": "MiniMax M2.5",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-12",
       "temperature": true,
       "tool_call": true
@@ -6547,7 +6755,11 @@
       "name": "MiniMax M2.5 High Speed",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-02-13",
       "temperature": true,
       "tool_call": true
@@ -6579,7 +6791,11 @@
       "name": "Minimax M2.7",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-03-18",
       "temperature": true,
       "tool_call": true
@@ -6611,7 +6827,11 @@
       "name": "MiniMax M2.7 High Speed",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2026-03-18",
       "temperature": true,
       "tool_call": true
@@ -6646,7 +6866,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-06-01",
@@ -7045,7 +7265,17 @@
       "name": "Kimi K2 Thinking",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-11-06",
       "temperature": true,
       "tool_call": true
@@ -7155,7 +7385,17 @@
       "name": "Kimi K2.7 Code",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": true,
@@ -7190,7 +7430,17 @@
       "name": "Kimi K2.7 Code High Speed",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-06-12",
       "structured_output": true,
       "temperature": true,
@@ -7224,7 +7474,17 @@
       "name": "Kimi K3",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-07-16",
       "structured_output": true,
       "temperature": false,
@@ -7262,7 +7522,9 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
+            "medium",
             "high",
             "max"
           ]
@@ -7393,7 +7655,12 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-03-11",
@@ -7428,7 +7695,12 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-06-04",
@@ -8361,6 +8633,7 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high"
@@ -8406,10 +8679,10 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
-            "high",
-            "xhigh"
+            "high"
           ]
         }
       ],
@@ -8452,6 +8725,7 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high"
@@ -8487,8 +8761,7 @@
           "pdf"
         ],
         "output": [
-          "text",
-          "image"
+          "text"
         ]
       },
       "name": "GPT 5.1 Thinking",
@@ -8499,9 +8772,11 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
@@ -8538,7 +8813,19 @@
       "name": "GPT 5.1 Thinking (Fast)",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2025-11-12",
       "tool_call": true
     },
@@ -8552,7 +8839,7 @@
       "description": "Reliable GPT generation for broad coding, writing, and tool-assisted product work",
       "family": "gpt",
       "id": "openai/gpt-5.2",
-      "knowledge": "2024-10",
+      "knowledge": "2025-08-31",
       "last_updated": "2025-12-11",
       "limit": {
         "context": 400000,
@@ -8577,6 +8864,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -8623,10 +8911,10 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
-            "high",
-            "xhigh"
+            "high"
           ]
         }
       ],
@@ -8670,6 +8958,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -8760,6 +9049,8 @@
         {
           "type": "effort",
           "values": [
+            "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -8806,6 +9097,8 @@
         {
           "type": "effort",
           "values": [
+            "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -8869,6 +9162,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -8916,6 +9210,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -8963,6 +9258,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -9010,6 +9306,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -9057,6 +9354,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -9116,6 +9414,9 @@
         {
           "type": "effort",
           "values": [
+            "none",
+            "minimal",
+            "low",
             "medium",
             "high",
             "xhigh"
@@ -9178,6 +9479,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -9225,6 +9527,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -9483,6 +9786,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -9550,6 +9854,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -9617,6 +9922,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -9684,6 +9990,7 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
             "high",
@@ -9750,7 +10057,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "medium",
             "high",
@@ -9816,7 +10122,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "medium",
             "high",
@@ -11696,8 +12001,7 @@
           "type": "effort",
           "values": [
             "high",
-            "xhigh",
-            "max"
+            "xhigh"
           ]
         }
       ],
@@ -11747,7 +12051,15 @@
       "name": "Fugu Ultra",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-06-15",
       "structured_output": true,
       "temperature": true,
@@ -11801,8 +12113,7 @@
           "type": "effort",
           "values": [
             "high",
-            "xhigh",
-            "max"
+            "xhigh"
           ]
         }
       ],
@@ -11836,7 +12147,17 @@
       "name": "Sakana Namazu",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-08-03",
       "tool_call": true
     },
@@ -11899,7 +12220,17 @@
       "name": "Grok 4.1 Fast Reasoning",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-11-19",
       "structured_output": true,
       "temperature": true,
@@ -11949,7 +12280,17 @@
       "name": "Grok 4.20 Multi-Agent",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-10",
       "tool_call": true
     },
@@ -11997,7 +12338,17 @@
       "name": "Grok 4.20 Multi Agent Beta",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-11",
       "tool_call": true
     },
@@ -12139,7 +12490,17 @@
       "name": "Grok 4.20 Reasoning",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-10",
       "tool_call": true
     },
@@ -12187,7 +12548,17 @@
       "name": "Grok 4.20 Beta Reasoning",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-03-11",
       "tool_call": true
     },
@@ -12359,7 +12730,8 @@
           "values": [
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
@@ -12418,7 +12790,8 @@
           "values": [
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
@@ -12470,7 +12843,17 @@
       "name": "Grok Build 0.1",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-04-16",
       "structured_output": true,
       "temperature": true,
@@ -13451,9 +13834,7 @@
             "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],
@@ -13496,9 +13877,7 @@
             "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],
@@ -13541,9 +13920,7 @@
             "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],
@@ -13941,13 +14318,11 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "high",
-            "xhigh"
+            "max"
           ]
         }
       ],
@@ -13984,13 +14359,12 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
-            "high",
-            "xhigh"
+            "none",
+            "low",
+            "medium",
+            "high"
           ]
         }
       ],
@@ -14070,9 +14444,10 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
-            "high",
-            "max"
+            "medium",
+            "high"
           ]
         }
       ],
