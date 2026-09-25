@@ -53033,9 +53033,9 @@
       "deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.432,
-          "input": 1.73,
-          "output": 3.46
+          "cache_read": 0.15,
+          "input": 1.7,
+          "output": 3.4
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -53118,9 +53118,9 @@
       "deepseek-v4.1-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.13,
-          "input": 0.5,
-          "output": 1.499
+          "cache_read": 0.075,
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
         "family": "deepseek-flash",
@@ -53129,7 +53129,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1048576,
-          "output": 64000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -53603,7 +53603,7 @@
         "id": "gemma-4-31b-it",
         "last_updated": "2026-04-02",
         "limit": {
-          "context": 262000,
+          "context": 262144,
           "output": 262000
         },
         "modalities": {
@@ -55087,9 +55087,9 @@
       "minimax-m3": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.099,
-          "input": 0.395,
-          "output": 1.977
+          "cache_read": 0.06,
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
         "family": "minimax",
@@ -56206,8 +56206,8 @@
         "id": "qwen3.8-27b",
         "last_updated": "2026-08-14",
         "limit": {
-          "context": 262144,
-          "output": 262144
+          "context": 1000000,
+          "output": 500000
         },
         "modalities": {
           "input": [
@@ -126844,8 +126844,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.3,
-          "input": 0.8845,
-          "output": 10.5346
+          "input": 3,
+          "output": 15
         },
         "description": "Kimi K3 is a 2.8T parameter open-weight multimodal reasoning model from Moonshot AI. It is suited for complex coding, knowledge work, and long-horizon agentic workflows, and is particularly strong at...",
         "family": "kimi-k3",
@@ -135311,7 +135311,7 @@
         "last_updated": "2026-08-26",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -135696,9 +135696,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.01113,
-          "input": 0.3498,
-          "output": 1.0494
+          "cache_read": 0.08832,
+          "input": 0.2528,
+          "output": 2.88
         },
         "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
         "family": "deepseek",
@@ -135706,7 +135706,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 393216
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -135874,7 +135874,7 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
+          "cache_read": 0.33,
           "input": 0.8845,
           "output": 10.5346
         },
@@ -185872,9 +185872,9 @@
       "deepseek/deepseek-v4-flash-vision-exp": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.44,
-          "output": 1.32
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -199758,6 +199758,46 @@
         "release_date": "2026-09-22",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "xiaomi/mimo-v2.6-flash-uncensored": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.275,
+          "input": 0.5,
+          "output": 1.5
+        },
+        "description": "A text-only, lower-refusal MiMo V2.6 Flash finetune served by Heabsy with a 1M-token context window, separate reasoning output, and tool calling.",
+        "family": "mimo",
+        "id": "xiaomi/mimo-v2.6-flash-uncensored",
+        "last_updated": "2026-09-25",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2.6 Flash Uncensored",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-25",
+        "structured_output": false,
         "tool_call": true
       },
       "xiaomi/mimo-v2.6-pro": {
@@ -228617,6 +228657,7 @@
           }
         ],
         "release_date": "2026-08-05",
+        "status": "deprecated",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -233570,9 +233611,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.069006,
-          "input": 0.828066,
-          "output": 1.656132
+          "cache_read": 0.06525,
+          "input": 0.783,
+          "output": 1.566
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -233661,9 +233702,9 @@
       "deepseek/deepseek-v4.1-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.006,
-          "input": 0.3,
-          "output": 1.2
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -237391,8 +237432,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.3,
-          "input": 0.8845,
-          "output": 10.5346
+          "input": 3,
+          "output": 15
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi-k3",
@@ -246019,9 +246060,9 @@
       "z-ai/glm-5.3-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0285,
+          "cache_read": 0.01,
           "input": 0.045,
-          "output": 0.6
+          "output": 0.14
         },
         "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
         "family": "glm-flash",
@@ -246029,7 +246070,7 @@
         "last_updated": "2026-08-26",
         "limit": {
           "context": 1310720,
-          "output": 131072
+          "output": 128000
         },
         "modalities": {
           "input": [
@@ -246410,9 +246451,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.01113,
-          "input": 0.3498,
-          "output": 1.0494
+          "cache_read": 0.08832,
+          "input": 0.2528,
+          "output": 2.88
         },
         "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
         "family": "deepseek",
@@ -246420,7 +246461,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 393216
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -246610,7 +246651,7 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
+          "cache_read": 0.33,
           "input": 0.8845,
           "output": 10.5346
         },
