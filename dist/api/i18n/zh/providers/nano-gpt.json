@@ -2284,6 +2284,46 @@
       "temperature": true,
       "tool_call": true
     },
+    "TEE/qwen3.8-27b-uncensored": {
+      "attachment": true,
+      "cost": {
+        "input": 0.3,
+        "output": 1.5
+      },
+      "description": "HauhauCS's Aggressive finetune of Qwen3.8 27B reduces refusal behavior for creative writing, coding, and image analysis. It supports reasoning, tool calling, and structured output with a 262K-token context. Runs inside a TEE (Trusted Execution Environment), with provider attestation support.",
+      "id": "TEE/qwen3.8-27b-uncensored",
+      "last_updated": "2026-09-25",
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B Uncensored TEE",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-25",
+      "structured_output": true,
+      "tool_call": true
+    },
     "THUDM/GLM-4-32B-0414": {
       "attachment": false,
       "cost": {
@@ -15917,6 +15957,50 @@
       "release_date": "2026-05-12",
       "structured_output": true,
       "tool_call": false
+    },
+    "perceptron/perceptron-mk1.5": {
+      "attachment": true,
+      "cost": {
+        "input": 0.15,
+        "output": 1.5
+      },
+      "description": "Perceptron Mk1.5 is a multimodal reasoning model for visual analysis and physical agents. It accepts text, images, video, and audio, supports tool calling and structured output, and can return spatial annotations such as points, boxes, polygons, and tracks.",
+      "id": "perceptron/perceptron-mk1.5",
+      "last_updated": "2026-09-25",
+      "limit": {
+        "context": 36864,
+        "input": 36864,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Perceptron Mk1.5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-25",
+      "structured_output": true,
+      "tool_call": true
     },
     "phi-4-mini-instruct": {
       "attachment": false,
