@@ -72785,6 +72785,35 @@
         "temperature": true,
         "tool_call": true
       },
+      "cohere/c4ai-aya-expanse-32b": {
+        "attachment": false,
+        "cost": {
+          "input": 0.5,
+          "output": 1.5
+        },
+        "description": "Open multilingual model optimized for generation across 23 languages",
+        "id": "cohere/c4ai-aya-expanse-32b",
+        "last_updated": "2024-10-24",
+        "limit": {
+          "context": 128000,
+          "output": 4000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Aya Expanse 32B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-10-24",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
+      },
       "cohere/command-a-03-2025": {
         "attachment": false,
         "cost": {
@@ -74093,6 +74122,47 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": true
+      },
+      "deepinfra/tencent/Hy4-preview": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.042,
+          "input": 0.834,
+          "output": 2.501
+        },
+        "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
+        "family": "Hy",
+        "id": "deepinfra/tencent/Hy4-preview",
+        "last_updated": "2026-08-28",
+        "limit": {
+          "context": 1048576,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy4 preview (Deep Infra)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-28",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": false
       },
       "deepinfra/thinkingmachines/Inkling": {
         "attachment": true,
@@ -89370,68 +89440,6 @@
           }
         ],
         "release_date": "2026-09-10",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "accounts/fireworks/routers/deepseek-pro-latest": {
-        "attachment": false,
-        "cost": {
-          "cache_read": 0.044,
-          "input": 1.32,
-          "output": 3.96
-        },
-        "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
-        "experimental": {
-          "modes": {
-            "priority": {
-              "cost": {
-                "cache_read": 0.055,
-                "input": 1.65,
-                "output": 4.95
-              },
-              "provider": {
-                "body": {
-                  "service_tier": "priority"
-                }
-              }
-            }
-          }
-        },
-        "family": "deepseek-thinking",
-        "id": "accounts/fireworks/routers/deepseek-pro-latest",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "last_updated": "2026-08-22",
-        "limit": {
-          "context": 1000000,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek Pro Latest",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "effort",
-            "values": [
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-08-12",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -123044,7 +123052,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -135205,8 +135213,8 @@
         "id": "z-ai/glm-5.3",
         "last_updated": "2026-08-14",
         "limit": {
-          "context": 1048575,
-          "output": 943717
+          "context": 1048576,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -135632,9 +135640,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.249,
-          "input": 0.25,
-          "output": 3.5
+          "cache_read": 0.007938,
+          "input": 0.24948,
+          "output": 0.74844
         },
         "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
         "family": "deepseek",
@@ -135642,7 +135650,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -136173,9 +136181,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.08814,
-          "input": 0.4746,
-          "output": 1.4916
+          "cache_read": 0.07046,
+          "input": 0.3794,
+          "output": 1.1924
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
@@ -233504,9 +233512,9 @@
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.034902,
-          "input": 0.418818,
-          "output": 0.837636
+          "cache_read": 0.030682,
+          "input": 0.368184,
+          "output": 0.736368
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -233595,9 +233603,9 @@
       "deepseek/deepseek-v4.1-flash": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0042,
-          "input": 0.14,
-          "output": 0.42
+          "cache_read": 0.006,
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -233606,7 +233614,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -245831,9 +245839,9 @@
       "z-ai/glm-5.3": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.26,
-          "input": 1.4,
-          "output": 4.4
+          "cache_read": 0.07046,
+          "input": 0.3794,
+          "output": 1.1924
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -245841,7 +245849,7 @@
         "last_updated": "2026-08-14",
         "limit": {
           "context": 1310720,
-          "output": 943717
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -246263,9 +246271,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.249,
-          "input": 0.25,
-          "output": 3.5
+          "cache_read": 0.007938,
+          "input": 0.24948,
+          "output": 0.74844
         },
         "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
         "family": "deepseek",
@@ -246273,7 +246281,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -246920,9 +246928,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.08814,
-          "input": 0.4746,
-          "output": 1.4916
+          "cache_read": 0.07046,
+          "input": 0.3794,
+          "output": 1.1924
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
