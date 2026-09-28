@@ -8,7 +8,8 @@
   "id": "coralbricks",
   "models": {
     "deepseek-v4.1-flash-fast-fp4": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
         "cache_read": 0,
         "cache_write": 0.09,
@@ -27,7 +28,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -54,6 +56,7 @@
     },
     "glm-5.3-flash-fp4": {
       "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
       "cost": {
         "cache_read": 0,
         "cache_write": 0.23,
@@ -99,6 +102,7 @@
     },
     "glm-5.3-fp4": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
       "cost": {
         "cache_read": 0,
         "cache_write": 1.68,
@@ -136,53 +140,6 @@
         }
       ],
       "release_date": "2026-08-14",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "gpt-oss-120b": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0,
-        "cache_write": 0.18,
-        "input": 0.12,
-        "output": 0.6
-      },
-      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
-      "family": "gpt-oss",
-      "id": "gpt-oss-120b",
-      "interleaved": true,
-      "last_updated": "2025-08-05",
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT OSS 120B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "minimal",
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-08-05",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

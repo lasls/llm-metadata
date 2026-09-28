@@ -1,0 +1,68 @@
+{
+  "attachment": true,
+  "canonical_model_id": "alibaba/qwen3.5-flash",
+  "cost": {
+    "cache_read": 0.00282,
+    "cache_write": 0.03525,
+    "input": 0.0282,
+    "output": 0.282,
+    "tiers": [
+      {
+        "cache_read": 0.01126,
+        "cache_write": 0.14075,
+        "input": 0.1126,
+        "output": 1.126,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 0.0169,
+        "cache_write": 0.21125,
+        "input": 0.169,
+        "output": 1.69,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+  "family": "qwen",
+  "id": "qwen3.5-flash",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-02-23",
+  "limit": {
+    "context": 1000000,
+    "output": 65536
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.5 Flash",
+  "open_weights": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-02-23",
+  "structured_output": true,
+  "temperature": true,
+  "tool_call": true
+}
