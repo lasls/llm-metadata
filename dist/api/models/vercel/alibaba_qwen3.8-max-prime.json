@@ -2,6 +2,7 @@
   "attachment": true,
   "cost": {
     "cache_read": 0.5,
+    "cache_write": 5,
     "input": 4,
     "output": 12
   },
@@ -27,13 +28,20 @@
   "reasoning": true,
   "reasoning_options": [
     {
+      "type": "toggle"
+    },
+    {
       "type": "effort",
       "values": [
-        "none",
         "low",
         "medium",
-        "high"
+        "xhigh"
       ]
+    },
+    {
+      "max": 262144,
+      "min": 0,
+      "type": "budget_tokens"
     }
   ],
   "release_date": "2026-09-23",
