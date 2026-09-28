@@ -755,6 +755,58 @@
       "temperature": false,
       "tool_call": true
     },
+    "claude-sonnet-5-5": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-sonnet-5-5",
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "description": "Fast Claude model for everyday coding, agents, and knowledge work",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-5-5",
+      "knowledge": "2026-06",
+      "last_updated": "2026-09-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 5.5",
+      "open_weights": false,
+      "provider": {
+        "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
+        "npm": "@ai-sdk/anthropic"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-28",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "codestral-2501": {
       "attachment": false,
       "cost": {
@@ -1680,6 +1732,52 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-5.1-codex-max": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5.1-codex-max",
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
+      "family": "gpt-codex",
+      "id": "gpt-5.1-codex-max",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-11-13",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-5.1 Codex Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-11-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-5.1-codex-mini": {
       "attachment": false,
       "cost": {
@@ -2344,6 +2442,142 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-6-astra": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6-astra",
+      "cost": {
+        "cache_read": 1,
+        "cache_write": 12.5,
+        "context_over_200k": {
+          "cache_read": 2,
+          "cache_write": 25,
+          "input": 20,
+          "output": 75
+        },
+        "input": 10,
+        "output": 50,
+        "tiers": [
+          {
+            "cache_read": 2,
+            "cache_write": 25,
+            "input": 20,
+            "output": 75,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "GPT-6 Astra is OpenAI's most capable model for complex reasoning, coding, computer use, research, and document creation.",
+      "family": "gpt-astra",
+      "id": "gpt-6-astra",
+      "knowledge": "2026-04-30",
+      "last_updated": "2026-09-04",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Astra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-04",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-6-luna": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6-luna",
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "context_over_200k": {
+          "cache_read": 0.02,
+          "cache_write": 0.25,
+          "input": 0.2,
+          "output": 0.75
+        },
+        "input": 0.1,
+        "output": 0.5,
+        "tiers": [
+          {
+            "cache_read": 0.02,
+            "cache_write": 0.25,
+            "input": 0.2,
+            "output": 0.75,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "OpenAI's most efficient model for focused, high-volume tasks",
+      "family": "gpt-luna",
+      "id": "gpt-6-luna",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6 Luna",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-6-sol": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-6-sol",
@@ -2457,6 +2691,167 @@
       "structured_output": true,
       "temperature": false,
       "tool_call": true
+    },
+    "gpt-image-1": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-image-1",
+      "cost": {
+        "cache_read": 1.25,
+        "input": 5,
+        "output": 40
+      },
+      "description": "OpenAI image model for production generation, edits, and brand-safe visual workflows",
+      "family": "gpt-image",
+      "id": "gpt-image-1",
+      "last_updated": "2025-04-24",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT-Image-1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-24",
+      "temperature": false,
+      "tool_call": false
+    },
+    "gpt-image-1.5": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-image-1.5",
+      "cost": {
+        "cache_read": 1.25,
+        "input": 5,
+        "output": 32
+      },
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "family": "gpt-image",
+      "id": "gpt-image-1.5",
+      "last_updated": "2025-11-25",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "GPT-Image-1.5",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-11-25",
+      "temperature": false,
+      "tool_call": false
+    },
+    "gpt-image-2": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-image-2",
+      "cost": {
+        "cache_read": 1.25,
+        "input": 5,
+        "output": 30
+      },
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "family": "gpt-image",
+      "id": "gpt-image-2",
+      "last_updated": "2026-04-21",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT-Image-2",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-04-21",
+      "temperature": false,
+      "tool_call": false
+    },
+    "gpt-image-2.5-flare": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-image-2.5-flare",
+      "cost": {
+        "cache_read": 1.25,
+        "input": 5,
+        "output": 30
+      },
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "family": "gpt-image",
+      "id": "gpt-image-2.5-flare",
+      "last_updated": "2026-09-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT Image 2.5 Flare",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-09-08",
+      "temperature": false,
+      "tool_call": false
+    },
+    "gpt-image-2.5-sunburst": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-image-2.5-sunburst",
+      "cost": {
+        "cache_read": 1.25,
+        "input": 5,
+        "output": 30
+      },
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "family": "gpt-image",
+      "id": "gpt-image-2.5-sunburst",
+      "last_updated": "2026-09-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "GPT Image 2.5 Sunburst",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-09-08",
+      "temperature": false,
+      "tool_call": false
     },
     "kimi-k2.5": {
       "attachment": true,
