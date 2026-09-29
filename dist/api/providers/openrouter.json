@@ -2255,9 +2255,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.078025,
-        "input": 0.936294,
-        "output": 1.872588
+        "cache_read": 0.076328,
+        "input": 0.915936,
+        "output": 1.831872
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2303,9 +2303,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
       "cost": {
-        "cache_read": 0.3776,
-        "input": 0.4721,
-        "output": 4.2
+        "cache_read": 0.3153,
+        "input": 0.3942,
+        "output": 3.49
       },
       "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
       "family": "deepseek-thinking",
@@ -3610,9 +3610,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.09,
-        "output": 0.3
+        "cache_read": 0.0425,
+        "input": 0.0765,
+        "output": 0.255
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -9142,6 +9142,137 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-6.1-sol": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-sol",
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.2,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
+        },
+        "input": 2,
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.2,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Near-Astra performance for complex coding, computer use, and professional work at a lower cost.",
+      "family": "gpt-sol",
+      "id": "openai/gpt-6.1-sol",
+      "knowledge": "2026-04-30",
+      "last_updated": "2026-09-29",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.1 Sol",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-29",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6.1-sol-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.2,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
+        },
+        "input": 2,
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.2,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+      "family": "gpt",
+      "id": "openai/gpt-6.1-sol-pro",
+      "last_updated": "2026-09-29",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.1 Sol Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-29",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-audio": {
       "attachment": true,
       "cost": {
@@ -14517,7 +14648,7 @@
       "attachment": true,
       "canonical_model_id": "zhipuai/glm-4.6v",
       "cost": {
-        "cache_read": 0.05,
+        "cache_read": 0.055,
         "input": 0.3,
         "output": 0.9
       },
@@ -14758,9 +14889,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
       "cost": {
-        "cache_read": 0.1871,
-        "input": 0.2339,
-        "output": 4.4
+        "cache_read": 0.2245,
+        "input": 0.2807,
+        "output": 3.99
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -15658,10 +15789,10 @@
     "~openai/gpt-sol-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.2,
+        "cache_read": 0.1,
         "cache_write": 2.5,
         "context_over_200k": {
-          "cache_read": 0.4,
+          "cache_read": 0.2,
           "cache_write": 5,
           "input": 4,
           "output": 15
@@ -15670,7 +15801,7 @@
         "output": 10,
         "tiers": [
           {
-            "cache_read": 0.4,
+            "cache_read": 0.2,
             "cache_write": 5,
             "input": 4,
             "output": 15,
@@ -15707,7 +15838,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "medium",
             "high",
@@ -15893,9 +16023,9 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.102,
-        "input": 0.19,
-        "output": 2.04
+        "cache_read": 0.1955,
+        "input": 0.1428,
+        "output": 2.992
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -15903,7 +16033,7 @@
       "last_updated": "2026-08-19",
       "limit": {
         "context": 1310720,
-        "output": 131072
+        "output": 943718
       },
       "modalities": {
         "input": [
