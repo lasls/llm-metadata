@@ -1590,6 +1590,9 @@
       },
       "description": "Classification-tuned GLiNER2 large. Entities, relations, and JSON extraction still work.",
       "id": "fastino/GLiNER-2.5-Decide",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-09-24",
       "limit": {
         "context": 8192,
@@ -1605,8 +1608,19 @@
       },
       "name": "GLiNER-2.5-Decide",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-09-24",
+      "temperature": true,
       "tool_call": true
     },
     "fastino/gliguard-LLMGuardrails-300M": {
