@@ -3937,7 +3937,7 @@
       "tool_call": true
     },
     "flexai/DeepSeek-V4.1-Flash": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
         "cache_read": 0.021,
@@ -3955,7 +3955,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -3976,6 +3977,49 @@
         }
       ],
       "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "flexai/Step-3.7-Flash": {
+      "attachment": true,
+      "canonical_model_id": "stepfun/step-3.7-flash",
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.2,
+        "output": 1.15
+      },
+      "description": "Newer StepFun flash model for faster agents, coding, and multimodal prompts",
+      "id": "flexai/Step-3.7-Flash",
+      "knowledge": "2026-03-01",
+      "last_updated": "2026-05-29",
+      "limit": {
+        "context": 262144,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 3.7 Flash (FlexAI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-05-29",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
