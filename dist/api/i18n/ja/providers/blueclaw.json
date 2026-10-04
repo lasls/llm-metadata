@@ -7,16 +7,16 @@
   "iconURL": "https://models.dev/logos/blueclaw.svg",
   "id": "blueclaw",
   "models": {
-    "Qwen/Qwen3.6-35B-A3B-FP8": {
+    "Qwen3.8-27B": {
       "attachment": false,
-      "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
-      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+      "canonical_model_id": "alibaba/qwen3.8-27b",
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
       "family": "qwen",
-      "id": "Qwen/Qwen3.6-35B-A3B-FP8",
-      "last_updated": "2026-04-17",
+      "id": "Qwen3.8-27B",
+      "last_updated": "2026-08-14",
       "limit": {
         "context": 131072,
-        "output": 65536
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -26,40 +26,23 @@
           "text"
         ]
       },
-      "name": "Qwen3.6 35B A3B FP8",
+      "name": "Qwen3.8 27B",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-04-17",
-      "status": "beta",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "Qwen3.6-27B": {
-      "attachment": false,
-      "canonical_model_id": "alibaba/qwen3.6-27b",
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
-      "family": "qwen",
-      "id": "Qwen3.6-27B",
-      "last_updated": "2026-04-22",
-      "limit": {
-        "context": 196608,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.6 27B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-04-22",
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
       "status": "beta",
       "structured_output": true,
       "temperature": true,
