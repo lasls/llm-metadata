@@ -2037,7 +2037,8 @@
     "deepseek/deepseek-v3.1-terminus": {
       "attachment": false,
       "cost": {
-        "input": 0.27,
+        "cache_read": 0.135,
+        "input": 0.3,
         "output": 1
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
@@ -2047,7 +2048,7 @@
       "last_updated": "2025-09-22",
       "limit": {
         "context": 163840,
-        "output": 147456
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -2074,8 +2075,8 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v3.2",
       "cost": {
-        "cache_read": 0.028,
-        "input": 0.28,
+        "cache_read": 0.135,
+        "input": 0.259,
         "output": 0.42
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
@@ -2085,7 +2086,7 @@
       "last_updated": "2025-12-01",
       "limit": {
         "context": 163840,
-        "output": 65536
+        "output": 147456
       },
       "modalities": {
         "input": [
@@ -2336,9 +2337,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
       "cost": {
-        "cache_read": 0.36,
-        "input": 0.4,
-        "output": 5
+        "cache_read": 0.022,
+        "input": 0.66,
+        "output": 1.98
       },
       "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
       "family": "deepseek-thinking",
@@ -2346,7 +2347,7 @@
       "last_updated": "2026-08-22",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -3643,9 +3644,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.09,
-        "output": 0.3
+        "cache_read": 0.0425,
+        "input": 0.0765,
+        "output": 0.255
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -4547,8 +4548,9 @@
       "attachment": false,
       "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
-        "input": 0.1,
-        "output": 0.32
+        "cache_read": 0.11,
+        "input": 0.22,
+        "output": 0.5
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -6155,8 +6157,8 @@
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3",
       "cost": {
-        "cache_read": 0.22,
-        "input": 0.67,
+        "cache_read": 0.39,
+        "input": 1.19,
         "output": 14
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
@@ -12422,52 +12424,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen/qwen3.8-27b:free": {
-      "attachment": true,
-      "canonical_model_id": "alibaba/qwen3.8-27b",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
-      "family": "qwen",
-      "id": "qwen/qwen3.8-27b:free",
-      "last_updated": "2026-08-14",
-      "limit": {
-        "context": 262144,
-        "output": 235929
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.8 27B (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "xhigh"
-          ]
-        }
-      ],
-      "release_date": "2026-08-14",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "qwen/qwen3.8-flash": {
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-flash",
@@ -13067,50 +13023,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "stealth/space-bunny-alpha": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
-      "family": "alpha",
-      "id": "stealth/space-bunny-alpha",
-      "last_updated": "2026-09-23",
-      "limit": {
-        "context": 1000000,
-        "output": 524288
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Space Bunny Alpha",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-09-23",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "stepfun/step-3.5-flash": {
       "attachment": false,
       "canonical_model_id": "stepfun/step-3.5-flash",
@@ -13318,9 +13230,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13403,9 +13315,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -14990,9 +14902,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
       "cost": {
-        "cache_read": 0.0224,
-        "input": 0.0224,
-        "output": 16
+        "cache_read": 0.0312,
+        "input": 0.0312,
+        "output": 12
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -15037,8 +14949,8 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.3",
       "cost": {
-        "cache_read": 0.045,
-        "input": 0.05,
+        "cache_read": 0.065,
+        "input": 0.07,
         "output": 7
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
@@ -15468,8 +15380,8 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.19,
-        "input": 0.1901,
+        "cache_read": 0.28,
+        "input": 0.2783,
         "output": 4.2
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
@@ -15668,9 +15580,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.3,
-        "input": 0.3,
-        "output": 20
+        "cache_read": 0.45,
+        "input": 0.7975,
+        "output": 13
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",

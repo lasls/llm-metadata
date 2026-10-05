@@ -1960,7 +1960,8 @@
     "deepseek/deepseek-v3.1-terminus": {
       "attachment": false,
       "cost": {
-        "input": 0.27,
+        "cache_read": 0.135,
+        "input": 0.3,
         "output": 1
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
@@ -1968,8 +1969,8 @@
       "id": "deepseek/deepseek-v3.1-terminus",
       "last_updated": "2025-09-22",
       "limit": {
-        "context": 163840,
-        "output": 147456
+        "context": 131072,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -2000,8 +2001,8 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v3.2",
       "cost": {
-        "cache_read": 0.028,
-        "input": 0.28,
+        "cache_read": 0.135,
+        "input": 0.259,
         "output": 0.42
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
@@ -2010,8 +2011,8 @@
       "knowledge": "2024-07",
       "last_updated": "2025-12-01",
       "limit": {
-        "context": 131072,
-        "output": 65536
+        "context": 163840,
+        "output": 147456
       },
       "modalities": {
         "input": [
@@ -2265,7 +2266,7 @@
       "last_updated": "2026-08-22",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -12047,50 +12048,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen/qwen3.8-27b:free": {
-      "attachment": true,
-      "canonical_model_id": "alibaba/qwen3.8-27b",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Qwen3.8 27B is an open-weight dense vision-language model from Qwen. It is suited for coding, professional workflows, research, multimodal interaction, and long-running agent tasks, with flexible thinking that can be...",
-      "family": "qwen",
-      "id": "qwen/qwen3.8-27b:free",
-      "last_updated": "2026-08-14",
-      "limit": {
-        "context": 262144,
-        "output": 235929
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen: Qwen3.8 27B (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "xhigh"
-          ]
-        }
-      ],
-      "release_date": "2026-08-14",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "qwen/qwen3.8-flash": {
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-flash",
@@ -12900,50 +12857,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "stealth/space-bunny-alpha": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Space Bunny Alpha is an anonymous large model with blazing-fast inference, strong coding capabilities and native multimodal input support. It delivers adjustable reasoning effort, and a 1M-token context window. Space...",
-      "family": "alpha",
-      "id": "stealth/space-bunny-alpha",
-      "last_updated": "2026-09-23",
-      "limit": {
-        "context": 1000000,
-        "output": 524288
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Space Bunny Alpha (retires Oct 5)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-09-23",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "stepfun/step-3.5-flash": {
       "attachment": false,
       "canonical_model_id": "stepfun/step-3.5-flash",
@@ -13205,9 +13118,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.13,
-        "output": 0.53
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
@@ -13290,9 +13203,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
       "family": "Hy",
@@ -15280,8 +15193,8 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.19,
-        "input": 0.1901,
+        "cache_read": 0.28,
+        "input": 0.2783,
         "output": 4.2
       },
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
@@ -15459,7 +15372,7 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.45,
-        "input": 0.66,
+        "input": 0.7975,
         "output": 13
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
