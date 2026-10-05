@@ -80766,16 +80766,15 @@
         "attachment": false,
         "canonical_model_id": "openai/gpt-oss-20b",
         "cost": {
-          "cache_read": 0.0045,
-          "input": 0.009,
-          "output": 0.045
+          "input": 0,
+          "output": 0
         },
         "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
         "family": "gpt-oss",
         "id": "greenference/gpt-oss-20b",
         "last_updated": "2025-08-05",
         "limit": {
-          "context": 131072,
+          "context": 32768,
           "output": 32768
         },
         "modalities": {
@@ -141879,7 +141878,7 @@
         "last_updated": "2026-08-14",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -142485,7 +142484,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.45,
-          "input": 0.6392,
+          "input": 0.66,
           "output": 13
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
@@ -142846,9 +142845,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.04,
-          "output": 6
+          "cache_read": 0.03,
+          "input": 0.03,
+          "output": 12
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
@@ -142856,7 +142855,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -144874,39 +144873,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepseek-ai/DeepSeek-V4.1-Flash": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.0027,
-          "input": 0.135,
-          "output": 0.54
-        },
-        "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
-        "family": "deepseek",
-        "id": "deepseek-ai/DeepSeek-V4.1-Flash",
-        "last_updated": "2026-10-04",
-        "limit": {
-          "context": 1000000,
-          "output": 1000000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "luminal/DeepSeek-V4.1-Flash",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-10-04",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "deepseek-v3.2": {
         "attachment": true,
         "cost": {
@@ -145048,9 +145014,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.005,
-          "input": 0.15,
-          "output": 0.55
+          "cache_read": 0.0027,
+          "input": 0.135,
+          "output": 0.54
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
         "family": "deepseek-flash",
@@ -162972,20 +162938,22 @@
         "temperature": true,
         "tool_call": false
       },
-      "luminal/deepseek-ai/DeepSeek-V4.1-Flash": {
+      "luminal/deepseek-v4.1-flash": {
         "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
           "cache_read": 0.0027,
           "input": 0.135,
           "output": 0.54
         },
-        "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
-        "family": "deepseek",
-        "id": "luminal/deepseek-ai/DeepSeek-V4.1-Flash",
-        "last_updated": "2026-10-04",
+        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+        "family": "deepseek-flash",
+        "id": "luminal/deepseek-v4.1-flash",
+        "knowledge": "2025-05",
+        "last_updated": "2026-09-10",
         "limit": {
           "context": 1000000,
-          "output": 1000000
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -162996,11 +162964,24 @@
             "text"
           ]
         },
-        "name": "luminal/DeepSeek-V4.1-Flash (luminal)",
-        "open_weights": false,
+        "name": "DeepSeek V4.1 Flash (luminal)",
+        "open_weights": true,
         "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-10-04",
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-10",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -194381,9 +194362,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4-flash-vision-exp",
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.44,
-          "output": 1.32
+          "cache_read": 0.007,
+          "input": 0.22,
+          "output": 0.66
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -210019,6 +210000,90 @@
         "release_date": "2026-08-26",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "z-ai/glm-5.3-flash-apex": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.15,
+          "output": 0.5
+        },
+        "description": "Apex Flash 1 is Cantina Security and Yeta's cybersecurity-focused post-train of GLM 5.3 Flash for code investigation and tool use.",
+        "family": "glm",
+        "id": "z-ai/glm-5.3-flash-apex",
+        "last_updated": "2026-10-05",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Apex Flash 1",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-05",
+        "structured_output": false,
+        "tool_call": true
+      },
+      "z-ai/glm-5.3-flash-apex-abliterated": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.15,
+          "output": 0.5
+        },
+        "description": "Apex Flash 1 Abliterated is an experimental derivative of Cantina Security and Yeta's Apex Flash 1 with modified refusal behavior.",
+        "family": "glm",
+        "id": "z-ai/glm-5.3-flash-apex-abliterated",
+        "last_updated": "2026-10-05",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Apex Flash 1 Abliterated",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-05",
+        "structured_output": false,
         "tool_call": true
       },
       "z-ai/glm-5.3-flash-cybersecurity": {
@@ -243903,8 +243968,8 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-flash",
         "cost": {
-          "cache_read": 0.0233,
-          "input": 0.0233,
+          "cache_read": 0.03,
+          "input": 0.03,
           "output": 1.28
         },
         "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
@@ -244091,8 +244156,8 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
         "cost": {
-          "cache_read": 0.7,
-          "input": 0.85,
+          "cache_read": 0.36,
+          "input": 0.4,
           "output": 5
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
@@ -244136,9 +244201,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.003,
-          "input": 0.003,
-          "output": 2.4
+          "cache_read": 0.006,
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -245398,9 +245463,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.0375,
-          "input": 0.0675,
-          "output": 0.225
+          "cache_read": 0.05,
+          "input": 0.09,
+          "output": 0.3
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -246302,9 +246367,8 @@
         "attachment": false,
         "canonical_model_id": "meta/llama-3.3-70b-instruct",
         "cost": {
-          "cache_read": 0.11,
-          "input": 0.22,
-          "output": 0.5
+          "input": 0.1,
+          "output": 0.32
         },
         "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
         "family": "llama",
@@ -253694,7 +253758,7 @@
         "cost": {
           "cache_read": 0.03,
           "input": 0.32,
-          "output": 2.7
+          "output": 3.25
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -256746,8 +256810,8 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.2",
         "cost": {
-          "cache_read": 0.024,
-          "input": 0.024,
+          "cache_read": 0.0224,
+          "input": 0.0224,
           "output": 16
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
@@ -256793,9 +256857,9 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
-          "cache_read": 0.14,
-          "input": 1.4,
-          "output": 4.4
+          "cache_read": 0.045,
+          "input": 0.05,
+          "output": 7
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -256803,7 +256867,7 @@
         "last_updated": "2026-08-14",
         "limit": {
           "context": 1048576,
-          "output": 131072
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -257424,9 +257488,9 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.45,
-          "input": 0.6392,
-          "output": 13
+          "cache_read": 0.3,
+          "input": 0.3,
+          "output": 20
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -257880,9 +257944,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.04,
-          "output": 6
+          "cache_read": 0.03,
+          "input": 0.03,
+          "output": 12
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -257890,7 +257954,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -322822,8 +322886,9 @@
       "inclusionai/ling-3.0-flash-sante": {
         "attachment": false,
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.015,
+          "input": 0.075,
+          "output": 0.22
         },
         "description": "Efficient model for low-latency assistance, extraction, and routine automation",
         "family": "ling",
@@ -322842,45 +322907,6 @@
           ]
         },
         "name": "Ling 3.0 Flash Sante",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-09-04",
-        "tool_call": true
-      },
-      "inclusionai/ling-3.0-flash-sante-free": {
-        "attachment": false,
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-        "family": "ling",
-        "id": "inclusionai/ling-3.0-flash-sante-free",
-        "last_updated": "2026-09-04",
-        "limit": {
-          "context": 256000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Ling 3.0 Flash Sante (Free)",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [

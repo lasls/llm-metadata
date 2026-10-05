@@ -9954,20 +9954,22 @@
       "temperature": true,
       "tool_call": false
     },
-    "luminal/deepseek-ai/DeepSeek-V4.1-Flash": {
+    "luminal/deepseek-v4.1-flash": {
       "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
         "cache_read": 0.0027,
         "input": 0.135,
         "output": 0.54
       },
-      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
-      "family": "deepseek",
-      "id": "luminal/deepseek-ai/DeepSeek-V4.1-Flash",
-      "last_updated": "2026-10-04",
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "luminal/deepseek-v4.1-flash",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
       "limit": {
         "context": 1000000,
-        "output": 1000000
+        "output": 384000
       },
       "modalities": {
         "input": [
@@ -9978,11 +9980,24 @@
           "text"
         ]
       },
-      "name": "luminal/DeepSeek-V4.1-Flash (luminal)",
-      "open_weights": false,
+      "name": "DeepSeek V4.1 Flash (luminal)",
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-10-04",
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
