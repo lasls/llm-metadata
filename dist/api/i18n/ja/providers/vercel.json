@@ -5483,6 +5483,50 @@
       "temperature": true,
       "tool_call": false
     },
+    "google/gemini-nano-banana-2.1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 1.5,
+        "output": 7.5
+      },
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "family": "nano-banana",
+      "id": "google/gemini-nano-banana-2.1",
+      "last_updated": "2026-10-06",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "Gemini Nano Banana 2.1",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-06",
+      "tool_call": false
+    },
     "google/gemini-omni-flash-preview": {
       "attachment": true,
       "canonical_model_id": "google/gemini-omni-flash-preview",
@@ -6878,30 +6922,6 @@
       "release_date": "2026-09-02",
       "tool_call": true
     },
-    "microsoft/mai-transcribe-1.5": {
-      "attachment": false,
-      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
-      "family": "mai",
-      "id": "microsoft/mai-transcribe-1.5",
-      "last_updated": "2026-06-01",
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "modalities": {
-        "input": [
-          "audio"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MAI-Transcribe-1.5",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-06-01",
-      "tool_call": false
-    },
     "microsoft/mai-transcribe-2": {
       "attachment": false,
       "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
@@ -7486,7 +7506,7 @@
       "tool_call": false
     },
     "mistral/ministral-3b": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 0.04,
         "output": 0.04
@@ -7497,12 +7517,13 @@
       "knowledge": "2024-10",
       "last_updated": "2024-10-04",
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -7516,7 +7537,7 @@
       "tool_call": true
     },
     "mistral/ministral-8b": {
-      "attachment": false,
+      "attachment": true,
       "cost": {
         "input": 0.1,
         "output": 0.1
@@ -7527,12 +7548,13 @@
       "knowledge": "2024-10",
       "last_updated": "2024-10-04",
       "limit": {
-        "context": 128000,
+        "context": 262144,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -7601,6 +7623,47 @@
       "release_date": "2025-12-02",
       "temperature": true,
       "tool_call": false
+    },
+    "mistral/mistral-large-4": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.07,
+        "input": 0.68,
+        "output": 2.09
+      },
+      "description": "Flagship Mistral model for advanced reasoning, coding, and multilingual work",
+      "family": "mistral-large",
+      "id": "mistral/mistral-large-4",
+      "last_updated": "2026-10-06",
+      "limit": {
+        "context": 524288,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral Large 4",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-06",
+      "tool_call": true
     },
     "mistral/mistral-medium-3.5": {
       "attachment": false,
