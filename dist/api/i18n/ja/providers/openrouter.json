@@ -544,6 +544,69 @@
       "temperature": true,
       "tool_call": true
     },
+    "anthropic/claude-haiku-5.5": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-haiku-5-5",
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.5,
+        "tiers": [
+          {
+            "cache_read": 0.05,
+            "cache_write": 0.625,
+            "input": 0.5,
+            "output": 2.5,
+            "tier": {
+              "size": 100000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
+      "family": "claude-haiku",
+      "id": "anthropic/claude-haiku-5.5",
+      "knowledge": "2026-06",
+      "last_updated": "2026-10-07",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Haiku 5.5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "anthropic/claude-opus-4.1": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-opus-4-1",
@@ -1156,7 +1219,7 @@
       "attachment": true,
       "canonical_model_id": "anthropic/claude-sonnet-5-5",
       "cost": {
-        "cache_read": 0.2,
+        "cache_read": 0.1,
         "cache_write": 2.5,
         "input": 2,
         "output": 10
@@ -2074,8 +2137,8 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v3.2",
       "cost": {
-        "cache_read": 0.028,
-        "input": 0.28,
+        "cache_read": 0.135,
+        "input": 0.259,
         "output": 0.42
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
@@ -2085,7 +2148,7 @@
       "last_updated": "2025-12-01",
       "limit": {
         "context": 163840,
-        "output": 65536
+        "output": 147456
       },
       "modalities": {
         "input": [
@@ -2381,8 +2444,8 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.02,
-        "input": 0.05,
+        "cache_read": 0.006,
+        "input": 0.3,
         "output": 1.2
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -3687,9 +3750,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.09,
-        "output": 0.3
+        "cache_read": 0.0425,
+        "input": 0.0765,
+        "output": 0.255
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -5308,6 +5371,7 @@
     },
     "mistralai/codestral-2508": {
       "attachment": true,
+      "canonical_model_id": "mistral/codestral-2508",
       "cost": {
         "cache_read": 0.03,
         "input": 0.3,
@@ -5316,8 +5380,7 @@
       "description": "Mistral coding model for code completion, generation, and developer workflows",
       "family": "codestral",
       "id": "mistralai/codestral-2508",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-08-01",
+      "last_updated": "2025-07-30",
       "limit": {
         "context": 256000,
         "output": 204800
@@ -5331,10 +5394,10 @@
           "text"
         ]
       },
-      "name": "Codestral 2508",
+      "name": "Codestral 25.08",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2025-08-01",
+      "release_date": "2025-07-30",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -6212,7 +6275,7 @@
       "canonical_model_id": "moonshotai/kimi-k3",
       "cost": {
         "cache_read": 0.43,
-        "input": 0.62,
+        "input": 0.5,
         "output": 15
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
@@ -6500,7 +6563,6 @@
       "attachment": false,
       "canonical_model_id": "nvidia/nemotron-3-nano-30b-a3b",
       "cost": {
-        "cache_read": 0.03,
         "input": 0.05,
         "output": 0.2
       },
@@ -6510,7 +6572,7 @@
       "last_updated": "2025-12-15",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -6838,9 +6900,9 @@
       "attachment": false,
       "canonical_model_id": "nvidia/nemotron-3.5-lightning",
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.06,
-        "output": 0.16
+        "cache_read": 0.0245,
+        "input": 0.049,
+        "output": 0.14
       },
       "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
       "family": "nemotron",
@@ -6848,7 +6910,7 @@
       "last_updated": "2026-08-11",
       "limit": {
         "context": 262144,
-        "output": 32768
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -13283,9 +13345,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13368,9 +13430,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -15002,9 +15064,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.3",
       "cost": {
-        "cache_read": 0.065,
-        "input": 0.07,
-        "output": 7
+        "cache_read": 0.06,
+        "input": 0.062,
+        "output": 3.39
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -15256,18 +15318,30 @@
     "~anthropic/claude-haiku-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.1,
-        "cache_write": 1.25,
-        "input": 1,
-        "output": 5
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.5,
+        "tiers": [
+          {
+            "cache_read": 0.05,
+            "cache_write": 0.625,
+            "input": 0.5,
+            "output": 2.5,
+            "tier": {
+              "size": 100000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
       "family": "claude-haiku",
       "id": "~anthropic/claude-haiku-latest",
       "last_updated": "2026-04-27",
       "limit": {
-        "context": 200000,
-        "output": 64000
+        "context": 1000000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -15285,6 +15359,16 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
         }
       ],
       "release_date": "2026-04-27",
@@ -15341,7 +15425,7 @@
     "~anthropic/claude-sonnet-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.2,
+        "cache_read": 0.1,
         "cache_write": 2.5,
         "input": 2,
         "output": 10
@@ -15389,7 +15473,7 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.02,
-        "input": 0.05,
+        "input": 0.0248,
         "output": 1.2
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -15433,9 +15517,9 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.4,
-        "output": 4.3
+        "cache_read": 0.2,
+        "input": 0.2862,
+        "output": 4.2
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek",
@@ -15443,7 +15527,7 @@
       "last_updated": "2026-09-14",
       "limit": {
         "context": 1048576,
-        "output": 384000
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -15634,7 +15718,7 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.45,
-        "input": 0.61,
+        "input": 0.49,
         "output": 13
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
@@ -16046,8 +16130,8 @@
     "~z-ai/glm-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0214,
-        "input": 0.0214,
+        "cache_read": 0.025,
+        "input": 0.04,
         "output": 0.5
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
@@ -16089,9 +16173,9 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0585,
-        "input": 0.063,
-        "output": 6.3
+        "cache_read": 0.06,
+        "input": 0.062,
+        "output": 3.39
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -16099,7 +16183,7 @@
       "last_updated": "2026-08-19",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 943718
       },
       "modalities": {
         "input": [
