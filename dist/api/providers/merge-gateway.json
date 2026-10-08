@@ -188,7 +188,7 @@
       "tool_call": true
     },
     "anthropic/claude-haiku-5-5": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "anthropic/claude-haiku-5-5",
       "cost": {
         "cache_read": 0.01,
@@ -207,7 +207,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -216,11 +218,15 @@
       "name": "Claude Haiku 5.5",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-10-07",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": false,
-      "tool_call": false
+      "tool_call": true
     },
     "anthropic/claude-opus-4-1-20250805": {
       "attachment": true,
@@ -849,7 +855,7 @@
       "attachment": true,
       "canonical_model_id": "anthropic/claude-sonnet-5-5",
       "cost": {
-        "cache_read": 0.2,
+        "cache_read": 0.1,
         "cache_write": 2.5,
         "input": 2,
         "output": 10
@@ -5087,10 +5093,10 @@
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.6-sol",
       "cost": {
-        "cache_read": 0.4,
+        "cache_read": 0.5,
         "cache_write": 5,
-        "input": 4,
-        "output": 20
+        "input": 5,
+        "output": 30
       },
       "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
       "family": "gpt-sol",
