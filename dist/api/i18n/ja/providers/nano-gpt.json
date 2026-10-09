@@ -634,15 +634,15 @@
     },
     "Gryphe/MythoMax-L2-13b": {
       "attachment": false,
+      "canonical_model_id": "gryphe/mythomax-l2-13b",
       "cost": {
         "cache_read": 0.05015,
         "input": 0.1003,
         "output": 0.1003
       },
-      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-      "family": "llama",
+      "description": "Llama 2 merge combining MythoLogic and Huginn for creative writing and roleplay",
       "id": "Gryphe/MythoMax-L2-13b",
-      "last_updated": "2025-08-08",
+      "last_updated": "2023-08-10",
       "limit": {
         "context": 4096,
         "input": 4096,
@@ -659,8 +659,9 @@
       "name": "MythoMax 13B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-08-08",
+      "release_date": "2023-08-10",
       "structured_output": false,
+      "temperature": true,
       "tool_call": false
     },
     "LLM360/K2-Think": {
@@ -5524,8 +5525,8 @@
     "claw-high": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.7,
+        "cache_read": 0.2,
+        "input": 0.6,
         "output": 2.2
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
@@ -5564,9 +5565,9 @@
     "claw-low": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.13,
+        "cache_read": 0.2,
         "cache_write": 0.08333,
-        "input": 0.7,
+        "input": 0.6,
         "output": 2.2
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
@@ -5605,8 +5606,8 @@
     "claw-medium": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.7,
+        "cache_read": 0.2,
+        "input": 0.6,
         "output": 2.2
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
@@ -10064,8 +10065,8 @@
     "hermes-high": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.7,
+        "cache_read": 0.2,
+        "input": 0.6,
         "output": 2.2
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
@@ -10105,9 +10106,9 @@
     "hermes-low": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.13,
+        "cache_read": 0.2,
         "cache_write": 0.08333,
-        "input": 0.7,
+        "input": 0.6,
         "output": 2.2
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
@@ -10147,8 +10148,8 @@
     "hermes-medium": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.7,
+        "cache_read": 0.2,
+        "input": 0.6,
         "output": 2.2
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
@@ -10464,12 +10465,13 @@
     },
     "inclusionai/ling-3.0-flash": {
       "attachment": false,
+      "canonical_model_id": "inclusionai/ling-3.0-flash",
       "cost": {
         "cache_read": 0.015,
         "input": 0.075,
         "output": 0.22
       },
-      "description": "Ling-3.0-flash is a 124B-parameter Mixture-of-Experts model with approximately 5.1B parameters active per token. It prioritizes token efficiency and production-scale agentic inference, helping coding and tool-using agents complete more work within constrained latency and serving budgets.",
+      "description": "Hybrid-linear MoE reasoning model with 124B total and 5.1B active parameters for efficient agents",
       "family": "ling",
       "id": "inclusionai/ling-3.0-flash",
       "last_updated": "2026-07-23",
@@ -10487,23 +10489,25 @@
         ]
       },
       "name": "Ling 3.0 Flash",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
       "release_date": "2026-07-23",
       "structured_output": false,
+      "temperature": true,
       "tool_call": true
     },
     "inclusionai/ling-3.0-flash-vl": {
       "attachment": true,
+      "canonical_model_id": "inclusionai/ling-3.0-flash-vl",
       "cost": {
         "cache_read": 0.012,
         "input": 0.06,
         "output": 0.18
       },
-      "description": "Ling 3.0 Flash VL is inclusionAI's native multimodal Mixture-of-Experts model with 124B total parameters and 5.5B active parameters per token. It combines image and video understanding with reasoning and tool use for document analysis, charts, visual verification, and interface-based agent tasks. Thinking is enabled by default and can be turned off in settings.",
+      "description": "Native multimodal hybrid MoE model for image and video understanding, reasoning, and visual agents",
       "family": "ling",
       "id": "inclusionai/ling-3.0-flash-vl",
-      "last_updated": "2026-09-09",
+      "last_updated": "2026-09-10",
       "limit": {
         "context": 262144,
         "input": 262144,
@@ -10533,18 +10537,20 @@
           ]
         }
       ],
-      "release_date": "2026-09-09",
+      "release_date": "2026-09-10",
       "structured_output": false,
+      "temperature": true,
       "tool_call": true
     },
     "inclusionai/ling-3.0-flash:thinking": {
       "attachment": false,
+      "canonical_model_id": "inclusionai/ling-3.0-flash",
       "cost": {
         "cache_read": 0.015,
         "input": 0.075,
         "output": 0.22
       },
-      "description": "Ling-3.0-flash Thinking enables visible reasoning on inclusionAI's token-efficient 124B-parameter Mixture-of-Experts model for harder coding, tool use, planning, and production-scale agent workflows.",
+      "description": "Hybrid-linear MoE reasoning model with 124B total and 5.1B active parameters for efficient agents",
       "family": "ling",
       "id": "inclusionai/ling-3.0-flash:thinking",
       "last_updated": "2026-07-23",
@@ -10562,7 +10568,7 @@
         ]
       },
       "name": "Ling 3.0 Flash Thinking",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -10579,6 +10585,7 @@
       ],
       "release_date": "2026-07-23",
       "structured_output": false,
+      "temperature": true,
       "tool_call": true
     },
     "inclusionai/ling-3.1-flash": {
@@ -11531,15 +11538,15 @@
     },
     "microsoft/wizardlm-2-8x22b": {
       "attachment": true,
+      "canonical_model_id": "microsoft/wizardlm-2-8x22b",
       "cost": {
         "cache_read": 0.2465,
         "input": 0.493,
         "output": 0.493
       },
-      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
-      "family": "gpt",
+      "description": "Microsoft WizardLM instruction-tuned Mixtral MoE for multilingual dialogue and complex tasks",
       "id": "microsoft/wizardlm-2-8x22b",
-      "last_updated": "2025-04-15",
+      "last_updated": "2024-04-15",
       "limit": {
         "context": 65536,
         "input": 65536,
@@ -11557,8 +11564,9 @@
       "name": "WizardLM-2 8x22B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-04-15",
+      "release_date": "2024-04-15",
       "structured_output": false,
+      "temperature": true,
       "tool_call": false
     },
     "minimax/minimax-01": {
@@ -12729,15 +12737,16 @@
     },
     "moonshotai/kimi-k2-instruct": {
       "attachment": false,
+      "canonical_model_id": "moonshotai/kimi-k2-instruct",
       "cost": {
         "cache_read": 0.2,
         "input": 0.4,
         "output": 1.8
       },
-      "description": "Kimi model for long-context chat, coding, and agentic reasoning",
+      "description": "Non-thinking Kimi K2 MoE instruction model for coding and tool-using agents",
       "family": "kimi-k2",
       "id": "moonshotai/kimi-k2-instruct",
-      "last_updated": "2025-07-01",
+      "last_updated": "2025-07-11",
       "limit": {
         "context": 256000,
         "input": 256000,
@@ -12754,8 +12763,9 @@
       "name": "Kimi K2 Instruct",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-01-01",
+      "release_date": "2025-07-11",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "moonshotai/kimi-k2-instruct-0711": {
@@ -17159,9 +17169,9 @@
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-coder-next",
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.2,
-        "output": 1.5
+        "cache_read": 0.079764,
+        "input": 0.250251,
+        "output": 0.80293
       },
       "description": "Open-weight Qwen coding model for agents, repository edits, and multi-turn tool use",
       "family": "qwen",
@@ -22322,8 +22332,8 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.3",
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.7,
+        "cache_read": 0.2,
+        "input": 0.6,
         "output": 2.2
       },
       "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
@@ -22618,8 +22628,8 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.3",
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.7,
+        "cache_read": 0.2,
+        "input": 0.6,
         "output": 2.2
       },
       "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
@@ -22764,8 +22774,8 @@
     "z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.13,
-        "input": 0.7,
+        "cache_read": 0.2,
+        "input": 0.6,
         "output": 2.2
       },
       "description": "Compatibility alias that routes to the newest thinking GLM model. Currently routes to GLM 5.2 Thinking.",

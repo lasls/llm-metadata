@@ -1,16 +1,20 @@
 {
   "attachment": true,
+  "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
   "cost": {
     "input": 0.6,
     "output": 3.6
   },
-  "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+  "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
   "family": "qwen",
   "id": "qwen/qwen3.5-397b-a17b",
-  "last_updated": "2026-02-17",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
+  "last_updated": "2026-02-15",
   "limit": {
     "context": 262144,
-    "output": 64000
+    "output": 65536
   },
   "modalities": {
     "input": [
@@ -22,15 +26,18 @@
       "text"
     ]
   },
-  "name": "Qwen3.5-397B-A17B",
+  "name": "Qwen3.5 397B-A17B",
   "open_weights": true,
   "reasoning": true,
   "reasoning_options": [
     {
       "type": "toggle"
+    },
+    {
+      "type": "budget_tokens"
     }
   ],
-  "release_date": "2026-02-17",
+  "release_date": "2026-02-15",
   "structured_output": true,
   "temperature": true,
   "tool_call": true
