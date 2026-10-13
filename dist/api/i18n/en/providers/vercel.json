@@ -1699,40 +1699,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "anthropic/claude-3-haiku": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-3-haiku-20240307",
-      "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.3,
-        "input": 0.25,
-        "output": 1.25
-      },
-      "description": "Legacy model retained for compatibility with older integrations",
-      "family": "claude-haiku",
-      "id": "anthropic/claude-3-haiku",
-      "knowledge": "2023-08-31",
-      "last_updated": "2024-03-13",
-      "limit": {
-        "context": 200000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Haiku 3",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-03-13",
-      "temperature": true,
-      "tool_call": true
-    },
     "anthropic/claude-fable-5": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-fable-5",
@@ -1939,50 +1905,6 @@
       "release_date": "2026-10-07",
       "structured_output": true,
       "temperature": false,
-      "tool_call": true
-    },
-    "anthropic/claude-opus-4": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-opus-4-20250514",
-      "cost": {
-        "cache_read": 1.5,
-        "cache_write": 18.75,
-        "input": 15,
-        "output": 75
-      },
-      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
-      "family": "claude-opus",
-      "id": "anthropic/claude-opus-4",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 200000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Opus 4",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-05-22",
-      "temperature": true,
       "tool_call": true
     },
     "anthropic/claude-opus-4.5": {
@@ -4083,6 +4005,51 @@
             "low",
             "high",
             "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4.1-flash-fast": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
+      "cost": {
+        "cache_read": 0.014,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+      "family": "deepseek-flash",
+      "id": "deepseek/deepseek-v4.1-flash-fast",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1048576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash Fast",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
           ]
         }
       ],
@@ -6639,6 +6606,52 @@
         }
       ],
       "release_date": "2026-09-02",
+      "tool_call": true
+    },
+    "meta/muse-wonder-1.0": {
+      "attachment": true,
+      "canonical_model_id": "meta/muse-wonder-1.0",
+      "cost": {
+        "cache_read": 0.2,
+        "input": 4,
+        "output": 20
+      },
+      "description": "Open Llama multimodal model for image understanding and text reasoning",
+      "family": "muse",
+      "id": "meta/muse-wonder-1.0",
+      "last_updated": "2026-10-12",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Muse Wonder",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-10-12",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "microsoft/mai-transcribe-2": {
@@ -13483,6 +13496,7 @@
     },
     "spacexai/grok-imagine-image": {
       "attachment": false,
+      "canonical_model_id": "xai/grok-imagine-image",
       "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "grok",
       "id": "spacexai/grok-imagine-image",
@@ -13503,6 +13517,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-01-28",
+      "temperature": false,
       "tool_call": false
     },
     "spacexai/grok-imagine-image-2.0": {

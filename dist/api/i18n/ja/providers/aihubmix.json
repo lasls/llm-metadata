@@ -273,6 +273,70 @@
       "temperature": true,
       "tool_call": true
     },
+    "claude-haiku-5-5": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-haiku-5-5",
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.5,
+        "tiers": [
+          {
+            "cache_read": 0.05,
+            "cache_write": 0.625,
+            "input": 0.5,
+            "output": 2.5,
+            "tier": {
+              "size": 100000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
+      "family": "claude-haiku",
+      "id": "claude-haiku-5-5",
+      "interleaved": true,
+      "knowledge": "2026-06",
+      "last_updated": "2026-10-07",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Haiku 5.5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "claude-opus-4-5": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-opus-4-5",
@@ -303,6 +367,59 @@
         ]
       },
       "name": "Claude Opus 4.5 (latest)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-11-24",
+      "temperature": true,
+      "tool_call": true
+    },
+    "claude-opus-4-5-think": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-opus-4-5",
+      "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
+        "input": 5,
+        "output": 25
+      },
+      "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
+      "family": "claude-opus",
+      "id": "claude-opus-4-5-think",
+      "interleaved": true,
+      "knowledge": "2025-05",
+      "last_updated": "2025-11-24",
+      "limit": {
+        "context": 200000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Opus 4.5 Thinking",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -879,6 +996,69 @@
       "temperature": true,
       "tool_call": true
     },
+    "claude-sonnet-4-5-think": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-sonnet-4-5",
+      "cost": {
+        "cache_read": 0.33,
+        "cache_write": 4.125,
+        "context_over_200k": {
+          "cache_read": 0.66,
+          "cache_write": 8.25,
+          "input": 6.6,
+          "output": 24.75
+        },
+        "input": 3.3,
+        "output": 16.5,
+        "tiers": [
+          {
+            "cache_read": 0.66,
+            "cache_write": 8.25,
+            "input": 6.6,
+            "output": 24.75,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-4-5-think",
+      "interleaved": true,
+      "knowledge": "2025-07-31",
+      "last_updated": "2025-09-29",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 4.5 Thinking",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-09-29",
+      "temperature": true,
+      "tool_call": true
+    },
     "claude-sonnet-4-6": {
       "attachment": true,
       "cost": {
@@ -1076,6 +1256,54 @@
       "temperature": false,
       "tool_call": true
     },
+    "claude-sonnet-5-5": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-sonnet-5-5",
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "description": "Fast Claude model for everyday coding, agents, and knowledge work",
+      "family": "claude-sonnet",
+      "id": "claude-sonnet-5-5",
+      "interleaved": true,
+      "knowledge": "2026-06",
+      "last_updated": "2026-09-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 5.5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-28",
+      "temperature": false,
+      "tool_call": true
+    },
     "coding-glm-5.1": {
       "attachment": false,
       "cost": {
@@ -1149,6 +1377,49 @@
         }
       ],
       "release_date": "2026-04-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "coding-glm-5.2-free": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.2",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
+      "family": "glm",
+      "id": "coding-glm-5.2-free",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.2 (Coding, free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3078,6 +3349,45 @@
       "temperature": true,
       "tool_call": true
     },
+    "glm-4.7-flash-free": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.7-flash",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Budget GLM lane for fast coding help, routing, and everyday automation",
+      "family": "glm-flash",
+      "id": "glm-4.7-flash-free",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-04",
+      "last_updated": "2026-01-19",
+      "limit": {
+        "context": 200000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-4.7-Flash (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-01-19",
+      "temperature": true,
+      "tool_call": true
+    },
     "glm-5.2": {
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
@@ -4248,6 +4558,73 @@
       "temperature": false,
       "tool_call": true
     },
+    "gpt-6.1-sol": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-sol",
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.2,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
+        },
+        "input": 2,
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.2,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Near-Astra performance for complex coding, computer use, and professional work at a lower cost.",
+      "family": "gpt-sol",
+      "id": "gpt-6.1-sol",
+      "knowledge": "2026-04-30",
+      "last_updated": "2026-09-29",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.1 Sol",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-29",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "gpt-image-1.5": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-image-1.5",
@@ -4978,6 +5355,41 @@
       "temperature": false,
       "tool_call": true
     },
+    "ling-3.0-flash-free": {
+      "attachment": false,
+      "canonical_model_id": "inclusionai/ling-3.0-flash",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Hybrid-linear MoE reasoning model with 124B total and 5.1B active parameters for efficient agents",
+      "family": "ling",
+      "id": "ling-3.0-flash-free",
+      "last_updated": "2026-07-23",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.0 Flash (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-07-23",
+      "temperature": true,
+      "tool_call": true
+    },
     "longcat-2.0": {
       "attachment": false,
       "canonical_model_id": "meituan/longcat-2.0",
@@ -5441,6 +5853,193 @@
         }
       ],
       "release_date": "2026-09-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron-3-nano-omni-30b-a3b-reasoning-free": {
+      "attachment": true,
+      "canonical_model_id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Open Nemotron omni model combining reasoning with text, vision, and audio",
+      "family": "nemotron",
+      "id": "nemotron-3-nano-omni-30b-a3b-reasoning-free",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "last_updated": "2026-04-28",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Nano Omni 30B A3B Reasoning (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-04-28",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron-3-super-120b-a12b-free": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "family": "nemotron",
+      "id": "nemotron-3-super-120b-a12b-free",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B A12B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-03-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron-3-ultra-550b-a55b-free": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
+      "family": "nemotron",
+      "id": "nemotron-3-ultra-550b-a55b-free",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Ultra 550B A55B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-04",
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron-3.5-content-safety-free": {
+      "attachment": true,
+      "canonical_model_id": "nvidia/nemotron-3.5-content-safety",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
+      "family": "nemotron",
+      "id": "nemotron-3.5-content-safety-free",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Content Safety (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-06-04",
+      "temperature": true,
+      "tool_call": false
+    },
+    "nemotron-3.5-lightning-free": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3.5-lightning",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
+      "family": "nemotron",
+      "id": "nemotron-3.5-lightning-free",
+      "interleaved": {
+        "field": "reasoning_details"
+      },
+      "last_updated": "2026-08-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Lightning 30B A3B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-08-11",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
