@@ -4106,6 +4106,29 @@
       "release_date": "2026-09-23",
       "tool_call": true
     },
+    "fish-audio/drama-3": {
+      "attachment": false,
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "id": "fish-audio/drama-3",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "Drama 3",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-10-13",
+      "tool_call": false
+    },
     "fish-audio/s1": {
       "attachment": false,
       "description": "Speech generation model for controllable voice, narration, and audio delivery",
@@ -5087,6 +5110,51 @@
       "release_date": "2026-09-15",
       "tool_call": false
     },
+    "google/gemini-4-argon": {
+      "attachment": true,
+      "canonical_model_id": "google/gemini-4-argon",
+      "cost": {
+        "cache_read": 0.1,
+        "input": 2,
+        "output": 10
+      },
+      "description": "Gemini multimodal model for text, image, audio, video, and document tasks",
+      "family": "gemini",
+      "id": "google/gemini-4-argon",
+      "knowledge": "2026-03",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 4 Argon",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-13",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "google/gemini-embedding-001": {
       "attachment": false,
       "canonical_model_id": "google/gemini-embedding-001",
@@ -5757,8 +5825,9 @@
       "attachment": false,
       "canonical_model_id": "inclusionai/ling-3.1-flash",
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 0.9
       },
       "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "ling",
@@ -5777,46 +5846,6 @@
         ]
       },
       "name": "Ling 3.1 Flash",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-09-29",
-      "tool_call": true
-    },
-    "inclusionai/ling-3.1-flash-free": {
-      "attachment": false,
-      "canonical_model_id": "inclusionai/ling-3.1-flash",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-      "family": "ling",
-      "id": "inclusionai/ling-3.1-flash-free",
-      "last_updated": "2026-09-29",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Ling 3.1 Flash (Free)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -6128,6 +6157,48 @@
       "release_date": "2026-02-05",
       "temperature": true,
       "tool_call": false
+    },
+    "liquid/lfm2.5-24b-a2b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.1,
+        "output": 1
+      },
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "family": "liquid",
+      "id": "liquid/lfm2.5-24b-a2b",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 128000,
+        "output": 8200
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LFM2.5-24B-A2B",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-13",
+      "tool_call": true
     },
     "meituan/longcat-2.5-preview": {
       "attachment": true,
@@ -6558,7 +6629,8 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -6603,7 +6675,8 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -6647,7 +6720,8 @@
             "low",
             "medium",
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -6655,6 +6729,62 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "microsoft/mai-image-2.6": {
+      "attachment": false,
+      "cost": {
+        "input": 5,
+        "output": 38
+      },
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "family": "mai",
+      "id": "microsoft/mai-image-2.6",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "MAI-Image-2.6",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-10-13",
+      "tool_call": false
+    },
+    "microsoft/mai-image-2.6-flash": {
+      "attachment": false,
+      "cost": {
+        "input": 1.75,
+        "output": 19
+      },
+      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "family": "mai",
+      "id": "microsoft/mai-image-2.6-flash",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "name": "MAI-Image-2.6-Flash",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-10-13",
+      "tool_call": false
     },
     "microsoft/mai-transcribe-2": {
       "attachment": false,
@@ -8031,6 +8161,48 @@
           "max": 32768,
           "min": 1,
           "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-08-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-3.5-lightning-free": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3.5-lightning",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron model for efficient reasoning, coding, and specialized AI agents",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-3.5-lightning-free",
+      "last_updated": "2026-08-11",
+      "limit": {
+        "context": 1000000,
+        "output": 65000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Lightning Free",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-08-11",

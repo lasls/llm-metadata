@@ -2059,9 +2059,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.05,
-        "output": 1.28
+        "cache_read": 0.0182,
+        "input": 0.091,
+        "output": 0.182
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -2069,8 +2069,8 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1048576,
-        "output": 943718
+        "context": 1048575,
+        "output": 943717
       },
       "modalities": {
         "input": [
@@ -2287,7 +2287,7 @@
       "last_updated": "2026-09-10",
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -3349,6 +3349,55 @@
       "temperature": true,
       "tool_call": true
     },
+    "google/gemini-4-argon": {
+      "attachment": true,
+      "canonical_model_id": "google/gemini-4-argon",
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 0.1875,
+        "input": 2,
+        "output": 10,
+        "reasoning": 10
+      },
+      "description": "Gemini 4 Argon is Google's flagship reasoning model, built for complex software engineering, deep mathematical and scientific problem solving, and autonomous multi-step agents. Google trained it to keep context across...",
+      "family": "gemini",
+      "id": "google/gemini-4-argon",
+      "knowledge": "2026-03",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 4 Argon",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "google/gemini-nano-banana-2.1": {
       "attachment": true,
       "canonical_model_id": "google/gemini-nano-banana-2.1",
@@ -3901,99 +3950,19 @@
       "temperature": true,
       "tool_call": true
     },
-    "inclusionai/ling-3.0-flash-fin": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.015,
-        "input": 0.075,
-        "output": 0.22
-      },
-      "description": "Ling 3.0 Flash Fin is a finance-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for real-world investment...",
-      "family": "ling",
-      "id": "inclusionai/ling-3.0-flash-fin",
-      "last_updated": "2026-08-27",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "inclusionAI: Ling 3.0 Flash Fin",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-08-27",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "inclusionai/ling-3.0-flash-sante": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.015,
-        "input": 0.075,
-        "output": 0.22
-      },
-      "description": "Ling 3.0 Flash Sante is a health and medicine-focused mixture-of-experts model from InclusionAI, built on Ling 3.0 Flash with 5.1B active parameters out of 124B total. It is designed for...",
-      "family": "ling",
-      "id": "inclusionai/ling-3.0-flash-sante",
-      "last_updated": "2026-09-04",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "inclusionAI: Ling 3.0 Flash Sante",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-09-04",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "inclusionai/ling-3.0-flash-vl": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.075,
-        "output": 0.22
+        "cache_read": 0.012,
+        "input": 0.06,
+        "output": 0.18
       },
       "description": "Ling 3.0 Flash VL builds on Ling 3.0 Flash (124B total / 5.5B active MoE from InclusionAI), further strengthening its language capabilities while adding native visual perception and advanced visual...",
       "family": "ling",
       "id": "inclusionai/ling-3.0-flash-vl",
       "last_updated": "2026-09-10",
       "limit": {
-        "context": 262144,
+        "context": 131072,
         "output": 32768
       },
       "modalities": {
@@ -4026,8 +3995,9 @@
     "inclusionai/ling-3.1-flash": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 0.9
       },
       "description": "Ling 3.1 Flash is a hybrid reasoning mixture-of-experts model from inclusionAI, with 25B active parameters out of 560B total.",
       "family": "ling",
@@ -4330,6 +4300,45 @@
         }
       ],
       "release_date": "2026-08-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "liquid/lfm-2.5-24b-a2b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.05,
+        "output": 0.7
+      },
+      "description": "LFM2.5-24B-A2B is a mixture-of-experts reasoning model from Liquid AI with 24B total and 2.45B active parameters. It always reasons before answering and is built for agents that call tools. Liquid...",
+      "family": "liquid",
+      "id": "liquid/lfm-2.5-24b-a2b",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LiquidAI: LFM2.5-24B-A2B",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-13",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -11133,8 +11142,8 @@
       "id": "qwen/qwen3.5-35b-a3b",
       "last_updated": "2026-02-23",
       "limit": {
-        "context": 262144,
-        "output": 32768
+        "context": 256000,
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -12986,9 +12995,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
@@ -13071,9 +13080,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.041,
-        "input": 0.83,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
       "family": "Hy",
@@ -15065,9 +15074,9 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.008232,
-        "input": 0.25872,
-        "output": 0.77616
+        "cache_read": 0.007938,
+        "input": 0.24948,
+        "output": 0.74844
       },
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "family": "deepseek",
@@ -15243,9 +15252,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.55,
-        "input": 0.73,
-        "output": 10
+        "cache_read": 0.3,
+        "input": 0.72,
+        "output": 24
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -15605,9 +15614,9 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.06,
-        "input": 0.055,
-        "output": 5
+        "cache_read": 0.059,
+        "input": 0.079,
+        "output": 4.8
       },
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "family": "glm",
