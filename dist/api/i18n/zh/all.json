@@ -140927,7 +140927,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -142102,8 +142102,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-3-27b-it",
         "cost": {
-          "input": 0.08,
-          "output": 0.16
+          "cache_read": 0.04,
+          "input": 0.07,
+          "output": 0.275
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -150976,6 +150977,68 @@
         "temperature": true,
         "tool_call": false
       },
+      "scaledown/extract": {
+        "attachment": true,
+        "cost": {
+          "input": 0.05,
+          "output": 0
+        },
+        "description": "Extract is a description-driven entity extraction model from ScaleDown. Instead of a fixed set of entity types, callers describe the fields they want in plain English through `provider.options.scaledown.entities`, and the...",
+        "id": "scaledown/extract",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 1000000,
+          "output": 900000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "ScaleDown: Extract",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "scaledown/summarize": {
+        "attachment": true,
+        "cost": {
+          "input": 0.05,
+          "output": 0
+        },
+        "description": "Summarize is an abstractive summarization model from ScaleDown. It condenses long text and documents into a fluent, faithful rewrite rather than lifting sentences from the source, and is suited for...",
+        "id": "scaledown/summarize",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 1000000,
+          "output": 4000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "ScaleDown: Summarize",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "temperature": false,
+        "tool_call": false
+      },
       "stealth/claude-opus-4.6": {
         "attachment": true,
         "cost": {
@@ -151563,9 +151626,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -151648,9 +151711,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.0378,
-          "input": 0.7506,
-          "output": 2.2509
+          "cache_read": 0.041,
+          "input": 0.83,
+          "output": 2.501
         },
         "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
         "family": "Hy",
@@ -153600,8 +153663,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.0054,
-          "input": 0.045,
-          "output": 0.891
+          "input": 0.0441,
+          "output": 0.765
         },
         "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
         "family": "deepseek-flash",
@@ -153642,9 +153705,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.2,
-          "input": 0.25,
-          "output": 5
+          "cache_read": 0.008232,
+          "input": 0.25872,
+          "output": 0.77616
         },
         "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
         "family": "deepseek",
@@ -153652,7 +153715,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -153822,7 +153885,7 @@
         "cost": {
           "cache_read": 0.55,
           "input": 0.73,
-          "output": 13.5
+          "output": 10
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -172456,55 +172519,6 @@
           ]
         },
         "name": "DeepSeek V4 Flash (Fireworks AI)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-04-24",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "fireworks/deepseek-v4-pro": {
-        "attachment": false,
-        "canonical_model_id": "deepseek/deepseek-v4-pro",
-        "cost": {
-          "cache_read": 0.044,
-          "input": 1.32,
-          "output": 3.96
-        },
-        "description": "Open MoE flagship with million-token context for coding and long agent runs",
-        "family": "deepseek-thinking",
-        "id": "fireworks/deepseek-v4-pro",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2025-05",
-        "last_updated": "2026-04-24",
-        "limit": {
-          "context": 1048576,
-          "output": 393216
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Pro (Fireworks AI)",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
@@ -203742,7 +203756,7 @@
         "limit": {
           "context": 16384,
           "input": 16384,
-          "output": 8192
+          "output": 4096
         },
         "modalities": {
           "input": [
@@ -206230,6 +206244,37 @@
         "structured_output": false,
         "tool_call": false
       },
+      "ateron/gemma-4-dark-thoughts-v2-31b": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.1,
+          "output": 0.45
+        },
+        "description": "Ateron's second Dark Thoughts merge combines Dark Scarlett V2, MeroMero V2, and Scotoma 2 for creative dialogue and extended character roleplay. This text-only Gemma 4 31B deployment supports a 65,536-token context window and up to 8,192 output tokens.",
+        "family": "gemma",
+        "id": "ateron/gemma-4-dark-thoughts-v2-31b",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 65536,
+          "input": 65536,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 Dark Thoughts V2 31B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "tool_call": false
+      },
       "auto-model": {
         "attachment": false,
         "cost": {
@@ -207307,9 +207352,9 @@
       "deepseek/deepseek-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1,
-          "input": 0.48,
-          "output": 1.98
+          "cache_read": 0.04,
+          "input": 1.1,
+          "output": 2.5
         },
         "description": "DeepSeek chat model for instruction following, coding, and analysis",
         "family": "deepseek",
@@ -207728,6 +207773,47 @@
         "temperature": true,
         "tool_call": true
       },
+      "deepseek/deepseek-v4-flash-vision-exp-cybersecurity": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.075,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "A cybersecurity-focused variant of DeepSeek V4 Flash Vision Exp, with image understanding, tool calling, optional reasoning, and a 1,048,576-token context window.",
+        "family": "deepseek",
+        "id": "deepseek/deepseek-v4-flash-vision-exp-cybersecurity",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4 Flash Vision Exp Cybersecurity",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "tool_call": true
+      },
       "deepseek/deepseek-v4-flash:thinking": {
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-flash",
@@ -207820,9 +207906,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
         "cost": {
-          "cache_read": 0.1,
-          "input": 0.48,
-          "output": 1.98
+          "cache_read": 0.04,
+          "input": 1.1,
+          "output": 2.5
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -207864,9 +207950,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
         "cost": {
-          "cache_read": 0.1,
-          "input": 0.48,
-          "output": 1.98
+          "cache_read": 0.04,
+          "input": 1.1,
+          "output": 2.5
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -214464,6 +214550,98 @@
         "release_date": "2026-05-12",
         "structured_output": true,
         "tool_call": true
+      },
+      "nbeerbower/gemma4-gutenberg-31b": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.1,
+          "output": 0.45
+        },
+        "description": "nbeerbower's Gemma 4 31B finetune for literary fiction, character interiority, and controlled narrative pacing. Its text decoder was trained with ORPO on 14,816 Athanorlite-DPO preference pairs. This text-only deployment supports a 65,536-token context window and up to 8,192 output tokens.",
+        "family": "gemma",
+        "id": "nbeerbower/gemma4-gutenberg-31b",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 65536,
+          "input": 65536,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 Gutenberg 31B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "tool_call": false
+      },
+      "nimbz/gemma-4-giftige-blume-31b-v2": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.1,
+          "output": 0.45
+        },
+        "description": "Nimbz's second Giftige-Blume merge focuses on character roleplay, creative prose, and stricter prompt adherence. It combines storymaxxed, Equinox, Mero-Artemis, Musica, Ortenzya, Gemopus, and Sprinkle. This text-only Gemma 4 31B deployment supports a 65,536-token context window and up to 8,192 output tokens.",
+        "family": "gemma",
+        "id": "nimbz/gemma-4-giftige-blume-31b-v2",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 65536,
+          "input": 65536,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 4 Giftige-Blume V2 31B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "tool_call": false
+      },
+      "nimbz/schattenblume-31b": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.05,
+          "input": 0.1,
+          "output": 0.45
+        },
+        "description": "Nimbz's Gemma 4 31B merge for character roleplay, expressive prose, and creative dialogue. It combines Scotoma 2, Giftige-Blume v1, and MeroMero v2. This text-only deployment supports a 65,536-token context window and up to 8,192 output tokens.",
+        "id": "nimbz/schattenblume-31b",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 65536,
+          "input": 65536,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Schattenblume 31B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "tool_call": false
       },
       "nothingiisreal/L3.1-70B-Celeste-V0.1-BF16": {
         "attachment": false,
@@ -226263,8 +226441,8 @@
         "attachment": true,
         "canonical_model_id": "zhipuai/glm-5.3-flash",
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.15,
+          "cache_read": 0.012,
+          "input": 0.08,
           "output": 0.5
         },
         "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
@@ -259136,9 +259314,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.0054,
-          "input": 0.045,
-          "output": 0.891
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -259147,7 +259325,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -260445,9 +260623,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.0425,
-          "input": 0.0765,
-          "output": 0.255
+          "cache_read": 0.05,
+          "input": 0.09,
+          "output": 0.3
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -263035,7 +263213,7 @@
         "cost": {
           "cache_read": 0.55,
           "input": 0.73,
-          "output": 13.5
+          "output": 10
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi-k3",
@@ -269439,6 +269617,68 @@
         "temperature": true,
         "tool_call": false
       },
+      "scaledown/extract": {
+        "attachment": true,
+        "cost": {
+          "input": 0.04,
+          "output": 0
+        },
+        "description": "Multimodal model for analyzing text, images, documents, and rich media",
+        "id": "scaledown/extract",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 1000000,
+          "output": 900000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Extract",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "temperature": false,
+        "tool_call": false
+      },
+      "scaledown/summarize": {
+        "attachment": true,
+        "cost": {
+          "input": 0.04,
+          "output": 0
+        },
+        "description": "Multimodal model for analyzing text, images, documents, and rich media",
+        "id": "scaledown/summarize",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 1000000,
+          "output": 4000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Summarize",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "temperature": false,
+        "tool_call": false
+      },
       "stepfun/step-3.5-flash": {
         "attachment": false,
         "canonical_model_id": "stepfun/step-3.5-flash",
@@ -271821,8 +272061,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.0054,
-          "input": 0.045,
-          "output": 0.891
+          "input": 0.0441,
+          "output": 0.765
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -271865,9 +272105,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.2,
-          "input": 0.25,
-          "output": 5
+          "cache_read": 0.008232,
+          "input": 0.25872,
+          "output": 0.77616
         },
         "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
         "family": "deepseek",
@@ -271875,7 +272115,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -272067,7 +272307,7 @@
         "cost": {
           "cache_read": 0.55,
           "input": 0.73,
-          "output": 13.5
+          "output": 10
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -317344,7 +317584,7 @@
           "input": 0.959,
           "output": 2.741
         },
-        "description": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
+        "description": "Step 5 Preview 是阶跃星辰面向编程、软件工程与专业知识工作的旗舰模型，采用总参数 600B、单 token 激活 27B 的稀疏 MoE 架构，支持 100 万 token 上下文与最高 6.4 万 token 输出。模型可处理文本、图片和视频输入，并支持工具调用、结构化 JSON 输出、三档推理强度、流式输出与提示缓存。",
         "id": "step-5-preview",
         "interleaved": {
           "field": "reasoning_content"

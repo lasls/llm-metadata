@@ -2695,7 +2695,7 @@
       "limit": {
         "context": 16384,
         "input": 16384,
-        "output": 8192
+        "output": 4096
       },
       "modalities": {
         "input": [
@@ -5183,6 +5183,37 @@
       "structured_output": false,
       "tool_call": false
     },
+    "ateron/gemma-4-dark-thoughts-v2-31b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.1,
+        "output": 0.45
+      },
+      "description": "Ateron's second Dark Thoughts merge combines Dark Scarlett V2, MeroMero V2, and Scotoma 2 for creative dialogue and extended character roleplay. This text-only Gemma 4 31B deployment supports a 65,536-token context window and up to 8,192 output tokens.",
+      "family": "gemma",
+      "id": "ateron/gemma-4-dark-thoughts-v2-31b",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 65536,
+        "input": 65536,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 Dark Thoughts V2 31B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-10-13",
+      "structured_output": false,
+      "tool_call": false
+    },
     "auto-model": {
       "attachment": false,
       "cost": {
@@ -6260,9 +6291,9 @@
     "deepseek/deepseek-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.48,
-        "output": 1.98
+        "cache_read": 0.04,
+        "input": 1.1,
+        "output": 2.5
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -6681,6 +6712,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek/deepseek-v4-flash-vision-exp-cybersecurity": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "A cybersecurity-focused variant of DeepSeek V4 Flash Vision Exp, with image understanding, tool calling, optional reasoning, and a 1,048,576-token context window.",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v4-flash-vision-exp-cybersecurity",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash Vision Exp Cybersecurity",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-10-13",
+      "structured_output": false,
+      "tool_call": true
+    },
     "deepseek/deepseek-v4-flash:thinking": {
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash",
@@ -6773,9 +6845,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.48,
-        "output": 1.98
+        "cache_read": 0.04,
+        "input": 1.1,
+        "output": 2.5
       },
       "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
       "family": "deepseek-thinking",
@@ -6817,9 +6889,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.48,
-        "output": 1.98
+        "cache_read": 0.04,
+        "input": 1.1,
+        "output": 2.5
       },
       "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
       "family": "deepseek-thinking",
@@ -13417,6 +13489,98 @@
       "release_date": "2026-05-12",
       "structured_output": true,
       "tool_call": true
+    },
+    "nbeerbower/gemma4-gutenberg-31b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.1,
+        "output": 0.45
+      },
+      "description": "nbeerbower's Gemma 4 31B finetune for literary fiction, character interiority, and controlled narrative pacing. Its text decoder was trained with ORPO on 14,816 Athanorlite-DPO preference pairs. This text-only deployment supports a 65,536-token context window and up to 8,192 output tokens.",
+      "family": "gemma",
+      "id": "nbeerbower/gemma4-gutenberg-31b",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 65536,
+        "input": 65536,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 Gutenberg 31B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-10-13",
+      "structured_output": false,
+      "tool_call": false
+    },
+    "nimbz/gemma-4-giftige-blume-31b-v2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.1,
+        "output": 0.45
+      },
+      "description": "Nimbz's second Giftige-Blume merge focuses on character roleplay, creative prose, and stricter prompt adherence. It combines storymaxxed, Equinox, Mero-Artemis, Musica, Ortenzya, Gemopus, and Sprinkle. This text-only Gemma 4 31B deployment supports a 65,536-token context window and up to 8,192 output tokens.",
+      "family": "gemma",
+      "id": "nimbz/gemma-4-giftige-blume-31b-v2",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 65536,
+        "input": 65536,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 Giftige-Blume V2 31B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-10-13",
+      "structured_output": false,
+      "tool_call": false
+    },
+    "nimbz/schattenblume-31b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.1,
+        "output": 0.45
+      },
+      "description": "Nimbz's Gemma 4 31B merge for character roleplay, expressive prose, and creative dialogue. It combines Scotoma 2, Giftige-Blume v1, and MeroMero v2. This text-only deployment supports a 65,536-token context window and up to 8,192 output tokens.",
+      "id": "nimbz/schattenblume-31b",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 65536,
+        "input": 65536,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Schattenblume 31B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-10-13",
+      "structured_output": false,
+      "tool_call": false
     },
     "nothingiisreal/L3.1-70B-Celeste-V0.1-BF16": {
       "attachment": false,
