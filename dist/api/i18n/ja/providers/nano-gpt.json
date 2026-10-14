@@ -5209,7 +5209,16 @@
       },
       "name": "Gemma 4 Dark Thoughts V2 31B",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-10-13",
       "structured_output": false,
       "tool_call": false
@@ -6291,9 +6300,9 @@
     "deepseek/deepseek-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.04,
-        "input": 1.1,
-        "output": 2.5
+        "cache_read": 0.1,
+        "input": 0.48,
+        "output": 1.98
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -6671,9 +6680,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4-flash-vision-exp",
       "cost": {
-        "cache_read": 0.014,
-        "input": 0.44,
-        "output": 1.32
+        "cache_read": 0.007,
+        "input": 0.22,
+        "output": 0.66
       },
       "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
       "family": "deepseek-flash",
@@ -6845,9 +6854,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
       "cost": {
-        "cache_read": 0.04,
-        "input": 1.1,
-        "output": 2.5
+        "cache_read": 0.1,
+        "input": 0.48,
+        "output": 1.98
       },
       "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
       "family": "deepseek-thinking",
@@ -6889,9 +6898,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
       "cost": {
-        "cache_read": 0.04,
-        "input": 1.1,
-        "output": 2.5
+        "cache_read": 0.1,
+        "input": 0.48,
+        "output": 1.98
       },
       "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
       "family": "deepseek-thinking",
@@ -9834,7 +9843,6 @@
         {
           "type": "effort",
           "values": [
-            "minimal",
             "low",
             "medium",
             "high"
@@ -11014,6 +11022,38 @@
         }
       ],
       "release_date": "2026-08-12",
+      "structured_output": true,
+      "tool_call": true
+    },
+    "liquid/lfm-2.5-24b-a2b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.05,
+        "output": 0.7
+      },
+      "description": "Liquid AI's text-only mixture-of-experts model for reasoning and tool-using agents, with 24B total and 2.45B active parameters. It always thinks before answering and supports structured output. Pair it with retrieval for knowledge-heavy tasks. Open weights use the LFM Open License v1.0, with a $10M annual-revenue commercial threshold; hosted API use is subject to separate service terms that permit retention and use of prompts and responses for model training.",
+      "family": "liquid",
+      "id": "liquid/lfm-2.5-24b-a2b",
+      "last_updated": "2026-10-14",
+      "limit": {
+        "context": 128000,
+        "input": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LFM2.5 24B A2B",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-10-14",
       "structured_output": true,
       "tool_call": true
     },
@@ -13597,7 +13637,16 @@
       },
       "name": "Gemma 4 Giftige-Blume V2 31B",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-10-13",
       "structured_output": false,
       "tool_call": false
@@ -13627,7 +13676,16 @@
       },
       "name": "Schattenblume 31B",
       "open_weights": true,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-10-13",
       "structured_output": false,
       "tool_call": false
@@ -20411,39 +20469,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "unbiased/pareto": {
-      "attachment": true,
-      "canonical_model_id": "unbiased/pareto",
-      "cost": {
-        "cache_read": 0.25,
-        "input": 2.5,
-        "output": 7.5
-      },
-      "description": "Blended multimodal model that runs multiple language models in parallel and returns a synthesized answer",
-      "id": "unbiased/pareto",
-      "last_updated": "2026-09-17",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Pareto",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-09-17",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "unbiased/pareto-26.10-preview": {
       "attachment": true,
       "cost": {
@@ -20472,6 +20497,37 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-10-01",
+      "structured_output": false,
+      "tool_call": true
+    },
+    "unbiased/pareto-26.9": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2.5,
+        "output": 7.5
+      },
+      "description": "Pareto 26.9 is an experimental multimodal composite model from Unbiased AI for research, coding, agentic workflows, and general-purpose tasks. It runs several frontier and open models for each request and returns a single selected or synthesized answer. This experimental release supports text and image input, tool calling, a 262K-token context window, and up to 131K output tokens. Its underlying model mix and behavior may change as it is evaluated. Request content may be retained for abuse prevention and security monitoring for up to 30 days, and is not used for model training without explicit consent.",
+      "id": "unbiased/pareto-26.9",
+      "last_updated": "2026-09-18",
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Pareto 26.9",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-09-18",
       "structured_output": false,
       "tool_call": true
     },
