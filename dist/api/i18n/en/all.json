@@ -109432,6 +109432,53 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-4-argon": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-argon",
+        "cost": {
+          "cache_read": 0.1,
+          "input": 2,
+          "output": 10
+        },
+        "description": "Google's flagship reasoning model for complex software engineering, deep math and science, and long-horizon autonomous agents",
+        "family": "gemini",
+        "id": "gemini-4-argon",
+        "knowledge": "2026-03",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Argon",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-10-13",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "gpt-5-mini": {
         "attachment": true,
         "canonical_model_id": "openai/gpt-5-mini",
@@ -144288,8 +144335,8 @@
         "id": "minimax/minimax-m2",
         "last_updated": "2025-10-27",
         "limit": {
-          "context": 196608,
-          "output": 176947
+          "context": 204800,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -150851,7 +150898,7 @@
         "id": "qwen/qwen3.8-2.4t-a95b",
         "last_updated": "2026-08-12",
         "limit": {
-          "context": 1048576,
+          "context": 1000000,
           "output": 131072
         },
         "modalities": {
@@ -152149,9 +152196,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -152234,9 +152281,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.0378,
-          "input": 0.7506,
-          "output": 2.2509
+          "cache_read": 0.041,
+          "input": 0.83,
+          "output": 2.501
         },
         "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
         "family": "Hy",
@@ -152501,38 +152548,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "unbiased/pareto": {
-        "attachment": true,
-        "canonical_model_id": "unbiased/pareto",
-        "cost": {
-          "cache_read": 0.25,
-          "input": 2.5,
-          "output": 7.5
-        },
-        "description": "Blended multimodal model that runs multiple language models in parallel and returns a synthesized answer",
-        "id": "unbiased/pareto",
-        "last_updated": "2026-09-17",
-        "limit": {
-          "context": 262144,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Pareto",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-09-17",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "unbiased/pareto-26.10-preview": {
         "attachment": true,
         "cost": {
@@ -152556,10 +152571,41 @@
             "text"
           ]
         },
-        "name": "Pareto 26.10 Preview",
+        "name": "Pareto 26.10 Preview (retires Oct 15)",
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-10-01",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "unbiased/pareto-26.9": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.",
+        "id": "unbiased/pareto-26.9",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Pareto 26.9",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-10-13",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -153713,8 +153759,8 @@
         "id": "z-ai/glm-5.1",
         "last_updated": "2026-04-07",
         "limit": {
-          "context": 200000,
-          "output": 128000
+          "context": 202745,
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -154186,8 +154232,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.0054,
-          "input": 0.0441,
-          "output": 0.765
+          "input": 0.0369,
+          "output": 0.891
         },
         "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
         "family": "deepseek-flash",
@@ -154228,16 +154274,16 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.007938,
-          "input": 0.24948,
-          "output": 0.74844
+          "cache_read": 0.15,
+          "input": 0.2,
+          "output": 6
         },
         "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
         "family": "deepseek",
         "id": "~deepseek/deepseek-pro-latest",
         "last_updated": "2026-09-14",
         "limit": {
-          "context": 1048576,
+          "context": 524288,
           "output": 393216
         },
         "modalities": {
@@ -154406,9 +154452,9 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
-          "input": 0.72,
-          "output": 24
+          "cache_read": 0.28,
+          "input": 0.7,
+          "output": 13.5
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -154678,6 +154724,37 @@
         "temperature": false,
         "tool_call": true
       },
+      "~unbiased/pareto-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "This model always redirects to the latest model in the Pareto family.",
+        "id": "~unbiased/pareto-latest",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Pareto Latest",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "~x-ai/grok-latest": {
         "attachment": true,
         "cost": {
@@ -154726,7 +154803,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.0108,
-          "input": 0.0261,
+          "input": 0.036,
           "output": 0.9
         },
         "description": "This model always redirects to the latest model in the GLM Flash family.",
@@ -154768,9 +154845,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.059,
-          "input": 0.079,
-          "output": 4.8
+          "cache_read": 0.0586,
+          "input": 0.063,
+          "output": 4.4
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
@@ -154778,7 +154855,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -168994,40 +169071,6 @@
           ]
         },
         "name": "GPT-4.1 Mini (Azure)",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-04-14",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "azure/gpt-4.1-nano": {
-        "attachment": true,
-        "canonical_model_id": "openai/gpt-4.1-nano",
-        "cost": {
-          "cache_read": 0.025,
-          "input": 0.1,
-          "output": 0.4
-        },
-        "description": "Tiny GPT-4.1 option for classification, routing, and very high-volume tasks",
-        "family": "gpt-nano",
-        "id": "azure/gpt-4.1-nano",
-        "knowledge": "2024-04",
-        "last_updated": "2025-04-14",
-        "limit": {
-          "context": 1000000,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GPT-4.1 Nano (Azure)",
         "open_weights": false,
         "reasoning": false,
         "release_date": "2025-04-14",
@@ -208428,9 +208471,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4-flash-vision-exp",
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.22,
-          "output": 0.66
+          "cache_read": 0.014,
+          "input": 0.44,
+          "output": 1.32
         },
         "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
         "family": "deepseek-flash",
@@ -214885,9 +214928,9 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k2.6",
         "cost": {
-          "cache_read": 0.125,
-          "input": 0.5,
-          "output": 2.6
+          "cache_read": 0.099,
+          "input": 0.441,
+          "output": 2.45
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -214920,9 +214963,9 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k2.6",
         "cost": {
-          "cache_read": 0.125,
-          "input": 0.5,
-          "output": 2.6
+          "cache_read": 0.099,
+          "input": 0.441,
+          "output": 2.45
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -234671,6 +234714,52 @@
         "release_date": "2026-05-29",
         "structured_output": true,
         "temperature": true,
+        "tool_call": true
+      },
+      "stepfun/step-5-preview": {
+        "attachment": true,
+        "canonical_model_id": "stepfun/step-5-preview",
+        "cost": {
+          "cache_read": 0.1,
+          "input": 1,
+          "output": 2.7
+        },
+        "description": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
+        "id": "stepfun/step-5-preview",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-20",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Step 5 Preview",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-16",
+        "structured_output": true,
         "tool_call": true
       },
       "tencent/hy3": {
@@ -260030,9 +260119,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-pro",
         "cost": {
-          "cache_read": 0.033655,
-          "input": 0.403854,
-          "output": 0.807708
+          "cache_read": 0.079605,
+          "input": 0.95526,
+          "output": 1.91052
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -260078,9 +260167,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
         "cost": {
-          "cache_read": 0.022,
-          "input": 0.66,
-          "output": 1.98
+          "cache_read": 0.044,
+          "input": 1.32,
+          "output": 3.96
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -260124,8 +260213,8 @@
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
           "cache_read": 0.0054,
-          "input": 0.0441,
-          "output": 0.765
+          "input": 0.0369,
+          "output": 0.891
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -262903,8 +262992,8 @@
         "attachment": false,
         "canonical_model_id": "minimax/MiniMax-M2",
         "cost": {
-          "input": 0.3,
-          "output": 1.2
+          "input": 0.255,
+          "output": 1.02
         },
         "description": "Efficient open MiniMax model built for coding agents and tool-heavy workflows",
         "family": "minimax",
@@ -262915,7 +263004,7 @@
         "last_updated": "2025-10-27",
         "limit": {
           "context": 204800,
-          "output": 176947
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -264030,9 +264119,9 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k3",
         "cost": {
-          "cache_read": 0.55,
-          "input": 0.73,
-          "output": 10
+          "cache_read": 0.28,
+          "input": 0.7,
+          "output": 13.5
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi-k3",
@@ -269182,9 +269271,9 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
         "cost": {
-          "cache_read": 0.225,
-          "input": 0.55,
-          "output": 3.5
+          "cache_read": 0.3,
+          "input": 0.5,
+          "output": 3.6
         },
         "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
         "family": "qwen",
@@ -270752,9 +270841,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -270837,9 +270926,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.0378,
-          "input": 0.7506,
-          "output": 2.2509
+          "cache_read": 0.042,
+          "input": 0.834,
+          "output": 2.501
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -271153,38 +271242,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "unbiased/pareto": {
-        "attachment": true,
-        "canonical_model_id": "unbiased/pareto",
-        "cost": {
-          "cache_read": 0.25,
-          "input": 2.5,
-          "output": 7.5
-        },
-        "description": "Blended multimodal model that runs multiple language models in parallel and returns a synthesized answer",
-        "id": "unbiased/pareto",
-        "last_updated": "2026-09-17",
-        "limit": {
-          "context": 262144,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Pareto",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-09-17",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "unbiased/pareto-26.10-preview": {
         "attachment": true,
         "cost": {
@@ -271212,6 +271269,37 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2026-10-01",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "unbiased/pareto-26.9": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "Multimodal model for analyzing text, images, documents, and rich media",
+        "id": "unbiased/pareto-26.9",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Pareto 26.9",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-10-13",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -272384,9 +272472,9 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.1",
         "cost": {
-          "cache_read": 0.1794,
-          "input": 0.966,
-          "output": 3.036
+          "cache_read": 0.247,
+          "input": 1.33,
+          "output": 4.18
         },
         "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
         "family": "glm",
@@ -272397,7 +272485,7 @@
         "last_updated": "2026-04-07",
         "limit": {
           "context": 204800,
-          "output": 128000
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -272514,7 +272602,7 @@
         "canonical_model_id": "zhipuai/glm-5.3-flash",
         "cost": {
           "cache_read": 0.0108,
-          "input": 0.0261,
+          "input": 0.036,
           "output": 0.9
         },
         "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
@@ -272880,8 +272968,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.0054,
-          "input": 0.0441,
-          "output": 0.765
+          "input": 0.0369,
+          "output": 0.891
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -272924,9 +273012,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.007938,
-          "input": 0.24948,
-          "output": 0.74844
+          "cache_read": 0.15,
+          "input": 0.2,
+          "output": 6
         },
         "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
         "family": "deepseek",
@@ -273124,9 +273212,9 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.3,
-          "input": 0.72,
-          "output": 24
+          "cache_read": 0.28,
+          "input": 0.7,
+          "output": 13.5
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -273474,6 +273562,37 @@
         "temperature": false,
         "tool_call": true
       },
+      "~unbiased/pareto-latest": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 7.5
+        },
+        "description": "Multimodal model for analyzing text, images, documents, and rich media",
+        "id": "~unbiased/pareto-latest",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 262144,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Pareto Latest",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-10-13",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
       "~x-ai/grok-latest": {
         "attachment": true,
         "cost": {
@@ -273538,7 +273657,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.0108,
-          "input": 0.0261,
+          "input": 0.036,
           "output": 0.9
         },
         "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
@@ -273580,9 +273699,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.059,
-          "input": 0.079,
-          "output": 4.8
+          "cache_read": 0.0586,
+          "input": 0.063,
+          "output": 4.4
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -273590,7 +273709,7 @@
         "last_updated": "2026-08-19",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -293609,7 +293728,7 @@
         "tool_call": true
       },
       "deepseek/deepseek-v4.1-flash": {
-        "attachment": false,
+        "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
           "cache_read": 0.03,
@@ -293628,7 +293747,8 @@
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
@@ -342391,9 +342511,9 @@
       "liquid/lfm2.5-24b-a2b": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.05,
-          "input": 0.1,
-          "output": 1
+          "cache_read": 0.025,
+          "input": 0.05,
+          "output": 0.7
         },
         "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
         "family": "liquid",
