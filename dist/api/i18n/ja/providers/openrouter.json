@@ -979,64 +979,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "anthropic/claude-sonnet-4": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "context_over_200k": {
-          "cache_read": 0.6,
-          "cache_write": 7.5,
-          "input": 6,
-          "output": 22.5
-        },
-        "input": 3,
-        "output": 15,
-        "tiers": [
-          {
-            "cache_read": 0.6,
-            "cache_write": 7.5,
-            "input": 6,
-            "output": 22.5,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-      "family": "claude-sonnet",
-      "id": "anthropic/claude-sonnet-4",
-      "knowledge": "2025-01-31",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 4",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-05-22",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "anthropic/claude-sonnet-4.5": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-sonnet-4-5",
@@ -2283,9 +2225,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.079605,
-        "input": 0.95526,
-        "output": 1.91052
+        "cache_read": 0.035902,
+        "input": 0.430824,
+        "output": 0.861648
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -5962,8 +5904,8 @@
       "attachment": true,
       "canonical_model_id": "mistral/mistral-small-3.2-24b-instruct",
       "cost": {
-        "input": 0.075,
-        "output": 0.2
+        "input": 0.09375,
+        "output": 0.25
       },
       "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral-small",
@@ -6974,6 +6916,43 @@
       ],
       "release_date": "2026-08-11",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-3.5-super-vl:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-3.5-super-vl:free",
+      "last_updated": "2026-10-15",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3.5 Super VL (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-10-15",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -14675,8 +14654,8 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
       "cost": {
-        "cache_read": 0.019,
-        "input": 0.02,
+        "cache_read": 0.059,
+        "input": 0.06,
         "output": 7
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
@@ -14722,8 +14701,8 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.3",
       "cost": {
-        "cache_read": 0.029,
-        "input": 0.03,
+        "cache_read": 0.119,
+        "input": 0.12,
         "output": 4.8
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
@@ -15175,8 +15154,8 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.23,
-        "input": 0.225,
+        "cache_read": 0.13,
+        "input": 0.1307,
         "output": 8
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
@@ -15375,9 +15354,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.3,
-        "input": 0.3,
-        "output": 14
+        "cache_read": 0.28,
+        "input": 0.29,
+        "output": 24
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -15862,8 +15841,8 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0223,
-        "input": 0.024,
+        "cache_read": 0.0565,
+        "input": 0.0608,
         "output": 4.4
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",

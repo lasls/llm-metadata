@@ -949,49 +949,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "anthropic/claude-sonnet-4": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-      "family": "claude-sonnet",
-      "id": "anthropic/claude-sonnet-4",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Anthropic: Claude Sonnet 4 (retires Oct 15)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-05-22",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "anthropic/claude-sonnet-4.5": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-sonnet-4-5",
@@ -5967,7 +5924,7 @@
       "knowledge": "2023-10-31",
       "last_updated": "2025-06-20",
       "limit": {
-        "context": 128000,
+        "context": 256000,
         "output": 16384
       },
       "modalities": {
@@ -6982,6 +6939,47 @@
       ],
       "release_date": "2026-08-11",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-3.5-super-vl:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model from NVIDIA, with 12B active parameters out of 120B total. It takes text, images, documents, GUI screenshots, and video... **Terms of service** For NVIDIA free endpoints (Super/Ultra/etc): Trial use only - do not submit personal or confidential data. Your use is logged for security purposes and to improve NVIDIA products and services. The logged session data for improvement purposes is not linked to your identity or any persistent identifier. For more information about our data processing practices, see our [Privacy Policy](https://www.nvidia.com/en-us/about-nvidia/privacy-policy/). By interacting with this endpoint, you consent to our collection, recording, and use of such information and the [NVIDIA API Trial Terms of Service](https://assets.ngc.nvidia.com/products/api-catalog/legal/NVIDIA%20API%20Trial%20Terms%20of%20Service.pdf).",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-3.5-super-vl:free",
+      "last_updated": "2026-10-15",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA: Nemotron 3.5 Super VL (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-15",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -13080,9 +13078,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.041,
-        "input": 0.83,
-        "output": 2.501
+        "cache_read": 0.038,
+        "input": 0.801,
+        "output": 2.48
       },
       "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
       "family": "Hy",
@@ -15073,8 +15071,8 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.23,
-        "input": 0.225,
+        "cache_read": 0.13,
+        "input": 0.1307,
         "output": 8
       },
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
@@ -15251,9 +15249,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.3,
-        "input": 0.3,
-        "output": 14
+        "cache_read": 0.28,
+        "input": 0.29,
+        "output": 24
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -15644,8 +15642,8 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0223,
-        "input": 0.024,
+        "cache_read": 0.0565,
+        "input": 0.0608,
         "output": 4.4
       },
       "description": "This model always redirects to the latest GLM model from Z.ai.",
