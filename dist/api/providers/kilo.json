@@ -4902,6 +4902,52 @@
       "temperature": true,
       "tool_call": true
     },
+    "meta/muse-spark-open": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 1.25,
+        "output": 4.25
+      },
+      "description": "Muse Spark Open is a coding-optimized open-weight model. Trained specifically for agentic coding workflows, it delivers higher first-attempt accuracy, reliable tool calling, and deep codebase understanding across the repos developers...",
+      "family": "muse",
+      "id": "meta/muse-spark-open",
+      "last_updated": "2026-10-15",
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Meta: Muse Spark Open",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-10-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "meta/muse-wonder": {
       "attachment": true,
       "cost": {
@@ -6277,6 +6323,7 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "high",
             "max"
@@ -6939,6 +6986,48 @@
       ],
       "release_date": "2026-08-11",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-3.5-super-vl": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.08,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model from NVIDIA, with 12B active parameters out of 120B total. It takes text, images, documents, GUI screenshots, and video...",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-3.5-super-vl",
+      "last_updated": "2026-10-15",
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA: Nemotron 3.5 Super VL",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-15",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -7934,7 +8023,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "medium",
             "high"
@@ -9437,7 +9525,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "high"
           ]
         }
@@ -9480,7 +9567,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "high"
           ]
         }
@@ -9524,7 +9610,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "high"
           ]
         }
@@ -9567,7 +9652,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "high"
           ]
         }
@@ -9650,7 +9734,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "high"
           ]
         }
@@ -9694,7 +9777,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "high"
           ]
         }
@@ -10011,7 +10093,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "high"
           ]
         }
@@ -10121,7 +10202,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "high"
           ]
         }
@@ -11391,7 +11471,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 262144,
-        "output": 81920
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -12993,9 +13073,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
@@ -13078,9 +13158,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.038,
-        "input": 0.801,
-        "output": 2.48
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
       "family": "Hy",
@@ -13341,37 +13421,6 @@
         }
       ],
       "release_date": "2026-07-30",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "unbiased/pareto-26.10-preview": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.03,
-        "input": 0.8,
-        "output": 3.2
-      },
-      "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks. This is a preview of the...",
-      "id": "unbiased/pareto-26.10-preview",
-      "last_updated": "2026-10-01",
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Pareto 26.10 Preview (retires Oct 15)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-10-01",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -15029,7 +15078,7 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.0054,
-        "input": 0.02376,
+        "input": 0.01116,
         "output": 0.72
       },
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
@@ -15114,7 +15163,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.0108,
-        "input": 0.0144,
+        "input": 0.01233,
         "output": 0.576
       },
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
@@ -15249,9 +15298,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.28,
-        "input": 0.29,
-        "output": 24
+        "cache_read": 0.3,
+        "input": 0.35,
+        "output": 14
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -15599,9 +15648,9 @@
     "~z-ai/glm-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.01125,
-        "input": 0.036,
-        "output": 0.9
+        "cache_read": 0.0125,
+        "input": 0.0356,
+        "output": 0.5528
       },
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "family": "glm-flash",
@@ -15609,7 +15658,7 @@
       "last_updated": "2026-08-27",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [
