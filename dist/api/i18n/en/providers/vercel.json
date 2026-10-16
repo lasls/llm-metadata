@@ -2357,68 +2357,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "anthropic/claude-sonnet-4": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-sonnet-4-20250514",
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "context_over_200k": {
-          "cache_read": 0.6,
-          "cache_write": 7.5,
-          "input": 6,
-          "output": 22.5
-        },
-        "input": 3,
-        "output": 15,
-        "tiers": [
-          {
-            "cache_read": 0.6,
-            "cache_write": 7.5,
-            "input": 6,
-            "output": 22.5,
-            "tier": {
-              "size": 200001,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-      "family": "claude-sonnet",
-      "id": "anthropic/claude-sonnet-4",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 1000000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 4",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-05-22",
-      "temperature": true,
-      "tool_call": true
-    },
     "anthropic/claude-sonnet-4.5": {
       "attachment": true,
       "cost": {
@@ -6685,6 +6623,7 @@
     },
     "meta/muse-spark-open": {
       "attachment": true,
+      "canonical_model_id": "meta/muse-spark-open",
       "cost": {
         "cache_read": 0.15,
         "input": 1.25,
@@ -6693,6 +6632,7 @@
       "description": "Open Llama multimodal model for image understanding and text reasoning",
       "family": "muse",
       "id": "meta/muse-spark-open",
+      "knowledge": "2026-01-04",
       "last_updated": "2026-10-15",
       "limit": {
         "context": 1048576,
@@ -6708,20 +6648,22 @@
         ]
       },
       "name": "Muse Spark Open",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
       "release_date": "2026-10-15",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "meta/muse-wonder-1.0": {
@@ -7841,13 +7783,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "release_date": "2026-06-12",
@@ -7887,13 +7823,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "medium",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "release_date": "2026-06-12",
