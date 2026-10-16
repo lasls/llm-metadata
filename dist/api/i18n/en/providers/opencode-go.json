@@ -7,6 +7,57 @@
   "iconURL": "https://models.dev/logos/opencode-go.svg",
   "id": "opencode-go",
   "models": {
+    "beam-free": {
+      "attachment": false,
+      "canonical_model_id": "reflection/beam-1.0-501b-a23b",
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Sparse mixture-of-experts reasoning model with 23B active parameters for coding and agentic workflows",
+      "family": "beam",
+      "id": "beam-free",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2026-06-30",
+      "last_updated": "2026-10-16",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Beam Free",
+      "open_weights": true,
+      "provider": {
+        "api": "https://opencode.ai/inference/go/openai/v1"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "cat-jam-free": {
       "attachment": false,
       "cost": {
@@ -51,6 +102,7 @@
         }
       ],
       "release_date": "2026-10-12",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
