@@ -1786,8 +1786,8 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-chat",
       "cost": {
-        "input": 0.2574,
-        "output": 1.0287
+        "input": 0.32,
+        "output": 0.89
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -1796,7 +1796,7 @@
       "last_updated": "2026-02-28",
       "limit": {
         "context": 163840,
-        "output": 16000
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -2111,8 +2111,8 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.0154,
-        "input": 0.0154,
+        "cache_read": 0.0058,
+        "input": 0.0058,
         "output": 1.28
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
@@ -2199,9 +2199,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.032364,
-        "input": 0.388368,
-        "output": 0.776736
+        "cache_read": 0.024766,
+        "input": 0.297192,
+        "output": 0.594384
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2288,9 +2288,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.003,
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.0054,
+        "input": 0.036,
+        "output": 0.6435
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -2299,7 +2299,7 @@
       "last_updated": "2026-09-10",
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -3628,9 +3628,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.09,
-        "output": 0.3
+        "cache_read": 0.0375,
+        "input": 0.0675,
+        "output": 0.225
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -12335,6 +12335,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "reflection/beam-1.0-501b-a23b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.25,
+        "output": 1
+      },
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "family": "beam",
+      "id": "reflection/beam-1.0-501b-a23b",
+      "knowledge": "2026-06-30",
+      "last_updated": "2026-10-16",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Beam 1.0 501B A23B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "rekaai/reka-edge": {
       "attachment": true,
       "cost": {
@@ -13073,9 +13116,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13158,9 +13201,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -14315,6 +14358,41 @@
       "temperature": true,
       "tool_call": true
     },
+    "xingchen-agi/xing4.0-29b-a4b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
+      "family": "agi",
+      "id": "xingchen-agi/xing4.0-29b-a4b:free",
+      "last_updated": "2026-10-16",
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Xing4.0 29B A4B (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-10-16",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "z-ai/glm-4.5": {
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-4.5",
@@ -14801,8 +14879,8 @@
       "canonical_model_id": "zhipuai/glm-5.3-flash",
       "cost": {
         "cache_read": 0.0125,
-        "input": 0.0253,
-        "output": 0.6764
+        "input": 0.0236,
+        "output": 0.6968
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",
@@ -15164,9 +15242,9 @@
     "~deepseek/deepseek-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.000714,
-        "input": 0.0357,
-        "output": 0.1428
+        "cache_read": 0.0054,
+        "input": 0.036,
+        "output": 0.6435
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -15174,7 +15252,7 @@
       "last_updated": "2026-09-14",
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -15249,8 +15327,8 @@
     "~deepseek/deepseek-v4-flash-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0108,
-        "input": 0.01386,
+        "cache_read": 0.00522,
+        "input": 0.00522,
         "output": 1.152
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -15846,8 +15924,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.0125,
-        "input": 0.0253,
-        "output": 0.6764
+        "input": 0.0236,
+        "output": 0.6968
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",
