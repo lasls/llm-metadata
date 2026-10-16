@@ -2000,6 +2000,54 @@
         "temperature": true,
         "tool_call": true
       },
+      "gemini-4-argon": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-argon",
+        "cost": {
+          "cache_read": 0.2,
+          "cache_write": 0.375,
+          "input": 4,
+          "output": 10
+        },
+        "description": "Google's flagship reasoning model for complex software engineering, deep math and science, and long-horizon autonomous agents",
+        "family": "gemini",
+        "id": "gemini-4-argon",
+        "knowledge": "2026-03",
+        "last_updated": "2026-10-13",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Argon",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-10-13",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "glm-4.5": {
         "attachment": false,
         "cost": {
@@ -64287,6 +64335,50 @@
         "temperature": true,
         "tool_call": true
       },
+      "fireworks/ember-1": {
+        "attachment": true,
+        "canonical_model_id": "fireworks/ember-1",
+        "cost": {
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Specialized model from Fireworks built on Kimi K3, producing shorter reasoning traces with approximately 40% fewer tokens while maintaining comparable quality",
+        "id": "fireworks/ember-1",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1040000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ember-1",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "tool_call": true
+      },
       "google/gemini-4-argon": {
         "attachment": true,
         "canonical_model_id": "google/gemini-4-argon",
@@ -70536,39 +70628,6 @@
           }
         ],
         "release_date": "2026-07-16",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": true
-      },
-      "llama-3.1-8b-instruct": {
-        "attachment": false,
-        "canonical_model_id": "meta/llama-3.1-8b-instruct",
-        "cost": {
-          "input": 0.167,
-          "output": 0.167
-        },
-        "description": "Optimized for dialogue, this LLM by Meta outperforms other open-source chat models in benchmarks while prioritizing helpfulness and safety.",
-        "family": "llama",
-        "id": "llama-3.1-8b-instruct",
-        "knowledge": "2023-12",
-        "last_updated": "2024-07-23",
-        "limit": {
-          "context": 128000,
-          "output": 128000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Llama-3.1-8B-Instruct",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2024-07-23",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -91911,6 +91970,54 @@
         "temperature": true,
         "tool_call": true
       },
+      "fireworks_ai/accounts/fireworks/models/muse-spark-open": {
+        "attachment": true,
+        "canonical_model_id": "meta/muse-spark-open",
+        "cost": {
+          "cache_read": 0.15,
+          "input": 1.25,
+          "output": 4.25
+        },
+        "description": "Muse Spark Open is an 816B total / 42B active open-weight multimodal reasoning model from Meta for coding and long-horizon agentic work, with 1M-token context.",
+        "family": "muse",
+        "id": "fireworks_ai/accounts/fireworks/models/muse-spark-open",
+        "knowledge": "2026-01-04",
+        "last_updated": "2026-10-15",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Muse Spark Open (Fireworks AI)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-10-15",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "fireworks_ai/gpt-oss-120b": {
         "attachment": false,
         "canonical_model_id": "openai/gpt-oss-120b",
@@ -95053,6 +95160,54 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-03-12",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "nebius/meta-models/muse-spark-open": {
+        "attachment": true,
+        "canonical_model_id": "meta/muse-spark-open",
+        "cost": {
+          "cache_read": 1.25,
+          "input": 1.25,
+          "output": 4.25
+        },
+        "description": "Muse Spark Open is an 816B total / 42B active open-weight multimodal reasoning model from Meta for coding and long-horizon agentic work, with 1M-token context.",
+        "family": "muse",
+        "id": "nebius/meta-models/muse-spark-open",
+        "knowledge": "2026-01-04",
+        "last_updated": "2026-10-15",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Muse Spark Open (Nebius)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-10-15",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -104334,8 +104489,8 @@
         "knowledge": "2025-05",
         "last_updated": "2026-09-10",
         "limit": {
-          "context": 327680,
-          "input": 262144,
+          "context": 1048576,
+          "input": 983040,
           "output": 65536
         },
         "modalities": {
@@ -104478,8 +104633,8 @@
         },
         "last_updated": "2026-08-26",
         "limit": {
-          "context": 262144,
-          "input": 229376,
+          "context": 327680,
+          "input": 294912,
           "output": 32768
         },
         "modalities": {
@@ -144215,8 +144370,8 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-3-12b-it",
         "cost": {
-          "input": 0.05,
-          "output": 0.15
+          "input": 0.04,
+          "output": 0.12
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -145289,7 +145444,7 @@
         "last_updated": "2024-12-06",
         "limit": {
           "context": 131072,
-          "output": 32768
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -145342,8 +145497,8 @@
       "meta-llama/llama-4-scout": {
         "attachment": true,
         "cost": {
-          "input": 0.1,
-          "output": 0.3
+          "input": 0.08,
+          "output": 0.24
         },
         "description": "Open multimodal Llama model for long-context analysis and efficient agents",
         "family": "llama",
@@ -145373,8 +145528,8 @@
       "meta-llama/llama-guard-4-12b": {
         "attachment": true,
         "cost": {
-          "input": 0.18,
-          "output": 0.18
+          "input": 0.144,
+          "output": 0.144
         },
         "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
         "family": "llama",
@@ -145781,8 +145936,8 @@
       "microsoft/phi-4": {
         "attachment": false,
         "cost": {
-          "input": 0.07,
-          "output": 0.14
+          "input": 0.056,
+          "output": 0.112
         },
         "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
         "family": "phi",
@@ -147434,7 +147589,7 @@
           }
         ],
         "release_date": "2025-08-26",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "tool_call": false
       },
@@ -147607,9 +147762,9 @@
         "attachment": false,
         "canonical_model_id": "nvidia/nemotron-3-ultra-550b-a55b",
         "cost": {
-          "cache_read": 0.1,
-          "input": 0.5,
-          "output": 2.2
+          "cache_read": 0.08,
+          "input": 0.4,
+          "output": 1.76
         },
         "description": "NVIDIA Nemotron 3 Ultra is an open frontier-reasoning and orchestration model from NVIDIA, with 55B active parameters out of 550B total (MoE). Built on a hybrid Transformer-Mamba mixture-of-experts architecture, it...",
         "family": "nemotron",
@@ -155546,8 +155701,8 @@
         "id": "z-ai/glm-5.3-flash",
         "last_updated": "2026-08-26",
         "limit": {
-          "context": 1048575,
-          "output": 943717
+          "context": 1048576,
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -155894,7 +156049,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.0054,
-          "input": 0.01035,
+          "input": 0.036,
           "output": 0.684
         },
         "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
@@ -155936,9 +156091,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.23,
-          "input": 0.225,
-          "output": 8
+          "cache_read": 0.249,
+          "input": 0.25,
+          "output": 5
         },
         "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
         "family": "deepseek",
@@ -155946,7 +156101,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 393216
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -155978,9 +156133,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.00999,
-          "input": 0.00999,
-          "output": 0.576
+          "cache_read": 0.0108,
+          "input": 0.01386,
+          "output": 1.152
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
@@ -156114,8 +156269,8 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.289,
-          "input": 0.299,
+          "cache_read": 0.284,
+          "input": 0.294,
           "output": 24
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
@@ -156465,7 +156620,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.01125,
-          "input": 0.02142,
+          "input": 0.02169,
           "output": 0.9
         },
         "description": "This model always redirects to the latest model in the GLM Flash family.",
@@ -211049,6 +211204,49 @@
         "structured_output": false,
         "tool_call": false
       },
+      "fireworks/ember-1": {
+        "attachment": true,
+        "canonical_model_id": "fireworks/ember-1",
+        "cost": {
+          "cache_read": 0.3,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Specialized model from Fireworks built on Kimi K3, producing shorter reasoning traces with approximately 40% fewer tokens while maintaining comparable quality",
+        "id": "fireworks/ember-1",
+        "last_updated": "2026-09-22",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ember 1",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-09-22",
+        "structured_output": true,
+        "tool_call": true
+      },
       "gemini-2.0-pro-exp-02-05": {
         "attachment": true,
         "cost": {
@@ -221141,8 +221339,8 @@
         "attachment": false,
         "canonical_model_id": "alibaba/qwen3-next-80b-a3b-instruct",
         "cost": {
-          "cache_read": 0.075,
-          "input": 0.09,
+          "cache_read": 0.07,
+          "input": 0.1,
           "output": 1.1
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
@@ -252667,7 +252865,7 @@
     "npm": "@ai-sdk/openai"
   },
   "opencode": {
-    "api": "https://opencode.ai/inference/v1",
+    "api": "https://opencode.ai/inference/openai/v1",
     "doc": "https://opencode.ai/v2/docs/console/models/",
     "env": [
       "OPENCODE_API_KEY"
@@ -252707,6 +252905,9 @@
         },
         "name": "Big Pickle",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-10-17",
@@ -252741,6 +252942,9 @@
         },
         "name": "Cat Jam Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -252789,6 +252993,7 @@
         "name": "Claude Haiku 3.5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": false,
@@ -252828,6 +253033,7 @@
         "name": "Claude Fable 5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -252878,6 +253084,7 @@
         "name": "Claude Fable 5.1",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -252927,6 +253134,7 @@
         "name": "Claude Haiku 4.5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -252983,6 +253191,7 @@
         "name": "Claude Haiku 5.5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253036,6 +253245,7 @@
         "name": "Claude Opus 4.1",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253080,6 +253290,7 @@
         "name": "Claude Opus 4.5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253132,6 +253343,7 @@
         "name": "Claude Opus 4.6",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253184,6 +253396,7 @@
         "name": "Claude Opus 4.7",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253234,6 +253447,7 @@
         "name": "Claude Opus 4.8",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253284,6 +253498,7 @@
         "name": "Claude Opus 5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253334,6 +253549,7 @@
         "name": "Claude Opus 5.5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253401,6 +253617,7 @@
         "name": "Claude Sonnet 4",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253463,6 +253680,7 @@
         "name": "Claude Sonnet 4.5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253507,6 +253725,7 @@
         "name": "Claude Sonnet 4.6",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253560,6 +253779,7 @@
         "name": "Claude Sonnet 5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253610,6 +253830,7 @@
         "name": "Claude Sonnet 5.5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -253659,6 +253880,9 @@
         },
         "name": "DeepSeek V4 Flash",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -253708,6 +253932,9 @@
         },
         "name": "DeepSeek V4 Flash Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -253755,6 +253982,9 @@
         },
         "name": "DeepSeek V4 Flash Vision Exp",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -253804,6 +254034,9 @@
         },
         "name": "DeepSeek V4 Pro",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -253853,6 +254086,9 @@
         },
         "name": "DeepSeek V4.1 Flash",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -253900,6 +254136,9 @@
         },
         "name": "DeepSeek V4.1 Flash Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -253940,6 +254179,9 @@
         },
         "name": "Exo Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -253978,6 +254220,9 @@
         },
         "name": "Fledge Alpha Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -254025,6 +254270,7 @@
         "name": "Gemini 3 Flash",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/google/v1beta",
           "npm": "@ai-sdk/google"
         },
         "reasoning": true,
@@ -254091,6 +254337,7 @@
         "name": "Gemini 3 Pro",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/google/v1beta",
           "npm": "@ai-sdk/google"
         },
         "reasoning": true,
@@ -254156,6 +254403,7 @@
         "name": "Gemini 3.1 Pro Preview",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/google/v1beta",
           "npm": "@ai-sdk/google"
         },
         "reasoning": true,
@@ -254206,6 +254454,7 @@
         "name": "Gemini 3.5 Flash",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/google/v1beta",
           "npm": "@ai-sdk/google"
         },
         "reasoning": true,
@@ -254257,6 +254506,7 @@
         "name": "Gemini 3.5 Flash Lite",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/google/v1beta",
           "npm": "@ai-sdk/google"
         },
         "reasoning": true,
@@ -254309,6 +254559,7 @@
         "name": "Gemini 3.6 Flash",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/google/v1beta",
           "npm": "@ai-sdk/google"
         },
         "reasoning": true,
@@ -254361,6 +254612,7 @@
         "name": "Gemini 3.7 Flash",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/google/v1beta",
           "npm": "@ai-sdk/google"
         },
         "reasoning": true,
@@ -254411,6 +254663,7 @@
         "name": "Gemini 3.8 Flash",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/google/v1beta",
           "npm": "@ai-sdk/google"
         },
         "reasoning": true,
@@ -254462,6 +254715,7 @@
         "name": "Gemini 4 Argon",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/google/v1beta",
           "npm": "@ai-sdk/google"
         },
         "reasoning": true,
@@ -254506,6 +254760,9 @@
         },
         "name": "GLM-4.6",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -254546,6 +254803,9 @@
         },
         "name": "GLM-4.7",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -254586,6 +254846,9 @@
         },
         "name": "GLM-4.7 Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -254626,6 +254889,9 @@
         },
         "name": "GLM-5",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -254665,6 +254931,9 @@
         },
         "name": "GLM-5 Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -254705,6 +254974,9 @@
         },
         "name": "GLM-5.1",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -254744,6 +255016,9 @@
         },
         "name": "GLM-5.2",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -254788,6 +255063,9 @@
         },
         "name": "GLM-5.3",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -254836,6 +255114,60 @@
         },
         "name": "GLM-5.3-Flash",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "glm-5.3-flash-free": {
+        "attachment": true,
+        "canonical_model_id": "zhipuai/glm-5.3-flash",
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+        "family": "glm-flash",
+        "id": "glm-5.3-flash-free",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 200000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "GLM-5.3-Flash Free",
+        "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -254881,6 +255213,7 @@
         "name": "GPT-5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -254929,6 +255262,7 @@
         "name": "GPT-5 Codex",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -254976,6 +255310,7 @@
         "name": "GPT-5 Nano",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255024,6 +255359,7 @@
         "name": "GPT-5.1",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255072,6 +255408,7 @@
         "name": "GPT-5.1 Codex",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255119,6 +255456,7 @@
         "name": "GPT-5.1 Codex Max",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255167,6 +255505,7 @@
         "name": "GPT-5.1 Codex Mini",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255214,6 +255553,7 @@
         "name": "GPT-5.2",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255264,6 +255604,7 @@
         "name": "GPT-5.2 Codex",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255313,6 +255654,7 @@
         "name": "GPT-5.3 Codex",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255361,6 +255703,7 @@
         "name": "GPT-5.3 Codex Spark",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255427,6 +255770,7 @@
         "name": "GPT-5.4",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255477,6 +255821,7 @@
         "name": "GPT-5.4 Mini",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255527,6 +255872,7 @@
         "name": "GPT-5.4 Nano",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255577,6 +255923,7 @@
         "name": "GPT-5.4 Pro",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255642,6 +255989,7 @@
         "name": "GPT-5.5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255692,6 +256040,7 @@
         "name": "GPT-5.5 Pro",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255760,6 +256109,7 @@
         "name": "GPT-5.6 Luna",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255831,6 +256181,7 @@
         "name": "GPT-5.6 Sol",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255902,6 +256253,7 @@
         "name": "GPT-5.6 Terra",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -255973,6 +256325,7 @@
         "name": "GPT-6 Astra",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -256043,6 +256396,7 @@
         "name": "GPT-6 Luna",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -256114,6 +256468,7 @@
         "name": "GPT-6 Sol",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -256185,6 +256540,7 @@
         "name": "GPT-6.1 Sol",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -256249,6 +256605,7 @@
         "name": "Grok 4.5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -256312,6 +256669,7 @@
         "name": "Grok 4.6",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -256377,6 +256735,7 @@
         "name": "Grok 4.7",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -256425,6 +256784,7 @@
         "name": "Grok Build 0.1",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -256460,6 +256820,9 @@
         },
         "name": "Grok Code Fast 1",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-08-20",
@@ -256497,6 +256860,9 @@
         },
         "name": "Hy3 Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -256543,6 +256909,9 @@
         },
         "name": "Hy3 preview Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-20",
@@ -256576,6 +256945,9 @@
         },
         "name": "Kimi K2",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": false,
         "release_date": "2025-09-05",
         "status": "deprecated",
@@ -256611,6 +256983,9 @@
         },
         "name": "Kimi K2 Thinking",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-09-05",
@@ -256649,6 +257024,9 @@
         },
         "name": "Kimi K2.5",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -256690,6 +257068,9 @@
         },
         "name": "Kimi K2.5 Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -256732,6 +257113,9 @@
         },
         "name": "Kimi K2.6",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -256774,6 +257158,9 @@
         },
         "name": "Kimi K2.7 Code",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-06-12",
@@ -256812,6 +257199,9 @@
         },
         "name": "Kimi K3",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -256852,6 +257242,9 @@
         },
         "name": "Laguna S 2.1 Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -256894,6 +257287,9 @@
         },
         "name": "Ling 2.6 Flash Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": false,
         "release_date": "2026-04-21",
         "status": "deprecated",
@@ -256926,6 +257322,9 @@
         },
         "name": "Ling 3.0 Flash Fin Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -256963,6 +257362,9 @@
         },
         "name": "Ling-3.0-flash Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -257004,6 +257406,9 @@
         },
         "name": "Ling-3.0-tiny Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-08-06",
@@ -257038,6 +257443,9 @@
         },
         "name": "Ling 3.1 Flash Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -257047,6 +257455,55 @@
         "release_date": "2026-09-29",
         "status": "deprecated",
         "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "ll-alpha-free": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Best in class local model",
+        "id": "ll-alpha-free",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "knowledge": "2026-06",
+        "last_updated": "2026-10-15",
+        "limit": {
+          "context": 262144,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "LL Alpha Free",
+        "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-15",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -257079,6 +257536,9 @@
         },
         "name": "LongCat-2.0 Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -257120,6 +257580,9 @@
         },
         "name": "LongCat 2.5 Preview Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -257159,6 +257622,9 @@
         },
         "name": "MiMo V2 Flash Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-12-16",
@@ -257198,6 +257664,9 @@
         },
         "name": "MiMo V2 Omni Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-03-18",
@@ -257234,6 +257703,9 @@
         },
         "name": "MiMo V2 Pro Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-03-18",
@@ -257273,6 +257745,9 @@
         },
         "name": "MiMo V2.5 Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-24",
@@ -257312,6 +257787,9 @@
         },
         "name": "MiMo-V2.6-Flash Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-09-22",
@@ -257347,6 +257825,9 @@
         },
         "name": "MiniMax-M2.1",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2025-12-23",
@@ -257381,6 +257862,7 @@
         "name": "MiniMax-M2.1 Free",
         "open_weights": true,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -257419,6 +257901,9 @@
         },
         "name": "MiniMax-M2.5",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-02-12",
@@ -257452,6 +257937,7 @@
         "name": "MiniMax-M2.5 Free",
         "open_weights": true,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -257490,6 +257976,9 @@
         },
         "name": "MiniMax-M2.7",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-03-18",
@@ -257527,6 +258016,9 @@
         },
         "name": "MiniMax-M3",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-06-01",
@@ -257562,6 +258054,7 @@
         "name": "MiniMax-M3 Free",
         "open_weights": true,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -257603,6 +258096,7 @@
         "name": "Mistral Large 4",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/mistral"
         },
         "reasoning": true,
@@ -257651,6 +258145,7 @@
         "name": "Muse Spark 1.2",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -257702,6 +258197,7 @@
         "name": "Muse Spark 1.2 Free",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -257754,6 +258250,7 @@
         "name": "Muse Spark 1.3",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -257804,6 +258301,7 @@
         "name": "Muse Spark 1.3 Free",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -257854,6 +258352,9 @@
         },
         "name": "Nemotron 3 Super Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-03-11",
@@ -257891,6 +258392,9 @@
         },
         "name": "Nemotron 3 Ultra Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-06-04",
@@ -257926,6 +258430,9 @@
         },
         "name": "Nemotron 3.5 Lightning Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-08-11",
@@ -257964,6 +258471,9 @@
         },
         "name": "Nemotron 3.5 Super VL Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258011,6 +258521,9 @@
         },
         "name": "North Mini Code Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258052,6 +258565,9 @@
         },
         "name": "Qwen3 Coder",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": false,
         "release_date": "2025-07-23",
         "status": "deprecated",
@@ -258088,6 +258604,7 @@
         "name": "Qwen3.5 Plus",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -258134,6 +258651,7 @@
         "name": "Qwen3.6 Plus",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -258179,6 +258697,7 @@
         "name": "Qwen3.6 Plus Free",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -258226,6 +258745,7 @@
         "name": "Qwen3.8 Flash",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -258278,6 +258798,9 @@
         },
         "name": "Qwen3.8 Max",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258316,6 +258839,9 @@
         },
         "name": "Ring 2.6 1T Free",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-05-08",
@@ -258354,6 +258880,9 @@
         },
         "name": "Space Bunny Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258401,6 +258930,9 @@
         },
         "name": "Step 5 Preview Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258443,6 +258975,9 @@
         },
         "name": "Trinity Large Preview",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": false,
         "release_date": "2026-01-27",
         "status": "deprecated",
@@ -258478,6 +259013,9 @@
         },
         "name": "Ox Alpha Free (Unlimited)",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258500,7 +259038,7 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "opencode-go": {
-    "api": "https://opencode.ai/inference/go/v1",
+    "api": "https://opencode.ai/inference/go/openai/v1",
     "doc": "https://opencode.ai/v2/docs/console/go/",
     "env": [
       "OPENCODE_API_KEY"
@@ -258535,6 +259073,9 @@
         },
         "name": "Cat Jam Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258596,6 +259137,7 @@
         "name": "Claude Haiku 5.5",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/go/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -258648,6 +259190,9 @@
         },
         "name": "DeepSeek V4 Pro (New)",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258694,6 +259239,9 @@
         },
         "name": "DeepSeek V4.1 Flash",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258743,6 +259291,7 @@
         "name": "Gemini 4 Argon Contributor",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/go/google/v1beta",
           "npm": "@ai-sdk/google"
         },
         "reasoning": true,
@@ -258790,6 +259339,9 @@
         },
         "name": "GLM-5.2",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258834,6 +259386,9 @@
         },
         "name": "GLM-5.3",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258882,6 +259437,9 @@
         },
         "name": "GLM-5.3-Flash",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -258948,6 +259506,7 @@
         "name": "GPT-5.6 Luna",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -259019,6 +259578,7 @@
         "name": "GPT-6 Luna",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -259086,6 +259646,7 @@
         "name": "Grok 4.7",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -259132,6 +259693,9 @@
         },
         "name": "Hy3",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -259173,6 +259737,9 @@
         },
         "name": "Hy4 preview",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -259219,6 +259786,9 @@
         },
         "name": "Kimi K2.7 Code",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-06-12",
@@ -259257,6 +259827,9 @@
         },
         "name": "Kimi K3",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -259300,6 +259873,9 @@
         },
         "name": "LongCat-2.0",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -259340,6 +259916,9 @@
         },
         "name": "LongCat 2.5 Preview Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -259382,6 +259961,9 @@
         },
         "name": "MiMo V2.5",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-22",
@@ -259417,6 +259999,9 @@
         },
         "name": "MiMo V2.5 Pro",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-04-22",
@@ -259455,6 +260040,9 @@
         },
         "name": "MiMo-V2.6-Flash",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-09-22",
@@ -259493,6 +260081,9 @@
         },
         "name": "MiMo-V2.6-Pro",
         "open_weights": true,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [],
         "release_date": "2026-09-22",
@@ -259527,6 +260118,7 @@
         "name": "MiniMax-M2.7",
         "open_weights": true,
         "provider": {
+          "api": "https://opencode.ai/inference/go/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -259581,6 +260173,7 @@
         "name": "MiniMax-M3",
         "open_weights": true,
         "provider": {
+          "api": "https://opencode.ai/inference/go/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -259624,6 +260217,7 @@
         "name": "Muse Spark 1.2 Contributor",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -259674,6 +260268,7 @@
         "name": "Muse Spark 1.3 Contributor",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1",
           "npm": "@ai-sdk/openai"
         },
         "reasoning": true,
@@ -259741,6 +260336,7 @@
         "name": "Qwen3.7 Plus",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/go/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -259787,6 +260383,7 @@
         "name": "Qwen3.8 Flash",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/go/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -259841,6 +260438,7 @@
         "name": "Qwen3.8 Max",
         "open_weights": false,
         "provider": {
+          "api": "https://opencode.ai/inference/go/anthropic/v1",
           "npm": "@ai-sdk/anthropic"
         },
         "reasoning": true,
@@ -259897,6 +260495,9 @@
         },
         "name": "Space Bunny",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -259944,6 +260545,9 @@
         },
         "name": "Step 5 Preview",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -259990,6 +260594,9 @@
         },
         "name": "Step 5 Preview Free",
         "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
         "reasoning": true,
         "reasoning_options": [
           {
@@ -262270,9 +262877,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
         "cost": {
-          "cache_read": 0.0094,
-          "input": 0.0094,
-          "output": 0.64
+          "cache_read": 0.0154,
+          "input": 0.0154,
+          "output": 1.28
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -262448,7 +263055,7 @@
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
           "cache_read": 0.0054,
-          "input": 0.0144,
+          "input": 0.036,
           "output": 0.684
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -263787,9 +264394,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.0425,
-          "input": 0.0765,
-          "output": 0.255
+          "cache_read": 0.05,
+          "input": 0.09,
+          "output": 0.3
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -264621,9 +265228,8 @@
         "attachment": false,
         "canonical_model_id": "meta/llama-3.3-70b-instruct",
         "cost": {
-          "cache_read": 0.295,
-          "input": 0.59,
-          "output": 0.79
+          "input": 0.1,
+          "output": 0.32
         },
         "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
         "family": "llama",
@@ -264632,7 +265238,7 @@
         "last_updated": "2024-12-06",
         "limit": {
           "context": 131072,
-          "output": 32768
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -266453,9 +267059,9 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k3",
         "cost": {
-          "cache_read": 0.28,
-          "input": 0.405,
-          "output": 15
+          "cache_read": 0.21,
+          "input": 0.304,
+          "output": 11.936
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi-k3",
@@ -266732,7 +267338,7 @@
           }
         ],
         "release_date": "2025-08-26",
-        "structured_output": false,
+        "structured_output": true,
         "temperature": true,
         "tool_call": false
       },
@@ -274873,9 +275479,9 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.2",
         "cost": {
-          "cache_read": 0.14,
-          "input": 0.62,
-          "output": 2.42
+          "cache_read": 0.036,
+          "input": 0.037,
+          "output": 9
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -274960,9 +275566,9 @@
         "attachment": true,
         "canonical_model_id": "zhipuai/glm-5.3-flash",
         "cost": {
-          "cache_read": 0.03,
-          "input": 0.15,
-          "output": 0.5
+          "cache_read": 0.01125,
+          "input": 0.02169,
+          "output": 0.9
         },
         "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
         "family": "glm-flash",
@@ -274970,7 +275576,7 @@
         "last_updated": "2026-08-26",
         "limit": {
           "context": 1048576,
-          "output": 943717
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -275325,7 +275931,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.0054,
-          "input": 0.0144,
+          "input": 0.036,
           "output": 0.684
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -275367,9 +275973,9 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.23,
-          "input": 0.225,
-          "output": 8
+          "cache_read": 0.249,
+          "input": 0.25,
+          "output": 5
         },
         "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
         "family": "deepseek",
@@ -275377,7 +275983,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 393216
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -275409,9 +276015,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0094,
-          "input": 0.0094,
-          "output": 0.64
+          "cache_read": 0.0108,
+          "input": 0.01386,
+          "output": 1.152
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -275563,8 +276169,8 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.289,
-          "input": 0.299,
+          "cache_read": 0.284,
+          "input": 0.294,
           "output": 24
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
@@ -276006,7 +276612,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.01125,
-          "input": 0.02007,
+          "input": 0.02169,
           "output": 0.9
         },
         "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
@@ -296743,7 +297349,7 @@
         "last_updated": "2024-12-06",
         "limit": {
           "context": 131072,
-          "output": 32768
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -296757,6 +297363,52 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-12-06",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "meta/muse-spark-open": {
+        "attachment": true,
+        "canonical_model_id": "meta/muse-spark-open",
+        "cost": {
+          "input": 1.25,
+          "output": 4.25
+        },
+        "description": "Muse Spark Open is an 816B total / 42B active open-weight multimodal reasoning model from Meta for coding and long-horizon agentic work, with 1M-token context.",
+        "family": "muse",
+        "id": "meta/muse-spark-open",
+        "knowledge": "2026-01-04",
+        "last_updated": "2026-10-15",
+        "limit": {
+          "context": 1048576,
+          "output": 943718
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Muse Spark Open",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-10-15",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -336859,6 +337511,51 @@
         "structured_output": true,
         "tool_call": true
       },
+      "nvidia-nemotron-3-5-super-vl-120b-a12b": {
+        "attachment": true,
+        "canonical_model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+        "cost": {
+          "cache_read": 0.125,
+          "input": 0.25,
+          "output": 1.25
+        },
+        "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
+        "family": "nemotron",
+        "id": "nvidia-nemotron-3-5-super-vl-120b-a12b",
+        "last_updated": "2026-10-16",
+        "limit": {
+          "context": 262144,
+          "output": 32768
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "NVIDIA Nemotron 3.5 Super VL 120B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-10-16",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "nvidia-nemotron-3-nano-30b-a3b": {
         "attachment": false,
         "canonical_model_id": "nvidia/nemotron-3-nano-30b-a3b",
@@ -351981,30 +352678,6 @@
         "open_weights": false,
         "reasoning": false,
         "release_date": "2024-08-02",
-        "temperature": true,
-        "tool_call": false
-      },
-      "quiverai/arrow-1.1": {
-        "attachment": false,
-        "description": "Image model for prompt-driven generation, editing, and visual design workflows",
-        "id": "quiverai/arrow-1.1",
-        "last_updated": "2026-04-16",
-        "limit": {
-          "context": 131072,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "image"
-          ]
-        },
-        "name": "Arrow 1.1",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-04-16",
         "temperature": true,
         "tool_call": false
       },
