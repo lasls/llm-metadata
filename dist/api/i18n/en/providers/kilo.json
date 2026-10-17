@@ -1935,9 +1935,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v3.2",
       "cost": {
-        "cache_read": 0.14,
-        "input": 0.259,
-        "output": 0.8
+        "cache_read": 0.028,
+        "input": 0.28,
+        "output": 0.42
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -1945,8 +1945,8 @@
       "knowledge": "2024-07",
       "last_updated": "2025-12-01",
       "limit": {
-        "context": 163840,
-        "output": 147456
+        "context": 131072,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -2244,7 +2244,7 @@
       "last_updated": "2026-09-10",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -2271,6 +2271,49 @@
       ],
       "release_date": "2026-09-10",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.003,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v4.1-flash-1017",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek: DeepSeek V4.1 Flash 1017",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -2309,6 +2352,47 @@
         }
       ],
       "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "elorian/glimpse": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Glimpse is a multimodal visual reasoning model from Elorian, built for visual understanding and complex visual reasoning in the physical world. It reasons directly over images and video rather than...",
+      "id": "elorian/glimpse",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 262144,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Elorian: Glimpse",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -14592,9 +14676,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-4.7",
       "cost": {
-        "cache_read": 0.11,
-        "input": 0.6,
-        "output": 2.2
+        "cache_read": 0.099,
+        "input": 0.54,
+        "output": 1.98
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -14602,7 +14686,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
-        "context": 202752,
+        "context": 204800,
         "output": 131072
       },
       "modalities": {
@@ -15238,9 +15322,9 @@
     "~deepseek/deepseek-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0016,
-        "input": 0.032,
-        "output": 0.144
+        "cache_read": 0.003,
+        "input": 0.15,
+        "output": 0.6
       },
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "family": "deepseek-flash",
@@ -15248,7 +15332,7 @@
       "last_updated": "2026-09-14",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -15274,16 +15358,16 @@
         }
       ],
       "release_date": "2026-09-14",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.007938,
-        "input": 0.24948,
-        "output": 0.74844
+        "cache_read": 0.0041,
+        "input": 0.12332,
+        "output": 0.5588
       },
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "family": "deepseek",
@@ -15323,9 +15407,9 @@
     "~deepseek/deepseek-v4-flash-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.001523,
-        "input": 0.00688,
-        "output": 0.143616
+        "cache_read": 0.0097,
+        "input": 0.0097,
+        "output": 0.2971
       },
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "family": "deepseek",
@@ -15459,9 +15543,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.284,
-        "input": 0.294,
-        "output": 24
+        "cache_read": 0.0513,
+        "input": 0.27,
+        "output": 14.2307
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -15809,9 +15893,9 @@
     "~z-ai/glm-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0096,
-        "input": 0.0156,
-        "output": 0.2
+        "cache_read": 0.0094,
+        "input": 0.0293,
+        "output": 0.4182
       },
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "family": "glm-flash",
@@ -15852,9 +15936,9 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0565,
-        "input": 0.0608,
-        "output": 4.4
+        "cache_read": 0.069,
+        "input": 0.069,
+        "output": 3.939
       },
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "family": "glm",

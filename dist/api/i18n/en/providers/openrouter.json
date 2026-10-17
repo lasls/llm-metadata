@@ -1991,9 +1991,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v3.2",
       "cost": {
-        "cache_read": 0.14,
-        "input": 0.259,
-        "output": 0.8
+        "cache_read": 0.028,
+        "input": 0.28,
+        "output": 0.42
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -2002,7 +2002,7 @@
       "last_updated": "2025-12-01",
       "limit": {
         "context": 163840,
-        "output": 147456
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -2111,9 +2111,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.0086,
-        "input": 0.0086,
-        "output": 1.28
+        "cache_read": 0.0097,
+        "input": 0.0097,
+        "output": 0.2971
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -2199,9 +2199,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.018009,
-        "input": 0.216108,
-        "output": 0.432216
+        "cache_read": 0.0174,
+        "input": 0.2088,
+        "output": 0.4176
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2288,9 +2288,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.0016,
-        "input": 0.032,
-        "output": 0.144
+        "cache_read": 0.003,
+        "input": 0.15,
+        "output": 0.6
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -2299,7 +2299,7 @@
       "last_updated": "2026-09-10",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -2326,6 +2326,49 @@
       ],
       "release_date": "2026-09-10",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4.1-flash-1017": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.003,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v4.1-flash-1017",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -2360,6 +2403,43 @@
         }
       ],
       "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "elorian/glimpse": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "id": "elorian/glimpse",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 262144,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Glimpse",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-10-17",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -14591,9 +14671,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-4.7",
       "cost": {
-        "cache_read": 0.11,
-        "input": 0.6,
-        "output": 2.2
+        "cache_read": 0.099,
+        "input": 0.54,
+        "output": 1.98
       },
       "description": "Mature GLM model for dependable coding, reasoning, and structured agent tasks",
       "family": "glm",
@@ -14879,9 +14959,9 @@
       "attachment": true,
       "canonical_model_id": "zhipuai/glm-5.3-flash",
       "cost": {
-        "cache_read": 0.0096,
-        "input": 0.0156,
-        "output": 0.2
+        "cache_read": 0.0094,
+        "input": 0.0293,
+        "output": 0.4182
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",
@@ -15243,9 +15323,9 @@
     "~deepseek/deepseek-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0016,
-        "input": 0.032,
-        "output": 0.144
+        "cache_read": 0.003,
+        "input": 0.15,
+        "output": 0.6
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -15253,7 +15333,7 @@
       "last_updated": "2026-09-14",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -15279,16 +15359,16 @@
         }
       ],
       "release_date": "2026-09-14",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.007938,
-        "input": 0.24948,
-        "output": 0.74844
+        "cache_read": 0.0041,
+        "input": 0.12332,
+        "output": 0.5588
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek",
@@ -15328,9 +15408,9 @@
     "~deepseek/deepseek-v4-flash-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.001523,
-        "input": 0.00688,
-        "output": 0.143616
+        "cache_read": 0.0097,
+        "input": 0.0097,
+        "output": 0.2971
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek",
@@ -15482,9 +15562,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.284,
-        "input": 0.294,
-        "output": 24
+        "cache_read": 0.0513,
+        "input": 0.27,
+        "output": 14.2307
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -15924,9 +16004,9 @@
     "~z-ai/glm-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0096,
-        "input": 0.0156,
-        "output": 0.2
+        "cache_read": 0.0094,
+        "input": 0.0293,
+        "output": 0.4182
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",
@@ -15967,9 +16047,9 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0565,
-        "input": 0.0608,
-        "output": 4.4
+        "cache_read": 0.069,
+        "input": 0.069,
+        "output": 3.939
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
