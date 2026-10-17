@@ -1,0 +1,68 @@
+{
+  "attachment": true,
+  "canonical_model_id": "alibaba/qwen3.7-plus",
+  "cost": {
+    "cache_read": 0.064,
+    "cache_write": 0.4,
+    "context_over_200k": {
+      "cache_read": 0.192,
+      "cache_write": 1.2,
+      "input": 0.96,
+      "output": 3.84
+    },
+    "input": 0.32,
+    "output": 1.28,
+    "tiers": [
+      {
+        "cache_read": 0.192,
+        "cache_write": 1.2,
+        "input": 0.96,
+        "output": 3.84,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
+  "family": "qwen",
+  "id": "qwen/qwen3.7-plus",
+  "interleaved": {
+    "field": "reasoning_details"
+  },
+  "knowledge": "2025-04",
+  "last_updated": "2026-06-02",
+  "limit": {
+    "context": 1000000,
+    "input": 850000,
+    "output": 50000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image",
+      "video"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "Qwen3.7 Plus",
+  "open_weights": false,
+  "provider": {
+    "npm": "@openrouter/ai-sdk-provider"
+  },
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "type": "budget_tokens"
+    }
+  ],
+  "release_date": "2026-06-02",
+  "temperature": true,
+  "tool_call": true
+}
