@@ -146,12 +146,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
-          "max": 38912,
-          "min": 1,
-          "type": "budget_tokens"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2025-04-28",
@@ -1554,11 +1555,9 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
+            "none",
             "low",
             "medium",
             "high"
@@ -1734,16 +1733,12 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "medium",
             "high",
             "xhigh",
             "max"
           ]
-        },
-        {
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-06-09",
@@ -1785,16 +1780,12 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "medium",
             "high",
             "xhigh",
             "max"
           ]
-        },
-        {
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-09-01",
@@ -3998,6 +3989,45 @@
       "temperature": true,
       "tool_call": true
     },
+    "elorian/glimpse": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.6,
+        "output": 3
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "id": "elorian/glimpse",
+      "last_updated": "2026-10-16",
+      "limit": {
+        "context": 220000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Glimpse",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-10-16",
+      "tool_call": false
+    },
     "fireworks/ember-1": {
       "attachment": true,
       "cost": {
@@ -5231,9 +5261,6 @@
             "medium",
             "high"
           ]
-        },
-        {
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-06-30",
@@ -7704,7 +7731,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-01",
@@ -7783,7 +7816,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-06-12",
@@ -7823,7 +7862,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-06-12",
@@ -7864,7 +7909,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "high",
             "max"
@@ -8009,7 +8053,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2025-12-15",
@@ -8048,6 +8098,7 @@
           "values": [
             "none",
             "low",
+            "medium",
             "high"
           ]
         }
@@ -8088,6 +8139,7 @@
           "type": "effort",
           "values": [
             "none",
+            "low",
             "medium",
             "high"
           ]
@@ -8126,12 +8178,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
-          "max": 32768,
-          "min": 1,
-          "type": "budget_tokens"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-08-11",
@@ -8167,12 +8220,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
-          "max": 32768,
-          "min": 1,
-          "type": "budget_tokens"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-08-11",
@@ -8250,7 +8304,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2025-10-28",
@@ -8285,7 +8345,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2025-08-18",
@@ -12874,7 +12940,8 @@
           "type": "effort",
           "values": [
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -12932,7 +12999,8 @@
           "type": "effort",
           "values": [
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -12991,7 +13059,8 @@
           "type": "effort",
           "values": [
             "high",
-            "xhigh"
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -13032,9 +13101,12 @@
           "type": "effort",
           "values": [
             "none",
+            "minimal",
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh",
+            "max"
           ]
         }
       ],
@@ -15188,7 +15260,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2025-12-22",
@@ -15224,7 +15302,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-01-19",
@@ -15243,7 +15327,7 @@
       "family": "glm-flash",
       "id": "zai/glm-4.7-flashx",
       "interleaved": true,
-      "knowledge": "2025-01",
+      "knowledge": "2025-04",
       "last_updated": "2026-01-19",
       "limit": {
         "context": 200000,
@@ -15262,7 +15346,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-01-19",
@@ -15297,7 +15387,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-02-12",
@@ -15333,7 +15429,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-03-16",
@@ -15370,7 +15472,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-04-07",
@@ -15665,7 +15773,13 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
         }
       ],
       "release_date": "2026-04-01",
