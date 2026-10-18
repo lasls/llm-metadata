@@ -2199,8 +2199,8 @@
       "id": "deepseek/deepseek-v4-pro-0813",
       "last_updated": "2026-08-22",
       "limit": {
-        "context": 1048576,
-        "output": 393216
+        "context": 1024000,
+        "output": 384000
       },
       "modalities": {
         "input": [
@@ -2244,7 +2244,7 @@
       "last_updated": "2026-09-10",
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -2276,14 +2276,16 @@
     },
     "deepseek/deepseek-v4.1-flash-1017": {
       "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
       "cost": {
         "cache_read": 0.003,
         "input": 0.15,
         "output": 0.6
       },
       "description": "DeepSeek V4.1 Flash 1017 is the October 17, 2026 snapshot of DeepSeek V4.1 Flash, served by DeepSeek under the `deepseek-flash` API model name. V4.1 Flash is a sparse mixture-of-experts model...",
-      "family": "deepseek",
+      "family": "deepseek-flash",
       "id": "deepseek/deepseek-v4.1-flash-1017",
+      "knowledge": "2025-05",
       "last_updated": "2026-10-17",
       "limit": {
         "context": 1048576,
@@ -2298,8 +2300,8 @@
           "text"
         ]
       },
-      "name": "DeepSeek: DeepSeek V4.1 Flash 1017",
-      "open_weights": false,
+      "name": "DeepSeek V4.1 Flash 1017",
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -10880,7 +10882,7 @@
     "qwen/qwen3-30b-a3b-instruct-2507": {
       "attachment": false,
       "cost": {
-        "input": 0.1,
+        "input": 0.09,
         "output": 0.3
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
@@ -13279,9 +13281,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.020625,
-        "input": 0.0825,
-        "output": 0.33
+        "cache_read": 0.033,
+        "input": 0.132,
+        "output": 0.528
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
@@ -13364,9 +13366,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.0378,
-        "input": 0.7506,
-        "output": 2.2509
+        "cache_read": 0.042,
+        "input": 0.834,
+        "output": 2.501
       },
       "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
       "family": "Hy",
@@ -13627,6 +13629,37 @@
         }
       ],
       "release_date": "2026-07-30",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "unbiased/pareto-26.10": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.8,
+        "output": 3.2
+      },
+      "description": "Pareto is a multimodal composite model built for research, coding, and agentic workflows, while delivering frontier-level performance across a broad range of general-purpose tasks.",
+      "id": "unbiased/pareto-26.10",
+      "last_updated": "2026-10-15",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Pareto 26.10",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-10-15",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -14676,9 +14709,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-4.7",
       "cost": {
-        "cache_read": 0.11,
-        "input": 0.6,
-        "output": 2.2
+        "cache_read": 0.099,
+        "input": 0.54,
+        "output": 1.98
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -14686,7 +14719,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
-        "context": 202752,
+        "context": 204800,
         "output": 131072
       },
       "modalities": {
@@ -14975,8 +15008,8 @@
       "id": "z-ai/glm-5.3-flash",
       "last_updated": "2026-08-26",
       "limit": {
-        "context": 1048575,
-        "output": 943717
+        "context": 1048576,
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -15323,16 +15356,16 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.008,
-        "input": 0.09,
-        "output": 0.55
+        "input": 0.08,
+        "output": 0.5
       },
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "family": "deepseek-flash",
       "id": "~deepseek/deepseek-flash-latest",
       "last_updated": "2026-09-14",
       "limit": {
-        "context": 1048576,
-        "output": 943718
+        "context": 262144,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -15407,9 +15440,9 @@
     "~deepseek/deepseek-v4-flash-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0058,
-        "input": 0.0058,
-        "output": 1.28
+        "cache_read": 0.001523,
+        "input": 0.01208,
+        "output": 0.143616
       },
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "family": "deepseek",
@@ -15818,15 +15851,15 @@
     "~unbiased/pareto-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "input": 2.5,
-        "output": 7.5
+        "cache_read": 0.03,
+        "input": 0.8,
+        "output": 3.2
       },
       "description": "This model always redirects to the latest model in the Pareto family.",
       "id": "~unbiased/pareto-latest",
       "last_updated": "2026-10-13",
       "limit": {
-        "context": 262144,
+        "context": 1048576,
         "output": 131072
       },
       "modalities": {
@@ -15893,9 +15926,9 @@
     "~z-ai/glm-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.04,
-        "input": 0.06,
-        "output": 1.6
+        "cache_read": 0.006,
+        "input": 0.048,
+        "output": 0.2
       },
       "description": "This model always redirects to the latest model in the GLM Flash family.",
       "family": "glm-flash",
