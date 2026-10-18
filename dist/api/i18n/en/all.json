@@ -160143,9 +160143,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.001523,
-          "input": 0.01592,
-          "output": 0.143616
+          "cache_read": 0.0065,
+          "input": 0.0065,
+          "output": 0.45
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
@@ -160279,9 +160279,9 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.27,
-          "input": 0.27,
-          "output": 14
+          "cache_read": 0.18,
+          "input": 0.25,
+          "output": 8
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -160672,9 +160672,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0588,
-          "input": 0.0632,
-          "output": 4.4
+          "cache_read": 0.07,
+          "input": 0.075,
+          "output": 2.2
         },
         "description": "This model always redirects to the latest GLM model from Z.ai.",
         "family": "glm",
@@ -212450,39 +212450,6 @@
         "structured_output": true,
         "tool_call": true
       },
-      "anthropic/claude-sonnet-4": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Claude 4 Sonnet by Anthropic. A new generation model with improved capabilities, especially on programming and development. NOTE: Inputs > 200k tokens are charged at 2x input, 1.5x output rate.",
-        "family": "claude-sonnet",
-        "id": "anthropic/claude-sonnet-4",
-        "last_updated": "2025-09-29",
-        "limit": {
-          "context": 200000,
-          "input": 200000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude 4 Sonnet",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-09-29",
-        "structured_output": true,
-        "tool_call": true
-      },
       "anthropic/claude-sonnet-4.5": {
         "attachment": true,
         "canonical_model_id": "anthropic/claude-sonnet-4-5",
@@ -212673,176 +212640,6 @@
         "release_date": "2026-02-17",
         "structured_output": true,
         "temperature": true,
-        "tool_call": true
-      },
-      "anthropic/claude-sonnet-4:thinking": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Anthropic's Claude 4 Sonnet with the ability to show its thinking process step by step.",
-        "family": "claude-sonnet",
-        "id": "anthropic/claude-sonnet-4:thinking",
-        "last_updated": "2025-02-24",
-        "limit": {
-          "context": 1000000,
-          "input": 1000000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude 4 Sonnet Thinking",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-02-24",
-        "structured_output": true,
-        "tool_call": true
-      },
-      "anthropic/claude-sonnet-4:thinking:1024": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Claude 4 Sonnet with minimal thinking budget (1,024 tokens).",
-        "family": "claude-sonnet",
-        "id": "anthropic/claude-sonnet-4:thinking:1024",
-        "last_updated": "2024-01-01",
-        "limit": {
-          "context": 1000000,
-          "input": 1000000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude 4 Sonnet Thinking (1K)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2024-01-01",
-        "structured_output": true,
-        "tool_call": true
-      },
-      "anthropic/claude-sonnet-4:thinking:32768": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Claude 4 Sonnet with extended thinking budget (32,768 tokens).",
-        "family": "claude-sonnet",
-        "id": "anthropic/claude-sonnet-4:thinking:32768",
-        "last_updated": "2024-01-01",
-        "limit": {
-          "context": 1000000,
-          "input": 1000000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude 4 Sonnet Thinking (32K)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2024-01-01",
-        "structured_output": true,
-        "tool_call": true
-      },
-      "anthropic/claude-sonnet-4:thinking:64000": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Claude 4 Sonnet with maximum thinking budget (64,000 tokens).",
-        "family": "claude-sonnet",
-        "id": "anthropic/claude-sonnet-4:thinking:64000",
-        "last_updated": "2024-01-01",
-        "limit": {
-          "context": 1000000,
-          "input": 1000000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude 4 Sonnet Thinking (64K)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2024-01-01",
-        "structured_output": true,
-        "tool_call": true
-      },
-      "anthropic/claude-sonnet-4:thinking:8192": {
-        "attachment": true,
-        "cost": {
-          "cache_read": 0.3,
-          "input": 3,
-          "output": 15
-        },
-        "description": "Claude 4 Sonnet with reduced thinking budget (8,192 tokens).",
-        "family": "claude-sonnet",
-        "id": "anthropic/claude-sonnet-4:thinking:8192",
-        "last_updated": "2024-01-01",
-        "limit": {
-          "context": 1000000,
-          "input": 1000000,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Claude 4 Sonnet Thinking (8K)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2024-01-01",
-        "structured_output": true,
         "tool_call": true
       },
       "anthropic/claude-sonnet-5": {
@@ -267550,8 +267347,8 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
         "cost": {
-          "cache_read": 0.0199,
-          "input": 0.0199,
+          "cache_read": 0.0065,
+          "input": 0.0065,
           "output": 0.45
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
@@ -267728,7 +267525,7 @@
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
           "cache_read": 0.0016,
-          "input": 0.0648,
+          "input": 0.04,
           "output": 0.144
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -280391,7 +280188,7 @@
         "cost": {
           "cache_read": 0.078,
           "input": 0.079,
-          "output": 2.5
+          "output": 1.8
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -280881,7 +280678,7 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.001523,
-          "input": 0.01592,
+          "input": 0.0052,
           "output": 0.143616
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -281034,9 +280831,9 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.27,
-          "input": 0.27,
-          "output": 14
+          "cache_read": 0.18,
+          "input": 0.25,
+          "output": 8
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -281519,9 +281316,9 @@
       "~z-ai/glm-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0588,
-          "input": 0.0632,
-          "output": 4.4
+          "cache_read": 0.07,
+          "input": 0.075,
+          "output": 2.2
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
