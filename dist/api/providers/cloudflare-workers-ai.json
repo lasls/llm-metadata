@@ -40,36 +40,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "@cf/cloudflare/clairic": {
-      "attachment": true,
-      "cost": {
-        "input": 0.1,
-        "output": 0
-      },
-      "description": "Multimodal model for analyzing text, images, documents, and rich media",
-      "id": "@cf/cloudflare/clairic",
-      "last_updated": "2026-10-14",
-      "limit": {
-        "context": 65536,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Clairic",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-10-14",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
     "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b": {
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-r1",
@@ -190,6 +160,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "@cf/deepseek-ai/deepseek-v4.1-flash-1017": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+      "family": "deepseek",
+      "id": "@cf/deepseek-ai/deepseek-v4.1-flash-1017",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Deepseek V4.1 Flash 1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "@cf/google/gemma-4-26b-a4b-it": {
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
@@ -221,11 +234,7 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
+          "type": "toggle"
         }
       ],
       "release_date": "2026-04-02",
@@ -615,6 +624,7 @@
       "family": "nemotron",
       "id": "@cf/nvidia/nemotron-3-120b-a12b",
       "interleaved": true,
+      "knowledge": "2025-06",
       "last_updated": "2026-03-11",
       "limit": {
         "context": 256000,
@@ -639,7 +649,6 @@
           "type": "effort",
           "values": [
             "low",
-            "medium",
             "high"
           ]
         }
