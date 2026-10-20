@@ -1,18 +1,19 @@
 {
-  "attachment": false,
+  "attachment": true,
   "canonical_model_id": "openai/gpt-4o-mini-transcribe",
   "cost": {
     "input": 1.25,
+    "input_audio": 1.25,
     "output": 5
   },
-  "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+  "description": "Speech-to-text model powered by GPT-4o Mini for fast, accurate transcription",
   "family": "gpt-mini",
   "id": "openai/gpt-4o-mini-transcribe",
   "knowledge": "2024-06-01",
   "last_updated": "2025-03-20",
   "limit": {
-    "context": 0,
-    "output": 0
+    "context": 16000,
+    "output": 2000
   },
   "modalities": {
     "input": [
@@ -24,9 +25,12 @@
   },
   "name": "GPT-4o mini Transcribe",
   "open_weights": false,
+  "provider": {
+    "api": "https://ai-gateway.vercel.sh/v4/ai"
+  },
   "reasoning": false,
   "release_date": "2025-03-20",
-  "temperature": true,
+  "temperature": false,
   "tool_call": false,
   "type": "transcription"
 }

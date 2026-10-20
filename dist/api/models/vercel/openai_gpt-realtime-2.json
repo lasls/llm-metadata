@@ -1,19 +1,21 @@
 {
-  "attachment": false,
+  "attachment": true,
   "canonical_model_id": "openai/gpt-realtime-2",
   "cost": {
     "cache_read": 0.4,
     "input": 4,
-    "output": 24
+    "input_audio": 32,
+    "output": 24,
+    "output_audio": 64
   },
-  "description": "Speech generation model for controllable voice, narration, and audio delivery",
+  "description": "Realtime speech-to-speech model with configurable reasoning and reliable tool use for voice agents",
   "family": "gpt",
   "id": "openai/gpt-realtime-2",
   "knowledge": "2024-09-30",
   "last_updated": "2026-05-07",
   "limit": {
-    "context": 0,
-    "output": 0
+    "context": 128000,
+    "output": 32000
   },
   "modalities": {
     "input": [
@@ -27,9 +29,12 @@
   },
   "name": "gpt-realtime-2",
   "open_weights": false,
+  "provider": {
+    "api": "https://ai-gateway.vercel.sh/v4/ai"
+  },
   "reasoning": false,
   "release_date": "2026-05-07",
   "temperature": true,
-  "tool_call": false,
+  "tool_call": true,
   "type": "realtime"
 }

@@ -286,7 +286,7 @@
       "last_updated": "2025-11-14",
       "limit": {
         "context": 32768,
-        "output": 32768
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -298,21 +298,25 @@
       },
       "name": "Qwen3 Embedding 0.6B",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-11-14",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "alibaba/qwen3-embedding-4b": {
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-embedding-4b",
-      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "description": "Multilingual text embedding model for retrieval, code search, classification, and clustering",
       "family": "qwen",
       "id": "alibaba/qwen3-embedding-4b",
       "last_updated": "2025-06-05",
       "limit": {
         "context": 32768,
-        "output": 32768
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -324,22 +328,25 @@
       },
       "name": "Qwen3 Embedding 4B",
       "open_weights": true,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-06-05",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "embedding"
     },
     "alibaba/qwen3-embedding-8b": {
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-embedding-8b",
-      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "description": "Multilingual text embedding model for retrieval, code search, classification, and clustering",
       "family": "qwen",
       "id": "alibaba/qwen3-embedding-8b",
       "last_updated": "2025-06-05",
       "limit": {
         "context": 32768,
-        "output": 32768
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -351,9 +358,12 @@
       },
       "name": "Qwen3 Embedding 8B",
       "open_weights": true,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-06-05",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "embedding"
     },
@@ -1292,7 +1302,7 @@
       "tool_call": true
     },
     "alibaba/wan-v2.5-t2v-preview": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "id": "alibaba/wan-v2.5-t2v-preview",
       "last_updated": "2025-09-24",
@@ -1302,7 +1312,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "audio"
         ],
         "output": [
           "video"
@@ -1310,14 +1321,18 @@
       },
       "name": "Wan v2.5 Text-to-Video Preview",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-09-24",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "alibaba/wan-v2.6-i2v": {
-      "attachment": false,
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "id": "alibaba/wan-v2.6-i2v",
       "last_updated": "2025-12-16",
       "limit": {
@@ -1326,7 +1341,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "audio"
         ],
         "output": [
           "video"
@@ -1334,14 +1351,18 @@
       },
       "name": "Wan v2.6 Image-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-16",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "alibaba/wan-v2.6-i2v-flash": {
-      "attachment": false,
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "id": "alibaba/wan-v2.6-i2v-flash",
       "last_updated": "2025-12-16",
       "limit": {
@@ -1350,7 +1371,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "audio"
         ],
         "output": [
           "video"
@@ -1358,13 +1381,17 @@
       },
       "name": "Wan v2.6 Image-to-Video Flash",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-16",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "alibaba/wan-v2.6-r2v": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "id": "alibaba/wan-v2.6-r2v",
       "last_updated": "2025-12-16",
@@ -1374,7 +1401,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "video"
@@ -1382,13 +1411,17 @@
       },
       "name": "Wan v2.6 Reference-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-16",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "alibaba/wan-v2.6-r2v-flash": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "id": "alibaba/wan-v2.6-r2v-flash",
       "last_updated": "2025-12-16",
@@ -1398,7 +1431,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "video"
@@ -1406,13 +1441,17 @@
       },
       "name": "Wan v2.6 Reference-to-Video Flash",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-16",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "alibaba/wan-v2.6-t2v": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "id": "alibaba/wan-v2.6-t2v",
       "last_updated": "2025-12-16",
@@ -1422,7 +1461,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "audio"
         ],
         "output": [
           "video"
@@ -1430,13 +1470,17 @@
       },
       "name": "Wan v2.6 Text-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-16",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "alibaba/wan-v2.7-r2v": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "id": "alibaba/wan-v2.7-r2v",
       "last_updated": "2026-04-07",
@@ -1446,7 +1490,10 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video",
+          "audio"
         ],
         "output": [
           "video"
@@ -1454,13 +1501,17 @@
       },
       "name": "Wan v2.7 Reference-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-04-07",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "alibaba/wan-v2.7-t2v": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "id": "alibaba/wan-v2.7-t2v",
       "last_updated": "2026-04-07",
@@ -1470,7 +1521,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "audio"
         ],
         "output": [
           "video"
@@ -1478,10 +1530,14 @@
       },
       "name": "Wan v2.7 Text-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-04-07",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "alibaba/wan-v3.0-video": {
       "attachment": true,
@@ -1495,7 +1551,9 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "audio"
         ],
         "output": [
           "video"
@@ -1503,9 +1561,14 @@
       },
       "name": "Wan v3.0 Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-08-23",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "alibaba/wan-v3.0-video-prime": {
       "attachment": true,
@@ -1519,7 +1582,9 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "audio"
         ],
         "output": [
           "video"
@@ -1527,9 +1592,14 @@
       },
       "name": "Wan v3.0 Video Prime",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-08-28",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "amazon/nova-2-lite": {
       "attachment": true,
@@ -1689,7 +1759,7 @@
       "last_updated": "2024-04",
       "limit": {
         "context": 8192,
-        "output": 1536
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -1701,10 +1771,14 @@
       },
       "name": "Titan Text Embeddings V2",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-04-30",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "anthropic/claude-fable-5": {
       "attachment": true,
@@ -2625,10 +2699,14 @@
       },
       "name": "FLUX.2 [flex]",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-11-25",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-2-klein-4b": {
       "attachment": false,
@@ -2650,10 +2728,14 @@
       },
       "name": "FLUX.2 [klein] 4B",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-01-15",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-2-klein-9b": {
       "attachment": false,
@@ -2675,10 +2757,14 @@
       },
       "name": "FLUX.2 [klein] 9B",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-01-15",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-2-max": {
       "attachment": false,
@@ -2700,10 +2786,14 @@
       },
       "name": "FLUX.2 [max]",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-16",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-2-pro": {
       "attachment": false,
@@ -2725,10 +2815,14 @@
       },
       "name": "FLUX.2 [pro]",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-11-25",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-3-image": {
       "attachment": false,
@@ -2750,9 +2844,14 @@
       },
       "name": "FLUX 3 Image",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-05",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-3-image-klein": {
       "attachment": false,
@@ -2774,13 +2873,18 @@
       },
       "name": "FLUX 3 Image Klein",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-15",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-3-video": {
-      "attachment": false,
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "flux",
       "id": "bfl/flux-3-video",
       "last_updated": "2026-08-04",
@@ -2790,7 +2894,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "video"
@@ -2798,9 +2904,14 @@
       },
       "name": "Flux 3",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-08-04",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "bfl/flux-kontext-max": {
       "attachment": false,
@@ -2822,10 +2933,14 @@
       },
       "name": "FLUX.1 Kontext Max",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-05-29",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-kontext-pro": {
       "attachment": false,
@@ -2847,10 +2962,14 @@
       },
       "name": "FLUX.1 Kontext Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-05-29",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-pro-1.0-fill": {
       "attachment": false,
@@ -2872,10 +2991,14 @@
       },
       "name": "FLUX.1 Fill [pro]",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-10-01",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-pro-1.1": {
       "attachment": false,
@@ -2897,10 +3020,14 @@
       },
       "name": "FLUX1.1 [pro]",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-10-02",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bfl/flux-pro-1.1-ultra": {
       "attachment": false,
@@ -2922,10 +3049,14 @@
       },
       "name": "FLUX1.1 [pro] Ultra",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-11-01",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bytedance/seed-1.6": {
       "attachment": true,
@@ -3081,7 +3212,7 @@
     "bytedance/seedance-2.0": {
       "attachment": true,
       "canonical_model_id": "bytedance-seed/seedance-2.0",
-      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "description": "ByteDance unified multimodal audio-video model supporting text, image, video and audio references, editing, extension and synchronized stereo sound.",
       "family": "seed",
       "id": "bytedance/seedance-2.0",
       "last_updated": "2026-10-04",
@@ -3100,9 +3231,12 @@
       },
       "name": "Seedance 2.0",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-02-12",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "video"
     },
@@ -3119,7 +3253,9 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "audio"
         ],
         "output": [
           "video"
@@ -3127,10 +3263,14 @@
       },
       "name": "Seedance 2.0 Fast",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-04-14",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "bytedance/seedance-2.0-mini": {
       "attachment": true,
@@ -3145,7 +3285,9 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video",
+          "audio"
         ],
         "output": [
           "video"
@@ -3153,14 +3295,19 @@
       },
       "name": "Seedance 2.0 Mini",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-06-22",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "bytedance/seedance-2.5": {
       "attachment": false,
       "canonical_model_id": "bytedance-seed/seedance-2.5",
-      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "description": "ByteDance multimodal audio-video model with up to 30-second single-pass generation, multi-round extension, reference inputs and timestamp-level editing.",
       "family": "seed",
       "id": "bytedance/seedance-2.5",
       "last_updated": "2026-10-04",
@@ -3178,6 +3325,9 @@
       },
       "name": "Seedance 2.5",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-07-31",
       "temperature": false,
@@ -3185,7 +3335,7 @@
       "type": "video"
     },
     "bytedance/seedance-v1.0-pro": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "seed",
       "id": "bytedance/seedance-v1.0-pro",
@@ -3196,7 +3346,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "video"
@@ -3204,13 +3355,17 @@
       },
       "name": "Seedance v1.0 Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-06-11",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "bytedance/seedance-v1.0-pro-fast": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "seed",
       "id": "bytedance/seedance-v1.0-pro-fast",
@@ -3221,7 +3376,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "video"
@@ -3229,13 +3385,17 @@
       },
       "name": "Seedance v1.0 Pro Fast",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-10-24",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "bytedance/seedance-v1.5-pro": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "seed",
       "id": "bytedance/seedance-v1.5-pro",
@@ -3246,7 +3406,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "video"
@@ -3254,10 +3415,14 @@
       },
       "name": "Seedance v1.5 Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-16",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "bytedance/seedream-4.0": {
       "attachment": false,
@@ -3279,10 +3444,14 @@
       },
       "name": "Seedream 4.0",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-09-09",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bytedance/seedream-4.5": {
       "attachment": false,
@@ -3304,10 +3473,14 @@
       },
       "name": "Seedream 4.5",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-03",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bytedance/seedream-5.0-lite": {
       "attachment": false,
@@ -3329,10 +3502,14 @@
       },
       "name": "Seedream 5.0 Lite",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-02-13",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "bytedance/seedream-5.0-pro": {
       "attachment": false,
@@ -3354,10 +3531,14 @@
       },
       "name": "Seedream 5.0 Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-07-11",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "callstack/apex": {
       "attachment": true,
@@ -3434,7 +3615,7 @@
     "cohere/embed-v4.0": {
       "attachment": false,
       "canonical_model_id": "cohere/embed-v4.0",
-      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "description": "Multimodal embedding model for text, images, and mixed text-and-image documents",
       "family": "cohere-embed",
       "id": "cohere/embed-v4.0",
       "last_updated": "2025-04-15",
@@ -3452,6 +3633,9 @@
       },
       "name": "Embed v4.0",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-04-15",
       "temperature": false,
@@ -3461,7 +3645,7 @@
     "cohere/embed-v5.0-fast": {
       "attachment": false,
       "canonical_model_id": "cohere/embed-v5.0-fast",
-      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "description": "Faster, lighter Embed 5 model sharing Embed 5 Pro's embedding space",
       "family": "cohere-embed",
       "id": "cohere/embed-v5.0-fast",
       "last_updated": "2026-09-30",
@@ -3479,6 +3663,9 @@
       },
       "name": "Embed 5 Fast",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-30",
       "temperature": false,
@@ -3488,7 +3675,7 @@
     "cohere/embed-v5.0-pro": {
       "attachment": false,
       "canonical_model_id": "cohere/embed-v5.0-pro",
-      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "description": "Cohere's most capable multimodal embedding model for text, images, and mixed documents",
       "family": "cohere-embed",
       "id": "cohere/embed-v5.0-pro",
       "last_updated": "2026-09-30",
@@ -3506,6 +3693,9 @@
       },
       "name": "Embed 5 Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-30",
       "temperature": false,
@@ -3515,12 +3705,12 @@
     "cohere/rerank-v3.5": {
       "attachment": false,
       "canonical_model_id": "cohere/rerank-v3.5",
-      "description": "Reranking model for improving retrieval quality in search and recommendation systems",
+      "description": "Multilingual reranker for documents and semi-structured data",
       "id": "cohere/rerank-v3.5",
       "last_updated": "2024-12-02",
       "limit": {
         "context": 4096,
-        "output": 4096
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -3532,6 +3722,9 @@
       },
       "name": "Cohere Rerank 3.5",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-12-02",
       "temperature": false,
@@ -3541,12 +3734,12 @@
     "cohere/rerank-v4-fast": {
       "attachment": false,
       "canonical_model_id": "cohere/rerank-v4.0-fast",
-      "description": "Reranking model for improving retrieval quality in search and recommendation systems",
+      "description": "Low-latency multilingual reranker for high-throughput retrieval",
       "id": "cohere/rerank-v4-fast",
       "last_updated": "2025-12-11",
       "limit": {
         "context": 32000,
-        "output": 32000
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -3558,6 +3751,9 @@
       },
       "name": "Cohere Rerank 4 Fast",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-11",
       "temperature": false,
@@ -3567,12 +3763,12 @@
     "cohere/rerank-v4-pro": {
       "attachment": false,
       "canonical_model_id": "cohere/rerank-v4.0-pro",
-      "description": "Reranking model for improving retrieval quality in search and recommendation systems",
+      "description": "Multilingual reranker for maximum relevance on documents and semi-structured data",
       "id": "cohere/rerank-v4-pro",
       "last_updated": "2025-12-11",
       "limit": {
         "context": 32000,
-        "output": 32000
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -3584,6 +3780,9 @@
       },
       "name": "Cohere Rerank 4 Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-11",
       "temperature": false,
@@ -4246,9 +4445,14 @@
       },
       "name": "Drama 3",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-13",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "speech"
     },
     "fish-audio/s1": {
       "attachment": false,
@@ -4269,9 +4473,14 @@
       },
       "name": "S1",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-10-20",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "speech"
     },
     "fish-audio/s2-pro": {
       "attachment": false,
@@ -4292,9 +4501,14 @@
       },
       "name": "S2 Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-03-09",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "speech"
     },
     "fish-audio/s2.1-pro": {
       "attachment": false,
@@ -4315,12 +4529,17 @@
       },
       "name": "S2.1 Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-07-28",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "speech"
     },
     "fish-audio/transcribe-1": {
-      "attachment": false,
+      "attachment": true,
       "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
       "id": "fish-audio/transcribe-1",
       "last_updated": "2026-03-01",
@@ -4338,9 +4557,14 @@
       },
       "name": "Transcribe-1",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-03-01",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "transcription"
     },
     "google/gemini-2.5-flash": {
       "attachment": true,
@@ -4937,19 +5161,20 @@
       "tool_call": true
     },
     "google/gemini-3.5-transcribe": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "google/gemini-3.5-transcribe",
       "cost": {
         "input": 2,
+        "input_audio": 2,
         "output": 12
       },
-      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "description": "Speech-to-text model with language detection, speaker diarization, word timestamps, and custom vocabulary",
       "family": "gemini",
       "id": "google/gemini-3.5-transcribe",
       "last_updated": "2026-08-26",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 98304,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -4961,9 +5186,12 @@
       },
       "name": "Gemini 3.5 Transcribe",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-08-26",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "transcription"
     },
@@ -4988,8 +5216,12 @@
       },
       "name": "Gemini 3.5 Transcribe Live",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-08-26",
+      "temperature": false,
       "tool_call": false,
       "type": "transcription"
     },
@@ -5129,15 +5361,16 @@
       "canonical_model_id": "google/gemini-3.8-flash-lite-tts",
       "cost": {
         "input": 0.5,
-        "output": 6
+        "output": 6,
+        "output_audio": 6
       },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Fast, cost-efficient text-to-speech model for high-volume narration and voice agent pipelines",
       "family": "gemini-flash-lite",
       "id": "google/gemini-3.8-flash-lite-tts",
       "last_updated": "2026-09-22",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 8192,
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -5149,9 +5382,12 @@
       },
       "name": "Gemini 3.8 Flash-Lite TTS",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-22",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "speech"
     },
@@ -5160,15 +5396,16 @@
       "canonical_model_id": "google/gemini-3.8-flash-tts",
       "cost": {
         "input": 0.5,
-        "output": 9
+        "output": 9,
+        "output_audio": 9
       },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Flagship text-to-speech model for expressive, studio-grade voices and long-form multi-speaker audio",
       "family": "gemini-flash",
       "id": "google/gemini-3.8-flash-tts",
       "last_updated": "2026-09-22",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 8192,
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -5180,26 +5417,31 @@
       },
       "name": "Gemini 3.8 Flash TTS",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-22",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "speech"
     },
     "google/gemini-3.8-live": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "google/gemini-3.8-live",
       "cost": {
         "input": 0.75,
-        "output": 4.5
+        "input_audio": 3,
+        "output": 4.5,
+        "output_audio": 12
       },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Low-latency Live API model for real-time voice agents with interleaved reasoning and async tools",
       "family": "gemini-flash",
       "id": "google/gemini-3.8-live",
       "last_updated": "2026-09-15",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 131072,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -5213,26 +5455,31 @@
       },
       "name": "Gemini 3.8 Live",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-15",
       "temperature": true,
-      "tool_call": false,
+      "tool_call": true,
       "type": "realtime"
     },
     "google/gemini-3.8-live-extended-thinking": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "google/gemini-3.8-live-extended-thinking",
       "cost": {
         "input": 0.75,
-        "output": 4.5
+        "input_audio": 3,
+        "output": 4.5,
+        "output_audio": 12
       },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Live API voice model with configurable background reasoning for multi-step real-time agents",
       "family": "gemini-flash",
       "id": "google/gemini-3.8-live-extended-thinking",
       "last_updated": "2026-09-15",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 131072,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -5246,10 +5493,13 @@
       },
       "name": "Gemini 3.8 Live Extended Thinking",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-15",
       "temperature": true,
-      "tool_call": false,
+      "tool_call": true,
       "type": "realtime"
     },
     "google/gemini-4-argon": {
@@ -5306,8 +5556,8 @@
       "knowledge": "2025-05",
       "last_updated": "2025-05-20",
       "limit": {
-        "context": 8192,
-        "output": 1536
+        "context": 2048,
+        "output": 1
       },
       "modalities": {
         "input": [
@@ -5319,23 +5569,26 @@
       },
       "name": "Gemini Embedding 001",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-05-20",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "embedding"
     },
     "google/gemini-embedding-2": {
       "attachment": false,
       "canonical_model_id": "google/gemini-embedding-2",
-      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "description": "Multimodal embedding model mapping text, images, video, audio, and PDFs into a unified embedding space",
       "family": "gemini",
       "id": "google/gemini-embedding-2",
       "knowledge": "2025-11",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 8192,
+        "output": 3072
       },
       "modalities": {
         "input": [
@@ -5347,9 +5600,12 @@
       },
       "name": "Gemini Embedding 2",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-04-22",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "embedding"
     },
@@ -5521,7 +5777,7 @@
       "last_updated": "2024-08",
       "limit": {
         "context": 8192,
-        "output": 1536
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -5533,10 +5789,14 @@
       },
       "name": "Text Embedding 005",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-08-01",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "google/text-multilingual-embedding-002": {
       "attachment": false,
@@ -5546,7 +5806,7 @@
       "last_updated": "2024-03",
       "limit": {
         "context": 8192,
-        "output": 1536
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -5558,140 +5818,21 @@
       },
       "name": "Text Multilingual Embedding 002",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-03-01",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "google/veo-3.0-fast-generate-001": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "veo",
       "id": "google/veo-3.0-fast-generate-001",
       "last_updated": "2026-06-08",
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "name": "Veo 3.0 Fast Generate",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-07-31",
-      "temperature": true,
-      "tool_call": false
-    },
-    "google/veo-3.0-generate-001": {
-      "attachment": false,
-      "description": "Video model for prompt-guided generation, editing, and motion workflows",
-      "family": "veo",
-      "id": "google/veo-3.0-generate-001",
-      "last_updated": "2026-06-08",
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "name": "Veo 3.0",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-05-20",
-      "temperature": true,
-      "tool_call": false
-    },
-    "google/veo-3.1-fast-generate-001": {
-      "attachment": false,
-      "description": "Video model for prompt-guided generation, editing, and motion workflows",
-      "family": "veo",
-      "id": "google/veo-3.1-fast-generate-001",
-      "last_updated": "2026-06-08",
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "name": "Veo 3.1 Fast Generate",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-10-15",
-      "temperature": true,
-      "tool_call": false
-    },
-    "google/veo-3.1-generate-001": {
-      "attachment": false,
-      "description": "Video model for prompt-guided generation, editing, and motion workflows",
-      "family": "veo",
-      "id": "google/veo-3.1-generate-001",
-      "last_updated": "2026-06-08",
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "name": "Veo 3.1",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-10-15",
-      "temperature": true,
-      "tool_call": false
-    },
-    "google/veo-3.1-lite-generate-001": {
-      "attachment": false,
-      "description": "Video model for prompt-guided generation, editing, and motion workflows",
-      "family": "veo",
-      "id": "google/veo-3.1-lite-generate-001",
-      "last_updated": "2026-04-02",
-      "limit": {
-        "context": 0,
-        "output": 0
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "video"
-        ]
-      },
-      "name": "Veo 3.1 Lite Generate",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-04-02",
-      "tool_call": false
-    },
-    "heygen/heygen-video-1": {
-      "attachment": true,
-      "description": "Video model for prompt-guided generation, editing, and motion workflows",
-      "id": "heygen/heygen-video-1",
-      "last_updated": "2026-10-09",
       "limit": {
         "context": 0,
         "output": 0
@@ -5705,11 +5846,170 @@
           "video"
         ]
       },
+      "name": "Veo 3.0 Fast Generate",
+      "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
+      "reasoning": false,
+      "release_date": "2025-07-31",
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
+    },
+    "google/veo-3.0-generate-001": {
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "family": "veo",
+      "id": "google/veo-3.0-generate-001",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.0",
+      "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
+      "reasoning": false,
+      "release_date": "2025-05-20",
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
+    },
+    "google/veo-3.1-fast-generate-001": {
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "family": "veo",
+      "id": "google/veo-3.1-fast-generate-001",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.1 Fast Generate",
+      "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
+      "reasoning": false,
+      "release_date": "2025-10-15",
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
+    },
+    "google/veo-3.1-generate-001": {
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "family": "veo",
+      "id": "google/veo-3.1-generate-001",
+      "last_updated": "2026-06-08",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.1",
+      "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
+      "reasoning": false,
+      "release_date": "2025-10-15",
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
+    },
+    "google/veo-3.1-lite-generate-001": {
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "family": "veo",
+      "id": "google/veo-3.1-lite-generate-001",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "video"
+        ]
+      },
+      "name": "Veo 3.1 Lite Generate",
+      "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
+      "reasoning": false,
+      "release_date": "2026-04-02",
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
+    },
+    "heygen/heygen-video-1": {
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "id": "heygen/heygen-video-1",
+      "last_updated": "2026-10-09",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "video"
+        ]
+      },
       "name": "HeyGen Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-09",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "inception/mercury-2": {
       "attachment": false,
@@ -6151,8 +6451,8 @@
       "tool_call": false
     },
     "klingai/kling-v2.5-turbo-i2v": {
-      "attachment": false,
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "ling",
       "id": "klingai/kling-v2.5-turbo-i2v",
       "last_updated": "2025-09-23",
@@ -6162,7 +6462,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "video"
@@ -6170,10 +6471,14 @@
       },
       "name": "Kling v2.5 Turbo Image-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-09-23",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "klingai/kling-v2.5-turbo-t2v": {
       "attachment": false,
@@ -6195,14 +6500,18 @@
       },
       "name": "Kling v2.5 Turbo Text-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-09-23",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "klingai/kling-v2.6-i2v": {
-      "attachment": false,
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "ling",
       "id": "klingai/kling-v2.6-i2v",
       "last_updated": "2025-12-21",
@@ -6212,7 +6521,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "video"
@@ -6220,13 +6530,17 @@
       },
       "name": "Kling v2.6 Image-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-03",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "klingai/kling-v2.6-motion-control": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "ling",
       "id": "klingai/kling-v2.6-motion-control",
@@ -6237,7 +6551,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "video"
@@ -6245,10 +6561,14 @@
       },
       "name": "Kling v2.6 Motion Control",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-18",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "klingai/kling-v2.6-t2v": {
       "attachment": false,
@@ -6270,14 +6590,18 @@
       },
       "name": "Kling v2.6 Text-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-12-03",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "klingai/kling-v3.0-i2v": {
-      "attachment": false,
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "ling",
       "id": "klingai/kling-v3.0-i2v",
       "last_updated": "2026-02-05",
@@ -6287,7 +6611,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "video"
@@ -6295,13 +6620,17 @@
       },
       "name": "Kling v3.0 Image-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-02-05",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "klingai/kling-v3.0-motion-control": {
-      "attachment": false,
+      "attachment": true,
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "ling",
       "id": "klingai/kling-v3.0-motion-control",
@@ -6312,7 +6641,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "video"
@@ -6320,10 +6651,14 @@
       },
       "name": "Kling v3.0 Motion Control",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-03-04",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "klingai/kling-v3.0-t2v": {
       "attachment": false,
@@ -6345,10 +6680,14 @@
       },
       "name": "Kling v3.0 Text-to-Video",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-02-05",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "liquid/lfm2.5-24b-a2b": {
       "attachment": false,
@@ -6649,9 +6988,14 @@
       },
       "name": "Muse Image 1.0",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-08-26",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "meta/muse-spark-1.1": {
       "attachment": true,
@@ -6995,9 +7339,14 @@
       },
       "name": "MAI-Image-2.6",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-13",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "microsoft/mai-image-2.6-flash": {
       "attachment": false,
@@ -7023,12 +7372,17 @@
       },
       "name": "MAI-Image-2.6-Flash",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-13",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "microsoft/mai-transcribe-2": {
-      "attachment": false,
+      "attachment": true,
       "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
       "family": "mai",
       "id": "microsoft/mai-transcribe-2",
@@ -7047,12 +7401,17 @@
       },
       "name": "MAI-Transcribe 2",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-03",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "transcription"
     },
     "microsoft/mai-transcribe-2-streaming": {
-      "attachment": false,
+      "attachment": true,
       "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
       "family": "mai",
       "id": "microsoft/mai-transcribe-2-streaming",
@@ -7071,9 +7430,14 @@
       },
       "name": "MAI-Transcribe-2-Streaming",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-01",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "transcription"
     },
     "microsoft/mai-voice-2": {
       "attachment": false,
@@ -7095,9 +7459,14 @@
       },
       "name": "MAI-Voice-2",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-06-02",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "speech"
     },
     "microsoft/mai-voice-2-flash": {
       "attachment": false,
@@ -7119,9 +7488,14 @@
       },
       "name": "MAI-Voice-2-Flash",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-07-23",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "speech"
     },
     "microsoft/mai-voice-2.1": {
       "attachment": false,
@@ -7143,9 +7517,14 @@
       },
       "name": "MAI-Voice-2.1",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-01",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "speech"
     },
     "microsoft/mai-voice-2.1-flash": {
       "attachment": false,
@@ -7167,14 +7546,19 @@
       },
       "name": "MAI-Voice-2.1-Flash",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-01",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "speech"
     },
     "minimax/minimax-h3": {
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-H3",
-      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "description": "MiniMax general-purpose video model with multimodal references and synchronized stereo audio. Open H3-Base checkpoints; Context-IR and 2K regeneration are not included in the initial weights release.",
       "family": "minimax",
       "id": "minimax/minimax-h3",
       "last_updated": "2026-10-04",
@@ -7193,6 +7577,9 @@
       },
       "name": "MiniMax H3",
       "open_weights": true,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-07-31",
       "temperature": false,
@@ -7220,9 +7607,14 @@
       },
       "name": "MiniMax H3 Max",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-08-27",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "minimax/minimax-m2": {
       "attachment": false,
@@ -7601,13 +7993,13 @@
     "mistral/codestral-embed": {
       "attachment": false,
       "canonical_model_id": "mistral/codestral-embed-2505",
-      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "description": "Embedding model for code search, retrieval, and code-aware RAG pipelines",
       "family": "codestral-embed",
       "id": "mistral/codestral-embed",
       "last_updated": "2025-05-28",
       "limit": {
         "context": 8192,
-        "output": 1536
+        "output": 3072
       },
       "modalities": {
         "input": [
@@ -7619,9 +8011,12 @@
       },
       "name": "Codestral Embed",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-05-28",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "embedding"
     },
@@ -7730,8 +8125,8 @@
       "id": "mistral/mistral-embed",
       "last_updated": "2023-12-11",
       "limit": {
-        "context": 8192,
-        "output": 1536
+        "context": 8000,
+        "output": 3072
       },
       "modalities": {
         "input": [
@@ -7743,9 +8138,12 @@
       },
       "name": "Mistral Embed",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2023-12-11",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "embedding"
     },
@@ -7786,9 +8184,9 @@
       "attachment": true,
       "canonical_model_id": "mistral/mistral-large-4",
       "cost": {
-        "cache_read": 0.07,
-        "input": 0.68,
-        "output": 2.09
+        "cache_read": 0.14,
+        "input": 1.36,
+        "output": 4.18
       },
       "description": "Flagship Mistral model for advanced reasoning, coding, and multilingual work",
       "family": "mistral-large",
@@ -7927,6 +8325,93 @@
       "release_date": "2026-03-16",
       "temperature": true,
       "tool_call": true
+    },
+    "mistral/voxtral-mini-transcribe-3": {
+      "attachment": true,
+      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "family": "mistral",
+      "id": "mistral/voxtral-mini-transcribe-3",
+      "last_updated": "2026-10-20",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Voxtral Mini Transcribe 3",
+      "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
+      "reasoning": false,
+      "release_date": "2026-10-20",
+      "temperature": false,
+      "tool_call": false,
+      "type": "transcription"
+    },
+    "mistral/voxtral-mini-tts-3": {
+      "attachment": false,
+      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "family": "mistral",
+      "id": "mistral/voxtral-mini-tts-3",
+      "last_updated": "2026-10-20",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "audio"
+        ]
+      },
+      "name": "Voxtral TTS 3",
+      "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
+      "reasoning": false,
+      "release_date": "2026-10-20",
+      "temperature": false,
+      "tool_call": false,
+      "type": "speech"
+    },
+    "mistral/voxtral-small-transcribe-3": {
+      "attachment": true,
+      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "family": "mistral",
+      "id": "mistral/voxtral-small-transcribe-3",
+      "last_updated": "2026-10-20",
+      "limit": {
+        "context": 0,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Voxtral Small Transcribe 3",
+      "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
+      "reasoning": false,
+      "release_date": "2026-10-20",
+      "temperature": false,
+      "tool_call": false,
+      "type": "transcription"
     },
     "mixedbread/toast-1": {
       "attachment": false,
@@ -9153,20 +9638,21 @@
       "tool_call": true
     },
     "openai/gpt-4o-mini-transcribe": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "openai/gpt-4o-mini-transcribe",
       "cost": {
         "input": 1.25,
+        "input_audio": 1.25,
         "output": 5
       },
-      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "description": "Speech-to-text model powered by GPT-4o Mini for fast, accurate transcription",
       "family": "gpt-mini",
       "id": "openai/gpt-4o-mini-transcribe",
       "knowledge": "2024-06-01",
       "last_updated": "2025-03-20",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 16000,
+        "output": 2000
       },
       "modalities": {
         "input": [
@@ -9178,27 +9664,31 @@
       },
       "name": "GPT-4o mini Transcribe",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-03-20",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "transcription"
     },
     "openai/gpt-4o-transcribe": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "openai/gpt-4o-transcribe",
       "cost": {
         "input": 2.5,
+        "input_audio": 2.5,
         "output": 10
       },
-      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "description": "Speech-to-text model powered by GPT-4o for accurate transcription",
       "family": "gpt",
       "id": "openai/gpt-4o-transcribe",
       "knowledge": "2024-06-01",
       "last_updated": "2025-03-20",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 16000,
+        "output": 2000
       },
       "modalities": {
         "input": [
@@ -9210,9 +9700,12 @@
       },
       "name": "GPT-4o Transcribe",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-03-20",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "transcription"
     },
@@ -11601,9 +12094,12 @@
       },
       "name": "GPT Image 1",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-04-24",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "image"
     },
@@ -11632,10 +12128,14 @@
       },
       "name": "GPT Image 1 Mini",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-10-06",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "openai/gpt-image-1.5": {
       "attachment": false,
@@ -11663,9 +12163,12 @@
       },
       "name": "GPT Image 1.5",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-11-25",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "image"
     },
@@ -11695,9 +12198,12 @@
       },
       "name": "GPT Image 2",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-04-21",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "image"
     },
@@ -11727,6 +12233,9 @@
       },
       "name": "GPT Image 2.5 Flare",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-08",
       "temperature": false,
@@ -11759,6 +12268,9 @@
       },
       "name": "GPT Image 2.5 Sunburst",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-08",
       "temperature": false,
@@ -11766,9 +12278,9 @@
       "type": "image"
     },
     "openai/gpt-live-1": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "openai/gpt-live-1",
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Full-duplex voice model for natural conversations that delegates reasoning and tools to a backend agent",
       "family": "gpt",
       "id": "openai/gpt-live-1",
       "knowledge": "2025-07-31",
@@ -11789,10 +12301,13 @@
       },
       "name": "GPT-Live 1",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-10",
-      "temperature": false,
-      "tool_call": false,
+      "temperature": true,
+      "tool_call": true,
       "type": "realtime"
     },
     "openai/gpt-oss-120b": {
@@ -11964,21 +12479,23 @@
       "tool_call": true
     },
     "openai/gpt-realtime-1.5": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "openai/gpt-realtime-1.5",
       "cost": {
         "cache_read": 0.4,
         "input": 4,
-        "output": 16
+        "input_audio": 32,
+        "output": 16,
+        "output_audio": 64
       },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Realtime speech-to-speech model for voice agents and customer support",
       "family": "gpt",
       "id": "openai/gpt-realtime-1.5",
       "knowledge": "2024-09-30",
       "last_updated": "2026-02-23",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 32000,
+        "output": 4096
       },
       "modalities": {
         "input": [
@@ -11992,28 +12509,33 @@
       },
       "name": "GPT-Realtime-1.5",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-02-23",
       "temperature": true,
-      "tool_call": false,
+      "tool_call": true,
       "type": "realtime"
     },
     "openai/gpt-realtime-2": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "openai/gpt-realtime-2",
       "cost": {
         "cache_read": 0.4,
         "input": 4,
-        "output": 24
+        "input_audio": 32,
+        "output": 24,
+        "output_audio": 64
       },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Realtime speech-to-speech model with configurable reasoning and reliable tool use for voice agents",
       "family": "gpt",
       "id": "openai/gpt-realtime-2",
       "knowledge": "2024-09-30",
       "last_updated": "2026-05-07",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 128000,
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -12027,21 +12549,26 @@
       },
       "name": "gpt-realtime-2",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-05-07",
       "temperature": true,
-      "tool_call": false,
+      "tool_call": true,
       "type": "realtime"
     },
     "openai/gpt-realtime-2.1": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "openai/gpt-realtime-2.1",
       "cost": {
         "cache_read": 0.4,
         "input": 4,
-        "output": 24
+        "input_audio": 32,
+        "output": 24,
+        "output_audio": 64
       },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Realtime speech-to-speech model with configurable reasoning, tool use, and robust voice-agent behavior",
       "family": "gpt",
       "id": "openai/gpt-realtime-2.1",
       "knowledge": "2024-09-30",
@@ -12063,6 +12590,9 @@
       },
       "name": "gpt-realtime-2.1",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": true,
       "reasoning_options": [
         {
@@ -12077,27 +12607,28 @@
         }
       ],
       "release_date": "2026-07-06",
-      "structured_output": false,
       "temperature": true,
-      "tool_call": false,
+      "tool_call": true,
       "type": "realtime"
     },
     "openai/gpt-realtime-mini": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "openai/gpt-realtime-mini",
       "cost": {
         "cache_read": 0.06,
         "input": 0.6,
-        "output": 2.4
+        "input_audio": 10,
+        "output": 2.4,
+        "output_audio": 20
       },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Cost-efficient realtime speech-to-speech model for voice agents",
       "family": "gpt-mini",
       "id": "openai/gpt-realtime-mini",
       "knowledge": "2023-10-01",
       "last_updated": "2025-10-06",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 32000,
+        "output": 4096
       },
       "modalities": {
         "input": [
@@ -12111,10 +12642,13 @@
       },
       "name": "GPT-Realtime mini",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-10-06",
       "temperature": true,
-      "tool_call": false,
+      "tool_call": true,
       "type": "realtime"
     },
     "openai/gpt-realtime-whisper": {
@@ -12125,8 +12659,8 @@
       "id": "openai/gpt-realtime-whisper",
       "last_updated": "2026-05-07",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 16000,
+        "output": 2000
       },
       "modalities": {
         "input": [
@@ -12138,9 +12672,12 @@
       },
       "name": "gpt-realtime-whisper",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-05-07",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "transcription"
     },
@@ -12516,14 +13053,13 @@
     "openai/text-embedding-3-large": {
       "attachment": false,
       "canonical_model_id": "openai/text-embedding-3-large",
-      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "description": "Most capable OpenAI embedding model for English and non-English text",
       "family": "text-embedding",
       "id": "openai/text-embedding-3-large",
       "last_updated": "2024-01-25",
       "limit": {
         "context": 8192,
-        "input": 6656,
-        "output": 1536
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -12535,23 +13071,25 @@
       },
       "name": "text-embedding-3-large",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-01-25",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "embedding"
     },
     "openai/text-embedding-3-small": {
       "attachment": false,
       "canonical_model_id": "openai/text-embedding-3-small",
-      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "description": "Small, efficient OpenAI text embedding model",
       "family": "text-embedding",
       "id": "openai/text-embedding-3-small",
       "last_updated": "2024-01-25",
       "limit": {
         "context": 8192,
-        "input": 6656,
-        "output": 1536
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -12563,23 +13101,25 @@
       },
       "name": "text-embedding-3-small",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-01-25",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "embedding"
     },
     "openai/text-embedding-ada-002": {
       "attachment": false,
       "canonical_model_id": "openai/text-embedding-ada-002",
-      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
+      "description": "Legacy OpenAI text embedding model",
       "family": "text-embedding",
       "id": "openai/text-embedding-ada-002",
       "last_updated": "2022-12-15",
       "limit": {
         "context": 8192,
-        "input": 6656,
-        "output": 1536
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -12591,16 +13131,19 @@
       },
       "name": "text-embedding-ada-002",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2022-12-15",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "embedding"
     },
     "openai/tts-1": {
       "attachment": false,
       "canonical_model_id": "openai/tts-1",
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Text-to-speech model optimized for low latency",
       "id": "openai/tts-1",
       "last_updated": "2023-11-06",
       "limit": {
@@ -12617,16 +13160,19 @@
       },
       "name": "TTS-1",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2023-11-06",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "speech"
     },
     "openai/tts-1-hd": {
       "attachment": false,
       "canonical_model_id": "openai/tts-1-hd",
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Text-to-speech model optimized for audio quality",
       "id": "openai/tts-1-hd",
       "last_updated": "2023-11-06",
       "limit": {
@@ -12643,16 +13189,19 @@
       },
       "name": "TTS-1 HD",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2023-11-06",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "speech"
     },
     "openai/whisper-1": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "openai/whisper-1",
-      "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+      "description": "General-purpose speech recognition model for transcription and translation",
       "family": "whisper",
       "id": "openai/whisper-1",
       "last_updated": "2023-03-01",
@@ -12670,9 +13219,12 @@
       },
       "name": "Whisper",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2023-03-01",
-      "temperature": true,
+      "temperature": false,
       "tool_call": false,
       "type": "transcription"
     },
@@ -12696,9 +13248,14 @@
       },
       "name": "Embed v1 0.6b",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-02-26",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "perplexity/pplx-embed-v1-4b": {
       "attachment": false,
@@ -12719,9 +13276,14 @@
       },
       "name": "Embed v1 4b",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-02-26",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "perplexity/sonar": {
       "attachment": true,
@@ -12848,10 +13410,14 @@
       },
       "name": "Flux Schnell",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-08-02",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "quiverai/arrow-2": {
       "attachment": true,
@@ -12961,10 +13527,14 @@
       },
       "name": "Recraft V2",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-03-13",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "recraft/recraft-v3": {
       "attachment": false,
@@ -12986,10 +13556,14 @@
       },
       "name": "Recraft V3",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-10-30",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "recraft/recraft-v4": {
       "attachment": false,
@@ -13011,10 +13585,14 @@
       },
       "name": "Recraft V4",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-02-17",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "recraft/recraft-v4-pro": {
       "attachment": false,
@@ -13036,10 +13614,14 @@
       },
       "name": "Recraft V4 Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-02-17",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "recraft/recraft-v4.1": {
       "attachment": false,
@@ -13061,10 +13643,14 @@
       },
       "name": "Recraft V4.1",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-05-14",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "recraft/recraft-v4.1-flash": {
       "attachment": false,
@@ -13086,9 +13672,14 @@
       },
       "name": "Recraft V4.1 Flash",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-23",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "recraft/recraft-v4.1-pro": {
       "attachment": false,
@@ -13110,10 +13701,14 @@
       },
       "name": "Recraft V4.1 Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-05-14",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "recraft/recraft-v4.1-utility": {
       "attachment": false,
@@ -13135,10 +13730,14 @@
       },
       "name": "Recraft V4.1 Utility",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-05-14",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "recraft/recraft-v4.1-utility-pro": {
       "attachment": false,
@@ -13160,10 +13759,14 @@
       },
       "name": "Recraft V4.1 Utility Pro",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-05-14",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "reflection/beam": {
       "attachment": false,
@@ -13462,6 +14065,60 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": true
+    },
+    "scaledown/scaledown-extract-1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0
+      },
+      "description": "General-purpose chat model for instruction following, writing, and analysis",
+      "id": "scaledown/scaledown-extract-1",
+      "last_updated": "2026-10-20",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Extract-1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-10-20",
+      "tool_call": false
+    },
+    "scaledown/scaledown-summarize-1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0
+      },
+      "description": "General-purpose chat model for instruction following, writing, and analysis",
+      "id": "scaledown/scaledown-summarize-1",
+      "last_updated": "2026-10-20",
+      "limit": {
+        "context": 1000000,
+        "output": 1000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Summarize-1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-10-20",
+      "tool_call": false
     },
     "spacexai/grok-4.1-fast-non-reasoning": {
       "attachment": true,
@@ -14181,7 +14838,7 @@
       "id": "spacexai/grok-imagine-image",
       "last_updated": "2026-01-28",
       "limit": {
-        "context": 0,
+        "context": 16000,
         "output": 0
       },
       "modalities": {
@@ -14194,6 +14851,9 @@
       },
       "name": "Grok Imagine Image",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-01-28",
       "temperature": false,
@@ -14208,7 +14868,7 @@
       "id": "spacexai/grok-imagine-image-2.0",
       "last_updated": "2026-08-07",
       "limit": {
-        "context": 0,
+        "context": 64000,
         "output": 0
       },
       "modalities": {
@@ -14221,6 +14881,9 @@
       },
       "name": "Grok Imagine Image 2.0",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-08-07",
       "temperature": false,
@@ -14228,8 +14891,8 @@
       "type": "image"
     },
     "spacexai/grok-imagine-video": {
-      "attachment": false,
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "attachment": true,
+      "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "grok",
       "id": "spacexai/grok-imagine-video",
       "last_updated": "2026-01-28",
@@ -14239,7 +14902,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "video"
@@ -14247,19 +14912,24 @@
       },
       "name": "Grok Imagine",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-01-28",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "spacexai/grok-imagine-video-1.5": {
       "attachment": false,
       "canonical_model_id": "xai/grok-imagine-video-1.5",
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "description": "Video model for text-to-video, image-to-video, and reference-to-video generation with optional voice references",
       "family": "grok",
       "id": "spacexai/grok-imagine-video-1.5",
       "last_updated": "2026-05-30",
       "limit": {
-        "context": 0,
+        "context": 1024,
         "output": 0
       },
       "modalities": {
@@ -14272,6 +14942,9 @@
       },
       "name": "Grok Imagine Video 1.5",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-05-30",
       "temperature": false,
@@ -14281,12 +14954,12 @@
     "spacexai/grok-imagine-video-1.5-lite": {
       "attachment": false,
       "canonical_model_id": "xai/grok-imagine-video-1.5-lite",
-      "description": "Image model for prompt-driven generation, editing, and visual design workflows",
+      "description": "Cost-efficient video model for text-to-video and image-to-video generation",
       "family": "grok",
       "id": "spacexai/grok-imagine-video-1.5-lite",
       "last_updated": "2026-10-01",
       "limit": {
-        "context": 0,
+        "context": 1024,
         "output": 0
       },
       "modalities": {
@@ -14299,6 +14972,9 @@
       },
       "name": "Grok Imagine Video 1.5 Lite",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-01",
       "temperature": false,
@@ -14306,7 +14982,7 @@
       "type": "video"
     },
     "spacexai/grok-stt": {
-      "attachment": false,
+      "attachment": true,
       "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
       "family": "grok",
       "id": "spacexai/grok-stt",
@@ -14325,19 +15001,24 @@
       },
       "name": "Grok STT",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-03-16",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "transcription"
     },
     "spacexai/grok-tts": {
       "attachment": false,
       "canonical_model_id": "xai/grok-tts",
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Convert text into spoken audio with a single API call. The API supports a rich set of expressive voices, inline speech tags for fine-grained delivery control, and output formats from high-fidelity MP3 to telephony-optimized μ-law.",
       "id": "spacexai/grok-tts",
       "last_updated": "2026-03-16",
       "limit": {
-        "context": 0,
-        "output": 0
+        "context": 15000,
+        "output": 15000
       },
       "modalities": {
         "input": [
@@ -14349,6 +15030,9 @@
       },
       "name": "Grok TTS",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-03-16",
       "temperature": false,
@@ -14356,8 +15040,8 @@
       "type": "speech"
     },
     "spacexai/grok-voice-think-fast-1.0": {
-      "attachment": false,
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "attachment": true,
+      "description": "Realtime voice model for low-latency spoken conversations",
       "family": "grok",
       "id": "spacexai/grok-voice-think-fast-1.0",
       "last_updated": "2026-04-23",
@@ -14377,13 +15061,18 @@
       },
       "name": "Grok Voice Think Fast 1.0",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-04-23",
-      "tool_call": false
+      "temperature": true,
+      "tool_call": true,
+      "type": "realtime"
     },
     "spacexai/grok-voice-think-fast-2.0": {
-      "attachment": false,
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "attachment": true,
+      "description": "Realtime voice model for low-latency spoken conversations",
       "family": "grok",
       "id": "spacexai/grok-voice-think-fast-2.0",
       "last_updated": "2026-07-29",
@@ -14403,9 +15092,14 @@
       },
       "name": "Grok Voice Think Fast 2.0",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-07-29",
-      "tool_call": false
+      "temperature": true,
+      "tool_call": true,
+      "type": "realtime"
     },
     "stealth/glyph-cluster": {
       "attachment": false,
@@ -14798,9 +15492,14 @@
       },
       "name": "Proteus",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-06",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "topaz/starlight-precise-2.6": {
       "attachment": false,
@@ -14821,9 +15520,14 @@
       },
       "name": "Starlight Precise 2.6",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-06",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "video"
     },
     "topaz/wonder-3.5": {
       "attachment": false,
@@ -14844,19 +15548,25 @@
       },
       "name": "Wonder 3.5",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-10-06",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "voyage/rerank-2.5": {
       "attachment": false,
-      "description": "Reranking model for improving retrieval quality in search and recommendation systems",
+      "canonical_model_id": "voyageai/rerank-2.5",
+      "description": "Instruction-following reranker optimized for retrieval quality",
       "family": "voyage",
       "id": "voyage/rerank-2.5",
       "last_updated": "2025-08-11",
       "limit": {
         "context": 32000,
-        "output": 32000
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -14868,20 +15578,25 @@
       },
       "name": "Voyage Rerank 2.5",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-08-11",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "reranking"
     },
     "voyage/rerank-2.5-lite": {
       "attachment": false,
-      "description": "Reranking model for improving retrieval quality in search and recommendation systems",
+      "canonical_model_id": "voyageai/rerank-2.5-lite",
+      "description": "Instruction-following reranker optimized for latency and quality",
       "family": "voyage",
       "id": "voyage/rerank-2.5-lite",
       "last_updated": "2025-08-11",
       "limit": {
         "context": 32000,
-        "output": 32000
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -14893,20 +15608,25 @@
       },
       "name": "Voyage Rerank 2.5 Lite",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-08-11",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "reranking"
     },
     "voyage/rerank-3": {
       "attachment": false,
-      "description": "Reranking model for improving retrieval quality in search and recommendation systems",
+      "canonical_model_id": "voyageai/rerank-3",
+      "description": "Reranker optimized for retrieval quality, successor to rerank-2.5",
       "family": "voyage",
       "id": "voyage/rerank-3",
       "last_updated": "2026-09-30",
       "limit": {
         "context": 32000,
-        "output": 32000
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -14918,19 +15638,25 @@
       },
       "name": "Voyage Rerank 3",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-30",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "reranking"
     },
     "voyage/rerank-3-lite": {
       "attachment": false,
-      "description": "Reranking model for improving retrieval quality in search and recommendation systems",
+      "canonical_model_id": "voyageai/rerank-3-lite",
+      "description": "Reranker optimized for latency and cost, successor to rerank-2.5-lite",
       "family": "voyage",
       "id": "voyage/rerank-3-lite",
       "last_updated": "2026-09-30",
       "limit": {
         "context": 32000,
-        "output": 32000
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -14942,19 +15668,24 @@
       },
       "name": "Voyage Rerank 3 Lite",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-09-30",
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "reranking"
     },
     "voyage/voyage-3-large": {
       "attachment": false,
-      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "voyage",
       "id": "voyage/voyage-3-large",
       "last_updated": "2024-09",
       "limit": {
-        "context": 8192,
-        "output": 1536
+        "context": 32000,
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -14966,20 +15697,24 @@
       },
       "name": "voyage-3-large",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-01-07",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "voyage/voyage-3.5": {
       "attachment": false,
-      "description": "General-purpose chat model for instruction following, writing, and analysis",
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "voyage",
       "id": "voyage/voyage-3.5",
       "last_updated": "2025-05-20",
       "limit": {
-        "context": 8192,
-        "output": 1536
+        "context": 32000,
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -14991,20 +15726,24 @@
       },
       "name": "voyage-3.5",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-05-20",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "voyage/voyage-3.5-lite": {
       "attachment": false,
-      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "voyage",
       "id": "voyage/voyage-3.5-lite",
       "last_updated": "2025-05-20",
       "limit": {
-        "context": 8192,
-        "output": 1536
+        "context": 32000,
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -15016,17 +15755,22 @@
       },
       "name": "voyage-3.5-lite",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2025-05-20",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "voyage/voyage-4": {
       "attachment": false,
-      "description": "General-purpose chat model for instruction following, writing, and analysis",
+      "canonical_model_id": "voyageai/voyage-4",
+      "description": "General-purpose and multilingual embedding model balancing retrieval quality and cost",
       "family": "voyage",
       "id": "voyage/voyage-4",
-      "last_updated": "2026-03-06",
+      "last_updated": "2026-01-15",
       "limit": {
         "context": 32000,
         "output": 0
@@ -15041,17 +15785,22 @@
       },
       "name": "voyage-4",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-01-15",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "voyage/voyage-4-large": {
       "attachment": false,
-      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
+      "canonical_model_id": "voyageai/voyage-4-large",
+      "description": "General-purpose and multilingual embedding model optimized for retrieval quality",
       "family": "voyage",
       "id": "voyage/voyage-4-large",
-      "last_updated": "2026-03-06",
+      "last_updated": "2026-01-15",
       "limit": {
         "context": 32000,
         "output": 0
@@ -15066,17 +15815,22 @@
       },
       "name": "voyage-4-large",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-01-15",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "voyage/voyage-4-lite": {
       "attachment": false,
-      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "canonical_model_id": "voyageai/voyage-4-lite",
+      "description": "Lightweight general-purpose embedding model optimized for latency and cost",
       "family": "voyage",
       "id": "voyage/voyage-4-lite",
-      "last_updated": "2026-03-06",
+      "last_updated": "2026-01-15",
       "limit": {
         "context": 32000,
         "output": 0
@@ -15091,20 +15845,24 @@
       },
       "name": "voyage-4-lite",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2026-01-15",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "voyage/voyage-code-2": {
       "attachment": false,
-      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "voyage",
       "id": "voyage/voyage-code-2",
       "last_updated": "2024-01",
       "limit": {
-        "context": 8192,
-        "output": 1536
+        "context": 16000,
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -15116,20 +15874,24 @@
       },
       "name": "voyage-code-2",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-01-01",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "voyage/voyage-code-3": {
       "attachment": false,
-      "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "voyage",
       "id": "voyage/voyage-code-3",
       "last_updated": "2024-09",
       "limit": {
-        "context": 8192,
-        "output": 1536
+        "context": 32000,
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -15141,20 +15903,24 @@
       },
       "name": "voyage-code-3",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-12-04",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "voyage/voyage-finance-2": {
       "attachment": false,
-      "description": "General-purpose chat model for instruction following, writing, and analysis",
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "voyage",
       "id": "voyage/voyage-finance-2",
       "last_updated": "2024-03",
       "limit": {
-        "context": 8192,
-        "output": 1536
+        "context": 32000,
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -15166,20 +15932,24 @@
       },
       "name": "voyage-finance-2",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-06-03",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "voyage/voyage-law-2": {
       "attachment": false,
-      "description": "General-purpose chat model for instruction following, writing, and analysis",
+      "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "voyage",
       "id": "voyage/voyage-law-2",
       "last_updated": "2024-03",
       "limit": {
-        "context": 8192,
-        "output": 1536
+        "context": 16000,
+        "output": 0
       },
       "modalities": {
         "input": [
@@ -15191,10 +15961,14 @@
       },
       "name": "voyage-law-2",
       "open_weights": false,
+      "provider": {
+        "api": "https://ai-gateway.vercel.sh/v4/ai"
+      },
       "reasoning": false,
       "release_date": "2024-04-15",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "xiaomi/mimo-v2.5": {
       "attachment": true,

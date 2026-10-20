@@ -1330,6 +1330,7 @@
         }
       ],
       "release_date": "2025-05-22",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3131,7 +3132,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -3264,7 +3265,7 @@
       "last_updated": "2026-04-07",
       "limit": {
         "context": 200000,
-        "output": 200000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -3420,6 +3421,7 @@
         }
       ],
       "release_date": "2026-06-13",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -5264,6 +5266,7 @@
     },
     "grok-4.2-beta": {
       "attachment": true,
+      "canonical_model_id": "xai/grok-4.20-0309-reasoning",
       "cost": {
         "cache_read": 0.2,
         "cache_write": 2,
@@ -5288,24 +5291,25 @@
           }
         ]
       },
-      "description": "Grok 4.20 Beta is xAI's newest flagship model with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.",
+      "description": "Reasoning Grok for document-heavy analysis and long-horizon tool use",
       "family": "grok",
       "id": "grok-4.2-beta",
-      "last_updated": "2026-03-19",
+      "last_updated": "2026-03-09",
       "limit": {
         "context": 2000000,
-        "output": 2000000
+        "output": 30000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "grok-4.2-beta",
+      "name": "Grok 4.20 (Reasoning)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -5320,8 +5324,9 @@
           ]
         }
       ],
-      "release_date": "2026-03-19",
+      "release_date": "2026-03-09",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "grok-4.3": {
@@ -5357,7 +5362,7 @@
       "last_updated": "2026-04-17",
       "limit": {
         "context": 1000000,
-        "output": 1000000
+        "output": 30000
       },
       "modalities": {
         "input": [
@@ -5692,14 +5697,16 @@
     },
     "inkling-256k": {
       "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling",
       "cost": {
         "cache_read": 0.374,
         "input": 1.87,
         "output": 4.68
       },
-      "description": "Inkling 256K is the extended context variant of Inkling, a large MoE hybrid reasoning model from Thinking Machines with audio and vision input support and a 256K context window.",
+      "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
+      "family": "ling",
       "id": "inkling-256k",
-      "last_updated": "2026-07-16",
+      "last_updated": "2026-07-15",
       "limit": {
         "context": 262144,
         "output": 32768
@@ -5707,14 +5714,15 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "audio"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "inkling-256k",
-      "open_weights": false,
+      "name": "Inkling 256K",
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -5728,8 +5736,9 @@
           ]
         }
       ],
-      "release_date": "2026-07-16",
+      "release_date": "2026-07-15",
       "structured_output": false,
+      "temperature": true,
       "tool_call": true
     },
     "kat-coder-pro": {
@@ -6128,6 +6137,7 @@
         }
       ],
       "release_date": "2026-04-28",
+      "status": "deprecated",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
@@ -6171,6 +6181,7 @@
         }
       ],
       "release_date": "2026-04-28",
+      "status": "deprecated",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
@@ -6761,7 +6772,7 @@
       "last_updated": "2026-10-06",
       "limit": {
         "context": 524288,
-        "output": 524288
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -6806,7 +6817,7 @@
       "last_updated": "2026-10-06",
       "limit": {
         "context": 524288,
-        "output": 524288
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -6851,7 +6862,7 @@
       "last_updated": "2026-04-30",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 209715
       },
       "modalities": {
         "input": [
@@ -6897,7 +6908,7 @@
       "last_updated": "2026-04-30",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 209715
       },
       "modalities": {
         "input": [
@@ -7582,13 +7593,15 @@
     },
     "nemotron-3.5-lightning-30b-a3b": {
       "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3.5-lightning",
       "cost": {
         "input": 0,
         "output": 0
       },
-      "description": "NVIDIA Nemotron 3.5 Lightning 30B-A3B is a hybrid Mamba-2 + MoE + Attention model with 30B total and 3B active parameters, pre-trained on over 20T tokens with an NVFP4 recipe and Multi-Token Prediction for fast generation. Up to 1M token context for long-running autonomous agents, sub-agent workhorse deployments, and agentic workflows. Supports reasoning and tool calling. English and coding languages plus Spanish, French, German, Italian, and Japanese. Open weights under the OpenMDW License Agreement v1.1. Part of the NVIDIA Nemotron family.",
+      "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
       "family": "nemotron",
       "id": "nemotron-3.5-lightning-30b-a3b",
+      "knowledge": "2025-09",
       "last_updated": "2026-08-11",
       "limit": {
         "context": 1048576,
@@ -7602,8 +7615,8 @@
           "text"
         ]
       },
-      "name": "nemotron-3.5-lightning-30b-a3b",
-      "open_weights": false,
+      "name": "Nemotron 3.5 Lightning 30B A3B",
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -7619,6 +7632,7 @@
       ],
       "release_date": "2026-08-11",
       "structured_output": false,
+      "temperature": true,
       "tool_call": true
     },
     "nemotron-lightning-3.5-30b-a3b": {
@@ -7665,13 +7679,15 @@
     },
     "nvidia-nemotron-3-super-120b-a12b": {
       "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-super-120b-a12b",
       "cost": {
         "input": 0.1,
         "output": 0.5
       },
-      "description": "NVIDIA Nemotron 3 Super is a hybrid Mixture-of-Experts (MoE) model engineered for highest compute efficiency and accuracy in multi-agent applications and specialized agentic systems. It is optimized to run many collaborating agents per application on a single GPU, delivering high accuracy for reasoning, tool use, and instruction following.",
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
       "family": "nemotron",
       "id": "nvidia-nemotron-3-super-120b-a12b",
+      "knowledge": "2025-06",
       "last_updated": "2026-03-11",
       "limit": {
         "context": 262144,
@@ -7685,8 +7701,8 @@
           "text"
         ]
       },
-      "name": "nvidia-nemotron-3-super-120b-a12b",
-      "open_weights": false,
+      "name": "Nemotron 3 Super 120B A12B",
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -7702,18 +7718,21 @@
       ],
       "release_date": "2026-03-11",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "nvidia-nemotron-3-ultra": {
       "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-ultra-550b-a55b",
       "cost": {
         "input": 0.5,
         "output": 2.5
       },
-      "description": "NVIDIA Nemotron 3 Ultra is NVIDIA's strongest open-weights reasoning model, positioned near GPT-5.4 Mini (xhigh) and ahead of DeepSeek V4-Flash and Qwen3.5-397B-A17B.",
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
       "family": "nemotron",
       "id": "nvidia-nemotron-3-ultra",
-      "last_updated": "2026-06-23",
+      "knowledge": "2025-09",
+      "last_updated": "2026-06-04",
       "limit": {
         "context": 262144,
         "output": 131072
@@ -7726,8 +7745,8 @@
           "text"
         ]
       },
-      "name": "nvidia-nemotron-3-ultra",
-      "open_weights": false,
+      "name": "Nemotron 3 Ultra 550B A55B",
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -7741,8 +7760,9 @@
           ]
         }
       ],
-      "release_date": "2026-06-23",
+      "release_date": "2026-06-04",
       "structured_output": false,
+      "temperature": true,
       "tool_call": false
     },
     "o4-mini@eu": {
@@ -7804,7 +7824,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -7838,29 +7858,31 @@
     },
     "qwen3.5-2b": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-2b",
       "cost": {
         "input": 0.02,
         "output": 0.1
       },
-      "description": "Qwen3.5-2B is a compact yet capable model from Alibaba's Qwen3.5 series. It features a 262K token context window, support for 201 languages, thinking/reasoning mode, and tool calling for agentic workflows. A strong choice for prototyping, fine-tuning, and efficient multilingual deployments.",
-      "family": "qwen3.5",
+      "description": "Compact Qwen3.5 multimodal model for fast chat, reasoning, and tool use",
+      "family": "qwen",
       "id": "qwen3.5-2b",
-      "last_updated": "2026-03-10",
+      "last_updated": "2026-03-02",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 81920
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "qwen3.5-2b",
-      "open_weights": false,
+      "name": "Qwen3.5 2B",
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -7874,8 +7896,9 @@
           ]
         }
       ],
-      "release_date": "2026-03-10",
+      "release_date": "2026-03-02",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "qwen3.5-35b-a3b": {
@@ -7892,7 +7915,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -8383,18 +8406,19 @@
     },
     "seed-1.8": {
       "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-1-8",
       "cost": {
         "cache_read": 0.05,
         "input": 0.25,
         "output": 2
       },
-      "description": "Optimized specifically for multimodal agent scenarios. It features enhanced agent capabilities, upgraded multimodal comprehension, and more flexible context management.",
+      "description": "ByteDance Seed model for multimodal reasoning, long-context analysis, and agent workflows",
       "family": "seed",
       "id": "seed-1.8",
-      "last_updated": "2026-05-27",
+      "last_updated": "2025-12-28",
       "limit": {
         "context": 256000,
-        "output": 256000
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -8405,7 +8429,7 @@
           "text"
         ]
       },
-      "name": "seed-1.8",
+      "name": "Seed 1.8",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -8420,8 +8444,9 @@
           ]
         }
       ],
-      "release_date": "2026-05-27",
+      "release_date": "2025-12-28",
       "structured_output": false,
+      "temperature": true,
       "tool_call": true
     },
     "seed-2.0-code": {
@@ -8438,7 +8463,7 @@
       "last_updated": "2026-02-14",
       "limit": {
         "context": 256000,
-        "output": 256000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -8484,7 +8509,7 @@
       "last_updated": "2026-02-14",
       "limit": {
         "context": 256000,
-        "output": 256000
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -8530,7 +8555,7 @@
       "last_updated": "2026-02-14",
       "limit": {
         "context": 256000,
-        "output": 256000
+        "output": 128000
       },
       "modalities": {
         "input": [

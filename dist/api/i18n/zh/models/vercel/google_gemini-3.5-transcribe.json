@@ -1,17 +1,18 @@
 {
-  "attachment": false,
+  "attachment": true,
   "canonical_model_id": "google/gemini-3.5-transcribe",
   "cost": {
     "input": 2,
+    "input_audio": 2,
     "output": 12
   },
-  "description": "Speech transcription model for accurate audio-to-text and captioning workflows",
+  "description": "Speech-to-text model with language detection, speaker diarization, word timestamps, and custom vocabulary",
   "family": "gemini",
   "id": "google/gemini-3.5-transcribe",
   "last_updated": "2026-08-26",
   "limit": {
-    "context": 0,
-    "output": 0
+    "context": 98304,
+    "output": 32768
   },
   "modalities": {
     "input": [
@@ -23,9 +24,12 @@
   },
   "name": "Gemini 3.5 Transcribe",
   "open_weights": false,
+  "provider": {
+    "api": "https://ai-gateway.vercel.sh/v4/ai"
+  },
   "reasoning": false,
   "release_date": "2026-08-26",
-  "temperature": true,
+  "temperature": false,
   "tool_call": false,
   "type": "transcription"
 }

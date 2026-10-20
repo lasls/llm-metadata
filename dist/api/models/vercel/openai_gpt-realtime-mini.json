@@ -1,19 +1,21 @@
 {
-  "attachment": false,
+  "attachment": true,
   "canonical_model_id": "openai/gpt-realtime-mini",
   "cost": {
     "cache_read": 0.06,
     "input": 0.6,
-    "output": 2.4
+    "input_audio": 10,
+    "output": 2.4,
+    "output_audio": 20
   },
-  "description": "Speech generation model for controllable voice, narration, and audio delivery",
+  "description": "Cost-efficient realtime speech-to-speech model for voice agents",
   "family": "gpt-mini",
   "id": "openai/gpt-realtime-mini",
   "knowledge": "2023-10-01",
   "last_updated": "2025-10-06",
   "limit": {
-    "context": 0,
-    "output": 0
+    "context": 32000,
+    "output": 4096
   },
   "modalities": {
     "input": [
@@ -27,9 +29,12 @@
   },
   "name": "GPT-Realtime mini",
   "open_weights": false,
+  "provider": {
+    "api": "https://ai-gateway.vercel.sh/v4/ai"
+  },
   "reasoning": false,
   "release_date": "2025-10-06",
   "temperature": true,
-  "tool_call": false,
+  "tool_call": true,
   "type": "realtime"
 }

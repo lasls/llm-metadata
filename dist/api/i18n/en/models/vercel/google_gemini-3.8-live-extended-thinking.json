@@ -1,17 +1,19 @@
 {
-  "attachment": false,
+  "attachment": true,
   "canonical_model_id": "google/gemini-3.8-live-extended-thinking",
   "cost": {
     "input": 0.75,
-    "output": 4.5
+    "input_audio": 3,
+    "output": 4.5,
+    "output_audio": 12
   },
-  "description": "Speech generation model for controllable voice, narration, and audio delivery",
+  "description": "Live API voice model with configurable background reasoning for multi-step real-time agents",
   "family": "gemini-flash",
   "id": "google/gemini-3.8-live-extended-thinking",
   "last_updated": "2026-09-15",
   "limit": {
-    "context": 0,
-    "output": 0
+    "context": 131072,
+    "output": 65536
   },
   "modalities": {
     "input": [
@@ -25,9 +27,12 @@
   },
   "name": "Gemini 3.8 Live Extended Thinking",
   "open_weights": false,
+  "provider": {
+    "api": "https://ai-gateway.vercel.sh/v4/ai"
+  },
   "reasoning": false,
   "release_date": "2026-09-15",
   "temperature": true,
-  "tool_call": false,
+  "tool_call": true,
   "type": "realtime"
 }
