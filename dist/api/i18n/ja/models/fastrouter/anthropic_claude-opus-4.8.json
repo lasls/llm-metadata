@@ -2,6 +2,8 @@
   "attachment": true,
   "canonical_model_id": "anthropic/claude-opus-4-8",
   "cost": {
+    "cache_read": 0.5,
+    "cache_write": 6.25,
     "input": 5,
     "output": 25
   },
@@ -29,9 +31,14 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "max": 32000,
-      "min": 1024,
-      "type": "budget_tokens"
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
     }
   ],
   "release_date": "2026-05-28",

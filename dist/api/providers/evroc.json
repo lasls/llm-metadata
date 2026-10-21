@@ -34,14 +34,15 @@
     },
     "Qwen/Qwen3-Embedding-8B": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-embedding-8b",
       "cost": {
         "input": 0.115,
         "output": 0.115
       },
       "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
-      "family": "text-embedding",
+      "family": "qwen",
       "id": "Qwen/Qwen3-Embedding-8B",
-      "last_updated": "2025-07-30",
+      "last_updated": "2025-06-05",
       "limit": {
         "context": 40960,
         "output": 4096
@@ -57,8 +58,10 @@
       "name": "Qwen3 Embedding 8B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-30",
-      "tool_call": false
+      "release_date": "2025-06-05",
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
     },
     "Qwen/Qwen3-Reranker-4B": {
       "attachment": false,
@@ -86,7 +89,8 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-30",
-      "tool_call": false
+      "tool_call": false,
+      "type": "reranking"
     },
     "Qwen/Qwen3.6-35B-A3B": {
       "attachment": true,
@@ -144,7 +148,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -274,7 +279,8 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-06-01",
-      "tool_call": false
+      "tool_call": false,
+      "type": "embedding"
     },
     "mistralai/Mistral-Medium-3.5-128B": {
       "attachment": true,
@@ -415,6 +421,7 @@
     },
     "openai/gpt-oss-120b": {
       "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
         "input": 0.23,
         "output": 0.92
@@ -422,6 +429,7 @@
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-120b",
+      "knowledge": "2024-06",
       "last_updated": "2025-08-05",
       "limit": {
         "context": 65536,
@@ -449,6 +457,7 @@
         }
       ],
       "release_date": "2025-08-05",
+      "temperature": true,
       "tool_call": true
     },
     "openai/whisper-large-v3": {

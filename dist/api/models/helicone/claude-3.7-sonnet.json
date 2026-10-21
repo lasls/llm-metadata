@@ -1,7 +1,8 @@
 {
-  "attachment": false,
+  "attachment": true,
+  "canonical_model_id": "anthropic/claude-3-7-sonnet-20250219",
   "cost": {
-    "cache_read": 0.30000000000000004,
+    "cache_read": 0.3,
     "cache_write": 3.75,
     "input": 3,
     "output": 15
@@ -26,7 +27,16 @@
   },
   "name": "Anthropic: Claude 3.7 Sonnet",
   "open_weights": false,
-  "reasoning": false,
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "toggle"
+    },
+    {
+      "min": 1024,
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2025-02-19",
   "temperature": true,
   "tool_call": true

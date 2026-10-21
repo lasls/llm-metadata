@@ -1264,8 +1264,8 @@
       },
       "modalities": {
         "input": [
-          "image",
           "text",
+          "image",
           "video"
         ],
         "output": [
@@ -1313,8 +1313,8 @@
       },
       "modalities": {
         "input": [
-          "image",
           "text",
+          "image",
           "video"
         ],
         "output": [
@@ -2190,9 +2190,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.035902,
-        "input": 0.430824,
-        "output": 0.861648
+        "cache_read": 0.033379,
+        "input": 0.400548,
+        "output": 0.801096
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -3714,9 +3714,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.09,
-        "output": 0.3
+        "cache_read": 0.0425,
+        "input": 0.0765,
+        "output": 0.255
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -4570,6 +4570,7 @@
     },
     "meta-llama/llama-3.2-3b-instruct": {
       "attachment": false,
+      "canonical_model_id": "meta/llama-3.2-3b-instruct",
       "cost": {
         "input": 0.0509,
         "output": 0.335
@@ -4577,7 +4578,7 @@
       "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "meta-llama/llama-3.2-3b-instruct",
-      "knowledge": "2023-12-31",
+      "knowledge": "2023-12",
       "last_updated": "2024-09-25",
       "limit": {
         "context": 131072,
@@ -4700,6 +4701,7 @@
     },
     "meta-llama/llama-guard-4-12b": {
       "attachment": true,
+      "canonical_model_id": "meta/llama-guard-4-12b",
       "cost": {
         "input": 0.18,
         "output": 0.18
@@ -4707,16 +4709,15 @@
       "description": "Safety model for policy screening, moderation, and risk-aware routing workflows",
       "family": "llama",
       "id": "meta-llama/llama-guard-4-12b",
-      "knowledge": "2024-08-31",
-      "last_updated": "2025-04-30",
+      "last_updated": "2025-04-29",
       "limit": {
         "context": 163840,
         "output": 16384
       },
       "modalities": {
         "input": [
-          "image",
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -4725,7 +4726,7 @@
       "name": "Llama Guard 4 12B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-04-30",
+      "release_date": "2025-04-29",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
@@ -6825,8 +6826,9 @@
       "attachment": false,
       "canonical_model_id": "nvidia/nemotron-3-super-120b-a12b",
       "cost": {
-        "input": 0.08,
-        "output": 0.45
+        "cache_read": 0.15,
+        "input": 0.3,
+        "output": 2.4
       },
       "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
       "family": "nemotron",
@@ -12534,6 +12536,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "recursive/flint-v1.0:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
+      "family": "flint",
+      "id": "recursive/flint-v1.0:free",
+      "last_updated": "2026-10-19",
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Flint (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-10-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "reflection/beam-1.0-501b-a23b": {
       "attachment": false,
       "canonical_model_id": "reflection/beam-1.0-501b-a23b",
@@ -13293,9 +13326,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13378,9 +13411,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -15100,9 +15133,9 @@
       "attachment": true,
       "canonical_model_id": "zhipuai/glm-5.3-flash",
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.15,
-        "output": 0.5
+        "cache_read": 0.00315,
+        "input": 0.00441,
+        "output": 0.134175
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",
@@ -15110,7 +15143,7 @@
       "last_updated": "2026-08-26",
       "limit": {
         "context": 1048576,
-        "output": 943717
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -15705,7 +15738,7 @@
       "cost": {
         "cache_read": 0.228,
         "input": 0.238,
-        "output": 24
+        "output": 16
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -16145,9 +16178,9 @@
     "~z-ai/glm-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.00375,
-        "input": 0.051691,
-        "output": 0.12
+        "cache_read": 0.00315,
+        "input": 0.00441,
+        "output": 0.134175
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",

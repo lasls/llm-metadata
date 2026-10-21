@@ -1,13 +1,32 @@
 {
   "attachment": true,
+  "canonical_model_id": "openai/gpt-5.4",
   "cost": {
-    "input": 3.75,
-    "output": 18.75
+    "cache_read": 0.25,
+    "context_over_200k": {
+      "cache_read": 0.5,
+      "input": 5,
+      "output": 22.5
+    },
+    "input": 2.5,
+    "output": 15,
+    "tiers": [
+      {
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 22.5,
+        "tier": {
+          "size": 272000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+  "family": "gpt",
   "id": "openai/gpt-5.4",
   "knowledge": "2025-08-31",
-  "last_updated": "2026-03-20",
+  "last_updated": "2026-03-05",
   "limit": {
     "context": 1050000,
     "output": 128000
@@ -15,7 +34,8 @@
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "pdf"
     ],
     "output": [
       "text"
@@ -38,7 +58,7 @@
       ]
     }
   ],
-  "release_date": "2026-03-20",
+  "release_date": "2026-03-05",
   "temperature": true,
   "tool_call": true
 }

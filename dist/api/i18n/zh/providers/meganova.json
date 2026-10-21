@@ -9,6 +9,7 @@
   "models": {
     "MiniMaxAI/MiniMax-M2.1": {
       "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.1",
       "cost": {
         "input": 0.28,
         "output": 1.2
@@ -42,7 +43,9 @@
     },
     "MiniMaxAI/MiniMax-M2.5": {
       "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.5",
       "cost": {
+        "cache_read": 0.15,
         "input": 0.3,
         "output": 1.2
       },
@@ -106,14 +109,15 @@
     },
     "Qwen/Qwen3-235B-A22B-Instruct-2507": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-235b-a22b-instruct-2507",
       "cost": {
         "input": 0.09,
-        "output": 0.6
+        "output": 0.1
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
-      "last_updated": "2025-07-23",
+      "last_updated": "2025-07-21",
       "limit": {
         "context": 262000,
         "output": 262000
@@ -129,13 +133,14 @@
       "name": "Qwen3 235B A22B Instruct 2507",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-23",
+      "release_date": "2025-07-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3.5-Plus": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-plus",
       "cost": {
         "input": 0.4,
         "output": 2.4,
@@ -145,7 +150,7 @@
       "family": "qwen",
       "id": "Qwen/Qwen3.5-Plus",
       "knowledge": "2025-04",
-      "last_updated": "2026-02",
+      "last_updated": "2026-02-16",
       "limit": {
         "context": 1000000,
         "output": 65536
@@ -164,12 +169,13 @@
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-02",
+      "release_date": "2026-02-16",
       "temperature": true,
       "tool_call": true
     },
     "XiaomiMiMo/MiMo-V2-Flash": {
       "attachment": false,
+      "canonical_model_id": "xiaomi/mimo-v2-flash",
       "cost": {
         "input": 0.1,
         "output": 0.3
@@ -178,7 +184,7 @@
       "family": "mimo",
       "id": "XiaomiMiMo/MiMo-V2-Flash",
       "knowledge": "2024-12-01",
-      "last_updated": "2025-12-17",
+      "last_updated": "2026-02-04",
       "limit": {
         "context": 262144,
         "output": 32000
@@ -195,13 +201,16 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2025-12-17",
+      "release_date": "2025-12-16",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
     "deepseek-ai/DeepSeek-R1-0528": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-r1-0528",
       "cost": {
+        "cache_read": 0.4,
         "input": 0.5,
         "output": 2.15
       },
@@ -235,9 +244,10 @@
     },
     "deepseek-ai/DeepSeek-V3-0324": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v3-0324",
       "cost": {
-        "input": 0.25,
-        "output": 0.88
+        "input": 0.275,
+        "output": 1.1
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -264,14 +274,15 @@
     },
     "deepseek-ai/DeepSeek-V3.1": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v3.1",
       "cost": {
-        "input": 0.27,
-        "output": 1
+        "input": 0.19,
+        "output": 0.79
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek-ai/DeepSeek-V3.1",
-      "last_updated": "2025-08-25",
+      "last_updated": "2025-08-21",
       "limit": {
         "context": 164000,
         "output": 164000
@@ -287,21 +298,24 @@
       "name": "DeepSeek V3.1",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-08-25",
+      "release_date": "2025-08-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "deepseek-ai/DeepSeek-V3.2": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v3.2",
       "cost": {
+        "cache_read": 0.13,
         "input": 0.26,
         "output": 0.38
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek-ai/DeepSeek-V3.2",
-      "last_updated": "2025-12-03",
+      "knowledge": "2024-07",
+      "last_updated": "2025-12-01",
       "limit": {
         "context": 164000,
         "output": 164000
@@ -317,7 +331,7 @@
       "name": "DeepSeek V3.2",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-12-03",
+      "release_date": "2025-12-01",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -325,8 +339,9 @@
     "deepseek-ai/DeepSeek-V3.2-Exp": {
       "attachment": false,
       "cost": {
-        "input": 0.27,
-        "output": 0.4
+        "cache_read": 0.13,
+        "input": 0.26,
+        "output": 0.38
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -354,6 +369,7 @@
     },
     "meta-llama/Llama-3.3-70B-Instruct": {
       "attachment": false,
+      "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
         "input": 0.1,
         "output": 0.3
@@ -361,6 +377,7 @@
       "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "meta-llama/Llama-3.3-70B-Instruct",
+      "knowledge": "2023-12",
       "last_updated": "2024-12-06",
       "limit": {
         "context": 131072,
@@ -383,13 +400,15 @@
     },
     "mistralai/Mistral-Nemo-Instruct-2407": {
       "attachment": false,
+      "canonical_model_id": "mistral/mistral-nemo",
       "cost": {
         "input": 0.02,
         "output": 0.04
       },
       "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "family": "mistral",
+      "family": "mistral-nemo",
       "id": "mistralai/Mistral-Nemo-Instruct-2407",
+      "knowledge": "2024-07",
       "last_updated": "2024-07-18",
       "limit": {
         "context": 131072,
@@ -413,6 +432,7 @@
     },
     "mistralai/Mistral-Small-3.2-24B-Instruct-2506": {
       "attachment": true,
+      "canonical_model_id": "mistral/mistral-small-2506",
       "cost": {
         "input": 0,
         "output": 0
@@ -445,6 +465,7 @@
     },
     "moonshotai/Kimi-K2-Thinking": {
       "attachment": false,
+      "canonical_model_id": "moonshotai/kimi-k2-thinking",
       "cost": {
         "input": 0.6,
         "output": 2.6
@@ -478,10 +499,12 @@
       "tool_call": true
     },
     "moonshotai/Kimi-K2.5": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.5",
       "cost": {
+        "cache_read": 0.07,
         "input": 0.45,
-        "output": 2.8
+        "output": 2.25
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi-k2",
@@ -514,6 +537,7 @@
     },
     "zai-org/GLM-4.6": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.6",
       "cost": {
         "input": 0.45,
         "output": 1.9
@@ -548,9 +572,11 @@
     },
     "zai-org/GLM-4.7": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.7",
       "cost": {
-        "input": 0.2,
-        "output": 0.8
+        "cache_read": 0.08,
+        "input": 0.4,
+        "output": 1.75
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -582,7 +608,9 @@
     },
     "zai-org/GLM-5": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5",
       "cost": {
+        "cache_read": 0.2,
         "input": 0.8,
         "output": 2.56
       },
@@ -592,7 +620,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-02-11",
+      "last_updated": "2026-02-12",
       "limit": {
         "context": 202752,
         "output": 131072
@@ -613,7 +641,7 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-02-11",
+      "release_date": "2026-02-12",
       "temperature": true,
       "tool_call": true
     }

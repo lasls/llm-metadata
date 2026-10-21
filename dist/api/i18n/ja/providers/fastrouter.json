@@ -54,6 +54,8 @@
       "attachment": true,
       "canonical_model_id": "anthropic/claude-opus-4-8",
       "cost": {
+        "cache_read": 0.5,
+        "cache_write": 6.25,
         "input": 5,
         "output": 25
       },
@@ -81,9 +83,14 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "max": 32000,
-          "min": 1024,
-          "type": "budget_tokens"
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
         }
       ],
       "release_date": "2026-05-28",
@@ -129,6 +136,7 @@
         }
       ],
       "release_date": "2025-05-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -136,6 +144,8 @@
       "attachment": true,
       "canonical_model_id": "anthropic/claude-sonnet-4-6",
       "cost": {
+        "cache_read": 0.3,
+        "cache_write": 3.75,
         "input": 3,
         "output": 15
       },
@@ -174,10 +184,11 @@
     },
     "bytedance/seedance-2": {
       "attachment": true,
-      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "canonical_model_id": "bytedance-seed/seedance-2.0",
+      "description": "ByteDance unified multimodal audio-video model supporting text, image, video and audio references, editing, extension and synchronized stereo sound.",
       "family": "seed",
       "id": "bytedance/seedance-2",
-      "last_updated": "2026-04-01",
+      "last_updated": "2026-10-04",
       "limit": {
         "context": 4096,
         "output": 0
@@ -194,9 +205,10 @@
       "name": "Seedance 2",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-04-01",
+      "release_date": "2026-02-12",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "video"
     },
     "deepseek-ai/deepseek-r1-distill-llama-70b": {
       "attachment": false,
@@ -226,6 +238,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-01-23",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": false
     },
@@ -233,6 +246,7 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
+        "cache_read": 0.145,
         "input": 1.74,
         "output": 3.48
       },
@@ -259,6 +273,14 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
         }
       ],
       "release_date": "2026-04-24",
@@ -268,12 +290,14 @@
     },
     "google/gemini-2.5-flash": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-2.5-flash",
       "cost": {
-        "cache_read": 0.0375,
+        "cache_read": 0.03,
         "input": 0.3,
+        "input_audio": 1,
         "output": 2.5
       },
-      "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
+      "description": "Fast Gemini workhorse for multimodal apps where latency and price matter",
       "family": "gemini-flash",
       "id": "google/gemini-2.5-flash",
       "knowledge": "2025-01",
@@ -286,6 +310,7 @@
         "input": [
           "text",
           "image",
+          "audio",
           "pdf"
         ],
         "output": [
@@ -311,12 +336,29 @@
     },
     "google/gemini-2.5-pro": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-2.5-pro",
       "cost": {
-        "cache_read": 0.31,
+        "cache_read": 0.125,
+        "context_over_200k": {
+          "cache_read": 0.25,
+          "input": 2.5,
+          "output": 15
+        },
         "input": 1.25,
-        "output": 10
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.25,
+            "input": 2.5,
+            "output": 15,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
-      "description": "Advanced Gemini model for complex reasoning, coding, and multimodal analysis",
+      "description": "Google's proven reasoning model for coding, math, and multimodal analysis",
       "family": "gemini-pro",
       "id": "google/gemini-2.5-pro",
       "knowledge": "2025-01",
@@ -433,8 +475,25 @@
       "attachment": true,
       "canonical_model_id": "google/gemini-3.1-pro-preview",
       "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 4,
+          "output": 18
+        },
         "input": 2,
-        "output": 12
+        "output": 12,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 4,
+            "output": 18,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Reasoning-first Gemini preview for agentic coding and complex problem solving",
       "family": "gemini-pro",
@@ -479,6 +538,7 @@
       "attachment": true,
       "canonical_model_id": "google/gemini-3.5-flash",
       "cost": {
+        "cache_read": 0.15,
         "input": 1.5,
         "output": 9
       },
@@ -525,8 +585,8 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-31b-it",
       "cost": {
-        "input": 0.13,
-        "output": 0.38
+        "input": 0.1,
+        "output": 0.3
       },
       "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
       "family": "gemma",
@@ -577,6 +637,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-05-20",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": false
     },
@@ -602,15 +663,17 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-05-20",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": false
     },
     "google/veo3.1": {
       "attachment": true,
+      "canonical_model_id": "google/veo-3.1-generate-preview",
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "veo",
       "id": "google/veo3.1",
-      "last_updated": "2026-05-01",
+      "last_updated": "2026-01",
       "limit": {
         "context": 400000,
         "output": 0
@@ -627,16 +690,18 @@
       "name": "Veo 3.1",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-05-01",
+      "release_date": "2025-10-15",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "video"
     },
     "google/veo3.1-fast": {
       "attachment": true,
+      "canonical_model_id": "google/veo-3.1-fast-generate-preview",
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "veo",
       "id": "google/veo3.1-fast",
-      "last_updated": "2026-05-01",
+      "last_updated": "2026-01-01",
       "limit": {
         "context": 400000,
         "output": 0
@@ -653,16 +718,18 @@
       "name": "Veo 3.1 Fast",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-05-01",
+      "release_date": "2025-10-15",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "video"
     },
     "google/veo3.1-lite": {
       "attachment": true,
+      "canonical_model_id": "google/veo-3.1-lite-generate-preview",
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "veo",
       "id": "google/veo3.1-lite",
-      "last_updated": "2026-05-01",
+      "last_updated": "2026-03-31",
       "limit": {
         "context": 400000,
         "output": 0
@@ -679,9 +746,10 @@
       "name": "Veo 3.1 Lite",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-05-01",
+      "release_date": "2026-03-31",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "video"
     },
     "leonardo-ai/lucid-origin": {
       "attachment": true,
@@ -739,6 +807,8 @@
       "attachment": false,
       "canonical_model_id": "minimax/MiniMax-M2.7",
       "cost": {
+        "cache_read": 0.06,
+        "cache_write": 0.375,
         "input": 0.3,
         "output": 1.2
       },
@@ -770,6 +840,8 @@
       "attachment": false,
       "canonical_model_id": "minimax/MiniMax-M2.7-highspeed",
       "cost": {
+        "cache_read": 0.06,
+        "cache_write": 0.375,
         "input": 0.6,
         "output": 2.4
       },
@@ -799,6 +871,7 @@
     },
     "moonshotai/kimi-k2": {
       "attachment": false,
+      "canonical_model_id": "moonshotai/kimi-k2",
       "cost": {
         "input": 0.55,
         "output": 2.2
@@ -824,6 +897,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-11",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -831,6 +905,7 @@
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k2.6",
       "cost": {
+        "cache_read": 0.15,
         "input": 0.75,
         "output": 3.5
       },
@@ -901,18 +976,20 @@
     },
     "openai/gpt-5": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5",
       "cost": {
         "cache_read": 0.125,
         "input": 1.25,
         "output": 10
       },
-      "description": "GPT model for general reasoning, writing, coding, and tool-assisted tasks",
+      "description": "Original GPT-5 workhorse for reasoning, coding, writing, and tool workflows",
       "family": "gpt",
       "id": "openai/gpt-5",
       "knowledge": "2024-10-01",
       "last_updated": "2025-08-07",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -929,23 +1006,25 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-08-07",
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-5-mini": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5-mini",
       "cost": {
         "cache_read": 0.025,
         "input": 0.25,
         "output": 2
       },
-      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
+      "description": "Small GPT-5 for responsive agents, coding help, and everyday automation",
       "family": "gpt-mini",
       "id": "openai/gpt-5-mini",
       "knowledge": "2024-10-01",
       "last_updated": "2025-08-07",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -971,23 +1050,25 @@
         }
       ],
       "release_date": "2025-08-07",
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-5-nano": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5-nano",
       "cost": {
         "cache_read": 0.005,
         "input": 0.05,
         "output": 0.4
       },
-      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
+      "description": "Tiny GPT-5 lane for routing, extraction, classification, and bulk jobs",
       "family": "gpt-nano",
       "id": "openai/gpt-5-nano",
       "knowledge": "2024-10-01",
       "last_updated": "2025-08-07",
       "limit": {
         "context": 400000,
+        "input": 272000,
         "output": 128000
       },
       "modalities": {
@@ -1013,13 +1094,14 @@
         }
       ],
       "release_date": "2025-08-07",
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-5.3-codex": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.3-codex",
       "cost": {
+        "cache_read": 0.175,
         "input": 1.75,
         "output": 14
       },
@@ -1065,6 +1147,7 @@
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.4-mini",
       "cost": {
+        "cache_read": 0.075,
         "input": 0.75,
         "output": 4.5
       },
@@ -1109,6 +1192,7 @@
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.4-nano",
       "cost": {
+        "cache_read": 0.02,
         "input": 0.2,
         "output": 1.25
       },
@@ -1153,8 +1237,25 @@
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.5",
       "cost": {
+        "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 10,
+          "output": 45
+        },
         "input": 5,
-        "output": 30
+        "output": 30,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 10,
+            "output": 45,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Default frontier GPT for coding, computer use, research, and knowledge work",
       "family": "gpt",
@@ -1198,8 +1299,22 @@
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.5-pro",
       "cost": {
+        "context_over_200k": {
+          "input": 60,
+          "output": 270
+        },
         "input": 30,
-        "output": 180
+        "output": 180,
+        "tiers": [
+          {
+            "input": 60,
+            "output": 270,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Highest-accuracy GPT-5.5 tier for slower, precision-heavy reasoning and coding",
       "family": "gpt-pro",
@@ -1241,6 +1356,7 @@
     },
     "openai/gpt-image-2": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-image-2",
       "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "gpt-image",
       "id": "openai/gpt-image-2",
@@ -1262,18 +1378,21 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2026-04-21",
-      "temperature": true,
-      "tool_call": false
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "openai/gpt-oss-120b": {
       "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "input": 0.15,
-        "output": 0.6
+        "input": 0.09,
+        "output": 0.36
       },
-      "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-120b",
+      "knowledge": "2024-06",
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
@@ -1306,17 +1425,20 @@
     },
     "openai/gpt-oss-20b": {
       "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-20b",
       "cost": {
-        "input": 0.05,
-        "output": 0.2
+        "cache_read": 0.007,
+        "input": 0.07,
+        "output": 0.25
       },
-      "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-20b",
+      "knowledge": "2024-06",
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
-        "output": 65536
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -1345,14 +1467,19 @@
     },
     "openai/gpt-realtime-1.5": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-realtime-1.5",
       "cost": {
+        "cache_read": 0.4,
         "input": 4,
-        "output": 16
+        "input_audio": 32,
+        "output": 16,
+        "output_audio": 64
       },
-      "description": "Speech generation model for controllable voice, narration, and audio delivery",
+      "description": "Realtime speech-to-speech model for voice agents and customer support",
       "family": "gpt",
       "id": "openai/gpt-realtime-1.5",
-      "last_updated": "2025-06-01",
+      "knowledge": "2024-09-30",
+      "last_updated": "2026-02-23",
       "limit": {
         "context": 32000,
         "output": 4096
@@ -1371,24 +1498,26 @@
       "name": "GPT Realtime 1.5",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2025-06-01",
-      "temperature": true,
-      "tool_call": true
+      "release_date": "2026-02-23",
+      "temperature": false,
+      "tool_call": true,
+      "type": "realtime"
     },
     "qwen/qwen3-coder": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-coder-480b-a35b-instruct",
       "cost": {
         "input": 0.3,
         "output": 1.2
       },
-      "description": "Qwen coding model for software agents, repository edits, and code reasoning",
+      "description": "Open Qwen coding heavyweight for repository reasoning and agentic engineering",
       "family": "qwen",
       "id": "qwen/qwen3-coder",
       "knowledge": "2025-04",
-      "last_updated": "2025-07-23",
+      "last_updated": "2025-07-22",
       "limit": {
         "context": 262144,
-        "output": 66536
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -1401,7 +1530,8 @@
       "name": "Qwen3 Coder",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-23",
+      "release_date": "2025-07-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1409,6 +1539,7 @@
       "attachment": false,
       "canonical_model_id": "sarvam/sarvam-105b",
       "cost": {
+        "cache_read": 0.025,
         "input": 0.04,
         "output": 0.16
       },
@@ -1464,14 +1595,16 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-02-18",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
     "wanx/wan-v2-6": {
       "attachment": true,
-      "description": "Video model for prompt-guided generation, editing, and motion workflows",
+      "canonical_model_id": "alibaba/wan2.6",
+      "description": "Video model for text- and image-to-video with audio input and synchronized sound",
       "id": "wanx/wan-v2-6",
-      "last_updated": "2025-12-01",
+      "last_updated": "2025-12-03",
       "limit": {
         "context": 400000,
         "output": 0
@@ -1486,11 +1619,12 @@
         ]
       },
       "name": "Wan 2.6",
-      "open_weights": true,
+      "open_weights": false,
       "reasoning": false,
-      "release_date": "2025-12-01",
+      "release_date": "2025-12-03",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "video"
     },
     "x-ai/grok-4": {
       "attachment": false,
@@ -1522,6 +1656,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-07-09",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1529,8 +1664,23 @@
       "attachment": true,
       "canonical_model_id": "xai/grok-4.3",
       "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "input": 2.5,
+          "output": 5
+        },
         "input": 1.25,
-        "output": 2.5
+        "output": 2.5,
+        "tiers": [
+          {
+            "input": 2.5,
+            "output": 5,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "xAI's default Grok for chat, coding, agentic tools, and lower hallucination risk",
       "family": "grok",
@@ -1572,8 +1722,25 @@
       "attachment": true,
       "canonical_model_id": "xai/grok-build-0.1",
       "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2,
+          "output": 4
+        },
         "input": 1,
-        "output": 2
+        "output": 2,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2,
+            "output": 4,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Fast Grok coding model tuned for agentic engineering and iterative edits",
       "family": "grok-build",
@@ -1613,17 +1780,19 @@
     },
     "z-ai/glm-5": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5",
       "cost": {
-        "input": 0.95,
-        "output": 3.15
+        "cache_read": 0.12,
+        "input": 0.6,
+        "output": 2.08
       },
-      "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
+      "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
       "family": "glm",
       "id": "z-ai/glm-5",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-02-11",
+      "last_updated": "2026-02-12",
       "limit": {
         "context": 204800,
         "output": 131072
@@ -1644,7 +1813,7 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-02-11",
+      "release_date": "2026-02-12",
       "temperature": true,
       "tool_call": true
     },
@@ -1652,6 +1821,7 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.1",
       "cost": {
+        "cache_read": 0.205,
         "input": 1.05,
         "output": 3.5
       },

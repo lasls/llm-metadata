@@ -238,13 +238,15 @@
     },
     "gpt-oss-120b": {
       "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "input": 1,
-        "output": 4.2
+        "input": 1.1215,
+        "output": 4.7103
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
       "id": "gpt-oss-120b",
+      "knowledge": "2024-06",
       "last_updated": "2025-08-05",
       "limit": {
         "context": 128000,
@@ -259,7 +261,7 @@
         ]
       },
       "name": "GPT-OSS-120B",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -277,14 +279,16 @@
     },
     "gpt-oss-20b": {
       "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-20b",
       "cost": {
-        "input": 0.4,
-        "output": 1.8
+        "input": 0.11215,
+        "output": 0.47103
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
       "id": "gpt-oss-20b",
-      "last_updated": "2026-03-01",
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-05",
       "limit": {
         "context": 128000,
         "output": 16384
@@ -310,12 +314,13 @@
           ]
         }
       ],
-      "release_date": "2026-03-01",
+      "release_date": "2025-08-05",
       "temperature": true,
       "tool_call": true
     },
     "llama-3.3-70b-instruct": {
       "attachment": false,
+      "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
         "input": 0.6,
         "output": 2.7
@@ -323,7 +328,8 @@
       "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
       "id": "llama-3.3-70b-instruct",
-      "last_updated": "2025-04-28",
+      "knowledge": "2023-12",
+      "last_updated": "2024-12-06",
       "limit": {
         "context": 128000,
         "output": 16384
@@ -337,22 +343,25 @@
         ]
       },
       "name": "Llama 3.3 70B Instruct",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-04-28",
+      "release_date": "2024-12-06",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
     "mistral-small-4-119b": {
       "attachment": true,
+      "canonical_model_id": "mistral/mistral-small-2603",
       "cost": {
-        "input": 0.75,
-        "output": 3
+        "input": 0.56075,
+        "output": 2.35515
       },
       "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
       "family": "mistral-small",
       "id": "mistral-small-4-119b",
-      "last_updated": "2026-03-15",
+      "knowledge": "2025-06",
+      "last_updated": "2026-03-16",
       "limit": {
         "context": 256000,
         "output": 16384
@@ -367,10 +376,10 @@
         ]
       },
       "name": "Mistral Small 4 119B",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-03-15",
+      "release_date": "2026-03-16",
       "temperature": true,
       "tool_call": true
     },
@@ -401,10 +410,12 @@
       "reasoning": false,
       "release_date": "2026-03-01",
       "temperature": true,
-      "tool_call": false
+      "tool_call": false,
+      "type": "image"
     },
     "qwen3-coder-next": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-coder-next",
       "cost": {
         "input": 0.3,
         "output": 1.2
@@ -412,7 +423,8 @@
       "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
       "id": "qwen3-coder-next",
-      "last_updated": "2026-03-01",
+      "knowledge": "2025-09",
+      "last_updated": "2026-02-03",
       "limit": {
         "context": 262144,
         "output": 16384
@@ -429,12 +441,14 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-03-01",
+      "release_date": "2026-02-03",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
     "qwen3-embedding-8b": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-embedding-8b",
       "cost": {
         "input": 0.1,
         "output": 0.1
@@ -442,7 +456,7 @@
       "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
       "family": "qwen",
       "id": "qwen3-embedding-8b",
-      "last_updated": "2026-02-01",
+      "last_updated": "2025-06-05",
       "limit": {
         "context": 32768,
         "output": 8192
@@ -458,9 +472,10 @@
       "name": "Qwen3-Embedding-8B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-02-01",
+      "release_date": "2025-06-05",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "embedding"
     },
     "qwen3-reranker-4b": {
       "attachment": false,
@@ -489,18 +504,20 @@
       "reasoning": false,
       "release_date": "2026-02-01",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "reranking"
     },
     "qwen3.5-122b": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-122b-a10b",
       "cost": {
-        "input": 0.9,
-        "output": 3.6
+        "input": 1.1215,
+        "output": 4.7103
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen3.5-122b",
-      "last_updated": "2026-02-01",
+      "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
         "output": 16384
@@ -518,20 +535,21 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-02-01",
+      "release_date": "2026-02-23",
       "temperature": true,
       "tool_call": true
     },
     "qwen3.5-9b": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-9b",
       "cost": {
-        "input": 0.15,
-        "output": 0.6
+        "input": 0.078505,
+        "output": 0.392525
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "qwen3.5-9b",
-      "last_updated": "2026-02-01",
+      "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
         "output": 8192
@@ -549,7 +567,7 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-02-01",
+      "release_date": "2026-02-23",
       "temperature": true,
       "tool_call": true
     },

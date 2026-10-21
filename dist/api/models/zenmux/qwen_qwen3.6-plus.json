@@ -1,10 +1,11 @@
 {
-  "attachment": false,
+  "attachment": true,
+  "canonical_model_id": "alibaba/qwen3.6-plus",
   "cost": {
-    "cache_read": 0.05,
+    "cache_read": 0.1,
     "cache_write": 0.625,
     "context_over_200k": {
-      "cache_read": 0.2,
+      "cache_read": 0.4,
       "cache_write": 2.5,
       "input": 2,
       "output": 6
@@ -13,7 +14,7 @@
     "output": 3,
     "tiers": [
       {
-        "cache_read": 0.2,
+        "cache_read": 0.4,
         "cache_write": 2.5,
         "input": 2,
         "output": 6,
@@ -25,15 +26,20 @@
     ]
   },
   "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+  "family": "qwen",
   "id": "qwen/qwen3.6-plus",
-  "last_updated": "2026-03-30",
+  "knowledge": "2025-04",
+  "last_updated": "2026-04-02",
   "limit": {
     "context": 1000000,
     "output": 64000
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image",
+      "video",
+      "pdf"
     ],
     "output": [
       "text"
@@ -47,7 +53,7 @@
       "type": "toggle"
     }
   ],
-  "release_date": "2026-03-30",
+  "release_date": "2026-04-02",
   "temperature": true,
   "tool_call": true
 }
