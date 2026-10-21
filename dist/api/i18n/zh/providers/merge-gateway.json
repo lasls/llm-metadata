@@ -194,7 +194,19 @@
         "cache_read": 0.01,
         "cache_write": 0.125,
         "input": 0.1,
-        "output": 0.5
+        "output": 0.5,
+        "tiers": [
+          {
+            "cache_read": 0.05,
+            "cache_write": 0.625,
+            "input": 0.5,
+            "output": 2.5,
+            "tier": {
+              "size": 100000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
       "family": "claude-haiku",
@@ -952,14 +964,15 @@
     },
     "bytedance/dola-seed-2.0-lite": {
       "attachment": false,
+      "canonical_model_id": "bytedance-seed/seed-2.0-lite",
       "cost": {
         "input": 0.25,
         "output": 2
       },
-      "description": "Efficient Seed model for general chat, analysis, and lightweight production tasks",
+      "description": "Cost-efficient ByteDance Seed 2.0 model for production chat, analysis, and structured generation",
       "family": "seed",
       "id": "bytedance/dola-seed-2.0-lite",
-      "last_updated": "2026-02-28",
+      "last_updated": "2026-02-14",
       "limit": {
         "context": 131072,
         "output": 32768
@@ -975,21 +988,22 @@
       "name": "Seed 2.0 Lite",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-02-28",
+      "release_date": "2026-02-14",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
     },
     "bytedance/dola-seed-2.0-mini": {
       "attachment": false,
+      "canonical_model_id": "bytedance-seed/seed-2.0-mini",
       "cost": {
         "input": 0.1,
         "output": 0.4
       },
-      "description": "Low-cost Seed model for general chat, extraction, and lightweight production tasks",
+      "description": "Lightweight ByteDance Seed 2.0 model for low-latency multimodal reasoning and high-volume tasks",
       "family": "seed",
       "id": "bytedance/dola-seed-2.0-mini",
-      "last_updated": "2026-02-15",
+      "last_updated": "2026-02-14",
       "limit": {
         "context": 131072,
         "output": 32768
@@ -1005,21 +1019,22 @@
       "name": "Seed 2.0 Mini",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2026-02-15",
+      "release_date": "2026-02-14",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
     },
     "bytedance/dola-seed-2.0-pro": {
       "attachment": false,
+      "canonical_model_id": "bytedance-seed/seed-2.0-pro",
       "cost": {
         "input": 0.5,
         "output": 3
       },
-      "description": "Higher-capability Seed model for complex chat, analysis, and production tasks",
+      "description": "Flagship ByteDance Seed 2.0 model for complex multimodal reasoning and long-horizon agent workflows",
       "family": "seed",
       "id": "bytedance/dola-seed-2.0-pro",
-      "last_updated": "2026-03-28",
+      "last_updated": "2026-02-14",
       "limit": {
         "context": 131072,
         "output": 32768
@@ -1036,9 +1051,9 @@
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-03-28",
+      "release_date": "2026-02-14",
       "structured_output": false,
-      "temperature": true,
+      "temperature": false,
       "tool_call": false
     },
     "cohere/command-a-03-2025": {
@@ -5333,8 +5348,26 @@
       "cost": {
         "cache_read": 0.02,
         "cache_write": 0.25,
+        "context_over_200k": {
+          "cache_read": 0.04,
+          "cache_write": 0.5,
+          "input": 0.4,
+          "output": 1.8
+        },
         "input": 0.2,
-        "output": 1.2
+        "output": 1.2,
+        "tiers": [
+          {
+            "cache_read": 0.04,
+            "cache_write": 0.5,
+            "input": 0.4,
+            "output": 1.8,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
       "family": "gpt-luna",
@@ -5383,8 +5416,26 @@
       "cost": {
         "cache_read": 0.5,
         "cache_write": 5,
+        "context_over_200k": {
+          "cache_read": 0.8,
+          "cache_write": 10,
+          "input": 8,
+          "output": 30
+        },
         "input": 5,
-        "output": 30
+        "output": 30,
+        "tiers": [
+          {
+            "cache_read": 0.8,
+            "cache_write": 10,
+            "input": 8,
+            "output": 30,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
       "family": "gpt-sol",
@@ -5433,8 +5484,26 @@
       "cost": {
         "cache_read": 0.2,
         "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "cache_write": 5,
+          "input": 4,
+          "output": 18
+        },
         "input": 2,
-        "output": 12
+        "output": 12,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "cache_write": 5,
+            "input": 4,
+            "output": 18,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
       "family": "gpt-terra",
@@ -5483,8 +5552,26 @@
       "cost": {
         "cache_read": 1,
         "cache_write": 12.5,
+        "context_over_200k": {
+          "cache_read": 2,
+          "cache_write": 25,
+          "input": 20,
+          "output": 75
+        },
         "input": 10,
-        "output": 50
+        "output": 50,
+        "tiers": [
+          {
+            "cache_read": 2,
+            "cache_write": 25,
+            "input": 20,
+            "output": 75,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "GPT-6 Astra is OpenAI's most capable model for complex reasoning, coding, computer use, research, and document creation.",
       "family": "gpt-astra",
@@ -5531,8 +5618,26 @@
       "cost": {
         "cache_read": 0.01,
         "cache_write": 0.125,
+        "context_over_200k": {
+          "cache_read": 0.02,
+          "cache_write": 0.25,
+          "input": 0.2,
+          "output": 0.75
+        },
         "input": 0.1,
-        "output": 0.5
+        "output": 0.5,
+        "tiers": [
+          {
+            "cache_read": 0.02,
+            "cache_write": 0.25,
+            "input": 0.2,
+            "output": 0.75,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "OpenAI's most efficient model for focused, high-volume tasks",
       "family": "gpt-luna",
@@ -5583,8 +5688,26 @@
       "cost": {
         "cache_read": 0.2,
         "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
+        },
         "input": 2,
-        "output": 10
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "OpenAI model for complex coding and agentic workflows",
       "family": "gpt-sol",
@@ -5635,8 +5758,26 @@
       "cost": {
         "cache_read": 0.1,
         "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.2,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
+        },
         "input": 2,
-        "output": 10
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.2,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Near-Astra performance for complex coding, computer use, and professional work at a lower cost.",
       "family": "gpt-sol",
@@ -5748,10 +5889,6 @@
     "openai/gpt-live-1": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-live-1",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
       "description": "Full-duplex voice model for natural conversations that delegates reasoning and tools to a backend agent",
       "family": "gpt",
       "id": "openai/gpt-live-1",
@@ -5773,6 +5910,9 @@
       },
       "name": "GPT-Live 1",
       "open_weights": false,
+      "provider": {
+        "api": "wss://api-gateway.merge.dev/v1"
+      },
       "reasoning": false,
       "release_date": "2026-09-10",
       "structured_output": false,
@@ -5790,6 +5930,7 @@
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-120b",
+      "knowledge": "2024-06",
       "last_updated": "2025-08-05",
       "limit": {
         "context": 128000,
@@ -5823,6 +5964,7 @@
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
       "id": "openai/gpt-oss-20b",
+      "knowledge": "2024-06",
       "last_updated": "2025-08-05",
       "limit": {
         "context": 128000,
@@ -6093,10 +6235,6 @@
     "openai/whisper-1": {
       "attachment": true,
       "canonical_model_id": "openai/whisper-1",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
       "description": "General-purpose speech recognition model for transcription and translation",
       "family": "whisper",
       "id": "openai/whisper-1",
@@ -6115,6 +6253,10 @@
       },
       "name": "Whisper",
       "open_weights": false,
+      "provider": {
+        "api": "https://api-gateway.merge.dev/v1",
+        "npm": "@ai-sdk/openai"
+      },
       "reasoning": false,
       "release_date": "2023-03-01",
       "structured_output": false,
@@ -7451,8 +7593,24 @@
       "canonical_model_id": "sakana/fugu-ultra",
       "cost": {
         "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 10,
+          "output": 45
+        },
         "input": 5,
-        "output": 30
+        "output": 30,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 10,
+            "output": 45,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Quality-first multi-agent model for hard research, analysis, and competitions",
       "family": "fugu",
@@ -7558,14 +7716,15 @@
     },
     "writer/palmyra-x4": {
       "attachment": false,
+      "canonical_model_id": "writer/palmyra-x4",
       "cost": {
         "input": 2.5,
         "output": 10
       },
-      "description": "Enterprise language model for writing, analysis, and tool-assisted workflows",
+      "description": "Enterprise language model for workflow automation, coding, data analysis, and tool use",
       "family": "palmyra",
       "id": "writer/palmyra-x4",
-      "last_updated": "2024-10-09",
+      "last_updated": "2025-04-28",
       "limit": {
         "context": 128000,
         "output": 32000
@@ -7588,11 +7747,12 @@
     },
     "writer/palmyra-x5": {
       "attachment": false,
+      "canonical_model_id": "writer/palmyra-x5",
       "cost": {
         "input": 0.6,
         "output": 6
       },
-      "description": "Enterprise multimodal model for writing, analysis, and tool-assisted workflows",
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "family": "palmyra",
       "id": "writer/palmyra-x5",
       "last_updated": "2025-04-28",
@@ -7801,8 +7961,24 @@
       "canonical_model_id": "xai/grok-4.6",
       "cost": {
         "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 4,
+          "output": 12
+        },
         "input": 2,
-        "output": 6
+        "output": 6,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 4,
+            "output": 12,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "xAI's frontier model for long-running agents, coding, knowledge work, and visual projects",
       "family": "grok",
@@ -7846,8 +8022,24 @@
       "canonical_model_id": "xai/grok-4.7",
       "cost": {
         "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 2,
+          "output": 12
+        },
         "input": 2,
-        "output": 6
+        "output": 6,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 2,
+            "output": 12,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "xAI's frontier model for long-running agents, coding, knowledge work, and visual projects",
       "family": "grok",

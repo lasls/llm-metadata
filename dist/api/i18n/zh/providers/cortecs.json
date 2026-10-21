@@ -32,8 +32,7 @@
       },
       "name": "Apertus 70B",
       "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
+      "reasoning": false,
       "release_date": "2025-09-02",
       "structured_output": false,
       "temperature": false,
@@ -274,10 +273,6 @@
             "medium",
             "high"
           ]
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-07-24",
@@ -470,10 +465,6 @@
             "medium",
             "high"
           ]
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-04-16",
@@ -520,10 +511,6 @@
             "medium",
             "high"
           ]
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-05-28",
@@ -570,10 +557,6 @@
             "medium",
             "high"
           ]
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-06-30",
@@ -907,7 +890,16 @@
       "name": "DeepSeek V4.1 Flash 1017",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-10-17",
       "structured_output": true,
       "temperature": true,
@@ -978,7 +970,21 @@
       "name": "Gemini 2.5 Flash",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "max": 24576,
+          "min": 0,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-06-17",
       "structured_output": true,
       "temperature": true,
@@ -1015,7 +1021,21 @@
       "name": "Gemini 2.5 Pro",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-06-17",
       "structured_output": true,
       "temperature": true,
@@ -1053,7 +1073,16 @@
       "name": "Gemini 3.1 Flash Lite",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-05-07",
       "structured_output": true,
       "temperature": true,
@@ -1141,7 +1170,6 @@
         {
           "type": "effort",
           "values": [
-            "minimal",
             "low",
             "medium",
             "high"
@@ -2380,6 +2408,7 @@
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
       "id": "gpt-oss-120b",
+      "knowledge": "2024-06",
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131000,
@@ -2421,6 +2450,7 @@
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
       "id": "gpt-oss-20b",
+      "knowledge": "2024-06",
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131000,
@@ -3091,12 +3121,14 @@
     },
     "mistral-medium-3.5": {
       "attachment": true,
+      "canonical_model_id": "mistral/mistral-medium-3-5",
       "cost": {
         "cache_read": 0.154,
         "input": 1.532,
         "output": 7.843
       },
       "description": "Mistral Medium 3.5 is a frontier multimodal 128B model combining reasoning, coding, and instruction-following with strong agentic performance and efficient deployment.",
+      "family": "mistral-medium",
       "id": "mistral-medium-3.5",
       "last_updated": "2026-04-30",
       "limit": {
@@ -3123,14 +3155,17 @@
     },
     "mistral-nemo-instruct-2407": {
       "attachment": false,
+      "canonical_model_id": "mistral/mistral-nemo",
       "cost": {
         "cache_read": 0.014,
         "input": 0.145,
         "output": 0.145
       },
       "description": "A 12B parameter, instruct-tuned language model by Mistral AI and NVIDIA, designed for advanced instruction following, multi-turn conversations, and generating text and code across multiple languages.",
+      "family": "mistral-nemo",
       "id": "mistral-nemo-instruct-2407",
-      "last_updated": "2024-08-07",
+      "knowledge": "2024-07",
+      "last_updated": "2024-07-18",
       "limit": {
         "context": 128000,
         "output": 128000
@@ -3144,22 +3179,25 @@
         ]
       },
       "name": "mistral-nemo-instruct-2407",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-08-07",
+      "release_date": "2024-07-18",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
     "mistral-small-2503": {
       "attachment": true,
+      "canonical_model_id": "mistral/mistral-small-3-1-24b-instruct-2503",
       "cost": {
         "input": 0.111,
         "output": 0.334
       },
       "description": "Combines advanced text and vision capabilities with 24 billion parameters, supporting multilingual tasks and long contexts up to 131k tokens, making it versatile for various applications without sacrificing performance.",
+      "family": "mistral-small",
       "id": "mistral-small-2503",
-      "last_updated": "2025-03-20",
+      "knowledge": "2024-06",
+      "last_updated": "2025-03-17",
       "limit": {
         "context": 128000,
         "output": 128000
@@ -3174,9 +3212,9 @@
         ]
       },
       "name": "mistral-small-2503",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-03-20",
+      "release_date": "2025-03-17",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -3218,30 +3256,33 @@
     },
     "mistral-small-3.2-24b-instruct-2506": {
       "attachment": true,
+      "canonical_model_id": "mistral/mistral-small-3.2-24b-instruct",
       "cost": {
         "input": 0.1,
         "output": 0.312
       },
       "description": "Mistral-Small-3.2-24B-Instruct-2506 is a 24B parameter instruction-tuned model with enhanced long-context support (128k) and state-of-the-art vision understanding.",
+      "family": "mistral-small",
       "id": "mistral-small-3.2-24b-instruct-2506",
-      "last_updated": "2025-05-26",
+      "knowledge": "2023-10-31",
+      "last_updated": "2025-06-20",
       "limit": {
         "context": 131000,
         "output": 131000
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "image",
+          "text"
         ],
         "output": [
           "text"
         ]
       },
       "name": "mistral-small-3.2-24b-instruct-2506",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-05-26",
+      "release_date": "2025-06-20",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -3280,13 +3321,15 @@
     },
     "nemotron-nano-v2-12b": {
       "attachment": true,
+      "canonical_model_id": "nvidia/nemotron-nano-12b-v2-vl",
       "cost": {
         "input": 0.24,
         "output": 0.707
       },
       "description": "NVIDIA Nemotron Nano v2 12B is a 12-billion-parameter multimodal reasoning model designed for advanced video understanding, document intelligence, and visual reasoning, built with a hybrid Transformer-Mamba architecture for high efficiency and low latency.",
+      "family": "nemotron",
       "id": "nemotron-nano-v2-12b",
-      "last_updated": "2025-10-31",
+      "last_updated": "2025-10-28",
       "limit": {
         "context": 128000,
         "output": 128000
@@ -3301,10 +3344,10 @@
         ]
       },
       "name": "nemotron-nano-v2-12b",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2025-10-31",
+      "release_date": "2025-10-28",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -3372,8 +3415,7 @@
       },
       "name": "Nova Lite 1.0",
       "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
+      "reasoning": false,
       "release_date": "2024-12-05",
       "structured_output": true,
       "temperature": false,
@@ -3406,8 +3448,7 @@
       },
       "name": "Nova Micro 1.0",
       "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
+      "reasoning": false,
       "release_date": "2024-12-05",
       "structured_output": true,
       "temperature": false,
@@ -3441,8 +3482,7 @@
       },
       "name": "Nova Pro 1.0",
       "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
+      "reasoning": false,
       "release_date": "2024-12-05",
       "structured_output": true,
       "temperature": true,
@@ -3450,13 +3490,16 @@
     },
     "nvidia-nemotron-3-nano-30b-a3b": {
       "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-nano-30b-a3b",
       "cost": {
         "input": 0.06,
         "output": 0.24
       },
       "description": "Nemotron-Nano-3-30B-A3B is a compact Mixture-of-Experts model optimized for efficient reasoning, chat, and coding, with strong multilingual support and long-context RAG and agent workflows.",
+      "family": "nemotron",
       "id": "nvidia-nemotron-3-nano-30b-a3b",
-      "last_updated": "2026-01-12",
+      "knowledge": "2025-06-25",
+      "last_updated": "2025-12-15",
       "limit": {
         "context": 256000,
         "output": 256000
@@ -3470,23 +3513,26 @@
         ]
       },
       "name": "nvidia-nemotron-3-nano-30b-a3b",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-01-12",
+      "release_date": "2025-12-15",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
     "pixtral-12b-2409": {
       "attachment": true,
+      "canonical_model_id": "mistral/pixtral-12b",
       "cost": {
         "input": 0.223,
         "output": 0.223
       },
       "description": "Pixtral 2409 12B is a state-of-the-art multimodal model with 12B parameters and a 400M vision encoder, natively trained on interleaved text and image data. It excels in tasks spanning vision-language reasoning, instruction following, and pure text understanding, making it highly effective for real-world multimodal applications.",
+      "family": "pixtral",
       "id": "pixtral-12b-2409",
-      "last_updated": "2024-11-09",
+      "knowledge": "2024-09",
+      "last_updated": "2024-09-11",
       "limit": {
         "context": 128000,
         "output": 4096
@@ -3501,10 +3547,9 @@
         ]
       },
       "name": "pixtral-12b-2409",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2024-11-09",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-09-11",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -3545,13 +3590,16 @@
     },
     "qwen2.5-vl-72b-instruct": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen2-5-vl-72b-instruct",
       "cost": {
         "input": 1.014,
         "output": 1.014
       },
       "description": "Qwen2.5-VL is a powerful vision-language model with advanced capabilities in visual understanding, long video reasoning, and structured output generation.",
+      "family": "qwen",
       "id": "qwen2.5-vl-72b-instruct",
-      "last_updated": "2025-01-27",
+      "knowledge": "2024-04",
+      "last_updated": "2025-01-26",
       "limit": {
         "context": 32000,
         "output": 32000
@@ -3566,10 +3614,9 @@
         ]
       },
       "name": "qwen2.5-vl-72b-instruct",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-01-27",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-01-26",
       "structured_output": true,
       "temperature": false,
       "tool_call": false
@@ -3736,14 +3783,17 @@
     },
     "qwen3-vl-235b-a22b": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3-vl-235b-a22b-instruct",
       "cost": {
         "cache_read": 0.052,
         "input": 0.617,
         "output": 3.119
       },
       "description": "Qwen3 VL 235B A22B is a 235B-parameter MoE vision-language flagship model (≈22B active) designed for frontier-level multimodal understanding across text, images, documents, and long videos.",
+      "family": "qwen",
       "id": "qwen3-vl-235b-a22b",
-      "last_updated": "2026-01-13",
+      "knowledge": "2025-03-31",
+      "last_updated": "2025-09-23",
       "limit": {
         "context": 256000,
         "output": 256000
@@ -3758,10 +3808,9 @@
         ]
       },
       "name": "qwen3-vl-235b-a22b",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-01-13",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09-23",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -4084,14 +4133,16 @@
     },
     "voxtral-small-2507": {
       "attachment": true,
+      "canonical_model_id": "mistral/voxtral-small-24b-2507",
       "cost": {
         "cache_read": 0.012,
         "input": 0.123,
         "output": 0.368
       },
       "description": "Voxtral Small is a multimodal model with audio input, combining advanced speech capabilities with strong text performance for transcription, translation, and audio understanding.",
+      "family": "voxtral",
       "id": "voxtral-small-2507",
-      "last_updated": "2026-02-02",
+      "last_updated": "2025-07-15",
       "limit": {
         "context": 32000,
         "output": 32000
@@ -4106,9 +4157,9 @@
         ]
       },
       "name": "voxtral-small-2507",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-02-02",
+      "release_date": "2025-07-15",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
