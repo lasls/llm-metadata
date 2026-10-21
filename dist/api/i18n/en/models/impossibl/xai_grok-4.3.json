@@ -3,8 +3,24 @@
   "canonical_model_id": "xai/grok-4.3",
   "cost": {
     "cache_read": 0.2,
+    "context_over_200k": {
+      "cache_read": 0.4,
+      "input": 2.5,
+      "output": 5
+    },
     "input": 1.25,
-    "output": 2.5
+    "output": 2.5,
+    "tiers": [
+      {
+        "cache_read": 0.4,
+        "input": 2.5,
+        "output": 5,
+        "tier": {
+          "size": 200000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "xAI's default Grok for chat, coding, agentic tools, and lower hallucination risk",
   "family": "grok",
@@ -27,7 +43,17 @@
   "name": "Grok 4.3",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high"
+      ]
+    }
+  ],
   "release_date": "2026-04-17",
   "structured_output": true,
   "temperature": true,

@@ -8,6 +8,7 @@
   "models": {
     "alicloud-deepseek-v4-flash": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-flash",
       "cost": {
         "cache_read": 0.028,
         "input": 0.14,
@@ -42,12 +43,14 @@
         }
       ],
       "release_date": "2026-04-24",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "alicloud-deepseek-v4-pro": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
         "cache_read": 0.13,
         "input": 1.69,
@@ -82,12 +85,14 @@
         }
       ],
       "release_date": "2026-04-24",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "alicloud-glm-5.1": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.1",
       "cost": {
         "cache_read": 0.169,
         "cache_write": 1.05625,
@@ -100,7 +105,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-03-27",
+      "last_updated": "2026-04-07",
       "limit": {
         "context": 200000,
         "output": 128000
@@ -121,7 +126,8 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-03-27",
+      "release_date": "2026-04-07",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -148,7 +154,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -445,29 +452,12 @@
     },
     "claude-opus-4-6": {
       "attachment": true,
+      "canonical_model_id": "anthropic/claude-opus-4-6",
       "cost": {
         "cache_read": 0.5,
         "cache_write": 6.25,
-        "context_over_200k": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 37.5
-        },
         "input": 5,
-        "output": 25,
-        "tiers": [
-          {
-            "cache_read": 1,
-            "cache_write": 12.5,
-            "input": 10,
-            "output": 37.5,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
+        "output": 25
       },
       "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
@@ -517,29 +507,12 @@
     },
     "claude-opus-4-6-think": {
       "attachment": true,
+      "canonical_model_id": "anthropic/claude-opus-4-6",
       "cost": {
         "cache_read": 0.5,
         "cache_write": 6.25,
-        "context_over_200k": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 37.5
-        },
         "input": 5,
-        "output": 25,
-        "tiers": [
-          {
-            "cache_read": 1,
-            "cache_write": 12.5,
-            "input": 10,
-            "output": 37.5,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
+        "output": 25
       },
       "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
@@ -591,29 +564,12 @@
     },
     "claude-opus-4-7": {
       "attachment": true,
+      "canonical_model_id": "anthropic/claude-opus-4-7",
       "cost": {
         "cache_read": 0.5,
         "cache_write": 6.25,
-        "context_over_200k": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 37.5
-        },
         "input": 5,
-        "output": 25,
-        "tiers": [
-          {
-            "cache_read": 1,
-            "cache_write": 12.5,
-            "input": 10,
-            "output": 37.5,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
+        "output": 25
       },
       "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
@@ -660,29 +616,12 @@
     },
     "claude-opus-4-7-think": {
       "attachment": true,
+      "canonical_model_id": "anthropic/claude-opus-4-7",
       "cost": {
         "cache_read": 0.5,
         "cache_write": 6.25,
-        "context_over_200k": {
-          "cache_read": 1,
-          "cache_write": 12.5,
-          "input": 10,
-          "output": 37.5
-        },
         "input": 5,
-        "output": 25,
-        "tiers": [
-          {
-            "cache_read": 1,
-            "cache_write": 12.5,
-            "input": 10,
-            "output": 37.5,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
+        "output": 25
       },
       "description": "Flagship Claude model for deep reasoning, coding, and long-horizon agents",
       "family": "claude-opus",
@@ -745,13 +684,14 @@
       "knowledge": "2026-01",
       "last_updated": "2026-05-28",
       "limit": {
-        "context": 200000,
-        "output": 32000
+        "context": 1000000,
+        "output": 128000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -797,13 +737,14 @@
       "knowledge": "2026-01",
       "last_updated": "2026-05-28",
       "limit": {
-        "context": 200000,
-        "output": 32000
+        "context": 1000000,
+        "output": 128000
       },
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -853,7 +794,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -967,7 +909,7 @@
       "knowledge": "2025-07-31",
       "last_updated": "2025-09-29",
       "limit": {
-        "context": 1000000,
+        "context": 200000,
         "output": 64000
       },
       "modalities": {
@@ -1030,7 +972,7 @@
       "knowledge": "2025-07-31",
       "last_updated": "2025-09-29",
       "limit": {
-        "context": 1000000,
+        "context": 200000,
         "output": 64000
       },
       "modalities": {
@@ -1061,29 +1003,12 @@
     },
     "claude-sonnet-4-6": {
       "attachment": true,
+      "canonical_model_id": "anthropic/claude-sonnet-4-6",
       "cost": {
         "cache_read": 0.3,
         "cache_write": 3.75,
-        "context_over_200k": {
-          "cache_read": 0.6,
-          "cache_write": 7.5,
-          "input": 6,
-          "output": 22.5
-        },
         "input": 3,
-        "output": 15,
-        "tiers": [
-          {
-            "cache_read": 0.6,
-            "cache_write": 7.5,
-            "input": 6,
-            "output": 22.5,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
+        "output": 15
       },
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
@@ -1133,29 +1058,12 @@
     },
     "claude-sonnet-4-6-think": {
       "attachment": true,
+      "canonical_model_id": "anthropic/claude-sonnet-4-6",
       "cost": {
         "cache_read": 0.3,
         "cache_write": 3.75,
-        "context_over_200k": {
-          "cache_read": 0.6,
-          "cache_write": 7.5,
-          "input": 6,
-          "output": 22.5
-        },
         "input": 3,
-        "output": 15,
-        "tiers": [
-          {
-            "cache_read": 0.6,
-            "cache_write": 7.5,
-            "input": 6,
-            "output": 22.5,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
+        "output": 15
       },
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
@@ -1227,7 +1135,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -1306,6 +1215,7 @@
     },
     "coding-glm-5.1": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.1",
       "cost": {
         "cache_read": 0.013,
         "input": 0.06,
@@ -1317,10 +1227,10 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-04-11",
+      "last_updated": "2026-04-07",
       "limit": {
         "context": 200000,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -1338,27 +1248,28 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-04-11",
+      "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "coding-glm-5.1-free": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.1",
       "cost": {
         "input": 0,
         "output": 0
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
-      "family": "glm-free",
+      "family": "glm",
       "id": "coding-glm-5.1-free",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-04-11",
+      "last_updated": "2026-04-07",
       "limit": {
         "context": 200000,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -1376,7 +1287,7 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-04-11",
+      "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1517,6 +1428,7 @@
     },
     "coding-minimax-m2.7": {
       "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.7",
       "cost": {
         "input": 0.2,
         "output": 0.2
@@ -1551,12 +1463,13 @@
     },
     "coding-minimax-m2.7-free": {
       "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.7",
       "cost": {
         "input": 0,
         "output": 0
       },
       "description": "MiniMax model for chat, coding, office work, and agentic tasks",
-      "family": "minimax-free",
+      "family": "minimax",
       "id": "coding-minimax-m2.7-free",
       "interleaved": {
         "field": "reasoning_content"
@@ -1585,6 +1498,7 @@
     },
     "coding-minimax-m2.7-highspeed": {
       "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.7-highspeed",
       "cost": {
         "input": 0.2,
         "output": 0.2
@@ -1621,25 +1535,9 @@
       "attachment": true,
       "canonical_model_id": "xiaomi/mimo-v2.5",
       "cost": {
-        "cache_read": 0.016,
-        "context_over_200k": {
-          "cache_read": 0.032,
-          "input": 0.16,
-          "output": 0.8
-        },
+        "cache_read": 0.0016,
         "input": 0.08,
-        "output": 0.4,
-        "tiers": [
-          {
-            "cache_read": 0.032,
-            "input": 0.16,
-            "output": 0.8,
-            "tier": {
-              "size": 256000,
-              "type": "context"
-            }
-          }
-        ]
+        "output": 0.16
       },
       "description": "Open MiMo model for multimodal coding agents and long-context automation",
       "family": "mimo-v2.5",
@@ -1680,25 +1578,9 @@
       "attachment": false,
       "canonical_model_id": "xiaomi/mimo-v2.5-pro",
       "cost": {
-        "cache_read": 0.04,
-        "context_over_200k": {
-          "cache_read": 0.08,
-          "input": 0.4,
-          "output": 1.2
-        },
+        "cache_read": 0.0016,
         "input": 0.2,
-        "output": 0.6,
-        "tiers": [
-          {
-            "cache_read": 0.08,
-            "input": 0.4,
-            "output": 1.2,
-            "tier": {
-              "size": 256000,
-              "type": "context"
-            }
-          }
-        ]
+        "output": 0.4
       },
       "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
       "family": "mimo-v2.5-pro",
@@ -1734,6 +1616,7 @@
     },
     "deep-deepseek-v4-flash": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-flash",
       "cost": {
         "cache_read": 0.0308,
         "input": 0.154,
@@ -1768,12 +1651,14 @@
         }
       ],
       "release_date": "2026-04-24",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "deep-deepseek-v4-pro": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
         "cache_read": 0.004302,
         "input": 0.478,
@@ -1808,6 +1693,7 @@
         }
       ],
       "release_date": "2026-04-24",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1955,6 +1841,7 @@
         }
       ],
       "release_date": "2026-08-21",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1963,7 +1850,7 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
       "cost": {
-        "cache_read": 0.023058,
+        "cache_read": 0.023057694,
         "input": 0.6918,
         "output": 2.0754
       },
@@ -2058,15 +1945,16 @@
     },
     "doubao-seed-2-0-code-preview": {
       "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.0-code",
       "cost": {
         "cache_read": 0.09644,
-        "input": 0.48,
-        "output": 2.41,
+        "input": 0.4822,
+        "output": 2.411,
         "tiers": [
           {
             "cache_read": 0.144656,
-            "input": 0.72,
-            "output": 3.62,
+            "input": 0.72328,
+            "output": 3.6164,
             "tier": {
               "size": 32000,
               "type": "context"
@@ -2074,8 +1962,8 @@
           },
           {
             "cache_read": 0.28932,
-            "input": 1.45,
-            "output": 7.23,
+            "input": 1.4466,
+            "output": 7.233,
             "tier": {
               "size": 128000,
               "type": "context"
@@ -2098,7 +1986,8 @@
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -2128,27 +2017,26 @@
     },
     "doubao-seed-2-0-lite-260428": {
       "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.0-lite",
       "cost": {
-        "cache_read": 0.01692,
-        "input": 0.08,
-        "input_audio": 1.269,
-        "output": 0.51,
+        "cache_read": 0.018082,
+        "input": 0.09041,
+        "input_audio": 1.35615,
+        "output": 0.54246,
         "tiers": [
           {
-            "cache_read": 0.02536,
-            "input": 0.13,
-            "input_audio": 1.902,
-            "output": 0.76,
+            "cache_read": 0.0271232,
+            "input": 0.135616,
+            "output": 0.813696,
             "tier": {
               "size": 32000,
               "type": "context"
             }
           },
           {
-            "cache_read": 0.05072,
-            "input": 0.25,
-            "input_audio": 3.804,
-            "output": 1.52,
+            "cache_read": 0.0542464,
+            "input": 0.271232,
+            "output": 1.627392,
             "tier": {
               "size": 128000,
               "type": "context"
@@ -2171,7 +2059,9 @@
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "audio",
+          "pdf"
         ],
         "output": [
           "text"
@@ -2201,27 +2091,26 @@
     },
     "doubao-seed-2-0-mini-260428": {
       "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.0-mini",
       "cost": {
-        "cache_read": 0.00564,
-        "input": 0.03,
+        "cache_read": 0.0060272,
+        "input": 0.030136,
         "input_audio": 0.423,
-        "output": 0.28,
+        "output": 0.30136,
         "tiers": [
           {
-            "cache_read": 0.01128,
-            "input": 0.06,
-            "input_audio": 0.846,
-            "output": 0.56,
+            "cache_read": 0.0120548,
+            "input": 0.060274,
+            "output": 0.60274,
             "tier": {
               "size": 32000,
               "type": "context"
             }
           },
           {
-            "cache_read": 0.02256,
-            "input": 0.11,
-            "input_audio": 1.692,
-            "output": 1.13,
+            "cache_read": 0.0241096,
+            "input": 0.120548,
+            "output": 1.20548,
             "tier": {
               "size": 128000,
               "type": "context"
@@ -2244,7 +2133,9 @@
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "audio",
+          "pdf"
         ],
         "output": [
           "text"
@@ -2274,24 +2165,25 @@
     },
     "doubao-seed-2-0-pro": {
       "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.0-pro",
       "cost": {
-        "cache_read": 0.09644,
-        "input": 0.48,
-        "output": 2.41,
+        "cache_read": 0.09916,
+        "input": 0.4958,
+        "output": 2.479,
         "tiers": [
           {
-            "cache_read": 0.144656,
-            "input": 0.72,
-            "output": 3.62,
+            "cache_read": 0.14872,
+            "input": 0.7436,
+            "output": 3.718,
             "tier": {
               "size": 32000,
               "type": "context"
             }
           },
           {
-            "cache_read": 0.28932,
-            "input": 1.45,
-            "output": 7.23,
+            "cache_read": 0.29744,
+            "input": 1.4872,
+            "output": 7.436,
             "tier": {
               "size": 128000,
               "type": "context"
@@ -2314,7 +2206,8 @@
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -2344,17 +2237,18 @@
     },
     "gemini-2.5-flash": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-2.5-flash",
       "cost": {
         "cache_read": 0.03,
         "input": 0.3,
-        "input_audio": 1,
-        "output": 2.5
+        "input_audio": 0.9999,
+        "output": 2.499
       },
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
       "id": "gemini-2.5-flash",
       "knowledge": "2025-01",
-      "last_updated": "2025-06-05",
+      "last_updated": "2025-06-17",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -2392,7 +2286,7 @@
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2025-03-20",
+      "release_date": "2025-06-17",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -2483,6 +2377,7 @@
     },
     "gemini-2.5-pro": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-2.5-pro",
       "cost": {
         "cache_read": 0.125,
         "context_over_200k": {
@@ -2508,7 +2403,7 @@
       "family": "gemini-pro",
       "id": "gemini-2.5-pro",
       "knowledge": "2025-01",
-      "last_updated": "2025-06-05",
+      "last_updated": "2025-06-17",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -2538,33 +2433,19 @@
           ]
         }
       ],
-      "release_date": "2025-03-20",
+      "release_date": "2025-06-17",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "gemini-3-flash-preview": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-3-flash-preview",
       "cost": {
         "cache_read": 0.05,
-        "context_over_200k": {
-          "cache_read": 0.05,
-          "input": 0.5,
-          "output": 3
-        },
         "input": 0.5,
-        "output": 3,
-        "tiers": [
-          {
-            "cache_read": 0.05,
-            "input": 0.5,
-            "output": 3,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
+        "input_audio": 1,
+        "output": 3
       },
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
@@ -2579,8 +2460,8 @@
         "input": [
           "text",
           "image",
-          "audio",
           "video",
+          "audio",
           "pdf"
         ],
         "output": [
@@ -2698,10 +2579,12 @@
     },
     "gemini-3.1-flash-lite": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-3.1-flash-lite",
       "cost": {
         "cache_read": 0.025,
         "cache_write": 1,
         "input": 0.25,
+        "input_audio": 0.5,
         "output": 1.5
       },
       "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
@@ -2717,8 +2600,8 @@
         "input": [
           "text",
           "image",
-          "audio",
           "video",
+          "audio",
           "pdf"
         ],
         "output": [
@@ -2792,6 +2675,7 @@
     },
     "gemini-3.1-pro-preview": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-3.1-pro-preview",
       "cost": {
         "cache_read": 0.2,
         "context_over_200k": {
@@ -2826,8 +2710,8 @@
         "input": [
           "text",
           "image",
-          "audio",
           "video",
+          "audio",
           "pdf"
         ],
         "output": [
@@ -2854,6 +2738,7 @@
     },
     "gemini-3.1-pro-preview-customtools": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-3.1-pro-preview-customtools",
       "cost": {
         "cache_read": 0.2,
         "context_over_200k": {
@@ -2888,8 +2773,8 @@
         "input": [
           "text",
           "image",
-          "audio",
           "video",
+          "audio",
           "pdf"
         ],
         "output": [
@@ -2918,9 +2803,10 @@
       "attachment": true,
       "canonical_model_id": "google/gemini-3.5-flash",
       "cost": {
-        "cache_read": 1.5,
-        "input": 1.5,
-        "output": 9
+        "cache_read": 0.075,
+        "input": 0.75,
+        "input_audio": 0.75,
+        "output": 3.75
       },
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
@@ -2957,6 +2843,7 @@
         }
       ],
       "release_date": "2026-05-19",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -2967,6 +2854,7 @@
       "cost": {
         "cache_read": 0.03,
         "input": 0.3,
+        "input_audio": 0.3,
         "output": 2.499999
       },
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
@@ -3013,9 +2901,10 @@
       "attachment": true,
       "canonical_model_id": "google/gemini-3.6-flash",
       "cost": {
-        "cache_read": 0.15,
-        "input": 1.5,
-        "output": 7.5
+        "cache_read": 0.075,
+        "input": 0.75,
+        "input_audio": 0.75,
+        "output": 3.75
       },
       "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
       "family": "gemini-flash",
@@ -3063,6 +2952,7 @@
       "cost": {
         "cache_read": 0.075,
         "input": 0.75,
+        "input_audio": 0.75,
         "output": 3.75
       },
       "description": "High-efficiency Gemini model for agentic workflows, coding, and multimodal reasoning",
@@ -3100,6 +2990,7 @@
         }
       ],
       "release_date": "2026-08-13",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3110,6 +3001,7 @@
       "cost": {
         "cache_read": 0.075,
         "input": 0.75,
+        "input_audio": 0.75,
         "output": 3.75
       },
       "description": "Google's most intelligent Flash model, engineered for long-horizon software engineering, autonomous agents, and complex enterprise workflows",
@@ -3231,7 +3123,8 @@
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -3277,7 +3170,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-09-30",
       "limit": {
-        "context": 204800,
+        "context": 200000,
         "output": 131072
       },
       "modalities": {
@@ -3332,7 +3225,8 @@
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -3378,7 +3272,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
-        "context": 204800,
+        "context": 200000,
         "output": 131072
       },
       "modalities": {
@@ -3457,7 +3351,7 @@
       "last_updated": "2026-06-13",
       "limit": {
         "context": 1000000,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -3501,7 +3395,7 @@
       "last_updated": "2026-08-14",
       "limit": {
         "context": 1000000,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -3546,7 +3440,7 @@
       "last_updated": "2026-08-26",
       "limit": {
         "context": 1000000,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -3578,27 +3472,40 @@
     },
     "glm-5v-turbo": {
       "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5v-turbo",
       "cost": {
         "cache_read": 0.169008,
         "input": 0.7042,
-        "output": 3.09848
+        "output": 3.09848,
+        "tiers": [
+          {
+            "cache_read": 0.253402,
+            "input": 0.986,
+            "output": 3.662004,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
-      "family": "glmv",
+      "family": "glm",
       "id": "glm-5v-turbo",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-04-01",
       "limit": {
         "context": 200000,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -3612,7 +3519,7 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-05-09",
+      "release_date": "2026-04-01",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3665,8 +3572,9 @@
     },
     "gpt-5.1": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5.1",
       "cost": {
-        "cache_read": 0.13,
+        "cache_read": 0.125,
         "input": 1.25,
         "output": 10
       },
@@ -3683,7 +3591,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -3710,6 +3619,7 @@
     },
     "gpt-5.1-codex": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5.1-codex",
       "cost": {
         "cache_read": 0.125,
         "input": 1.25,
@@ -3754,6 +3664,7 @@
     },
     "gpt-5.1-codex-mini": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5.1-codex-mini",
       "cost": {
         "cache_read": 0.025,
         "input": 0.25,
@@ -3798,6 +3709,7 @@
     },
     "gpt-5.2": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5.2",
       "cost": {
         "cache_read": 0.175,
         "input": 1.75,
@@ -3816,7 +3728,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -3844,6 +3757,7 @@
     },
     "gpt-5.2-codex": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5.2-codex",
       "cost": {
         "cache_read": 0.175,
         "input": 1.75,
@@ -3890,6 +3804,7 @@
     },
     "gpt-5.3-codex": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5.3-codex",
       "cost": {
         "cache_read": 0.175,
         "input": 1.75,
@@ -3936,6 +3851,7 @@
     },
     "gpt-5.4": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5.4",
       "cost": {
         "cache_read": 0.25,
         "context_over_200k": {
@@ -4015,6 +3931,7 @@
     },
     "gpt-5.4-mini": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5.4-mini",
       "cost": {
         "cache_read": 0.075,
         "input": 0.75,
@@ -4124,6 +4041,7 @@
     },
     "gpt-5.5": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-5.5",
       "cost": {
         "cache_read": 0.5,
         "context_over_200k": {
@@ -4264,10 +4182,28 @@
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.6-luna",
       "cost": {
-        "cache_read": 0.1,
-        "cache_write": 1.25,
-        "input": 1,
-        "output": 6
+        "cache_read": 0.02,
+        "cache_write": 0.25,
+        "context_over_200k": {
+          "cache_read": 0.04,
+          "cache_write": 0.5,
+          "input": 0.4,
+          "output": 1.8
+        },
+        "input": 0.2,
+        "output": 1.2,
+        "tiers": [
+          {
+            "cache_read": 0.04,
+            "cache_write": 0.5,
+            "input": 0.4,
+            "output": 1.8,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
       "family": "gpt-luna",
@@ -4313,10 +4249,28 @@
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.6-sol",
       "cost": {
-        "cache_read": 0.5,
-        "cache_write": 6.25,
-        "input": 5,
-        "output": 30
+        "cache_read": 0.4,
+        "cache_write": 5,
+        "context_over_200k": {
+          "cache_read": 0.8,
+          "cache_write": 10,
+          "input": 8,
+          "output": 30
+        },
+        "input": 4,
+        "output": 20,
+        "tiers": [
+          {
+            "cache_read": 0.8,
+            "cache_write": 10,
+            "input": 8,
+            "output": 30,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Frontier GPT-5.6 model for complex professional work, coding, and agentic workflows",
       "family": "gpt-sol",
@@ -4362,10 +4316,28 @@
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.6-terra",
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 3.125,
-        "input": 2.5,
-        "output": 15
+        "cache_read": 0.2,
+        "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "cache_write": 5,
+          "input": 4,
+          "output": 18
+        },
+        "input": 2,
+        "output": 12,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "cache_write": 5,
+            "input": 4,
+            "output": 18,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
       "family": "gpt-terra",
@@ -4811,6 +4783,7 @@
     },
     "grok-4.3": {
       "attachment": true,
+      "canonical_model_id": "xai/grok-4.3",
       "cost": {
         "cache_read": 0.2,
         "context_over_200k": {
@@ -4835,10 +4808,10 @@
       "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
       "family": "grok",
       "id": "grok-4.3",
-      "last_updated": "2026-05-01",
+      "last_updated": "2026-04-17",
       "limit": {
         "context": 1000000,
-        "output": 1000000
+        "output": 30000
       },
       "modalities": {
         "input": [
@@ -4863,7 +4836,7 @@
           ]
         }
       ],
-      "release_date": "2026-05-01",
+      "release_date": "2026-04-17",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -4872,16 +4845,32 @@
       "attachment": true,
       "canonical_model_id": "xai/grok-4.5",
       "cost": {
-        "cache_read": 0.5,
-        "input": 2,
-        "output": 6
+        "cache_read": 0.55,
+        "context_over_200k": {
+          "cache_read": 1.1,
+          "input": 4.4,
+          "output": 13.2
+        },
+        "input": 2.2,
+        "output": 6.6,
+        "tiers": [
+          {
+            "cache_read": 1.1,
+            "input": 4.4,
+            "output": 13.2,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "xAI's Grok model for chat, coding, agentic tools, and lower hallucination risk",
       "family": "grok",
       "id": "grok-4.5",
       "last_updated": "2026-07-08",
       "limit": {
-        "context": 1000000,
+        "context": 500000,
         "output": 1000000
       },
       "modalities": {
@@ -4917,8 +4906,24 @@
       "canonical_model_id": "xai/grok-4.6",
       "cost": {
         "cache_read": 0.5,
+        "context_over_200k": {
+          "cache_read": 1,
+          "input": 4,
+          "output": 12
+        },
         "input": 2,
-        "output": 6
+        "output": 6,
+        "tiers": [
+          {
+            "cache_read": 1,
+            "input": 4,
+            "output": 12,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "xAI's frontier model for long-running agents, coding, knowledge work, and visual projects",
       "family": "grok",
@@ -4961,19 +4966,19 @@
       "attachment": true,
       "canonical_model_id": "xai/grok-4.7",
       "cost": {
-        "cache_read": 0.55,
+        "cache_read": 0.5,
         "context_over_200k": {
-          "cache_read": 1.1,
-          "input": 4.4,
-          "output": 13.2
+          "cache_read": 1,
+          "input": 4,
+          "output": 12
         },
-        "input": 2.2,
-        "output": 6.6,
+        "input": 2,
+        "output": 6,
         "tiers": [
           {
-            "cache_read": 1.1,
-            "input": 4.4,
-            "output": 13.2,
+            "cache_read": 1,
+            "input": 4,
+            "output": 12,
             "tier": {
               "size": 200000,
               "type": "context"
@@ -5140,6 +5145,7 @@
         }
       ],
       "release_date": "2026-04-20",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -5193,6 +5199,7 @@
     },
     "kimi-k2.5": {
       "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.5",
       "cost": {
         "cache_read": 0.1,
         "input": 0.6,
@@ -5205,7 +5212,7 @@
         "field": "reasoning_content"
       },
       "knowledge": "2025-01",
-      "last_updated": "2026-01",
+      "last_updated": "2026-01-27",
       "limit": {
         "context": 262144,
         "output": 32768
@@ -5228,13 +5235,14 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-01",
+      "release_date": "2026-01-27",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
     },
     "kimi-k2.6": {
       "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.6",
       "cost": {
         "cache_read": 0.16,
         "input": 0.95,
@@ -5247,7 +5255,7 @@
         "field": "reasoning_content"
       },
       "knowledge": "2025-01",
-      "last_updated": "2026-04-21",
+      "last_updated": "2026-04-20",
       "limit": {
         "context": 262144,
         "output": 32768
@@ -5270,7 +5278,7 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-04-21",
+      "release_date": "2026-04-20",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -5525,6 +5533,7 @@
         }
       ],
       "release_date": "2026-04-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -5565,6 +5574,7 @@
         }
       ],
       "release_date": "2026-04-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -5696,6 +5706,7 @@
     },
     "minimax-m2.7": {
       "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.7",
       "cost": {
         "cache_read": 0.06,
         "cache_write": 0.375,
@@ -5745,7 +5756,7 @@
       },
       "last_updated": "2026-06-01",
       "limit": {
-        "context": 1048576,
+        "context": 1000000,
         "output": 512000
       },
       "modalities": {
@@ -6168,7 +6179,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -6238,6 +6250,7 @@
         }
       ],
       "release_date": "2026-08-26",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -6294,6 +6307,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-09-23",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -6306,7 +6320,6 @@
         "output": 1.37,
         "tiers": [
           {
-            "cache_read": 0,
             "input": 0.2054,
             "output": 2.054,
             "tier": {
@@ -6315,7 +6328,6 @@
             }
           },
           {
-            "cache_read": 0,
             "input": 0.411,
             "output": 4.11,
             "tier": {
@@ -6338,7 +6350,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -6757,23 +6770,24 @@
     },
     "qwen3.6-flash": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.6-flash",
       "cost": {
         "cache_read": 0.0169,
         "cache_write": 0.21125,
         "context_over_200k": {
           "cache_read": 0.0676,
           "cache_write": 0.845,
-          "input": 0.68,
-          "output": 4.06
+          "input": 0.676,
+          "output": 4.056
         },
-        "input": 0.17,
-        "output": 1.01,
+        "input": 0.169,
+        "output": 1.014,
         "tiers": [
           {
             "cache_read": 0.0676,
             "cache_write": 0.845,
-            "input": 0.68,
-            "output": 4.06,
+            "input": 0.676,
+            "output": 4.056,
             "tier": {
               "size": 256000,
               "type": "context"
@@ -6788,10 +6802,10 @@
         "field": "reasoning_content"
       },
       "knowledge": "2025-04",
-      "last_updated": "2026-04-02",
+      "last_updated": "2026-04-27",
       "limit": {
         "context": 991000,
-        "output": 64000
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -6811,13 +6825,14 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-04-02",
+      "release_date": "2026-04-27",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "qwen3.6-max-preview": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3.6-max-preview",
       "cost": {
         "cache_read": 0.1268,
         "cache_write": 1.585,
@@ -6837,13 +6852,13 @@
         ]
       },
       "description": "Flagship model for demanding analysis, coding, and production agent workflows",
-      "family": "qwen3.6",
+      "family": "qwen",
       "id": "qwen3.6-max-preview",
       "interleaved": {
         "field": "reasoning_content"
       },
       "knowledge": "2025-04",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-04-20",
       "limit": {
         "context": 240000,
         "output": 64000
@@ -6864,30 +6879,32 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-05-09",
+      "release_date": "2026-04-20",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "qwen3.6-plus": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.6-plus",
       "cost": {
         "cache_read": 0.0282,
         "cache_write": 0.3525,
         "context_over_200k": {
           "cache_read": 0.1128,
           "cache_write": 1.41,
-          "input": 1.13,
-          "output": 6.77
+          "input": 1.128,
+          "output": 6.768
         },
-        "input": 0.28,
-        "output": 1.69,
+        "input": 0.282,
+        "output": 1.692,
         "tiers": [
           {
             "cache_read": 0.1128,
             "cache_write": 1.41,
-            "input": 1.13,
-            "output": 6.77,
+            "input": 1.128,
+            "output": 6.768,
             "tier": {
               "size": 256000,
               "type": "context"
@@ -6896,16 +6913,16 @@
         ]
       },
       "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
-      "family": "qwen3.6",
+      "family": "qwen",
       "id": "qwen3.6-plus",
       "interleaved": {
         "field": "reasoning_content"
       },
       "knowledge": "2025-04",
-      "last_updated": "2026-05-09",
+      "last_updated": "2026-04-02",
       "limit": {
         "context": 991000,
-        "output": 64000
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -6925,19 +6942,41 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-05-09",
+      "release_date": "2026-04-02",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "qwen3.7-flash": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "alibaba/qwen3.7-flash",
       "cost": {
         "cache_read": 0.00564,
         "cache_write": 0.03525,
         "input": 0.0282,
-        "output": 0.1128
+        "output": 0.1128,
+        "tiers": [
+          {
+            "cache_read": 0.0169,
+            "cache_write": 0.105625,
+            "input": 0.0845,
+            "output": 0.338,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          },
+          {
+            "cache_read": 0.0338,
+            "cache_write": 0.21125,
+            "input": 0.169,
+            "output": 0.676,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Lightweight multimodal Qwen model for high-throughput text, image, and video tasks",
       "family": "qwen",
@@ -6949,11 +6988,13 @@
       "limit": {
         "context": 991000,
         "input": 991808,
-        "output": 64000
+        "output": 131072
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -6994,7 +7035,7 @@
       "last_updated": "2026-05-21",
       "limit": {
         "context": 991000,
-        "output": 64000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -7027,8 +7068,26 @@
       "cost": {
         "cache_read": 0.0564,
         "cache_write": 0.3525,
+        "context_over_200k": {
+          "cache_read": 0.169,
+          "cache_write": 1.05625,
+          "input": 0.845,
+          "output": 3.38
+        },
         "input": 0.282,
-        "output": 1.128
+        "output": 1.128,
+        "tiers": [
+          {
+            "cache_read": 0.169,
+            "cache_write": 1.05625,
+            "input": 0.845,
+            "output": 3.38,
+            "tier": {
+              "size": 256000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
       "family": "qwen",
@@ -7044,7 +7103,9 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -7084,7 +7145,7 @@
       "last_updated": "2026-08-12",
       "limit": {
         "context": 262000,
-        "output": 262000
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -7118,7 +7179,7 @@
       "canonical_model_id": "alibaba/qwen3.8-flash",
       "cost": {
         "cache_read": 0.014075,
-        "cache_write": 0.175937,
+        "cache_write": 0.1759375,
         "input": 0.1126,
         "output": 0.380025
       },
@@ -7219,7 +7280,7 @@
       "tool_call": true
     },
     "qwen3.8-max": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-max",
       "cost": {
         "cache_read": 0.169,
@@ -7236,11 +7297,13 @@
       "last_updated": "2026-08-03",
       "limit": {
         "context": 991000,
-        "output": 128000
+        "output": 131072
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image",
+          "video"
         ],
         "output": [
           "text"
@@ -7369,6 +7432,7 @@
         }
       ],
       "release_date": "2026-07-19",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -7377,7 +7441,7 @@
       "canonical_model_id": "alibaba/qwen3.8-omni-flash",
       "cost": {
         "cache_read": 0.014075,
-        "cache_write": 0.175937,
+        "cache_write": 0.1759375,
         "input": 0.1126,
         "output": 0.380025
       },
@@ -7485,7 +7549,7 @@
       "limit": {
         "context": 1000000,
         "input": 1000000,
-        "output": 1000000
+        "output": 64000
       },
       "modalities": {
         "input": [
@@ -7571,6 +7635,7 @@
         }
       ],
       "release_date": "2026-04-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -7614,6 +7679,7 @@
         }
       ],
       "release_date": "2026-04-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -7670,6 +7736,7 @@
         }
       ],
       "release_date": "2026-04-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -7710,11 +7777,13 @@
         }
       ],
       "release_date": "2026-04-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
     "zai-glm-5.1": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.1",
       "cost": {
         "cache_read": 0.183112,
         "input": 0.845,
@@ -7726,7 +7795,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-03-27",
+      "last_updated": "2026-04-07",
       "limit": {
         "context": 200000,
         "output": 128000
@@ -7747,7 +7816,8 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2026-03-27",
+      "release_date": "2026-04-07",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

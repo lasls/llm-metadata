@@ -1,11 +1,33 @@
 {
-  "attachment": false,
+  "attachment": true,
   "canonical_model_id": "alibaba/qwen3.7-flash",
   "cost": {
     "cache_read": 0.00564,
     "cache_write": 0.03525,
     "input": 0.0282,
-    "output": 0.1128
+    "output": 0.1128,
+    "tiers": [
+      {
+        "cache_read": 0.0169,
+        "cache_write": 0.105625,
+        "input": 0.0845,
+        "output": 0.338,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 0.0338,
+        "cache_write": 0.21125,
+        "input": 0.169,
+        "output": 0.676,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Lightweight multimodal Qwen model for high-throughput text, image, and video tasks",
   "family": "qwen",
@@ -17,11 +39,13 @@
   "limit": {
     "context": 991000,
     "input": 991808,
-    "output": 64000
+    "output": 131072
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image",
+      "video"
     ],
     "output": [
       "text"

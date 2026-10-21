@@ -10,8 +10,8 @@
     "ByteDance-Seed/Seed-OSS-36B-Instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.21,
-        "output": 0.57
+        "input": 0.22417122,
+        "output": 0.59778991
       },
       "description": "Tool-capable chat model for instruction following and agentic application workflows",
       "family": "seed",
@@ -30,7 +30,7 @@
         ]
       },
       "name": "ByteDance-Seed/Seed-OSS-36B-Instruct",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
       "release_date": "2025-09-04",
       "structured_output": true,
@@ -68,6 +68,7 @@
     },
     "Pro/MiniMaxAI/MiniMax-M2.5": {
       "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.5",
       "cost": {
         "input": 0.3,
         "output": 1.22
@@ -78,7 +79,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-02-13",
+      "last_updated": "2026-02-12",
       "limit": {
         "context": 192000,
         "output": 131000
@@ -92,23 +93,26 @@
         ]
       },
       "name": "Pro/MiniMaxAI/MiniMax-M2.5",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-02-13",
+      "release_date": "2026-02-12",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Pro/deepseek-ai/DeepSeek-R1": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-r1-0528",
       "cost": {
-        "input": 0.5,
-        "output": 2.18
+        "cache_read": 0.05977899,
+        "input": 0.59778991,
+        "output": 2.39115964
       },
       "description": "DeepSeek reasoning model for multi-step analysis, math, coding, and tools",
       "family": "deepseek-thinking",
       "id": "Pro/deepseek-ai/DeepSeek-R1",
-      "last_updated": "2025-11-25",
+      "last_updated": "2025-05-28",
       "limit": {
         "context": 164000,
         "output": 164000
@@ -122,7 +126,7 @@
         ]
       },
       "name": "Pro/deepseek-ai/DeepSeek-R1",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -138,14 +142,16 @@
     },
     "Pro/deepseek-ai/DeepSeek-V3": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v3-0324",
       "cost": {
-        "input": 0.25,
-        "output": 1
+        "cache_read": 0.0298895,
+        "input": 0.29889496,
+        "output": 1.19557982
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek",
       "id": "Pro/deepseek-ai/DeepSeek-V3",
-      "last_updated": "2025-11-25",
+      "last_updated": "2025-03-24",
       "limit": {
         "context": 164000,
         "output": 164000
@@ -159,9 +165,9 @@
         ]
       },
       "name": "Pro/deepseek-ai/DeepSeek-V3",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-12-26",
+      "release_date": "2025-03-24",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -169,8 +175,9 @@
     "Pro/deepseek-ai/DeepSeek-V3.1-Terminus": {
       "attachment": false,
       "cost": {
-        "input": 0.27,
-        "output": 1
+        "cache_read": 0.05977899,
+        "input": 0.59778991,
+        "output": 1.79336973
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek",
@@ -189,7 +196,7 @@
         ]
       },
       "name": "Pro/deepseek-ai/DeepSeek-V3.1-Terminus",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -203,14 +210,17 @@
     },
     "Pro/deepseek-ai/DeepSeek-V3.2": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v3.2",
       "cost": {
-        "input": 0.27,
-        "output": 0.42
+        "cache_read": 0.05977899,
+        "input": 0.59778991,
+        "output": 0.89668487
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek",
       "id": "Pro/deepseek-ai/DeepSeek-V3.2",
-      "last_updated": "2025-12-03",
+      "knowledge": "2024-07",
+      "last_updated": "2025-12-01",
       "limit": {
         "context": 164000,
         "output": 164000
@@ -224,31 +234,33 @@
         ]
       },
       "name": "Pro/deepseek-ai/DeepSeek-V3.2",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
-      "release_date": "2025-12-03",
+      "release_date": "2025-12-01",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Pro/moonshotai/Kimi-K2.5": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.5",
       "cost": {
         "cache_read": 0.07,
         "input": 0.45,
         "output": 2.25
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
-      "family": "kimi",
+      "family": "kimi-k2",
       "id": "Pro/moonshotai/Kimi-K2.5",
       "interleaved": {
         "field": "reasoning_content"
       },
+      "knowledge": "2025-01",
       "last_updated": "2026-01-27",
       "limit": {
         "context": 262000,
@@ -268,24 +280,27 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-01-27",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Pro/moonshotai/Kimi-K2.6": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.6",
       "cost": {
-        "cache_read": 0.16,
-        "input": 0.95,
-        "output": 4
+        "cache_read": 0.16439223,
+        "input": 0.97140861,
+        "output": 4.0350819
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
-      "family": "kimi",
+      "family": "kimi-k2",
       "id": "Pro/moonshotai/Kimi-K2.6",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-04-21",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-20",
       "limit": {
         "context": 262000,
         "output": 262000
@@ -303,13 +318,14 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-04-21",
+      "release_date": "2026-04-20",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Pro/zai-org/GLM-5": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5",
       "cost": {
         "input": 1,
         "output": 3.2
@@ -342,17 +358,31 @@
         }
       ],
       "release_date": "2026-02-12",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Pro/zai-org/GLM-5.1": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.1",
       "cost": {
-        "cache_read": 0.26,
+        "cache_read": 0.19428172,
         "cache_write": 0,
-        "input": 1.4,
-        "output": 4.4
+        "input": 0.89668487,
+        "output": 3.58673947,
+        "tiers": [
+          {
+            "cache_read": 0.29889496,
+            "cache_write": 0,
+            "input": 1.19557982,
+            "output": 4.18452938,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -360,7 +390,7 @@
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-04-08",
+      "last_updated": "2026-04-07",
       "limit": {
         "context": 205000,
         "output": 205000
@@ -377,7 +407,7 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-04-08",
+      "release_date": "2026-04-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -385,8 +415,8 @@
     "Qwen/Qwen2.5-72B-Instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.59,
-        "output": 0.59
+        "input": 0.61721808,
+        "output": 0.61721808
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -405,7 +435,7 @@
         ]
       },
       "name": "Qwen/Qwen2.5-72B-Instruct",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
       "release_date": "2024-09-18",
       "structured_output": true,
@@ -414,14 +444,15 @@
     },
     "Qwen/Qwen2.5-7B-Instruct": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen2.5-7b-instruct",
       "cost": {
-        "input": 0.05,
-        "output": 0.05
+        "input": 0,
+        "output": 0
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "Qwen/Qwen2.5-7B-Instruct",
-      "last_updated": "2025-11-25",
+      "last_updated": "2024-09-19",
       "limit": {
         "context": 33000,
         "output": 4000
@@ -435,9 +466,9 @@
         ]
       },
       "name": "Qwen/Qwen2.5-7B-Instruct",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-09-18",
+      "release_date": "2024-09-19",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -445,8 +476,8 @@
     "Qwen/Qwen3-14B": {
       "attachment": false,
       "cost": {
-        "input": 0.07,
-        "output": 0.28
+        "input": 0.07472374,
+        "output": 0.29889496
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -465,7 +496,7 @@
         ]
       },
       "name": "Qwen/Qwen3-14B",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -484,6 +515,7 @@
     },
     "Qwen/Qwen3-235B-A22B-Thinking-2507": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-235b-a22b-thinking-2507",
       "cost": {
         "input": 0.13,
         "output": 0.6
@@ -491,7 +523,7 @@
       "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
       "family": "qwen",
       "id": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-      "last_updated": "2025-11-25",
+      "last_updated": "2025-07-25",
       "limit": {
         "context": 262000,
         "output": 262000
@@ -505,7 +537,7 @@
         ]
       },
       "name": "Qwen/Qwen3-235B-A22B-Thinking-2507",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -514,21 +546,23 @@
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2025-07-28",
+      "release_date": "2025-07-25",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3-30B-A3B-Instruct-2507": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-30b-a3b-instruct-2507",
       "cost": {
-        "input": 0.09,
-        "output": 0.3
+        "input": 0.10461323,
+        "output": 0.41845294
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
-      "last_updated": "2025-11-25",
+      "last_updated": "2025-07-28",
       "limit": {
         "context": 262000,
         "output": 262000
@@ -542,23 +576,25 @@
         ]
       },
       "name": "Qwen/Qwen3-30B-A3B-Instruct-2507",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-30",
+      "release_date": "2025-07-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3-32B": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-32b",
       "cost": {
-        "input": 0.14,
-        "output": 0.57
+        "input": 0.14944748,
+        "output": 0.59778991
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "Qwen/Qwen3-32B",
-      "last_updated": "2025-11-25",
+      "knowledge": "2025-04",
+      "last_updated": "2025-04-28",
       "limit": {
         "context": 131000,
         "output": 131000
@@ -572,7 +608,7 @@
         ]
       },
       "name": "Qwen/Qwen3-32B",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -584,21 +620,22 @@
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2025-04-30",
+      "release_date": "2025-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3-8B": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-8b",
       "cost": {
-        "input": 0.06,
-        "output": 0.06
+        "input": 0,
+        "output": 0
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "Qwen/Qwen3-8B",
-      "last_updated": "2025-11-25",
+      "last_updated": "2025-04-29",
       "limit": {
         "context": 131000,
         "output": 131000
@@ -612,7 +649,7 @@
         ]
       },
       "name": "Qwen/Qwen3-8B",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -624,21 +661,23 @@
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2025-04-30",
+      "release_date": "2025-04-29",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3-Coder-30B-A3B-Instruct": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-coder-30b-a3b-instruct",
       "cost": {
-        "input": 0.07,
-        "output": 0.28
+        "input": 0.10461323,
+        "output": 0.41845294
       },
       "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
       "id": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
-      "last_updated": "2025-11-25",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-31",
       "limit": {
         "context": 262000,
         "output": 262000
@@ -652,15 +691,16 @@
         ]
       },
       "name": "Qwen/Qwen3-Coder-30B-A3B-Instruct",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-08-01",
+      "release_date": "2025-07-31",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3-Coder-480B-A35B-Instruct": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-coder-480b-a35b-instruct",
       "cost": {
         "input": 0.25,
         "output": 1
@@ -668,7 +708,8 @@
       "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
       "id": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
-      "last_updated": "2025-11-25",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-22",
       "limit": {
         "context": 262000,
         "output": 262000
@@ -682,23 +723,25 @@
         ]
       },
       "name": "Qwen/Qwen3-Coder-480B-A35B-Instruct",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-31",
+      "release_date": "2025-07-22",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3-VL-30B-A3B-Instruct": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3-vl-30b-a3b-instruct",
       "cost": {
-        "input": 0.29,
-        "output": 1
+        "input": 0.10461323,
+        "output": 0.41845294
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "Qwen/Qwen3-VL-30B-A3B-Instruct",
-      "last_updated": "2025-11-25",
+      "last_updated": "2025-10-04",
       "limit": {
         "context": 262000,
         "output": 262000
@@ -706,16 +749,17 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
       "name": "Qwen/Qwen3-VL-30B-A3B-Instruct",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-10-05",
+      "release_date": "2025-10-04",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -723,8 +767,8 @@
     "Qwen/Qwen3-VL-30B-A3B-Thinking": {
       "attachment": true,
       "cost": {
-        "input": 0.29,
-        "output": 1
+        "input": 0.10461323,
+        "output": 0.41845294
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -737,16 +781,23 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
       "name": "Qwen/Qwen3-VL-30B-A3B-Thinking",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-10-11",
       "structured_output": true,
       "temperature": true,
@@ -755,8 +806,8 @@
     "Qwen/Qwen3-VL-32B-Instruct": {
       "attachment": true,
       "cost": {
-        "input": 0.2,
-        "output": 0.6
+        "input": 0.14944748,
+        "output": 0.59778991
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -769,14 +820,15 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
       "name": "Qwen/Qwen3-VL-32B-Instruct",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
       "release_date": "2025-10-21",
       "structured_output": true,
@@ -786,8 +838,8 @@
     "Qwen/Qwen3-VL-32B-Thinking": {
       "attachment": true,
       "cost": {
-        "input": 0.2,
-        "output": 1.5
+        "input": 0.14944748,
+        "output": 1.49447478
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -800,16 +852,23 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
       "name": "Qwen/Qwen3-VL-32B-Thinking",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
+        }
+      ],
       "release_date": "2025-10-21",
       "structured_output": true,
       "temperature": true,
@@ -818,8 +877,8 @@
     "Qwen/Qwen3-VL-8B-Instruct": {
       "attachment": true,
       "cost": {
-        "input": 0.18,
-        "output": 0.68
+        "input": 0.07472374,
+        "output": 0.29889496
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -832,14 +891,15 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
       "name": "Qwen/Qwen3-VL-8B-Instruct",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
       "release_date": "2025-10-15",
       "structured_output": true,
@@ -847,16 +907,27 @@
       "tool_call": true
     },
     "Qwen/Qwen3.5-122B-A10B": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-122b-a10b",
       "cost": {
-        "input": 0.29,
-        "output": 2.32
+        "input": 0.11955798,
+        "output": 0.95646386,
+        "tiers": [
+          {
+            "input": 0.29889496,
+            "output": 2.39115964,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "Qwen/Qwen3.5-122B-A10B",
       "knowledge": "2025-04",
-      "last_updated": "2026-02-26",
+      "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -877,23 +948,39 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-02-26",
+      "release_date": "2026-02-23",
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3.5-27B": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-27b",
       "cost": {
-        "input": 0.26,
-        "output": 2.09
+        "input": 0.08966849,
+        "output": 0.71734789,
+        "tiers": [
+          {
+            "input": 0.26900546,
+            "output": 2.15204368,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "Qwen/Qwen3.5-27B",
       "knowledge": "2025-04",
-      "last_updated": "2026-02-25",
+      "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -914,23 +1001,39 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-02-25",
+      "release_date": "2026-02-23",
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3.5-35B-A3B": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-35b-a3b",
       "cost": {
-        "input": 0.23,
-        "output": 1.86
+        "input": 0.05977899,
+        "output": 0.47823193,
+        "tiers": [
+          {
+            "input": 0.23911596,
+            "output": 1.91292771,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "Qwen/Qwen3.5-35B-A3B",
       "knowledge": "2025-04",
-      "last_updated": "2026-02-25",
+      "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -951,14 +1054,20 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-02-25",
+      "release_date": "2026-02-23",
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3.5-397B-A17B": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
       "cost": {
         "input": 0.29,
         "output": 1.74
@@ -967,7 +1076,7 @@
       "family": "qwen",
       "id": "Qwen/Qwen3.5-397B-A17B",
       "knowledge": "2025-04",
-      "last_updated": "2026-02-16",
+      "last_updated": "2026-02-15",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -988,14 +1097,21 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-02-16",
+      "release_date": "2026-02-15",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3.5-4B": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-4b",
       "cost": {
         "input": 0,
         "output": 0
@@ -1004,7 +1120,7 @@
       "family": "qwen",
       "id": "Qwen/Qwen3.5-4B",
       "knowledge": "2025-04",
-      "last_updated": "2026-03-03",
+      "last_updated": "2026-03-02",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -1025,23 +1141,39 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-03-03",
+      "release_date": "2026-03-02",
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3.5-9B": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-9b",
       "cost": {
-        "input": 0.22,
-        "output": 1.74
+        "input": 0.07472374,
+        "output": 0.59778991,
+        "tiers": [
+          {
+            "input": 0.22417122,
+            "output": 1.79336973,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "Qwen/Qwen3.5-9B",
       "knowledge": "2025-04",
-      "last_updated": "2026-03-03",
+      "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
         "output": 65536
@@ -1062,17 +1194,23 @@
       "reasoning_options": [
         {
           "type": "toggle"
+        },
+        {
+          "max": 32768,
+          "min": 128,
+          "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-03-03",
+      "release_date": "2026-02-23",
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3.6-35B-A3B": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
       "cost": {
-        "input": 0.23,
-        "output": 1.86
+        "input": 0.26900546,
+        "output": 1.61403276
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -1116,7 +1254,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -1131,14 +1270,16 @@
     },
     "deepseek-ai/DeepSeek-R1": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-r1-0528",
       "cost": {
-        "input": 0.5,
-        "output": 2.18
+        "cache_read": 0.05977899,
+        "input": 0.59778991,
+        "output": 2.39115964
       },
       "description": "DeepSeek reasoning model for multi-step analysis, math, coding, and tools",
       "family": "deepseek-thinking",
       "id": "deepseek-ai/DeepSeek-R1",
-      "last_updated": "2025-11-25",
+      "last_updated": "2025-05-28",
       "limit": {
         "context": 164000,
         "output": 164000
@@ -1152,7 +1293,7 @@
         ]
       },
       "name": "deepseek-ai/DeepSeek-R1",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -1168,14 +1309,16 @@
     },
     "deepseek-ai/DeepSeek-V3": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v3-0324",
       "cost": {
-        "input": 0.25,
-        "output": 1
+        "cache_read": 0.0298895,
+        "input": 0.29889496,
+        "output": 1.19557982
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek-ai/DeepSeek-V3",
-      "last_updated": "2025-11-25",
+      "last_updated": "2025-03-24",
       "limit": {
         "context": 164000,
         "output": 164000
@@ -1189,9 +1332,9 @@
         ]
       },
       "name": "deepseek-ai/DeepSeek-V3",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2024-12-26",
+      "release_date": "2025-03-24",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1199,8 +1342,9 @@
     "deepseek-ai/DeepSeek-V3.1-Terminus": {
       "attachment": false,
       "cost": {
-        "input": 0.27,
-        "output": 1
+        "cache_read": 0.05977899,
+        "input": 0.59778991,
+        "output": 1.79336973
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -1219,7 +1363,7 @@
         ]
       },
       "name": "deepseek-ai/DeepSeek-V3.1-Terminus",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -1233,14 +1377,17 @@
     },
     "deepseek-ai/DeepSeek-V3.2": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v3.2",
       "cost": {
-        "input": 0.27,
-        "output": 0.42
+        "cache_read": 0.05977899,
+        "input": 0.59778991,
+        "output": 0.89668487
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek-ai/DeepSeek-V3.2",
-      "last_updated": "2025-12-03",
+      "knowledge": "2024-07",
+      "last_updated": "2025-12-01",
       "limit": {
         "context": 164000,
         "output": 164000
@@ -1254,14 +1401,14 @@
         ]
       },
       "name": "deepseek-ai/DeepSeek-V3.2",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "toggle"
         }
       ],
-      "release_date": "2025-12-03",
+      "release_date": "2025-12-01",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1270,9 +1417,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash",
       "cost": {
-        "cache_read": 0.003,
-        "input": 0.14,
-        "output": 0.28
+        "cache_read": 0.04483424,
+        "input": 0.44834243,
+        "output": 1.3450273
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -1299,9 +1446,11 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "max": 32768,
-          "min": 128,
-          "type": "budget_tokens"
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
         }
       ],
       "release_date": "2026-04-24",
@@ -1311,14 +1460,16 @@
     },
     "deepseek-ai/DeepSeek-V4-Pro": {
       "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.145,
-        "input": 1.74,
-        "output": 3.48
+        "cache_read": 0.14944748,
+        "input": 1.79336973,
+        "output": 3.58673947
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek-thinking",
       "id": "deepseek-ai/DeepSeek-V4-Pro",
+      "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
         "context": 1049000,
@@ -1335,7 +1486,15 @@
       "name": "deepseek-ai/DeepSeek-V4-Pro",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-04-24",
       "structured_output": false,
       "temperature": true,
@@ -1344,8 +1503,8 @@
     "inclusionAI/Ling-flash-2.0": {
       "attachment": false,
       "cost": {
-        "input": 0.14,
-        "output": 0.57
+        "input": 0.14944748,
+        "output": 0.59778991
       },
       "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "ling",
@@ -1364,7 +1523,7 @@
         ]
       },
       "name": "inclusionAI/Ling-flash-2.0",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
       "release_date": "2025-09-18",
       "structured_output": true,
@@ -1373,14 +1532,16 @@
     },
     "stepfun-ai/Step-3.5-Flash": {
       "attachment": false,
+      "canonical_model_id": "stepfun/step-3.5-flash",
       "cost": {
-        "input": 0.1,
-        "output": 0.3
+        "input": 0.10461323,
+        "output": 0.3138397
       },
       "description": "StepFun flash model for efficient multimodal reasoning, coding, and tool use",
       "family": "step",
       "id": "stepfun-ai/Step-3.5-Flash",
-      "last_updated": "2026-02-11",
+      "knowledge": "2025-01",
+      "last_updated": "2026-02-13",
       "limit": {
         "context": 262000,
         "output": 262000
@@ -1394,10 +1555,10 @@
         ]
       },
       "name": "stepfun-ai/Step-3.5-Flash",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-02-11",
+      "release_date": "2026-01-29",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1405,8 +1566,8 @@
     "tencent/Hunyuan-A13B-Instruct": {
       "attachment": false,
       "cost": {
-        "input": 0.14,
-        "output": 0.57
+        "input": 0.14944748,
+        "output": 0.59778991
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "hunyuan",
@@ -1425,7 +1586,7 @@
         ]
       },
       "name": "tencent/Hunyuan-A13B-Instruct",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -1435,18 +1596,20 @@
       "release_date": "2025-06-30",
       "structured_output": true,
       "temperature": true,
-      "tool_call": true
+      "tool_call": false
     },
     "zai-org/GLM-4.5-Air": {
       "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.5-air",
       "cost": {
-        "input": 0.14,
-        "output": 0.86
+        "input": 0.14944748,
+        "output": 0.89668487
       },
       "description": "Efficient GLM model for fast reasoning, coding, and agent workflows",
       "family": "glm-air",
       "id": "zai-org/GLM-4.5-Air",
-      "last_updated": "2025-11-25",
+      "knowledge": "2025-04",
+      "last_updated": "2025-07-28",
       "limit": {
         "context": 131000,
         "output": 131000
@@ -1460,7 +1623,7 @@
         ]
       },
       "name": "zai-org/GLM-4.5-Air",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-28",
       "structured_output": true,
@@ -1471,10 +1634,10 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
       "cost": {
-        "cache_read": 0.26,
+        "cache_read": 0.29889496,
         "cache_write": 0,
-        "input": 1.4,
-        "output": 4.4
+        "input": 1.19557982,
+        "output": 4.18452938
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",

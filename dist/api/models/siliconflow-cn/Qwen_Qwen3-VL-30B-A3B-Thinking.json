@@ -1,8 +1,8 @@
 {
   "attachment": true,
   "cost": {
-    "input": 0.29,
-    "output": 1
+    "input": 0.10461323,
+    "output": 0.41845294
   },
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "family": "qwen",
@@ -15,16 +15,23 @@
   "modalities": {
     "input": [
       "text",
-      "image"
+      "image",
+      "video"
     ],
     "output": [
       "text"
     ]
   },
   "name": "Qwen/Qwen3-VL-30B-A3B-Thinking",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "max": 32768,
+      "min": 128,
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2025-10-11",
   "structured_output": true,
   "temperature": true,

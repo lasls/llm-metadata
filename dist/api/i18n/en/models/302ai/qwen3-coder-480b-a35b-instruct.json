@@ -1,13 +1,33 @@
 {
   "attachment": false,
+  "canonical_model_id": "alibaba/qwen3-coder-480b-a35b-instruct",
   "cost": {
     "input": 0.86,
-    "output": 3.43
+    "output": 3.43,
+    "tiers": [
+      {
+        "input": 1.29,
+        "output": 5.15,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "input": 2.15,
+        "output": 8.58,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
   },
-  "description": "Coding model for repository understanding, refactors, and agentic engineering tasks",
+  "description": "Open Qwen coding heavyweight for repository reasoning and agentic engineering",
+  "family": "qwen",
   "id": "qwen3-coder-480b-a35b-instruct",
   "knowledge": "2025-04",
-  "last_updated": "2025-07-23",
+  "last_updated": "2025-07-22",
   "limit": {
     "context": 262144,
     "output": 65536
@@ -21,9 +41,9 @@
     ]
   },
   "name": "qwen3-coder-480b-a35b-instruct",
-  "open_weights": false,
+  "open_weights": true,
   "reasoning": false,
-  "release_date": "2025-07-23",
+  "release_date": "2025-07-22",
   "temperature": true,
   "tool_call": true
 }

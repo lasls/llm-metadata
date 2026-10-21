@@ -709,7 +709,7 @@
       "family": "gpt-oss",
       "id": "cerebras/gpt-oss-120b",
       "knowledge": "2024-06",
-      "last_updated": "2026-06-10",
+      "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
         "output": 40960
@@ -750,7 +750,7 @@
       "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
       "family": "qwen",
       "id": "cerebras/qwen-3.8-27b",
-      "last_updated": "2026-09-03",
+      "last_updated": "2026-08-14",
       "limit": {
         "context": 131072,
         "output": 40960
@@ -1610,7 +1610,7 @@
       "family": "gpt-oss",
       "id": "groq/openai/gpt-oss-120b",
       "knowledge": "2024-06",
-      "last_updated": "2025-10-21",
+      "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
         "output": 65536
@@ -1653,7 +1653,7 @@
       "family": "gpt-oss",
       "id": "groq/openai/gpt-oss-20b",
       "knowledge": "2024-06",
-      "last_updated": "2025-09-25",
+      "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
         "output": 65536
@@ -1688,6 +1688,7 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-27b",
       "cost": {
+        "cache_read": 0.4,
         "input": 0.8,
         "output": 4
       },
@@ -1757,6 +1758,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-03-18",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1790,6 +1792,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-03-18",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1882,6 +1885,7 @@
       "attachment": true,
       "canonical_model_id": "mistral/mistral-large-2512",
       "cost": {
+        "cache_read": 0.05,
         "input": 0.5,
         "output": 1.5
       },
@@ -1907,6 +1911,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-12-02",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1914,6 +1919,7 @@
       "attachment": true,
       "canonical_model_id": "mistral/mistral-large-latest",
       "cost": {
+        "cache_read": 0.05,
         "input": 0.5,
         "output": 1.5
       },
@@ -1939,6 +1945,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-11-01",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1946,6 +1953,7 @@
       "attachment": true,
       "canonical_model_id": "mistral/mistral-medium-2604",
       "cost": {
+        "cache_read": 0.15,
         "input": 1.5,
         "output": 7.5
       },
@@ -1987,6 +1995,7 @@
       "attachment": true,
       "canonical_model_id": "mistral/mistral-medium-latest",
       "cost": {
+        "cache_read": 0.15,
         "input": 1.5,
         "output": 7.5
       },
@@ -2028,6 +2037,7 @@
       "attachment": true,
       "canonical_model_id": "mistral/mistral-small-2603",
       "cost": {
+        "cache_read": 0.015,
         "input": 0.15,
         "output": 0.6
       },
@@ -2062,6 +2072,7 @@
         }
       ],
       "release_date": "2026-03-16",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -2069,6 +2080,7 @@
       "attachment": true,
       "canonical_model_id": "mistral/mistral-small-latest",
       "cost": {
+        "cache_read": 0.015,
         "input": 0.15,
         "output": 0.6
       },
@@ -2103,6 +2115,7 @@
         }
       ],
       "release_date": "2026-03-16",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -2111,7 +2124,7 @@
       "canonical_model_id": "mistral/voxtral-small-latest",
       "cost": {
         "input": 0.1,
-        "output": 0.3
+        "output": 0.4
       },
       "description": "Instruct model with native audio input for speech understanding and tool use",
       "family": "voxtral",
@@ -2134,6 +2147,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-15",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -2175,7 +2189,7 @@
         }
       ],
       "release_date": "2026-06-13",
-      "status": "beta",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -2259,7 +2273,7 @@
       ],
       "release_date": "2026-04-20",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "moonshot/kimi-k2.7-code": {
@@ -2339,6 +2353,7 @@
       "canonical_model_id": "moonshotai/kimi-k3",
       "cost": {
         "cache_read": 0.3,
+        "cache_write": 3,
         "input": 3,
         "output": 15
       },
@@ -2534,7 +2549,8 @@
             "none",
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
@@ -2594,7 +2610,8 @@
           "values": [
             "low",
             "medium",
-            "high"
+            "high",
+            "xhigh"
           ]
         }
       ],
@@ -3013,6 +3030,7 @@
       "attachment": true,
       "canonical_model_id": "zhipuai/glm-4.5v",
       "cost": {
+        "cache_read": 0.11,
         "input": 0.6,
         "output": 1.8
       },
@@ -3089,6 +3107,7 @@
       "attachment": true,
       "canonical_model_id": "zhipuai/glm-4.6v",
       "cost": {
+        "cache_read": 0.05,
         "input": 0.3,
         "output": 0.9
       },
@@ -3421,6 +3440,7 @@
         {
           "type": "effort",
           "values": [
+            "none",
             "high",
             "max"
           ]

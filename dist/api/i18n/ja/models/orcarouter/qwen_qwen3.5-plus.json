@@ -2,9 +2,22 @@
   "attachment": true,
   "canonical_model_id": "alibaba/qwen3.5-plus",
   "cost": {
-    "input": 0.115,
-    "output": 0.688,
-    "reasoning": 2.4
+    "context_over_200k": {
+      "input": 0.5,
+      "output": 3
+    },
+    "input": 0.4,
+    "output": 2.4,
+    "tiers": [
+      {
+        "input": 0.5,
+        "output": 3,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "family": "qwen",

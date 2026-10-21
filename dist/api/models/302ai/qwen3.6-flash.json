@@ -2,8 +2,28 @@
   "attachment": true,
   "canonical_model_id": "alibaba/qwen3.6-flash",
   "cost": {
-    "input": 0.188,
-    "output": 1.133
+    "cache_read": 0.0171,
+    "cache_write": 0.214,
+    "context_over_200k": {
+      "cache_read": 0.0686,
+      "cache_write": 0.857,
+      "input": 0.76,
+      "output": 4.52
+    },
+    "input": 0.19,
+    "output": 1.13,
+    "tiers": [
+      {
+        "cache_read": 0.0686,
+        "cache_write": 0.857,
+        "input": 0.76,
+        "output": 4.52,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
   "family": "qwen3.6",

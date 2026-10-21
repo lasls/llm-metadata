@@ -2,8 +2,22 @@
   "attachment": true,
   "canonical_model_id": "alibaba/qwen3.6-plus",
   "cost": {
+    "context_over_200k": {
+      "input": 1.2,
+      "output": 7.2
+    },
     "input": 0.3,
-    "output": 1.8
+    "output": 1.8,
+    "tiers": [
+      {
+        "input": 1.2,
+        "output": 7.2,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Earlier Qwen multimodal workhorse for million-token agent and document tasks",
   "family": "qwen",

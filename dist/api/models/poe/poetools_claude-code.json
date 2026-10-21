@@ -1,5 +1,5 @@
 {
-  "attachment": true,
+  "attachment": false,
   "description": "Claude model for careful reasoning, writing, coding, and tool use",
   "id": "poetools/claude-code",
   "last_updated": "2025-11-27",
@@ -18,7 +18,22 @@
   "name": "claude-code",
   "open_weights": false,
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    },
+    {
+      "type": "budget_tokens"
+    }
+  ],
   "release_date": "2025-11-27",
   "temperature": false,
   "tool_call": true

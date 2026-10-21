@@ -3,8 +3,24 @@
   "canonical_model_id": "alibaba/qwen3.7-plus",
   "cost": {
     "cache_read": 0.071,
+    "context_over_200k": {
+      "cache_read": 0.21,
+      "input": 1.06,
+      "output": 4.25
+    },
     "input": 0.35,
-    "output": 1.42
+    "output": 1.42,
+    "tiers": [
+      {
+        "cache_read": 0.21,
+        "input": 1.06,
+        "output": 4.25,
+        "tier": {
+          "size": 256000,
+          "type": "context"
+        }
+      }
+    ]
   },
   "description": "Multimodal Qwen workhorse for long-context agents, visual inputs, and coding",
   "family": "qwen",

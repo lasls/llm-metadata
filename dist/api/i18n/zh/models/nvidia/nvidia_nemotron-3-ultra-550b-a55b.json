@@ -2,9 +2,8 @@
   "attachment": false,
   "canonical_model_id": "nvidia/nemotron-3-ultra-550b-a55b",
   "cost": {
-    "cache_read": 0.15,
-    "input": 0.5,
-    "output": 2.5
+    "input": 0,
+    "output": 0
   },
   "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
   "family": "nemotron",
@@ -28,7 +27,17 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "type": "toggle"
+      "type": "effort",
+      "values": [
+        "none",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "max": 32768,
+      "min": -1,
+      "type": "budget_tokens"
     }
   ],
   "release_date": "2026-06-04",

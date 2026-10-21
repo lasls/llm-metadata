@@ -1,6 +1,33 @@
 {
   "attachment": true,
-  "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+  "canonical_model_id": "bytedance-seed/seed-2.0-lite",
+  "cost": {
+    "cache_read": 0.0173913,
+    "input": 0.08695652,
+    "output": 0.52173913,
+    "tiers": [
+      {
+        "cache_read": 0.02608696,
+        "input": 0.13043478,
+        "output": 0.7826087,
+        "tier": {
+          "size": 32000,
+          "type": "context"
+        }
+      },
+      {
+        "cache_read": 0.05217391,
+        "input": 0.26086957,
+        "output": 1.56521739,
+        "tier": {
+          "size": 128000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "Cost-efficient ByteDance Seed 2.0 model for production chat, analysis, and structured generation",
+  "family": "seed",
   "id": "doubao-seed-2.0-lite",
   "last_updated": "2026-02-14",
   "limit": {
@@ -26,7 +53,7 @@
     }
   ],
   "release_date": "2026-02-14",
-  "structured_output": false,
+  "structured_output": true,
   "temperature": true,
   "tool_call": true
 }
