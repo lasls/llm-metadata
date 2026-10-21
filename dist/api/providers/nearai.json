@@ -9,14 +9,15 @@
   "models": {
     "Qwen/Qwen3-Embedding-0.6B": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-embedding-0.6b",
       "cost": {
         "input": 0.01,
         "output": 0.01
       },
       "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
-      "family": "text-embedding",
+      "family": "qwen",
       "id": "Qwen/Qwen3-Embedding-0.6B",
-      "last_updated": "2025-06-03",
+      "last_updated": "2025-06-05",
       "limit": {
         "context": 32768,
         "output": 1024
@@ -32,12 +33,14 @@
       "name": "Qwen3 Embedding 0.6B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-06-03",
+      "release_date": "2025-06-05",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "embedding"
     },
     "Qwen/Qwen3-Reranker-0.6B": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-reranker-0.6b",
       "cost": {
         "input": 0.01,
         "output": 0.01
@@ -45,7 +48,7 @@
       "description": "Reranking model for improving retrieval quality in search and recommendation systems",
       "family": "qwen",
       "id": "Qwen/Qwen3-Reranker-0.6B",
-      "last_updated": "2025-06-03",
+      "last_updated": "2025-06-05",
       "limit": {
         "context": 40960,
         "output": 1024
@@ -61,12 +64,14 @@
       "name": "Qwen3 Reranker 0.6B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-06-03",
+      "release_date": "2025-06-05",
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "reranking"
     },
     "Qwen/Qwen3-VL-30B-A3B-Instruct": {
       "attachment": true,
+      "canonical_model_id": "alibaba/qwen3-vl-30b-a3b-instruct",
       "cost": {
         "cache_read": 0.03,
         "input": 0.15,
@@ -75,7 +80,7 @@
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
       "id": "Qwen/Qwen3-VL-30B-A3B-Instruct",
-      "last_updated": "2025-09-23",
+      "last_updated": "2025-10-04",
       "limit": {
         "context": 16384,
         "output": 8192
@@ -92,13 +97,13 @@
       "name": "Qwen3-VL 30B-A3B Instruct",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-09-23",
+      "release_date": "2025-10-04",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3.6-35B-A3B-FP8": {
-      "attachment": true,
+      "attachment": false,
       "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
       "cost": {
         "cache_read": 0.056,
@@ -716,22 +721,20 @@
       "tool_call": true
     },
     "black-forest-labs/FLUX.2-klein-4B": {
-      "attachment": false,
-      "cost": {
-        "input": 1,
-        "output": 1
-      },
+      "attachment": true,
+      "canonical_model_id": "black-forest-labs/flux-2-klein-4b",
       "description": "Image model for prompt-driven generation, editing, and visual design workflows",
       "family": "flux",
       "id": "black-forest-labs/FLUX.2-klein-4B",
-      "last_updated": "2026-01-14",
+      "last_updated": "2026-01-15",
       "limit": {
-        "context": 128000,
-        "output": 128000
+        "context": 0,
+        "output": 0
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "image"
@@ -740,9 +743,10 @@
       "name": "FLUX.2 Klein 4B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-01-14",
-      "temperature": true,
-      "tool_call": false
+      "release_date": "2026-01-15",
+      "temperature": false,
+      "tool_call": false,
+      "type": "image"
     },
     "deepseek/deepseek-v3.2": {
       "attachment": false,
@@ -2141,7 +2145,8 @@
       "tool_call": true
     },
     "openai/whisper-large-v3": {
-      "attachment": false,
+      "attachment": true,
+      "canonical_model_id": "openai/whisper-large-v3",
       "cost": {
         "input": 0.01,
         "output": 0.01
@@ -2166,8 +2171,9 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2023-11-06",
-      "temperature": false,
-      "tool_call": false
+      "temperature": true,
+      "tool_call": false,
+      "type": "transcription"
     },
     "qwen/qwen3.5-397b-a17b": {
       "attachment": true,

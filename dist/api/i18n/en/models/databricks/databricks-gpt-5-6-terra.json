@@ -2,19 +2,22 @@
   "attachment": true,
   "canonical_model_id": "openai/gpt-5.6-terra",
   "cost": {
-    "cache_read": 0.25,
+    "cache_read": 0.2,
+    "cache_write": 2.5,
     "context_over_200k": {
-      "cache_read": 0.5,
-      "input": 5,
-      "output": 22.5
+      "cache_read": 0.4,
+      "cache_write": 5,
+      "input": 4,
+      "output": 18
     },
-    "input": 2.5,
-    "output": 15,
+    "input": 2,
+    "output": 12,
     "tiers": [
       {
-        "cache_read": 0.5,
-        "input": 5,
-        "output": 22.5,
+        "cache_read": 0.4,
+        "cache_write": 5,
+        "input": 4,
+        "output": 18,
         "tier": {
           "size": 272000,
           "type": "context"
@@ -23,6 +26,23 @@
     ]
   },
   "description": "Balanced GPT-5.6 model for capable, cost-efficient everyday work",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.4,
+          "cache_write": 5,
+          "input": 4,
+          "output": 24
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-terra",
   "id": "databricks-gpt-5-6-terra",
   "knowledge": "2026-02-16",

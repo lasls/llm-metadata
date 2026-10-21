@@ -8,6 +8,23 @@
     "output": 1.5
   },
   "description": "Low-latency Gemini model for high-volume multimodal and agent workloads",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.045,
+          "input": 0.45,
+          "input_audio": 0.9,
+          "output": 2.7
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "gemini-flash-lite",
   "id": "databricks-gemini-3-1-flash-lite",
   "knowledge": "2025-01",
@@ -35,6 +52,7 @@
     {
       "type": "effort",
       "values": [
+        "minimal",
         "low",
         "medium",
         "high"

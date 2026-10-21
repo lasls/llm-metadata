@@ -11,9 +11,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.0028,
-        "input": 0.14,
-        "output": 0.28
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -58,9 +58,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4-flash-vision-exp",
       "cost": {
-        "cache_read": 0.0028,
-        "input": 0.14,
-        "output": 0.28
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
       "family": "deepseek-flash",
@@ -97,23 +97,24 @@
         }
       ],
       "release_date": "2026-08-21",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "DeepSeek-V4.1-Flash": {
       "attachment": true,
-      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
       "cost": {
-        "cache_read": 0.0028,
-        "input": 0.14,
-        "output": 0.28
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
-      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
       "family": "deepseek-flash",
       "id": "DeepSeek-V4.1-Flash",
       "knowledge": "2025-05",
-      "last_updated": "2026-09-10",
+      "last_updated": "2026-10-17",
       "limit": {
         "context": 1048576,
         "output": 384000
@@ -144,7 +145,184 @@
           ]
         }
       ],
-      "release_date": "2026-09-10",
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "GLM-5.3-Flash": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "GLM-5.3-Flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Gemma-4-31B-IT": {
+      "attachment": true,
+      "canonical_model_id": "google/gemma-4-31b-it",
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
+      "family": "gemma",
+      "id": "Gemma-4-31B-IT",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "MiMo-V2.6-Flash": {
+      "attachment": true,
+      "canonical_model_id": "xiaomi/mimo-v2.6-flash",
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+      "family": "mimo",
+      "id": "MiMo-V2.6-Flash",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.6-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "MiniCPM-V-4.7-1B": {
+      "attachment": true,
+      "canonical_model_id": "openbmb/minicpm-v-4.7-1b",
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "Compact MiniCPM-V model for single-image, multi-image and video understanding",
+      "id": "MiniCPM-V-4.7-1B",
+      "last_updated": "2026-10-06",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniCPM-V 4.7 1B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-10-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "MiniCPM-V-4.7-35B-A3B": {
+      "attachment": true,
+      "canonical_model_id": "openbmb/minicpm-v-4.7-35b-a3b",
+      "cost": {
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
+      },
+      "description": "First MoE MiniCPM-V model for single-image, multi-image and video understanding",
+      "id": "MiniCPM-V-4.7-35B-A3B",
+      "last_updated": "2026-10-07",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniCPM-V 4.7 35B-A3B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-10-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -153,9 +331,9 @@
       "attachment": false,
       "canonical_model_id": "openbmb/minicpm5-2b",
       "cost": {
-        "cache_read": 0.124,
-        "input": 0.124,
-        "output": 0.7425
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "Dense 2B-class open-source model for on-device and resource-constrained use, with native long-context support, tool calling, and agentic tasks",
       "id": "MiniCPM5-2B",
@@ -181,9 +359,10 @@
       "tool_call": true
     },
     "Qwen3.8-27B": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-27b",
       "cost": {
+        "cache_read": 0,
         "input": 0,
         "output": 0
       },
@@ -193,12 +372,13 @@
       "interleaved": true,
       "last_updated": "2026-08-14",
       "limit": {
-        "context": 131072,
+        "context": 262144,
         "output": 32768
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -225,9 +405,9 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-flash-next",
       "cost": {
-        "cache_read": 0.016,
-        "input": 0.15,
-        "output": 0.47
+        "cache_read": 0,
+        "input": 0,
+        "output": 0
       },
       "description": "Open-weight experimental preview of the Qwen4 architecture: hybrid-attention MoE (125B total, 6B active) with vision encoder for coding, agent tasks, and image and video understanding",
       "family": "qwen",

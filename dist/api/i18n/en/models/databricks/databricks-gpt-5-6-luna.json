@@ -2,19 +2,22 @@
   "attachment": true,
   "canonical_model_id": "openai/gpt-5.6-luna",
   "cost": {
-    "cache_read": 0.1,
+    "cache_read": 0.02,
+    "cache_write": 0.25,
     "context_over_200k": {
-      "cache_read": 0.2,
-      "input": 2,
-      "output": 9
+      "cache_read": 0.04,
+      "cache_write": 0.5,
+      "input": 0.4,
+      "output": 1.8
     },
-    "input": 1,
-    "output": 6,
+    "input": 0.2,
+    "output": 1.2,
     "tiers": [
       {
-        "cache_read": 0.2,
-        "input": 2,
-        "output": 9,
+        "cache_read": 0.04,
+        "cache_write": 0.5,
+        "input": 0.4,
+        "output": 1.8,
         "tier": {
           "size": 272000,
           "type": "context"
@@ -23,13 +26,30 @@
     ]
   },
   "description": "Cost-efficient GPT-5.6 model for fast, high-volume workloads",
+  "experimental": {
+    "modes": {
+      "fast": {
+        "cost": {
+          "cache_read": 0.04,
+          "cache_write": 0.5,
+          "input": 0.4,
+          "output": 2.4
+        },
+        "provider": {
+          "body": {
+            "service_tier": "priority"
+          }
+        }
+      }
+    }
+  },
   "family": "gpt-luna",
   "id": "databricks-gpt-5-6-luna",
   "knowledge": "2026-02-16",
   "last_updated": "2026-07-09",
   "limit": {
-    "context": 400000,
-    "input": 272000,
+    "context": 1050000,
+    "input": 922000,
     "output": 128000
   },
   "modalities": {

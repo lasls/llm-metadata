@@ -11,6 +11,7 @@
       "attachment": false,
       "canonical_model_id": "minimax/MiniMax-M3",
       "cost": {
+        "cache_read": 0.3,
         "input": 0.3,
         "output": 1.2
       },
@@ -40,20 +41,21 @@
     },
     "NousResearch/Hermes-4-405B": {
       "attachment": false,
+      "canonical_model_id": "nousresearch/hermes-4-405b",
       "cost": {
-        "cache_read": 0.1,
-        "cache_write": 1.25,
+        "cache_read": 1,
         "input": 1,
         "output": 3,
         "reasoning": 3
       },
       "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "family": "hermes",
       "id": "NousResearch/Hermes-4-405B",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-11",
-      "last_updated": "2026-02-04",
+      "knowledge": "2024-08-31",
+      "last_updated": "2025-08-26",
       "limit": {
         "context": 131072,
         "input": 120000,
@@ -71,14 +73,16 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-01-30",
+      "release_date": "2025-08-26",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3-235B-A22B-Instruct-2507": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-235b-a22b-instruct-2507",
       "cost": {
+        "cache_read": 0.2,
         "input": 0.2,
         "output": 0.6
       },
@@ -86,7 +90,7 @@
       "family": "qwen",
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
       "knowledge": "2025-07",
-      "last_updated": "2025-10-04",
+      "last_updated": "2025-07-21",
       "limit": {
         "context": 262144,
         "output": 8192
@@ -100,24 +104,25 @@
         ]
       },
       "name": "Qwen3 235B A22B Instruct 2507",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-07-25",
+      "release_date": "2025-07-21",
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3-30B-A3B-Instruct-2507": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-30b-a3b-instruct-2507",
       "cost": {
-        "cache_read": 0.01,
-        "cache_write": 0.125,
+        "cache_read": 0.1,
         "input": 0.1,
         "output": 0.3
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "family": "qwen",
       "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
       "knowledge": "2025-12",
-      "last_updated": "2026-02-04",
+      "last_updated": "2025-07-28",
       "limit": {
         "context": 262144,
         "input": 262144,
@@ -134,22 +139,23 @@
       "name": "Qwen3-30B-A3B-Instruct-2507",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-01-28",
+      "release_date": "2025-07-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3-Embedding-8B": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-embedding-8b",
       "cost": {
         "input": 0.01,
         "output": 0
       },
       "description": "Embedding model for semantic search, retrieval, clustering, and ranking pipelines",
-      "family": "text-embedding",
+      "family": "qwen",
       "id": "Qwen/Qwen3-Embedding-8B",
       "knowledge": "2025-10",
-      "last_updated": "2026-02-04",
+      "last_updated": "2025-06-05",
       "limit": {
         "context": 40960,
         "input": 40960,
@@ -166,23 +172,25 @@
       "name": "Qwen3-Embedding-8B",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-01-10",
+      "release_date": "2025-06-05",
       "structured_output": false,
       "temperature": false,
-      "tool_call": false
+      "tool_call": false,
+      "type": "embedding"
     },
     "Qwen/Qwen3.5-397B-A17B": {
       "attachment": false,
+      "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
       "cost": {
-        "cache_read": 0.06,
-        "cache_write": 0.75,
+        "cache_read": 0.6,
         "input": 0.6,
         "output": 3.6
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "family": "qwen",
       "id": "Qwen/Qwen3.5-397B-A17B",
       "knowledge": "2025-07",
-      "last_updated": "2026-05-07",
+      "last_updated": "2026-02-15",
       "limit": {
         "context": 262144,
         "input": 250000,
@@ -204,20 +212,20 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2025-07-15",
+      "release_date": "2026-02-15",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
     "Qwen/Qwen3.8-27B": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-27b",
       "cost": {
         "cache_read": 0.45,
         "input": 0.45,
         "output": 3
       },
-      "description": "Dense 27B reasoning model for coding, research, and long-horizon agent tasks",
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
       "family": "qwen",
       "id": "Qwen/Qwen3.8-27B",
       "interleaved": {
@@ -230,7 +238,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -306,7 +315,7 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.15,
+        "cache_read": 1.75,
         "input": 1.75,
         "output": 3.5
       },
@@ -445,16 +454,17 @@
     },
     "google/gemma-3-27b-it": {
       "attachment": true,
+      "canonical_model_id": "google/gemma-3-27b-it",
       "cost": {
-        "cache_read": 0.01,
-        "cache_write": 0.125,
+        "cache_read": 0.1,
         "input": 0.1,
         "output": 0.3
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
       "id": "google/gemma-3-27b-it",
-      "knowledge": "2025-10",
-      "last_updated": "2026-02-04",
+      "knowledge": "2024-08",
+      "last_updated": "2025-03-12",
       "limit": {
         "context": 110000,
         "input": 100000,
@@ -472,7 +482,7 @@
       "name": "Gemma-3-27b-it",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-01-20",
+      "release_date": "2025-03-12",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -530,6 +540,7 @@
       "attachment": false,
       "canonical_model_id": "moonshotai/kimi-k2.7-code",
       "cost": {
+        "cache_read": 0.95,
         "input": 0.95,
         "output": 4
       },
@@ -563,7 +574,7 @@
       "tool_call": true
     },
     "moonshotai/Kimi-K3": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3",
       "cost": {
         "cache_read": 3,
@@ -578,12 +589,13 @@
       },
       "last_updated": "2026-07-16",
       "limit": {
-        "context": 1048576,
+        "context": 1024000,
         "output": 8000
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -742,14 +754,15 @@
       "attachment": false,
       "canonical_model_id": "nvidia/nemotron-3-super-120b-a12b",
       "cost": {
+        "cache_read": 0.3,
         "input": 0.3,
         "output": 0.9
       },
       "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
       "family": "nemotron",
       "id": "nvidia/nemotron-3-super-120b-a12b",
-      "knowledge": "2026-02",
-      "last_updated": "2026-03-12",
+      "knowledge": "2025-06",
+      "last_updated": "2026-03-11",
       "limit": {
         "context": 262144,
         "input": 262144,
@@ -774,20 +787,21 @@
     },
     "openai/gpt-oss-120b": {
       "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "cache_read": 0.015,
-        "cache_write": 0.18,
+        "cache_read": 0.15,
         "input": 0.15,
         "output": 0.6,
         "reasoning": 0.6
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
+      "family": "gpt-oss",
       "id": "openai/gpt-oss-120b",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "knowledge": "2025-09",
-      "last_updated": "2026-02-04",
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
         "input": 124000,
@@ -814,7 +828,7 @@
           ]
         }
       ],
-      "release_date": "2026-01-10",
+      "release_date": "2025-08-05",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -872,6 +886,7 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
       "cost": {
+        "cache_read": 1.4,
         "input": 1.4,
         "output": 4.4
       },
@@ -958,7 +973,7 @@
       "tool_call": true
     },
     "zai-org/GLM-5.3-Flash": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "zhipuai/glm-5.3-flash",
       "cost": {
         "cache_read": 0.15,
@@ -978,7 +993,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"

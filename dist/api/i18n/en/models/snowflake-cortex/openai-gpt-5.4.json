@@ -1,23 +1,28 @@
 {
   "attachment": true,
   "canonical_model_id": "openai/gpt-5.4",
-  "description": "Agent-ready GPT for coding and computer-use workflows at a lower cost",
-  "experimental": {
-    "modes": {
-      "fast": {
-        "cost": {
-          "cache_read": 0.5,
-          "input": 5,
-          "output": 30
-        },
-        "provider": {
-          "body": {
-            "service_tier": "priority"
-          }
+  "cost": {
+    "cache_read": 0.25,
+    "context_over_200k": {
+      "cache_read": 0.5,
+      "input": 5,
+      "output": 22.5
+    },
+    "input": 2.5,
+    "output": 15,
+    "tiers": [
+      {
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 22.5,
+        "tier": {
+          "size": 272000,
+          "type": "context"
         }
       }
-    }
+    ]
   },
+  "description": "Agent-ready GPT for coding and computer-use workflows at a lower cost",
   "family": "gpt",
   "id": "openai-gpt-5.4",
   "knowledge": "2025-08-31",
@@ -30,8 +35,7 @@
   "modalities": {
     "input": [
       "text",
-      "image",
-      "pdf"
+      "image"
     ],
     "output": [
       "text"
@@ -53,7 +57,6 @@
     }
   ],
   "release_date": "2026-03-05",
-  "status": "beta",
   "structured_output": true,
   "temperature": true,
   "tool_call": true
