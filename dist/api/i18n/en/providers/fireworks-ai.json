@@ -1262,6 +1262,60 @@
       "temperature": false,
       "tool_call": true
     },
+    "accounts/fireworks/routers/kimi-k3-spot": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3",
+      "cost": {
+        "cache_read": 0.21,
+        "input": 2.1,
+        "output": 10.5
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "accounts/fireworks/routers/kimi-k3-spot",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3 Spot",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "accounts/fireworks/routers/kimi-latest": {
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3",

@@ -67724,6 +67724,52 @@
         "temperature": true,
         "tool_call": true
       },
+      "minimax/m3.1-flash": {
+        "attachment": true,
+        "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
+        "cost": {
+          "cache_read": 0.015,
+          "cache_write": 0.15,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
+        "family": "minimax",
+        "id": "minimax/m3.1-flash",
+        "last_updated": "2026-10-19",
+        "limit": {
+          "context": 1000000,
+          "output": 512000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax-M3.1-Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-19",
+        "temperature": true,
+        "tool_call": true
+      },
       "moonshotai/kimi-k3": {
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k3",
@@ -89626,6 +89672,50 @@
         ],
         "release_date": "2026-09-10",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "deepseek-v4.1-flash-1017": {
+        "attachment": true,
+        "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+        "cost": {
+          "cache_read": 0.006,
+          "input": 0.3,
+          "output": 1.2
+        },
+        "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+        "family": "deepseek-flash",
+        "id": "deepseek-v4.1-flash-1017",
+        "knowledge": "2025-05",
+        "last_updated": "2026-10-17",
+        "limit": {
+          "context": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash 1017",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-17",
         "temperature": true,
         "tool_call": true
       },
@@ -111561,9 +111651,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.008,
-          "input": 0.04,
-          "output": 0.08
+          "cache_read": 0.006,
+          "input": 0.03,
+          "output": 0.12
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
         "family": "deepseek-flash",
@@ -111612,9 +111702,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
         "cost": {
-          "cache_read": 0.008,
-          "input": 0.04,
-          "output": 0.08
+          "cache_read": 0.006,
+          "input": 0.03,
+          "output": 0.12
         },
         "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
         "family": "deepseek-flash",
@@ -115579,6 +115669,60 @@
           ]
         },
         "name": "Kimi K3 Fast",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          },
+          {
+            "min": 1024,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-07-16",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "accounts/fireworks/routers/kimi-k3-spot": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3",
+        "cost": {
+          "cache_read": 0.21,
+          "input": 2.1,
+          "output": 10.5
+        },
+        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+        "family": "kimi-k3",
+        "id": "accounts/fireworks/routers/kimi-k3-spot",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-07-16",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3 Spot",
         "open_weights": true,
         "reasoning": true,
         "reasoning_options": [
@@ -123576,92 +123720,6 @@
         "structured_output": false,
         "temperature": true,
         "tool_call": false
-      },
-      "veo-3.1-fast-generate-preview": {
-        "attachment": true,
-        "canonical_model_id": "google/veo-3.1-fast-generate-preview",
-        "description": "Video model for prompt-guided generation, editing, and motion workflows",
-        "family": "veo",
-        "id": "veo-3.1-fast-generate-preview",
-        "last_updated": "2026-01-01",
-        "limit": {
-          "context": 480,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video"
-          ],
-          "output": [
-            "video"
-          ]
-        },
-        "name": "Veo 3.1 fast",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-10-15",
-        "temperature": false,
-        "tool_call": false,
-        "type": "video"
-      },
-      "veo-3.1-generate-preview": {
-        "attachment": true,
-        "canonical_model_id": "google/veo-3.1-generate-preview",
-        "description": "Video model for prompt-guided generation, editing, and motion workflows",
-        "family": "veo",
-        "id": "veo-3.1-generate-preview",
-        "last_updated": "2026-01",
-        "limit": {
-          "context": 480,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "video"
-          ]
-        },
-        "name": "Veo 3.1",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-10-15",
-        "status": "beta",
-        "temperature": false,
-        "tool_call": false,
-        "type": "video"
-      },
-      "veo-3.1-lite-generate-preview": {
-        "attachment": true,
-        "canonical_model_id": "google/veo-3.1-lite-generate-preview",
-        "description": "Video model for prompt-guided generation, editing, and motion workflows",
-        "family": "veo",
-        "id": "veo-3.1-lite-generate-preview",
-        "last_updated": "2026-03-31",
-        "limit": {
-          "context": 480,
-          "output": 8192
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "video"
-          ]
-        },
-        "name": "Veo 3.1 lite",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-03-31",
-        "temperature": false,
-        "tool_call": false,
-        "type": "video"
       }
     },
     "name": "Google",
@@ -141502,8 +141560,8 @@
         "cost": {
           "cache_read": 0.14,
           "cache_write": 0,
-          "input": 0.62,
-          "output": 3.6
+          "input": 0.55,
+          "output": 1.188
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -141545,9 +141603,9 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
-          "cache_read": 0.145,
+          "cache_read": 0.12,
           "cache_write": 0,
-          "input": 0.45,
+          "input": 0.4,
           "output": 1.96
         },
         "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
@@ -163283,9 +163341,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
         "cost": {
-          "cache_read": 0.033,
-          "input": 0.132,
-          "output": 0.528
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -163368,9 +163426,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.042,
-          "input": 0.834,
-          "output": 2.501
+          "cache_read": 0.0378,
+          "input": 0.7506,
+          "output": 2.2509
         },
         "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
         "family": "Hy",
@@ -164342,8 +164400,8 @@
         "attachment": true,
         "canonical_model_id": "xiaomi/mimo-v2.6-pro",
         "cost": {
-          "cache_read": 0.0036,
-          "input": 0.43,
+          "cache_read": 0.004,
+          "input": 0.435,
           "output": 0.87
         },
         "description": "MiMo-V2.6-Pro is the flagship foundation model developed by Xiaomi. Built at a scale of over 1T parameters, it is designed to push the ceiling of capability for the most demanding...",
@@ -165551,7 +165609,7 @@
         "cost": {
           "cache_read": 0.228,
           "input": 0.238,
-          "output": 16
+          "output": 24
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -220522,9 +220580,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v3.2",
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.07,
-          "output": 0.105
+          "cache_read": 0.0216,
+          "input": 0.2088,
+          "output": 0.3096
         },
         "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes, sparse attention, and tool-use",
         "family": "deepseek",
@@ -220557,9 +220615,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v3.2",
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.07,
-          "output": 0.105
+          "cache_read": 0.0216,
+          "input": 0.2088,
+          "output": 0.3096
         },
         "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes, sparse attention, and tool-use",
         "family": "deepseek",
@@ -224350,9 +224408,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.05,
-          "input": 0.09,
-          "output": 0.3
+          "cache_read": 0.0425,
+          "input": 0.0765,
+          "output": 0.255
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -224423,9 +224481,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.05,
-          "input": 0.09,
-          "output": 0.3
+          "cache_read": 0.0425,
+          "input": 0.0765,
+          "output": 0.255
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -224617,8 +224675,8 @@
         "id": "heabsy/qwen3.8-27b-uncensored-fast",
         "last_updated": "2026-10-16",
         "limit": {
-          "context": 524288,
-          "input": 524288,
+          "context": 1048576,
+          "input": 1048576,
           "output": 235929
         },
         "modalities": {
@@ -234093,8 +234151,8 @@
         "id": "qwen/qwen3.8-27b-uncensored",
         "last_updated": "2026-08-21",
         "limit": {
-          "context": 1048576,
-          "input": 1048576,
+          "context": 1010000,
+          "input": 1010000,
           "output": 32768
         },
         "modalities": {
@@ -234126,8 +234184,8 @@
         "id": "qwen/qwen3.8-27b-uncensored:thinking",
         "last_updated": "2026-08-25",
         "limit": {
-          "context": 1048576,
-          "input": 1048576,
+          "context": 1010000,
+          "input": 1010000,
           "output": 32768
         },
         "modalities": {
@@ -235125,9 +235183,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.042,
-          "input": 0.834,
-          "output": 2.501
+          "cache_read": 0.0378,
+          "input": 0.7506,
+          "output": 2.2509
         },
         "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
         "family": "Hy",
@@ -274881,9 +274939,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.05,
-          "input": 0.09,
-          "output": 0.3
+          "cache_read": 0.0425,
+          "input": 0.0765,
+          "output": 0.255
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -282756,8 +282814,8 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.5-122b-a10b",
         "cost": {
-          "input": 0.4,
-          "output": 3.2
+          "input": 0.26,
+          "output": 2.08
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -284495,9 +284553,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
         "cost": {
-          "cache_read": 0.033,
-          "input": 0.132,
-          "output": 0.528
+          "cache_read": 0.020625,
+          "input": 0.0825,
+          "output": 0.33
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -284580,9 +284638,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.042,
-          "input": 0.834,
-          "output": 2.501
+          "cache_read": 0.0378,
+          "input": 0.7506,
+          "output": 2.2509
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -286907,7 +286965,7 @@
         "cost": {
           "cache_read": 0.228,
           "input": 0.238,
-          "output": 16
+          "output": 24
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -366473,8 +366531,9 @@
         "attachment": true,
         "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
         "cost": {
-          "input": 0,
-          "output": 0
+          "cache_read": 0.015,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
         "family": "minimax",
@@ -372676,84 +372735,6 @@
         "reasoning": false,
         "release_date": "2026-10-20",
         "tool_call": false
-      },
-      "spacexai/grok-4.1-fast-non-reasoning": {
-        "attachment": true,
-        "canonical_model_id": "xai/grok-4.1-fast",
-        "cost": {
-          "cache_read": 0.05,
-          "input": 0.2,
-          "output": 0.5
-        },
-        "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
-        "family": "grok",
-        "id": "spacexai/grok-4.1-fast-non-reasoning",
-        "last_updated": "2025-11-19",
-        "limit": {
-          "context": 1000000,
-          "output": 1000000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Grok 4.1 Fast Non-Reasoning",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-11-19",
-        "temperature": true,
-        "tool_call": true
-      },
-      "spacexai/grok-4.1-fast-reasoning": {
-        "attachment": true,
-        "canonical_model_id": "xai/grok-4.1-fast-reasoning",
-        "cost": {
-          "cache_read": 0.05,
-          "input": 0.2,
-          "output": 0.5
-        },
-        "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
-        "family": "grok",
-        "id": "spacexai/grok-4.1-fast-reasoning",
-        "last_updated": "2025-11-19",
-        "limit": {
-          "context": 1000000,
-          "output": 1000000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Grok 4.1 Fast Reasoning",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2025-11-19",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
       },
       "spacexai/grok-4.20-multi-agent": {
         "attachment": true,
