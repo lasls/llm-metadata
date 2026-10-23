@@ -16,7 +16,7 @@
         "input": 2.5,
         "output": 15,
         "tier": {
-          "size": 200000,
+          "size": 200001,
           "type": "context"
         }
       }
@@ -29,14 +29,12 @@
   "last_updated": "2025-06-17",
   "limit": {
     "context": 1048576,
-    "output": 65536
+    "output": 65535
   },
   "modalities": {
     "input": [
       "text",
       "image",
-      "audio",
-      "video",
       "pdf"
     ],
     "output": [
@@ -48,8 +46,15 @@
   "reasoning": true,
   "reasoning_options": [
     {
-      "max": 32768,
-      "min": 128,
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    {
       "type": "budget_tokens"
     }
   ],
