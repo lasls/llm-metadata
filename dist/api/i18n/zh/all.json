@@ -85032,6 +85032,7 @@
         "canonical_model_id": "deepseek/deepseek-v4-flash",
         "cost": {
           "cache_read": 0.018,
+          "cache_write": 0.1125,
           "input": 0.09,
           "output": 0.18
         },
@@ -85819,6 +85820,7 @@
         "canonical_model_id": "moonshotai/kimi-k2.7-code",
         "cost": {
           "cache_read": 0.136,
+          "cache_write": 0.85,
           "input": 0.68,
           "output": 3.4
         },
@@ -85863,6 +85865,7 @@
         "canonical_model_id": "moonshotai/kimi-k3",
         "cost": {
           "cache_read": 0.285,
+          "cache_write": 3.5625,
           "input": 2.85,
           "output": 14.25
         },
@@ -86526,6 +86529,7 @@
         "canonical_model_id": "zhipuai/glm-5.2",
         "cost": {
           "cache_read": 0.14,
+          "cache_write": 0.9375,
           "input": 0.75,
           "output": 2.4
         },
@@ -114721,50 +114725,6 @@
     "iconURL": "https://models.dev/logos/friendli.svg",
     "id": "friendli",
     "models": {
-      "deepseek-ai/DeepSeek-V3.2": {
-        "attachment": false,
-        "canonical_model_id": "deepseek/deepseek-v3.2",
-        "cost": {
-          "cache_read": 0.25,
-          "input": 0.5,
-          "output": 1.5
-        },
-        "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes, sparse attention, and tool-use",
-        "family": "deepseek",
-        "id": "deepseek-ai/DeepSeek-V3.2",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2024-07",
-        "last_updated": "2025-12-01",
-        "limit": {
-          "context": 163840,
-          "output": 64000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V3.2",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "budget_tokens"
-          }
-        ],
-        "release_date": "2025-12-01",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "google/gemma-4-31B-it": {
         "attachment": true,
         "canonical_model_id": "google/gemma-4-31b-it",
@@ -134479,7 +134439,7 @@
         "knowledge": "2025-05",
         "last_updated": "2026-09-10",
         "limit": {
-          "context": 1000000,
+          "context": 1048576,
           "output": 262144
         },
         "modalities": {
@@ -154814,9 +154774,9 @@
         "attachment": true,
         "canonical_model_id": "nvidia/nemotron-3.5-super-vl-120b-a12b",
         "cost": {
-          "cache_read": 0.08,
-          "input": 0.1,
-          "output": 0.4
+          "cache_read": 0.01,
+          "input": 0.06,
+          "output": 0.35
         },
         "description": "NVIDIA Nemotron 3.5 Super VL is an open multimodal mixture-of-experts model from NVIDIA, with 12B active parameters out of 120B total. It takes text, images, documents, GUI screenshots, and video...",
         "family": "nemotron",
@@ -160990,9 +160950,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
         "family": "Hy",
@@ -161075,9 +161035,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.0378,
-          "input": 0.7506,
-          "output": 2.2509
+          "cache_read": 0.042,
+          "input": 0.834,
+          "output": 2.501
         },
         "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
         "family": "Hy",
@@ -162345,7 +162305,7 @@
         "attachment": true,
         "canonical_model_id": "zhipuai/glm-4.6v",
         "cost": {
-          "cache_read": 0.055,
+          "cache_read": 0.05,
           "input": 0.3,
           "output": 0.9
         },
@@ -163035,9 +162995,9 @@
       "~deepseek/deepseek-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.008,
-          "input": 0.07,
-          "output": 0.5
+          "cache_read": 0.015,
+          "input": 0.02,
+          "output": 1
         },
         "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
         "family": "deepseek-flash",
@@ -163120,9 +163080,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0275,
+          "cache_read": 0.028,
           "input": 0.0422,
-          "output": 0.1729
+          "output": 0.1694
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
@@ -163258,7 +163218,7 @@
         "cost": {
           "cache_read": 0.228,
           "input": 0.238,
-          "output": 24
+          "output": 16
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -163606,9 +163566,9 @@
       "~z-ai/glm-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0052,
-          "input": 0.0052,
-          "output": 0.1985
+          "cache_read": 0.03,
+          "input": 0.0304,
+          "output": 0.0852
         },
         "description": "This model always redirects to the latest model in the GLM Flash family.",
         "family": "glm-flash",
@@ -163616,7 +163576,7 @@
         "last_updated": "2026-08-27",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -181081,51 +181041,6 @@
           }
         ],
         "release_date": "2026-04-24",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek/deepseek-v4.1-flash": {
-        "attachment": true,
-        "canonical_model_id": "deepseek/deepseek-v4.1-flash",
-        "cost": {
-          "cache_read": 0.003,
-          "input": 0.15,
-          "output": 0.6
-        },
-        "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
-        "family": "deepseek-flash",
-        "id": "deepseek/deepseek-v4.1-flash",
-        "knowledge": "2025-05",
-        "last_updated": "2026-09-10",
-        "limit": {
-          "context": 1050000,
-          "output": 393216
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4.1 Flash (DeepSeek)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "low",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-09-10",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -224553,8 +224468,8 @@
         "canonical_model_id": "moonshotai/kimi-k2.7-code",
         "cost": {
           "cache_read": 0.15,
-          "input": 0.6725,
-          "output": 3.1
+          "input": 0.6712,
+          "output": 3.35
         },
         "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
         "family": "kimi-k2",
@@ -231844,9 +231759,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.0378,
-          "input": 0.7506,
-          "output": 2.2509
+          "cache_read": 0.042,
+          "input": 0.834,
+          "output": 2.501
         },
         "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
         "family": "Hy",
@@ -269421,9 +269336,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-pro",
         "cost": {
-          "cache_read": 0.065322,
-          "input": 0.78387,
-          "output": 1.56774
+          "cache_read": 0.053491,
+          "input": 0.641886,
+          "output": 1.283772
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -269510,9 +269425,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.006,
-          "input": 0.3,
-          "output": 1.2
+          "cache_read": 0.015,
+          "input": 0.02,
+          "output": 1
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -280625,9 +280540,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -280710,9 +280625,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.0378,
-          "input": 0.7506,
-          "output": 2.2509
+          "cache_read": 0.042,
+          "input": 0.834,
+          "output": 2.501
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -282104,7 +282019,7 @@
         "attachment": true,
         "canonical_model_id": "zhipuai/glm-4.6v",
         "cost": {
-          "cache_read": 0.055,
+          "cache_read": 0.05,
           "input": 0.3,
           "output": 0.9
         },
@@ -282796,9 +282711,9 @@
       "~deepseek/deepseek-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.008,
-          "input": 0.07,
-          "output": 0.5
+          "cache_read": 0.015,
+          "input": 0.02,
+          "output": 1
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -282881,9 +282796,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0275,
+          "cache_read": 0.028,
           "input": 0.0422,
-          "output": 0.1729
+          "output": 0.1694
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -283039,7 +282954,7 @@
         "cost": {
           "cache_read": 0.228,
           "input": 0.238,
-          "output": 24
+          "output": 16
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -283479,9 +283394,9 @@
       "~z-ai/glm-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.0052,
-          "input": 0.0052,
-          "output": 0.1985
+          "cache_read": 0.03,
+          "input": 0.0304,
+          "output": 0.0852
         },
         "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
         "family": "glm-flash",
@@ -283489,7 +283404,7 @@
         "last_updated": "2026-08-27",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -301359,7 +301274,7 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.03,
+          "cache_read": 0.006,
           "cache_write": 0.3,
           "input": 0.3,
           "output": 1.2
@@ -303591,10 +303506,10 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
-          "cache_read": 0.26,
-          "cache_write": 1.4,
-          "input": 1.4,
-          "output": 4.4
+          "cache_read": 0.182,
+          "cache_write": 0.98,
+          "input": 0.98,
+          "output": 3.08
         },
         "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
         "family": "glm",
@@ -346735,6 +346650,92 @@
         "release_date": "2026-07-16",
         "structured_output": true,
         "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k3-1-pro": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+        "cost": {
+          "cache_read": 0.30000000000000004,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
+        "family": "kimi-k3",
+        "id": "kimi-k3-1-pro",
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-23",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "kimi-k3-1-pro-highspeed": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.6000000000000001,
+          "input": 6,
+          "output": 30
+        },
+        "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
+        "family": "kimi-k3",
+        "id": "kimi-k3-1-pro-highspeed",
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro Highspeed",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-23",
+        "structured_output": true,
         "tool_call": true
       },
       "kimi-k3-fast-api": {
