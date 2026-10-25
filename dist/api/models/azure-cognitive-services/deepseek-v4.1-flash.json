@@ -9,6 +9,9 @@
   "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
   "family": "deepseek-flash",
   "id": "deepseek-v4.1-flash",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "knowledge": "2025-05",
   "last_updated": "2026-09-10",
   "limit": {
@@ -31,7 +34,17 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "high",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-09-10",
   "status": "beta",
   "structured_output": true,

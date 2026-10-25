@@ -8,6 +8,9 @@
   "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
   "family": "deepseek-flash",
   "id": "deepseek-v4-flash",
+  "interleaved": {
+    "field": "reasoning_content"
+  },
   "knowledge": "2025-05",
   "last_updated": "2026-04-24",
   "limit": {
@@ -29,9 +32,19 @@
     "npm": "@ai-sdk/openai-compatible"
   },
   "reasoning": true,
-  "reasoning_options": [],
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "none",
+        "low",
+        "high",
+        "max"
+      ]
+    }
+  ],
   "release_date": "2026-04-24",
   "structured_output": true,
   "temperature": true,
-  "tool_call": false
+  "tool_call": true
 }
