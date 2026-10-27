@@ -1966,9 +1966,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash",
       "cost": {
-        "cache_read": 0.0182,
-        "input": 0.091,
-        "output": 0.182
+        "cache_read": 0.028,
+        "input": 0.14,
+        "output": 0.28
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -1976,8 +1976,8 @@
       "knowledge": "2025-05",
       "last_updated": "2026-04-24",
       "limit": {
-        "context": 1048575,
-        "output": 943717
+        "context": 1048576,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -2194,7 +2194,7 @@
       "last_updated": "2026-09-10",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -3758,36 +3758,6 @@
       "reasoning": false,
       "release_date": "2023-08-10",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
-    "ibm-granite/granite-4.0-h-micro": {
-      "attachment": false,
-      "cost": {
-        "input": 0.017,
-        "output": 0.112
-      },
-      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-      "family": "granite",
-      "id": "ibm-granite/granite-4.0-h-micro",
-      "last_updated": "2025-10-20",
-      "limit": {
-        "context": 131000,
-        "output": 117900
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "IBM: Granite 4.0 Micro",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-10-20",
-      "structured_output": false,
       "temperature": true,
       "tool_call": false
     },
@@ -5485,9 +5455,9 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
       "cost": {
-        "cache_read": 0.01,
-        "input": 0.1,
-        "output": 0.55
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.6
       },
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
       "family": "minimax",
@@ -6499,8 +6469,8 @@
       "canonical_model_id": "moonshotai/kimi-k2.7-code",
       "cost": {
         "cache_read": 0.15,
-        "input": 0.6712,
-        "output": 3.35
+        "input": 0.56,
+        "output": 3.1
       },
       "description": "MoonshotAI: Kimi K2.7 Code is a coding-focused model in Moonshot AI's Kimi K2 family, built to complete end-to-end programming tasks reliably over long contexts. It uses a native multimodal mixture-of-experts...",
       "family": "kimi-k2",
@@ -9522,6 +9492,102 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-6.1-terra": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-terra",
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 1.25,
+        "input": 1,
+        "output": 5
+      },
+      "description": "GPT-6.1 Terra is the mid-tier model in OpenAI's GPT-6.1 series, built for fast, capable computer use at a lower price than GPT-6.1 Sol. It reads what is on screen, takes...",
+      "family": "gpt-terra",
+      "id": "openai/gpt-6.1-terra",
+      "knowledge": "2026-06-01",
+      "last_updated": "2026-10-26",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-6.1 Terra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-26",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6.1-terra-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 1.25,
+        "input": 1,
+        "output": 5
+      },
+      "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
+      "family": "gpt",
+      "id": "openai/gpt-6.1-terra-pro",
+      "last_updated": "2026-10-26",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-6.1 Terra Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-26",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-audio": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-audio",
@@ -11455,7 +11521,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 81920
       },
       "modalities": {
         "input": [
@@ -12096,7 +12162,7 @@
       "last_updated": "2026-08-14",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -13414,9 +13480,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.020625,
-        "input": 0.0825,
-        "output": 0.33
+        "cache_read": 0.033,
+        "input": 0.132,
+        "output": 0.528
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
@@ -13499,9 +13565,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.0378,
-        "input": 0.7506,
-        "output": 2.2509
+        "cache_read": 0.042,
+        "input": 0.834,
+        "output": 2.501
       },
       "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
       "family": "Hy",
@@ -13891,7 +13957,7 @@
           "text"
         ]
       },
-      "name": "Upstage: Solar Pro 3",
+      "name": "Upstage: Solar Pro 3 (retires Oct 30)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -14331,8 +14397,8 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1050000,
-        "output": 945000
+        "context": 1000000,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -14396,8 +14462,8 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1050000,
-        "output": 945000
+        "context": 262144,
+        "output": 235929
       },
       "modalities": {
         "input": [
@@ -14987,8 +15053,8 @@
       "id": "z-ai/glm-5.1",
       "last_updated": "2026-04-07",
       "limit": {
-        "context": 202752,
-        "output": 131072
+        "context": 200000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -15459,9 +15525,9 @@
     "~deepseek/deepseek-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.02,
-        "output": 1
+        "cache_read": 0.00456,
+        "input": 0.016841,
+        "output": 0.01
       },
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "family": "deepseek-flash",
@@ -15502,8 +15568,8 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.12,
-        "input": 0.1188,
+        "cache_read": 0.23,
+        "input": 0.2257,
         "output": 8
       },
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
@@ -15545,8 +15611,8 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.028,
-        "input": 0.0422,
-        "output": 0.1694
+        "input": 0.0475,
+        "output": 0.1568
       },
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "family": "deepseek",
@@ -15681,8 +15747,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.19,
-        "input": 0.2,
-        "output": 20
+        "input": 0.19,
+        "output": 10.5634
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -15908,10 +15974,10 @@
     "~openai/gpt-terra-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.2,
-        "cache_write": 2.5,
-        "input": 2,
-        "output": 12
+        "cache_read": 0.05,
+        "cache_write": 1.25,
+        "input": 1,
+        "output": 5
       },
       "description": "This model always redirects to the latest model in the OpenAI GPT Terra family.",
       "family": "gpt-terra",
@@ -16073,9 +16139,9 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0689,
-        "input": 0.0699,
-        "output": 1.4
+        "cache_read": 0.0703,
+        "input": 0.0703,
+        "output": 4.3843
       },
       "description": "This model always redirects to the latest GLM model from Z.ai.",
       "family": "glm",
@@ -16083,7 +16149,7 @@
       "last_updated": "2026-08-19",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [

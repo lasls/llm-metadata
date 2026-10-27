@@ -2023,9 +2023,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash",
       "cost": {
-        "cache_read": 0.0182,
-        "input": 0.091,
-        "output": 0.182
+        "cache_read": 0.028,
+        "input": 0.14,
+        "output": 0.28
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -2037,7 +2037,7 @@
       "last_updated": "2026-04-24",
       "limit": {
         "context": 1048576,
-        "output": 943717
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -2069,9 +2069,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.001414,
-        "input": 0.04444,
-        "output": 0.13332
+        "cache_read": 0.014,
+        "input": 0.44,
+        "output": 1.32
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -2157,9 +2157,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.06309,
-        "input": 0.757074,
-        "output": 1.514148
+        "cache_read": 0.079605,
+        "input": 0.95526,
+        "output": 1.91052
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2203,9 +2203,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
       "cost": {
-        "cache_read": 0.022,
-        "input": 0.66,
-        "output": 1.98
+        "cache_read": 0.044,
+        "input": 1.32,
+        "output": 3.96
       },
       "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
       "family": "deepseek-thinking",
@@ -2246,9 +2246,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.02,
-        "output": 1
+        "cache_read": 0.0042,
+        "input": 0.14,
+        "output": 0.42
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -2257,7 +2257,7 @@
       "last_updated": "2026-09-10",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -2291,9 +2291,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
       "cost": {
-        "cache_read": 0.003,
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -3699,9 +3699,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.09,
-        "output": 0.3
+        "cache_read": 0.0425,
+        "input": 0.0765,
+        "output": 0.255
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3943,36 +3943,6 @@
       "reasoning": false,
       "release_date": "2023-08-10",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": false
-    },
-    "ibm-granite/granite-4.0-h-micro": {
-      "attachment": false,
-      "cost": {
-        "input": 0.017,
-        "output": 0.112
-      },
-      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
-      "family": "granite",
-      "id": "ibm-granite/granite-4.0-h-micro",
-      "last_updated": "2025-10-20",
-      "limit": {
-        "context": 131000,
-        "output": 117900
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Granite 4.0 Micro",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-10-20",
-      "structured_output": false,
       "temperature": true,
       "tool_call": false
     },
@@ -6437,8 +6407,8 @@
       "canonical_model_id": "moonshotai/kimi-k2.7-code",
       "cost": {
         "cache_read": 0.15,
-        "input": 0.6712,
-        "output": 3.35
+        "input": 0.56,
+        "output": 3.1
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
       "family": "kimi-k2",
@@ -9724,6 +9694,138 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-6.1-terra": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-terra",
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 1.25,
+        "context_over_200k": {
+          "cache_read": 0.1,
+          "cache_write": 2.5,
+          "input": 2,
+          "output": 7.5
+        },
+        "input": 1,
+        "output": 5,
+        "tiers": [
+          {
+            "cache_read": 0.1,
+            "cache_write": 2.5,
+            "input": 2,
+            "output": 7.5,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Fast, efficient model for visual reasoning, precise computer use, and clear, natural writing.",
+      "family": "gpt-terra",
+      "id": "openai/gpt-6.1-terra",
+      "knowledge": "2026-06-01",
+      "last_updated": "2026-10-26",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.1 Terra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-26",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6.1-terra-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "cache_write": 1.25,
+        "context_over_200k": {
+          "cache_read": 0.1,
+          "cache_write": 2.5,
+          "input": 2,
+          "output": 7.5
+        },
+        "input": 1,
+        "output": 5,
+        "tiers": [
+          {
+            "cache_read": 0.1,
+            "cache_write": 2.5,
+            "input": 2,
+            "output": 7.5,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Frontier GPT model for professional reasoning, coding, and multimodal work",
+      "family": "gpt",
+      "id": "openai/gpt-6.1-terra-pro",
+      "last_updated": "2026-10-26",
+      "limit": {
+        "context": 1050000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "pdf",
+          "image",
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.1 Terra Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-26",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-audio": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-audio",
@@ -11630,9 +11732,8 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.5-27b",
       "cost": {
-        "cache_read": 0.27,
-        "input": 0.27,
-        "output": 2.16
+        "input": 0.26,
+        "output": 2.6
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -11640,7 +11741,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 65536
+        "output": 81920
       },
       "modalities": {
         "input": [
@@ -12321,9 +12422,9 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-27b",
       "cost": {
-        "cache_read": 0.09,
-        "input": 0.2,
-        "output": 2.5
+        "cache_read": 0.0039,
+        "input": 0.039,
+        "output": 1.25
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -12331,7 +12432,7 @@
       "last_updated": "2026-08-14",
       "limit": {
         "context": 1000000,
-        "output": 235929
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -13329,9 +13430,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.020625,
-        "input": 0.0825,
-        "output": 0.33
+        "cache_read": 0.033,
+        "input": 0.132,
+        "output": 0.528
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13414,9 +13515,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.0378,
-        "input": 0.7506,
-        "output": 2.2509
+        "cache_read": 0.042,
+        "input": 0.834,
+        "output": 2.501
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -14412,9 +14513,9 @@
       "attachment": true,
       "canonical_model_id": "xiaomi/mimo-v2.5",
       "cost": {
-        "cache_read": 0.00255,
-        "input": 0.119,
-        "output": 0.238
+        "cache_read": 0.08,
+        "input": 0.4,
+        "output": 2
       },
       "description": "Open MiMo model for multimodal coding agents and long-context automation",
       "family": "mimo",
@@ -14426,7 +14527,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 1050000,
-        "output": 945000
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -14457,9 +14558,9 @@
       "attachment": false,
       "canonical_model_id": "xiaomi/mimo-v2.5-pro",
       "cost": {
-        "cache_read": 0.0028,
-        "input": 0.3045,
-        "output": 0.609
+        "cache_read": 0.096,
+        "input": 0.48,
+        "output": 1.8
       },
       "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
       "family": "mimo",
@@ -14471,7 +14572,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 1050000,
-        "output": 945000
+        "output": 235929
       },
       "modalities": {
         "input": [
@@ -15009,9 +15110,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.1",
       "cost": {
-        "cache_read": 0.26,
-        "input": 1.4,
-        "output": 4.4
+        "cache_read": 0.1794,
+        "input": 0.966,
+        "output": 3.036
       },
       "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
       "family": "glm",
@@ -15022,7 +15123,7 @@
       "last_updated": "2026-04-07",
       "limit": {
         "context": 204800,
-        "output": 131072
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -15095,7 +15196,7 @@
       "canonical_model_id": "zhipuai/glm-5.3",
       "cost": {
         "cache_read": 0.0689,
-        "input": 0.0699,
+        "input": 0.0769,
         "output": 1.4
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
@@ -15500,9 +15601,9 @@
     "~deepseek/deepseek-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.02,
-        "output": 1
+        "cache_read": 0.00456,
+        "input": 0.016841,
+        "output": 0.01
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -15543,8 +15644,8 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.12,
-        "input": 0.1188,
+        "cache_read": 0.23,
+        "input": 0.2257,
         "output": 8
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
@@ -15586,8 +15687,8 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.028,
-        "input": 0.0422,
-        "output": 0.1694
+        "input": 0.0475,
+        "output": 0.1568
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek",
@@ -15742,8 +15843,8 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.19,
-        "input": 0.2,
-        "output": 20
+        "input": 0.19,
+        "output": 10.5634
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -16026,22 +16127,22 @@
     "~openai/gpt-terra-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.2,
-        "cache_write": 2.5,
+        "cache_read": 0.05,
+        "cache_write": 1.25,
         "context_over_200k": {
-          "cache_read": 0.4,
-          "cache_write": 5,
-          "input": 4,
-          "output": 18
+          "cache_read": 0.1,
+          "cache_write": 2.5,
+          "input": 2,
+          "output": 7.5
         },
-        "input": 2,
-        "output": 12,
+        "input": 1,
+        "output": 5,
         "tiers": [
           {
-            "cache_read": 0.4,
-            "cache_write": 5,
-            "input": 4,
-            "output": 18,
+            "cache_read": 0.1,
+            "cache_write": 2.5,
+            "input": 2,
+            "output": 7.5,
             "tier": {
               "size": 272000,
               "type": "context"
@@ -16226,9 +16327,9 @@
     "~z-ai/glm-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.0689,
-        "input": 0.0699,
-        "output": 1.4
+        "cache_read": 0.0703,
+        "input": 0.0703,
+        "output": 4.3843
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -16236,7 +16337,7 @@
       "last_updated": "2026-08-19",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [
