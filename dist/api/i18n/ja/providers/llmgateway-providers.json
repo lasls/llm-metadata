@@ -5248,6 +5248,54 @@
       "temperature": true,
       "tool_call": true
     },
+    "baidu/deepseek-v4.1-flash-1017": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.006,
+        "input": 0.28,
+        "output": 1.13
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "baidu/deepseek-v4.1-flash-1017",
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017 (Baidu)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "baidu/glm-5.1": {
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.1",
@@ -5385,6 +5433,50 @@
       ],
       "release_date": "2026-08-14",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "baidu/glm-5.3-flash": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "baidu/glm-5.3-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 Flash (Baidu)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -6461,37 +6553,6 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-12-06",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "cerebras/qwen3-235b-a22b-instruct-2507": {
-      "attachment": false,
-      "canonical_model_id": "alibaba/qwen3-235b-a22b-instruct-2507",
-      "cost": {
-        "input": 0.6,
-        "output": 1.2
-      },
-      "description": "Updated large open Qwen3 MoE instruct model for multilingual chat, coding, and tool use",
-      "family": "qwen",
-      "id": "cerebras/qwen3-235b-a22b-instruct-2507",
-      "last_updated": "2025-07-21",
-      "limit": {
-        "context": 262000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 235B A22B Instruct 2507 (Cerebras)",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-07-21",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -12568,37 +12629,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "novita/qwen3-235b-a22b-instruct-2507": {
-      "attachment": false,
-      "canonical_model_id": "alibaba/qwen3-235b-a22b-instruct-2507",
-      "cost": {
-        "input": 0.09,
-        "output": 0.58
-      },
-      "description": "Updated large open Qwen3 MoE instruct model for multilingual chat, coding, and tool use",
-      "family": "qwen",
-      "id": "novita/qwen3-235b-a22b-instruct-2507",
-      "last_updated": "2025-07-21",
-      "limit": {
-        "context": 131072,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3 235B A22B Instruct 2507 (NovitaAI)",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-07-21",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "novita/qwen3-235b-a22b-thinking-2507": {
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-235b-a22b-thinking-2507",
@@ -14725,9 +14755,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.07,
-        "input": 0.9,
-        "output": 1.9
+        "cache_read": 0.072,
+        "input": 0.6,
+        "output": 1.26
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -14775,9 +14805,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.0025,
-        "input": 0.1,
-        "output": 0.3
+        "cache_read": 0.009,
+        "input": 0.15,
+        "output": 0.6
       },
       "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
       "family": "deepseek-flash",
@@ -14823,9 +14853,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
       "cost": {
-        "cache_read": 0.003,
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.006,
+        "input": 0.16,
+        "output": 0.64
       },
       "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
       "family": "deepseek-flash",
@@ -14917,7 +14947,7 @@
       "attachment": true,
       "canonical_model_id": "zhipuai/glm-5.3-flash",
       "cost": {
-        "cache_read": 0.02,
+        "cache_read": 0.027,
         "input": 0.15,
         "output": 0.5
       },
