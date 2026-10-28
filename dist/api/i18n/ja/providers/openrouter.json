@@ -2157,9 +2157,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.079605,
-        "input": 0.95526,
-        "output": 1.91052
+        "cache_read": 0.074081,
+        "input": 0.888966,
+        "output": 1.777932
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -4493,8 +4493,9 @@
       "attachment": false,
       "canonical_model_id": "meta/llama-3.1-8b-instruct",
       "cost": {
-        "input": 0.02,
-        "output": 0.04
+        "cache_read": 0.025,
+        "input": 0.05,
+        "output": 0.08
       },
       "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
       "family": "llama",
@@ -4503,7 +4504,7 @@
       "last_updated": "2024-07-23",
       "limit": {
         "context": 131072,
-        "output": 16384
+        "output": 117964
       },
       "modalities": {
         "input": [
@@ -5222,7 +5223,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-10-27",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -6405,7 +6406,7 @@
       "canonical_model_id": "moonshotai/kimi-k2.7-code",
       "cost": {
         "cache_read": 0.15,
-        "input": 0.6725,
+        "input": 0.56,
         "output": 3.1
       },
       "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
@@ -6439,8 +6440,8 @@
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3",
       "cost": {
-        "cache_read": 0.149,
-        "input": 0.159,
+        "cache_read": 0.221,
+        "input": 0.231,
         "output": 20
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
@@ -7308,40 +7309,7 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2023-11-06",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "openai/gpt-4-turbo": {
-      "attachment": true,
-      "canonical_model_id": "openai/gpt-4-turbo",
-      "cost": {
-        "input": 10,
-        "output": 30
-      },
-      "description": "Compact GPT model for low-latency assistance and high-volume workloads",
-      "family": "gpt",
-      "id": "openai/gpt-4-turbo",
-      "knowledge": "2023-12",
-      "last_updated": "2024-04-09",
-      "limit": {
-        "context": 128000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT-4 Turbo",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2023-11-06",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -10016,85 +9984,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "openai/o1": {
-      "attachment": true,
-      "canonical_model_id": "openai/o1",
-      "cost": {
-        "cache_read": 7.5,
-        "input": 15,
-        "output": 60
-      },
-      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
-      "family": "o",
-      "id": "openai/o1",
-      "knowledge": "2023-09",
-      "last_updated": "2024-12-05",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o1",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2024-12-05",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/o1-pro": {
-      "attachment": true,
-      "canonical_model_id": "openai/o1-pro",
-      "cost": {
-        "input": 150,
-        "output": 600
-      },
-      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
-      "family": "o-pro",
-      "id": "openai/o1-pro",
-      "knowledge": "2023-09",
-      "last_updated": "2025-03-19",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o1-pro",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-03-19",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": false
-    },
     "openai/o3": {
       "attachment": true,
       "canonical_model_id": "openai/o3",
@@ -10135,86 +10024,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "openai/o3-mini": {
-      "attachment": true,
-      "canonical_model_id": "openai/o3-mini",
-      "cost": {
-        "cache_read": 0.55,
-        "input": 1.1,
-        "output": 4.4
-      },
-      "description": "Smaller o-series reasoner for economical coding, math, and planning tasks",
-      "family": "o-mini",
-      "id": "openai/o3-mini",
-      "knowledge": "2024-05",
-      "last_updated": "2025-01-29",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o3-mini",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2024-12-20",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/o3-mini-high": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.55,
-        "input": 1.1,
-        "output": 4.4
-      },
-      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
-      "family": "o",
-      "id": "openai/o3-mini-high",
-      "knowledge": "2023-10-31",
-      "last_updated": "2025-02-12",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o3 Mini High",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-02-12",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "openai/o3-pro": {
       "attachment": true,
       "canonical_model_id": "openai/o3-pro",
@@ -10250,88 +10059,6 @@
         }
       ],
       "release_date": "2025-06-10",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/o4-mini": {
-      "attachment": true,
-      "canonical_model_id": "openai/o4-mini",
-      "cost": {
-        "cache_read": 0.275,
-        "input": 1.1,
-        "output": 4.4
-      },
-      "description": "Fast o-series model for compact reasoning, coding, and tool use",
-      "family": "o-mini",
-      "id": "openai/o4-mini",
-      "knowledge": "2024-05",
-      "last_updated": "2025-04-16",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o4-mini",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-04-16",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
-    "openai/o4-mini-high": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.275,
-        "input": 1.1,
-        "output": 4.4
-      },
-      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
-      "family": "o",
-      "id": "openai/o4-mini-high",
-      "knowledge": "2024-06-30",
-      "last_updated": "2025-04-16",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o4 Mini High",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-04-16",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -11513,39 +11240,6 @@
       "name": "Qwen3-Next 80B-A3B Instruct",
       "open_weights": true,
       "reasoning": false,
-      "release_date": "2025-09",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "qwen/qwen3-next-80b-a3b-thinking": {
-      "attachment": false,
-      "canonical_model_id": "alibaba/qwen3-next-80b-a3b-thinking",
-      "cost": {
-        "input": 0.15,
-        "output": 1.2
-      },
-      "description": "Efficient Qwen thinking model for local reasoning, math, and coding agents",
-      "family": "qwen",
-      "id": "qwen/qwen3-next-80b-a3b-thinking",
-      "knowledge": "2025-04",
-      "last_updated": "2025-09",
-      "limit": {
-        "context": 262144,
-        "output": 235929
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3-Next 80B-A3B (Thinking)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
       "release_date": "2025-09",
       "structured_output": true,
       "temperature": true,
@@ -13422,9 +13116,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13507,9 +13201,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -15593,8 +15287,8 @@
     "~deepseek/deepseek-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0125,
-        "input": 0.0126,
+        "cache_read": 0.0114,
+        "input": 0.0115,
         "output": 1.8
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -15636,8 +15330,8 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.25,
-        "input": 0.2542,
+        "cache_read": 0.16,
+        "input": 0.1639,
         "output": 8
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
@@ -15679,8 +15373,8 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.028,
-        "input": 0.0475,
-        "output": 0.1568
+        "input": 0.0422,
+        "output": 0.1694
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek",
@@ -15834,9 +15528,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.149,
-        "input": 0.159,
-        "output": 20
+        "cache_read": 0.21,
+        "input": 0.2185,
+        "output": 8.099
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -16276,9 +15970,9 @@
     "~z-ai/glm-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.0197,
-        "input": 0.0197,
-        "output": 0.1238
+        "cache_read": 0.0259,
+        "input": 0.0259,
+        "output": 0.1042
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",
