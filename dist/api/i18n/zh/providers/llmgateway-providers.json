@@ -3372,37 +3372,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "azure-ai-foundry/grok-4-1-fast-non-reasoning": {
-      "attachment": true,
-      "cost": {
-        "input": 0.2,
-        "output": 0.5
-      },
-      "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
-      "family": "grok",
-      "id": "azure-ai-foundry/grok-4-1-fast-non-reasoning",
-      "last_updated": "2025-11-19",
-      "limit": {
-        "context": 2000000,
-        "output": 30000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok 4.1 Fast Non-Reasoning (Azure AI Foundry)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-11-19",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "azure-ai-foundry/grok-4-1-fast-reasoning": {
       "attachment": true,
       "canonical_model_id": "xai/grok-4.1-fast-reasoning",
@@ -6557,6 +6526,241 @@
       "temperature": true,
       "tool_call": true
     },
+    "cloudflare/deepseek-v4-flash": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-flash",
+      "cost": {
+        "cache_read": 0.014,
+        "input": 0.44,
+        "output": 1.32
+      },
+      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
+      "family": "deepseek-flash",
+      "id": "cloudflare/deepseek-v4-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1048576,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash (Cloudflare)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cloudflare/deepseek-v4-pro": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro",
+      "cost": {
+        "cache_read": 0.044,
+        "input": 1.32,
+        "output": 3.96
+      },
+      "description": "Open MoE flagship with million-token context for coding and long agent runs",
+      "family": "deepseek-thinking",
+      "id": "cloudflare/deepseek-v4-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1048576,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro (Cloudflare)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cloudflare/deepseek-v4.1-flash-1017": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "cloudflare/deepseek-v4.1-flash-1017",
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017 (Cloudflare)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cloudflare/glm-5.3": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "cloudflare/glm-5.3",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 (Cloudflare)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cloudflare/glm-5.3-flash": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "cloudflare/glm-5.3-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 Flash (Cloudflare)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "consensusprotocol/Qwen3.8-27B": {
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-27b",
@@ -8121,50 +8325,6 @@
       "release_date": "2026-07-16",
       "structured_output": false,
       "temperature": false,
-      "tool_call": true
-    },
-    "gonka24/minimax-m2.7": {
-      "attachment": false,
-      "canonical_model_id": "minimax/MiniMax-M2.7",
-      "cost": {
-        "cache_read": 0.017,
-        "input": 0.08,
-        "output": 0.32
-      },
-      "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
-      "family": "minimax",
-      "id": "gonka24/minimax-m2.7",
-      "last_updated": "2026-03-18",
-      "limit": {
-        "context": 204800,
-        "output": 131100
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M2.7 (Gonka24)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-03-18",
-      "structured_output": false,
-      "temperature": true,
       "tool_call": true
     },
     "google-ai-studio/gemini-3-flash-preview": {
@@ -11943,36 +12103,6 @@
       "open_weights": false,
       "reasoning": false,
       "release_date": "2024-04-18",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": false
-    },
-    "novita/llama-3.2-3b-instruct": {
-      "attachment": false,
-      "cost": {
-        "input": 0.03,
-        "output": 0.05
-      },
-      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
-      "family": "llama",
-      "id": "novita/llama-3.2-3b-instruct",
-      "last_updated": "2024-09-18",
-      "limit": {
-        "context": 32768,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.2 3B Instruct (NovitaAI)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2024-09-18",
       "structured_output": false,
       "temperature": true,
       "tool_call": false
