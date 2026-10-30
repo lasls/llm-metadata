@@ -3384,7 +3384,7 @@
       "id": "azure-ai-foundry/grok-4-1-fast-reasoning",
       "last_updated": "2025-11-19",
       "limit": {
-        "context": 2000000,
+        "context": 128000,
         "output": 30000
       },
       "modalities": {
@@ -5157,6 +5157,105 @@
         }
       ],
       "release_date": "2025-08-05",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "azure/grok-4-1-fast-reasoning": {
+      "attachment": true,
+      "cost": {
+        "input": 0.2,
+        "output": 0.5
+      },
+      "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
+      "family": "grok",
+      "id": "azure/grok-4-1-fast-reasoning",
+      "last_updated": "2025-11-19",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.1 Fast Reasoning (Azure)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-11-19",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "azure/grok-4-3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2.5,
+          "output": 5
+        },
+        "input": 1.25,
+        "output": 2.5,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2.5,
+            "output": 5,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
+      "family": "grok",
+      "id": "azure/grok-4-3",
+      "last_updated": "2026-04-30",
+      "limit": {
+        "context": 200000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.3 (Azure)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-30",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -14953,7 +15052,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-10-17",
       "limit": {
-        "context": 1056784,
+        "context": 1048576,
         "output": 384000
       },
       "modalities": {

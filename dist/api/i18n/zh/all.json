@@ -151136,8 +151136,8 @@
         "knowledge": "2025-05",
         "last_updated": "2026-04-24",
         "limit": {
-          "context": 1024000,
-          "output": 384000
+          "context": 1048576,
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -152611,9 +152611,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.018,
-          "input": 0.036,
-          "output": 0.107
+          "cache_read": 0.015,
+          "input": 0.03,
+          "output": 0.09
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -164085,8 +164085,8 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0476,
-          "input": 0.0486,
+          "cache_read": 0.0321,
+          "input": 0.0331,
           "output": 0.3
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
@@ -164222,8 +164222,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.16,
-          "input": 0.1615,
-          "output": 10.1551
+          "input": 0.1624,
+          "output": 10.1522
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -164571,9 +164571,9 @@
       "~z-ai/glm-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.018,
-          "input": 0.018,
-          "output": 0.1402
+          "cache_read": 0.0197,
+          "input": 0.0197,
+          "output": 0.1324
         },
         "description": "This model always redirects to the latest model in the GLM Flash family.",
         "family": "glm-flash",
@@ -166827,7 +166827,7 @@
         "knowledge": "2025-05",
         "last_updated": "2026-10-17",
         "limit": {
-          "context": 1056784,
+          "context": 1050000,
           "output": 1050000
         },
         "modalities": {
@@ -177690,7 +177690,7 @@
         "id": "azure-ai-foundry/grok-4-1-fast-reasoning",
         "last_updated": "2025-11-19",
         "limit": {
-          "context": 2000000,
+          "context": 128000,
           "output": 30000
         },
         "modalities": {
@@ -179463,6 +179463,105 @@
           }
         ],
         "release_date": "2025-08-05",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "azure/grok-4-1-fast-reasoning": {
+        "attachment": true,
+        "cost": {
+          "input": 0.2,
+          "output": 0.5
+        },
+        "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
+        "family": "grok",
+        "id": "azure/grok-4-1-fast-reasoning",
+        "last_updated": "2025-11-19",
+        "limit": {
+          "context": 128000,
+          "output": 128000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.1 Fast Reasoning (Azure)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2025-11-19",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "azure/grok-4-3": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.2,
+          "context_over_200k": {
+            "cache_read": 0.4,
+            "input": 2.5,
+            "output": 5
+          },
+          "input": 1.25,
+          "output": 2.5,
+          "tiers": [
+            {
+              "cache_read": 0.4,
+              "input": 2.5,
+              "output": 5,
+              "tier": {
+                "size": 200000,
+                "type": "context"
+              }
+            }
+          ]
+        },
+        "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
+        "family": "grok",
+        "id": "azure/grok-4-3",
+        "last_updated": "2026-04-30",
+        "limit": {
+          "context": 200000,
+          "output": 8192
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Grok 4.3 (Azure)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-04-30",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -189259,7 +189358,7 @@
         "knowledge": "2025-05",
         "last_updated": "2026-10-17",
         "limit": {
-          "context": 1056784,
+          "context": 1048576,
           "output": 384000
         },
         "modalities": {
@@ -272674,9 +272773,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-pro",
         "cost": {
-          "cache_read": 0.079025,
-          "input": 0.9483,
-          "output": 1.8966
+          "cache_read": 0.135,
+          "input": 1.6,
+          "output": 3.2
         },
         "description": "Open MoE flagship with million-token context for coding and long agent runs",
         "family": "deepseek-thinking",
@@ -272688,7 +272787,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -274215,9 +274314,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.05,
-          "input": 0.09,
-          "output": 0.3
+          "cache_read": 0.0375,
+          "input": 0.0675,
+          "output": 0.225
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -285405,9 +285504,9 @@
         "attachment": true,
         "canonical_model_id": "zhipuai/glm-5.3-flash",
         "cost": {
-          "cache_read": 0.018,
-          "input": 0.018,
-          "output": 0.1402
+          "cache_read": 0.0197,
+          "input": 0.0197,
+          "output": 0.1324
         },
         "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
         "family": "glm-flash",
@@ -285854,9 +285953,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.0476,
-          "input": 0.0486,
-          "output": 0.3
+          "cache_read": 0.028,
+          "input": 0.0314,
+          "output": 0.1677
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek",
@@ -286011,8 +286110,8 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.16,
-          "input": 0.1615,
-          "output": 10.1551
+          "input": 0.1624,
+          "output": 10.1522
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -286452,9 +286551,9 @@
       "~z-ai/glm-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.018,
-          "input": 0.018,
-          "output": 0.1402
+          "cache_read": 0.0197,
+          "input": 0.0197,
+          "output": 0.1324
         },
         "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
         "family": "glm-flash",
@@ -304300,7 +304399,7 @@
         "last_updated": "2026-04-24",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
