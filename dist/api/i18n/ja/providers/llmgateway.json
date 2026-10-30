@@ -1023,9 +1023,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.00363,
-        "input": 0.435,
-        "output": 0.87
+        "cache_read": 0.022,
+        "input": 0.66,
+        "output": 1.98
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2685,6 +2685,47 @@
         }
       ],
       "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.3-flashx": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.37,
+        "output": 1.25
+      },
+      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+      "family": "glm",
+      "id": "glm-5.3-flashx",
+      "last_updated": "2026-09-18",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 FlashX",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-18",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -5249,6 +5290,53 @@
       ],
       "release_date": "2026-06-12",
       "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k2.8-preview": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.8-preview",
+      "cost": {
+        "cache_read": 0.25,
+        "input": 1,
+        "output": 4
+      },
+      "description": "Kimi coding model with more efficient thinking and up to 1M context, available through Kimi Code",
+      "family": "kimi-k2",
+      "id": "kimi-k2.8-preview",
+      "last_updated": "2026-09-11",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.8 Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-11",
       "temperature": false,
       "tool_call": true
     },
@@ -8477,6 +8565,40 @@
       ],
       "release_date": "2026-05-29",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "step-5-preview": {
+      "attachment": true,
+      "canonical_model_id": "stepfun/step-5-preview",
+      "cost": {
+        "cache_read": 0.05,
+        "input": 1,
+        "output": 2.7
+      },
+      "description": "StepFun's next-generation flagship base model for coding and professional knowledge work, with native text, image, and video input and a 1M-token context window",
+      "id": "step-5-preview",
+      "last_updated": "2026-09-20",
+      "limit": {
+        "context": 1000000,
+        "input": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Step 5 Preview",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-09-16",
       "temperature": true,
       "tool_call": true
     }
