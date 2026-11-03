@@ -6442,8 +6442,9 @@
     "inclusionai/ling-3.1-flash-1019": {
       "attachment": false,
       "cost": {
-        "input": 0,
-        "output": 0
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 0.9
       },
       "description": "Efficient model for low-latency assistance, extraction, and routine automation",
       "family": "ling",
@@ -8085,7 +8086,7 @@
         ]
       },
       "name": "MiniMax-M3.1-Flash",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -13989,6 +13990,9 @@
       "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "family": "beam",
       "id": "reflection/beam",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2026-06-30",
       "last_updated": "2026-10-16",
       "limit": {
@@ -14033,6 +14037,9 @@
       "description": "Free provider route for experiments, demos, and cost-sensitive chat workloads",
       "family": "beam",
       "id": "reflection/beam-free",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "knowledge": "2026-06-30",
       "last_updated": "2026-10-16",
       "limit": {
