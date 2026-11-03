@@ -3698,9 +3698,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.035,
-        "input": 0.069,
-        "output": 0.207
+        "cache_read": 0.0425,
+        "input": 0.0765,
+        "output": 0.255
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3708,7 +3708,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 32768
+        "output": 235929
       },
       "modalities": {
         "input": [
@@ -5012,7 +5012,7 @@
       "last_updated": "2026-10-15",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -5407,9 +5407,9 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.0075,
+        "input": 0.075,
+        "output": 0.3
       },
       "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
       "family": "minimax",
@@ -6441,9 +6441,9 @@
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3",
       "cost": {
-        "cache_read": 0.182,
-        "input": 0.192,
-        "output": 15
+        "cache_read": 0.13,
+        "input": 0.276,
+        "output": 9.6
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi-k3",
@@ -12911,9 +12911,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -12996,9 +12996,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -14716,7 +14716,7 @@
     "z-ai/glm-5.3-flashx": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.09,
+        "cache_read": 0.075,
         "input": 0.37,
         "output": 1.25
       },
@@ -14753,6 +14753,49 @@
       ],
       "release_date": "2026-09-18",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.3-flashx-legal": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.37,
+        "output": 1.25
+      },
+      "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
+      "family": "glm",
+      "id": "z-ai/glm-5.3-flashx-legal",
+      "last_updated": "2026-11-02",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.3 FlashX Legal",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-02",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -15123,7 +15166,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.035,
-        "input": 0.059,
+        "input": 0.0434,
         "output": 0.3
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -15661,8 +15704,10 @@
       "attachment": true,
       "cost": {
         "cache_read": 0.5,
+        "cache_write": 0,
         "context_over_200k": {
           "cache_read": 1,
+          "cache_write": 0,
           "input": 4,
           "output": 12
         },
@@ -15671,6 +15716,7 @@
         "tiers": [
           {
             "cache_read": 1,
+            "cache_write": 0,
             "input": 4,
             "output": 12,
             "tier": {

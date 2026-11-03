@@ -6862,9 +6862,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.013,
-        "input": 0.05,
-        "output": 0.16
+        "cache_read": 0.001414,
+        "input": 0.04444,
+        "output": 0.13332
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -6907,9 +6907,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.013,
-        "input": 0.05,
-        "output": 0.16
+        "cache_read": 0.001414,
+        "input": 0.04444,
+        "output": 0.13332
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -7260,9 +7260,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.006,
-        "input": 0.09,
-        "output": 0.25
+        "cache_read": 0.000696,
+        "input": 0.0348,
+        "output": 0.1392
       },
       "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
       "family": "deepseek-flash",
@@ -7656,9 +7656,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.006,
-        "input": 0.09,
-        "output": 0.25
+        "cache_read": 0.000696,
+        "input": 0.0348,
+        "output": 0.1392
       },
       "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
       "family": "deepseek-flash",
@@ -10536,9 +10536,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.034,
-        "input": 0.068,
-        "output": 0.205
+        "cache_read": 0.046,
+        "input": 0.07,
+        "output": 0.24
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -10609,9 +10609,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.034,
-        "input": 0.068,
-        "output": 0.205
+        "cache_read": 0.046,
+        "input": 0.07,
+        "output": 0.24
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -17026,9 +17026,9 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-20b",
       "cost": {
-        "cache_read": 0.011,
-        "input": 0.012,
-        "output": 0.052
+        "cache_read": 0.004,
+        "input": 0.005,
+        "output": 0.023
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -17411,6 +17411,91 @@
       "release_date": "2025-06-10",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "orca/orcacyber-minimax-m3.1-flash": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 0.8,
+        "output": 1.6
+      },
+      "description": "An abliterated / uncensored variant of MiniMax M3.1 Flash for authorized security research, coding, and tool use. Reasoning is always enabled, with selectable effort. Supports a 262K-token context window, up to 131K output tokens, tool calling, and structured output. Accepts text input. Offensive work is permitted only within an authorized security engagement.",
+      "family": "minimax-m3",
+      "id": "orca/orcacyber-minimax-m3.1-flash",
+      "last_updated": "2026-11-02",
+      "limit": {
+        "context": 261632,
+        "input": 261632,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OrcaCyber MiniMax M3.1 Flash Uncensored",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-02",
+      "structured_output": true,
+      "tool_call": true
+    },
+    "orca/orcacyber-qwen3.8-flash-next": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.15,
+        "input": 0.8,
+        "output": 1.6
+      },
+      "description": "An abliterated / uncensored variant of Qwen3.8 Flash Next for authorized security research, coding, and tool use. Accepts text and images, with reasoning enabled by default and an option to turn it off. Supports a 262K-token context window, up to 131K output tokens, tool calling, and structured output. Offensive work is permitted only within an authorized security engagement.",
+      "id": "orca/orcacyber-qwen3.8-flash-next",
+      "last_updated": "2026-11-02",
+      "limit": {
+        "context": 261632,
+        "input": 261632,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OrcaCyber Qwen3.8 Flash Next Uncensored",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-11-02",
+      "structured_output": true,
       "tool_call": true
     },
     "orca/orcacyber-zero-1.5": {
@@ -21343,9 +21428,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
       "family": "Hy",
@@ -24079,6 +24164,48 @@
       ],
       "release_date": "2026-07-29",
       "structured_output": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.3-flashx-legal": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.37,
+        "output": 1.25
+      },
+      "description": "GLM 5.3 FlashX Legal is Z.AI's model trained for legal document analysis, contract review, legal reasoning and initial drafts. It accepts text and images and returns text, with always-on reasoning, tool calling, JSON output, a 1M-token context window and up to 131,072 output tokens. External legal databases and document-editing tools require your own integrations.",
+      "family": "glm",
+      "id": "z-ai/glm-5.3-flashx-legal",
+      "last_updated": "2026-11-02",
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.3 FlashX Legal",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-02",
+      "structured_output": false,
       "tool_call": true
     },
     "z-ai/glm-5.3-uncensored": {
