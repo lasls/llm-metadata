@@ -2070,7 +2070,7 @@
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
         "cache_read": 0.035,
-        "input": 0.059,
+        "input": 0.0434,
         "output": 0.3
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
@@ -2205,7 +2205,7 @@
       "cost": {
         "cache_read": 0.11,
         "input": 0.115,
-        "output": 4
+        "output": 4.6
       },
       "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
       "family": "deepseek-thinking",
@@ -2246,7 +2246,7 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.012,
+        "cache_read": 0.018,
         "input": 0.045,
         "output": 0.5
       },
@@ -3698,9 +3698,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.038,
-        "input": 0.077,
-        "output": 0.23
+        "cache_read": 0.036,
+        "input": 0.071,
+        "output": 0.214
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3951,7 +3951,7 @@
       "cost": {
         "cache_read": 0.015,
         "input": 0.06,
-        "output": 0.15
+        "output": 0.25
       },
       "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
       "family": "granite",
@@ -4590,9 +4590,8 @@
       "attachment": false,
       "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.2,
-        "output": 0.52
+        "input": 0.1,
+        "output": 0.32
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -4601,7 +4600,7 @@
       "last_updated": "2024-12-06",
       "limit": {
         "context": 131072,
-        "output": 128000
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -6442,9 +6441,9 @@
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3",
       "cost": {
-        "cache_read": 0.19,
-        "input": 0.2,
-        "output": 15
+        "cache_read": 0.182,
+        "input": 0.192,
+        "output": 16
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi-k3",
@@ -6525,7 +6524,7 @@
       ],
       "release_date": "2026-10-23",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "morph/morph-v3-fast": {
@@ -7092,7 +7091,7 @@
       "last_updated": "2026-10-15",
       "limit": {
         "context": 1048576,
-        "output": 235929
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -9761,9 +9760,9 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "cache_read": 0.075,
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.024,
+        "input": 0.027,
+        "output": 0.1
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -9804,9 +9803,9 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-20b",
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.03,
-        "output": 0.13
+        "cache_read": 0.009,
+        "input": 0.018,
+        "output": 0.09
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
@@ -9815,7 +9814,7 @@
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
-        "output": 117964
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -12326,6 +12325,36 @@
       "temperature": true,
       "tool_call": true
     },
+    "ricursiveai/ripple-65b-preview": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.2,
+        "output": 0.6
+      },
+      "description": "Preview model for early access evaluation, prototyping, and compatibility testing",
+      "id": "ricursiveai/ripple-65b-preview",
+      "last_updated": "2026-11-04",
+      "limit": {
+        "context": 16384,
+        "output": 14745
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "ricursiveAI/Ripple-65B-Preview",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-11-04",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "sakana/fugu-max": {
       "attachment": true,
       "canonical_model_id": "sakana/fugu-max",
@@ -12658,6 +12687,53 @@
       "structured_output": false,
       "temperature": false,
       "tool_call": false
+    },
+    "stealth/crouton-alpha": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "family": "alpha",
+      "id": "stealth/crouton-alpha",
+      "last_updated": "2026-11-03",
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Crouton Alpha",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-03",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "stepfun/step-3.5-flash": {
       "attachment": false,
@@ -12995,6 +13071,50 @@
       "temperature": true,
       "tool_call": true
     },
+    "tencent/hy4": {
+      "attachment": true,
+      "canonical_model_id": "tencent/hy4",
+      "cost": {
+        "cache_read": 0.021,
+        "input": 0.417,
+        "output": 1.2505
+      },
+      "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
+      "family": "Hy",
+      "id": "tencent/hy4",
+      "last_updated": "2026-11-04",
+      "limit": {
+        "context": 1048576,
+        "input": 983010,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy4",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-04",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "tencent/hy4-preview": {
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
@@ -13222,98 +13342,6 @@
         }
       ],
       "release_date": "2026-07-30",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "thinkingmachines/inkling-small:free": {
-      "attachment": true,
-      "canonical_model_id": "thinkingmachines/inkling-small",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
-      "family": "ling",
-      "id": "thinkingmachines/inkling-small:free",
-      "last_updated": "2026-07-30",
-      "limit": {
-        "context": 1048576,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Inkling Small (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-07-30",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "thinkingmachines/inkling:free": {
-      "attachment": true,
-      "canonical_model_id": "thinkingmachines/inkling",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
-      "family": "ling",
-      "id": "thinkingmachines/inkling:free",
-      "last_updated": "2026-07-15",
-      "limit": {
-        "context": 1048576,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Inkling (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-07-15",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -13965,7 +13993,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1050000,
+        "context": 1000000,
         "output": 65536
       },
       "modalities": {
@@ -14634,9 +14662,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.3",
       "cost": {
-        "cache_read": 0.076,
-        "input": 0.08,
-        "output": 3.6
+        "cache_read": 0.0689,
+        "input": 0.0699,
+        "output": 1.4
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -14677,8 +14705,8 @@
       "canonical_model_id": "zhipuai/glm-5.3-flash",
       "cost": {
         "cache_read": 0.03,
-        "input": 0.0313,
-        "output": 0.0846
+        "input": 0.15,
+        "output": 0.5
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",
@@ -14686,7 +14714,7 @@
       "last_updated": "2026-08-26",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 943717
       },
       "modalities": {
         "input": [
@@ -15083,9 +15111,9 @@
     "~deepseek/deepseek-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.006,
-        "input": 0.035,
-        "output": 0.315
+        "cache_read": 0.004,
+        "input": 0.022,
+        "output": 0.4
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -15169,7 +15197,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.035,
-        "input": 0.059,
+        "input": 0.0434,
         "output": 0.3
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -15324,9 +15352,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.19,
-        "input": 0.2,
-        "output": 15
+        "cache_read": 0.17,
+        "input": 0.1719,
+        "output": 10.146
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
@@ -15769,9 +15797,9 @@
     "~z-ai/glm-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.0313,
-        "output": 0.0846
+        "cache_read": 0.0285,
+        "input": 0.0285,
+        "output": 0.0923
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",
