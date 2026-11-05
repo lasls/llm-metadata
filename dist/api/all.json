@@ -10865,6 +10865,53 @@
         "temperature": true,
         "tool_call": true
       },
+      "moonshotai/kimi-k3.1-pro": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+        "cost": {
+          "cache_read": 0.2,
+          "input": 2,
+          "output": 10
+        },
+        "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
+        "family": "kimi-k3",
+        "id": "moonshotai/kimi-k3.1-pro",
+        "interleaved": {
+          "field": "reasoning_content"
+        },
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "motif-technologies/motif-3": {
         "attachment": false,
         "canonical_model_id": "motif-technologies/motif-3",
@@ -99781,9 +99828,9 @@
         "attachment": true,
         "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
         "cost": {
-          "cache_read": 0.0075,
-          "input": 0.075,
-          "output": 0.3
+          "cache_read": 0.015,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
         "family": "minimax",
@@ -109122,6 +109169,53 @@
         "temperature": false,
         "tool_call": true
       },
+      "kimi-k3-1-pro": {
+        "attachment": true,
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+        "cost": {
+          "cache_read": 1.8,
+          "input": 2,
+          "output": 10
+        },
+        "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
+        "family": "kimi-k3",
+        "id": "kimi-k3-1-pro",
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-23",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "mimo-v2-6-flash": {
         "attachment": true,
         "canonical_model_id": "xiaomi/mimo-v2.6-flash",
@@ -111531,7 +111625,8 @@
         "modalities": {
           "input": [
             "text",
-            "image"
+            "image",
+            "video"
           ],
           "output": [
             "text"
@@ -140714,9 +140809,9 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k2.6",
         "cost": {
-          "cache_read": 0.156,
+          "cache_read": 0.2092,
           "cache_write": 0,
-          "input": 0.7995,
+          "input": 0.799,
           "output": 3.75
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
@@ -152722,9 +152817,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.013,
-          "input": 0.026,
-          "output": 0.077
+          "cache_read": 0.019,
+          "input": 0.038,
+          "output": 0.113
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -152765,9 +152860,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-31b-it",
         "cost": {
-          "cache_read": 0.047,
-          "input": 0.093,
-          "output": 0.156
+          "cache_read": 0.1,
+          "input": 0.1,
+          "output": 0.34
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -153151,6 +153246,46 @@
           }
         ],
         "release_date": "2026-09-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "inclusionai/ling-3.0-tiny": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.003,
+          "input": 0.015,
+          "output": 0.045
+        },
+        "description": "Ling 3.0 Tiny is a mixture-of-experts model from InclusionAI, with 1.3B active parameters out of 7.9B total. It is designed for responsive agents, instruction following, and multi-turn conversations, with switchable...",
+        "family": "ling",
+        "id": "inclusionai/ling-3.0-tiny",
+        "last_updated": "2026-08-06",
+        "limit": {
+          "context": 262144,
+          "output": 250000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "inclusionAI: Ling 3.0 Tiny",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-08-06",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -154249,37 +154384,6 @@
         "temperature": true,
         "tool_call": false
       },
-      "minimax/minimax-01": {
-        "attachment": true,
-        "cost": {
-          "input": 0.2,
-          "output": 1.1
-        },
-        "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
-        "family": "minimax",
-        "id": "minimax/minimax-01",
-        "last_updated": "2025-01-15",
-        "limit": {
-          "context": 1000192,
-          "output": 900172
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax: MiniMax-01 (retires Nov 5)",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2025-01-15",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
       "minimax/minimax-m1": {
         "attachment": false,
         "cost": {
@@ -154315,117 +154419,6 @@
           }
         ],
         "release_date": "2025-06-17",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "minimax/minimax-m2": {
-        "attachment": false,
-        "canonical_model_id": "minimax/MiniMax-M2",
-        "cost": {
-          "input": 0.255,
-          "output": 1.02
-        },
-        "description": "MiniMax model for chat, coding, office work, and agentic tasks",
-        "family": "minimax",
-        "id": "minimax/minimax-m2",
-        "last_updated": "2025-10-27",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-M2",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2025-10-27",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "minimax/minimax-m2-her": {
-        "attachment": false,
-        "canonical_model_id": "minimax/MiniMax-M2-Her",
-        "cost": {
-          "cache_read": 0.03,
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "MiniMax model for chat, coding, office work, and agentic tasks",
-        "family": "minimax",
-        "id": "minimax/minimax-m2-her",
-        "last_updated": "2026-01-23",
-        "limit": {
-          "context": 65536,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-M2 Her",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-01-23",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "minimax/minimax-m2.1": {
-        "attachment": false,
-        "canonical_model_id": "minimax/MiniMax-M2.1",
-        "cost": {
-          "cache_read": 0.03,
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "MiniMax model for chat, coding, office work, and agentic tasks",
-        "family": "minimax",
-        "id": "minimax/minimax-m2.1",
-        "last_updated": "2025-12-23",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-M2.1",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2025-12-23",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -154483,8 +154476,8 @@
         "id": "minimax/minimax-m2.7",
         "last_updated": "2026-03-18",
         "limit": {
-          "context": 204800,
-          "output": 131072
+          "context": 196608,
+          "output": 176947
         },
         "modalities": {
           "input": [
@@ -158584,8 +158577,8 @@
         "canonical_model_id": "openai/gpt-oss-120b",
         "cost": {
           "cache_read": 0.015,
-          "input": 0.016,
-          "output": 0.061
+          "input": 0.03,
+          "output": 0.15
         },
         "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
         "family": "gpt-oss",
@@ -158626,9 +158619,9 @@
         "attachment": false,
         "canonical_model_id": "openai/gpt-oss-20b",
         "cost": {
-          "cache_read": 0.004,
-          "input": 0.005,
-          "output": 0.019
+          "cache_read": 0.003,
+          "input": 0.004,
+          "output": 0.017
         },
         "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
         "family": "gpt-oss",
@@ -159819,8 +159812,7 @@
         "attachment": false,
         "canonical_model_id": "alibaba/qwen3-next-80b-a3b-instruct",
         "cost": {
-          "cache_read": 0.07,
-          "input": 0.1,
+          "input": 0.09,
           "output": 1.1
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
@@ -159830,7 +159822,7 @@
         "last_updated": "2025-09",
         "limit": {
           "context": 262144,
-          "output": 235929
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -163894,8 +163886,8 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1,
-          "input": 0.1035,
+          "cache_read": 0.0927,
+          "input": 0.0927,
           "output": 8
         },
         "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
@@ -163936,9 +163928,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.059,
-          "output": 0.3
+          "cache_read": 0.001876,
+          "input": 0.05896,
+          "output": 0.17688
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
@@ -163946,7 +163938,7 @@
         "last_updated": "2026-08-01",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -164072,9 +164064,9 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.18,
-          "input": 0.1824,
-          "output": 9.3388
+          "cache_read": 0.15,
+          "input": 0.1567,
+          "output": 10.5448
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
@@ -170989,10 +170981,10 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k3.1-pro",
         "cost": {
-          "cache_read": 0.2,
+          "cache_read": 0.19,
           "cache_write": 2,
-          "input": 2,
-          "output": 10
+          "input": 1.9,
+          "output": 9.5
         },
         "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
         "family": "kimi-k3",
@@ -180468,106 +180460,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "canopywave/deepseek-v4-flash": {
-        "attachment": false,
-        "canonical_model_id": "deepseek/deepseek-v4-flash",
-        "cost": {
-          "cache_read": 0.03,
-          "input": 0.14,
-          "output": 0.28
-        },
-        "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
-        "family": "deepseek-flash",
-        "id": "canopywave/deepseek-v4-flash",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2025-05",
-        "last_updated": "2026-04-24",
-        "limit": {
-          "context": 1000000,
-          "output": 393216
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Flash (CanopyWave)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "minimal",
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-04-24",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "canopywave/deepseek-v4-pro": {
-        "attachment": false,
-        "canonical_model_id": "deepseek/deepseek-v4-pro",
-        "cost": {
-          "cache_read": 0.01,
-          "input": 1.74,
-          "output": 3.48
-        },
-        "description": "Open MoE flagship with million-token context for coding and long agent runs",
-        "family": "deepseek-thinking",
-        "id": "canopywave/deepseek-v4-pro",
-        "interleaved": {
-          "field": "reasoning_content"
-        },
-        "knowledge": "2025-05",
-        "last_updated": "2026-04-24",
-        "limit": {
-          "context": 1000000,
-          "output": 393216
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Pro (CanopyWave)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "minimal",
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-04-24",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "canopywave/glm-5.2": {
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.2",
@@ -180715,6 +180607,100 @@
         "release_date": "2026-07-16",
         "structured_output": false,
         "temperature": false,
+        "tool_call": true
+      },
+      "canopywave/minimax-m3.1-flash": {
+        "attachment": true,
+        "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
+        "cost": {
+          "cache_read": 0.015,
+          "input": 0.15,
+          "output": 0.6
+        },
+        "description": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
+        "family": "minimax",
+        "id": "canopywave/minimax-m3.1-flash",
+        "last_updated": "2026-10-19",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiniMax M3.1 Flash (CanopyWave)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-19",
+        "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "canopywave/qwen3.8-flash": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen3.8-flash",
+        "cost": {
+          "cache_read": 0.02,
+          "input": 0.15,
+          "output": 0.5
+        },
+        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+        "family": "qwen",
+        "id": "canopywave/qwen3.8-flash",
+        "last_updated": "2026-08-26",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3.8 Flash (CanopyWave)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-08-26",
+        "structured_output": false,
+        "temperature": true,
         "tool_call": true
       },
       "cerebras/gpt-oss-120b": {
@@ -189951,6 +189937,38 @@
         "structured_output": true,
         "temperature": false,
         "tool_call": true
+      },
+      "scx-ai-gp/kimi-k3.1-pro": {
+        "attachment": false,
+        "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+        "cost": {
+          "cache_read": 0.19,
+          "input": 1.9,
+          "output": 9.5
+        },
+        "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
+        "family": "kimi-k3",
+        "id": "scx-ai-gp/kimi-k3.1-pro",
+        "last_updated": "2026-10-23",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro (scx-ai-gp)",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-10-23",
+        "structured_output": false,
+        "temperature": false,
+        "tool_call": false
       },
       "scx-ai-gp/qwen3.8-max": {
         "attachment": true,
@@ -220202,9 +220220,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.006,
-          "input": 0.09,
-          "output": 0.25
+          "cache_read": 0.004,
+          "input": 0.022,
+          "output": 0.4
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
         "family": "deepseek-flash",
@@ -220598,9 +220616,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.006,
-          "input": 0.09,
-          "output": 0.25
+          "cache_read": 0.004,
+          "input": 0.022,
+          "output": 0.4
         },
         "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
         "family": "deepseek-flash",
@@ -223478,9 +223496,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.013,
-          "input": 0.026,
-          "output": 0.079
+          "cache_read": 0.023,
+          "input": 0.047,
+          "output": 0.14
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -223551,9 +223569,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.013,
-          "input": 0.026,
-          "output": 0.079
+          "cache_read": 0.023,
+          "input": 0.047,
+          "output": 0.14
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -226935,9 +226953,9 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k2.6",
         "cost": {
-          "cache_read": 0.039,
-          "input": 0.39,
-          "output": 1.8
+          "cache_read": 0.0656,
+          "input": 0.3895,
+          "output": 1.64
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -226970,9 +226988,9 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k2.6",
         "cost": {
-          "cache_read": 0.039,
-          "input": 0.39,
-          "output": 1.8
+          "cache_read": 0.0656,
+          "input": 0.3895,
+          "output": 1.64
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -229967,9 +229985,9 @@
         "attachment": false,
         "canonical_model_id": "openai/gpt-oss-20b",
         "cost": {
-          "cache_read": 0.004,
-          "input": 0.005,
-          "output": 0.021
+          "cache_read": 0.003,
+          "input": 0.004,
+          "output": 0.017
         },
         "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
         "family": "gpt-oss",
@@ -230352,6 +230370,48 @@
         "release_date": "2025-06-10",
         "structured_output": true,
         "temperature": false,
+        "tool_call": true
+      },
+      "orca/orcacyber-k3.1-pro": {
+        "attachment": true,
+        "cost": {
+          "cache_read": 0.35,
+          "input": 4,
+          "output": 20
+        },
+        "description": "An abliterated / uncensored variant of Kimi K3.1 Pro for authorized security research, coding, and tool use. Accepts text and images, with reasoning enabled by default and an option to turn it off. Supports a 1M-token context window, up to 943K output tokens, tool calling, and structured output. Offensive work is permitted only within an authorized security engagement.",
+        "id": "orca/orcacyber-k3.1-pro",
+        "last_updated": "2026-11-05",
+        "limit": {
+          "context": 1048064,
+          "input": 1048064,
+          "output": 943718
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "OrcaCyber K3.1 Pro Uncensored",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-05",
+        "structured_output": true,
         "tool_call": true
       },
       "orca/orcacyber-minimax-m3.1-flash": {
@@ -272910,7 +272970,7 @@
         "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
         "cost": {
           "cache_read": 0.035,
-          "input": 0.059,
+          "input": 0.058,
           "output": 0.3
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
@@ -273043,9 +273103,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
         "cost": {
-          "cache_read": 0.11,
-          "input": 0.115,
-          "output": 4.6
+          "cache_read": 0.098,
+          "input": 0.103,
+          "output": 4.11
         },
         "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
         "family": "deepseek-thinking",
@@ -274538,9 +274598,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.027,
-          "output": 0.082
+          "cache_read": 0.021,
+          "input": 0.043,
+          "output": 0.129
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -275027,6 +275087,42 @@
           }
         ],
         "release_date": "2026-09-10",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "inclusionai/ling-3.0-tiny": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.003,
+          "input": 0.015,
+          "output": 0.045
+        },
+        "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+        "family": "ling",
+        "id": "inclusionai/ling-3.0-tiny",
+        "last_updated": "2026-08-06",
+        "limit": {
+          "context": 262144,
+          "output": 250000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ling 3.0 Tiny",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-08-06",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -275965,38 +276061,6 @@
         "temperature": true,
         "tool_call": false
       },
-      "minimax/minimax-01": {
-        "attachment": true,
-        "cost": {
-          "input": 0.2,
-          "output": 1.1
-        },
-        "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
-        "family": "minimax",
-        "id": "minimax/minimax-01",
-        "knowledge": "2024-03-31",
-        "last_updated": "2025-01-15",
-        "limit": {
-          "context": 1000192,
-          "output": 40000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-01",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-01-15",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
       "minimax/minimax-m1": {
         "attachment": false,
         "cost": {
@@ -276029,109 +276093,6 @@
           }
         ],
         "release_date": "2025-06-17",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "minimax/minimax-m2": {
-        "attachment": false,
-        "canonical_model_id": "minimax/MiniMax-M2",
-        "cost": {
-          "input": 0.255,
-          "output": 1.02
-        },
-        "description": "Efficient open MiniMax model built for coding agents and tool-heavy workflows",
-        "family": "minimax",
-        "id": "minimax/minimax-m2",
-        "interleaved": {
-          "field": "reasoning_details"
-        },
-        "last_updated": "2025-10-27",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-M2",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-10-27",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "minimax/minimax-m2-her": {
-        "attachment": false,
-        "canonical_model_id": "minimax/MiniMax-M2-Her",
-        "cost": {
-          "cache_read": 0.03,
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "MiniMax model for chat, coding, office work, and agentic tasks",
-        "family": "minimax",
-        "id": "minimax/minimax-m2-her",
-        "last_updated": "2026-01-23",
-        "limit": {
-          "context": 65536,
-          "output": 2048
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-M2 Her",
-        "open_weights": false,
-        "reasoning": false,
-        "release_date": "2026-01-23",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "minimax/minimax-m2.1": {
-        "attachment": false,
-        "canonical_model_id": "minimax/MiniMax-M2.1",
-        "cost": {
-          "cache_read": 0.03,
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "Earlier MiniMax agent model for practical coding and productivity tasks",
-        "family": "minimax",
-        "id": "minimax/minimax-m2.1",
-        "interleaved": {
-          "field": "reasoning_details"
-        },
-        "last_updated": "2025-12-23",
-        "limit": {
-          "context": 204800,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "MiniMax-M2.1",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-12-23",
         "structured_output": false,
         "temperature": true,
         "tool_call": true
@@ -276176,9 +276137,9 @@
         "attachment": false,
         "canonical_model_id": "minimax/MiniMax-M2.7",
         "cost": {
-          "cache_read": 0.06,
-          "input": 0.3,
-          "output": 1.2
+          "cache_read": 0.042,
+          "input": 0.21,
+          "output": 0.84
         },
         "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
         "family": "minimax",
@@ -276186,7 +276147,7 @@
         "last_updated": "2026-03-18",
         "limit": {
           "context": 204800,
-          "output": 131072
+          "output": 176947
         },
         "modalities": {
           "input": [
@@ -280601,9 +280562,9 @@
         "attachment": false,
         "canonical_model_id": "openai/gpt-oss-120b",
         "cost": {
-          "cache_read": 0.014,
-          "input": 0.016,
-          "output": 0.059
+          "cache_read": 0.075,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
         "family": "gpt-oss",
@@ -281854,8 +281815,7 @@
         "attachment": false,
         "canonical_model_id": "alibaba/qwen3-next-80b-a3b-instruct",
         "cost": {
-          "cache_read": 0.07,
-          "input": 0.1,
+          "input": 0.09,
           "output": 1.1
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
@@ -281865,7 +281825,7 @@
         "last_updated": "2025-09",
         "limit": {
           "context": 262144,
-          "output": 235929
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -285995,8 +285955,8 @@
       "~deepseek/deepseek-pro-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.1,
-          "input": 0.1035,
+          "cache_read": 0.0927,
+          "input": 0.0927,
           "output": 8
         },
         "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
@@ -286038,7 +285998,7 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.035,
-          "input": 0.059,
+          "input": 0.058,
           "output": 0.3
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -286193,9 +286153,9 @@
       "~moonshotai/kimi-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.18,
-          "input": 0.1824,
-          "output": 9.3388
+          "cache_read": 0.16,
+          "input": 0.1672,
+          "output": 10.5448
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi",
