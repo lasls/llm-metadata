@@ -417,6 +417,7 @@
       "attachment": false,
       "canonical_model_id": "anthracite-org/magnum-v4-72b",
       "cost": {
+        "cache_read": 2.5,
         "input": 2.5,
         "output": 5
       },
@@ -1513,7 +1514,7 @@
       "release_date": "2025-03-13",
       "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "cohere/command-a-plus": {
       "attachment": true,
@@ -1652,7 +1653,7 @@
       "release_date": "2024-12-13",
       "structured_output": true,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "cohere/north-mini-code:free": {
       "attachment": false,
@@ -3670,9 +3671,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.01,
-        "input": 0.04,
-        "output": 0.15
+        "cache_read": 0.015,
+        "input": 0.031,
+        "output": 0.092
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -4180,7 +4181,7 @@
         }
       ],
       "release_date": "2026-09-29",
-      "structured_output": true,
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -4443,7 +4444,7 @@
           "text"
         ]
       },
-      "name": "LiquidAI: LFM2.5-2.6B",
+      "name": "LiquidAI: LFM2.5-2.6B (retires Nov 13)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -4498,10 +4499,88 @@
       "temperature": true,
       "tool_call": true
     },
+    "liquid/lfm-3-1.7b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.08,
+        "output": 0.2
+      },
+      "description": "A compact 1.7B-parameter text model with a 256K-token context, post-trained for agents, tool calling, and structured outputs. It reasons before it answers. Prompts and outputs may be retained and used...",
+      "family": "liquid",
+      "id": "liquid/lfm-3-1.7b",
+      "last_updated": "2026-11-06",
+      "limit": {
+        "context": 262144,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LiquidAI: LFM3-1.7B",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "liquid/lfm-3-1.7b:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "A compact 1.7B-parameter text model with a 256K-token context, post-trained for agents, tool calling, and structured outputs. It reasons before it answers. Prompts and outputs may be retained and used...",
+      "family": "liquid",
+      "id": "liquid/lfm-3-1.7b:free",
+      "last_updated": "2026-11-06",
+      "limit": {
+        "context": 262144,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LiquidAI: LFM3-1.7B (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "mancer/weaver": {
       "attachment": false,
       "canonical_model_id": "mancer/weaver",
       "cost": {
+        "cache_read": 0.4,
         "input": 0.4,
         "output": 0.75
       },
@@ -5289,8 +5368,8 @@
       "id": "minimax/minimax-m2.5",
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 198000,
-        "output": 32768
+        "context": 65536,
+        "output": 58982
       },
       "modalities": {
         "input": [
@@ -9429,9 +9508,9 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.017,
-        "output": 0.063
+        "cache_read": 0.009,
+        "input": 0.01,
+        "output": 0.037
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
@@ -12647,9 +12726,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.020625,
-        "input": 0.0825,
-        "output": 0.33
+        "cache_read": 0.033,
+        "input": 0.132,
+        "output": 0.528
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
@@ -12776,9 +12855,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.0378,
-        "input": 0.7506,
-        "output": 2.2509
+        "cache_read": 0.042,
+        "input": 0.834,
+        "output": 2.501
       },
       "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
       "family": "Hy",
@@ -13069,6 +13148,7 @@
       "attachment": false,
       "canonical_model_id": "undi95/remm-slerp-l2-13b",
       "cost": {
+        "cache_read": 0.35,
         "input": 0.35,
         "output": 0.65
       },
@@ -14782,7 +14862,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.035,
-        "input": 0.0434,
+        "input": 0.059,
         "output": 0.3
       },
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
@@ -14917,9 +14997,9 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.18,
-        "input": 0.1824,
-        "output": 9.3388
+        "cache_read": 0.15,
+        "input": 0.1539,
+        "output": 10.5539
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi",
