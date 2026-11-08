@@ -182,10 +182,6 @@
             "high",
             "max"
           ]
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-09-22",
@@ -316,101 +312,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "accounts/fireworks/models/gpt-oss-120b": {
-      "attachment": false,
-      "canonical_model_id": "openai/gpt-oss-120b",
-      "cost": {
-        "cache_read": 0.015,
-        "input": 0.15,
-        "output": 0.6
-      },
-      "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
-      "experimental": {
-        "modes": {
-          "priority": {
-            "cost": {
-              "cache_read": 0.018,
-              "input": 0.18,
-              "output": 0.72
-            },
-            "provider": {
-              "body": {
-                "service_tier": "priority"
-              }
-            }
-          }
-        }
-      },
-      "family": "gpt-oss",
-      "id": "accounts/fireworks/models/gpt-oss-120b",
-      "knowledge": "2024-06",
-      "last_updated": "2025-08-05",
-      "limit": {
-        "context": 131072,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GPT OSS 120B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-08-05",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "accounts/fireworks/models/inkling": {
-      "attachment": true,
-      "canonical_model_id": "thinkingmachines/inkling",
-      "cost": {
-        "cache_read": 0.17,
-        "input": 1,
-        "output": 4.05
-      },
-      "description": "Multimodal MoE reasoning model (975B total, 41B active) for text, image, and audio",
-      "family": "ling",
-      "id": "accounts/fireworks/models/inkling",
-      "last_updated": "2026-07-15",
-      "limit": {
-        "context": 1048576,
-        "output": 1048576
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Inkling",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-07-15",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "accounts/fireworks/models/kimi-k3": {
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3",
@@ -470,13 +371,75 @@
             "high",
             "max"
           ]
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "accounts/fireworks/models/kimi-k3p1-pro": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+      "cost": {
+        "cache_read": 0.2,
+        "input": 2,
+        "output": 10
+      },
+      "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
+      "experimental": {
+        "modes": {
+          "priority": {
+            "cost": {
+              "cache_read": 0.3,
+              "input": 3,
+              "output": 15
+            },
+            "provider": {
+              "body": {
+                "service_tier": "priority"
+              }
+            }
+          }
+        }
+      },
+      "family": "kimi-k3",
+      "id": "accounts/fireworks/models/kimi-k3p1-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-10-23",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3.1 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-23",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -663,100 +626,6 @@
         }
       ],
       "release_date": "2026-10-15",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "accounts/fireworks/models/nemotron-3-ultra-nvfp4": {
-      "attachment": false,
-      "canonical_model_id": "nvidia/nemotron-3-ultra-550b-a55b",
-      "cost": {
-        "cache_read": 0.12,
-        "input": 0.6,
-        "output": 2.4
-      },
-      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
-      "family": "nemotron",
-      "id": "accounts/fireworks/models/nemotron-3-ultra-nvfp4",
-      "knowledge": "2025-09",
-      "last_updated": "2026-06-04",
-      "limit": {
-        "context": 262144,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nemotron 3 Ultra 550B A55B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-06-04",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b": {
-      "attachment": false,
-      "canonical_model_id": "nvidia/nemotron-3.5-lightning",
-      "cost": {
-        "cache_read": 0.01,
-        "input": 0.05,
-        "output": 0.2
-      },
-      "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
-      "experimental": {
-        "modes": {
-          "priority": {
-            "cost": {
-              "cache_read": 0.0125,
-              "input": 0.0625,
-              "output": 0.25
-            },
-            "provider": {
-              "body": {
-                "service_tier": "priority"
-              }
-            }
-          }
-        }
-      },
-      "family": "nemotron",
-      "id": "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
-      "knowledge": "2025-09",
-      "last_updated": "2026-08-11",
-      "limit": {
-        "context": 262144,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nemotron 3.5 Lightning 30B A3B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-08-11",
-      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -963,6 +832,56 @@
         ]
       },
       "name": "DeepSeek V4.1 Flash 1017 Spot",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "accounts/fireworks/routers/deepseek-v4p1-flash-1017-ultrafast": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.048,
+        "input": 2.4,
+        "output": 9.6
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "accounts/fireworks/routers/deepseek-v4p1-flash-1017-ultrafast",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017 Ultra-fast",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -1334,10 +1253,6 @@
             "high",
             "max"
           ]
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-07-16",
@@ -1388,10 +1303,6 @@
             "high",
             "max"
           ]
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-07-16",
@@ -1442,10 +1353,6 @@
             "high",
             "max"
           ]
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-07-16",
@@ -1512,10 +1419,6 @@
             "high",
             "max"
           ]
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
         }
       ],
       "release_date": "2026-07-16",
