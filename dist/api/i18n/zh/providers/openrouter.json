@@ -1253,6 +1253,87 @@
       "temperature": false,
       "tool_call": true
     },
+    "baidu/ernie-5.5-flash-preview": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.028,
+        "input": 0.28,
+        "output": 1.13
+      },
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
+      "family": "ernie",
+      "id": "baidu/ernie-5.5-flash-preview",
+      "last_updated": "2026-11-10",
+      "limit": {
+        "context": 1024000,
+        "output": 921600
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "ERNIE-5.5-Flash-Preview",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "baidu/ernie-light-dt-1.0-intl": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.113,
+        "input": 1.13,
+        "output": 3.94
+      },
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "family": "ernie",
+      "id": "baidu/ernie-light-dt-1.0-intl",
+      "last_updated": "2026-11-10",
+      "limit": {
+        "context": 1024000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "ERNIE-Light-DT-1.0",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "bytedance-seed/seed-1.6": {
       "attachment": true,
       "canonical_model_id": "bytedance-seed/seed-1-6",
@@ -2206,9 +2287,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.079605,
-        "input": 0.95526,
-        "output": 1.91052
+        "cache_read": 0.074081,
+        "input": 0.888966,
+        "output": 1.777932
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2295,9 +2376,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.005,
-        "input": 0.006,
-        "output": 0.5
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -3567,6 +3648,56 @@
       "temperature": true,
       "tool_call": true
     },
+    "google/gemini-4-carbon": {
+      "attachment": true,
+      "canonical_model_id": "google/gemini-4-carbon",
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 0.1875,
+        "input": 2,
+        "input_audio": 2,
+        "output": 10,
+        "reasoning": 10
+      },
+      "description": "Gemini multimodal model for text, image, audio, video, and document tasks",
+      "family": "gemini",
+      "id": "google/gemini-4-carbon",
+      "knowledge": "2026-03",
+      "last_updated": "2026-11-10",
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 4 Carbon",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "google/gemini-nano-banana-2.1": {
       "attachment": true,
       "canonical_model_id": "google/gemini-nano-banana-2.1",
@@ -3657,6 +3788,7 @@
     },
     "google/gemini-omni-1.2-flash": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-omni-1.2-flash",
       "cost": {
         "input": 1.5,
         "output": 9
@@ -3695,7 +3827,8 @@
       "release_date": "2026-11-05",
       "structured_output": false,
       "temperature": true,
-      "tool_call": false
+      "tool_call": false,
+      "type": "video"
     },
     "google/gemma-2-27b-it": {
       "attachment": false,
@@ -4495,9 +4628,9 @@
       "attachment": false,
       "canonical_model_id": "mancer/weaver",
       "cost": {
-        "cache_read": 0.4,
-        "input": 0.4,
-        "output": 0.75
+        "cache_read": 0.3,
+        "input": 0.3,
+        "output": 0.5
       },
       "description": "General-purpose chat model for instruction following, writing, and analysis",
       "family": "alpha",
@@ -5168,7 +5301,7 @@
       "last_updated": "2026-10-15",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -5392,9 +5525,9 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.0075,
+        "input": 0.075,
+        "output": 0.3
       },
       "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
       "family": "minimax",
@@ -12936,9 +13069,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13065,9 +13198,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13402,9 +13535,9 @@
       "attachment": false,
       "canonical_model_id": "undi95/remm-slerp-l2-13b",
       "cost": {
-        "cache_read": 0.35,
-        "input": 0.35,
-        "output": 0.65
+        "cache_read": 0.2,
+        "input": 0.3,
+        "output": 0.5
       },
       "description": "Open-weight instruction model for adaptable chat and self-hosted production workloads",
       "id": "undi95/remm-slerp-l2-13b",
@@ -14608,8 +14741,8 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
       "cost": {
-        "cache_read": 0.009,
-        "input": 0.01,
+        "cache_read": 0.006,
+        "input": 0.007,
         "output": 6.8
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
@@ -14696,8 +14829,8 @@
       "canonical_model_id": "zhipuai/glm-5.3-flash",
       "cost": {
         "cache_read": 0.03,
-        "input": 0.15,
-        "output": 0.5
+        "input": 0.0399,
+        "output": 0.0784
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",
@@ -14705,7 +14838,7 @@
       "last_updated": "2026-08-26",
       "limit": {
         "context": 1048576,
-        "output": 943717
+        "output": 131072
       },
       "modalities": {
         "input": [

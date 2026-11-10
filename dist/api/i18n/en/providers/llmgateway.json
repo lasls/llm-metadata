@@ -1070,9 +1070,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.04,
-        "input": 0.44,
-        "output": 1.32
+        "cache_read": 0.016,
+        "input": 0.08,
+        "output": 0.18
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -1080,7 +1080,7 @@
       "knowledge": "2025-05",
       "last_updated": "2026-07-31",
       "limit": {
-        "context": 1000000,
+        "context": 1050000,
         "output": 384000
       },
       "modalities": {
@@ -1094,7 +1094,20 @@
       "name": "deepseek-v4-flash-0731",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
       "release_date": "2026-07-31",
       "temperature": true,
       "tool_call": true
@@ -1931,6 +1944,52 @@
       ],
       "release_date": "2026-10-13",
       "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gemini-4-carbon": {
+      "attachment": true,
+      "canonical_model_id": "google/gemini-4-carbon",
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 0.375,
+        "input": 4,
+        "output": 20
+      },
+      "description": "Google's most capable reasoning model for complex software engineering, deep math and science, high factual accuracy, and long-horizon autonomous agents",
+      "family": "gemini",
+      "id": "gemini-4-carbon",
+      "knowledge": "2026-03",
+      "last_updated": "2026-11-10",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 4 Carbon",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-10",
       "temperature": false,
       "tool_call": true
     },
