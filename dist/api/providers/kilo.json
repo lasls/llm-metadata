@@ -541,6 +541,54 @@
       "temperature": false,
       "tool_call": true
     },
+    "anthropic/claude-fable-5.2": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-fable-5-2",
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 10,
+        "input": 8,
+        "output": 40
+      },
+      "description": "Claude Fable 5.2 is Anthropic's most capable model for the most demanding technical work, with gains over Fable 5.1 in coding, reasoning, and vision. In prerelease testing it completed otherwise-infeasible...",
+      "family": "claude-fable",
+      "id": "anthropic/claude-fable-5.2",
+      "knowledge": "2026-06",
+      "last_updated": "2026-11-09",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Anthropic: Claude Fable 5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "anthropic/claude-haiku-4.5": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-haiku-4-5",
@@ -3680,8 +3728,8 @@
       "id": "google/gemma-4-26b-a4b-it",
       "last_updated": "2026-04-02",
       "limit": {
-        "context": 262144,
-        "output": 235929
+        "context": 256000,
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4663,8 +4711,8 @@
       "knowledge": "2023-12",
       "last_updated": "2024-12-06",
       "limit": {
-        "context": 131072,
-        "output": 32768
+        "context": 128000,
+        "output": 115200
       },
       "modalities": {
         "input": [
@@ -4780,6 +4828,55 @@
       "structured_output": false,
       "temperature": true,
       "tool_call": false
+    },
+    "meta/muse-ember": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.004,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.5
+      },
+      "description": "Muse Ember is the smallest and most efficient model from Meta that’s designed for complex reasoning execution and the work agents repeat all day: tool calls, coding agent subtasks, routing,...",
+      "family": "muse",
+      "id": "meta/muse-ember",
+      "last_updated": "2026-11-09",
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Meta: Muse Ember",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-09",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "meta/muse-glimmer-30b": {
       "attachment": true,
@@ -5188,50 +5285,11 @@
       "temperature": true,
       "tool_call": false
     },
-    "minimax/minimax-m1": {
-      "attachment": false,
-      "cost": {
-        "input": 0.55,
-        "output": 2.2
-      },
-      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
-      "family": "minimax",
-      "id": "minimax/minimax-m1",
-      "last_updated": "2025-06-17",
-      "limit": {
-        "context": 1000000,
-        "output": 40000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax: MiniMax M1",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-06-17",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "minimax/minimax-m2.5": {
       "attachment": false,
       "canonical_model_id": "minimax/MiniMax-M2.5",
       "cost": {
-        "cache_read": 0.03,
+        "cache_read": 0.06,
         "input": 0.3,
         "output": 1.2
       },
@@ -5271,9 +5329,9 @@
       "attachment": false,
       "canonical_model_id": "minimax/MiniMax-M2.7",
       "cost": {
-        "cache_read": 0.06,
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.042,
+        "input": 0.21,
+        "output": 0.84
       },
       "description": "MiniMax model for chat, coding, office work, and agentic tasks",
       "family": "minimax",
@@ -9434,7 +9492,7 @@
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
-        "output": 32768
+        "output": 117964
       },
       "modalities": {
         "input": [
@@ -10260,8 +10318,8 @@
     "qwen/qwen3-14b": {
       "attachment": false,
       "cost": {
-        "input": 0.12,
-        "output": 0.24
+        "input": 0.1,
+        "output": 0.22
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -10269,7 +10327,7 @@
       "last_updated": "2025-04-28",
       "limit": {
         "context": 40960,
-        "output": 16384
+        "output": 36864
       },
       "modalities": {
         "input": [
@@ -11870,9 +11928,9 @@
     "ricursiveai/ripple-65b-preview": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.2,
-        "output": 0.6
+        "cache_read": 0.025,
+        "input": 0.1,
+        "output": 0.3
       },
       "description": "Ripple-65B-Preview by ricursiveAI, a 65B model with native tool calling, served in BF16.",
       "id": "ricursiveai/ripple-65b-preview",
@@ -11891,9 +11949,18 @@
       },
       "name": "Ricursive: Ripple 65B Preview",
       "open_weights": false,
-      "reasoning": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-11-04",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -12197,53 +12264,6 @@
       "structured_output": false,
       "temperature": false,
       "tool_call": false
-    },
-    "stealth/crouton-alpha": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Crouton Alpha is a lightweight model built for scalable coding, agentic, and multimodal workflows. It's ideal for executing agentic sub-tasks, tool use, and document analysis in high-volume, repeated work. Developers...",
-      "family": "alpha",
-      "id": "stealth/crouton-alpha",
-      "last_updated": "2026-11-03",
-      "limit": {
-        "context": 1048576,
-        "output": 943718
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video",
-          "pdf",
-          "audio"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Crouton Alpha",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-11-03",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
     },
     "stealth/glyph-cluster": {
       "attachment": false,
@@ -12858,6 +12878,50 @@
         }
       ],
       "release_date": "2026-07-15",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/inkling-2-small:free": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-2-small",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Inkling 2 Small is a multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second Inkling...",
+      "family": "ling",
+      "id": "thinkingmachines/inkling-2-small:free",
+      "last_updated": "2026-11-05",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Thinking Machines: Inkling 2 Small (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-05",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -13507,7 +13571,7 @@
       "attachment": false,
       "canonical_model_id": "xiaomi/mimo-v2.5-pro",
       "cost": {
-        "cache_read": 0.004,
+        "cache_read": 0.0036,
         "context_over_200k": {
           "cache_read": 0.4,
           "input": 2,
@@ -14213,8 +14277,8 @@
       "id": "z-ai/glm-5.3-flash",
       "last_updated": "2026-08-26",
       "limit": {
-        "context": 1048576,
-        "output": 131072
+        "context": 1048575,
+        "output": 943717
       },
       "modalities": {
         "input": [
@@ -14417,10 +14481,10 @@
     "~anthropic/claude-fable-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 12.5,
-        "input": 10,
-        "output": 50
+        "cache_read": 0.2,
+        "cache_write": 10,
+        "input": 8,
+        "output": 40
       },
       "description": "This model always redirects to the latest model in the Claude Fable family.",
       "family": "claude-fable",
@@ -14440,7 +14504,7 @@
           "text"
         ]
       },
-      "name": "Anthropic: Claude Fable Latest ($$$$)",
+      "name": "Anthropic: Claude Fable Latest",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [

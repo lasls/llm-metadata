@@ -517,6 +517,54 @@
       "temperature": false,
       "tool_call": true
     },
+    "anthropic/claude-fable-5.2": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-fable-5-2",
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 10,
+        "input": 8,
+        "output": 40
+      },
+      "description": "Claude model for creative writing, analysis, and controlled agent workflows",
+      "family": "claude-fable",
+      "id": "anthropic/claude-fable-5.2",
+      "knowledge": "2026-06",
+      "last_updated": "2026-11-09",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Fable 5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "anthropic/claude-haiku-4.5": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-haiku-4-5",
@@ -2158,9 +2206,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.074501,
-        "input": 0.894012,
-        "output": 1.788024
+        "cache_read": 0.079605,
+        "input": 0.95526,
+        "output": 1.91052
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -3785,9 +3833,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.09,
-        "output": 0.3
+        "cache_read": 0.046,
+        "input": 0.08,
+        "output": 0.1
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3795,7 +3843,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4648,9 +4696,9 @@
       "attachment": false,
       "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
-        "cache_read": 0.295,
-        "input": 0.59,
-        "output": 0.79
+        "cache_read": 0.71,
+        "input": 0.71,
+        "output": 0.71
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -4659,7 +4707,7 @@
       "last_updated": "2024-12-06",
       "limit": {
         "context": 131072,
-        "output": 32768
+        "output": 115200
       },
       "modalities": {
         "input": [
@@ -4775,6 +4823,55 @@
       "structured_output": false,
       "temperature": true,
       "tool_call": false
+    },
+    "meta/muse-ember": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.004,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.5
+      },
+      "description": "Open Llama multimodal model for image understanding and text reasoning",
+      "family": "muse",
+      "id": "meta/muse-ember",
+      "last_updated": "2026-11-09",
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Muse Ember",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-09",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "meta/muse-glimmer-30b": {
       "attachment": true,
@@ -5183,42 +5280,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "minimax/minimax-m1": {
-      "attachment": false,
-      "cost": {
-        "input": 0.55,
-        "output": 2.2
-      },
-      "description": "MiniMax model for chat, coding, office work, and agentic tasks",
-      "family": "minimax",
-      "id": "minimax/minimax-m1",
-      "knowledge": "2024-06-30",
-      "last_updated": "2025-06-17",
-      "limit": {
-        "context": 1000000,
-        "output": 40000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax M1",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-06-17",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "minimax/minimax-m2.5": {
       "attachment": false,
       "canonical_model_id": "minimax/MiniMax-M2.5",
@@ -5235,7 +5296,7 @@
       },
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 204800,
+        "context": 200000,
         "output": 58982
       },
       "modalities": {
@@ -5268,7 +5329,7 @@
       "id": "minimax/minimax-m2.7",
       "last_updated": "2026-03-18",
       "limit": {
-        "context": 204800,
+        "context": 196608,
         "output": 176947
       },
       "modalities": {
@@ -5331,9 +5392,9 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.0075,
+        "input": 0.075,
+        "output": 0.3
       },
       "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
       "family": "minimax",
@@ -6970,7 +7031,7 @@
       "cost": {
         "cache_read": 0.02,
         "input": 0.15,
-        "output": 0.5
+        "output": 0.47
       },
       "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
       "family": "nemotron",
@@ -9690,9 +9751,9 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-20b",
       "cost": {
-        "cache_read": 0.009,
-        "input": 0.018,
-        "output": 0.09
+        "cache_read": 0.03,
+        "input": 0.03,
+        "output": 0.13
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
@@ -9701,7 +9762,7 @@
       "last_updated": "2025-08-05",
       "limit": {
         "context": 131072,
-        "output": 32768
+        "output": 117964
       },
       "modalities": {
         "input": [
@@ -10540,8 +10601,8 @@
     "qwen/qwen3-14b": {
       "attachment": false,
       "cost": {
-        "input": 0.12,
-        "output": 0.24
+        "input": 0.1,
+        "output": 0.22
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -10550,7 +10611,7 @@
       "last_updated": "2025-04-28",
       "limit": {
         "context": 40960,
-        "output": 16384
+        "output": 36864
       },
       "modalities": {
         "input": [
@@ -12234,10 +12295,15 @@
         ]
       },
       "name": "Ripple 65B Preview",
-      "open_weights": false,
-      "reasoning": false,
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
       "release_date": "2026-11-04",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -12574,53 +12640,6 @@
       "temperature": false,
       "tool_call": false
     },
-    "stealth/crouton-alpha": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
-      "family": "alpha",
-      "id": "stealth/crouton-alpha",
-      "last_updated": "2026-11-03",
-      "limit": {
-        "context": 1048576,
-        "output": 943718
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video",
-          "pdf",
-          "audio"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Crouton Alpha",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-11-03",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "stepfun/step-3.5-flash": {
       "attachment": false,
       "canonical_model_id": "stepfun/step-3.5-flash",
@@ -12711,7 +12730,7 @@
       "id": "stepfun/step-5-preview",
       "last_updated": "2026-09-20",
       "limit": {
-        "context": 1048576,
+        "context": 1000000,
         "input": 1000000,
         "output": 64000
       },
@@ -13181,6 +13200,50 @@
         }
       ],
       "release_date": "2026-07-15",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/inkling-2-small:free": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-2-small",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "family": "ling",
+      "id": "thinkingmachines/inkling-2-small:free",
+      "last_updated": "2026-11-05",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling 2 Small (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-05",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -13925,7 +13988,7 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1050000,
+        "context": 1024000,
         "output": 235929
       },
       "modalities": {
@@ -14592,8 +14655,8 @@
       "canonical_model_id": "zhipuai/glm-5.3-flash",
       "cost": {
         "cache_read": 0.03,
-        "input": 0.0335,
-        "output": 0.083
+        "input": 0.15,
+        "output": 0.5
       },
       "description": "GLM vision model for visual reasoning, documents, and multimodal agents",
       "family": "glm-flash",
@@ -14601,7 +14664,7 @@
       "last_updated": "2026-08-26",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 943717
       },
       "modalities": {
         "input": [
@@ -14800,10 +14863,10 @@
     "~anthropic/claude-fable-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.25,
-        "cache_write": 12.5,
-        "input": 10,
-        "output": 50
+        "cache_read": 0.2,
+        "cache_write": 10,
+        "input": 8,
+        "output": 40
       },
       "description": "Claude model for creative writing, analysis, and controlled agent workflows",
       "family": "claude-fable",
@@ -15239,8 +15302,8 @@
     "~moonshotai/kimi-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.18,
-        "input": 0.1824,
+        "cache_read": 0.17,
+        "input": 0.1719,
         "output": 9.3388
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",

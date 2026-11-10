@@ -950,6 +950,54 @@
       "temperature": false,
       "tool_call": true
     },
+    "anthropic/claude-fable-5-2": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-fable-5-2",
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 10,
+        "input": 8,
+        "output": 40
+      },
+      "description": "Claude model for demanding reasoning and long-horizon agentic work",
+      "family": "claude-fable",
+      "id": "anthropic/claude-fable-5-2",
+      "knowledge": "2026-06",
+      "last_updated": "2026-11-09",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Fable 5.2",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "anthropic/claude-fable-latest": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-fable-5-1",
@@ -1813,7 +1861,7 @@
       "tool_call": true
     },
     "arkanecloud/deepseek-ai/DeepSeek-V4.1-Flash-1017": {
-      "attachment": false,
+      "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
       "cost": {
         "cache_read": 0.075,
@@ -1831,7 +1879,8 @@
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
@@ -6878,9 +6927,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.04466,
-        "input": 0.15631,
-        "output": 0.390775
+        "cache_read": 0.044772,
+        "input": 0.156702,
+        "output": 0.391755
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -6922,9 +6971,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.012282,
-        "input": 0.24563,
-        "output": 1.22815
+        "cache_read": 0.012312,
+        "input": 0.246246,
+        "output": 1.231229
       },
       "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
       "family": "deepseek-flash",
@@ -6967,8 +7016,8 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "input": 0.2233,
-        "output": 0.78155
+        "input": 0.22386,
+        "output": 0.78351
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -7009,8 +7058,8 @@
       "attachment": false,
       "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
-        "input": 1.22815,
-        "output": 1.22815
+        "input": 1.231229,
+        "output": 1.231229
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -7041,8 +7090,8 @@
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-235b-a22b-instruct-2507",
       "cost": {
-        "input": 1.00485,
-        "output": 3.01455
+        "input": 1.007369,
+        "output": 3.022108
       },
       "description": "Updated large open Qwen3 MoE instruct model for multilingual chat, coding, and tool use",
       "family": "qwen",
@@ -7264,8 +7313,8 @@
       "attachment": true,
       "canonical_model_id": "mistral/ministral-3-14b-instruct-2512",
       "cost": {
-        "input": 0.33495,
-        "output": 0.4466
+        "input": 0.33579,
+        "output": 0.44772
       },
       "description": "Open vision-language model for efficient local deployment, instruction following, and tool use",
       "family": "ministral",
@@ -7296,8 +7345,8 @@
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-coder-next",
       "cost": {
-        "input": 0.167475,
-        "output": 0.8932
+        "input": 0.167895,
+        "output": 0.89544
       },
       "description": "Open-weight Qwen coding model for agents, repository edits, and multi-turn tool use",
       "family": "qwen",
@@ -7328,8 +7377,8 @@
       "attachment": false,
       "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
-        "input": 0.725725,
-        "output": 0.725725
+        "input": 0.727545,
+        "output": 0.727545
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -7360,8 +7409,8 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "input": 0.167475,
-        "output": 0.725725
+        "input": 0.167895,
+        "output": 0.727545
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -7829,9 +7878,9 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.0075,
+        "input": 0.075,
+        "output": 0.3
       },
       "description": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
       "family": "minimax",
@@ -9461,7 +9510,7 @@
         "input": 2,
         "output": 10
       },
-      "description": "Multimodal Kimi model with 1M context and always-on reasoning for coding, 3D creation, financial research, and agentic work",
+      "description": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
       "family": "kimi-k3",
       "id": "moonshot/kimi-k3.1-pro",
       "last_updated": "2026-10-23",
@@ -12527,9 +12576,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.08932,
-        "input": 0.4466,
-        "output": 0.8932
+        "cache_read": 0.089544,
+        "input": 0.44772,
+        "output": 0.89544
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -12616,9 +12665,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
       "cost": {
-        "cache_read": 0.13398,
-        "input": 0.6699,
-        "output": 2.0097
+        "cache_read": 0.134316,
+        "input": 0.67158,
+        "output": 2.014739
       },
       "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
       "family": "deepseek-flash",
@@ -12694,8 +12743,8 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "input": 0.167475,
-        "output": 0.6699
+        "input": 0.167895,
+        "output": 0.67158
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -12736,8 +12785,8 @@
       "attachment": false,
       "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
-        "input": 1.00485,
-        "output": 1.00485
+        "input": 1.007369,
+        "output": 1.007369
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -12768,8 +12817,8 @@
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-235b-a22b-instruct-2507",
       "cost": {
-        "input": 0.837375,
-        "output": 2.512125
+        "input": 0.839475,
+        "output": 2.518424
       },
       "description": "Updated large open Qwen3 MoE instruct model for multilingual chat, coding, and tool use",
       "family": "qwen",
@@ -14165,7 +14214,6 @@
         "cache_write": 0.375,
         "context_over_200k": {
           "cache_read": 0.4,
-          "cache_write": 0.25,
           "input": 4,
           "output": 18
         },
@@ -14176,7 +14224,6 @@
         "tiers": [
           {
             "cache_read": 0.4,
-            "cache_write": 0.25,
             "input": 4,
             "output": 18,
             "tier": {
