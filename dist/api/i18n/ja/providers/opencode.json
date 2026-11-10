@@ -5652,7 +5652,6 @@
         }
       ],
       "release_date": "2026-10-19",
-      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -5708,8 +5707,26 @@
       "cost": {
         "cache_read": 0.004,
         "cache_write": 0,
+        "context_over_200k": {
+          "cache_read": 0.012,
+          "cache_write": 0,
+          "input": 0.3,
+          "output": 1.5
+        },
         "input": 0.1,
-        "output": 0.5
+        "output": 0.5,
+        "tiers": [
+          {
+            "cache_read": 0.012,
+            "cache_write": 0,
+            "input": 0.3,
+            "output": 1.5,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
       },
       "description": "Reasoning model from Meta with text, image, video and PDF input and tool use",
       "family": "muse",
