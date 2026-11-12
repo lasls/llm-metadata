@@ -1,22 +1,24 @@
 {
-  "attachment": false,
+  "attachment": true,
   "canonical_model_id": "alibaba/qwen3.8-27b",
   "cost": {
     "cache_read": 0.05,
     "input": 0.08,
     "output": 0.35
   },
-  "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+  "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
   "family": "qwen",
-  "id": "Qwen3.8-27B",
+  "id": "qwen3.8-27b",
   "last_updated": "2026-08-14",
   "limit": {
-    "context": 262000,
+    "context": 1000000,
     "output": 32768
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image",
+      "video"
     ],
     "output": [
       "text"
@@ -29,14 +31,15 @@
     {
       "type": "effort",
       "values": [
+        "none",
         "low",
         "medium",
+        "high",
         "xhigh"
       ]
     }
   ],
   "release_date": "2026-08-14",
-  "structured_output": false,
   "temperature": true,
   "tool_call": true
 }
