@@ -236,6 +236,48 @@
       "temperature": true,
       "tool_call": false
     },
+    "amazon/nova-2-lite": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0825,
+        "input": 0.33,
+        "output": 2.75
+      },
+      "description": "Nova 2 Lite is a fast, cost-effective reasoning model for everyday workloads that can process text, images, and videos to generate text.",
+      "family": "nova",
+      "id": "amazon/nova-2-lite",
+      "last_updated": "2025-12-02",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Amazon: Nova 2 Lite",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium"
+          ]
+        }
+      ],
+      "release_date": "2025-12-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "amazon/nova-2-lite-v1": {
       "attachment": true,
       "canonical_model_id": "amazon/nova-2-lite-v1",
@@ -280,6 +322,39 @@
       "temperature": true,
       "tool_call": true
     },
+    "amazon/nova-lite": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.06,
+        "output": 0.24
+      },
+      "description": "A very low cost multimodal model that is lightning fast for processing image, video, and text inputs.",
+      "family": "nova-lite",
+      "id": "amazon/nova-lite",
+      "last_updated": "2024-12-03",
+      "limit": {
+        "context": 300000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Amazon: Nova Lite",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-03",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "amazon/nova-lite-v1": {
       "attachment": true,
       "canonical_model_id": "amazon/nova-lite-v1",
@@ -310,6 +385,37 @@
       "reasoning": false,
       "release_date": "2024-12-05",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "amazon/nova-micro": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0087,
+        "input": 0.035,
+        "output": 0.14
+      },
+      "description": "A text-only model that delivers the lowest latency responses at very low cost.",
+      "family": "nova-micro",
+      "id": "amazon/nova-micro",
+      "last_updated": "2024-12-03",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Amazon: Nova Micro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-03",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -377,6 +483,39 @@
       "release_date": "2025-04-30",
       "status": "deprecated",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "amazon/nova-pro": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 0.8,
+        "output": 3.2
+      },
+      "description": "A highly capable multimodal model with the best combination of accuracy, speed, and cost for a wide range of tasks.",
+      "family": "nova-pro",
+      "id": "amazon/nova-pro",
+      "last_updated": "2024-12-03",
+      "limit": {
+        "context": 300000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Amazon: Nova Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-12-03",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -1449,6 +1588,48 @@
       "temperature": true,
       "tool_call": false
     },
+    "callstack/apex": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "Apex is Callstack’s agentic coding model for mobile and web development, optimized for React Native, React, and Next.js. With a 256K context window, it supports feature development, debugging, code reviews, testing, and large refactors.",
+      "id": "callstack/apex",
+      "last_updated": "2026-10-08",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Apex",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-10-08",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "cognitivecomputations/dolphin-mistral-24b-venice-edition": {
       "attachment": false,
       "canonical_model_id": "cognitivecomputations/dolphin-mistral-24b-venice-edition",
@@ -1800,6 +1981,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "deepseek/deepseek-r1": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-r1",
+      "cost": {
+        "input": 1.35,
+        "output": 5.4
+      },
+      "description": "DeepSeek-R1 provides customers a state-of-the-art reasoning model, optimized for general reasoning tasks, math, science, and code generation.",
+      "family": "deepseek-thinking",
+      "id": "deepseek/deepseek-r1",
+      "knowledge": "2024-07",
+      "last_updated": "2025-05-29",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek: DeepSeek-R1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2025-01-20",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek/deepseek-r1-0528": {
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-r1-0528",
@@ -1836,6 +2060,49 @@
         }
       ],
       "release_date": "2025-05-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v3.1": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v3.1",
+      "cost": {
+        "cache_read": 0.13,
+        "input": 0.25,
+        "output": 0.95
+      },
+      "description": "DeepSeek-V3.1 is post-trained on the top of DeepSeek-V3.1-Base, which is built upon the original V3 base checkpoint through a two-phase long context extension approach, following the methodology outlined in the original DeepSeek-V3 report. We have expanded our dataset by collecting additional long documents and substantially extending both training phases. The 32K extension phase has been increased 10-fold to 630B tokens, while the 128K extension phase has been extended by 3.3x to 209B tokens. Additionally, DeepSeek-V3.1 is trained using the UE8M0 FP8 scale data format to ensure compatibility with microscaling data formats.",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3.1",
+      "last_updated": "2025-08-21",
+      "limit": {
+        "context": 163840,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek: DeepSeek V3.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-21",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1957,6 +2224,47 @@
       ],
       "release_date": "2025-09-29",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v3.2-thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 0.62,
+        "output": 1.85
+      },
+      "description": "DeepSeek‑V3.2 from DeepSeek harmonizes high computational efficiency with superior reasoning and agent performance. It builds on three main techniques: DeepSeek Sparse Attention for long‑context efficiency, a scalable reinforcement learning framework, and a large‑scale agentic task synthesis pipeline. This model excels at long-context reasoning and agentic tasks, efficiently handling extended inputs while maintaining strong accuracy. Its sparse attention design enables it to process complex, multi-step workflows without excessive compute costs. Overall, DeepSeek‑V3.2 targets long‑context reasoning, tool‑using agents, and efficient deployment in production environments.",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v3.2-thinking",
+      "last_updated": "2025-12-01",
+      "limit": {
+        "context": 128000,
+        "output": 8000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek: DeepSeek V3.2 Thinking",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-12-01",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -2263,6 +2571,139 @@
         }
       ],
       "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4.1-flash-1017-fast": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.014,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "Higher-throughput variant of DeepSeek V4.1 Flash 1017 served by Baseten for multimodal reasoning, tool calling, and structured output, with automatic prefix caching.",
+      "family": "deepseek-flash",
+      "id": "deepseek/deepseek-v4.1-flash-1017-fast",
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek: DeepSeek V4.1 Flash 1017 Fast",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4.1-flash-1017-ultrafast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.048,
+        "input": 2.4,
+        "output": 9.6
+      },
+      "description": "DeepSeek V4.1 Flash 1017 Ultrafast serves the October 17, 2026 update of DeepSeek V4.1 Flash through Fireworks' accelerated serverless endpoint. It supports text and image input, configurable reasoning, tool calling, structured outputs, and automatic prefix caching. Available in public preview without a waitroom or session time limit.",
+      "family": "deepseek",
+      "id": "deepseek/deepseek-v4.1-flash-1017-ultrafast",
+      "last_updated": "2026-11-06",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek: DeepSeek V4.1 Flash 1017 Ultrafast",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-06",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek/deepseek-v4.1-flash-fast": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
+      "cost": {
+        "cache_read": 0.014,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "Higher-throughput variant of DeepSeek V4.1 Flash for responsive coding, reasoning, and agentic workloads.",
+      "family": "deepseek-flash",
+      "id": "deepseek/deepseek-v4.1-flash-fast",
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1048576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek: DeepSeek V4.1 Flash Fast",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -2616,6 +3057,48 @@
         }
       ],
       "release_date": "2025-06-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-3-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.5,
+        "output": 3
+      },
+      "description": "Google's most intelligent model built for speed, combining frontier intelligence with superior search and grounding.",
+      "family": "gemini",
+      "id": "google/gemini-3-flash",
+      "last_updated": "2025-12-17",
+      "limit": {
+        "context": 1000000,
+        "output": 65000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google: Gemini 3 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-12-17",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3448,6 +3931,54 @@
       "temperature": true,
       "tool_call": true
     },
+    "google/gemini-4-hydrogen": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0375,
+        "cache_write": 0.041667,
+        "input": 0.75,
+        "output": 3.75,
+        "reasoning": 3.75
+      },
+      "description": "Gemini 4 Hydrogen is the high-efficiency workhorse model of the Gemini 4 family from Google, built for high-throughput agentic workflows, coding and multi-model routing at lower cost and latency than...",
+      "family": "gemini",
+      "id": "google/gemini-4-hydrogen",
+      "last_updated": "2026-11-12",
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "modalities": {
+        "input": [
+          "audio",
+          "pdf",
+          "image",
+          "text",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google: Gemini 4 Hydrogen",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-11-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "google/gemini-nano-banana-2.1": {
       "attachment": true,
       "canonical_model_id": "google/gemini-nano-banana-2.1",
@@ -3579,6 +4110,53 @@
       ],
       "release_date": "2026-11-05",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": false,
+      "type": "video"
+    },
+    "google/gemini-omni-flash-preview": {
+      "attachment": true,
+      "canonical_model_id": "google/gemini-omni-flash-preview",
+      "cost": {
+        "input": 1.5,
+        "output": 9
+      },
+      "description": "Gemini Omni Flash (Preview) is a multimodal model designed for video, image, and text tasks. It is optimized for video generation, offering video output alongside text responses in a single model.",
+      "family": "gemini",
+      "id": "google/gemini-omni-flash-preview",
+      "last_updated": "2026-06-30",
+      "limit": {
+        "context": 1000000,
+        "output": 57920
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf",
+          "video"
+        ],
+        "output": [
+          "text",
+          "video"
+        ]
+      },
+      "name": "Google: Gemini Omni Flash Preview",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-30",
+      "structured_output": true,
       "temperature": true,
       "tool_call": false,
       "type": "video"
@@ -3719,9 +4297,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.007,
-        "input": 0.013,
-        "output": 0.04
+        "cache_read": 0.005,
+        "input": 0.011,
+        "output": 0.032
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3898,6 +4476,47 @@
       "temperature": true,
       "tool_call": false
     },
+    "humansand/ampersand-v0.1": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Ampersand v0.1 is a collaborator model from Humans& for shared goals, group conversations, and long-running collaboration. Its Responses API supports text, reasoning, client-side function tools, and implicit prompt caching.",
+      "family": "v0",
+      "id": "humansand/ampersand-v0.1",
+      "last_updated": "2026-11-06",
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ampersand v0.1",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-06",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "ibm-granite/granite-4.2-8b": {
       "attachment": false,
       "canonical_model_id": "ibm/granite-4.2-8b",
@@ -3940,6 +4559,159 @@
       "temperature": true,
       "tool_call": true
     },
+    "inception/mercury-2": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 0.75
+      },
+      "description": "A diffusion-based reasoning LLM that generates text via parallel refinement (not token-by-token), delivering real-time latency with ~1k tokens/sec plus 128K context and built-in tool/JSON support.",
+      "family": "mercury",
+      "id": "inception/mercury-2",
+      "last_updated": "2026-02-24",
+      "limit": {
+        "context": 128000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury 2 (retires Nov 15)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-02-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inception/mercury-2.5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.004,
+        "input": 0.04,
+        "output": 0.15
+      },
+      "description": "Mercury 2.5 is Inception’s diffusion-based reasoning model for chat, agents, and structured workflows, with tool calling, structured outputs, and a 260K context window.",
+      "family": "mercury",
+      "id": "inception/mercury-2.5",
+      "last_updated": "2026-09-08",
+      "limit": {
+        "context": 260000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury 2.5 (retires Nov 15)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inception/mercury-3": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.35
+      },
+      "description": "Mercury 3 is Inception’s most capable model for agentic workflows and real-time applications. It is one of the world’s fastest models, powered by diffusion.",
+      "family": "mercury",
+      "id": "inception/mercury-3",
+      "last_updated": "2026-10-19",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury 3",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inception/mercury-coder-small": {
+      "attachment": false,
+      "cost": {
+        "input": 0.25,
+        "output": 1
+      },
+      "description": "Mercury Coder Small is ideal for code generation, debugging, and refactoring tasks with minimal latency.",
+      "family": "mercury",
+      "id": "inception/mercury-coder-small",
+      "last_updated": "2025-02-26",
+      "limit": {
+        "context": 32000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury Coder Small Beta (retires Nov 15)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-02-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "inclusionai/ling-3.0-flash": {
       "attachment": false,
       "canonical_model_id": "inclusionai/ling-3.0-flash",
@@ -3977,6 +4749,88 @@
         }
       ],
       "release_date": "2026-07-23",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inclusionai/ling-3.0-flash-fin": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.22
+      },
+      "description": "Ling 3.0 Flash Fin is InclusionAI’s finance-enhanced MoE language model, combining 124 billion total parameters with approximately 5.1 billion active parameters for efficient financial reasoning. Its 256K context window, function calling, and support for complex, multi-step investment workflows make it ideal for financial research, analysis, long-horizon planning, and execution, while retaining strong capabilities in coding and mathematics.",
+      "family": "ling",
+      "id": "inclusionai/ling-3.0-flash-fin",
+      "last_updated": "2026-08-27",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "inclusionAI: Ling 3.0 Flash Fin",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-08-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inclusionai/ling-3.0-flash-sante": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.22
+      },
+      "description": "Ling-3.0-Flash-Sante is inclusionAI’s language model specialized for health and medicine, built on a Mixture-of-Experts architecture with 124 billion total parameters and approximately 5.1 billion active per token. With a 256K context window and function calling, it supports medical knowledge reasoning, evidence-based retrieval, and complex medical workflows while retaining general reasoning, coding, and agentic capabilities.",
+      "family": "ling",
+      "id": "inclusionai/ling-3.0-flash-sante",
+      "last_updated": "2026-09-04",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "inclusionAI: Ling 3.0 Flash Sante",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-04",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -4105,6 +4959,48 @@
       "temperature": true,
       "tool_call": true
     },
+    "inclusionai/ling-3.1-flash-1019": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 0.9
+      },
+      "description": "Ling 3.1 Flash 1019 is InclusionAI's updated hybrid reasoning language model for coding, multi-step analysis, and tool-using agents. Its mixture-of-experts architecture has 560B total parameters with 25B active per token, and its 1M-token context window supports long-document analysis and extended agentic workflows.",
+      "family": "ling",
+      "id": "inclusionai/ling-3.1-flash-1019",
+      "last_updated": "2026-10-30",
+      "limit": {
+        "context": 1000000,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "inclusionAI: Ling 3.1 Flash 1019",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-30",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "inference-net/schematron-v2-small": {
       "attachment": false,
       "canonical_model_id": "inference-net/schematron-v2-small",
@@ -4166,6 +5062,47 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "interfaze/interfaze-beta": {
+      "attachment": true,
+      "cost": {
+        "input": 1.5,
+        "output": 3.5
+      },
+      "description": "Interfaze is an AI model built on a new architecture that merges specialized DNN/CNN models with LLMs for developer tasks that require deterministic output and high consistency like OCR, scraping, classification, STT and more.",
+      "id": "interfaze/interfaze-beta",
+      "last_updated": "2025-10-07",
+      "limit": {
+        "context": 1000000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Interfaze Beta",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-10-07",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "kilo-auto/balanced": {
       "attachment": true,
@@ -4535,6 +5472,50 @@
       "temperature": true,
       "tool_call": true
     },
+    "liquid/lfm2.5-24b-a2b": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.05,
+        "output": 0.7
+      },
+      "description": "LFM2.5-24B-A2B is a text-generation model from Liquid AI with a 128,000-token context window.",
+      "family": "liquid",
+      "id": "liquid/lfm2.5-24b-a2b",
+      "last_updated": "2026-10-13",
+      "limit": {
+        "context": 128000,
+        "output": 8200
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LiquidAI: LFM2.5-24B-A2B",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "mancer/weaver": {
       "attachment": false,
       "canonical_model_id": "mancer/weaver",
@@ -4606,6 +5587,47 @@
       ],
       "release_date": "2026-06-30",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "meituan/longcat-2.5": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "LongCat 2.5 is Meituan’s native multimodal model for coding and long-running agent workflows. It combines visual understanding with multi-step reasoning and tool use to work across complex codebases and full-project development. Its 1M-token context window supports tasks involving large documents, codebases, and text and image inputs.",
+      "family": "longcat",
+      "id": "meituan/longcat-2.5",
+      "last_updated": "2026-11-02",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Meituan: LongCat 2.5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-02",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -5293,6 +6315,53 @@
       "temperature": true,
       "tool_call": true
     },
+    "meta/muse-wonder-1.0": {
+      "attachment": true,
+      "canonical_model_id": "meta/muse-wonder-1.0",
+      "cost": {
+        "cache_read": 0.2,
+        "input": 4,
+        "output": 20
+      },
+      "description": "Muse Wonder is Meta’s model for frontier coding, long-running agents, and advanced computer use. It plans long tasks, delegates work to sub-agents, and recovers from errors.",
+      "family": "muse",
+      "id": "meta/muse-wonder-1.0",
+      "last_updated": "2026-10-12",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Meta: Muse Wonder",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "microsoft/phi-4": {
       "attachment": false,
       "cost": {
@@ -5322,6 +6391,131 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "minimax/minimax-m2": {
+      "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2",
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax-M2 redefines efficiency for agents. It is a compact, fast, and cost-effective MoE model (230 billion total parameters with 10 billion active parameters) built for elite performance in coding and agentic tasks, all while maintaining powerful general intelligence.",
+      "family": "minimax",
+      "id": "minimax/minimax-m2",
+      "last_updated": "2025-10-27",
+      "limit": {
+        "context": 205000,
+        "output": 205000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax: MiniMax M2 (retires Nov 18)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-10-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.1": {
+      "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.1",
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "MiniMax 2.1 is MiniMax's latest model, optimized specifically for robustness in coding, tool use, instruction following, and long-horizon planning.",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.1",
+      "last_updated": "2025-12-23",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax: MiniMax M2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-12-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.1-lightning": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.3,
+        "output": 2.4
+      },
+      "description": "MiniMax-M2.1-lightning is a faster version of MiniMax-M2.1, offering the same performance but with significantly higher throughput (output speed ~100 TPS, MiniMax-M2 output speed ~60 TPS).",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.1-lightning",
+      "last_updated": "2025-12-23",
+      "limit": {
+        "context": 204800,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax: MiniMax M2.1 Lightning (retires Nov 18)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-12-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "minimax/minimax-m2.5": {
       "attachment": false,
@@ -5363,6 +6557,48 @@
       "temperature": true,
       "tool_call": true
     },
+    "minimax/minimax-m2.5-highspeed": {
+      "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.5-highspeed",
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.375,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "M2.5 highspeed: Same performance, faster and more agile (output speed approximately 100 tps)",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.5-highspeed",
+      "last_updated": "2026-02-13",
+      "limit": {
+        "context": 204800,
+        "output": 131000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax: MiniMax M2.5 High Speed (retires Nov 18)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-02-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "minimax/minimax-m2.7": {
       "attachment": false,
       "canonical_model_id": "minimax/MiniMax-M2.7",
@@ -5400,6 +6636,48 @@
       ],
       "release_date": "2026-03-18",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax/minimax-m2.7-highspeed": {
+      "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.7-highspeed",
+      "cost": {
+        "cache_read": 0.06,
+        "cache_write": 0.375,
+        "input": 0.6,
+        "output": 2.4
+      },
+      "description": "M2.7 Highspeed: Same performance, faster and more agile (output speed approximately 100 tps)",
+      "family": "minimax",
+      "id": "minimax/minimax-m2.7-highspeed",
+      "last_updated": "2026-03-18",
+      "limit": {
+        "context": 204800,
+        "output": 131100
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax: MiniMax M2.7 High Speed (retires Nov 18)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-03-18",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -5450,9 +6728,9 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.15,
-        "output": 0.6
+        "cache_read": 0.0075,
+        "input": 0.075,
+        "output": 0.3
       },
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
       "family": "minimax",
@@ -5488,6 +6766,37 @@
         }
       ],
       "release_date": "2026-10-19",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/codestral": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 0.9
+      },
+      "description": "Mistral's cutting-edge language model for coding released end of July 2025, Codestral specializes in low-latency, high-frequency tasks such as fill-in-the-middle (FIM), code correction and test generation.",
+      "family": "codestral",
+      "id": "mistralai/codestral",
+      "last_updated": "2024-05-29",
+      "limit": {
+        "context": 128000,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral: Mistral Codestral",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-05-29",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -5559,6 +6868,40 @@
       "temperature": true,
       "tool_call": true
     },
+    "mistralai/ministral-14b": {
+      "attachment": true,
+      "canonical_model_id": "mistral/ministral-14b",
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.2,
+        "output": 0.2
+      },
+      "description": "Ministral 3 14B is the largest model in the Ministral 3 family, offering state-of-the-art capabilities and performance comparable to its larger Mistral Small 3.2 24B counterpart. Optimized for local deployment, it delivers high performance across diverse hardware, including local setups.",
+      "family": "ministral",
+      "id": "mistralai/ministral-14b",
+      "last_updated": "2025-12-02",
+      "limit": {
+        "context": 262144,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral: Ministral 14B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-12-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "mistralai/ministral-14b-2512": {
       "attachment": true,
       "canonical_model_id": "mistral/ministral-14b-2512",
@@ -5592,6 +6935,40 @@
       "temperature": true,
       "tool_call": true
     },
+    "mistralai/ministral-3b": {
+      "attachment": true,
+      "canonical_model_id": "mistral/ministral-3b",
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.1
+      },
+      "description": "A compact, efficient model for on-device tasks like smart assistants and local analytics, offering low-latency performance.",
+      "family": "ministral",
+      "id": "mistralai/ministral-3b",
+      "knowledge": "2024-03",
+      "last_updated": "2024-10-16",
+      "limit": {
+        "context": 131072,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral: Ministral 3B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-10-16",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "mistralai/ministral-3b-2512": {
       "attachment": true,
       "canonical_model_id": "mistral/ministral-3b-2512",
@@ -5621,6 +6998,38 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-12-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistralai/ministral-8b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.15
+      },
+      "description": "A more powerful model with faster, memory-efficient inference, ideal for complex workflows and demanding edge applications.",
+      "family": "ministral",
+      "id": "mistralai/ministral-8b",
+      "last_updated": "2024-10-16",
+      "limit": {
+        "context": 262144,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral: Ministral 8B",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-10-16",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -5982,6 +7391,38 @@
       "temperature": true,
       "tool_call": true
     },
+    "mistralai/mistral-small": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Mistral Small currently runs Mistral Small 4, a multimodal model combining instruction following, reasoning, and coding with a 262,144-token context window.",
+      "family": "mistral-small",
+      "id": "mistralai/mistral-small",
+      "last_updated": "2024-09-17",
+      "limit": {
+        "context": 262144,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mistral: Mistral Small",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-09-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "mistralai/mistral-small-24b-instruct-2501": {
       "attachment": false,
       "canonical_model_id": "mistral/mistral-small-24b-instruct-2501",
@@ -6192,6 +7633,36 @@
       "temperature": true,
       "tool_call": true
     },
+    "mixedbread/toast-1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.036,
+        "input": 0.3,
+        "output": 0.72
+      },
+      "description": "Built for knowledge-intensive questions, multi-step retrieval, and evidence synthesis. Toast 1 can work with any backend exposed through function calling.",
+      "id": "mixedbread/toast-1",
+      "last_updated": "2026-08-13",
+      "limit": {
+        "context": 131000,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Toast 1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-08-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "moondream/moondream3-preview": {
       "attachment": true,
       "cost": {
@@ -6387,8 +7858,8 @@
       "knowledge": "2025-01",
       "last_updated": "2026-01-27",
       "limit": {
-        "context": 256000,
-        "output": 65536
+        "context": 262144,
+        "output": 235929
       },
       "modalities": {
         "input": [
@@ -6501,6 +7972,53 @@
       "temperature": true,
       "tool_call": true
     },
+    "moonshotai/kimi-k2.7-code-highspeed": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.7-code-highspeed",
+      "cost": {
+        "cache_read": 0.38,
+        "input": 1.9,
+        "output": 8
+      },
+      "description": "Kimi K2.7 Code HighSpeed is the high-speed version of Kimi K2.7 Code, the same model as Kimi K2.7 Code, but with an output speed of approximately 180 Tokens/s and up to 260 Tokens/s in short context scenarios, delivering a more extreme coding experience.",
+      "family": "kimi-k2",
+      "id": "moonshotai/kimi-k2.7-code-highspeed",
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MoonshotAI: Kimi K2.7 Code High Speed",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "moonshotai/kimi-k3": {
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3",
@@ -6547,13 +8065,59 @@
       "temperature": true,
       "tool_call": true
     },
+    "moonshotai/kimi-k3-fast": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3",
+      "cost": {
+        "cache_read": 0.45,
+        "input": 4.5,
+        "output": 22.5
+      },
+      "description": "Fast version of Kimi’s flagship model for long-horizon coding and end-to-end knowledge work, with a 1M-token context window.",
+      "family": "kimi-k3",
+      "id": "moonshotai/kimi-k3-fast",
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MoonshotAI: Kimi K3 Fast",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "moonshotai/kimi-k3.1-pro": {
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3.1-pro",
       "cost": {
-        "cache_read": 0.2,
+        "cache_read": 0.19,
         "input": 0.2375,
-        "output": 8.4085
+        "output": 8.7856
       },
       "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
       "family": "kimi-k3",
@@ -6581,6 +8145,49 @@
           "type": "effort",
           "values": [
             "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "moonshotai/kimi-k3.1-pro-highspeed": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 4,
+        "input": 4,
+        "output": 20
+      },
+      "description": "Kimi K3.1 Pro Highspeed is the high-speed variant of Moonshot AI’s frontier Kimi K3.1 Pro model for complex reasoning, coding, and agentic workflows, with vision, tool use, structured outputs, and long-context support.",
+      "family": "kimi-k3",
+      "id": "moonshotai/kimi-k3.1-pro-highspeed",
+      "last_updated": "2026-10-23",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MoonshotAI: Kimi K3.1 Pro Highspeed",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
             "low",
             "high",
             "max"
@@ -7156,6 +8763,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "nvidia/nemotron-3.5-lightning-free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Nemotron 3.5 Lightning is an open-weight reasoning and chat model for long-running agents, sub-agent work, chatbots, and RAG systems. The model has 30B parameters with 3B active per token, in a hybrid Mixture-of-Experts design that interleaves Mamba-2 and MoE layers with a few attention layers. It has a 1M token context window and supports tool calling and structured outputs. The provider may retain prompts and responses for model improvement.",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-3.5-lightning-free",
+      "last_updated": "2026-10-14",
+      "limit": {
+        "context": 1000000,
+        "output": 65000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA: Nemotron 3.5 Lightning Free",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "nvidia/nemotron-3.5-lightning:free": {
       "attachment": false,
       "canonical_model_id": "nvidia/nemotron-3.5-lightning",
@@ -7279,6 +8927,90 @@
       ],
       "release_date": "2026-10-15",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-nano-12b-v2-vl": {
+      "attachment": true,
+      "canonical_model_id": "nvidia/nemotron-nano-12b-v2-vl",
+      "cost": {
+        "input": 0.2,
+        "output": 0.6
+      },
+      "description": "The model is an auto-regressive vision language model that uses an optimized transformer architecture. The model enables multi-image reasoning and video understanding, along with strong document intelligence, visual Q&A and summarization capabilities.",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-nano-12b-v2-vl",
+      "last_updated": "2025-10-28",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA: Nvidia Nemotron Nano 12B V2 VL",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-10-28",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nvidia/nemotron-nano-9b-v2": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-nano-9b-v2",
+      "cost": {
+        "input": 0.06,
+        "output": 0.23
+      },
+      "description": "NVIDIA-Nemotron-Nano-9B-v2 is a large language model (LLM) trained from scratch by NVIDIA, and designed as a unified model for both reasoning and non-reasoning tasks. It responds to user queries and tasks by first generating a reasoning trace and then concluding with a final response. The model's reasoning capabilities can be controlled via a system prompt. If the user prefers the model to provide its final answer without intermediate reasoning traces, it can be configured to do so.\\",
+      "family": "nemotron",
+      "id": "nvidia/nemotron-nano-9b-v2",
+      "knowledge": "2024-09",
+      "last_updated": "2025-08-18",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "NVIDIA: Nvidia Nemotron Nano 9B V2",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-18",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -7412,6 +9144,41 @@
       "temperature": true,
       "tool_call": true
     },
+    "openai/gpt-4.1-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-4.1",
+      "cost": {
+        "cache_read": 0.875,
+        "input": 3.5,
+        "output": 14
+      },
+      "description": "GPT 4.1 is OpenAI's flagship model for complex tasks. It is well suited for problem solving across domains.",
+      "family": "gpt",
+      "id": "openai/gpt-4.1-fast",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-4.1 (Fast)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-4.1-mini": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-4.1-mini",
@@ -7440,6 +9207,41 @@
         ]
       },
       "name": "GPT-4.1 mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-4.1-mini-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-4.1-mini",
+      "cost": {
+        "cache_read": 0.175,
+        "input": 0.7,
+        "output": 2.8
+      },
+      "description": "GPT 4.1 mini provides a balance between intelligence, speed, and cost that makes it an attractive model for many use cases.",
+      "family": "gpt-mini",
+      "id": "openai/gpt-4.1-mini-fast",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-4.1 mini (Fast)",
       "open_weights": false,
       "reasoning": false,
       "release_date": "2025-04-14",
@@ -7621,6 +9423,41 @@
       "temperature": true,
       "tool_call": true
     },
+    "openai/gpt-4o-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-4o",
+      "cost": {
+        "cache_read": 2.125,
+        "input": 4.25,
+        "output": 17
+      },
+      "description": "GPT-4o from OpenAI has broad general knowledge and domain expertise allowing it to follow complex instructions in natural language and solve difficult problems accurately. It matches GPT-4 Turbo performance with a faster and cheaper API.",
+      "family": "gpt",
+      "id": "openai/gpt-4o-fast",
+      "knowledge": "2023-09",
+      "last_updated": "2024-08-06",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-4o (Fast)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-05-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-4o-mini": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-4o-mini",
@@ -7691,6 +9528,41 @@
       "temperature": true,
       "tool_call": true
     },
+    "openai/gpt-4o-mini-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-4o-mini",
+      "cost": {
+        "cache_read": 0.125,
+        "input": 0.25,
+        "output": 1
+      },
+      "description": "GPT-4o mini from OpenAI is their most advanced and cost-efficient small model. It is multi-modal (accepting text or image inputs and outputting text) and has higher intelligence than gpt-3.5-turbo but is just as fast.",
+      "family": "gpt-mini",
+      "id": "openai/gpt-4o-mini-fast",
+      "knowledge": "2023-09",
+      "last_updated": "2024-07-18",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-4o mini (Fast)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-07-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-5": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-5",
@@ -7720,6 +9592,99 @@
         ]
       },
       "name": "GPT-5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5-codex": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5-codex",
+      "cost": {
+        "cache_read": 0.13,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "GPT-5-Codex is a version of GPT-5 optimized for agentic coding tasks in Codex or similar environments.",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5-codex",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-09-15",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-5-Codex",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-09-15",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5",
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2.5,
+        "output": 20
+      },
+      "description": "GPT-5 is OpenAI's flagship language model that excels at complex reasoning, broad real-world knowledge, code-intensive, and multi-step agentic tasks.",
+      "family": "gpt",
+      "id": "openai/gpt-5-fast",
+      "knowledge": "2024-09-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-5 (Fast)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -7856,6 +9821,53 @@
         ]
       },
       "name": "GPT-5 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5-mini-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5-mini",
+      "cost": {
+        "cache_read": 0.045,
+        "input": 0.45,
+        "output": 3.6
+      },
+      "description": "GPT-5 mini is a cost optimized model that excels at reasoning/chat tasks. It offers an optimal balance between speed, cost, and capability.",
+      "family": "gpt-mini",
+      "id": "openai/gpt-5-mini-fast",
+      "knowledge": "2024-05-30",
+      "last_updated": "2025-08-07",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-5 mini (Fast)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -8150,6 +10162,94 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-5.1-thinking": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.125,
+        "input": 1.25,
+        "output": 10
+      },
+      "description": "An upgraded version of GPT-5 that adapts thinking time more precisely to the question to spend more time on complex questions and respond more quickly to simpler tasks.",
+      "family": "gpt",
+      "id": "openai/gpt-5.1-thinking",
+      "last_updated": "2025-11-12",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT 5.1 Thinking",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-11-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "openai/gpt-5.1-thinking-fast": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2.5,
+        "output": 20
+      },
+      "description": "An upgraded version of GPT-5 that adapts thinking time more precisely to the question to spend more time on complex questions and respond more quickly to simpler tasks.",
+      "family": "gpt",
+      "id": "openai/gpt-5.1-thinking-fast",
+      "last_updated": "2025-11-12",
+      "limit": {
+        "context": 400000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT 5.1 Thinking (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-11-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-5.2": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.2",
@@ -8245,6 +10345,54 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-5.2-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5.2",
+      "cost": {
+        "cache_read": 0.35,
+        "input": 3.5,
+        "output": 28
+      },
+      "description": "GPT-5.2 is OpenAI's best general-purpose model, part of the GPT-5 flagship model family. It's their most intelligent model yet for both general and agentic tasks.",
+      "family": "gpt",
+      "id": "openai/gpt-5.2-fast",
+      "knowledge": "2025-08-31",
+      "last_updated": "2025-12-11",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT 5.2 (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2025-12-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-5.2-pro": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.2-pro",
@@ -8338,6 +10486,54 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-5.3-codex-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5.3-codex",
+      "cost": {
+        "cache_read": 0.35,
+        "input": 3.5,
+        "output": 28
+      },
+      "description": "GPT-5.3-Codex advances both the frontier coding performance of GPT‑5.2-Codex and the reasoning and professional knowledge capabilities of GPT‑5.2, together in one model, which is also 25% faster. This enables it to take on long-running tasks that involve research, tool use, and complex execution.",
+      "family": "gpt-codex",
+      "id": "openai/gpt-5.3-codex-fast",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-02-05",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT 5.3 Codex (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-02-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-5.4": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.4",
@@ -8384,6 +10580,54 @@
       "release_date": "2026-03-05",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.4-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5.4",
+      "cost": {
+        "cache_read": 0.5,
+        "input": 5,
+        "output": 30
+      },
+      "description": "GPT-5.4 is OpenAI's best general-purpose model, part of the GPT-5 flagship model family. It's their most intelligent model yet for both general and agentic tasks.",
+      "family": "gpt",
+      "id": "openai/gpt-5.4-fast",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-05",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT 5.4 (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-03-05",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.4-image-2": {
@@ -8480,6 +10724,54 @@
       "release_date": "2026-03-17",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.4-mini-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5.4-mini",
+      "cost": {
+        "cache_read": 0.15,
+        "input": 1.5,
+        "output": 9
+      },
+      "description": "GPT-5.4 Mini brings the strengths of GPT-5.4 to a faster, more efficient model designed for high-volume workloads.",
+      "family": "gpt-mini",
+      "id": "openai/gpt-5.4-mini-fast",
+      "knowledge": "2025-08-31",
+      "last_updated": "2026-03-17",
+      "limit": {
+        "context": 400000,
+        "input": 272000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT 5.4 Mini (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-03-17",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.4-nano": {
@@ -8623,6 +10915,53 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-5.5-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5.5",
+      "cost": {
+        "cache_read": 1.25,
+        "input": 12.5,
+        "output": 75
+      },
+      "description": "GPT‑5.5 understands what you’re trying to do faster and can carry more of the work itself. It excels at writing and debugging code, researching online, analyzing data, creating documents and spreadsheets, operating software, and moving across tools until a task is finished. Instead of carefully managing every step, you can give GPT‑5.5 a messy, multi-part task and trust it to plan, use tools, check its work, navigate through ambiguity, and keep going.",
+      "family": "gpt",
+      "id": "openai/gpt-5.5-fast",
+      "knowledge": "2025-12-01",
+      "last_updated": "2026-04-23",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT 5.5 (Fast) ($$$$)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-04-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-5.5-pro": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.5-pro",
@@ -8698,6 +11037,56 @@
         ]
       },
       "name": "GPT-5.6 Luna",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.6-luna-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5.6-luna",
+      "cost": {
+        "cache_read": 0.04,
+        "cache_write": 0.5,
+        "input": 0.4,
+        "output": 2.4
+      },
+      "description": "GPT-5.6 Luna is a fast, affordable GPT-5.6 model that brings strong capability at the lowest cost in the series.",
+      "family": "gpt-luna",
+      "id": "openai/gpt-5.6-luna-fast",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT 5.6 Luna (Fast)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -8818,6 +11207,56 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-5.6-sol-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5.6-sol",
+      "cost": {
+        "cache_read": 0.8,
+        "cache_write": 10,
+        "input": 8,
+        "output": 40
+      },
+      "description": "GPT-5.6 Sol is the flagship of OpenAI's GPT-5.6 series, its most capable model for long-horizon agentic work across coding, biology, and cybersecurity.",
+      "family": "gpt-sol",
+      "id": "openai/gpt-5.6-sol-fast",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT 5.6 Sol (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-5.6-sol-pro": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.6-sol",
@@ -8898,6 +11337,56 @@
         ]
       },
       "name": "GPT-5.6 Terra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-5.6-terra-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-5.6-terra",
+      "cost": {
+        "cache_read": 0.4,
+        "cache_write": 5,
+        "input": 4,
+        "output": 24
+      },
+      "description": "GPT-5.6 Terra is a balanced GPT-5.6 model for everyday work, with performance comparable to the previous generation at half the cost.",
+      "family": "gpt-terra",
+      "id": "openai/gpt-5.6-terra-fast",
+      "knowledge": "2026-02-16",
+      "last_updated": "2026-07-09",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT 5.6 Terra (Fast)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -9017,6 +11506,54 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-6-astra-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6-astra-fast",
+      "cost": {
+        "cache_read": 2,
+        "cache_write": 25,
+        "input": 20,
+        "output": 100
+      },
+      "description": "GPT-6 Astra is OpenAI's most capable model for complex reasoning, coding, computer use, research, and document creation.",
+      "family": "gpt-astra",
+      "id": "openai/gpt-6-astra-fast",
+      "last_updated": "2026-09-04",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-6 Astra (Fast) ($$$$)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-04",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/gpt-6-astra-pro": {
       "attachment": true,
       "cost": {
@@ -9111,6 +11648,56 @@
       "release_date": "2026-09-22",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6-luna-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6-luna",
+      "cost": {
+        "cache_read": 0.02,
+        "cache_write": 0.25,
+        "input": 0.2,
+        "output": 1
+      },
+      "description": "GPT-6 Luna is OpenAI's efficient reasoning model for focused, high-volume tasks. It accepts text and images, generates text, and supports a 1,050,000-token context window with up to 128,000 output tokens. Configurable reasoning effort, structured outputs, prompt caching, and Responses API tools support cost-sensitive applications, coding tasks, and automated workflows.",
+      "family": "gpt-luna",
+      "id": "openai/gpt-6-luna-fast",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-6 Luna (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6-luna-pro": {
@@ -9210,6 +11797,56 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-6-sol-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6-sol",
+      "cost": {
+        "cache_read": 0.4,
+        "cache_write": 5,
+        "input": 4,
+        "output": 20
+      },
+      "description": "GPT-6 Sol is OpenAI's reasoning model for complex coding and agentic workflows. It accepts text and images, generates text, and supports a 1,050,000-token context window with up to 128,000 output tokens. Configurable reasoning effort, structured outputs, prompt caching, and Responses API tools make it suited to software development and multi-step automation.",
+      "family": "gpt-sol",
+      "id": "openai/gpt-6-sol-fast",
+      "knowledge": "2026-04-20",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-6 Sol (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-6-sol-pro": {
       "attachment": true,
       "cost": {
@@ -9306,6 +11943,55 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/gpt-6.1-sol-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-sol",
+      "cost": {
+        "cache_read": 0.2,
+        "cache_write": 5,
+        "input": 4,
+        "output": 20
+      },
+      "description": "GPT-6.1 Sol is OpenAI's reasoning model for complex coding, computer use, and professional work. It accepts text and images, generates text, and supports a 1,050,000-token context window with up to 128,000 output tokens. Configurable reasoning effort, structured outputs, prompt caching, and Responses API tools support multi-step workflows.",
+      "family": "gpt-sol",
+      "id": "openai/gpt-6.1-sol-fast",
+      "knowledge": "2026-04-30",
+      "last_updated": "2026-09-29",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-6.1 Sol (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-6.1-sol-pro": {
       "attachment": true,
       "cost": {
@@ -9400,6 +12086,56 @@
       "release_date": "2026-10-26",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "openai/gpt-6.1-terra-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-terra",
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "input": 2,
+        "output": 10
+      },
+      "description": "GPT-6.1 Terra is OpenAI’s model for visual reasoning, precise computer use, and natural writing. It accepts text and images and generates text, with configurable reasoning effort, structured outputs, tool calling through the Responses API, and implicit and explicit prompt caching.",
+      "family": "gpt-terra",
+      "id": "openai/gpt-6.1-terra-fast",
+      "knowledge": "2026-06-01",
+      "last_updated": "2026-10-26",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT-6.1 Terra (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-26",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6.1-terra-pro": {
@@ -9639,6 +12375,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "openai/gpt-oss-safeguard-120b": {
+      "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-safeguard-120b",
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "GPT OSS Safeguard 120B is OpenAI’s open-weight safety model for content moderation and guardrail enforcement. It helps teams evaluate content against custom safety policies and build scalable, adaptable protections for production AI applications.",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-safeguard-120b",
+      "last_updated": "2025-10-29",
+      "limit": {
+        "context": 128000,
+        "output": 16000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: GPT OSS Safeguard 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-10-29",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "openai/gpt-oss-safeguard-20b": {
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-safeguard-20b",
@@ -9677,6 +12454,51 @@
       "release_date": "2025-10-29",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "openai/o1": {
+      "attachment": true,
+      "canonical_model_id": "openai/o1",
+      "cost": {
+        "cache_read": 7.5,
+        "input": 15,
+        "output": 60
+      },
+      "description": "o1 is OpenAI's flagship reasoning model, designed for complex problems that require deep thinking. It provides strong reasoning capabilities with improved accuracy for complex multi-step tasks.",
+      "family": "o",
+      "id": "openai/o1",
+      "knowledge": "2023-09",
+      "last_updated": "2024-12-05",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: o1 ($$$$)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2024-12-05",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/o3": {
@@ -9722,6 +12544,95 @@
       "temperature": false,
       "tool_call": true
     },
+    "openai/o3-fast": {
+      "attachment": true,
+      "canonical_model_id": "openai/o3",
+      "cost": {
+        "cache_read": 0.875,
+        "input": 3.5,
+        "output": 14
+      },
+      "description": "OpenAI's o3 is their most powerful reasoning model, setting new state-of-the-art benchmarks in coding, math, science, and visual perception. It excels at complex queries requiring multi-faceted analysis, with particular strength in analyzing images, charts, and graphics.",
+      "family": "o",
+      "id": "openai/o3-fast",
+      "knowledge": "2024-05",
+      "last_updated": "2025-04-16",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: o3 (Fast)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-04-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/o3-mini": {
+      "attachment": true,
+      "canonical_model_id": "openai/o3-mini",
+      "cost": {
+        "cache_read": 0.55,
+        "input": 1.1,
+        "output": 4.4
+      },
+      "description": "o3-mini is OpenAI's most recent small reasoning model, providing high intelligence at the same cost and latency targets of o1-mini.",
+      "family": "o-mini",
+      "id": "openai/o3-mini",
+      "knowledge": "2024-05",
+      "last_updated": "2025-01-29",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: o3-mini",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2024-12-20",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai/o3-pro": {
       "attachment": true,
       "canonical_model_id": "openai/o3-pro",
@@ -9760,6 +12671,51 @@
         }
       ],
       "release_date": "2025-06-10",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai/o4-mini": {
+      "attachment": true,
+      "canonical_model_id": "openai/o4-mini",
+      "cost": {
+        "cache_read": 0.275,
+        "input": 1.1,
+        "output": 4.4
+      },
+      "description": "OpenAI's o4-mini delivers fast, cost-efficient reasoning with exceptional performance for its size, particularly excelling in math (best-performing on AIME benchmarks), coding, and visual tasks.",
+      "family": "o-mini",
+      "id": "openai/o4-mini",
+      "knowledge": "2024-05",
+      "last_updated": "2025-04-16",
+      "limit": {
+        "context": 200000,
+        "output": 100000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "OpenAI: o4-mini",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-04-16",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -9927,6 +12883,48 @@
       ],
       "release_date": "2026-10-28",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "particle/particle-1": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.125,
+        "output": 0.5
+      },
+      "description": "Particle-1 is Particle AI’s model for agentic coding and software engineering, post-trained on DeepSeek V4.1 Flash to complete tasks with fewer tokens. It supports text and image inputs, reasoning, tool use, and implicit prompt caching.",
+      "id": "particle/particle-1",
+      "last_updated": "2026-10-28",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Particle-1",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-28",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -10194,6 +13192,46 @@
       "temperature": true,
       "tool_call": false
     },
+    "poolside/laguna-s-2.1": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.009,
+        "input": 0.09,
+        "output": 0.18
+      },
+      "description": "Laguna S 2.1 is Poolside's new open-weight model for agentic coding and long-horizon work.",
+      "family": "laguna-s",
+      "id": "poolside/laguna-s-2.1",
+      "last_updated": "2026-07-20",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Laguna S 2.1 (retires Nov 13)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-20",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "prism-ml/ternary-bonsai-2-27b": {
       "attachment": true,
       "cost": {
@@ -10275,6 +13313,94 @@
       "temperature": true,
       "tool_call": true
     },
+    "quiverai/arrow-2": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.4,
+        "cache_write": 5,
+        "input": 4,
+        "output": 20
+      },
+      "description": "SVG generation model with agentic refinement and tool calling.",
+      "id": "quiverai/arrow-2",
+      "last_updated": "2026-09-16",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "Arrow 2",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-16",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "quiverai/arrow-2-telos": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.6,
+        "cache_write": 7.5,
+        "input": 6,
+        "output": 30
+      },
+      "description": "Higher-refinement Arrow 2 variant combining Arrow's speed with frontier-model reasoning.",
+      "id": "quiverai/arrow-2-telos",
+      "last_updated": "2026-09-16",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text",
+          "image"
+        ]
+      },
+      "name": "Arrow 2 Telos",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-16",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen/qwen-2.5-72b-instruct": {
       "attachment": false,
       "cost": {
@@ -10335,6 +13461,45 @@
       "structured_output": false,
       "temperature": true,
       "tool_call": false
+    },
+    "qwen/qwen-3-14b": {
+      "attachment": false,
+      "cost": {
+        "input": 0.12,
+        "output": 0.24
+      },
+      "description": "Qwen3 is the latest generation of large language models in Qwen series, offering a comprehensive suite of dense and mixture-of-experts (MoE) models. Built upon extensive training, Qwen3 delivers groundbreaking advancements in reasoning, instruction-following, agent capabilities, and multilingual support",
+      "family": "qwen",
+      "id": "qwen/qwen-3-14b",
+      "last_updated": "2025-04-28",
+      "limit": {
+        "context": 40960,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen3-14B",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-04-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "qwen/qwen-plus": {
       "attachment": false,
@@ -10759,6 +13924,46 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3-max-thinking": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.24,
+        "input": 1.2,
+        "output": 6
+      },
+      "description": "Compared with the snapshot as of September 23, 2025, the Qwen-3 series Max model in this release achieves an effective integration of thinking and non-thinking modes, resulting in a comprehensive and substantial improvement in the model’s overall performance. In thinking mode, the model simultaneously supports web search, web information extraction, and a code interpreter tool, enabling it to tackle more complex and challenging problems with greater accuracy by leveraging external tools while engaging in slow, deliberative reasoning. This version is based on a snapshot taken on January 23, 2026.",
+      "family": "qwen",
+      "id": "qwen/qwen3-max-thinking",
+      "last_updated": "2026-01-23",
+      "limit": {
+        "context": 256000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen 3 Max Thinking",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-01-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen/qwen3-next-80b-a3b-instruct": {
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-next-80b-a3b-instruct",
@@ -10786,6 +13991,47 @@
       "name": "Qwen3-Next 80B-A3B Instruct",
       "open_weights": true,
       "reasoning": false,
+      "release_date": "2025-09",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-next-80b-a3b-thinking": {
+      "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-next-80b-a3b-thinking",
+      "cost": {
+        "input": 0.15,
+        "output": 1.2
+      },
+      "description": "Qwen3-Next uses a highly sparse MoE design: 80B total parameters, but only ~3B activated per inference step. Experiments show that, with global load balancing, increasing total expert parameters while keeping activated experts fixed steadily reduces training loss.Compared to Qwen3’s MoE (128 total experts, 8 routed), Qwen3-Next expands to 512 total experts, combining 10 routed experts + 1 shared expert — maximizing resource usage without hurting performance. The Qwen3-Next-80B-A3B-Thinking excels at complex reasoning tasks — outperforming higher-cost models like Qwen3-30B-A3B-Thinking-2507 and Qwen3-32B-Thinking, outpeforming the closed-source Gemini-2.5-Flash-Thinking on multiple benchmarks, and approaching the performance of our top-tier model Qwen3-235B-A22B-Thinking-2507.",
+      "family": "qwen",
+      "id": "qwen/qwen3-next-80b-a3b-thinking",
+      "knowledge": "2025-04",
+      "last_updated": "2025-09",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen3 Next 80B A3B Thinking",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2025-09",
       "structured_output": true,
       "temperature": true,
@@ -10925,6 +14171,38 @@
       "reasoning": false,
       "release_date": "2025-10-14",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3-vl-instruct": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.11,
+        "input": 0.2,
+        "output": 0.88
+      },
+      "description": "The Qwen3 series VL models has been comprehensively upgraded in areas such as visual coding and spatial perception. Its visual perception and recognition capabilities have significantly improved, supporting the understanding of ultra-long videos, and its OCR functionality has undergone a major enhancement.",
+      "family": "qwen",
+      "id": "qwen/qwen3-vl-instruct",
+      "last_updated": "2025-09-23",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen3 VL 235B A22B Instruct",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-09-23",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -11100,9 +14378,9 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.5-9b",
       "cost": {
-        "cache_read": 0.051,
-        "input": 0.056,
-        "output": 0.083
+        "cache_read": 0.148,
+        "input": 0.165,
+        "output": 0.242
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -11137,6 +14415,55 @@
       "release_date": "2026-02-23",
       "status": "deprecated",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.5-flash": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-flash",
+      "cost": {
+        "cache_read": 0.01,
+        "cache_write": 0.125,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "The Qwen3.5 native vision-language Flash models are built on a hybrid architecture that integrates a linear attention mechanism with a sparse mixture-of-experts model, achieving higher inference efficiency. Compared to the 3 series, these models deliver a leap forward in performance for both pure text and multimodal tasks, offering fast response times while balancing inference speed and overall performance.",
+      "family": "qwen",
+      "id": "qwen/qwen3.5-flash",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen 3.5 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-02-23",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -11178,6 +14505,56 @@
       ],
       "release_date": "2026-02-25",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen/qwen3.5-plus": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-plus",
+      "cost": {
+        "cache_read": 0.04,
+        "cache_write": 0.5,
+        "input": 0.4,
+        "output": 2.4
+      },
+      "description": "The Qwen3.5 native vision-language series Plus models are built on a hybrid architecture that integrates linear attention mechanisms with sparse mixture-of-experts models, achieving higher inference efficiency. In a variety of task evaluations, the 3.5 series consistently demonstrates performance on par with state-of-the-art leading models. Compared to the 3 series, these models show a leap forward in both pure-text and multimodal capabilities.",
+      "family": "qwen",
+      "id": "qwen/qwen3.5-plus",
+      "knowledge": "2025-04",
+      "last_updated": "2026-02-16",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen 3.5 Plus",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-02-16",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -11700,6 +15077,50 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen3.8-max": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-max",
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2,
+        "output": 6
+      },
+      "description": "Qwen 3.8 Max is a 2.4-trillion-parameter MoE model delivering a comprehensive leap in coding and professional work. Autonomously codes and delivers complete projects spanning 10+ days. Handles hundreds of specialized tasks across legal, financial, design, and other professional domains, producing production-grade results end-to-end in a single conversation. Native visual understanding runs through the full cycle of planning, execution, and verification, enabling deep semantic analysis of ultra-long documents and extended video content. In long-horizon tasks, plans autonomously, iterates through closed feedback loops, and continuously evolves.",
+      "family": "qwen",
+      "id": "qwen/qwen3.8-max",
+      "last_updated": "2026-08-03",
+      "limit": {
+        "context": 262144,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen: Qwen 3.8 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-03",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen/qwen3.8-max-0902": {
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-max-0902",
@@ -11878,6 +15299,48 @@
         }
       ],
       "release_date": "2026-10-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "reflection/beam-free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Beam is Reflection’s reasoning model for coding and agentic workflows, combining strong coding capabilities with fast, low-latency inference.",
+      "family": "beam",
+      "id": "reflection/beam-free",
+      "last_updated": "2026-10-16",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Reflection: Beam 1.0 (Free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-16",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -12324,6 +15787,64 @@
       "temperature": false,
       "tool_call": false
     },
+    "scaledown/scaledown-extract-1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0
+      },
+      "description": "ScaleDown Extract-1 is a task-specific language model for extracting structured data from unstructured text using a custom JSON schema. It identifies domain-specific entities with confidence scores, character offsets, and surrounding context, and supports nested objects and arrays for workflows such as invoice processing, contract analysis, and record parsing.",
+      "id": "scaledown/scaledown-extract-1",
+      "last_updated": "2026-10-20",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "ScaleDown: Extract-1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-10-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "scaledown/scaledown-summarize-1": {
+      "attachment": false,
+      "cost": {
+        "input": 0.05,
+        "output": 0
+      },
+      "description": "ScaleDown Summarize-1 is a task-specific language model for abstractive summarization of long documents, transcripts, and conversations. It rewrites source text into concise summaries and accepts instructions for format, language, length, and focus, making it useful for document processing, meeting summaries, and support workflows.",
+      "id": "scaledown/scaledown-summarize-1",
+      "last_updated": "2026-10-20",
+      "limit": {
+        "context": 1000000,
+        "output": 1000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "ScaleDown: Summarize-1",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-10-20",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
     "scaledown/summarize": {
       "attachment": true,
       "cost": {
@@ -12358,15 +15879,12 @@
     "stealth/glyph-cluster": {
       "attachment": false,
       "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
         "input": 0,
-        "output": 0,
-        "reasoning": 0
+        "output": 0
       },
       "description": "Your prompts and completions may be retained and used to train or improve the provider's services. Glyph Cluster is a reasoning model for coding and long-context analysis, served through Vercel AI Gateway during its stealth period at no cost. It supports function calling and streaming, takes text input only, and does not support structured outputs. Zero Data Retention is not available for this model.",
       "id": "stealth/glyph-cluster",
-      "last_updated": "2025-08-26",
+      "last_updated": "2026-10-07",
       "limit": {
         "context": 256000,
         "output": 256000
@@ -12379,7 +15897,7 @@
           "text"
         ]
       },
-      "name": "Stealth: Glyph Cluster (free)",
+      "name": "Glyph Cluster",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -12393,7 +15911,7 @@
           ]
         }
       ],
-      "release_date": "2025-08-26",
+      "release_date": "2026-10-07",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -12659,13 +16177,103 @@
       "temperature": true,
       "tool_call": false
     },
+    "tencent/hy-mt2-lite": {
+      "attachment": false,
+      "cost": {
+        "input": 0.044,
+        "output": 0.177
+      },
+      "description": "Hy-MT2-Lite is Tencent Cloud Hunyuan’s lightweight 1.8B translation model, combining efficient performance with an 8K-token context window and broad multilingual coverage. It supports translation across 33 languages and five ethnic Chinese and dialect variants, delivering strong results on benchmarks including FLORES-200 and WMT25. Designed for professional and real-world business use, it reliably follows instructions for structured, delimiter-preserving, context-aware, glossary-guided, and style-specific translation.",
+      "family": "Hy",
+      "id": "tencent/hy-mt2-lite",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 8000,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Tencent: Tencent Hy-MT2-Lite",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-12",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
+    "tencent/hy-mt2-plus": {
+      "attachment": false,
+      "cost": {
+        "input": 0.074,
+        "output": 0.295
+      },
+      "description": "Hy-MT2-Plus is Tencent Cloud Hunyuan’s 7B translation model, offering an 8K-token context window and broad multilingual coverage. Optimized for translation across 33 languages and five ethnic Chinese and dialect variants, it delivers industry-leading performance on benchmarks including FLORES-200 and WMT25. It excels in professional domains and real-world business scenarios, with strong instruction-following for structured, delimiter-preserving, context-aware, glossary-guided, and style-specific translation.",
+      "family": "Hy",
+      "id": "tencent/hy-mt2-plus",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 8000,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Tencent: Tencent Hy-MT2-Plus",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-06-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "tencent/hy-mt2-pro": {
+      "attachment": false,
+      "cost": {
+        "input": 0.074,
+        "output": 0.295
+      },
+      "description": "Hy-MT2-Pro is Tencent Cloud Hunyuan’s flagship translation model, featuring 30B-A3B parameters and an 8K-token context window. It delivers bidirectional translation across 33 core language pairs, plus five minority-language and dialect pairs. With industry-leading performance on FLORES-200 and WMT25, it excels in specialized domains and real-world business scenarios while supporting structured, contextual, terminology-aware, style-specific, and delimiter-preserving translation.",
+      "family": "Hy",
+      "id": "tencent/hy-mt2-pro",
+      "last_updated": "2026-05-21",
+      "limit": {
+        "context": 8000,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Tencent: Tencent Hy-MT2-Pro",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-05-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
     "tencent/hy3": {
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.033,
-        "input": 0.132,
-        "output": 0.528
+        "cache_read": 0.020625,
+        "input": 0.0825,
+        "output": 0.33
       },
       "description": "Hy3 is a 295B-parameter Mixture-of-Experts model from Tencent (21B active, 192 experts with top-8 routing) built for reasoning, agentic workflows, and real-world production use. It supports a configurable reasoning effort:...",
       "family": "Hy",
@@ -12792,9 +16400,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "Tencent: Hy4 preview is a mixture-of-experts model from Tencent, with 49B active parameters out of 770B total. It is designed for coding agents, complex tool-use workflows, and productivity tasks that...",
       "family": "Hy",
@@ -13354,6 +16962,201 @@
       "structured_output": true,
       "temperature": true,
       "tool_call": false
+    },
+    "x-ai/grok-4.20-multi-agent-beta": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1.25,
+        "output": 2.5
+      },
+      "description": "Multiple agents collaborate in parallel to perform deep research tasks.",
+      "family": "grok",
+      "id": "x-ai/grok-4.20-multi-agent-beta",
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "SpaceXAI: Grok 4.20 Multi Agent Beta",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-03-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-4.20-non-reasoning": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1.25,
+        "output": 2.5
+      },
+      "description": "Grok 4.20 Beta is the newest flagship model from xAI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherence, delivering consistently precise and truthful responses.",
+      "family": "grok",
+      "id": "x-ai/grok-4.20-non-reasoning",
+      "last_updated": "2026-03-10",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "SpaceXAI: Grok 4.20 Non-Reasoning",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-4.20-non-reasoning-beta": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1.25,
+        "output": 2.5
+      },
+      "description": "Grok 4.20 Beta is the newest flagship model from xAI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.",
+      "family": "grok",
+      "id": "x-ai/grok-4.20-non-reasoning-beta",
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "SpaceXAI: Grok 4.20 Beta Non-Reasoning",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-4.20-reasoning": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1.25,
+        "output": 2.5
+      },
+      "description": "Grok 4.20 Beta is the newest flagship model from xAI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherence, delivering consistently precise and truthful responses.",
+      "family": "grok",
+      "id": "x-ai/grok-4.20-reasoning",
+      "last_updated": "2026-03-10",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "SpaceXAI: Grok 4.20 Reasoning",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-03-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "x-ai/grok-4.20-reasoning-beta": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.2,
+        "input": 1.25,
+        "output": 2.5
+      },
+      "description": "Grok 4.20 Beta is the newest flagship model from xAI with industry-leading speed and agentic tool calling capabilities. It combines the lowest hallucination rate on the market with strict prompt adherance, delivering consistently precise and truthful responses.",
+      "family": "grok",
+      "id": "x-ai/grok-4.20-reasoning-beta",
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "SpaceXAI: Grok 4.20 Beta Reasoning",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-03-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
     },
     "x-ai/grok-4.3": {
       "attachment": true,
@@ -14134,6 +17937,50 @@
       "temperature": true,
       "tool_call": true
     },
+    "z-ai/glm-4.7-flashx": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-4.7-flashx",
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.06,
+        "output": 0.4
+      },
+      "description": "GLM-4.7-Flash balances high performance with efficiency, making it the perfect lightweight deployment option.",
+      "family": "glm-flash",
+      "id": "z-ai/glm-4.7-flashx",
+      "knowledge": "2025-04",
+      "last_updated": "2026-01-19",
+      "limit": {
+        "context": 200000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Z.ai: GLM 4.7 FlashX",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-01-19",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "z-ai/glm-5": {
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5",
@@ -14299,6 +18146,49 @@
       "temperature": true,
       "tool_call": true
     },
+    "z-ai/glm-5.2-fast": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.2",
+      "cost": {
+        "cache_read": 0.56,
+        "input": 2.8,
+        "output": 8.8
+      },
+      "description": "GLM-5.2-Fast-Preview is the high-speed variant of Zhipu AI&#39;s GLM-5.2, with 1M context and capabilities on par with the standard version. Inference-optimized to deliver 1.5–2× the output TPS, it fits latency-sensitive use cases such as real-time chat, multi-turn agents, and streaming code generation.",
+      "family": "glm",
+      "id": "z-ai/glm-5.2-fast",
+      "last_updated": "2026-06-13",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Z.ai: GLM 5.2 Fast",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "z-ai/glm-5.3": {
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.3",
@@ -14333,6 +18223,49 @@
             "low",
             "high",
             "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "z-ai/glm-5.3-fast": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.21,
+        "input": 2.1,
+        "output": 6.6
+      },
+      "description": "Speed-optimized version of Z.AI’s GLM-5.3 agentic coding model, built for responsive, real-time workloads. It supports advanced coding, long-horizon task execution, testing, vulnerability discovery, and cybersecurity analysis, making it ideal for developer tools, coding agents, and complex multi-step engineering workflows.",
+      "family": "glm",
+      "id": "z-ai/glm-5.3-fast",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Z.ai: GLM 5.3 Fast",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
           ]
         }
       ],

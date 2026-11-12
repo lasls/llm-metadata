@@ -1,16 +1,23 @@
 {
-  "attachment": false,
+  "attachment": true,
+  "cost": {
+    "cache_read": 0.25,
+    "input": 2,
+    "output": 6
+  },
   "description": "Flagship Qwen model for complex reasoning, coding, and agentic workflows",
   "family": "qwen3.8-max",
   "id": "Qwen/Qwen3.8-Max-0902",
   "last_updated": "2026-10-25",
   "limit": {
-    "context": 0,
-    "output": 0
+    "context": 1000000,
+    "output": 131072
   },
   "modalities": {
     "input": [
-      "text"
+      "text",
+      "image",
+      "video"
     ],
     "output": [
       "text"
@@ -18,8 +25,10 @@
   },
   "name": "Qwen3.8 Max 0902",
   "open_weights": true,
-  "reasoning": false,
+  "reasoning": true,
+  "reasoning_options": [],
   "release_date": "2026-10-20",
+  "structured_output": true,
   "temperature": true,
-  "tool_call": false
+  "tool_call": true
 }
