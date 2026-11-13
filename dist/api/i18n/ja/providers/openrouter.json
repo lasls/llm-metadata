@@ -1253,6 +1253,40 @@
       "temperature": false,
       "tool_call": true
     },
+    "apodex/apodex-1.1-mini:free": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "id": "apodex/apodex-1.1-mini:free",
+      "last_updated": "2026-10-01",
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Apodex 1.1 Mini (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-10-01",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "baidu/ernie-5.5-flash-preview:free": {
       "attachment": false,
       "cost": {
@@ -2133,9 +2167,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.074081,
-        "input": 0.888966,
-        "output": 1.777932
+        "cache_read": 0.079605,
+        "input": 0.95526,
+        "output": 1.91052
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-thinking",
@@ -2222,9 +2256,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.006,
-        "input": 0.3,
-        "output": 1.2
+        "cache_read": 0.004,
+        "input": 0.022,
+        "output": 0.4
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",
@@ -3546,6 +3580,7 @@
     },
     "google/gemini-4-hydrogen": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-4-hydrogen",
       "cost": {
         "cache_read": 0.075,
         "cache_write": 0.083333,
@@ -3557,6 +3592,7 @@
       "description": "Gemini multimodal model for text, image, audio, video, and document tasks",
       "family": "gemini",
       "id": "google/gemini-4-hydrogen",
+      "knowledge": "2026-03",
       "last_updated": "2026-11-12",
       "limit": {
         "context": 1048576,
@@ -3564,11 +3600,11 @@
       },
       "modalities": {
         "input": [
-          "audio",
-          "pdf",
-          "image",
           "text",
-          "video"
+          "image",
+          "video",
+          "audio",
+          "pdf"
         ],
         "output": [
           "text"
@@ -3861,9 +3897,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.049,
-        "input": 0.09,
-        "output": 0.28
+        "cache_read": 0.0425,
+        "input": 0.0765,
+        "output": 0.255
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -3871,7 +3907,7 @@
       "last_updated": "2026-04-02",
       "limit": {
         "context": 262144,
-        "output": 128000
+        "output": 235929
       },
       "modalities": {
         "input": [
@@ -4183,6 +4219,78 @@
         }
       ],
       "release_date": "2026-07-23",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inclusionai/ling-3.0-flash-fin": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0084,
+        "input": 0.042,
+        "output": 0.1232
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "ling",
+      "id": "inclusionai/ling-3.0-flash-fin",
+      "last_updated": "2026-08-27",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.0 Flash Fin",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-27",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inclusionai/ling-3.0-flash-sante": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0084,
+        "input": 0.042,
+        "output": 0.1232
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "ling",
+      "id": "inclusionai/ling-3.0-flash-sante",
+      "last_updated": "2026-09-04",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.0 Flash Sante",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-09-04",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -4657,7 +4765,7 @@
       "release_date": "2024-07-23",
       "structured_output": false,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "meta-llama/llama-3.1-8b-instruct": {
       "attachment": false,
@@ -6535,9 +6643,9 @@
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k3.1-pro",
       "cost": {
-        "cache_read": 0.19,
+        "cache_read": 0.2,
         "input": 0.2375,
-        "output": 8.7856
+        "output": 8.4114
       },
       "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
       "family": "kimi-k3",
@@ -10235,6 +10343,50 @@
       "temperature": true,
       "tool_call": true
     },
+    "particle-ai/particle-1:free": {
+      "attachment": true,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "id": "particle-ai/particle-1:free",
+      "last_updated": "2026-10-28",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Particle-1 (free)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "perceptron/perceptron-mk1": {
       "attachment": true,
       "canonical_model_id": "perceptron/perceptron-mk1",
@@ -11387,9 +11539,9 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.5-9b",
       "cost": {
-        "cache_read": 0.14,
-        "input": 0.156,
-        "output": 0.229
+        "cache_read": 0.091,
+        "input": 0.101,
+        "output": 0.148
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -13005,9 +13157,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.020625,
-        "input": 0.0825,
-        "output": 0.33
+        "cache_read": 0.033,
+        "input": 0.132,
+        "output": 0.528
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13134,9 +13286,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.0378,
-        "input": 0.7506,
-        "output": 2.2509
+        "cache_read": 0.042,
+        "input": 0.834,
+        "output": 2.501
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13311,6 +13463,51 @@
       ],
       "release_date": "2026-07-15",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/inkling-2-small": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-2-small",
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 1
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "family": "ling",
+      "id": "thinkingmachines/inkling-2-small",
+      "last_updated": "2026-11-05",
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling 2 Small",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-05",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -14116,9 +14313,9 @@
       "attachment": false,
       "canonical_model_id": "xiaomi/mimo-v2.5-pro",
       "cost": {
-        "cache_read": 0.096,
-        "input": 0.48,
-        "output": 1.8
+        "cache_read": 0.0036,
+        "input": 0.435,
+        "output": 0.87
       },
       "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
       "family": "mimo",
@@ -14130,7 +14327,7 @@
       "last_updated": "2026-04-22",
       "limit": {
         "context": 1024000,
-        "output": 235929
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -14718,9 +14915,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.3",
       "cost": {
-        "cache_read": 0.0689,
-        "input": 0.0699,
-        "output": 1.4
+        "cache_read": 0.079,
+        "input": 0.084,
+        "output": 3.6
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",

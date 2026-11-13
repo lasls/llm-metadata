@@ -4892,9 +4892,14 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
+            "minimal",
             "low",
+            "medium",
             "high"
           ]
         }
@@ -5017,9 +5022,14 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
+            "minimal",
             "low",
+            "medium",
             "high"
           ]
         }
@@ -5128,6 +5138,7 @@
           "type": "effort",
           "values": [
             "low",
+            "medium",
             "high"
           ]
         }
@@ -5169,9 +5180,14 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
+            "minimal",
             "low",
+            "medium",
             "high"
           ]
         }
@@ -5215,7 +5231,9 @@
         {
           "type": "effort",
           "values": [
+            "minimal",
             "low",
+            "medium",
             "high"
           ]
         }
@@ -5322,9 +5340,14 @@
       "reasoning": true,
       "reasoning_options": [
         {
+          "type": "toggle"
+        },
+        {
           "type": "effort",
           "values": [
+            "minimal",
             "low",
+            "medium",
             "high"
           ]
         }
@@ -5369,6 +5392,7 @@
           "type": "effort",
           "values": [
             "low",
+            "medium",
             "high"
           ]
         }
@@ -5412,6 +5436,7 @@
           "type": "effort",
           "values": [
             "low",
+            "medium",
             "high"
           ]
         }
@@ -5658,6 +5683,7 @@
     },
     "google/gemini-4-hydrogen": {
       "attachment": true,
+      "canonical_model_id": "google/gemini-4-hydrogen",
       "cost": {
         "cache_read": 0.075,
         "input": 1.5,
@@ -5666,6 +5692,7 @@
       "description": "Gemini multimodal model for text, image, audio, video, and document tasks",
       "family": "gemini",
       "id": "google/gemini-4-hydrogen",
+      "knowledge": "2026-03",
       "last_updated": "2026-11-12",
       "limit": {
         "context": 1000000,
@@ -5696,6 +5723,7 @@
         }
       ],
       "release_date": "2026-11-12",
+      "temperature": false,
       "tool_call": true
     },
     "google/gemini-embedding-001": {
@@ -6031,12 +6059,13 @@
     },
     "google/veo-3.1-fast-generate-001": {
       "attachment": true,
+      "canonical_model_id": "google/veo-3.1-fast-generate-001",
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "veo",
       "id": "google/veo-3.1-fast-generate-001",
-      "last_updated": "2026-06-08",
+      "last_updated": "2025-11-17",
       "limit": {
-        "context": 0,
+        "context": 1024,
         "output": 0
       },
       "modalities": {
@@ -6055,19 +6084,20 @@
         "api": "https://ai-gateway.vercel.sh/v4/ai"
       },
       "reasoning": false,
-      "release_date": "2025-10-15",
+      "release_date": "2025-11-17",
       "temperature": false,
       "tool_call": false,
       "type": "video"
     },
     "google/veo-3.1-generate-001": {
       "attachment": true,
+      "canonical_model_id": "google/veo-3.1-generate-001",
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "veo",
       "id": "google/veo-3.1-generate-001",
-      "last_updated": "2026-06-08",
+      "last_updated": "2025-11-17",
       "limit": {
-        "context": 0,
+        "context": 1024,
         "output": 0
       },
       "modalities": {
@@ -6086,19 +6116,20 @@
         "api": "https://ai-gateway.vercel.sh/v4/ai"
       },
       "reasoning": false,
-      "release_date": "2025-10-15",
+      "release_date": "2025-11-17",
       "temperature": false,
       "tool_call": false,
       "type": "video"
     },
     "google/veo-3.1-lite-generate-001": {
       "attachment": true,
+      "canonical_model_id": "google/veo-3.1-lite-generate-001",
       "description": "Video model for prompt-guided generation, editing, and motion workflows",
       "family": "veo",
       "id": "google/veo-3.1-lite-generate-001",
       "last_updated": "2026-04-02",
       "limit": {
-        "context": 0,
+        "context": 1024,
         "output": 0
       },
       "modalities": {
@@ -13695,43 +13726,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "poolside/laguna-s-2.1": {
-      "attachment": false,
-      "canonical_model_id": "poolside/laguna-s-2.1",
-      "cost": {
-        "cache_read": 0.009,
-        "input": 0.09,
-        "output": 0.18
-      },
-      "description": "Agentic coding model from Poolside in the XS size class for local deployment",
-      "family": "laguna",
-      "id": "poolside/laguna-s-2.1",
-      "last_updated": "2026-07-21",
-      "limit": {
-        "context": 1000000,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Laguna S 2.1",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-07-21",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "quiverai/arrow-2": {
       "attachment": true,
       "canonical_model_id": "quiverai/arrow-2",
@@ -15655,6 +15649,49 @@
         }
       ],
       "release_date": "2026-07-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/inkling-2-small": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-2-small",
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 1
+      },
+      "description": "Multimodal MoE reasoning model (594B total, 17B active) for agentic coding, vision, and knowledge work",
+      "family": "ling",
+      "id": "thinkingmachines/inkling-2-small",
+      "last_updated": "2026-11-05",
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling 2 Small",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-05",
       "temperature": true,
       "tool_call": true
     },
