@@ -4279,7 +4279,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -4339,8 +4340,8 @@
           "values": [
             "none",
             "low",
-            "medium",
-            "high"
+            "high",
+            "max"
           ]
         }
       ],
@@ -11348,7 +11349,7 @@
       ],
       "release_date": "2026-04-23",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.5-pro": {
@@ -11543,7 +11544,7 @@
       ],
       "release_date": "2026-07-09",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.6-sol": {
@@ -11679,7 +11680,7 @@
       ],
       "release_date": "2026-07-09",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-5.6-terra": {
@@ -11815,7 +11816,7 @@
       ],
       "release_date": "2026-07-09",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6-astra": {
@@ -12016,7 +12017,7 @@
       ],
       "release_date": "2026-09-22",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6-luna-fast": {
@@ -12084,7 +12085,7 @@
       ],
       "release_date": "2026-09-22",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6-sol": {
@@ -12152,7 +12153,7 @@
       ],
       "release_date": "2026-09-22",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6-sol-fast": {
@@ -12220,7 +12221,7 @@
       ],
       "release_date": "2026-09-22",
       "structured_output": true,
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6.1-sol": {
@@ -12421,7 +12422,7 @@
         }
       ],
       "release_date": "2026-10-26",
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6.1-terra-fast": {
@@ -12488,7 +12489,7 @@
         }
       ],
       "release_date": "2026-10-26",
-      "temperature": false,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-image-1-mini": {
@@ -13594,6 +13595,49 @@
       "temperature": false,
       "tool_call": false,
       "type": "transcription"
+    },
+    "paperinstruments/ultramarine-1-flash": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+      "id": "paperinstruments/ultramarine-1-flash",
+      "last_updated": "2026-11-12",
+      "limit": {
+        "context": 1048576,
+        "output": 131000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ultramarine 1 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        },
+        {
+          "min": 1024,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-11-12",
+      "tool_call": true
     },
     "particle/particle-1": {
       "attachment": true,
