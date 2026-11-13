@@ -552,6 +552,7 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
+        "cache_read": 0.014,
         "input": 0.44,
         "output": 1.32
       },
@@ -562,7 +563,7 @@
       "last_updated": "2026-07-31",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -579,7 +580,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "high",
             "max"
@@ -605,7 +605,7 @@
       "last_updated": "2026-04-24",
       "limit": {
         "context": 1048576,
-        "output": 384000
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -629,52 +629,6 @@
         }
       ],
       "release_date": "2026-04-24",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "deepseek/deepseek-v4.1-flash": {
-      "attachment": true,
-      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
-      "cost": {
-        "cache_read": 0.0012,
-        "cache_write": 0.039,
-        "input": 0.039,
-        "output": 1.2
-      },
-      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
-      "family": "deepseek-flash",
-      "id": "deepseek/deepseek-v4.1-flash",
-      "knowledge": "2025-05",
-      "last_updated": "2026-09-10",
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V4.1 Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-09-10",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1167,7 +1121,7 @@
       "last_updated": "2026-10-15",
       "limit": {
         "context": 1048576,
-        "output": 262144
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -2108,7 +2062,7 @@
       ],
       "release_date": "2026-04-23",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-5.6-luna": {
@@ -2154,7 +2108,7 @@
       ],
       "release_date": "2026-07-09",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-5.6-luna-pro": {
@@ -2200,7 +2154,7 @@
       ],
       "release_date": "2026-07-09",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-5.6-sol": {
@@ -2246,7 +2200,7 @@
       ],
       "release_date": "2026-07-09",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-5.6-sol-pro": {
@@ -2292,7 +2246,7 @@
       ],
       "release_date": "2026-07-09",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-5.6-terra": {
@@ -2338,7 +2292,7 @@
       ],
       "release_date": "2026-07-09",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-5.6-terra-pro": {
@@ -2384,7 +2338,7 @@
       ],
       "release_date": "2026-07-09",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-6-astra": {
@@ -2475,7 +2429,7 @@
       ],
       "release_date": "2026-09-22",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-6-sol": {
@@ -2521,7 +2475,7 @@
       ],
       "release_date": "2026-09-22",
       "structured_output": true,
-      "temperature": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-6.1-sol": {
@@ -2785,7 +2739,8 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-27b",
       "cost": {
-        "input": 0.99,
+        "cache_read": 0.05,
+        "input": 0.45,
         "output": 3.2
       },
       "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
@@ -2793,8 +2748,8 @@
       "id": "qwen/qwen3.8-27b",
       "last_updated": "2026-08-14",
       "limit": {
-        "context": 1000000,
-        "output": 235929
+        "context": 262144,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -2813,7 +2768,6 @@
         {
           "type": "effort",
           "values": [
-            "none",
             "low",
             "medium",
             "xhigh"
@@ -2821,6 +2775,53 @@
         }
       ],
       "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/inkling-2-small": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-2-small",
+      "cost": {
+        "cache_read": 0.03,
+        "cache_write": 0.15,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Multimodal MoE reasoning model (594B total, 17B active) for agentic coding, vision, and knowledge work",
+      "family": "ling",
+      "id": "thinkingmachines/inkling-2-small",
+      "last_updated": "2026-11-05",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling 2 Small",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-05",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -2951,94 +2952,6 @@
       ],
       "release_date": "2026-06-13",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "z-ai/glm-5.3": {
-      "attachment": false,
-      "canonical_model_id": "zhipuai/glm-5.3",
-      "cost": {
-        "cache_read": 0.0744,
-        "cache_write": 0.4,
-        "input": 0.4,
-        "output": 2.464
-      },
-      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
-      "family": "glm",
-      "id": "z-ai/glm-5.3",
-      "last_updated": "2026-08-14",
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5.3",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-08-14",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "z-ai/glm-5.3-flash": {
-      "attachment": true,
-      "canonical_model_id": "zhipuai/glm-5.3-flash",
-      "cost": {
-        "cache_read": 0.0105,
-        "cache_write": 0.0525,
-        "input": 0.0525,
-        "output": 0.25
-      },
-      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
-      "family": "glm-flash",
-      "id": "z-ai/glm-5.3-flash",
-      "last_updated": "2026-08-26",
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "GLM 5.3 Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-08-26",
-      "structured_output": false,
       "temperature": true,
       "tool_call": true
     }
