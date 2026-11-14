@@ -1,0 +1,313 @@
+{
+  "api": "https://model.graphn.ai/v1",
+  "doc": "https://graphn.ai/docs/getting-started",
+  "env": [
+    "GRAPHN_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/graphn.svg",
+  "id": "graphn",
+  "models": {
+    "deepseek-v4.1-flash": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4.1-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemma-4-e4b": {
+      "attachment": true,
+      "canonical_model_id": "google/gemma-4-E4B-it",
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
+      "id": "gemma-4-e4b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 65536,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 E4B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.3": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.14,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "glm-5.3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 250000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-oss-120b": {
+      "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-120b",
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "gpt-oss-120b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-80b": {
+      "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-next-80b-a3b-instruct",
+      "cost": {
+        "input": 0.2,
+        "output": 0.6
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "qwen3-80b",
+      "knowledge": "2025-04",
+      "last_updated": "2025-09",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 80B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3-vl": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-9b",
+      "cost": {
+        "input": 0.1,
+        "output": 0.15
+      },
+      "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
+      "family": "qwen",
+      "id": "qwen3-vl",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 VL",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-02-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.8-27b": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-27b",
+      "cost": {
+        "cache_read": 0.045,
+        "input": 0.45,
+        "output": 3.2
+      },
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+      "family": "qwen",
+      "id": "qwen3.8-27b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "GraphN",
+  "npm": "@ai-sdk/openai-compatible"
+}

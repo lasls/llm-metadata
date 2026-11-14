@@ -1,0 +1,573 @@
+{
+  "api": "https://llm.stoney-cloud.com/v1",
+  "doc": "https://www.stepping-stone.ch/en/products/artificial-intelligence",
+  "env": [
+    "STONEY_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/stepping-stone.svg",
+  "id": "stepping-stone",
+  "models": {
+    "BAAI/bge-m3": {
+      "attachment": false,
+      "canonical_model_id": "baai/bge-m3",
+      "cost": {
+        "input": 0.119,
+        "output": 0
+      },
+      "description": "Multilingual embedding model combining dense, sparse, and multi-vector retrieval",
+      "family": "bge",
+      "id": "BAAI/bge-m3",
+      "last_updated": "2024-01-30",
+      "limit": {
+        "context": 8192,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "BGE M3",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-01-30",
+      "temperature": false,
+      "tool_call": false,
+      "type": "embedding"
+    },
+    "BAAI/bge-reranker-v2-m3": {
+      "attachment": false,
+      "canonical_model_id": "baai/bge-reranker-v2-m3",
+      "cost": {
+        "input": 0.119,
+        "output": 0
+      },
+      "description": "Lightweight multilingual cross-encoder that scores query-document relevance",
+      "family": "bge",
+      "id": "BAAI/bge-reranker-v2-m3",
+      "last_updated": "2024-03-15",
+      "limit": {
+        "context": 8192,
+        "output": 0
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "BGE Reranker V2 M3",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-03-15",
+      "temperature": false,
+      "tool_call": false,
+      "type": "reranking"
+    },
+    "MiniMaxAI/MiniMax-M2.5": {
+      "attachment": false,
+      "canonical_model_id": "minimax/MiniMax-M2.5",
+      "cost": {
+        "cache_read": 0.3463,
+        "input": 2.3086,
+        "output": 11.543
+      },
+      "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
+      "family": "minimax",
+      "id": "MiniMaxAI/MiniMax-M2.5",
+      "last_updated": "2026-02-12",
+      "limit": {
+        "context": 196608,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-02-12",
+      "temperature": true,
+      "tool_call": true
+    },
+    "NVIDIA/NVIDIA-Nemotron-3-Super-120B-A12B": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-super-120b-a12b",
+      "cost": {
+        "cache_read": 0.357,
+        "input": 2.38,
+        "output": 5.95
+      },
+      "description": "Nemotron middle tier for collaborative agents and high-volume reasoning workloads",
+      "family": "nemotron",
+      "id": "NVIDIA/NVIDIA-Nemotron-3-Super-120B-A12B",
+      "knowledge": "2025-06",
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Nemotron 3 Super 120B A12B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-03-11",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3-Coder-Next": {
+      "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-coder-next",
+      "cost": {
+        "cache_read": 0.0446,
+        "input": 0.4046,
+        "output": 2.023
+      },
+      "description": "Open-weight Qwen coding model for agents, repository edits, and multi-turn tool use",
+      "family": "qwen",
+      "id": "Qwen/Qwen3-Coder-Next",
+      "knowledge": "2025-09",
+      "last_updated": "2026-02-03",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder Next",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-02-03",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.5-35B-A3B-FP8": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.5-35b-a3b",
+      "cost": {
+        "cache_read": 0.0303,
+        "input": 0.2023,
+        "output": 1.19
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.5-35B-A3B-FP8",
+      "last_updated": "2026-02-23",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.5 35B-A3B FP8",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-02-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen3.8-27B": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-27b",
+      "cost": {
+        "cache_read": 0.0607,
+        "input": 0.2975,
+        "output": 1.785
+      },
+      "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
+      "family": "qwen",
+      "id": "Qwen/Qwen3.8-27B",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        },
+        {
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-08-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "allenai/olmOCR-2-7B": {
+      "attachment": true,
+      "canonical_model_id": "allenai/olmocr-2-7b",
+      "cost": {
+        "cache_read": 0.0107,
+        "input": 0.0714,
+        "output": 0.3451
+      },
+      "description": "Vision-language OCR model from Ai2 (Allen Institute for AI) that extracts text from documents where tables, equations, and poor-quality scans defeat traditional OCR",
+      "id": "allenai/olmOCR-2-7B",
+      "last_updated": "2025-10-22",
+      "limit": {
+        "context": 8192,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "olmOCR 2 7B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-10-22",
+      "temperature": true,
+      "tool_call": false
+    },
+    "apertus-ai/Apertus-v1.5-8B": {
+      "attachment": true,
+      "canonical_model_id": "swiss-ai/apertus-v1.5-8b",
+      "cost": {
+        "cache_read": 0.0036,
+        "input": 0.0238,
+        "output": 0.119
+      },
+      "description": "Fully open 8B multilingual multimodal LLM from the Swiss AI Initiative (ETH Zurich, EPFL, CSCS) supporting 1,000+ languages, with weights, training data, and methods fully documented. Apache 2.0.",
+      "id": "apertus-ai/Apertus-v1.5-8B",
+      "last_updated": "2026-10-15",
+      "limit": {
+        "context": 131072,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Apertus v1.5 8B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-10-15",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-ai/DeepSeek-V4-Flash-0731": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
+      "cost": {
+        "cache_read": 0.0803,
+        "input": 0.5355,
+        "output": 2.142
+      },
+      "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
+      "family": "deepseek-flash",
+      "id": "deepseek-ai/DeepSeek-V4-Flash-0731",
+      "knowledge": "2025-05",
+      "last_updated": "2026-07-31",
+      "limit": {
+        "context": 524288,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Flash 0731",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-31",
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma-4-31B-it": {
+      "attachment": true,
+      "canonical_model_id": "google/gemma-4-31b-it",
+      "cost": {
+        "cache_read": 0.0446,
+        "input": 0.2975,
+        "output": 1.19
+      },
+      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
+      "family": "gemma",
+      "id": "google/gemma-4-31B-it",
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 163840,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B IT",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "lightonai/LightOnOCR-2-1B": {
+      "attachment": true,
+      "canonical_model_id": "lightonai/lightonocr-2-1b",
+      "cost": {
+        "cache_read": 0.0036,
+        "input": 0.0238,
+        "output": 0.0714
+      },
+      "description": "End-to-end 1B-parameter vision-language OCR model from the French company LightOn that converts documents (PDFs, scans, images) into clean, naturally ordered text without a brittle OCR pipeline",
+      "id": "lightonai/LightOnOCR-2-1B",
+      "last_updated": "2026-01-16",
+      "limit": {
+        "context": 16384,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "LightOnOCR 2 1B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-16",
+      "temperature": true,
+      "tool_call": false
+    },
+    "openai/gpt-oss-120b": {
+      "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-120b",
+      "cost": {
+        "cache_read": 0.0714,
+        "input": 0.476,
+        "output": 1.904
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "openai/gpt-oss-120b",
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "temperature": true,
+      "tool_call": true
+    },
+    "opendatalab/MinerU2.5-2509-1.2B": {
+      "attachment": true,
+      "canonical_model_id": "opendatalab/mineru2.5-2509-1.2b",
+      "cost": {
+        "cache_read": 0.0036,
+        "input": 0.0238,
+        "output": 0.0714
+      },
+      "description": "1.2B-parameter vision-language model from OpenDataLab for two-step document parsing: global layout analysis on downsampled images, then fine-grained text, formula, and table recognition at native resolution",
+      "id": "opendatalab/MinerU2.5-2509-1.2B",
+      "last_updated": "2025-09-17",
+      "limit": {
+        "context": 16384,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MinerU2.5 2509 1.2B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09-17",
+      "temperature": true,
+      "tool_call": false
+    },
+    "zai-org/GLM-5.3-Flash": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0.0536,
+        "input": 0.357,
+        "output": 1.785
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "zai-org/GLM-5.3-Flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "stepping stone AG",
+  "npm": "@ai-sdk/openai-compatible"
+}

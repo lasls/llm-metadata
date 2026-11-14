@@ -1,0 +1,208 @@
+{
+  "api": "https://proxystacks.com/v1",
+  "doc": "https://proxystacks.com/en/docs/opencode",
+  "env": [
+    "RELAY_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/proxystacks.svg",
+  "id": "proxystacks",
+  "models": {
+    "deepseek-v4.1-flash": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.0039,
+        "input": 0.18,
+        "output": 0.74,
+        "reasoning": 0.74
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4.1-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.3": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.17,
+        "input": 0.78,
+        "output": 2.86,
+        "reasoning": 2.86
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "glm-5.3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.3-flash": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0.0195,
+        "input": 0.0975,
+        "output": 0.33,
+        "reasoning": 0.33
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "glm-5.3-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k3.1-pro": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+      "cost": {
+        "cache_read": 0.16,
+        "cache_write": 1.6,
+        "input": 1.6,
+        "output": 8,
+        "reasoning": 8
+      },
+      "description": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
+      "family": "kimi-k3",
+      "id": "kimi-k3.1-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-10-23",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3.1 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    }
+  },
+  "name": "ProxyStacks Relay",
+  "npm": "@ai-sdk/openai-compatible"
+}

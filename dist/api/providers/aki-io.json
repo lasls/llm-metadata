@@ -1,5 +1,5 @@
 {
-  "api": "https://aki.io/v1",
+  "api": "https://aki.io/openai/v1",
   "doc": "https://aki.io/docs/",
   "env": [
     "AKI_IO_API_KEY"
@@ -7,6 +7,50 @@
   "iconURL": "https://models.dev/logos/aki-io.svg",
   "id": "aki-io",
   "models": {
+    "deepseek-v4.1-flash-1017-tl5": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.11165,
+        "input": 0.279125,
+        "output": 1.1165
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4.1-flash-1017-tl5",
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 81920
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek-v4.1-flash-552b": {
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
@@ -148,7 +192,7 @@
       "last_updated": "2025-08-05",
       "limit": {
         "context": 128000,
-        "output": 32768
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -172,6 +216,49 @@
         }
       ],
       "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "kolibri-1-tl5": {
+      "attachment": false,
+      "canonical_model_id": "aleph-alpha/kolibri-1",
+      "cost": {
+        "cache_read": 0.0837375,
+        "input": 0.167475,
+        "output": 0.614075
+      },
+      "description": "Aleph Alpha's German and English mixture-of-experts reasoning model (78B total, 3.46B active) for chat, RAG and agents",
+      "id": "kolibri-1-tl5",
+      "knowledge": "2026-06-18",
+      "last_updated": "2026-10-03",
+      "limit": {
+        "context": 262144,
+        "output": 81920
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kolibri 1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-10-03",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -216,54 +303,13 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen3.6-35b": {
-      "attachment": false,
-      "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
-      "cost": {
-        "input": 0.168225,
-        "output": 0.56075
-      },
-      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
-      "family": "qwen",
-      "id": "qwen3.6-35b",
-      "last_updated": "2026-04-17",
-      "limit": {
-        "context": 256000,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen3.6 35B-A3B",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-04-17",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "qwen3.8-27b": {
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3.8-27b",
       "cost": {
-        "cache_read": 0.11215,
-        "input": 0.33645,
-        "output": 2.4673
+        "cache_read": 0.0837375,
+        "input": 0.167475,
+        "output": 0.725725
       },
       "description": "Dense 27B vision-language model for coding, agent tasks, and image and video understanding",
       "family": "qwen",

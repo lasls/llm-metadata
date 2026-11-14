@@ -1,0 +1,101 @@
+{
+  "api": "https://api.aipowergrid.io/v1",
+  "doc": "https://aipowergrid.io/docs/integrations",
+  "env": [
+    "AIPG_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/aipg.svg",
+  "id": "aipg",
+  "models": {
+    "gpt-oss-120b": {
+      "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-120b",
+      "cost": {
+        "input": 0.075,
+        "output": 0.3
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "gpt-oss-120b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 40000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen38-flash-next-nvfp4": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-flash-next",
+      "cost": {
+        "input": 0.075,
+        "output": 0.3
+      },
+      "description": "Open-weight experimental preview of the Qwen4 architecture: hybrid-attention MoE (125B total, 6B active) with vision encoder for coding, agent tasks, and image and video understanding",
+      "family": "qwen",
+      "id": "qwen38-flash-next-nvfp4",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-27",
+      "limit": {
+        "context": 40000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Flash Next",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium"
+          ]
+        }
+      ],
+      "release_date": "2026-08-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "AI Power Grid",
+  "npm": "@ai-sdk/openai-compatible"
+}

@@ -7,6 +7,70 @@
   "iconURL": "https://models.dev/logos/tempr.svg",
   "id": "tempr",
   "models": {
+    "ai21/jamba-large": {
+      "attachment": false,
+      "canonical_model_id": "ai21/jamba-large",
+      "cost": {
+        "input": 2,
+        "output": 8
+      },
+      "description": "AI21's hybrid SSM-Transformer long-context model for enterprise agents and grounded generation",
+      "family": "jamba",
+      "id": "ai21/jamba-large",
+      "knowledge": "2024-08-22",
+      "last_updated": "2025-07-03",
+      "limit": {
+        "context": 256000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Jamba Large",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-03",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "ai21/jamba-mini": {
+      "attachment": false,
+      "canonical_model_id": "ai21/jamba-mini",
+      "cost": {
+        "input": 0.2,
+        "output": 0.4
+      },
+      "description": "AI21's efficient, lightweight hybrid SSM-Transformer model for a wide range of tasks",
+      "family": "jamba",
+      "id": "ai21/jamba-mini",
+      "knowledge": "2024-08-22",
+      "last_updated": "2026-01-08",
+      "limit": {
+        "context": 256000,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Jamba Mini",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-01-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "anthropic/claude-fable-5": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-fable-5",
@@ -780,6 +844,355 @@
       ],
       "release_date": "2026-08-14",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cohere/command-a-03-2025": {
+      "attachment": false,
+      "canonical_model_id": "cohere/command-a-03-2025",
+      "cost": {
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "Cohere command model for multilingual enterprise agents, tools, and chat",
+      "family": "command-a",
+      "id": "cohere/command-a-03-2025",
+      "knowledge": "2024-06-01",
+      "last_updated": "2025-03-13",
+      "limit": {
+        "context": 256000,
+        "output": 8000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Command A",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-03-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cohere/command-a-plus-05-2026": {
+      "attachment": true,
+      "canonical_model_id": "cohere/command-a-plus-05-2026",
+      "cost": {
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "Cohere's stronger command model for multilingual agents and enterprise workflows",
+      "family": "command-a",
+      "id": "cohere/command-a-plus-05-2026",
+      "knowledge": "2025-04-01",
+      "last_updated": "2026-06-09",
+      "limit": {
+        "context": 128000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Command A Plus",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-05-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cohere/command-a-reasoning-08-2025": {
+      "attachment": false,
+      "canonical_model_id": "cohere/command-a-reasoning-08-2025",
+      "cost": {
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "Cohere reasoning model for multilingual enterprise agents, tools, and complex workflows",
+      "family": "command-a",
+      "id": "cohere/command-a-reasoning-08-2025",
+      "knowledge": "2024-06-01",
+      "last_updated": "2025-08-21",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Command A Reasoning",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2025-08-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cohere/command-a-translate-08-2025": {
+      "attachment": false,
+      "canonical_model_id": "cohere/command-a-translate-08-2025",
+      "cost": {
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "Translation model for multilingual conversion, localization, and cross-language workflows",
+      "family": "command-a",
+      "id": "cohere/command-a-translate-08-2025",
+      "knowledge": "2024-06-01",
+      "last_updated": "2025-08-28",
+      "limit": {
+        "context": 8000,
+        "output": 8000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Command A Translate",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-08-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cohere/command-a-vision-07-2025": {
+      "attachment": true,
+      "canonical_model_id": "cohere/command-a-vision-07-2025",
+      "cost": {
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "Cohere vision model for multilingual document analysis, OCR, and image understanding",
+      "family": "command-a",
+      "id": "cohere/command-a-vision-07-2025",
+      "knowledge": "2024-06-01",
+      "last_updated": "2025-07-31",
+      "limit": {
+        "context": 128000,
+        "output": 8000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Command A Vision",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-07-31",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
+    "cohere/command-r-08-2024": {
+      "attachment": false,
+      "canonical_model_id": "cohere/command-r-08-2024",
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Cohere retrieval model for long-context chat and enterprise RAG workflows",
+      "family": "command-r",
+      "id": "cohere/command-r-08-2024",
+      "knowledge": "2024-06-01",
+      "last_updated": "2024-08-30",
+      "limit": {
+        "context": 128000,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Command R",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-08-30",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cohere/command-r-plus-08-2024": {
+      "attachment": false,
+      "canonical_model_id": "cohere/command-r-plus-08-2024",
+      "cost": {
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "Cohere's RAG workhorse for long-context enterprise search and tool use",
+      "family": "command-r",
+      "id": "cohere/command-r-plus-08-2024",
+      "knowledge": "2024-06-01",
+      "last_updated": "2024-08-30",
+      "limit": {
+        "context": 128000,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Command R+",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-08-30",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cohere/command-r7b-12-2024": {
+      "attachment": false,
+      "canonical_model_id": "cohere/command-r7b-12-2024",
+      "cost": {
+        "input": 0.0375,
+        "output": 0.15
+      },
+      "description": "Cohere retrieval model for long-context chat and enterprise RAG workflows",
+      "family": "command-r",
+      "id": "cohere/command-r7b-12-2024",
+      "knowledge": "2024-06-01",
+      "last_updated": "2024-12-13",
+      "limit": {
+        "context": 128000,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Command R7B",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-12-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cohere/command-r7b-arabic-02-2025": {
+      "attachment": false,
+      "canonical_model_id": "cohere/command-r7b-arabic-02-2025",
+      "cost": {
+        "input": 0.0375,
+        "output": 0.15
+      },
+      "description": "Open Command R model optimized for Arabic enterprise chat, RAG, and cultural knowledge",
+      "family": "command-r",
+      "id": "cohere/command-r7b-arabic-02-2025",
+      "knowledge": "2024-06-01",
+      "last_updated": "2025-02-27",
+      "limit": {
+        "context": 128000,
+        "output": 4000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Command R7B Arabic",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-02-27",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "cohere/north-mini-code-1-0": {
+      "attachment": false,
+      "canonical_model_id": "cohere/north-mini-code-1-0",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Cohere coding model for practical software engineering and agentic edits",
+      "family": "north",
+      "id": "cohere/north-mini-code-1-0",
+      "knowledge": "2025-09-23",
+      "last_updated": "2026-06-09",
+      "limit": {
+        "context": 256000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "North Mini Code",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-09",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -1728,6 +2141,90 @@
       "temperature": true,
       "tool_call": true
     },
+    "inception/mercury-2": {
+      "attachment": false,
+      "canonical_model_id": "inception/mercury-2",
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.25,
+        "output": 0.75
+      },
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "family": "mercury",
+      "id": "inception/mercury-2",
+      "last_updated": "2026-02-24",
+      "limit": {
+        "context": 128000,
+        "output": 50000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury 2",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-02-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inception/mercury-2.5": {
+      "attachment": false,
+      "canonical_model_id": "inception/mercury-2.5",
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.2,
+        "output": 0.75
+      },
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "family": "mercury",
+      "id": "inception/mercury-2.5",
+      "last_updated": "2026-09-08",
+      "limit": {
+        "context": 260000,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Mercury 2.5",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-08",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "minimax/MiniMax-M2.7": {
       "attachment": false,
       "canonical_model_id": "minimax/MiniMax-M2.7",
@@ -2363,7 +2860,7 @@
       "last_updated": "2026-07-16",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 1048576
       },
       "modalities": {
         "input": [
@@ -2394,6 +2891,110 @@
       "release_date": "2026-07-16",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "morph/morph-v3-fast": {
+      "attachment": false,
+      "canonical_model_id": "morph/morph-v3-fast",
+      "cost": {
+        "input": 0.8,
+        "output": 1.2
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "morph",
+      "id": "morph/morph-v3-fast",
+      "last_updated": "2025-07-07",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Morph V3 Fast",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-07-07",
+      "temperature": true,
+      "tool_call": false
+    },
+    "morph/morph-v3-large": {
+      "attachment": false,
+      "canonical_model_id": "morph/morph-v3-large",
+      "cost": {
+        "input": 0.9,
+        "output": 1.9
+      },
+      "description": "Flagship model for demanding analysis, coding, and production agent workflows",
+      "family": "morph",
+      "id": "morph/morph-v3-large",
+      "last_updated": "2025-07-07",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Morph V3 Large",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-07-07",
+      "temperature": true,
+      "tool_call": false
+    },
+    "sarvam/sarvam-105b": {
+      "attachment": false,
+      "canonical_model_id": "sarvam/sarvam-105b",
+      "cost": {
+        "cache_read": 0.05263423,
+        "input": 0.15790269,
+        "output": 0.63161075
+      },
+      "description": "Flagship Indian-language reasoning model for enterprise multilingual applications",
+      "family": "sarvam",
+      "id": "sarvam/sarvam-105b",
+      "last_updated": "2026-02-18",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Sarvam-105B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-02-18",
+      "temperature": true,
       "tool_call": true
     },
     "xai/grok-4.20-0309-non-reasoning": {

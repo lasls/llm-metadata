@@ -1,0 +1,572 @@
+{
+  "api": "https://adzukiai.com/v1",
+  "doc": "https://adzukiai.com/docs",
+  "env": [
+    "ADZUKI_API_KEY"
+  ],
+  "iconURL": "https://models.dev/logos/adzuki.svg",
+  "id": "adzuki",
+  "models": {
+    "deepseek-v4-pro": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro",
+      "cost": {
+        "cache_read": 0.0857,
+        "input": 2.5714,
+        "output": 7.7143
+      },
+      "description": "Open MoE flagship with million-token context for coding and long agent runs",
+      "family": "deepseek-thinking",
+      "id": "deepseek-v4-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-04-24",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-04-24",
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4.1-flash": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
+      "cost": {
+        "cache_read": 0.0114,
+        "input": 0.5714,
+        "output": 2.2857
+      },
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4.1-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "temperature": true,
+      "tool_call": true
+    },
+    "doubao-seed-2.0-lite": {
+      "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.0-lite",
+      "cost": {
+        "cache_read": 0.0343,
+        "input": 0.1714,
+        "output": 1.0286
+      },
+      "description": "Cost-efficient ByteDance Seed 2.0 model for production chat, analysis, and structured generation",
+      "family": "seed",
+      "id": "doubao-seed-2.0-lite",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-02-14",
+      "limit": {
+        "context": 256000,
+        "output": 32000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.0 Lite",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-02-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "doubao-seed-2.1-pro": {
+      "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.1-pro",
+      "cost": {
+        "cache_read": 0.3429,
+        "input": 1.7143,
+        "output": 8.5714
+      },
+      "description": "Flagship ByteDance Seed 2.1 model for complex multimodal reasoning, coding, and agents",
+      "family": "seed",
+      "id": "doubao-seed-2.1-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-23",
+      "limit": {
+        "context": 1024000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.1 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-23",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.3": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.5714,
+        "input": 2.2857,
+        "output": 8
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "glm-5.3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "glm-5.3-flash": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0.0657,
+        "input": 0.2286,
+        "output": 0.8
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "glm-5.3-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k3": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3",
+      "cost": {
+        "cache_read": 0.5714,
+        "input": 5.7143,
+        "output": 28.5714
+      },
+      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "family": "kimi-k3",
+      "id": "kimi-k3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3.1-pro": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+      "cost": {
+        "cache_read": 0.3714,
+        "input": 3.7143,
+        "output": 19.4286
+      },
+      "description": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
+      "family": "kimi-k3",
+      "id": "kimi-k3.1-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-10-23",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3.1 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-23",
+      "temperature": false,
+      "tool_call": true
+    },
+    "mimo-v2.5": {
+      "attachment": true,
+      "canonical_model_id": "xiaomi/mimo-v2.5",
+      "cost": {
+        "cache_read": 0.0057,
+        "input": 0.2857,
+        "output": 0.5714
+      },
+      "description": "Open MiMo model for multimodal coding agents and long-context automation",
+      "family": "mimo",
+      "id": "mimo-v2.5",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.5",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "mimo-v2.5-pro": {
+      "attachment": false,
+      "canonical_model_id": "xiaomi/mimo-v2.5-pro",
+      "cost": {
+        "cache_read": 0.0071,
+        "input": 0.8571,
+        "output": 1.7143
+      },
+      "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+      "family": "mimo",
+      "id": "mimo-v2.5-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2024-12",
+      "last_updated": "2026-04-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.5-Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-22",
+      "temperature": true,
+      "tool_call": true
+    },
+    "minimax-m3": {
+      "attachment": true,
+      "canonical_model_id": "minimax/MiniMax-M3",
+      "cost": {
+        "cache_read": 0.24,
+        "input": 1.2,
+        "output": 4.8
+      },
+      "description": "MiniMax multimodal model for long-context coding, perception, and agent planning",
+      "family": "minimax",
+      "id": "minimax-m3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-01",
+      "limit": {
+        "context": 1048576,
+        "output": 512000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiniMax-M3",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-01",
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.8-max": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-max",
+      "cost": {
+        "cache_read": 0.4286,
+        "input": 3.4286,
+        "output": 10.2857
+      },
+      "description": "2.4-trillion-parameter MoE flagship for coding, professional work, multimodal understanding, and long-horizon agentic workflows",
+      "family": "qwen",
+      "id": "qwen3.8-max",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-03",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        },
+        {
+          "max": 262144,
+          "min": 0,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-08-03",
+      "temperature": true,
+      "tool_call": true
+    }
+  },
+  "name": "Adzuki AI",
+  "npm": "@ai-sdk/openai-compatible"
+}

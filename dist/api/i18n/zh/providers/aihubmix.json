@@ -3089,6 +3089,85 @@
       "temperature": false,
       "tool_call": true
     },
+    "gemma-4-26b-a4b-it-free": {
+      "attachment": true,
+      "canonical_model_id": "google/gemma-4-26b-a4b-it",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
+      "id": "gemma-4-26b-a4b-it-free",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 26B A4B IT (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-02",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemma-4-31b-it-free": {
+      "attachment": true,
+      "canonical_model_id": "google/gemma-4-31b-it",
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
+      "family": "gemma",
+      "id": "gemma-4-31b-it-free",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B IT (free)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-04-02",
+      "temperature": true,
+      "tool_call": true
+    },
     "glm-4.5v": {
       "attachment": true,
       "canonical_model_id": "zhipuai/glm-4.5v",
@@ -3520,6 +3599,74 @@
       ],
       "release_date": "2026-04-01",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4.1-mini": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-4.1-mini",
+      "cost": {
+        "cache_read": 0.1,
+        "input": 0.4,
+        "output": 1.6
+      },
+      "description": "Affordable GPT-4.1 lane for fast coding help and structured extraction",
+      "family": "gpt-mini",
+      "id": "gpt-4.1-mini",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1047576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1 mini",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-4o": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-4o",
+      "cost": {
+        "cache_read": 1.25,
+        "input": 2.5,
+        "output": 10
+      },
+      "description": "Omni-era GPT for multimodal chat, practical coding, and general assistants",
+      "family": "gpt",
+      "id": "gpt-4o",
+      "knowledge": "2023-09",
+      "last_updated": "2024-08-06",
+      "limit": {
+        "context": 128000,
+        "output": 16384
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4o",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2024-05-13",
       "temperature": true,
       "tool_call": true
     },
@@ -4780,6 +4927,51 @@
       "tool_call": false,
       "type": "image"
     },
+    "grok-4-fast-non-reasoning": {
+      "attachment": true,
+      "canonical_model_id": "xai/grok-4-fast-non-reasoning",
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.2,
+        "output": 0.5,
+        "tiers": [
+          {
+            "cache_read": 0.05,
+            "input": 0.4,
+            "output": 1,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Fast Grok model for responsive chat, reasoning, and tool-assisted work",
+      "family": "grok",
+      "id": "grok-4-fast-non-reasoning",
+      "last_updated": "2025-12-18",
+      "limit": {
+        "context": 2000000,
+        "output": 2000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "X-Ai/Grok-4-Fast-Non-Reasoning",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-12-18",
+      "temperature": true,
+      "tool_call": true
+    },
     "grok-4.3": {
       "attachment": true,
       "canonical_model_id": "xai/grok-4.3",
@@ -4870,7 +5062,7 @@
       "last_updated": "2026-07-08",
       "limit": {
         "context": 500000,
-        "output": 1000000
+        "output": 500000
       },
       "modalities": {
         "input": [
@@ -5385,7 +5577,7 @@
       "last_updated": "2026-07-27",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 1048576
       },
       "modalities": {
         "input": [
@@ -6203,6 +6395,55 @@
       "temperature": false,
       "tool_call": true
     },
+    "qwen3-coder-next": {
+      "attachment": false,
+      "canonical_model_id": "alibaba/qwen3-coder-next",
+      "cost": {
+        "input": 0.137,
+        "output": 0.548,
+        "tiers": [
+          {
+            "input": 0.2054,
+            "output": 0.8216,
+            "tier": {
+              "size": 32000,
+              "type": "context"
+            }
+          },
+          {
+            "input": 0.3424,
+            "output": 1.3696,
+            "tier": {
+              "size": 128000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Open-weight Qwen coding model for agents, repository edits, and multi-turn tool use",
+      "family": "qwen",
+      "id": "qwen3-coder-next",
+      "knowledge": "2025-09",
+      "last_updated": "2026-02-03",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3 Coder Next",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-02-03",
+      "temperature": true,
+      "tool_call": true
+    },
     "qwen3-max": {
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-max",
@@ -6935,7 +7176,6 @@
       "last_updated": "2026-07-15",
       "limit": {
         "context": 991000,
-        "input": 991808,
         "output": 131072
       },
       "modalities": {
