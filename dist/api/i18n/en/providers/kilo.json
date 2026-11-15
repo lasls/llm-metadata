@@ -1986,16 +1986,17 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-r1-0528",
       "cost": {
-        "input": 0.571,
-        "output": 2.286
+        "cache_read": 0.35,
+        "input": 0.5,
+        "output": 2.15
       },
       "description": "DeepSeek reasoning model for multi-step analysis, math, coding, and tools",
       "family": "deepseek-thinking",
       "id": "deepseek/deepseek-r1-0528",
       "last_updated": "2025-05-28",
       "limit": {
-        "context": 128000,
-        "output": 32000
+        "context": 163840,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -2240,7 +2241,7 @@
       "last_updated": "2026-07-31",
       "limit": {
         "context": 1048576,
-        "output": 384000
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -2459,7 +2460,7 @@
       "last_updated": "2026-10-17",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 384000
       },
       "modalities": {
         "input": [
@@ -4149,8 +4150,8 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-3-27b-it",
       "cost": {
-        "input": 0.08,
-        "output": 0.16
+        "input": 0.064,
+        "output": 0.128
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -4216,9 +4217,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.009,
-        "input": 0.019,
-        "output": 0.056
+        "cache_read": 0.006,
+        "input": 0.012,
+        "output": 0.037
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -4478,88 +4479,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "inception/mercury-2": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.025,
-        "input": 0.25,
-        "output": 0.75
-      },
-      "description": "A diffusion-based reasoning LLM that generates text via parallel refinement (not token-by-token), delivering real-time latency with ~1k tokens/sec plus 128K context and built-in tool/JSON support.",
-      "family": "mercury",
-      "id": "inception/mercury-2",
-      "last_updated": "2026-02-24",
-      "limit": {
-        "context": 128000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mercury 2 (retires Nov 15)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-02-24",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "inception/mercury-2.5": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.004,
-        "input": 0.04,
-        "output": 0.15
-      },
-      "description": "Mercury 2.5 is Inception’s diffusion-based reasoning model for chat, agents, and structured workflows, with tool calling, structured outputs, and a 260K context window.",
-      "family": "mercury",
-      "id": "inception/mercury-2.5",
-      "last_updated": "2026-09-08",
-      "limit": {
-        "context": 260000,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mercury 2.5 (retires Nov 15)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-09-08",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "inception/mercury-3": {
       "attachment": false,
       "cost": {
@@ -4597,36 +4516,6 @@
         }
       ],
       "release_date": "2026-10-19",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "inception/mercury-coder-small": {
-      "attachment": false,
-      "cost": {
-        "input": 0.25,
-        "output": 1
-      },
-      "description": "Mercury Coder Small is ideal for code generation, debugging, and refactoring tasks with minimal latency.",
-      "family": "mercury",
-      "id": "inception/mercury-coder-small",
-      "last_updated": "2025-02-26",
-      "limit": {
-        "context": 32000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mercury Coder Small Beta (retires Nov 15)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-02-26",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -6557,9 +6446,9 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
       "cost": {
-        "cache_read": 0.0075,
-        "input": 0.075,
-        "output": 0.3
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.6
       },
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
       "family": "minimax",
@@ -7945,8 +7834,8 @@
       "canonical_model_id": "moonshotai/kimi-k3.1-pro",
       "cost": {
         "cache_read": 0.2,
-        "input": 2,
-        "output": 10
+        "input": 0.2403,
+        "output": 8.4023
       },
       "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
       "family": "kimi-k3",
@@ -8646,8 +8535,8 @@
       "id": "nvidia/nemotron-3.5-super-vl",
       "last_updated": "2026-10-15",
       "limit": {
-        "context": 1048576,
-        "output": 943718
+        "context": 262144,
+        "output": 235929
       },
       "modalities": {
         "input": [
@@ -14180,9 +14069,9 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.5-9b",
       "cost": {
-        "cache_read": 0.057,
-        "input": 0.063,
-        "output": 0.093
+        "cache_read": 0.019,
+        "input": 0.021,
+        "output": 0.031
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -17706,9 +17595,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-4.7",
       "cost": {
-        "cache_read": 0.11,
-        "input": 0.6,
-        "output": 2.2
+        "cache_read": 0.08,
+        "input": 0.4,
+        "output": 1.75
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
@@ -17716,7 +17605,7 @@
       "knowledge": "2025-04",
       "last_updated": "2025-12-22",
       "limit": {
-        "context": 204800,
+        "context": 202752,
         "output": 131072
       },
       "modalities": {
@@ -18525,9 +18414,9 @@
     "~deepseek/deepseek-flash-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 0.01,
-        "input": 0.038,
-        "output": 0.5
+        "cache_read": 0.007,
+        "input": 0.02,
+        "output": 0.108
       },
       "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
       "family": "deepseek-flash",
@@ -18535,7 +18424,7 @@
       "last_updated": "2026-09-14",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 384000
       },
       "modalities": {
         "input": [
