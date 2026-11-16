@@ -601,106 +601,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "deepseek/deepseek-v4-flash": {
-      "attachment": false,
-      "canonical_model_id": "deepseek/deepseek-v4-flash",
-      "cost": {
-        "cache_read": 0.006,
-        "cache_write": 0.3,
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
-      "family": "deepseek-flash",
-      "id": "deepseek/deepseek-v4-flash",
-      "knowledge": "2025-05",
-      "last_updated": "2026-04-24",
-      "limit": {
-        "context": 1000000,
-        "output": 384000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V4 Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-04-24",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "deepseek/deepseek-v4-flash-vision-exp": {
-      "attachment": true,
-      "canonical_model_id": "deepseek/deepseek-v4-flash-vision-exp",
-      "cost": {
-        "cache_read": 0.006,
-        "cache_write": 0.3,
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
-      "family": "deepseek-flash",
-      "id": "deepseek/deepseek-v4-flash-vision-exp",
-      "last_updated": "2026-09-01",
-      "limit": {
-        "context": 1000000,
-        "output": 384000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V4 Flash Vision Exp",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-08-21",
-      "status": "deprecated",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "deepseek/deepseek-v4-pro": {
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
@@ -1419,6 +1319,53 @@
         }
       ],
       "release_date": "2026-11-10",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gemini/gemini-4-hydrogen": {
+      "attachment": true,
+      "canonical_model_id": "google/gemini-4-hydrogen",
+      "cost": {
+        "cache_read": 0.075,
+        "cache_write": 1.5,
+        "input": 1.5,
+        "output": 7.5
+      },
+      "description": "Google's Gemini 4 model for everyday coding and agentic workflows, with four thinking levels and a 1M-token context window",
+      "family": "gemini",
+      "id": "gemini/gemini-4-hydrogen",
+      "knowledge": "2026-03",
+      "last_updated": "2026-11-12",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemini 4 Hydrogen",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-12",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -2966,6 +2913,58 @@
       "temperature": true,
       "tool_call": true
     },
+    "qwen/qwen4-max": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen4-max",
+      "cost": {
+        "cache_read": 0.08,
+        "cache_write": 2,
+        "input": 1.6,
+        "output": 4.8
+      },
+      "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
+      "family": "qwen",
+      "id": "qwen/qwen4-max",
+      "last_updated": "2026-11-16",
+      "limit": {
+        "context": 1000000,
+        "output": 393216
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen4 Max",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "xhigh"
+          ]
+        },
+        {
+          "max": 262144,
+          "min": 1,
+          "type": "budget_tokens"
+        }
+      ],
+      "release_date": "2026-11-16",
+      "temperature": true,
+      "tool_call": true
+    },
     "tencent/hy3": {
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
@@ -3054,33 +3053,35 @@
       "temperature": true,
       "tool_call": true
     },
-    "tencent/hy4-preview": {
-      "attachment": false,
-      "canonical_model_id": "tencent/hy4-preview",
+    "tencent/hy4-flash": {
+      "attachment": true,
+      "canonical_model_id": "tencent/hy4-flash",
       "cost": {
-        "cache_read": 0.048,
-        "cache_write": 0.96,
-        "input": 0.96,
-        "output": 2.88
+        "cache_read": 0.0032,
+        "cache_write": 0.08,
+        "input": 0.08,
+        "output": 0.32
       },
-      "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
+      "description": "Tencent's lower-cost Hy4 tier for everyday agent and productivity tasks, with image understanding and a 1M-token context window.",
       "family": "Hy",
-      "id": "tencent/hy4-preview",
-      "last_updated": "2026-08-28",
+      "id": "tencent/hy4-flash",
+      "last_updated": "2026-11-16",
       "limit": {
         "context": 1048576,
+        "input": 983040,
         "output": 65536
       },
       "modalities": {
         "input": [
-          "text"
+          "text",
+          "image"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Hy4 preview",
-      "open_weights": true,
+      "name": "Hy4 flash",
+      "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -3091,7 +3092,8 @@
           ]
         }
       ],
-      "release_date": "2026-08-28",
+      "release_date": "2026-11-16",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },

@@ -87431,106 +87431,6 @@
         "temperature": false,
         "tool_call": true
       },
-      "deepseek/deepseek-v4-flash": {
-        "attachment": false,
-        "canonical_model_id": "deepseek/deepseek-v4-flash",
-        "cost": {
-          "cache_read": 0.006,
-          "cache_write": 0.3,
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
-        "family": "deepseek-flash",
-        "id": "deepseek/deepseek-v4-flash",
-        "knowledge": "2025-05",
-        "last_updated": "2026-04-24",
-        "limit": {
-          "context": 1000000,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Flash",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-04-24",
-        "status": "deprecated",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "deepseek/deepseek-v4-flash-vision-exp": {
-        "attachment": true,
-        "canonical_model_id": "deepseek/deepseek-v4-flash-vision-exp",
-        "cost": {
-          "cache_read": 0.006,
-          "cache_write": 0.3,
-          "input": 0.3,
-          "output": 1.2
-        },
-        "description": "Experimental multimodal DeepSeek V4 Flash model for image understanding, coding, and agentic work",
-        "family": "deepseek-flash",
-        "id": "deepseek/deepseek-v4-flash-vision-exp",
-        "last_updated": "2026-09-01",
-        "limit": {
-          "context": 1000000,
-          "output": 384000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V4 Flash Vision Exp",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          },
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-08-21",
-        "status": "deprecated",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "deepseek/deepseek-v4-pro": {
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-pro",
@@ -88249,6 +88149,53 @@
           }
         ],
         "release_date": "2026-11-10",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "gemini/gemini-4-hydrogen": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-hydrogen",
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 1.5,
+          "input": 1.5,
+          "output": 7.5
+        },
+        "description": "Google's Gemini 4 model for everyday coding and agentic workflows, with four thinking levels and a 1M-token context window",
+        "family": "gemini",
+        "id": "gemini/gemini-4-hydrogen",
+        "knowledge": "2026-03",
+        "last_updated": "2026-11-12",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Hydrogen",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-11-12",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -89796,6 +89743,58 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen/qwen4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
+        "cost": {
+          "cache_read": 0.08,
+          "cache_write": 2,
+          "input": 1.6,
+          "output": 4.8
+        },
+        "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
+        "family": "qwen",
+        "id": "qwen/qwen4-max",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1000000,
+          "output": 393216
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen4 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "xhigh"
+            ]
+          },
+          {
+            "max": 262144,
+            "min": 1,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-11-16",
+        "temperature": true,
+        "tool_call": true
+      },
       "tencent/hy3": {
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
@@ -89884,33 +89883,35 @@
         "temperature": true,
         "tool_call": true
       },
-      "tencent/hy4-preview": {
-        "attachment": false,
-        "canonical_model_id": "tencent/hy4-preview",
+      "tencent/hy4-flash": {
+        "attachment": true,
+        "canonical_model_id": "tencent/hy4-flash",
         "cost": {
-          "cache_read": 0.048,
-          "cache_write": 0.96,
-          "input": 0.96,
-          "output": 2.88
+          "cache_read": 0.0032,
+          "cache_write": 0.08,
+          "input": 0.08,
+          "output": 0.32
         },
-        "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
+        "description": "Tencent's lower-cost Hy4 tier for everyday agent and productivity tasks, with image understanding and a 1M-token context window.",
         "family": "Hy",
-        "id": "tencent/hy4-preview",
-        "last_updated": "2026-08-28",
+        "id": "tencent/hy4-flash",
+        "last_updated": "2026-11-16",
         "limit": {
           "context": 1048576,
+          "input": 983040,
           "output": 65536
         },
         "modalities": {
           "input": [
-            "text"
+            "text",
+            "image"
           ],
           "output": [
             "text"
           ]
         },
-        "name": "Hy4 preview",
-        "open_weights": true,
+        "name": "Hy4 flash",
+        "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
           {
@@ -89921,7 +89922,8 @@
             ]
           }
         ],
-        "release_date": "2026-08-28",
+        "release_date": "2026-11-16",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -95694,6 +95696,7 @@
         "attachment": false,
         "canonical_model_id": "openai/gpt-oss-120b",
         "cost": {
+          "cache_read": 0.0185,
           "input": 0.037,
           "output": 0.17
         },
@@ -105938,51 +105941,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "deepinfra/ByteDance/Seed-2.0-mini": {
-        "attachment": true,
-        "canonical_model_id": "bytedance-seed/seed-2.0-mini",
-        "cost": {
-          "cache_read": 0.02,
-          "input": 0.1,
-          "output": 0.4
-        },
-        "description": "Lightweight ByteDance Seed 2.0 model for low-latency multimodal reasoning and high-volume tasks",
-        "family": "seed",
-        "id": "deepinfra/ByteDance/Seed-2.0-mini",
-        "last_updated": "2026-02-14",
-        "limit": {
-          "context": 256000,
-          "output": 32000
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Seed 2.0 Mini (Deep Infra)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "minimal",
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-02-14",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "deepinfra/Gryphe/MythoMax-L2-13b": {
         "attachment": false,
         "canonical_model_id": "gryphe/mythomax-l2-13b",
@@ -110670,9 +110628,9 @@
         "attachment": true,
         "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
         "cost": {
-          "cache_read": 0.0075,
-          "input": 0.075,
-          "output": 0.3
+          "cache_read": 0.015,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
         "family": "minimax",
@@ -115360,6 +115318,52 @@
           }
         ],
         "release_date": "2026-09-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 1.875,
+          "input": 1.5,
+          "output": 4.5
+        },
+        "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
+        "family": "qwen",
+        "id": "qwen/qwen4-max",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1000000,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen4 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -122083,6 +122087,58 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
+        "cost": {
+          "cache_read": 0.075,
+          "input": 1.5,
+          "output": 4.5
+        },
+        "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
+        "family": "qwen",
+        "id": "qwen4-max",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 983616,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen4 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "xhigh"
+            ]
+          },
+          {
+            "max": 262144,
+            "min": 1,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-11-16",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "seed-2-0-code": {
         "attachment": true,
         "canonical_model_id": "bytedance-seed/seed-2.0-code",
@@ -127619,18 +127675,18 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k3",
         "cost": {
-          "cache_read": 0.3,
-          "input": 3,
-          "output": 15
+          "cache_read": 0.2,
+          "input": 2,
+          "output": 10
         },
         "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
         "experimental": {
           "modes": {
             "priority": {
               "cost": {
-                "cache_read": 0.375,
-                "input": 3.75,
-                "output": 18.75
+                "cache_read": 0.3,
+                "input": 3,
+                "output": 15
               },
               "provider": {
                 "body": {
@@ -172819,7 +172875,7 @@
         "last_updated": "2026-10-17",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -174577,8 +174633,8 @@
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
           "cache_read": 0.01,
-          "input": 0.021,
-          "output": 0.062
+          "input": 0.04,
+          "output": 0.15
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -176598,17 +176654,17 @@
         "attachment": false,
         "canonical_model_id": "minimax/MiniMax-M2.5",
         "cost": {
-          "cache_read": 0.03,
-          "input": 0.27,
-          "output": 0.95
+          "cache_read": 0.06,
+          "input": 0.295,
+          "output": 1.2
         },
         "description": "MiniMax model for chat, coding, office work, and agentic tasks",
         "family": "minimax",
         "id": "minimax/minimax-m2.5",
         "last_updated": "2026-02-12",
         "limit": {
-          "context": 198000,
-          "output": 32768
+          "context": 196608,
+          "output": 176947
         },
         "modalities": {
           "input": [
@@ -176805,9 +176861,9 @@
         "attachment": true,
         "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
         "cost": {
-          "cache_read": 0.0075,
-          "input": 0.075,
-          "output": 0.3
+          "cache_read": 0.015,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
         "family": "minimax",
@@ -178192,9 +178248,9 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k3.1-pro",
         "cost": {
-          "cache_read": 0.23,
-          "input": 2.3,
-          "output": 11.5
+          "cache_read": 0.2,
+          "input": 0.2403,
+          "output": 8.4023
         },
         "description": "Kimi K3.1 Pro is Moonshot AI's flagship open-weight multimodal reasoning model and a post-trained successor to Kimi K3, with a 1M-token context window. It is built for long-horizon coding, 3D...",
         "family": "kimi-k3",
@@ -184355,8 +184411,8 @@
         "id": "qwen/qwen3.5-397b-a17b",
         "last_updated": "2026-02-15",
         "limit": {
-          "context": 256000,
-          "output": 64000
+          "context": 262144,
+          "output": 81920
         },
         "modalities": {
           "input": [
@@ -184389,9 +184445,9 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.5-9b",
         "cost": {
-          "cache_read": 0.152,
-          "input": 0.169,
-          "output": 0.248
+          "cache_read": 0.153,
+          "input": 0.17,
+          "output": 0.25
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -185266,6 +185322,52 @@
           }
         ],
         "release_date": "2026-09-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 1.875,
+          "input": 1.5,
+          "output": 4.5
+        },
+        "description": "Qwen4 Max is the flagship model in Alibaba's Qwen4 series. It accepts text, image, and video input and returns text, with a 1M-token context window and reasoning enabled by default....",
+        "family": "qwen",
+        "id": "qwen/qwen4-max",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen: Qwen4 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -186325,6 +186427,48 @@
           }
         ],
         "release_date": "2026-11-04",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "tencent/hy4-flash": {
+        "attachment": true,
+        "canonical_model_id": "tencent/hy4-flash",
+        "cost": {
+          "cache_read": 0.0015,
+          "input": 0.035,
+          "output": 0.1405
+        },
+        "description": "Tencent Hy4 Flash is a lower-cost model in the Hy4 family for coding, reasoning, and agentic workflows. It supports deep reasoning with preserved thinking, tool calling, structured outputs, prompt caching, and image understanding, with a 1M-token context window.",
+        "family": "Hy",
+        "id": "tencent/hy4-flash",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1024000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Tencent: Tencent Hy4 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -188655,9 +188799,9 @@
       "~deepseek/deepseek-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.007,
-          "input": 0.02,
-          "output": 0.108
+          "cache_read": 0.01,
+          "input": 0.036,
+          "output": 0.5
         },
         "description": "This model always redirects to the latest model in the DeepSeek Flash family.",
         "family": "deepseek-flash",
@@ -188665,7 +188809,7 @@
         "last_updated": "2026-09-14",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -193230,6 +193374,48 @@
         "temperature": true,
         "tool_call": true
       },
+      "beam-1.0-501b-a23b": {
+        "attachment": false,
+        "canonical_model_id": "reflection/beam-1.0-501b-a23b",
+        "cost": {
+          "cache_read": 0.04,
+          "input": 0.4,
+          "output": 1.2
+        },
+        "description": "Sparse mixture-of-experts reasoning model with 23B active parameters for coding and agentic workflows",
+        "family": "beam",
+        "id": "beam-1.0-501b-a23b",
+        "knowledge": "2026-06-30",
+        "last_updated": "2026-10-16",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Beam 1.0 501B A23B",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-10-05",
+        "temperature": true,
+        "tool_call": true
+      },
       "claude-fable-5": {
         "attachment": true,
         "canonical_model_id": "anthropic/claude-fable-5",
@@ -196126,7 +196312,7 @@
         "id": "glm-5.3-flashx",
         "last_updated": "2026-09-18",
         "limit": {
-          "context": 1000000,
+          "context": 1048576,
           "output": 1000000
         },
         "modalities": {
@@ -196145,6 +196331,8 @@
           {
             "type": "effort",
             "values": [
+              "low",
+              "high",
               "xhigh",
               "max"
             ]
@@ -198447,7 +198635,7 @@
         "id": "hy4-preview",
         "last_updated": "2026-08-28",
         "limit": {
-          "context": 1000000,
+          "context": 1048576,
           "output": 64000
         },
         "modalities": {
@@ -198911,10 +199099,10 @@
       "kimi-k3.1-pro-highspeed": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.2,
+          "cache_read": 0.19,
           "cache_write": 4,
-          "input": 4,
-          "output": 20
+          "input": 3.8,
+          "output": 19
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi-k3",
@@ -199295,6 +199483,51 @@
         ],
         "release_date": "2026-09-22",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "mimo-v2.6-pro-ultraspeed": {
+        "attachment": true,
+        "canonical_model_id": "xiaomi/mimo-v2.6-pro-ultraspeed",
+        "cost": {
+          "cache_read": 0.036,
+          "input": 4.35,
+          "output": 8.7
+        },
+        "description": "MiMo pro model for strong multimodal reasoning and agent execution",
+        "family": "mimo",
+        "id": "mimo-v2.6-pro-ultraspeed",
+        "last_updated": "2026-09-21",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "MiMo V2.6 Pro UltraSpeed",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "medium",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-09-21",
         "temperature": true,
         "tool_call": true
       },
@@ -200352,6 +200585,54 @@
         ],
         "release_date": "2026-09-02",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "muse-spark-open": {
+        "attachment": true,
+        "canonical_model_id": "meta/muse-spark-open",
+        "cost": {
+          "cache_read": 0.15,
+          "input": 1.25,
+          "output": 4.25
+        },
+        "description": "Muse Spark Open is an 816B total / 42B active open-weight multimodal reasoning model from Meta for coding and long-horizon agentic work, with 1M-token context.",
+        "family": "muse",
+        "id": "muse-spark-open",
+        "knowledge": "2026-01-04",
+        "last_updated": "2026-10-15",
+        "limit": {
+          "context": 1048576,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Muse Spark Open",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-10-15",
         "temperature": true,
         "tool_call": true
       },
@@ -201638,6 +201919,42 @@
         ],
         "release_date": "2026-02-15",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 1.875,
+          "input": 1.5,
+          "output": 4.5
+        },
+        "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
+        "family": "qwen",
+        "id": "qwen4-max",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 983616,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen4 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-11-16",
         "temperature": true,
         "tool_call": true
       },
@@ -247175,6 +247492,54 @@
         "temperature": true,
         "tool_call": false
       },
+      "TEE/inkling-2-small": {
+        "attachment": true,
+        "canonical_model_id": "thinkingmachines/inkling-2-small",
+        "cost": {
+          "cache_read": 0.03,
+          "input": 0.3,
+          "output": 1
+        },
+        "description": "Multimodal MoE reasoning model (594B total, 17B active) for agentic coding, vision, and knowledge work",
+        "family": "ling",
+        "id": "TEE/inkling-2-small",
+        "last_updated": "2026-11-12",
+        "limit": {
+          "context": 524288,
+          "input": 524288,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Inkling 2 Small TEE",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "minimal",
+              "low",
+              "medium",
+              "high",
+              "xhigh",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-05",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "TEE/kimi-k2.6": {
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k2.6",
@@ -254387,9 +254752,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.009,
-          "input": 0.018,
-          "output": 0.054
+          "cache_read": 0.032,
+          "input": 0.064,
+          "output": 0.193
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -254925,6 +255290,36 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-01-06",
+        "structured_output": false,
+        "tool_call": false
+      },
+      "hyperresearch/ousia-1": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 2,
+          "input": 2,
+          "output": 10
+        },
+        "description": "Ousia 1 is a web research model from Hyperresearch: it searches the web for your question and answers with numbered citations and a list of its sources. Answers usually take 30 to 70 seconds and arrive all at once, and harder questions can take several minutes. It follows the answer language and length set in a system message, but not formatting instructions. Leave the output limit unset or at least 15,000 tokens: a smaller limit cuts the research short. Text only, with no tool calling. Ousia 1 searches the web for you: searches based on your question are sent to search providers, some of which may use them to improve their services. Not zero-retention.",
+        "id": "hyperresearch/ousia-1",
+        "last_updated": "2026-11-15",
+        "limit": {
+          "context": 128000,
+          "input": 128000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ousia 1",
+        "open_weights": false,
+        "reasoning": false,
+        "release_date": "2026-11-15",
         "structured_output": false,
         "tool_call": false
       },
@@ -255639,6 +256034,88 @@
         "release_date": "2026-06-30",
         "structured_output": false,
         "temperature": true,
+        "tool_call": true
+      },
+      "lyber/deepseek-v4.1-flash-1017-abliterated": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.029,
+          "input": 0.29,
+          "output": 0.99
+        },
+        "description": "DeepSeek V4.1 Flash 1017 Abliterated served by Lyber.ai.",
+        "family": "deepseek",
+        "id": "lyber/deepseek-v4.1-flash-1017-abliterated",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 126976
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "DeepSeek V4.1 Flash 1017 Abliterated (Lyber)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
+        "structured_output": false,
+        "tool_call": true
+      },
+      "lyber/kimi-k3.1-pro-abliterated": {
+        "attachment": false,
+        "cost": {
+          "cache_read": 0.4,
+          "input": 4,
+          "output": 15
+        },
+        "description": "Kimi K3.1 Pro Abliterated served by Lyber.ai.",
+        "family": "kimi-k3",
+        "id": "lyber/kimi-k3.1-pro-abliterated",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1048576,
+          "input": 1048576,
+          "output": 1048576
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Kimi K3.1 Pro Abliterated (Lyber)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "max"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
+        "structured_output": true,
         "tool_call": true
       },
       "meganova-ai/manta-flash-1.0": {
@@ -264729,6 +265206,99 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen/qwen4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 1.875,
+          "input": 1.5,
+          "output": 4.5
+        },
+        "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
+        "family": "qwen",
+        "id": "qwen/qwen4-max",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 4 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen4-max:thinking": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 1.875,
+          "input": 1.5,
+          "output": 4.5
+        },
+        "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
+        "family": "qwen",
+        "id": "qwen/qwen4-max:thinking",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1000000,
+          "input": 1000000,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 4 Max Thinking",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3-vl-235b-a22b-instruct-original": {
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3-vl-235b-a22b-instruct",
@@ -265549,9 +266119,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.0378,
-          "input": 0.7506,
-          "output": 2.2509
+          "cache_read": 0.042,
+          "input": 0.834,
+          "output": 2.501
         },
         "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
         "family": "Hy",
@@ -267983,9 +268553,9 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.2",
         "cost": {
-          "cache_read": 0.0351,
-          "input": 0.189,
-          "output": 0.594
+          "cache_read": 0.078,
+          "input": 0.42,
+          "output": 1.32
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -268026,9 +268596,9 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.2",
         "cost": {
-          "cache_read": 0.0351,
-          "input": 0.189,
-          "output": 0.594
+          "cache_read": 0.078,
+          "input": 0.42,
+          "output": 1.32
         },
         "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
         "family": "glm",
@@ -282551,9 +283121,9 @@
         "attachment": true,
         "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
         "cost": {
-          "cache_read": 0.00975,
-          "input": 0.0975,
-          "output": 0.39
+          "cache_read": 0.016575,
+          "input": 0.16575,
+          "output": 0.663
         },
         "description": "Frontier multimodal coding model with 1M context window and tunable thinking depth",
         "family": "minimax",
@@ -299009,6 +299579,51 @@
         "temperature": true,
         "tool_call": true
       },
+      "hy4-flash-free": {
+        "attachment": true,
+        "canonical_model_id": "tencent/hy4-flash",
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Tencent's lower-cost Hy4 tier for everyday agent and productivity tasks, with image understanding and a 1M-token context window.",
+        "family": "Hy",
+        "id": "hy4-flash-free",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1048576,
+          "input": 983040,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy4 flash Free",
+        "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/openai/v1"
+        },
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
+        "temperature": true,
+        "tool_call": true
+      },
       "iceman-free": {
         "attachment": false,
         "cost": {
@@ -302395,6 +303010,51 @@
         "temperature": true,
         "tool_call": true
       },
+      "hy4-flash-free": {
+        "attachment": true,
+        "canonical_model_id": "tencent/hy4-flash",
+        "cost": {
+          "cache_read": 0,
+          "input": 0,
+          "output": 0
+        },
+        "description": "Tencent's lower-cost Hy4 tier for everyday agent and productivity tasks, with image understanding and a 1M-token context window.",
+        "family": "Hy",
+        "id": "hy4-flash-free",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1048576,
+          "input": 983040,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Hy4 flash Free",
+        "open_weights": false,
+        "provider": {
+          "api": "https://opencode.ai/inference/go/openai/v1"
+        },
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
+        "temperature": true,
+        "tool_call": true
+      },
       "hy4-preview": {
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
@@ -305501,8 +306161,8 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-chat",
         "cost": {
-          "input": 0.32,
-          "output": 0.89
+          "input": 0.2574,
+          "output": 1.0287
         },
         "description": "DeepSeek chat model for instruction following, coding, and analysis",
         "family": "deepseek",
@@ -305511,7 +306171,7 @@
         "last_updated": "2026-02-28",
         "limit": {
           "context": 163840,
-          "output": 16384
+          "output": 16000
         },
         "modalities": {
           "input": [
@@ -305793,9 +306453,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
         "cost": {
-          "cache_read": 0.035,
-          "input": 0.0434,
-          "output": 0.3
+          "cache_read": 0.015,
+          "input": 0.06,
+          "output": 0.18
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -305804,7 +306464,7 @@
         "last_updated": "2026-07-31",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 384000
         },
         "modalities": {
           "input": [
@@ -305970,9 +306630,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.006,
-          "input": 0.3,
-          "output": 1.2
+          "cache_read": 0.0042,
+          "input": 0.14,
+          "output": 0.42
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -305981,7 +306641,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -306016,7 +306676,7 @@
         "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
         "cost": {
           "cache_read": 0.01,
-          "input": 0.038,
+          "input": 0.036,
           "output": 0.5
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -307864,7 +308524,7 @@
         "cost": {
           "cache_read": 0.015,
           "input": 0.06,
-          "output": 0.25
+          "output": 0.15
         },
         "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
         "family": "granite",
@@ -308046,6 +308706,42 @@
         ],
         "release_date": "2026-09-29",
         "structured_output": false,
+        "temperature": true,
+        "tool_call": true
+      },
+      "inclusionai/ling-3.2-flash:free": {
+        "attachment": true,
+        "cost": {
+          "input": 0,
+          "output": 0
+        },
+        "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
+        "family": "ling",
+        "id": "inclusionai/ling-3.2-flash:free",
+        "last_updated": "2026-11-13",
+        "limit": {
+          "context": 1048576,
+          "output": 262144
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Ling 3.2 Flash (free)",
+        "open_weights": true,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          }
+        ],
+        "release_date": "2026-11-13",
+        "structured_output": true,
         "temperature": true,
         "tool_call": true
       },
@@ -308414,8 +309110,8 @@
         "attachment": false,
         "canonical_model_id": "meta/llama-3.2-3b-instruct",
         "cost": {
-          "input": 0.05,
-          "output": 0.33
+          "input": 0.0509,
+          "output": 0.335
         },
         "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
         "family": "llama",
@@ -308424,7 +309120,7 @@
         "last_updated": "2024-09-25",
         "limit": {
           "context": 131072,
-          "output": 117964
+          "output": 72000
         },
         "modalities": {
           "input": [
@@ -309034,9 +309730,9 @@
         "attachment": false,
         "canonical_model_id": "minimax/MiniMax-M2.5",
         "cost": {
-          "cache_read": 0.03,
-          "input": 0.27,
-          "output": 0.95
+          "cache_read": 0.06,
+          "input": 0.295,
+          "output": 1.2
         },
         "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
         "family": "minimax",
@@ -309047,7 +309743,7 @@
         "last_updated": "2026-02-12",
         "limit": {
           "context": 198000,
-          "output": 32768
+          "output": 176947
         },
         "modalities": {
           "input": [
@@ -309142,9 +309838,9 @@
         "attachment": true,
         "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
         "cost": {
-          "cache_read": 0.0075,
-          "input": 0.075,
-          "output": 0.3
+          "cache_read": 0.015,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
         "family": "minimax",
@@ -310223,8 +310919,8 @@
         "canonical_model_id": "moonshotai/kimi-k3.1-pro",
         "cost": {
           "cache_read": 0.2,
-          "input": 2,
-          "output": 10
+          "input": 0.2403,
+          "output": 8.4023
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi-k3",
@@ -310858,7 +311554,7 @@
         "cost": {
           "cache_read": 0.02,
           "input": 0.15,
-          "output": 0.47
+          "output": 0.5
         },
         "description": "Nemotron multimodal model for visual reasoning and agentic AI workflows",
         "family": "nemotron",
@@ -310866,7 +311562,7 @@
         "last_updated": "2026-10-15",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 235929
         },
         "modalities": {
           "input": [
@@ -313578,9 +314274,9 @@
         "attachment": false,
         "canonical_model_id": "openai/gpt-oss-20b",
         "cost": {
-          "cache_read": 0.03,
-          "input": 0.03,
-          "output": 0.13
+          "cache_read": 0.0375,
+          "input": 0.075,
+          "output": 0.3
         },
         "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
         "family": "gpt-oss",
@@ -313589,7 +314285,7 @@
         "last_updated": "2025-08-05",
         "limit": {
           "context": 131072,
-          "output": 117964
+          "output": 65536
         },
         "modalities": {
           "input": [
@@ -313881,7 +314577,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.003,
-          "input": 0.05,
+          "input": 0.06,
           "output": 0.5
         },
         "description": "Multimodal reasoning model for visual analysis, planning, and tool use",
@@ -314704,7 +315400,7 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2025-07-31",
-        "structured_output": true,
+        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -314895,39 +315591,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "qwen/qwen3-vl-30b-a3b-thinking": {
-        "attachment": true,
-        "cost": {
-          "input": 0.29,
-          "output": 1
-        },
-        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
-        "family": "qwen",
-        "id": "qwen/qwen3-vl-30b-a3b-thinking",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-10-06",
-        "limit": {
-          "context": 262144,
-          "output": 235929
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3 VL 30B A3B Thinking",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2025-10-06",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "qwen/qwen3-vl-8b-instruct": {
         "attachment": true,
         "cost": {
@@ -315079,9 +315742,9 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
         "cost": {
-          "cache_read": 0.12,
-          "input": 0.6,
-          "output": 3.6
+          "cache_read": 0.22,
+          "input": 0.45,
+          "output": 3
         },
         "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
         "family": "qwen",
@@ -315089,7 +315752,7 @@
         "last_updated": "2026-02-15",
         "limit": {
           "context": 262144,
-          "output": 64000
+          "output": 81920
         },
         "modalities": {
           "input": [
@@ -315118,9 +315781,9 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.5-9b",
         "cost": {
-          "cache_read": 0.127,
-          "input": 0.141,
-          "output": 0.208
+          "cache_read": 0.153,
+          "input": 0.17,
+          "output": 0.25
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -315702,7 +316365,7 @@
         "id": "qwen/qwen3.8-27b",
         "last_updated": "2026-08-14",
         "limit": {
-          "context": 1048575,
+          "context": 1024000,
           "output": 235929
         },
         "modalities": {
@@ -315907,6 +316570,52 @@
           }
         ],
         "release_date": "2026-09-17",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "qwen/qwen4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 1.875,
+          "input": 1.5,
+          "output": 4.5
+        },
+        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+        "family": "qwen",
+        "id": "qwen/qwen4-max",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1000000,
+          "output": 131072
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen4 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "low",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -316481,39 +317190,6 @@
         "temperature": false,
         "tool_call": false
       },
-      "stepfun/step-3.5-flash": {
-        "attachment": false,
-        "canonical_model_id": "stepfun/step-3.5-flash",
-        "cost": {
-          "input": 0.1,
-          "output": 0.3
-        },
-        "description": "StepFun flash lane for quick multimodal reasoning and coding assistance",
-        "family": "step",
-        "id": "stepfun/step-3.5-flash",
-        "knowledge": "2025-01",
-        "last_updated": "2026-02-13",
-        "limit": {
-          "context": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Step 3.5 Flash",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-01-29",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
       "stepfun/step-3.7-flash": {
         "attachment": true,
         "canonical_model_id": "stepfun/step-3.7-flash",
@@ -316602,42 +317278,6 @@
         "structured_output": true,
         "temperature": true,
         "tool_call": true
-      },
-      "tencent/hunyuan-a13b-instruct": {
-        "attachment": false,
-        "cost": {
-          "input": 0.14,
-          "output": 0.57
-        },
-        "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
-        "family": "hunyuan",
-        "id": "tencent/hunyuan-a13b-instruct",
-        "knowledge": "2025-03-31",
-        "last_updated": "2025-07-08",
-        "limit": {
-          "context": 131072,
-          "output": 117964
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Hunyuan A13B Instruct",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "toggle"
-          }
-        ],
-        "release_date": "2025-07-08",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": false
       },
       "tencent/hy-mt2-1.8b": {
         "attachment": false,
@@ -316736,9 +317376,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -316865,9 +317505,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.0378,
-          "input": 0.7506,
-          "output": 2.2509
+          "cache_read": 0.042,
+          "input": 0.834,
+          "output": 2.501
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -318093,9 +318733,9 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-4.5-air",
         "cost": {
-          "cache_read": 0.03,
-          "input": 0.2,
-          "output": 1.1
+          "cache_read": 0.025,
+          "input": 0.13,
+          "output": 0.85
         },
         "description": "Lighter GLM-4.5 variant for fast coding assistance and cheaper agents",
         "family": "glm-air",
@@ -318248,9 +318888,9 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-4.7",
         "cost": {
-          "cache_read": 0.11,
-          "input": 0.6,
-          "output": 2.2
+          "cache_read": 0.08,
+          "input": 0.4,
+          "output": 1.75
         },
         "description": "Mature GLM model for dependable coding, reasoning, and structured agent tasks",
         "family": "glm",
@@ -318422,7 +319062,7 @@
         "last_updated": "2026-04-07",
         "limit": {
           "context": 204800,
-          "output": 131072
+          "output": 182476
         },
         "modalities": {
           "input": [
@@ -318494,9 +319134,9 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
-          "cache_read": 0.079,
-          "input": 0.084,
-          "output": 3.6
+          "cache_read": 0.0689,
+          "input": 0.0699,
+          "output": 1.4
         },
         "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
         "family": "glm",
@@ -318944,7 +319584,7 @@
         "attachment": true,
         "cost": {
           "cache_read": 0.01,
-          "input": 0.038,
+          "input": 0.036,
           "output": 0.5
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -394176,6 +394816,41 @@
         "temperature": true,
         "tool_call": true
       },
+      "qwen-4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
+        "cost": {
+          "cache_read": 0.09375,
+          "cache_write": 2.34375,
+          "input": 1.875,
+          "output": 5.625
+        },
+        "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
+        "family": "qwen",
+        "id": "qwen-4-max",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1000000,
+          "output": 393216
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 4 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-11-16",
+        "temperature": true,
+        "tool_call": true
+      },
       "qwen3-235b-a22b-instruct-2507": {
         "attachment": false,
         "canonical_model_id": "alibaba/qwen3-235b-a22b-instruct-2507",
@@ -396422,6 +397097,57 @@
         ],
         "release_date": "2026-09-17",
         "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "alibaba/qwen4-max": {
+        "attachment": true,
+        "canonical_model_id": "alibaba/qwen4-max",
+        "cost": {
+          "cache_read": 0.075,
+          "cache_write": 1.875,
+          "input": 1.5,
+          "output": 4.5
+        },
+        "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
+        "family": "qwen",
+        "id": "alibaba/qwen4-max",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1000000,
+          "output": 384000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen 4 Max",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "toggle"
+          },
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "high",
+              "xhigh"
+            ]
+          },
+          {
+            "max": 262144,
+            "min": 0,
+            "type": "budget_tokens"
+          }
+        ],
+        "release_date": "2026-11-16",
         "temperature": true,
         "tool_call": true
       },
@@ -410513,6 +411239,47 @@
           }
         ],
         "release_date": "2026-11-04",
+        "temperature": true,
+        "tool_call": true
+      },
+      "tencent/hy4-flash": {
+        "attachment": true,
+        "canonical_model_id": "tencent/hy4-flash",
+        "cost": {
+          "cache_read": 0.0015,
+          "input": 0.035,
+          "output": 0.1405
+        },
+        "description": "Tencent's lower-cost Hy4 tier for everyday agent and productivity tasks, with image understanding and a 1M-token context window.",
+        "family": "Hy",
+        "id": "tencent/hy4-flash",
+        "last_updated": "2026-11-16",
+        "limit": {
+          "context": 1024000,
+          "output": 64000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Tencent Hy4 Flash",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "none",
+              "high"
+            ]
+          }
+        ],
+        "release_date": "2026-11-16",
         "temperature": true,
         "tool_call": true
       },
