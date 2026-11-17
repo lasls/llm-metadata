@@ -433,6 +433,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "alibaba/glm-5.3-prime": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.56,
+        "input": 2.8,
+        "output": 8.8
+      },
+      "description": "Flagship Qwen model for complex reasoning, coding, and agentic workflows",
+      "family": "glm",
+      "id": "alibaba/glm-5.3-prime",
+      "last_updated": "2026-09-23",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 Prime (Alibaba Cloud)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-23",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "alibaba/kimi-k2.5": {
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k2.5",
@@ -1602,7 +1643,17 @@
       "name": "Qwen4 Max (Alibaba Cloud)",
       "open_weights": false,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-11-16",
       "structured_output": true,
       "temperature": true,
@@ -4489,6 +4540,40 @@
       "temperature": true,
       "tool_call": true
     },
+    "azure/gpt-4.1-nano": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-4.1-nano",
+      "cost": {
+        "cache_read": 0.025,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "Tiny GPT-4.1 option for classification, routing, and very high-volume tasks",
+      "family": "gpt-nano",
+      "id": "azure/gpt-4.1-nano",
+      "knowledge": "2024-04",
+      "last_updated": "2025-04-14",
+      "limit": {
+        "context": 1000000,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-4.1 Nano (Azure)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2025-04-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "azure/gpt-4o": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-4o",
@@ -6776,6 +6861,97 @@
       "temperature": true,
       "tool_call": true
     },
+    "canopywave/deepseek-v4.1-flash-1017": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "canopywave/deepseek-v4.1-flash-1017",
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017 (CanopyWave)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "canopywave/deepseek-v4.1-flash-latest": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
+      "family": "deepseek",
+      "id": "canopywave/deepseek-v4.1-flash-latest",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash Latest (CanopyWave)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "canopywave/glm-5.2": {
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
@@ -6821,6 +6997,51 @@
         }
       ],
       "release_date": "2026-06-13",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "canopywave/glm-5.3": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "canopywave/glm-5.3",
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1000000,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 (CanopyWave)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -12281,6 +12502,96 @@
       "temperature": true,
       "tool_call": false
     },
+    "mistral/deepseek-v4.1-flash-1017": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.007,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "mistral/deepseek-v4.1-flash-1017",
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017 (Mistral AI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral/deepseek-v4.1-flash-latest": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.007,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Efficient Mistral model for fast chat, extraction, and production assistants",
+      "family": "deepseek",
+      "id": "mistral/deepseek-v4.1-flash-latest",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash Latest (Mistral AI)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "mistral/devstral-2512": {
       "attachment": false,
       "canonical_model_id": "mistral/devstral-2512",
@@ -12351,6 +12662,51 @@
         }
       ],
       "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "mistral/glm-5.3-flash": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "mistral/glm-5.3-flash",
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 Flash (Mistral AI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -13720,6 +14076,52 @@
       "temperature": true,
       "tool_call": true
     },
+    "novita/hy4-preview": {
+      "attachment": false,
+      "canonical_model_id": "tencent/hy4-preview",
+      "cost": {
+        "cache_read": 0.042,
+        "input": 0.834,
+        "output": 2.501
+      },
+      "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
+      "family": "Hy",
+      "id": "novita/hy4-preview",
+      "last_updated": "2026-08-28",
+      "limit": {
+        "context": 1000000,
+        "output": 64000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy4 Preview (NovitaAI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-28",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "novita/kimi-k2": {
       "attachment": false,
       "cost": {
@@ -13936,6 +14338,49 @@
         }
       ],
       "release_date": "2026-07-23",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "novita/ling-3.1-flash": {
+      "attachment": false,
+      "canonical_model_id": "inclusionai/ling-3.1-flash",
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 0.9
+      },
+      "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+      "family": "ling",
+      "id": "novita/ling-3.1-flash",
+      "last_updated": "2026-09-29",
+      "limit": {
+        "context": 1000000,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Ling 3.1 Flash (NovitaAI)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-29",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -17363,9 +17808,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
       "cost": {
-        "cache_read": 0.13416,
-        "input": 0.7224,
-        "output": 2.2704
+        "cache_read": 0.154,
+        "input": 0.605,
+        "output": 2.123
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -17445,7 +17890,7 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.3",
       "cost": {
-        "cache_read": 0.13416,
+        "cache_read": 0.1342,
         "input": 0.7224,
         "output": 2.2704
       },

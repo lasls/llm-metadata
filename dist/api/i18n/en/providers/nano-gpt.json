@@ -9691,9 +9691,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.026,
-        "input": 0.051,
-        "output": 0.154
+        "cache_read": 0.046,
+        "input": 0.07,
+        "output": 0.24
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -10769,6 +10769,66 @@
       "temperature": true,
       "tool_call": false
     },
+    "kitani/clover-2": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Clover 2 is Kitani's 27.8B dense model: a BF16 base with seven LoRA experts and trained per-token routing between them. Text chat with reasoning off by default (Clover 2 Thinking turns it on); tool calling is not available. Its 32,768-token context window is shared by input and output, with up to 8,192 output tokens. Free during its first week, until November 24, 2026 03:33 UTC.",
+      "id": "kitani/clover-2",
+      "last_updated": "2026-11-17",
+      "limit": {
+        "context": 200000,
+        "input": 200000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Clover 2",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-11-17",
+      "structured_output": false,
+      "tool_call": true
+    },
+    "kitani/clover-2:thinking": {
+      "attachment": false,
+      "cost": {
+        "input": 0,
+        "output": 0
+      },
+      "description": "Clover 2 is Kitani's 27.8B dense model: a BF16 base with seven LoRA experts and trained per-token routing between them. This variant thinks before answering; tool calling is not available. Its 32,768-token context window is shared by input and output, with up to 8,192 output tokens. Free during its first week, until November 24, 2026 03:33 UTC.",
+      "id": "kitani/clover-2:thinking",
+      "last_updated": "2026-11-17",
+      "limit": {
+        "context": 200000,
+        "input": 200000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Clover 2 Thinking",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-11-17",
+      "structured_output": false,
+      "tool_call": true
+    },
     "lightonai/LightOnOCR-2-1B": {
       "attachment": true,
       "canonical_model_id": "lightonai/lightonocr-2-1b",
@@ -10973,47 +11033,6 @@
       "release_date": "2026-06-30",
       "structured_output": false,
       "temperature": true,
-      "tool_call": true
-    },
-    "lyber/deepseek-v4.1-flash-1017-abliterated": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.029,
-        "input": 0.29,
-        "output": 0.99
-      },
-      "description": "DeepSeek V4.1 Flash 1017 Abliterated served by Lyber.ai.",
-      "family": "deepseek",
-      "id": "lyber/deepseek-v4.1-flash-1017-abliterated",
-      "last_updated": "2026-11-16",
-      "limit": {
-        "context": 1048576,
-        "input": 1048576,
-        "output": 126976
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V4.1 Flash 1017 Abliterated (Lyber)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-11-16",
-      "structured_output": false,
       "tool_call": true
     },
     "lyber/kimi-k3.1-pro-abliterated": {
@@ -21060,9 +21079,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.0378,
-        "input": 0.7506,
-        "output": 2.2509
+        "cache_read": 0.042,
+        "input": 0.834,
+        "output": 2.501
       },
       "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
       "family": "Hy",
