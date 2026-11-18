@@ -1856,9 +1856,8 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-r1-0528",
       "cost": {
-        "cache_read": 0.35,
-        "input": 0.5,
-        "output": 2.15
+        "input": 0.571,
+        "output": 2.286
       },
       "description": "DeepSeek reasoning model for multi-step analysis, math, coding, and tools",
       "family": "deepseek-thinking",
@@ -1866,7 +1865,7 @@
       "last_updated": "2025-05-28",
       "limit": {
         "context": 163840,
-        "output": 32768
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -3798,7 +3797,7 @@
       "cost": {
         "cache_read": 0.04,
         "input": 0.08,
-        "output": 0.35
+        "output": 0.45
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -5430,9 +5429,9 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
       "cost": {
-        "cache_read": 0.0075,
-        "input": 0.075,
-        "output": 0.3
+        "cache_read": 0.015,
+        "input": 0.15,
+        "output": 0.6
       },
       "description": "MiniMax multimodal coding model for long-context reasoning and agent tasks",
       "family": "minimax",
@@ -11253,7 +11252,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-07-31",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -11350,7 +11349,8 @@
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-next-80b-a3b-instruct",
       "cost": {
-        "input": 0.09,
+        "cache_read": 0.07,
+        "input": 0.1,
         "output": 1.1
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
@@ -11360,7 +11360,7 @@
       "last_updated": "2025-09",
       "limit": {
         "context": 262144,
-        "output": 16384
+        "output": 235929
       },
       "modalities": {
         "input": [
@@ -11518,8 +11518,8 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.5-27b",
       "cost": {
-        "input": 0.26,
-        "output": 2.6
+        "input": 0.3,
+        "output": 2.4
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -11527,7 +11527,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 81920
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -12209,9 +12209,9 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-27b",
       "cost": {
-        "cache_read": 0.0375,
-        "input": 0.15,
-        "output": 1.875
+        "cache_read": 0.059,
+        "input": 0.06,
+        "output": 2.2
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -13229,9 +13229,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy3",
       "cost": {
-        "cache_read": 0.020625,
-        "input": 0.0825,
-        "output": 0.33
+        "cache_read": 0.033,
+        "input": 0.132,
+        "output": 0.528
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -13397,9 +13397,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.0378,
-        "input": 0.7506,
-        "output": 2.2509
+        "cache_read": 0.042,
+        "input": 0.834,
+        "output": 2.501
       },
       "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
       "family": "Hy",
@@ -14424,9 +14424,9 @@
       "attachment": false,
       "canonical_model_id": "xiaomi/mimo-v2.5-pro",
       "cost": {
-        "cache_read": 0.0036,
-        "input": 0.435,
-        "output": 0.87
+        "cache_read": 0.096,
+        "input": 0.48,
+        "output": 1.8
       },
       "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
       "family": "mimo",
@@ -14437,8 +14437,8 @@
       "knowledge": "2024-12",
       "last_updated": "2026-04-22",
       "limit": {
-        "context": 1024000,
-        "output": 131072
+        "context": 262144,
+        "output": 235929
       },
       "modalities": {
         "input": [
@@ -14740,7 +14740,7 @@
       "attachment": true,
       "canonical_model_id": "zhipuai/glm-4.6v",
       "cost": {
-        "cache_read": 0.055,
+        "cache_read": 0.05,
         "input": 0.3,
         "output": 0.9
       },
@@ -15761,22 +15761,22 @@
     "~openai/gpt-astra-latest": {
       "attachment": true,
       "cost": {
-        "cache_read": 1,
-        "cache_write": 12.5,
+        "cache_read": 0.4,
+        "cache_write": 10,
         "context_over_200k": {
-          "cache_read": 2,
-          "cache_write": 25,
-          "input": 20,
-          "output": 75
+          "cache_read": 0.8,
+          "cache_write": 20,
+          "input": 16,
+          "output": 60
         },
-        "input": 10,
-        "output": 50,
+        "input": 8,
+        "output": 40,
         "tiers": [
           {
-            "cache_read": 2,
-            "cache_write": 25,
-            "input": 20,
-            "output": 75,
+            "cache_read": 0.8,
+            "cache_write": 20,
+            "input": 16,
+            "output": 60,
             "tier": {
               "size": 272000,
               "type": "context"
