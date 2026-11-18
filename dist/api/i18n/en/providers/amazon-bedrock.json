@@ -4237,6 +4237,151 @@
       "temperature": true,
       "tool_call": true
     },
+    "global.openai.gpt-6.2-astra": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-astra",
+      "cost": {
+        "cache_read": 0.4,
+        "cache_write": 10,
+        "context_over_200k": {
+          "cache_read": 0.8,
+          "cache_write": 20,
+          "input": 16,
+          "output": 60
+        },
+        "input": 8,
+        "output": 40,
+        "tiers": [
+          {
+            "cache_read": 0.8,
+            "cache_write": 20,
+            "input": 16,
+            "output": 60,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "A frontier reasoning model for coding, computer use, and professional work such as slides, spreadsheets, and documents.",
+      "experimental": {
+        "modes": {
+          "ultrafast": {
+            "provider": {
+              "body": {
+                "additionalModelRequestFields": {
+                  "service_tier": "ultrafast"
+                }
+              }
+            }
+          }
+        }
+      },
+      "family": "gpt-astra",
+      "id": "global.openai.gpt-6.2-astra",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-11-17",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Astra (Global)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "global.openai.gpt-6.2-sol": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-sol",
+      "cost": {
+        "cache_read": 0.1,
+        "cache_write": 2.5,
+        "context_over_200k": {
+          "cache_read": 0.2,
+          "cache_write": 5,
+          "input": 4,
+          "output": 15
+        },
+        "input": 2,
+        "output": 10,
+        "tiers": [
+          {
+            "cache_read": 0.2,
+            "cache_write": 5,
+            "input": 4,
+            "output": 15,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "An efficient reasoning model for everyday work, multistep agentic workflows, and coding.",
+      "family": "gpt-sol",
+      "id": "global.openai.gpt-6.2-sol",
+      "knowledge": "2026-06-01",
+      "last_updated": "2026-11-17",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Sol (Global)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "global.xai.grok-4.6": {
       "attachment": true,
       "canonical_model_id": "xai/grok-4.6",
@@ -6897,6 +7042,159 @@
       "temperature": true,
       "tool_call": true
     },
+    "openai.gpt-6.2-astra": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-astra",
+      "cost": {
+        "cache_read": 0.44,
+        "cache_write": 11,
+        "context_over_200k": {
+          "cache_read": 0.88,
+          "cache_write": 22,
+          "input": 17.6,
+          "output": 66
+        },
+        "input": 8.8,
+        "output": 44,
+        "tiers": [
+          {
+            "cache_read": 0.88,
+            "cache_write": 22,
+            "input": 17.6,
+            "output": 66,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "A frontier reasoning model for coding, computer use, and professional work such as slides, spreadsheets, and documents.",
+      "experimental": {
+        "modes": {
+          "ultrafast": {
+            "provider": {
+              "body": {
+                "service_tier": "ultrafast"
+              }
+            }
+          }
+        }
+      },
+      "family": "gpt-astra",
+      "id": "openai.gpt-6.2-astra",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-11-17",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Astra",
+      "open_weights": false,
+      "provider": {
+        "api": "https://bedrock-mantle.${AWS_REGION}.api.aws/openai/v1",
+        "npm": "@ai-sdk/amazon-bedrock/mantle",
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "openai.gpt-6.2-sol": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-sol",
+      "cost": {
+        "cache_read": 0.11,
+        "cache_write": 2.75,
+        "context_over_200k": {
+          "cache_read": 0.22,
+          "cache_write": 5.5,
+          "input": 4.4,
+          "output": 16.5
+        },
+        "input": 2.2,
+        "output": 11,
+        "tiers": [
+          {
+            "cache_read": 0.22,
+            "cache_write": 5.5,
+            "input": 4.4,
+            "output": 16.5,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "An efficient reasoning model for everyday work, multistep agentic workflows, and coding.",
+      "family": "gpt-sol",
+      "id": "openai.gpt-6.2-sol",
+      "knowledge": "2026-06-01",
+      "last_updated": "2026-11-17",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Sol",
+      "open_weights": false,
+      "provider": {
+        "api": "https://bedrock-mantle.${AWS_REGION}.api.aws/openai/v1",
+        "npm": "@ai-sdk/amazon-bedrock/mantle",
+        "shape": "responses"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "openai.gpt-oss-120b": {
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
@@ -9404,6 +9702,151 @@
       "release_date": "2026-10-26",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "us.openai.gpt-6.2-astra": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-astra",
+      "cost": {
+        "cache_read": 0.44,
+        "cache_write": 11,
+        "context_over_200k": {
+          "cache_read": 0.88,
+          "cache_write": 22,
+          "input": 17.6,
+          "output": 66
+        },
+        "input": 8.8,
+        "output": 44,
+        "tiers": [
+          {
+            "cache_read": 0.88,
+            "cache_write": 22,
+            "input": 17.6,
+            "output": 66,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "A frontier reasoning model for coding, computer use, and professional work such as slides, spreadsheets, and documents.",
+      "experimental": {
+        "modes": {
+          "ultrafast": {
+            "provider": {
+              "body": {
+                "additionalModelRequestFields": {
+                  "service_tier": "ultrafast"
+                }
+              }
+            }
+          }
+        }
+      },
+      "family": "gpt-astra",
+      "id": "us.openai.gpt-6.2-astra",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-11-17",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Astra (US)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "us.openai.gpt-6.2-sol": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-sol",
+      "cost": {
+        "cache_read": 0.11,
+        "cache_write": 2.75,
+        "context_over_200k": {
+          "cache_read": 0.22,
+          "cache_write": 5.5,
+          "input": 4.4,
+          "output": 16.5
+        },
+        "input": 2.2,
+        "output": 11,
+        "tiers": [
+          {
+            "cache_read": 0.22,
+            "cache_write": 5.5,
+            "input": 4.4,
+            "output": 16.5,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "An efficient reasoning model for everyday work, multistep agentic workflows, and coding.",
+      "family": "gpt-sol",
+      "id": "us.openai.gpt-6.2-sol",
+      "knowledge": "2026-06-01",
+      "last_updated": "2026-11-17",
+      "limit": {
+        "context": 1050000,
+        "input": 922000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Sol (US)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-17",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "us.writer.palmyra-x4-v1:0": {

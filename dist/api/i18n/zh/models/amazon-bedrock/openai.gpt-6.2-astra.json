@@ -1,0 +1,82 @@
+{
+  "attachment": true,
+  "canonical_model_id": "openai/gpt-6.2-astra",
+  "cost": {
+    "cache_read": 0.44,
+    "cache_write": 11,
+    "context_over_200k": {
+      "cache_read": 0.88,
+      "cache_write": 22,
+      "input": 17.6,
+      "output": 66
+    },
+    "input": 8.8,
+    "output": 44,
+    "tiers": [
+      {
+        "cache_read": 0.88,
+        "cache_write": 22,
+        "input": 17.6,
+        "output": 66,
+        "tier": {
+          "size": 272000,
+          "type": "context"
+        }
+      }
+    ]
+  },
+  "description": "A frontier reasoning model for coding, computer use, and professional work such as slides, spreadsheets, and documents.",
+  "experimental": {
+    "modes": {
+      "ultrafast": {
+        "provider": {
+          "body": {
+            "service_tier": "ultrafast"
+          }
+        }
+      }
+    }
+  },
+  "family": "gpt-astra",
+  "id": "openai.gpt-6.2-astra",
+  "knowledge": "2026-05-18",
+  "last_updated": "2026-11-17",
+  "limit": {
+    "context": 1050000,
+    "input": 922000,
+    "output": 128000
+  },
+  "modalities": {
+    "input": [
+      "text",
+      "image"
+    ],
+    "output": [
+      "text"
+    ]
+  },
+  "name": "GPT-6.2 Astra",
+  "open_weights": false,
+  "provider": {
+    "api": "https://bedrock-mantle.${AWS_REGION}.api.aws/openai/v1",
+    "npm": "@ai-sdk/amazon-bedrock/mantle",
+    "shape": "responses"
+  },
+  "reasoning": true,
+  "reasoning_options": [
+    {
+      "type": "effort",
+      "values": [
+        "low",
+        "medium",
+        "high",
+        "xhigh",
+        "max"
+      ]
+    }
+  ],
+  "release_date": "2026-11-17",
+  "structured_output": true,
+  "temperature": false,
+  "tool_call": true
+}
