@@ -109,6 +109,57 @@
       "temperature": false,
       "tool_call": true
     },
+    "claude-fable-5-2": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-fable-5-2",
+      "cost": {
+        "cache_read": 0.22,
+        "cache_write": 11,
+        "input": 8.8,
+        "output": 44
+      },
+      "description": "Claude model for demanding reasoning and long-horizon agentic work",
+      "family": "claude-fable",
+      "id": "claude-fable-5-2",
+      "knowledge": "2026-06",
+      "last_updated": "2026-11-09",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Fable 5.2",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/anthropic"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-09",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "claude-haiku-5-5": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-haiku-5-5",
@@ -1902,6 +1953,187 @@
         }
       ],
       "release_date": "2026-10-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gpt-6.2-astra": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-astra",
+      "cost": {
+        "cache_read": 0.44,
+        "cache_write": 11,
+        "context_over_200k": {
+          "cache_read": 0.88,
+          "cache_write": 22,
+          "input": 17.6,
+          "output": 66
+        },
+        "input": 8.8,
+        "output": 44,
+        "tiers": [
+          {
+            "cache_read": 0.88,
+            "cache_write": 22,
+            "input": 17.6,
+            "output": 66,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "A frontier reasoning model for coding, computer use, and professional work such as slides, spreadsheets, and documents.",
+      "family": "gpt-astra",
+      "id": "gpt-6.2-astra",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-11-17",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Astra",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "gpt-6.2-sol": {
+      "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-sol",
+      "cost": {
+        "cache_read": 0.11,
+        "cache_write": 2.75,
+        "context_over_200k": {
+          "cache_read": 0.22,
+          "cache_write": 5.5,
+          "input": 4.4,
+          "output": 16.5
+        },
+        "input": 2.2,
+        "output": 11,
+        "tiers": [
+          {
+            "cache_read": 0.22,
+            "cache_write": 5.5,
+            "input": 4.4,
+            "output": 16.5,
+            "tier": {
+              "size": 272000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "An efficient reasoning model for everyday work, multistep agentic workflows, and coding.",
+      "family": "gpt-sol",
+      "id": "gpt-6.2-sol",
+      "knowledge": "2026-06-01",
+      "last_updated": "2026-11-17",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT-6.2 Sol",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-17",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "hy4-flash": {
+      "attachment": true,
+      "canonical_model_id": "tencent/hy4-flash",
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.07,
+        "output": 0.281
+      },
+      "description": "Tencent's lower-cost Hy4 tier for everyday agent and productivity tasks, with image understanding and a 1M-token context window.",
+      "family": "Hy",
+      "id": "hy4-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-11-16",
+      "limit": {
+        "context": 1048576,
+        "input": 983040,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hy4 flash",
+      "open_weights": false,
+      "provider": {
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-16",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
