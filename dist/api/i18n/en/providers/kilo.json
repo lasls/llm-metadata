@@ -2233,9 +2233,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.06,
-        "output": 0.18
+        "cache_read": 0.035,
+        "input": 0.047,
+        "output": 0.3
       },
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows.",
       "family": "deepseek-flash",
@@ -2244,7 +2244,7 @@
       "last_updated": "2026-07-31",
       "limit": {
         "context": 1048576,
-        "output": 384000
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -2407,9 +2407,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.001014,
-        "input": 0.0507,
-        "output": 0.2028
+        "cache_read": 0.006,
+        "input": 0.3,
+        "output": 1.2
       },
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the cost-efficient tier of the V4.1 family. DeepSeek reports that it exceeds V4 Pro on performance, speed, and task...",
       "family": "deepseek-flash",
@@ -2418,7 +2418,7 @@
       "last_updated": "2026-09-10",
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -2463,7 +2463,7 @@
       "last_updated": "2026-10-17",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -3908,6 +3908,56 @@
       "temperature": true,
       "tool_call": true
     },
+    "google/gemini-4-neon": {
+      "attachment": true,
+      "canonical_model_id": "google/gemini-4-neon",
+      "cost": {
+        "cache_read": 0.15,
+        "cache_write": 0.041667,
+        "input": 3,
+        "output": 15,
+        "reasoning": 7.5
+      },
+      "description": "Gemini 4 Neon is a fast, mid-priced model in the Gemini 4 family from Google, built for coding and agentic work. It is suited for repository and terminal coding, web...",
+      "family": "gemini",
+      "id": "google/gemini-4-neon",
+      "knowledge": "2026-03",
+      "last_updated": "2026-11-18",
+      "limit": {
+        "context": 1048576,
+        "output": 943718
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google: Gemini 4 Neon",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-11-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "google/gemini-nano-banana-2.1": {
       "attachment": true,
       "canonical_model_id": "google/gemini-nano-banana-2.1",
@@ -4171,7 +4221,7 @@
       "last_updated": "2025-03-12",
       "limit": {
         "context": 131072,
-        "output": 117964
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -4308,49 +4358,6 @@
       ],
       "release_date": "2026-04-02",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "google/gemma-4-31b-it:free": {
-      "attachment": true,
-      "canonical_model_id": "google/gemma-4-31b-it",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
-      "family": "gemma",
-      "id": "google/gemma-4-31b-it:free",
-      "knowledge": "2025-01",
-      "last_updated": "2026-04-02",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "image",
-          "text",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Google: Gemma 4 31B (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-04-02",
-      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -15244,7 +15251,7 @@
       "last_updated": "2026-10-16",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -16556,50 +16563,6 @@
       ],
       "release_date": "2026-11-05",
       "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "thinkingmachines/inkling-2-small:free": {
-      "attachment": true,
-      "canonical_model_id": "thinkingmachines/inkling-2-small",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Inkling 2 Small is an open-weight multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second...",
-      "family": "ling",
-      "id": "thinkingmachines/inkling-2-small:free",
-      "last_updated": "2026-11-12",
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Thinking Machines: Inkling 2 Small (free)",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-11-05",
-      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -18104,7 +18067,7 @@
       "last_updated": "2026-04-07",
       "limit": {
         "context": 202752,
-        "output": 182476
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -18791,9 +18754,9 @@
     "~deepseek/deepseek-v4-flash-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.015,
-        "input": 0.06,
-        "output": 0.18
+        "cache_read": 0.035,
+        "input": 0.047,
+        "output": 0.3
       },
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
       "family": "deepseek",

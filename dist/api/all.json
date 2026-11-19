@@ -50545,10 +50545,10 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
         "cost": {
-          "cache_read": 0.0029,
+          "cache_read": 0.0015,
           "cache_write": 0,
-          "input": 0.098,
-          "output": 0.294
+          "input": 0.035,
+          "output": 0.15
         },
         "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
         "family": "deepseek-flash",
@@ -77494,6 +77494,36 @@
         "temperature": true,
         "tool_call": false
       },
+      "@cf/cloudflare/clairic-flash": {
+        "attachment": true,
+        "cost": {
+          "input": 0.1,
+          "output": 0
+        },
+        "description": "Efficient model for low-latency assistance, extraction, and routine automation",
+        "id": "@cf/cloudflare/clairic-flash",
+        "last_updated": "2026-10-29",
+        "limit": {
+          "context": 65536,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Clairic Flash",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2026-10-29",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": false
+      },
       "@cf/deepseek-ai/deepseek-r1-distill-qwen-32b": {
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-r1",
@@ -86256,8 +86286,8 @@
         },
         "last_updated": "2026-07-16",
         "limit": {
-          "context": 1048576,
-          "output": 1048576
+          "context": 1024000,
+          "output": 1024000
         },
         "modalities": {
           "input": [
@@ -110638,6 +110668,57 @@
         "temperature": false,
         "tool_call": true
       },
+      "google/gemini-4-neon": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-neon",
+        "cost": {
+          "cache_read": 0.15,
+          "cache_write": 0.083333,
+          "input": 3,
+          "input_audio": 3,
+          "output": 15,
+          "reasoning": 15
+        },
+        "description": "Google's Gemini 4 model for fast, frontier-level coding, knowledge work and science workflows, with four thinking levels and a 1M-token context window",
+        "family": "gemini",
+        "id": "google/gemini-4-neon",
+        "knowledge": "2026-03",
+        "last_updated": "2026-11-18",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Neon",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-18",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "google/gemini-flash-latest": {
         "attachment": true,
         "canonical_model_id": "google/gemini-3.8-flash",
@@ -119585,6 +119666,159 @@
           }
         ],
         "release_date": "2026-11-12",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "vertex/gemini-4-neon": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-neon",
+        "cost": {
+          "cache_read": 0.15,
+          "cache_write": 0.083333,
+          "input": 3,
+          "input_audio": 3,
+          "output": 15,
+          "reasoning": 15
+        },
+        "description": "Google's Gemini 4 model for fast, frontier-level coding, knowledge work and science workflows, with four thinking levels and a 1M-token context window",
+        "family": "gemini",
+        "id": "vertex/gemini-4-neon",
+        "knowledge": "2026-03",
+        "last_updated": "2026-11-18",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Neon (Vertex AI)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-18",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "vertex/gemini-4-neon@eu": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-neon",
+        "cost": {
+          "cache_read": 0.165,
+          "cache_write": 0.091667,
+          "input": 3.3,
+          "input_audio": 3.3,
+          "output": 16.5,
+          "reasoning": 16.5
+        },
+        "description": "Google's Gemini 4 model for fast, frontier-level coding, knowledge work and science workflows, with four thinking levels and a 1M-token context window",
+        "family": "gemini",
+        "id": "vertex/gemini-4-neon@eu",
+        "knowledge": "2026-03",
+        "last_updated": "2026-11-18",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Neon (Vertex AI, EU)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-18",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
+      "vertex/gemini-4-neon@us": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-neon",
+        "cost": {
+          "cache_read": 0.165,
+          "cache_write": 0.091667,
+          "input": 3.3,
+          "input_audio": 3.3,
+          "output": 16.5,
+          "reasoning": 16.5
+        },
+        "description": "Google's Gemini 4 model for fast, frontier-level coding, knowledge work and science workflows, with four thinking levels and a 1M-token context window",
+        "family": "gemini",
+        "id": "vertex/gemini-4-neon@us",
+        "knowledge": "2026-03",
+        "last_updated": "2026-11-18",
+        "limit": {
+          "context": 1048576,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Neon (Vertex AI, US)",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-18",
         "structured_output": true,
         "temperature": false,
         "tool_call": true
@@ -151887,6 +152121,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "Qwen/Qwen3-30B-A3B-Instruct-2507": {
+        "attachment": false,
+        "canonical_model_id": "alibaba/qwen3-30b-a3b-instruct-2507",
+        "cost": {
+          "input": 0.09,
+          "output": 0.3
+        },
+        "description": "Updated compact Qwen3 MoE instruct model for multilingual chat, coding, and tool use",
+        "family": "qwen",
+        "id": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+        "last_updated": "2025-07-28",
+        "limit": {
+          "context": 262144,
+          "output": 16384
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Qwen3 30B-A3B Instruct 2507",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2025-07-28",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "Qwen/Qwen3-32B": {
         "attachment": false,
         "canonical_model_id": "alibaba/qwen3-32b",
@@ -153163,6 +153428,38 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemma-2-27b-it": {
+        "attachment": false,
+        "canonical_model_id": "google/gemma-2-27b-it",
+        "cost": {
+          "input": 0.65,
+          "output": 0.65
+        },
+        "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+        "family": "gemma",
+        "id": "google/gemma-2-27b-it",
+        "knowledge": "2024-06-30",
+        "last_updated": "2024-07-13",
+        "limit": {
+          "context": 8192,
+          "output": 2048
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemma 2 27B",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-07-13",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": false
+      },
       "google/gemma-3-12b-it": {
         "attachment": true,
         "canonical_model_id": "google/gemma-3-12b-it",
@@ -153329,6 +153626,37 @@
         "temperature": true,
         "tool_call": true
       },
+      "meta-llama/Llama-3.1-70B-Instruct": {
+        "attachment": false,
+        "canonical_model_id": "meta/llama-3.1-70b-instruct",
+        "cost": {
+          "input": 0.72,
+          "output": 0.72
+        },
+        "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
+        "family": "llama",
+        "id": "meta-llama/Llama-3.1-70B-Instruct",
+        "knowledge": "2023-12",
+        "last_updated": "2024-07-23",
+        "limit": {
+          "context": 131072,
+          "output": 4096
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama-3.1-70B-Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-07-23",
+        "temperature": true,
+        "tool_call": true
+      },
       "meta-llama/Llama-3.1-8B-Instruct": {
         "attachment": false,
         "canonical_model_id": "meta/llama-3.1-8b-instruct",
@@ -153357,6 +153685,69 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-07-23",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
+      "meta-llama/Llama-3.2-1B-Instruct": {
+        "attachment": false,
+        "canonical_model_id": "meta/llama-3.2-1b-instruct",
+        "cost": {
+          "input": 0.027,
+          "output": 0.201
+        },
+        "description": "Compact instruction-tuned Llama model for multilingual dialogue and on-device assistants",
+        "family": "llama",
+        "id": "meta-llama/Llama-3.2-1B-Instruct",
+        "knowledge": "2023-12",
+        "last_updated": "2024-09-25",
+        "limit": {
+          "context": 60000,
+          "output": 32000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.2 1B Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-09-25",
+        "temperature": true,
+        "tool_call": true
+      },
+      "meta-llama/Llama-3.2-3B-Instruct": {
+        "attachment": false,
+        "canonical_model_id": "meta/llama-3.2-3b-instruct",
+        "cost": {
+          "input": 0.0509,
+          "output": 0.335
+        },
+        "description": "Small instruction-tuned Llama model for multilingual dialogue and agentic retrieval",
+        "family": "llama",
+        "id": "meta-llama/Llama-3.2-3B-Instruct",
+        "knowledge": "2023-12",
+        "last_updated": "2024-09-25",
+        "limit": {
+          "context": 80000,
+          "output": 80000
+        },
+        "modalities": {
+          "input": [
+            "text"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Llama 3.2 3B Instruct",
+        "open_weights": true,
+        "reasoning": false,
+        "release_date": "2024-09-25",
         "structured_output": true,
         "temperature": true,
         "tool_call": true
@@ -159325,8 +159716,8 @@
         "cost": {
           "cache_read": 0.19,
           "cache_write": 0,
-          "input": 0.6816,
-          "output": 3.28
+          "input": 0.6825,
+          "output": 3.6
         },
         "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
         "family": "kimi-k2",
@@ -159401,10 +159792,10 @@
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.3",
         "cost": {
-          "cache_read": 0.1378,
+          "cache_read": 0.1469,
           "cache_write": 0,
           "input": 1.05,
-          "output": 4.2
+          "output": 4.08
         },
         "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
         "family": "glm",
@@ -175492,9 +175883,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
         "cost": {
-          "cache_read": 0.015,
-          "input": 0.06,
-          "output": 0.18
+          "cache_read": 0.035,
+          "input": 0.047,
+          "output": 0.3
         },
         "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows.",
         "family": "deepseek-flash",
@@ -175503,7 +175894,7 @@
         "last_updated": "2026-07-31",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -175666,9 +176057,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.001014,
-          "input": 0.0507,
-          "output": 0.2028
+          "cache_read": 0.006,
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the cost-efficient tier of the V4.1 family. DeepSeek reports that it exceeds V4 Pro on performance, speed, and task...",
         "family": "deepseek-flash",
@@ -175677,7 +176068,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1048576,
-          "output": 393216
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -175722,7 +176113,7 @@
         "last_updated": "2026-10-17",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -177167,6 +177558,56 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemini-4-neon": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-neon",
+        "cost": {
+          "cache_read": 0.15,
+          "cache_write": 0.041667,
+          "input": 3,
+          "output": 15,
+          "reasoning": 7.5
+        },
+        "description": "Gemini 4 Neon is a fast, mid-priced model in the Gemini 4 family from Google, built for coding and agentic work. It is suited for repository and terminal coding, web...",
+        "family": "gemini",
+        "id": "google/gemini-4-neon",
+        "knowledge": "2026-03",
+        "last_updated": "2026-11-18",
+        "limit": {
+          "context": 1048576,
+          "output": 943718
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Google: Gemini 4 Neon",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "google/gemini-nano-banana-2.1": {
         "attachment": true,
         "canonical_model_id": "google/gemini-nano-banana-2.1",
@@ -177430,7 +177871,7 @@
         "last_updated": "2025-03-12",
         "limit": {
           "context": 131072,
-          "output": 117964
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -177567,49 +178008,6 @@
         ],
         "release_date": "2026-04-02",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "google/gemma-4-31b-it:free": {
-        "attachment": true,
-        "canonical_model_id": "google/gemma-4-31b-it",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Gemma 4 31B Instruct is Google DeepMind's 30.7B dense multimodal model supporting text and image input with text output. Features a 256K token context window, configurable thinking/reasoning mode, native function...",
-        "family": "gemma",
-        "id": "google/gemma-4-31b-it:free",
-        "knowledge": "2025-01",
-        "last_updated": "2026-04-02",
-        "limit": {
-          "context": 262144,
-          "output": 32768
-        },
-        "modalities": {
-          "input": [
-            "image",
-            "text",
-            "video"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Google: Gemma 4 31B (free)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-04-02",
-        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -188503,7 +188901,7 @@
         "last_updated": "2026-10-16",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -189815,50 +190213,6 @@
         ],
         "release_date": "2026-11-05",
         "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "thinkingmachines/inkling-2-small:free": {
-        "attachment": true,
-        "canonical_model_id": "thinkingmachines/inkling-2-small",
-        "cost": {
-          "input": 0,
-          "output": 0
-        },
-        "description": "Inkling 2 Small is an open-weight multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second...",
-        "family": "ling",
-        "id": "thinkingmachines/inkling-2-small:free",
-        "last_updated": "2026-11-12",
-        "limit": {
-          "context": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Thinking Machines: Inkling 2 Small (free)",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "minimal",
-              "low",
-              "medium",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-11-05",
-        "structured_output": false,
         "temperature": true,
         "tool_call": true
       },
@@ -191363,7 +191717,7 @@
         "last_updated": "2026-04-07",
         "limit": {
           "context": 202752,
-          "output": 182476
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -192050,9 +192404,9 @@
       "~deepseek/deepseek-v4-flash-latest": {
         "attachment": false,
         "cost": {
-          "cache_read": 0.015,
-          "input": 0.06,
-          "output": 0.18
+          "cache_read": 0.035,
+          "input": 0.047,
+          "output": 0.3
         },
         "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
         "family": "deepseek",
@@ -216834,55 +217188,6 @@
           ]
         },
         "name": "Gemini 3.5 Flash Lite (Google Vertex AI)",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "minimal",
-              "low",
-              "medium",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-07-21",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "google-vertex/gemini-3.6-flash": {
-        "attachment": true,
-        "canonical_model_id": "google/gemini-3.6-flash",
-        "cost": {
-          "cache_read": 0.075,
-          "cache_write": 0.083335,
-          "input": 0.75,
-          "output": 3.75
-        },
-        "description": "Fast Gemini model balancing multimodal reasoning, tool use, and cost",
-        "family": "gemini-flash",
-        "id": "google-vertex/gemini-3.6-flash",
-        "knowledge": "2026-03",
-        "last_updated": "2026-07-21",
-        "limit": {
-          "context": 1048576,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image",
-            "video",
-            "audio",
-            "pdf"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Gemini 3.6 Flash (Google Vertex AI)",
         "open_weights": false,
         "reasoning": true,
         "reasoning_options": [
@@ -251981,40 +252286,6 @@
         "structured_output": false,
         "tool_call": false
       },
-      "TEE/deepseek-v3.2": {
-        "attachment": false,
-        "canonical_model_id": "deepseek/deepseek-v3.2",
-        "cost": {
-          "cache_read": 0.5,
-          "input": 1,
-          "output": 1
-        },
-        "description": "Hybrid-reasoning DeepSeek model with thinking and non-thinking modes, sparse attention, and tool-use",
-        "family": "deepseek",
-        "id": "TEE/deepseek-v3.2",
-        "knowledge": "2024-07",
-        "last_updated": "2025-12-01",
-        "limit": {
-          "context": 164000,
-          "input": 164000,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "DeepSeek V3.2 TEE",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2025-12-01",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
       "TEE/deepseek-v4.1-flash": {
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
@@ -252203,169 +252474,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "TEE/glm-5.1": {
-        "attachment": false,
-        "canonical_model_id": "zhipuai/glm-5.1",
-        "cost": {
-          "cache_read": 0.09,
-          "input": 0.9,
-          "output": 2.9
-        },
-        "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
-        "family": "glm",
-        "id": "TEE/glm-5.1",
-        "last_updated": "2026-04-07",
-        "limit": {
-          "context": 202752,
-          "input": 202752,
-          "output": 65535
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 5.1 TEE",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-04-07",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "TEE/glm-5.1-thinking": {
-        "attachment": false,
-        "canonical_model_id": "zhipuai/glm-5.1",
-        "cost": {
-          "cache_read": 0.09,
-          "input": 0.9,
-          "output": 2.9
-        },
-        "description": "Strong GLM coding model for agentic engineering, terminals, and repository generation",
-        "family": "glm",
-        "id": "TEE/glm-5.1-thinking",
-        "last_updated": "2026-04-07",
-        "limit": {
-          "context": 202752,
-          "input": 202752,
-          "output": 65535
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 5.1 Thinking TEE",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "none",
-              "high"
-            ]
-          }
-        ],
-        "release_date": "2026-04-07",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "TEE/glm-5.2": {
-        "attachment": false,
-        "canonical_model_id": "zhipuai/glm-5.2",
-        "cost": {
-          "cache_read": 0.125,
-          "input": 1.25,
-          "output": 3.95
-        },
-        "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
-        "family": "glm",
-        "id": "TEE/glm-5.2",
-        "last_updated": "2026-06-13",
-        "limit": {
-          "context": 1048576,
-          "input": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 5.2 TEE",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-06-13",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
-      "TEE/glm-5.2:thinking": {
-        "attachment": false,
-        "canonical_model_id": "zhipuai/glm-5.2",
-        "cost": {
-          "cache_read": 0.125,
-          "input": 1.25,
-          "output": 3.95
-        },
-        "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
-        "family": "glm",
-        "id": "TEE/glm-5.2:thinking",
-        "last_updated": "2026-06-13",
-        "limit": {
-          "context": 1048576,
-          "input": 1048576,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "GLM 5.2 Thinking TEE",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "medium",
-              "high",
-              "xhigh",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-06-13",
-        "structured_output": true,
-        "temperature": true,
-        "tool_call": true
-      },
       "TEE/glm-5.3": {
         "attachment": false,
         "canonical_model_id": "zhipuai/glm-5.3",
@@ -252535,85 +252643,6 @@
         "temperature": true,
         "tool_call": true
       },
-      "TEE/kimi-k2.6": {
-        "attachment": true,
-        "canonical_model_id": "moonshotai/kimi-k2.6",
-        "cost": {
-          "cache_read": 0.039,
-          "input": 0.39,
-          "output": 1.8
-        },
-        "description": "Multimodal Kimi workhorse for agent loops, coding tasks, and visual context",
-        "family": "kimi-k2",
-        "id": "TEE/kimi-k2.6",
-        "knowledge": "2025-01",
-        "last_updated": "2026-04-20",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K2.6 TEE",
-        "open_weights": true,
-        "reasoning": false,
-        "release_date": "2026-04-20",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": true
-      },
-      "TEE/kimi-k3": {
-        "attachment": true,
-        "canonical_model_id": "moonshotai/kimi-k3",
-        "cost": {
-          "cache_read": 0.185,
-          "input": 1.85,
-          "output": 9.5
-        },
-        "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
-        "family": "kimi-k3",
-        "id": "TEE/kimi-k3",
-        "last_updated": "2026-07-16",
-        "limit": {
-          "context": 1048576,
-          "input": 1048576,
-          "output": 65535
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Kimi K3 TEE",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [
-          {
-            "type": "effort",
-            "values": [
-              "low",
-              "high",
-              "max"
-            ]
-          }
-        ],
-        "release_date": "2026-07-16",
-        "structured_output": true,
-        "temperature": false,
-        "tool_call": true
-      },
       "TEE/kimi-k3.1-pro": {
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k3.1-pro",
@@ -252688,41 +252717,6 @@
         "open_weights": true,
         "reasoning": false,
         "release_date": "2024-12-06",
-        "structured_output": false,
-        "temperature": true,
-        "tool_call": false
-      },
-      "TEE/qwen3.6-27b": {
-        "attachment": true,
-        "canonical_model_id": "alibaba/qwen3.6-27b",
-        "cost": {
-          "cache_read": 0.03,
-          "input": 0.32,
-          "output": 3.25
-        },
-        "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
-        "family": "qwen",
-        "id": "TEE/qwen3.6-27b",
-        "last_updated": "2026-04-22",
-        "limit": {
-          "context": 262144,
-          "input": 262144,
-          "output": 65536
-        },
-        "modalities": {
-          "input": [
-            "text",
-            "image"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.6 27B TEE",
-        "open_weights": true,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-04-22",
         "structured_output": false,
         "temperature": true,
         "tool_call": false
@@ -276357,37 +276351,6 @@
         "temperature": true,
         "tool_call": false,
         "type": "transcription"
-      },
-      "qwen/qwen3.7-max": {
-        "attachment": false,
-        "canonical_model_id": "alibaba/qwen3.7-max",
-        "cost": {
-          "input": 2.8,
-          "output": 7.5
-        },
-        "description": "Qwen frontier model tuned for agent frameworks, coding assistants, and long tasks",
-        "family": "qwen",
-        "id": "qwen/qwen3.7-max",
-        "last_updated": "2026-05-21",
-        "limit": {
-          "context": 1000000,
-          "output": 131072
-        },
-        "modalities": {
-          "input": [
-            "text"
-          ],
-          "output": [
-            "text"
-          ]
-        },
-        "name": "Qwen3.7 Max",
-        "open_weights": false,
-        "reasoning": true,
-        "reasoning_options": [],
-        "release_date": "2026-05-21",
-        "temperature": true,
-        "tool_call": true
       },
       "x-ai/grok-4.6": {
         "attachment": false,
@@ -312346,9 +312309,9 @@
         "attachment": false,
         "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
         "cost": {
-          "cache_read": 0.015,
-          "input": 0.06,
-          "output": 0.18
+          "cache_read": 0.035,
+          "input": 0.047,
+          "output": 0.3
         },
         "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
         "family": "deepseek-flash",
@@ -312357,7 +312320,7 @@
         "last_updated": "2026-07-31",
         "limit": {
           "context": 1048576,
-          "output": 384000
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -312523,9 +312486,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash",
         "cost": {
-          "cache_read": 0.001014,
-          "input": 0.0507,
-          "output": 0.2028
+          "cache_read": 0.006,
+          "input": 0.3,
+          "output": 1.2
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -312534,7 +312497,7 @@
         "last_updated": "2026-09-10",
         "limit": {
           "context": 1048576,
-          "output": 393216
+          "output": 943718
         },
         "modalities": {
           "input": [
@@ -312568,9 +312531,9 @@
         "attachment": true,
         "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
         "cost": {
-          "cache_read": 0.01,
-          "input": 0.036,
-          "output": 0.5
+          "cache_read": 0.003,
+          "input": 0.15,
+          "output": 0.6
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -312579,7 +312542,7 @@
         "last_updated": "2026-10-17",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 393216
         },
         "modalities": {
           "input": [
@@ -313896,6 +313859,57 @@
         "temperature": true,
         "tool_call": true
       },
+      "google/gemini-4-neon": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-neon",
+        "cost": {
+          "cache_read": 0.15,
+          "cache_write": 0.083333,
+          "input": 3,
+          "input_audio": 3,
+          "output": 15,
+          "reasoning": 15
+        },
+        "description": "Gemini multimodal model for text, image, audio, video, and document tasks",
+        "family": "gemini",
+        "id": "google/gemini-4-neon",
+        "knowledge": "2026-03",
+        "last_updated": "2026-11-18",
+        "limit": {
+          "context": 1048576,
+          "output": 943718
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "video",
+            "audio",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Neon",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-18",
+        "structured_output": true,
+        "temperature": true,
+        "tool_call": true
+      },
       "google/gemini-nano-banana-2.1": {
         "attachment": true,
         "canonical_model_id": "google/gemini-nano-banana-2.1",
@@ -314097,9 +314111,8 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-3-27b-it",
         "cost": {
-          "cache_read": 0.04,
           "input": 0.08,
-          "output": 0.45
+          "output": 0.16
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -314108,7 +314121,7 @@
         "last_updated": "2025-03-12",
         "limit": {
           "context": 131072,
-          "output": 117964
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -314164,9 +314177,9 @@
         "attachment": true,
         "canonical_model_id": "google/gemma-4-26b-a4b-it",
         "cost": {
-          "cache_read": 0.05,
-          "input": 0.09,
-          "output": 0.3
+          "cache_read": 0.0425,
+          "input": 0.0765,
+          "output": 0.255
         },
         "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
         "family": "gemma",
@@ -316810,9 +316823,9 @@
         "attachment": true,
         "canonical_model_id": "moonshotai/kimi-k3.1-pro",
         "cost": {
-          "cache_read": 0.2,
-          "input": 0.2403,
-          "output": 8.4023
+          "cache_read": 0.18,
+          "input": 0.253,
+          "output": 8.8
         },
         "description": "Kimi multimodal agent model for visual understanding, coding, and planning",
         "family": "kimi-k3",
@@ -321820,8 +321833,8 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.5-27b",
         "cost": {
-          "input": 0.3,
-          "output": 2.4
+          "input": 0.195,
+          "output": 1.56
         },
         "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
         "family": "qwen",
@@ -321936,9 +321949,9 @@
         "attachment": true,
         "canonical_model_id": "alibaba/qwen3.5-9b",
         "cost": {
-          "cache_read": 0.153,
-          "input": 0.17,
-          "output": 0.25
+          "cache_read": 0.128,
+          "input": 0.142,
+          "output": 0.21
         },
         "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
         "family": "qwen",
@@ -322810,8 +322823,8 @@
         "attachment": false,
         "canonical_model_id": "reflection/beam-1.0-501b-a23b",
         "cost": {
-          "cache_read": 0.04,
-          "input": 0.3,
+          "cache_read": 0.05,
+          "input": 0.25,
           "output": 1
         },
         "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
@@ -322821,7 +322834,7 @@
         "last_updated": "2026-10-16",
         "limit": {
           "context": 1048576,
-          "output": 943718
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -323531,9 +323544,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy3",
         "cost": {
-          "cache_read": 0.020625,
-          "input": 0.0825,
-          "output": 0.33
+          "cache_read": 0.033,
+          "input": 0.132,
+          "output": 0.528
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -323699,9 +323712,9 @@
         "attachment": false,
         "canonical_model_id": "tencent/hy4-preview",
         "cost": {
-          "cache_read": 0.0378,
-          "input": 0.7506,
-          "output": 2.2509
+          "cache_read": 0.042,
+          "input": 0.834,
+          "output": 2.501
         },
         "description": "Tencent Hy reasoning model for coding, instruction following, and agent tasks",
         "family": "Hy",
@@ -325256,7 +325269,7 @@
         "last_updated": "2026-04-07",
         "limit": {
           "context": 204800,
-          "output": 182476
+          "output": 131072
         },
         "modalities": {
           "input": [
@@ -325777,9 +325790,9 @@
       "~deepseek/deepseek-flash-latest": {
         "attachment": true,
         "cost": {
-          "cache_read": 0.01,
-          "input": 0.036,
-          "output": 0.5
+          "cache_read": 0.0015,
+          "input": 0.035,
+          "output": 0.15
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
         "family": "deepseek-flash",
@@ -325863,7 +325876,7 @@
         "attachment": false,
         "cost": {
           "cache_read": 0.035,
-          "input": 0.0434,
+          "input": 0.047,
           "output": 0.3
         },
         "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
@@ -347230,7 +347243,7 @@
         "last_updated": "2025-03-12",
         "limit": {
           "context": 131072,
-          "output": 117964
+          "output": 16384
         },
         "modalities": {
           "input": [
@@ -397969,6 +397982,43 @@
         "temperature": false,
         "tool_call": true
       },
+      "gemini-4-neon": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-neon",
+        "cost": {
+          "cache_read": 0.1875,
+          "input": 3.75,
+          "output": 18.75
+        },
+        "description": "Google's Gemini 4 model for fast, frontier-level coding, knowledge work and science workflows, with four thinking levels and a 1M-token context window",
+        "family": "gemini",
+        "id": "gemini-4-neon",
+        "knowledge": "2026-03",
+        "last_updated": "2026-11-18",
+        "limit": {
+          "context": 1000000,
+          "output": 65536
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "audio",
+            "video"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Neon",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [],
+        "release_date": "2026-11-18",
+        "structured_output": true,
+        "temperature": false,
+        "tool_call": true
+      },
       "gemma-4-uncensored": {
         "attachment": true,
         "cost": {
@@ -407864,6 +407914,51 @@
           }
         ],
         "release_date": "2026-11-12",
+        "temperature": false,
+        "tool_call": true
+      },
+      "google/gemini-4-neon": {
+        "attachment": true,
+        "canonical_model_id": "google/gemini-4-neon",
+        "cost": {
+          "cache_read": 0.15,
+          "input": 3,
+          "output": 15
+        },
+        "description": "Google's Gemini 4 model for fast, frontier-level coding, knowledge work and science workflows, with four thinking levels and a 1M-token context window",
+        "family": "gemini",
+        "id": "google/gemini-4-neon",
+        "knowledge": "2026-03",
+        "last_updated": "2026-11-18",
+        "limit": {
+          "context": 1000000,
+          "output": 1000000
+        },
+        "modalities": {
+          "input": [
+            "text",
+            "image",
+            "pdf"
+          ],
+          "output": [
+            "text"
+          ]
+        },
+        "name": "Gemini 4 Neon",
+        "open_weights": false,
+        "reasoning": true,
+        "reasoning_options": [
+          {
+            "type": "effort",
+            "values": [
+              "low",
+              "medium",
+              "high",
+              "xhigh"
+            ]
+          }
+        ],
+        "release_date": "2026-11-18",
         "temperature": false,
         "tool_call": true
       },
