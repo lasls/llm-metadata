@@ -5451,9 +5451,9 @@
     "deepseek-ai/DeepSeek-V3.1-Terminus": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.125,
-        "input": 0.25,
-        "output": 0.7
+        "cache_read": 0.32,
+        "input": 0.34,
+        "output": 1.24
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -5482,9 +5482,9 @@
     "deepseek-ai/DeepSeek-V3.1-Terminus:thinking": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.125,
-        "input": 0.25,
-        "output": 0.7
+        "cache_read": 0.32,
+        "input": 0.34,
+        "output": 1.24
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek-thinking",
@@ -5610,9 +5610,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-chat",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.1,
-        "output": 0.425
+        "cache_read": 0.29,
+        "input": 0.29,
+        "output": 1.16
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
@@ -5644,9 +5644,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v3-0324",
       "cost": {
-        "cache_read": 0.135,
-        "input": 0.2,
-        "output": 0.77
+        "cache_read": 0.29,
+        "input": 0.29,
+        "output": 1.16
       },
       "description": "March 2025 checkpoint of DeepSeek-V3 with improved reasoning and coding",
       "family": "deepseek",
@@ -5922,9 +5922,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.001484,
-        "input": 0.04664,
-        "output": 0.13992
+        "cache_read": 0.013,
+        "input": 0.05,
+        "output": 0.16
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -5967,9 +5967,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.001484,
-        "input": 0.04664,
-        "output": 0.13992
+        "cache_read": 0.013,
+        "input": 0.05,
+        "output": 0.16
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -9228,6 +9228,37 @@
       "release_date": "2026-04-02",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "google/gemma4-31b-splituntied": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.1,
+        "output": 0.3
+      },
+      "description": "Blazed-Forge's Split-Untied is a text-only Gemma 4 31B community finetune with an untied BF16 output head, built for creative writing, roleplay, expressive dialogue, and tool use.",
+      "family": "gemma",
+      "id": "google/gemma4-31b-splituntied",
+      "last_updated": "2026-09-17",
+      "limit": {
+        "context": 32768,
+        "input": 32768,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Gemma 4 31B Split-Untied",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-09-17",
+      "structured_output": false,
       "tool_call": true
     },
     "heabsy/cyberheabsy": {
@@ -17846,9 +17877,9 @@
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-coder-480b-a35b-instruct",
       "cost": {
-        "cache_read": 0.065,
-        "input": 0.13,
-        "output": 0.5
+        "cache_read": 0.1,
+        "input": 0.3,
+        "output": 1
       },
       "description": "Qwen coding model for software agents, repository edits, and code reasoning",
       "family": "qwen",
@@ -19987,6 +20018,48 @@
       "temperature": true,
       "tool_call": false
     },
+    "radixark/daisyrose-27b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.0375,
+        "input": 0.15,
+        "output": 1.875
+      },
+      "description": "DaisyRose 27B is RadixArk’s multimodal reasoning model for coding, tool use and long-horizon agent tasks. Built from Qwen3.8-27B using reinforcement learning without supervised fine-tuning or distillation, it accepts text and images and returns text. It supports function calling, JSON-schema output and a 262,144-token context window, with up to 65,536 output tokens. Thinking is on by default; choose low, medium or high effort, or turn it off. The weights are released under Apache 2.0.",
+      "id": "radixark/daisyrose-27b",
+      "last_updated": "2026-11-20",
+      "limit": {
+        "context": 262144,
+        "input": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DaisyRose 27B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-20",
+      "structured_output": true,
+      "tool_call": true
+    },
     "reflection/beam-1.0": {
       "attachment": false,
       "canonical_model_id": "reflection/beam-1.0-501b-a23b",
@@ -20815,9 +20888,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.0378,
-        "input": 0.7506,
-        "output": 2.2509
+        "cache_read": 0.042,
+        "input": 0.834,
+        "output": 2.501
       },
       "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
       "family": "Hy",
@@ -22917,9 +22990,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5",
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.6,
-        "output": 1.9
+        "cache_read": 0.17,
+        "input": 0.86,
+        "output": 2.74
       },
       "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
       "family": "glm",
@@ -22951,9 +23024,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5",
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.6,
-        "output": 1.9
+        "cache_read": 0.17,
+        "input": 0.86,
+        "output": 2.74
       },
       "description": "GLM-5 is Zhipu's latest flagship model with advanced reasoning and instruction following. Routed directly via Z-AI (Zhipu).",
       "family": "glm",
@@ -22985,9 +23058,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5",
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.6,
-        "output": 1.9
+        "cache_read": 0.17,
+        "input": 0.86,
+        "output": 2.74
       },
       "description": "GLM-5 original with extended thinking capabilities for complex reasoning.",
       "family": "glm",
@@ -23136,9 +23209,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
       "cost": {
-        "cache_read": 0.078,
-        "input": 0.42,
-        "output": 1.32
+        "cache_read": 0.1,
+        "input": 0.53,
+        "output": 1.79
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -23179,9 +23252,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
       "cost": {
-        "cache_read": 0.078,
-        "input": 0.42,
-        "output": 1.32
+        "cache_read": 0.1,
+        "input": 0.53,
+        "output": 1.79
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
@@ -23684,9 +23757,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5",
       "cost": {
-        "cache_read": 0.1,
-        "input": 0.6,
-        "output": 1.9
+        "cache_read": 0.17,
+        "input": 0.86,
+        "output": 2.74
       },
       "description": "General GLM flagship for coding, analysis, and tool-heavy engineering workflows",
       "family": "glm",
