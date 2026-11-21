@@ -2371,9 +2371,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.001014,
-        "input": 0.0507,
-        "output": 0.2028
+        "cache_read": 0.000996,
+        "input": 0.0498,
+        "output": 0.1992
       },
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the cost-efficient tier of the V4.1 family. DeepSeek reports that it exceeds V4 Pro on performance, speed, and task...",
       "family": "deepseek-flash",
@@ -2427,7 +2427,7 @@
       "last_updated": "2026-10-17",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -2589,45 +2589,6 @@
         }
       ],
       "release_date": "2026-09-10",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "dots-studio/dots-3-note-preview:free": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
-      "id": "dots-studio/dots-3-note-preview:free",
-      "last_updated": "2026-08-14",
-      "limit": {
-        "context": 512000,
-        "output": 460800
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Dots Studio: Dots3-Note Preview (free)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-08-14",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -5346,47 +5307,6 @@
       "temperature": true,
       "tool_call": false
     },
-    "meituan/longcat-2.0": {
-      "attachment": false,
-      "canonical_model_id": "meituan/longcat-2.0",
-      "cost": {
-        "cache_read": 0.015,
-        "input": 0.75,
-        "output": 3
-      },
-      "description": "LongCat 2.0 is a sparse mixture-of-experts language model from Meituan, with 48B active parameters out of 1.6T total. It is suited for coding, repository-level changes, long-horizon problem solving, and agentic...",
-      "family": "longcat",
-      "id": "meituan/longcat-2.0",
-      "last_updated": "2026-06-30",
-      "limit": {
-        "context": 1048756,
-        "output": 262144
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Meituan: LongCat 2.0",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-06-30",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "meituan/longcat-2.5": {
       "attachment": true,
       "cost": {
@@ -5412,7 +5332,7 @@
           "text"
         ]
       },
-      "name": "Meituan: LongCat 2.5",
+      "name": "LongCat 2.5",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -15129,6 +15049,48 @@
       "temperature": true,
       "tool_call": true
     },
+    "radixark/daisyrose-27b": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.05,
+        "input": 0.2,
+        "output": 2.5
+      },
+      "description": "DaisyRose 27B is an open-weight multimodal reasoning model from RadixArk, trained from [Qwen3.8 27B](https://openrouter.ai/qwen/qwen3.8-27b) using reinforcement learning only on long-horizon agent tasks, with no supervised fine-tuning or distillation. It is...",
+      "id": "radixark/daisyrose-27b",
+      "last_updated": "2026-11-21",
+      "limit": {
+        "context": 262144,
+        "output": 235929
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "RadixArk: DaisyRose 27B",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-11-21",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "recursive/flint-v1.0": {
       "attachment": false,
       "cost": {
@@ -16455,6 +16417,51 @@
       ],
       "release_date": "2026-07-15",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "thinkingmachines/inkling-2-mini": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.016,
+        "input": 0.08,
+        "output": 0.35
+      },
+      "description": "Inkling 2 Mini is an open-weight multimodal looped transformer from Thinking Machines Lab, with 3.4B active parameters out of 26.4B total (MoE). Its middle layers run three times with shared...",
+      "family": "inkling",
+      "id": "thinkingmachines/inkling-2-mini",
+      "last_updated": "2026-11-21",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Thinking Machines: Inkling 2 Mini",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-21",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -17956,16 +17963,16 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.1",
       "cost": {
-        "cache_read": 0.6,
-        "input": 1.19,
-        "output": 3.74
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
       },
       "description": "Flagship GLM model for hybrid reasoning, coding, and agentic engineering",
       "family": "glm",
       "id": "z-ai/glm-5.1",
       "last_updated": "2026-04-07",
       "limit": {
-        "context": 204800,
+        "context": 202752,
         "output": 131072
       },
       "modalities": {
