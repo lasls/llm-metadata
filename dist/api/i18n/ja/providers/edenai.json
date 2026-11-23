@@ -788,6 +788,38 @@
       "temperature": true,
       "tool_call": true
     },
+    "amazon/writer.palmyra-vision-7b": {
+      "attachment": true,
+      "canonical_model_id": "writer/palmyra-vision-7b",
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Writer's multimodal model for reading handwriting, charts and documents in images",
+      "family": "palmyra-vision",
+      "id": "amazon/writer.palmyra-vision-7b",
+      "last_updated": "2026-03-26",
+      "limit": {
+        "context": 4096,
+        "output": 4096
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Palmyra Vision 7B (Amazon Bedrock)",
+      "open_weights": false,
+      "reasoning": false,
+      "release_date": "2026-03-26",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": false
+    },
     "amazon/zai.glm-4.7-flash": {
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-4.7-flash",
@@ -15717,6 +15749,66 @@
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [],
+      "release_date": "2026-03-09",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "xai/grok-4.20-multi-agent-0309": {
+      "attachment": true,
+      "canonical_model_id": "xai/grok-4.20-multi-agent-0309",
+      "cost": {
+        "cache_read": 0.2,
+        "context_over_200k": {
+          "cache_read": 0.4,
+          "input": 2.5,
+          "output": 5
+        },
+        "input": 1.25,
+        "output": 2.5,
+        "tiers": [
+          {
+            "cache_read": 0.4,
+            "input": 2.5,
+            "output": 5,
+            "tier": {
+              "size": 200000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Grok model that runs several agents in parallel for research, reasoning and long tasks",
+      "family": "grok",
+      "id": "xai/grok-4.20-multi-agent-0309",
+      "last_updated": "2026-03-09",
+      "limit": {
+        "context": 1000000,
+        "output": 30000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Grok 4.20 Multi-Agent",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
       "release_date": "2026-03-09",
       "structured_output": true,
       "temperature": true,
