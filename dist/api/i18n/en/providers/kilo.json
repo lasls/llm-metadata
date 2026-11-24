@@ -2328,9 +2328,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
       "cost": {
-        "cache_read": 0.044,
-        "input": 1.32,
-        "output": 3.96
+        "cache_read": 0.097,
+        "input": 0.111,
+        "output": 4.44
       },
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "family": "deepseek-pro",
@@ -4037,8 +4037,8 @@
           "pdf"
         ],
         "output": [
-          "text",
-          "video"
+          "video",
+          "text"
         ]
       },
       "name": "Google: Gemini Omni 1.2 Flash",
@@ -4243,9 +4243,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.0125,
-        "input": 0.05,
-        "output": 0.19
+        "cache_read": 0.023,
+        "input": 0.045,
+        "output": 0.163
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -5434,7 +5434,7 @@
       "last_updated": "2024-07-23",
       "limit": {
         "context": 131072,
-        "output": 16384
+        "output": 117964
       },
       "modalities": {
         "input": [
@@ -5729,8 +5729,8 @@
         "input": [
           "text",
           "image",
-          "pdf",
-          "video"
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
@@ -6238,17 +6238,17 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
       "cost": {
-        "cache_read": 0.0135,
-        "input": 0.135,
-        "output": 0.54
+        "cache_read": 0.025,
+        "input": 0.1,
+        "output": 0.4
       },
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
       "family": "minimax-m-flash",
       "id": "minimax/minimax-m3.1-flash",
       "last_updated": "2026-10-19",
       "limit": {
-        "context": 1000000,
-        "output": 512000
+        "context": 1048576,
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -6656,7 +6656,7 @@
       "description": "Mistral Large 3 2512 is Mistral’s most capable model to date, featuring a sparse mixture-of-experts architecture with 41B active parameters (675B total), and released under the Apache 2.0 license.",
       "family": "mistral-large",
       "id": "mistralai/mistral-large-2512",
-      "knowledge": "2024-11",
+      "knowledge": "2023-10",
       "last_updated": "2025-12-02",
       "limit": {
         "context": 262144,
@@ -16425,6 +16425,9 @@
       "description": "Inkling is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 41B active parameters out of 975B total. It is designed for general-purpose reasoning, coding, agentic and tool-use systems,...",
       "family": "inkling",
       "id": "thinkingmachines/inkling",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-07-15",
       "limit": {
         "context": 524288,
@@ -16463,15 +16466,19 @@
     },
     "thinkingmachines/inkling-2-mini": {
       "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-2-mini",
       "cost": {
         "cache_read": 0.0075,
         "input": 0.0375,
         "output": 0.15
       },
       "description": "Inkling 2 Mini is an open-weight multimodal looped transformer from Thinking Machines Lab, with 3.4B active parameters out of 26.4B total (MoE). Its middle layers run three times with shared...",
-      "family": "inkling",
+      "family": "inkling-mini",
       "id": "thinkingmachines/inkling-2-mini",
-      "last_updated": "2026-11-21",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-11-20",
       "limit": {
         "context": 1048576,
         "output": 65536
@@ -16486,7 +16493,7 @@
         ]
       },
       "name": "Thinking Machines: Inkling 2 Mini",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -16501,7 +16508,7 @@
           ]
         }
       ],
-      "release_date": "2026-11-21",
+      "release_date": "2026-11-20",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -16510,13 +16517,16 @@
       "attachment": true,
       "canonical_model_id": "thinkingmachines/inkling-2-small",
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.15,
-        "output": 0.5
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.25
       },
       "description": "Inkling 2 Small is an open-weight multimodal mixture-of-experts reasoning model from Thinking Machines Lab, with 17B active parameters out of 594B total. It is the first model in the second...",
       "family": "inkling-small",
       "id": "thinkingmachines/inkling-2-small",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-11-12",
       "limit": {
         "context": 1048576,
@@ -16562,6 +16572,9 @@
       "description": "Inkling Small is an open-weight multimodal mixture-of-experts model from Thinking Machines Lab, with 12B active parameters out of 276B total. It is positioned as the smaller, more efficient member of...",
       "family": "inkling-small",
       "id": "thinkingmachines/inkling-small",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
       "last_updated": "2026-07-30",
       "limit": {
         "context": 524288,
@@ -17366,68 +17379,6 @@
         ]
       },
       "name": "MiMo-V2.5",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-04-22",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "xiaomi/mimo-v2.5-pro": {
-      "attachment": false,
-      "canonical_model_id": "xiaomi/mimo-v2.5-pro",
-      "cost": {
-        "cache_read": 0.096,
-        "context_over_200k": {
-          "cache_read": 0.4,
-          "input": 2,
-          "output": 6
-        },
-        "input": 0.48,
-        "output": 1.8,
-        "tiers": [
-          {
-            "cache_read": 0.4,
-            "input": 2,
-            "output": 6,
-            "tier": {
-              "size": 256000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
-      "family": "mimo-pro",
-      "id": "xiaomi/mimo-v2.5-pro",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2024-12",
-      "last_updated": "2026-04-22",
-      "limit": {
-        "context": 262144,
-        "output": 235929
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiMo-V2.5-Pro",
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
@@ -18626,7 +18577,7 @@
       "last_updated": "2026-09-14",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -18659,9 +18610,9 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.044,
-        "input": 1.32,
-        "output": 3.96
+        "cache_read": 0.097,
+        "input": 0.111,
+        "output": 4.44
       },
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "family": "deepseek",
@@ -18669,7 +18620,7 @@
       "last_updated": "2026-09-14",
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 943718
       },
       "modalities": {
         "input": [
