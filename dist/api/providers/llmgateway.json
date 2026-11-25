@@ -5591,7 +5591,7 @@
         ]
       },
       "name": "Hy4",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -5638,7 +5638,7 @@
         ]
       },
       "name": "Hy4 Flash",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -5672,7 +5672,8 @@
       "last_updated": "2026-08-28",
       "limit": {
         "context": 1048576,
-        "output": 64000
+        "input": 983040,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -5701,6 +5702,52 @@
       ],
       "release_date": "2026-08-28",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inkling-2-mini": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-2-mini",
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.3
+      },
+      "description": "Looped MoE reasoning model (26.4B total, 3.4B active) for agentic coding, vision, and knowledge work",
+      "family": "inkling-mini",
+      "id": "inkling-2-mini",
+      "last_updated": "2026-11-20",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling 2 Mini",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-20",
       "temperature": true,
       "tool_call": true
     },
@@ -5998,7 +6045,7 @@
         "input": 2.7,
         "output": 13.5
       },
-      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "description": "Multimodal Kimi model with 1M context and always-on thinking for long-horizon agent work",
       "family": "kimi",
       "id": "kimi-k3",
       "last_updated": "2026-07-16",
@@ -6046,7 +6093,7 @@
         "input": 4.5,
         "output": 22.5
       },
-      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "description": "Multimodal Kimi model with 1M context and always-on thinking for long-horizon agent work",
       "family": "kimi",
       "id": "kimi-k3-fast",
       "last_updated": "2026-07-16",
@@ -6622,7 +6669,7 @@
       "description": "MiMo pro model for strong multimodal reasoning and agent execution",
       "family": "mimo-pro",
       "id": "mimo-v2.6-pro-ultraspeed",
-      "last_updated": "2026-09-21",
+      "last_updated": "2026-09-22",
       "limit": {
         "context": 1000000,
         "output": 131072
@@ -6652,7 +6699,7 @@
           ]
         }
       ],
-      "release_date": "2026-09-21",
+      "release_date": "2026-09-22",
       "temperature": true,
       "tool_call": true
     },
@@ -7232,7 +7279,7 @@
       "description": "Mistral's 1T-parameter multimodal MoE for reasoning, coding, and agentic work",
       "family": "mistral-large",
       "id": "mistral-large-4",
-      "last_updated": "2026-10-06",
+      "last_updated": "2026-10-05",
       "limit": {
         "context": 1000000,
         "output": 262144
@@ -7247,10 +7294,10 @@
         ]
       },
       "name": "Mistral Large 4",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-10-06",
+      "release_date": "2026-10-05",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -7298,7 +7345,7 @@
       "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral-medium",
       "id": "mistral-medium-3-5",
-      "last_updated": "2026-04-30",
+      "last_updated": "2026-04-28",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -7313,9 +7360,9 @@
         ]
       },
       "name": "Mistral Medium 3.5",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": false,
-      "release_date": "2026-04-30",
+      "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -9475,7 +9522,7 @@
       "limit": {
         "context": 1000000,
         "input": 1000000,
-        "output": 1000000
+        "output": 65536
       },
       "modalities": {
         "input": [

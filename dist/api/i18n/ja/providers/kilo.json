@@ -2241,9 +2241,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4-flash-vision-exp",
       "cost": {
-        "cache_read": 0.00686,
-        "input": 0.2156,
-        "output": 0.6468
+        "cache_read": 0.028,
+        "input": 0.44,
+        "output": 1.32
       },
       "description": "DeepSeek V4 Flash Vision Exp is an experimental vision-enabled version of [DeepSeek V4 Flash 0731](https://openrouter.ai/deepseek/deepseek-v4-flash-0731) from DeepSeek, adding image understanding while matching the base model on text capabilities including agents,...",
       "family": "deepseek-flash",
@@ -2251,7 +2251,7 @@
       "last_updated": "2026-09-01",
       "limit": {
         "context": 1048576,
-        "output": 262144
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -2593,45 +2593,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "dots-studio/dots-3-note-preview:free": {
-      "attachment": true,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Dots3-Note Preview is an open-weight mixture-of-experts model from Dots Studio, with 16B active parameters out of 280B total. It is the lightest model in the Dots 3 family and is...",
-      "id": "dots-studio/dots-3-note-preview:free",
-      "last_updated": "2026-08-14",
-      "limit": {
-        "context": 512000,
-        "output": 460800
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Dots Studio: Dots3-Note Preview (free)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-08-14",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "elorian/glimpse": {
       "attachment": true,
       "cost": {
@@ -2640,6 +2601,7 @@
         "output": 3
       },
       "description": "Glimpse is a multimodal visual reasoning model from Elorian, built for visual understanding and complex visual reasoning in the physical world. It reasons directly over images and video rather than...",
+      "family": "glimpse",
       "id": "elorian/glimpse",
       "last_updated": "2026-10-17",
       "limit": {
@@ -3905,6 +3867,54 @@
         ]
       },
       "name": "Google: Gemini 4 Neon",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-11-18",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "google/gemini-4-neon-fast": {
+      "attachment": true,
+      "canonical_model_id": "google/gemini-4-neon",
+      "cost": {
+        "cache_read": 0.27,
+        "input": 5.4,
+        "output": 27,
+        "reasoning": 0
+      },
+      "description": "Gemini 4 Neon is Google's fast multimodal reasoning model for coding, agentic workflows, and complex tasks, delivering high-quality results with low latency. It accepts text, images, video, and documents, with tool calling and structured outputs for building responsive applications.",
+      "family": "gemini",
+      "id": "google/gemini-4-neon-fast",
+      "knowledge": "2026-03",
+      "last_updated": "2026-11-18",
+      "limit": {
+        "context": 1000000,
+        "output": 1000000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Google: Gemini 4 Neon (Fast)",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -5617,6 +5627,7 @@
     },
     "meta/muse-ember": {
       "attachment": true,
+      "canonical_model_id": "meta/muse-ember-1.0",
       "cost": {
         "cache_read": 0.004,
         "input": 0.1,
@@ -5994,6 +6005,7 @@
     },
     "meta/muse-wonder": {
       "attachment": true,
+      "canonical_model_id": "meta/muse-wonder-1.0",
       "cost": {
         "cache_read": 0.2,
         "input": 4,
@@ -6116,17 +6128,17 @@
       "attachment": false,
       "canonical_model_id": "minimax/MiniMax-M2.5",
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.27,
-        "output": 0.95
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 1.2
       },
       "description": "MiniMax model for chat, coding, office work, and agentic tasks",
       "family": "minimax-m",
       "id": "minimax/minimax-m2.5",
       "last_updated": "2026-02-12",
       "limit": {
-        "context": 198000,
-        "output": 32768
+        "context": 65536,
+        "output": 58982
       },
       "modalities": {
         "input": [
@@ -6238,9 +6250,9 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M3.1-Flash",
       "cost": {
-        "cache_read": 0.025,
-        "input": 0.1,
-        "output": 0.4
+        "cache_read": 0.0075,
+        "input": 0.075,
+        "output": 0.3
       },
       "description": "MiniMax-M3.1-Flash is a multimodal model from MiniMax. Compared with M3, it delivers significant improvements across multiple benchmarks, particularly in complex agentic tasks, coding, and cybersecurity. It is built for complex,...",
       "family": "minimax-m-flash",
@@ -6248,7 +6260,7 @@
       "last_updated": "2026-10-19",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -6691,7 +6703,7 @@
       "description": "Mistral Large 4 is a frontier multimodal (text and image input) model from Mistral AI built for reasoning, coding, and agentic workloads. It offers a 512K-token context window with up...",
       "family": "mistral-large",
       "id": "mistralai/mistral-large-4-0",
-      "last_updated": "2026-10-06",
+      "last_updated": "2026-10-05",
       "limit": {
         "context": 1048576,
         "output": 262144
@@ -6706,7 +6718,7 @@
         ]
       },
       "name": "Mistral: Mistral Large 4",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -6717,42 +6729,7 @@
           ]
         }
       ],
-      "release_date": "2026-10-06",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistralai/mistral-medium-3": {
-      "attachment": true,
-      "canonical_model_id": "mistral/mistral-medium-3",
-      "cost": {
-        "cache_read": 0.044,
-        "input": 0.44,
-        "output": 2.2
-      },
-      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "family": "mistral-medium",
-      "id": "mistralai/mistral-medium-3",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-07",
-      "limit": {
-        "context": 131072,
-        "output": 104857
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Medium 3",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-05-07",
+      "release_date": "2026-10-05",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -6768,7 +6745,7 @@
       "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral-medium",
       "id": "mistralai/mistral-medium-3-5",
-      "last_updated": "2026-04-30",
+      "last_updated": "2026-04-28",
       "limit": {
         "context": 262144,
         "output": 209715
@@ -6784,7 +6761,7 @@
         ]
       },
       "name": "Mistral Medium 3.5",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -6795,42 +6772,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-30",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistralai/mistral-medium-3.1": {
-      "attachment": true,
-      "canonical_model_id": "mistral/mistral-medium-3.1",
-      "cost": {
-        "cache_read": 0.044,
-        "input": 0.44,
-        "output": 2.2
-      },
-      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "family": "mistral-medium",
-      "id": "mistralai/mistral-medium-3.1",
-      "knowledge": "2025-06-30",
-      "last_updated": "2025-08-12",
-      "limit": {
-        "context": 131072,
-        "output": 104857
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Medium 3.1",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-12",
+      "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -11013,6 +10955,7 @@
     },
     "openai/gpt-6-astra-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6-astra",
       "cost": {
         "cache_read": 1,
         "cache_write": 12.5,
@@ -11020,18 +10963,20 @@
         "output": 50
       },
       "description": "GPT-6 Astra Pro is the same underlying model as [GPT-6 Astra](https://openrouter.ai/openai/gpt-6-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
-      "family": "gpt-pro",
+      "family": "gpt-astra",
       "id": "openai/gpt-6-astra-pro",
+      "knowledge": "2026-04-30",
       "last_updated": "2026-09-04",
       "limit": {
         "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "pdf",
+          "text",
           "image",
-          "text"
+          "pdf"
         ],
         "output": [
           "text"
@@ -11160,6 +11105,7 @@
     },
     "openai/gpt-6-luna-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6-luna",
       "cost": {
         "cache_read": 0.01,
         "cache_write": 0.125,
@@ -11167,18 +11113,20 @@
         "output": 0.5
       },
       "description": "GPT-6 Luna Pro is the same underlying model as [GPT-6 Luna](https://openrouter.ai/openai/gpt-6-luna), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
-      "family": "gpt-pro",
+      "family": "gpt-luna",
       "id": "openai/gpt-6-luna-pro",
+      "knowledge": "2026-05-18",
       "last_updated": "2026-09-22",
       "limit": {
         "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "pdf",
+          "text",
           "image",
-          "text"
+          "pdf"
         ],
         "output": [
           "text"
@@ -11308,6 +11256,7 @@
     },
     "openai/gpt-6-sol-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6-sol",
       "cost": {
         "cache_read": 0.2,
         "cache_write": 2.5,
@@ -11315,18 +11264,20 @@
         "output": 10
       },
       "description": "GPT-6 Sol Pro is the same underlying model as [GPT-6 Sol](https://openrouter.ai/openai/gpt-6-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. Learn more in OpenAI's docs: https://developers.openai.com/api/docs/guides/reasoning#reasoning-mode",
-      "family": "gpt-pro",
+      "family": "gpt-sol",
       "id": "openai/gpt-6-sol-pro",
+      "knowledge": "2026-04-20",
       "last_updated": "2026-09-22",
       "limit": {
         "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "pdf",
+          "text",
           "image",
-          "text"
+          "pdf"
         ],
         "output": [
           "text"
@@ -11454,6 +11405,7 @@
     },
     "openai/gpt-6.1-sol-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-sol",
       "cost": {
         "cache_read": 0.1,
         "cache_write": 2.5,
@@ -11461,18 +11413,20 @@
         "output": 10
       },
       "description": "GPT-6.1 Sol Pro is the same underlying model as [GPT-6.1 Sol](https://openrouter.ai/openai/gpt-6.1-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
-      "family": "gpt-pro",
+      "family": "gpt-sol",
       "id": "openai/gpt-6.1-sol-pro",
+      "knowledge": "2026-04-30",
       "last_updated": "2026-09-29",
       "limit": {
         "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "pdf",
+          "text",
           "image",
-          "text"
+          "pdf"
         ],
         "output": [
           "text"
@@ -11601,6 +11555,7 @@
     },
     "openai/gpt-6.1-terra-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-terra",
       "cost": {
         "cache_read": 0.05,
         "cache_write": 1.25,
@@ -11608,18 +11563,20 @@
         "output": 5
       },
       "description": "GPT-6.1 Terra Pro is the same underlying model as [GPT-6.1 Terra](https://openrouter.ai/openai/gpt-6.1-terra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
-      "family": "gpt-pro",
+      "family": "gpt-terra",
       "id": "openai/gpt-6.1-terra-pro",
+      "knowledge": "2026-06-01",
       "last_updated": "2026-10-26",
       "limit": {
         "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "pdf",
+          "text",
           "image",
-          "text"
+          "pdf"
         ],
         "output": [
           "text"
@@ -11746,6 +11703,7 @@
     },
     "openai/gpt-6.2-astra-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-astra",
       "cost": {
         "cache_read": 0.4,
         "cache_write": 10,
@@ -11753,18 +11711,20 @@
         "output": 40
       },
       "description": "GPT-6.2 Astra Pro is the same underlying model as [GPT-6.2 Astra](https://openrouter.ai/openai/gpt-6.2-astra), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
-      "family": "gpt-pro",
+      "family": "gpt-astra",
       "id": "openai/gpt-6.2-astra-pro",
+      "knowledge": "2026-05-18",
       "last_updated": "2026-11-17",
       "limit": {
         "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "pdf",
+          "text",
           "image",
-          "text"
+          "pdf"
         ],
         "output": [
           "text"
@@ -11819,7 +11779,7 @@
           "text"
         ]
       },
-      "name": "OpenAI: GPT-6.2 Sol (new)",
+      "name": "OpenAI: GPT-6.2 Sol",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
@@ -11891,6 +11851,7 @@
     },
     "openai/gpt-6.2-sol-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-sol",
       "cost": {
         "cache_read": 0.1,
         "cache_write": 2.5,
@@ -11898,18 +11859,20 @@
         "output": 10
       },
       "description": "GPT-6.2 Sol Pro is the same underlying model as [GPT-6.2 Sol](https://openrouter.ai/openai/gpt-6.2-sol), served with `reasoning.mode` set to `pro` for higher-quality responses on complex tasks. **Cost note:** pro mode spends far more...",
-      "family": "gpt-pro",
+      "family": "gpt-sol",
       "id": "openai/gpt-6.2-sol-pro",
+      "knowledge": "2026-06-01",
       "last_updated": "2026-11-17",
       "limit": {
         "context": 1050000,
+        "input": 922000,
         "output": 128000
       },
       "modalities": {
         "input": [
-          "pdf",
+          "text",
           "image",
-          "text"
+          "pdf"
         ],
         "output": [
           "text"
@@ -14356,9 +14319,9 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
       "cost": {
-        "cache_read": 0.025,
-        "input": 0.05,
-        "output": 0.7
+        "cache_read": 0.035,
+        "input": 0.1,
+        "output": 0.89
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -16089,7 +16052,7 @@
       "last_updated": "2026-11-04",
       "limit": {
         "context": 1048576,
-        "input": 983010,
+        "input": 983040,
         "output": 65536
       },
       "modalities": {
@@ -16102,7 +16065,7 @@
         ]
       },
       "name": "Tencent: Hy4",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -16145,7 +16108,7 @@
         ]
       },
       "name": "Tencent: Hy4 flash",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -16175,6 +16138,7 @@
       "last_updated": "2026-08-28",
       "limit": {
         "context": 1048576,
+        "input": 983040,
         "output": 64000
       },
       "modalities": {
@@ -16627,6 +16591,51 @@
       "temperature": true,
       "tool_call": false
     },
+    "upstage/solar-mini-4-5": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.1,
+        "output": 0.4
+      },
+      "description": "Solar Mini 4.5 is Upstage's compact language model, built on a proprietary mixture-of-experts architecture with 35B total and 3B active parameters and a 524K context window. It is a step...",
+      "family": "solar-mini",
+      "id": "upstage/solar-mini-4-5",
+      "last_updated": "2026-11-24",
+      "limit": {
+        "context": 524288,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Upstage: Solar Mini 4.5 (Preview)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-24",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "upstage/solar-mini4": {
       "attachment": false,
       "canonical_model_id": "upstage/solar-mini4",
@@ -16670,6 +16679,51 @@
         }
       ],
       "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "upstage/solar-pro-4-contributor": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.03,
+        "input": 0.3,
+        "output": 1.2
+      },
+      "description": "Solar Pro 4 Contributor is the same Solar Pro 4 model from Upstage, offered at a lower rate in exchange for allowing Upstage to use interaction data to improve its...",
+      "family": "solar-pro",
+      "id": "upstage/solar-pro-4-contributor",
+      "last_updated": "2026-11-24",
+      "limit": {
+        "context": 524288,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Upstage: Solar Pro 4 Contributor",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-24",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -17218,71 +17272,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "xiaomi/mimo-v2.5": {
-      "attachment": true,
-      "canonical_model_id": "xiaomi/mimo-v2.5",
-      "cost": {
-        "cache_read": 0.08,
-        "context_over_200k": {
-          "cache_read": 0.16,
-          "input": 0.8,
-          "output": 4
-        },
-        "input": 0.4,
-        "output": 2,
-        "tiers": [
-          {
-            "cache_read": 0.16,
-            "input": 0.8,
-            "output": 4,
-            "tier": {
-              "size": 256000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "Open MiMo model for multimodal coding agents and long-context automation",
-      "family": "mimo",
-      "id": "xiaomi/mimo-v2.5",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2024-12",
-      "last_updated": "2026-04-22",
-      "limit": {
-        "context": 1000000,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "audio",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiMo-V2.5",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-04-22",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "xiaomi/mimo-v2.6-flash": {
       "attachment": true,
       "canonical_model_id": "xiaomi/mimo-v2.6-flash",
@@ -17324,6 +17313,49 @@
       ],
       "release_date": "2026-09-22",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "xiaomi/mimo-v2.6-flash-mopd": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.02,
+        "input": 0.15,
+        "output": 0.42
+      },
+      "description": "MiMo-V2.6-Flash-MOPD is an updated checkpoint of Xiaomi's MiMo-V2.6-Flash, a Mixture-of-Experts model with 309B total and 15B active parameters, a 1M-token context window, and native multimodal input. It adds a multi-teacher...",
+      "family": "mimo",
+      "id": "xiaomi/mimo-v2.6-flash-mopd",
+      "last_updated": "2026-11-23",
+      "limit": {
+        "context": 1048576,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video",
+          "audio"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Xiaomi: MiMo-V2.6-Flash-MOPD",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-23",
+      "structured_output": false,
       "temperature": true,
       "tool_call": true
     },
@@ -17382,7 +17414,7 @@
       "description": "MiMo-V2.6-Pro-UltraSpeed is the fast speed edition of Xiaomi's flagship foundation model, MiMo-V2.6-Pro. Built from the same 1T MiMo-V2.6-Pro checkpoint, it matches the original model in quality while delivering roughly 10x...",
       "family": "mimo-pro",
       "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
-      "last_updated": "2026-09-21",
+      "last_updated": "2026-09-22",
       "limit": {
         "context": 1048576,
         "output": 131072
@@ -17410,7 +17442,7 @@
           ]
         }
       ],
-      "release_date": "2026-09-21",
+      "release_date": "2026-09-22",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -18140,13 +18172,14 @@
     },
     "z-ai/glm-5.3-flashx-legal": {
       "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flashx-legal",
       "cost": {
         "cache_read": 0.075,
         "input": 0.37,
         "output": 1.25
       },
       "description": "GLM-5.3-FlashX-Legal (GLM-Legal) is Z.ai's legal-domain variant of GLM-5.3-FlashX, a native multimodal model that accepts text, image, and video input and produces text. It adds legal-domain mid-training and post-training with reinforcement...",
-      "family": "glm",
+      "family": "glm-flash-legal",
       "id": "z-ai/glm-5.3-flashx-legal",
       "last_updated": "2026-11-02",
       "limit": {

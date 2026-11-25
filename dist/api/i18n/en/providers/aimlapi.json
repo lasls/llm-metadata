@@ -992,7 +992,7 @@
       "last_updated": "2026-03-13",
       "limit": {
         "context": 200000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -1141,6 +1141,7 @@
         "input": [
           "text",
           "image",
+          "audio",
           "video"
         ],
         "output": [
@@ -1187,6 +1188,7 @@
         "input": [
           "text",
           "image",
+          "audio",
           "video"
         ],
         "output": [
@@ -2874,10 +2876,10 @@
       "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral-medium",
       "id": "mistralai/mistral-medium-3-5",
-      "last_updated": "2026-04-30",
+      "last_updated": "2026-04-28",
       "limit": {
         "context": 262144,
-        "output": 209715
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -2890,7 +2892,7 @@
         ]
       },
       "name": "Medium 3.5",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -2900,42 +2902,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-30",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistralai/mistral-medium-3.1": {
-      "attachment": true,
-      "canonical_model_id": "mistral/mistral-medium-3.1",
-      "cost": {
-        "cache_read": 0.04232,
-        "input": 0.4232,
-        "output": 2.116
-      },
-      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "family": "mistral-medium",
-      "id": "mistralai/mistral-medium-3.1",
-      "knowledge": "2025-06-30",
-      "last_updated": "2025-08-12",
-      "limit": {
-        "context": 131072,
-        "output": 104857
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Medium 3.1",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-12",
+      "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3220,7 +3187,7 @@
         "input": 3,
         "output": 15
       },
-      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "description": "Multimodal Kimi model with 1M context and always-on thinking for long-horizon agent work",
       "family": "kimi",
       "id": "moonshot/kimi-k3",
       "interleaved": {
@@ -3257,36 +3224,6 @@
       "release_date": "2026-07-16",
       "structured_output": true,
       "temperature": false,
-      "tool_call": true
-    },
-    "moonshotai/kimi-k2-0905": {
-      "attachment": false,
-      "canonical_model_id": "moonshotai/kimi-k2-0905",
-      "cost": {
-        "input": 1.058,
-        "output": 3.174
-      },
-      "description": "September 2025 Kimi K2 instruction update with a 256K context and improved agentic coding",
-      "family": "kimi",
-      "id": "moonshotai/kimi-k2-0905",
-      "last_updated": "2025-09-05",
-      "limit": {
-        "context": 262144,
-        "output": 98304
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 0905",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-09-05",
-      "temperature": true,
       "tool_call": true
     },
     "morph/morph-v3-fast": {
@@ -5649,7 +5586,8 @@
       "last_updated": "2026-08-28",
       "limit": {
         "context": 1048576,
-        "output": 64000
+        "input": 983040,
+        "output": 65536
       },
       "modalities": {
         "input": [

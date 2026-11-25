@@ -2170,7 +2170,7 @@
         "input": 1.85,
         "output": 9.5
       },
-      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "description": "Multimodal Kimi model with 1M context and always-on thinking for long-horizon agent work",
       "family": "kimi",
       "id": "TEE/kimi-k3",
       "last_updated": "2026-07-16",
@@ -6791,6 +6791,7 @@
         "output": 3.15
       },
       "description": "Glimpse is Elorian's visual reasoning model for understanding images and video and answering in text. It can analyze charts, count objects, follow events over time, and reason about spatial relationships and physical cause and effect. It supports tool calling and structured output across a shared 262,144-token context window, with up to 256,000 output tokens within the remaining context.",
+      "family": "glimpse",
       "id": "elorian/glimpse",
       "last_updated": "2026-10-17",
       "limit": {
@@ -8014,7 +8015,7 @@
       "release_date": "2025-12-17",
       "structured_output": false,
       "temperature": true,
-      "tool_call": false
+      "tool_call": true
     },
     "google/gemini-3.1-flash-lite": {
       "attachment": true,
@@ -10759,15 +10760,16 @@
     },
     "meta/muse-ember": {
       "attachment": true,
+      "canonical_model_id": "meta/muse-ember-1.0",
       "cost": {
         "cache_read": 0.004,
         "input": 0.1,
         "output": 0.5
       },
-      "description": "Meta's Muse Ember is the smallest and most efficient Muse model, built for the work agents repeat all day: tool calls, coding-agent subtasks, routing, and extraction. It accepts text, images, audio, video, and PDF documents across a one-million-token context window, supports tool calling and structured output, and always reasons before answering.",
+      "description": "Muse Ember is Meta's smallest and most efficient reasoning model, built for the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long-document parsing. It pairs with Muse Wonder or Muse Spark, which plan while Muse Ember handles the volume.",
       "family": "muse-ember",
       "id": "meta/muse-ember",
-      "last_updated": "2026-11-11",
+      "last_updated": "2026-11-09",
       "limit": {
         "context": 1048576,
         "input": 1048576,
@@ -10778,8 +10780,8 @@
           "text",
           "image",
           "video",
-          "audio",
-          "pdf"
+          "pdf",
+          "audio"
         ],
         "output": [
           "text"
@@ -10801,8 +10803,9 @@
           ]
         }
       ],
-      "release_date": "2026-11-11",
+      "release_date": "2026-11-09",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "meta/muse-glimmer-30b": {
@@ -11140,12 +11143,13 @@
     },
     "meta/muse-wonder": {
       "attachment": true,
+      "canonical_model_id": "meta/muse-wonder-1.0",
       "cost": {
         "cache_read": 0.2,
         "input": 4,
         "output": 20
       },
-      "description": "Meta's Muse Wonder is a frontier reasoning model designed for complex personal and professional agentic tasks. It accepts text, images, audio, video, and PDF documents across a one-million-token context window, supports tool calling and structured output, and always reasons before answering.",
+      "description": "Muse Wonder is a frontier multimodal reasoning model from Meta for personal and professional agents, long-horizon coding, and computer use. It combines Active Memory, which carries relevant context across conversations, with Active Focus, which keeps it working through blockers toward a goal.",
       "family": "muse-wonder",
       "id": "meta/muse-wonder",
       "last_updated": "2026-10-12",
@@ -11159,8 +11163,8 @@
           "text",
           "image",
           "video",
-          "audio",
-          "pdf"
+          "pdf",
+          "audio"
         ],
         "output": [
           "text"
@@ -11184,6 +11188,7 @@
       ],
       "release_date": "2026-10-12",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "microsoft/wizardlm-2-8x22b": {
@@ -11912,7 +11917,7 @@
       "description": "Mistral's 1T-parameter multimodal MoE for reasoning, coding, and agentic work",
       "family": "mistral-large",
       "id": "mistralai/mistral-large-4",
-      "last_updated": "2026-10-06",
+      "last_updated": "2026-10-05",
       "limit": {
         "context": 524288,
         "input": 524288,
@@ -11928,7 +11933,7 @@
         ]
       },
       "name": "Mistral Large 4",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -11939,7 +11944,7 @@
           ]
         }
       ],
-      "release_date": "2026-10-06",
+      "release_date": "2026-10-05",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -12444,72 +12449,6 @@
       "structured_output": false,
       "tool_call": false
     },
-    "moonshotai/Kimi-K2-Instruct-0905": {
-      "attachment": false,
-      "canonical_model_id": "moonshotai/kimi-k2-0905",
-      "cost": {
-        "cache_read": 0.2,
-        "input": 0.4,
-        "output": 1.8
-      },
-      "description": "Kimi model for long-context chat, coding, and agentic reasoning",
-      "family": "kimi",
-      "id": "moonshotai/Kimi-K2-Instruct-0905",
-      "last_updated": "2025-09-05",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 100352
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 0905",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-09-05",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "moonshotai/kimi-k2-instruct": {
-      "attachment": false,
-      "canonical_model_id": "moonshotai/kimi-k2-instruct",
-      "cost": {
-        "cache_read": 0.2,
-        "input": 0.4,
-        "output": 1.8
-      },
-      "description": "Non-thinking Kimi K2 MoE instruction model for coding and tool-using agents",
-      "family": "kimi",
-      "id": "moonshotai/kimi-k2-instruct",
-      "last_updated": "2025-07-11",
-      "limit": {
-        "context": 256000,
-        "input": 256000,
-        "output": 8192
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Kimi K2 Instruct",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-07-11",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "moonshotai/kimi-k2.5": {
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k2.5",
@@ -12733,7 +12672,7 @@
         "input": 0.45,
         "output": 9.6
       },
-      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "description": "Multimodal Kimi model with 1M context and always-on thinking for long-horizon agent work",
       "family": "kimi",
       "id": "moonshotai/kimi-k3",
       "last_updated": "2026-07-16",
@@ -14935,15 +14874,17 @@
     },
     "openai/gpt-6-astra-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6-astra",
       "cost": {
         "cache_read": 1,
         "cache_write": 12.5,
         "input": 10,
         "output": 50
       },
-      "description": "GPT 6 Astra in Pro reasoning mode. Uses additional model work for difficult tasks, with higher latency and token usage at the same per-token rates. Reasoning effort remains independently configurable.",
-      "family": "gpt-pro",
+      "description": "GPT-6 Astra is OpenAI's most capable model for complex reasoning, coding, computer use, research, and document creation.",
+      "family": "gpt-astra",
       "id": "openai/gpt-6-astra-pro",
+      "knowledge": "2026-04-30",
       "last_updated": "2026-09-04",
       "limit": {
         "context": 1050000,
@@ -14977,6 +14918,7 @@
       ],
       "release_date": "2026-09-04",
       "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-6-luna": {
@@ -15031,15 +14973,17 @@
     },
     "openai/gpt-6-luna-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6-luna",
       "cost": {
         "cache_read": 0.01,
         "cache_write": 0.125,
         "input": 0.1,
         "output": 0.5
       },
-      "description": "GPT-6 Luna Pro uses the same underlying model as GPT-6 Luna with Pro reasoning mode enabled for higher-quality responses on complex tasks.",
-      "family": "gpt-pro",
+      "description": "OpenAI's most efficient model for focused, high-volume tasks",
+      "family": "gpt-luna",
       "id": "openai/gpt-6-luna-pro",
+      "knowledge": "2026-05-18",
       "last_updated": "2026-09-22",
       "limit": {
         "context": 1050000,
@@ -15073,6 +15017,7 @@
       ],
       "release_date": "2026-09-22",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6-sol": {
@@ -15127,15 +15072,17 @@
     },
     "openai/gpt-6-sol-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6-sol",
       "cost": {
         "cache_read": 0.2,
         "cache_write": 2.5,
         "input": 2,
         "output": 10
       },
-      "description": "GPT-6 Sol Pro uses the same underlying model as GPT-6 Sol with Pro reasoning mode enabled for higher-quality responses on complex tasks.",
-      "family": "gpt-pro",
+      "description": "OpenAI model for complex coding and agentic workflows",
+      "family": "gpt-sol",
       "id": "openai/gpt-6-sol-pro",
+      "knowledge": "2026-04-20",
       "last_updated": "2026-09-22",
       "limit": {
         "context": 1050000,
@@ -15169,6 +15116,7 @@
       ],
       "release_date": "2026-09-22",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6.1-sol": {
@@ -15222,15 +15170,17 @@
     },
     "openai/gpt-6.1-sol-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-sol",
       "cost": {
         "cache_read": 0.1,
         "cache_write": 2.5,
         "input": 2,
         "output": 10
       },
-      "description": "GPT-6.1 Sol Pro uses the same underlying model as GPT-6.1 Sol with Pro reasoning mode enabled for higher-quality responses on complex tasks.",
-      "family": "gpt-pro",
+      "description": "Near-Astra performance for complex coding, computer use, and professional work at a lower cost.",
+      "family": "gpt-sol",
       "id": "openai/gpt-6.1-sol-pro",
+      "knowledge": "2026-04-30",
       "last_updated": "2026-09-29",
       "limit": {
         "context": 1050000,
@@ -15264,6 +15214,7 @@
       ],
       "release_date": "2026-09-29",
       "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-6.1-terra": {
@@ -15318,16 +15269,18 @@
     },
     "openai/gpt-6.1-terra-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6.1-terra",
       "cost": {
         "cache_read": 0.05,
         "cache_write": 1.25,
         "input": 1,
         "output": 5
       },
-      "description": "GPT-6.1 Terra Pro uses the same underlying model as GPT-6.1 Terra with Pro reasoning mode enabled for higher-quality responses on complex tasks.",
-      "family": "gpt-pro",
+      "description": "Fast, efficient model for visual reasoning, precise computer use, and clear, natural writing.",
+      "family": "gpt-terra",
       "id": "openai/gpt-6.1-terra-pro",
-      "last_updated": "2026-10-27",
+      "knowledge": "2026-06-01",
+      "last_updated": "2026-10-26",
       "limit": {
         "context": 1050000,
         "input": 1050000,
@@ -15358,8 +15311,9 @@
           ]
         }
       ],
-      "release_date": "2026-10-27",
+      "release_date": "2026-10-26",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "openai/gpt-6.2-astra": {
@@ -15412,16 +15366,18 @@
     },
     "openai/gpt-6.2-astra-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-astra",
       "cost": {
         "cache_read": 0.4,
         "cache_write": 10,
         "input": 8,
         "output": 40
       },
-      "description": "GPT-6.2 Astra in Pro reasoning mode. Uses additional model work for difficult tasks, with higher latency and token usage at the same per-token rates. Reasoning effort remains independently configurable.",
-      "family": "gpt-pro",
+      "description": "A frontier reasoning model for coding, computer use, and professional work such as slides, spreadsheets, and documents.",
+      "family": "gpt-astra",
       "id": "openai/gpt-6.2-astra-pro",
-      "last_updated": "2026-11-18",
+      "knowledge": "2026-05-18",
+      "last_updated": "2026-11-17",
       "limit": {
         "context": 922000,
         "input": 922000,
@@ -15451,8 +15407,9 @@
           ]
         }
       ],
-      "release_date": "2026-11-18",
+      "release_date": "2026-11-17",
       "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-6.2-sol": {
@@ -15505,16 +15462,18 @@
     },
     "openai/gpt-6.2-sol-pro": {
       "attachment": true,
+      "canonical_model_id": "openai/gpt-6.2-sol",
       "cost": {
         "cache_read": 0.1,
         "cache_write": 2.5,
         "input": 2,
         "output": 10
       },
-      "description": "GPT-6.2 Sol in Pro reasoning mode. Uses additional model work for difficult tasks, with higher latency and token usage at the same per-token rates. Reasoning effort remains independently configurable.",
-      "family": "gpt-pro",
+      "description": "An efficient reasoning model for everyday work, multistep agentic workflows, and coding.",
+      "family": "gpt-sol",
       "id": "openai/gpt-6.2-sol-pro",
-      "last_updated": "2026-11-18",
+      "knowledge": "2026-06-01",
+      "last_updated": "2026-11-17",
       "limit": {
         "context": 922000,
         "input": 922000,
@@ -15544,8 +15503,9 @@
           ]
         }
       ],
-      "release_date": "2026-11-18",
+      "release_date": "2026-11-17",
       "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "openai/gpt-astra-latest": {
@@ -20026,14 +19986,15 @@
     },
     "ricursiveai/ripple-65b-preview": {
       "attachment": false,
+      "canonical_model_id": "ricursiveai/ripple-65b-preview",
       "cost": {
         "cache_read": 0.05,
         "input": 0.2,
         "output": 0.6
       },
-      "description": "Ripple 65B Preview is Ricursive Intelligence's Apache 2.0-licensed, 65-billion-parameter reasoning model for coding and agentic tasks. It accepts and returns text, supports automatic tool calling and JSON output, and has a 16,384-token context window shared by input and output. It reasons before answering by default, and this preview's thinking cannot be reliably turned off.",
+      "description": "Dense 65B open-weight model pretrained from scratch on 12T tokens and post-trained for agentic coding",
       "id": "ricursiveai/ripple-65b-preview",
-      "last_updated": "2026-11-05",
+      "last_updated": "2026-11-04",
       "limit": {
         "context": 16384,
         "input": 16384,
@@ -20051,8 +20012,9 @@
       "open_weights": true,
       "reasoning": true,
       "reasoning_options": [],
-      "release_date": "2026-11-05",
+      "release_date": "2026-11-04",
       "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "sakana/fugu-max": {
@@ -20633,7 +20595,7 @@
         ]
       },
       "name": "Tencent Hy4",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -20677,7 +20639,7 @@
         ]
       },
       "name": "Tencent Hy4 Flash",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -20697,9 +20659,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
       "family": "hy",
@@ -20970,7 +20932,7 @@
       "attachment": false,
       "cost": {
         "input": 30,
-        "output": 30
+        "output": 0
       },
       "description": "Compact GPT model for low-latency assistance and high-volume workloads",
       "id": "universal-summarizer",
@@ -21868,6 +21830,46 @@
       "structured_output": false,
       "tool_call": true
     },
+    "xiaomi/mimo-v2.6-flash-mopd": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.0028,
+        "input": 0.1,
+        "output": 0.28
+      },
+      "description": "MiMo V2.6 Flash MOPD is Xiaomi's updated checkpoint of MiMo V2.6 Flash, a 309B-parameter mixture-of-experts model activating 15B parameters per token. Multi-teacher on-policy distillation extends it to long-horizon tasks and reduces repeated tool calls in agent workflows. It accepts text, supports tool calling, structured output and optional reasoning, and has a 1M-token context window.",
+      "family": "mimo",
+      "id": "xiaomi/mimo-v2.6-flash-mopd",
+      "last_updated": "2026-11-25",
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo V2.6 Flash MOPD",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-25",
+      "structured_output": true,
+      "tool_call": true
+    },
     "xiaomi/mimo-v2.6-flash-uncensored": {
       "attachment": true,
       "cost": {
@@ -22009,7 +22011,7 @@
       "description": "MiMo pro model for strong multimodal reasoning and agent execution",
       "family": "mimo-pro",
       "id": "xiaomi/mimo-v2.6-pro-ultraspeed",
-      "last_updated": "2026-09-21",
+      "last_updated": "2026-09-22",
       "limit": {
         "context": 1048576,
         "input": 1048576,
@@ -22038,7 +22040,7 @@
           ]
         }
       ],
-      "release_date": "2026-09-21",
+      "release_date": "2026-09-22",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -23397,13 +23399,14 @@
     },
     "z-ai/glm-5.3-flashx-legal": {
       "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flashx-legal",
       "cost": {
         "cache_read": 0.075,
         "input": 0.37,
         "output": 1.25
       },
-      "description": "GLM 5.3 FlashX Legal is Z.AI's model trained for legal document analysis, contract review, legal reasoning and initial drafts. It accepts text and images and returns text, with always-on reasoning, tool calling, JSON output, a 1M-token context window and up to 131,072 output tokens. External legal databases and document-editing tools require your own integrations.",
-      "family": "glm",
+      "description": "GLM-5.3-FlashX tuned for legal workflows: legal research, contract review and document drafting",
+      "family": "glm-flash-legal",
       "id": "z-ai/glm-5.3-flashx-legal",
       "last_updated": "2026-11-02",
       "limit": {
@@ -23435,6 +23438,7 @@
       ],
       "release_date": "2026-11-02",
       "structured_output": false,
+      "temperature": true,
       "tool_call": true
     },
     "z-ai/glm-5.3-uncensored": {

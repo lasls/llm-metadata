@@ -44,93 +44,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "deepseek-v3.2": {
-      "attachment": false,
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "DeepSeek chat model for instruction following, coding, and analysis",
-      "family": "deepseek",
-      "id": "deepseek-v3.2",
-      "knowledge": "2025-01",
-      "last_updated": "2025-12-05",
-      "limit": {
-        "context": 131072,
-        "output": 65536
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V3.2",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-12-03",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "deepseek-v4-flash": {
-      "attachment": false,
-      "canonical_model_id": "deepseek/deepseek-v4-flash",
-      "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
-        "input": 0,
-        "output": 0
-      },
-      "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
-      "family": "deepseek-flash",
-      "id": "deepseek-v4-flash",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "knowledge": "2025-05",
-      "last_updated": "2026-04-24",
-      "limit": {
-        "context": 1000000,
-        "output": 384000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "DeepSeek V4 Flash",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "high",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-04-24",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "deepseek-v4-flash-0731": {
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
@@ -766,7 +679,8 @@
       "last_updated": "2026-06-12",
       "limit": {
         "context": 262144,
-        "output": 262144
+        "input": 229376,
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -1160,56 +1074,55 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen3.8-max-preview": {
+    "qwen4-max": {
       "attachment": true,
-      "canonical_model_id": "alibaba/qwen3.8-max-preview",
+      "canonical_model_id": "alibaba/qwen4-max",
       "cost": {
-        "cache_read": 0,
-        "cache_write": 0,
         "input": 0,
         "output": 0
       },
-      "description": "Preview Qwen flagship for million-token multimodal reasoning and long-horizon agentic workflows",
+      "description": "Flagship multimodal model for coding, office productivity, frontend design, and complex agentic tasks",
       "family": "qwen-max",
-      "id": "qwen3.8-max-preview",
+      "id": "qwen4-max",
       "interleaved": {
         "field": "reasoning_content"
       },
-      "last_updated": "2026-07-19",
+      "last_updated": "2026-11-16",
       "limit": {
         "context": 1000000,
-        "output": 131072
+        "output": 262144
       },
       "modalities": {
         "input": [
           "text",
           "image",
-          "video"
+          "video",
+          "pdf"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Qwen3.8 Max Preview",
+      "name": "Qwen4 Max",
       "open_weights": false,
       "reasoning": true,
       "reasoning_options": [
         {
           "type": "effort",
           "values": [
+            "none",
             "low",
-            "medium",
+            "high",
             "xhigh"
           ]
         },
         {
           "max": 262144,
-          "min": 0,
+          "min": 1,
           "type": "budget_tokens"
         }
       ],
-      "release_date": "2026-07-19",
-      "status": "deprecated",
+      "release_date": "2026-11-16",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

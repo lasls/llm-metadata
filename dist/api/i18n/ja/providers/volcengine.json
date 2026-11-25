@@ -7,6 +7,150 @@
   "iconURL": "https://models.dev/logos/volcengine.svg",
   "id": "volcengine",
   "models": {
+    "deepseek-v4-1-flash-260910": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
+      "cost": {
+        "cache_read": 0.00299,
+        "input": 0.14972,
+        "output": 0.59886
+      },
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-1-flash-260910",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4-1-flash-261017": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.00299,
+        "input": 0.14972,
+        "output": 0.59886
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-1-flash-261017",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepseek-v4-1-flash-economy-261017": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "cache_read": 0.0024,
+        "input": 0.11977,
+        "output": 0.47909
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4-1-flash-economy-261017",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek V4.1 Flash 1017 Economy",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "deepseek-v4-flash-ga-260731": {
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
@@ -40,15 +184,12 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
-            "minimal",
+            "none",
             "low",
-            "medium",
-            "high"
+            "high",
+            "max"
           ]
         }
       ],
@@ -89,359 +230,16 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
-            "minimal",
+            "none",
             "low",
-            "medium",
-            "high"
+            "high",
+            "max"
           ]
         }
       ],
       "release_date": "2026-08-13",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "doubao-seed-1-6-251015": {
-      "attachment": true,
-      "canonical_model_id": "bytedance-seed/seed-1-6",
-      "cost": {
-        "cache_read": 0.02375,
-        "input": 0.11875,
-        "output": 1.18747,
-        "tiers": [
-          {
-            "cache_read": 0.02375,
-            "input": 0.17812,
-            "output": 2.37494,
-            "tier": {
-              "size": 32000,
-              "type": "context"
-            }
-          },
-          {
-            "cache_read": 0.02375,
-            "input": 0.35624,
-            "output": 3.56241,
-            "tier": {
-              "size": 128000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "ByteDance Seed model for long-context reasoning, instruction following, and tool-assisted tasks",
-      "family": "seed",
-      "id": "doubao-seed-1-6-251015",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2025-10-15",
-      "limit": {
-        "context": 256000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Seed 1.6",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "minimal",
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-10-15",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "doubao-seed-1-6-flash-250828": {
-      "attachment": true,
-      "canonical_model_id": "bytedance-seed/seed-1-6-flash",
-      "cost": {
-        "cache_read": 0.00445,
-        "input": 0.02227,
-        "output": 0.22265,
-        "tiers": [
-          {
-            "cache_read": 0.00445,
-            "input": 0.04453,
-            "output": 0.4453,
-            "tier": {
-              "size": 32000,
-              "type": "context"
-            }
-          },
-          {
-            "cache_read": 0.00445,
-            "input": 0.08906,
-            "output": 0.8906,
-            "tier": {
-              "size": 128000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "Low-latency ByteDance Seed model for high-throughput chat, extraction, and lightweight tool use",
-      "family": "seed-flash",
-      "id": "doubao-seed-1-6-flash-250828",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2025-08-28",
-      "limit": {
-        "context": 256000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Seed 1.6 Flash",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-08-28",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "doubao-seed-1-6-vision-250815": {
-      "attachment": true,
-      "canonical_model_id": "bytedance-seed/seed-1-6-vision",
-      "cost": {
-        "cache_read": 0.02375,
-        "input": 0.11875,
-        "output": 1.18747,
-        "tiers": [
-          {
-            "cache_read": 0.02375,
-            "input": 0.17812,
-            "output": 2.37494,
-            "tier": {
-              "size": 32000,
-              "type": "context"
-            }
-          },
-          {
-            "cache_read": 0.02375,
-            "input": 0.35624,
-            "output": 3.56241,
-            "tier": {
-              "size": 128000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "ByteDance Seed multimodal model for image understanding, visual reasoning, and tool-assisted tasks",
-      "family": "seed",
-      "id": "doubao-seed-1-6-vision-250815",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2025-08-15",
-      "limit": {
-        "context": 256000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Seed 1.6 Vision",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2025-08-15",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "doubao-seed-1-8-251228": {
-      "attachment": true,
-      "canonical_model_id": "bytedance-seed/seed-1-8",
-      "cost": {
-        "cache_read": 0.02375,
-        "input": 0.11875,
-        "output": 1.18747,
-        "tiers": [
-          {
-            "cache_read": 0.02375,
-            "input": 0.17812,
-            "output": 2.37494,
-            "tier": {
-              "size": 32000,
-              "type": "context"
-            }
-          },
-          {
-            "cache_read": 0.02375,
-            "input": 0.35624,
-            "output": 3.56241,
-            "tier": {
-              "size": 128000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "ByteDance Seed model for multimodal reasoning, long-context analysis, and agent workflows",
-      "family": "seed",
-      "id": "doubao-seed-1-8-251228",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2025-12-28",
-      "limit": {
-        "context": 256000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Seed 1.8",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2025-12-28",
-      "status": "deprecated",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "doubao-seed-2-0-code-preview-260215": {
-      "attachment": true,
-      "canonical_model_id": "bytedance-seed/seed-2.0-code",
-      "cost": {
-        "cache_read": 0.095,
-        "input": 0.47499,
-        "output": 2.37494,
-        "tiers": [
-          {
-            "cache_read": 0.1425,
-            "input": 0.71248,
-            "output": 3.56241,
-            "tier": {
-              "size": 32000,
-              "type": "context"
-            }
-          },
-          {
-            "cache_read": 0.28499,
-            "input": 1.42496,
-            "output": 7.12482,
-            "tier": {
-              "size": 128000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "ByteDance Seed coding model for multimodal software engineering and long-running agents",
-      "family": "seed-code",
-      "id": "doubao-seed-2-0-code-preview-260215",
-      "interleaved": {
-        "field": "reasoning_content"
-      },
-      "last_updated": "2026-02-14",
-      "limit": {
-        "context": 262144,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Seed 2.0 Code",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "minimal",
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-02-14",
-      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -452,6 +250,7 @@
       "cost": {
         "cache_read": 0.01781,
         "input": 0.08906,
+        "input_audio": 1.3359,
         "output": 0.53436,
         "tiers": [
           {
@@ -489,6 +288,7 @@
         "input": [
           "text",
           "image",
+          "audio",
           "video"
         ],
         "output": [
@@ -503,12 +303,9 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],
@@ -523,6 +320,7 @@
       "cost": {
         "cache_read": 0.00594,
         "input": 0.02969,
+        "input_audio": 0.4453,
         "output": 0.29687,
         "tiers": [
           {
@@ -560,6 +358,7 @@
         "input": [
           "text",
           "image",
+          "audio",
           "video"
         ],
         "output": [
@@ -574,12 +373,9 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],
@@ -645,12 +441,9 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],
@@ -658,6 +451,56 @@
       "status": "deprecated",
       "structured_output": true,
       "temperature": false,
+      "tool_call": true
+    },
+    "doubao-seed-2-1-lite-260915": {
+      "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.1-lite",
+      "cost": {
+        "cache_read": 0.02395,
+        "input": 0.11977,
+        "input_audio": 1.7966,
+        "output": 0.40423
+      },
+      "description": "Omnimodal ByteDance Seed 2.1 model with native text, vision, and audio understanding, 1M context, and improved coding and agent task completion",
+      "family": "seed-lite",
+      "id": "doubao-seed-2-1-lite-260915",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-09-15",
+      "limit": {
+        "context": 1024000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "audio",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.1 Lite",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-09-15",
+      "structured_output": true,
+      "temperature": true,
       "tool_call": true
     },
     "doubao-seed-2-1-pro-260628": {
@@ -671,6 +514,55 @@
       "description": "Flagship ByteDance Seed 2.1 model for complex multimodal reasoning, coding, and agents",
       "family": "seed-pro",
       "id": "doubao-seed-2-1-pro-260628",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-06-23",
+      "limit": {
+        "context": 256000,
+        "input": 256000,
+        "output": 256000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Seed 2.1 Pro",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-06-23",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "doubao-seed-2-1-pro-260915": {
+      "attachment": true,
+      "canonical_model_id": "bytedance-seed/seed-2.1-pro",
+      "cost": {
+        "cache_read": 0.17966,
+        "input": 0.8983,
+        "output": 4.49149
+      },
+      "description": "Flagship ByteDance Seed 2.1 model for complex multimodal reasoning, coding, and agents",
+      "family": "seed-pro",
+      "id": "doubao-seed-2-1-pro-260915",
       "interleaved": {
         "field": "reasoning_content"
       },
@@ -697,12 +589,9 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],
@@ -748,12 +637,9 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],
@@ -789,8 +675,9 @@
       },
       "last_updated": "2026-06-23",
       "limit": {
-        "context": 256000,
-        "output": 256000
+        "context": 128000,
+        "input": 128000,
+        "output": 32000
       },
       "modalities": {
         "input": [
@@ -807,13 +694,11 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
-            "minimal",
+            "none",
             "low",
+            "medium",
             "high"
           ]
         }
@@ -860,12 +745,9 @@
           "type": "effort",
           "values": [
             "none",
-            "minimal",
             "low",
             "medium",
-            "high",
-            "xhigh",
-            "max"
+            "high"
           ]
         }
       ],
@@ -906,15 +788,11 @@
       "reasoning": true,
       "reasoning_options": [
         {
-          "type": "toggle"
-        },
-        {
           "type": "effort",
           "values": [
-            "minimal",
-            "low",
-            "medium",
-            "high"
+            "none",
+            "high",
+            "max"
           ]
         }
       ],
@@ -969,6 +847,53 @@
       "release_date": "2026-08-26",
       "structured_output": true,
       "temperature": true,
+      "tool_call": true
+    },
+    "kimi-k3-1-pro-261024": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+      "cost": {
+        "cache_read": 0.19463,
+        "input": 1.94631,
+        "output": 10.18071
+      },
+      "description": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
+      "family": "kimi-pro",
+      "id": "kimi-k3-1-pro-261024",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-10-23",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3.1 Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-23",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     }
   },

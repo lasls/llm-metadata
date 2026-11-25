@@ -1601,7 +1601,7 @@
       "last_updated": "2026-03-13",
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4774,7 +4774,7 @@
       "last_updated": "2026-09-20",
       "limit": {
         "context": 1048576,
-        "output": 1000000
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -4860,7 +4860,7 @@
       "last_updated": "2026-11-04",
       "limit": {
         "context": 1048576,
-        "input": 983010,
+        "input": 983040,
         "output": 65536
       },
       "modalities": {
@@ -4873,7 +4873,7 @@
         ]
       },
       "name": "Hy4 (Deep Infra)",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -4904,7 +4904,8 @@
       "last_updated": "2026-08-28",
       "limit": {
         "context": 1048576,
-        "output": 64000
+        "input": 983040,
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -4975,6 +4976,52 @@
         }
       ],
       "release_date": "2026-07-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "deepinfra/thinkingmachines/Inkling-2-Mini": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-2-mini",
+      "cost": {
+        "cache_read": 0.015,
+        "input": 0.075,
+        "output": 0.3
+      },
+      "description": "Looped MoE reasoning model (26.4B total, 3.4B active) for agentic coding, vision, and knowledge work",
+      "family": "inkling-mini",
+      "id": "deepinfra/thinkingmachines/Inkling-2-Mini",
+      "last_updated": "2026-11-20",
+      "limit": {
+        "context": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling 2 Mini (Deep Infra)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-20",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -6121,8 +6168,8 @@
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "image",
+          "text"
         ],
         "output": [
           "text",
@@ -7024,9 +7071,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.043756,
-        "input": 0.153146,
-        "output": 0.382865
+        "cache_read": 0.043852,
+        "input": 0.153482,
+        "output": 0.383705
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -7068,9 +7115,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.012033,
-        "input": 0.240658,
-        "output": 1.20329
+        "cache_read": 0.012059,
+        "input": 0.241186,
+        "output": 1.20593
       },
       "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
       "family": "deepseek-flash",
@@ -7113,8 +7160,8 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "input": 0.21878,
-        "output": 0.76573
+        "input": 0.21926,
+        "output": 0.76741
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -7155,8 +7202,8 @@
       "attachment": false,
       "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
-        "input": 1.20329,
-        "output": 1.20329
+        "input": 1.20593,
+        "output": 1.20593
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -7187,8 +7234,8 @@
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-235b-a22b-instruct-2507",
       "cost": {
-        "input": 0.98451,
-        "output": 2.953531
+        "input": 0.98667,
+        "output": 2.96001
       },
       "description": "Updated large open Qwen3 MoE instruct model for multilingual chat, coding, and tool use",
       "family": "qwen",
@@ -7410,8 +7457,8 @@
       "attachment": true,
       "canonical_model_id": "mistral/ministral-3-14b-instruct-2512",
       "cost": {
-        "input": 0.32817,
-        "output": 0.43756
+        "input": 0.32889,
+        "output": 0.43852
       },
       "description": "Open vision-language model for efficient local deployment, instruction following, and tool use",
       "family": "ministral",
@@ -7442,8 +7489,8 @@
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-coder-next",
       "cost": {
-        "input": 0.164085,
-        "output": 0.87512
+        "input": 0.164445,
+        "output": 0.87704
       },
       "description": "Open-weight Qwen coding model for agents, repository edits, and multi-turn tool use",
       "family": "qwen-coder",
@@ -7474,8 +7521,8 @@
       "attachment": false,
       "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
-        "input": 0.711035,
-        "output": 0.711035
+        "input": 0.712595,
+        "output": 0.712595
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -7506,8 +7553,8 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "input": 0.164085,
-        "output": 0.711035
+        "input": 0.164445,
+        "output": 0.712595
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -8714,7 +8761,7 @@
       "description": "Mistral's 1T-parameter multimodal MoE for reasoning, coding, and agentic work",
       "family": "mistral-large",
       "id": "mistral/mistral-large-4@eu",
-      "last_updated": "2026-10-06",
+      "last_updated": "2026-10-05",
       "limit": {
         "context": 524288,
         "output": 262144
@@ -8730,7 +8777,7 @@
         ]
       },
       "name": "Mistral Large 4 (EU)",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -8742,7 +8789,7 @@
           ]
         }
       ],
-      "release_date": "2026-10-06",
+      "release_date": "2026-10-05",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -8828,7 +8875,7 @@
       "description": "Balanced Mistral model for enterprise assistants, multilingual work, and tools",
       "family": "mistral-medium",
       "id": "mistral/mistral-medium-2604",
-      "last_updated": "2026-04-29",
+      "last_updated": "2026-04-28",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -8854,7 +8901,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-29",
+      "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -8870,7 +8917,7 @@
       "description": "Balanced Mistral model for enterprise assistants, multilingual work, and tools",
       "family": "mistral-medium",
       "id": "mistral/mistral-medium-2604@eu",
-      "last_updated": "2026-04-29",
+      "last_updated": "2026-04-28",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -8896,7 +8943,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-29",
+      "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -8947,10 +8994,10 @@
       "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral-medium",
       "id": "mistral/mistral-medium-3-5",
-      "last_updated": "2026-04-30",
+      "last_updated": "2026-04-28",
       "limit": {
         "context": 262144,
-        "output": 209715
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -8963,7 +9010,7 @@
         ]
       },
       "name": "Mistral Medium 3.5",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -8974,7 +9021,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-30",
+      "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -8990,10 +9037,10 @@
       "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
       "family": "mistral-medium",
       "id": "mistral/mistral-medium-3-5@eu",
-      "last_updated": "2026-04-30",
+      "last_updated": "2026-04-28",
       "limit": {
         "context": 262144,
-        "output": 209715
+        "output": 262144
       },
       "modalities": {
         "input": [
@@ -9006,7 +9053,7 @@
         ]
       },
       "name": "Mistral Medium 3.5 (EU)",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -9017,7 +9064,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-30",
+      "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -9068,7 +9115,7 @@
       "description": "Balanced Mistral model for enterprise assistants, multilingual work, and tools",
       "family": "mistral-medium",
       "id": "mistral/mistral-medium-latest",
-      "last_updated": "2026-04-29",
+      "last_updated": "2026-04-28",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -9094,7 +9141,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-29",
+      "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -9110,7 +9157,7 @@
       "description": "Balanced Mistral model for enterprise assistants, multilingual work, and tools",
       "family": "mistral-medium",
       "id": "mistral/mistral-medium-latest@eu",
-      "last_updated": "2026-04-29",
+      "last_updated": "2026-04-28",
       "limit": {
         "context": 262144,
         "output": 262144
@@ -9136,7 +9183,7 @@
           ]
         }
       ],
-      "release_date": "2026-04-29",
+      "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -9496,7 +9543,7 @@
         "input": 3,
         "output": 15
       },
-      "description": "Multimodal Kimi model with 1M context and toggleable max-effort thinking for long-horizon agent work",
+      "description": "Multimodal Kimi model with 1M context and always-on thinking for long-horizon agent work",
       "family": "kimi",
       "id": "moonshot/kimi-k3",
       "last_updated": "2026-07-16",
@@ -12743,9 +12790,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.087512,
-        "input": 0.43756,
-        "output": 0.87512
+        "cache_read": 0.087704,
+        "input": 0.43852,
+        "output": 0.87704
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -12832,9 +12879,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
       "cost": {
-        "cache_read": 0.131268,
-        "input": 0.65634,
-        "output": 1.969021
+        "cache_read": 0.131556,
+        "input": 0.65778,
+        "output": 1.97334
       },
       "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
       "family": "deepseek-flash",
@@ -12910,8 +12957,8 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
       "cost": {
-        "input": 0.164085,
-        "output": 0.65634
+        "input": 0.164445,
+        "output": 0.65778
       },
       "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
       "family": "gpt-oss",
@@ -12952,8 +12999,8 @@
       "attachment": false,
       "canonical_model_id": "meta/llama-3.3-70b-instruct",
       "cost": {
-        "input": 0.98451,
-        "output": 0.98451
+        "input": 0.98667,
+        "output": 0.98667
       },
       "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
       "family": "llama",
@@ -12984,8 +13031,8 @@
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-235b-a22b-instruct-2507",
       "cost": {
-        "input": 0.820425,
-        "output": 2.461276
+        "input": 0.822225,
+        "output": 2.466675
       },
       "description": "Updated large open Qwen3 MoE instruct model for multilingual chat, coding, and tool use",
       "family": "qwen",
@@ -13334,7 +13381,7 @@
         ]
       },
       "name": "Hy4 (Tencent)",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -13365,7 +13412,7 @@
       "last_updated": "2026-08-28",
       "limit": {
         "context": 1000000,
-        "output": 64000
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -13408,7 +13455,7 @@
       "limit": {
         "context": 1000000,
         "input": 1000000,
-        "output": 1000000
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -13963,7 +14010,7 @@
       "last_updated": "2026-11-04",
       "limit": {
         "context": 1048576,
-        "input": 983010,
+        "input": 983040,
         "output": 65536
       },
       "modalities": {
@@ -13976,7 +14023,7 @@
         ]
       },
       "name": "Hy4 (Together AI)",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -14378,8 +14425,8 @@
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "image",
+          "text"
         ],
         "output": [
           "text",
@@ -16458,6 +16505,50 @@
         }
       ],
       "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "zai/glm-5.3-flashx-legal": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flashx-legal",
+      "cost": {
+        "cache_read": 0.075,
+        "input": 0.37,
+        "output": 1.25
+      },
+      "description": "GLM-5.3-FlashX tuned for legal workflows: legal research, contract review and document drafting",
+      "family": "glm-flash-legal",
+      "id": "zai/glm-5.3-flashx-legal",
+      "last_updated": "2026-11-02",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3-FlashX-Legal",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-02",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
