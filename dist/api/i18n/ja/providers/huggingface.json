@@ -323,6 +323,39 @@
       "temperature": true,
       "tool_call": true
     },
+    "NousResearch/Hermes-4-405B": {
+      "attachment": false,
+      "canonical_model_id": "nousresearch/hermes-4-405b",
+      "cost": {
+        "input": 1,
+        "output": 3
+      },
+      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
+      "family": "hermes",
+      "id": "NousResearch/Hermes-4-405B",
+      "knowledge": "2024-08-31",
+      "last_updated": "2025-08-26",
+      "limit": {
+        "context": 131072,
+        "output": 117964
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Hermes 4 405B",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
     "Qwen/Qwen2.5-Coder-32B-Instruct": {
       "attachment": false,
       "canonical_model_id": "alibaba/qwen2.5-coder-32b-instruct",
@@ -358,15 +391,15 @@
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-235b-a22b-instruct-2507",
       "cost": {
-        "input": 0.14,
-        "output": 0.8
+        "input": 0.09,
+        "output": 0.55
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
       "id": "Qwen/Qwen3-235B-A22B-Instruct-2507",
       "last_updated": "2025-07-21",
       "limit": {
-        "context": 131072,
+        "context": 262144,
         "output": 16384
       },
       "modalities": {
@@ -1142,6 +1175,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "Qwen/Qwen3.8-Flash-Next": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen3.8-flash-next",
+      "cost": {
+        "input": 0.15,
+        "output": 0.5
+      },
+      "description": "Open-weight experimental preview of the Qwen4 architecture: hybrid-attention MoE (125B total, 6B active) with vision encoder for coding, agent tasks, and image and video understanding",
+      "family": "qwen-flash",
+      "id": "Qwen/Qwen3.8-Flash-Next",
+      "last_updated": "2026-08-27",
+      "limit": {
+        "context": 262144,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen3.8 Flash Next",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-08-27",
+      "temperature": true,
+      "tool_call": true
+    },
     "Qwen/Qwen3.8-Flash-Next-FP8": {
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.8-flash-next",
@@ -1497,16 +1571,16 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v3-0324",
       "cost": {
-        "input": 0.27,
-        "output": 1.12
+        "input": 1,
+        "output": 2.625
       },
       "description": "DeepSeek chat model for instruction following, coding, and analysis",
       "family": "deepseek",
       "id": "deepseek-ai/DeepSeek-V3-0324",
       "last_updated": "2025-03-24",
       "limit": {
-        "context": 163840,
-        "output": 163840
+        "context": 131072,
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -1592,8 +1666,8 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash",
       "cost": {
-        "input": 0.07,
-        "output": 0.14
+        "input": 0.09,
+        "output": 0.18
       },
       "description": "Fast DeepSeek V4 lane for economical reasoning, coding, and long-context work",
       "family": "deepseek-flash",
@@ -1840,8 +1914,8 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
       "cost": {
-        "input": 0.04,
-        "output": 0.1
+        "input": 0.05,
+        "output": 0.3
       },
       "description": "Fast DeepSeek model for efficient chat, coding help, and agent loops",
       "family": "deepseek-flash",

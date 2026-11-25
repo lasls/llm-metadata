@@ -7,6 +7,90 @@
   "iconURL": "https://models.dev/logos/ovhcloud.svg",
   "id": "ovhcloud",
   "models": {
+    "deepseek-v4.1-flash-1017": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
+      "cost": {
+        "input": 0.31,
+        "output": 1.25
+      },
+      "description": "October 17 update of DeepSeek V4.1 Flash with improved reasoning, coding, agentic tasks, and visual understanding",
+      "family": "deepseek-flash",
+      "id": "deepseek-v4.1-flash-1017",
+      "knowledge": "2025-05",
+      "last_updated": "2026-10-17",
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "DeepSeek-V4.1-Flash-1017",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "gemma-4-26b-a4b": {
+      "attachment": false,
+      "canonical_model_id": "google/gemma-4-26b-a4b-it",
+      "cost": {
+        "input": 0.1,
+        "output": 0.41
+      },
+      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
+      "family": "gemma",
+      "id": "gemma-4-26b-a4b",
+      "last_updated": "2026-04-02",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "gemma-4-26b-a4b",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "gpt-oss-120b": {
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
@@ -91,6 +175,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "laguna-xs-2.1": {
+      "attachment": false,
+      "canonical_model_id": "poolside/laguna-xs-2.1",
+      "cost": {
+        "input": 0.06,
+        "output": 0.12
+      },
+      "description": "Agentic coding model from Poolside in the XS size class for local deployment",
+      "family": "laguna-xs",
+      "id": "laguna-xs-2.1",
+      "last_updated": "2026-07-02",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "laguna-xs-2.1",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-07-02",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "meta-llama-3_3-70b-instruct": {
       "attachment": false,
       "canonical_model_id": "meta/llama-3.3-70b-instruct",
@@ -152,6 +277,90 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2025-06-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron3-nano-30b": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-nano-30b-a3b",
+      "cost": {
+        "input": 0.06,
+        "output": 0.23
+      },
+      "description": "Small Nemotron 3 MoE for efficient coding, math, and long-context agents",
+      "family": "nemotron-nano",
+      "id": "nemotron3-nano-30b",
+      "knowledge": "2025-06-25",
+      "last_updated": "2025-12-15",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "nemotron3-nano-30b",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-12-15",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "nemotron3-omni-30b": {
+      "attachment": true,
+      "canonical_model_id": "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning",
+      "cost": {
+        "input": 0.19,
+        "output": 0.57
+      },
+      "description": "Open Nemotron omni model combining reasoning with text, vision, and audio",
+      "family": "nemotron-nano",
+      "id": "nemotron3-omni-30b",
+      "last_updated": "2026-04-28",
+      "limit": {
+        "context": 131072,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "nemotron3-omni-30b",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-28",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -373,6 +582,49 @@
         }
       ],
       "release_date": "2026-04-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "qwen3.6-35b-a3b": {
+      "attachment": false,
+      "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
+      "cost": {
+        "input": 0.2,
+        "output": 1.33
+      },
+      "description": "Open multimodal Qwen MoE for local agents that need vision, audio, and code",
+      "family": "qwen",
+      "id": "qwen3.6-35b-a3b",
+      "last_updated": "2026-04-17",
+      "limit": {
+        "context": 262144,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "qwen3.6-35b-a3b",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-04-17",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
