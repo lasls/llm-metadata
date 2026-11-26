@@ -894,6 +894,7 @@
       "attachment": true,
       "canonical_model_id": "mistral/codestral-2508",
       "cost": {
+        "cache_read": 0.03,
         "input": 0.3,
         "output": 0.9
       },
@@ -4094,56 +4095,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "grok-build-0.1": {
-      "attachment": true,
-      "canonical_model_id": "xai/grok-build-0.1",
-      "cost": {
-        "cache_read": 0.2,
-        "context_over_200k": {
-          "cache_read": 0.4,
-          "input": 2,
-          "output": 4
-        },
-        "input": 1,
-        "output": 2,
-        "tiers": [
-          {
-            "cache_read": 0.4,
-            "input": 2,
-            "output": 4,
-            "tier": {
-              "size": 200000,
-              "type": "context"
-            }
-          }
-        ]
-      },
-      "description": "Fast Grok coding model tuned for agentic engineering and iterative edits",
-      "family": "grok-build",
-      "id": "grok-build-0.1",
-      "last_updated": "2026-04-16",
-      "limit": {
-        "context": 256000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Grok Build 0.1",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-04-16",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
     "hy3": {
       "attachment": true,
       "canonical_model_id": "tencent/hy3",
@@ -5061,6 +5012,7 @@
       "attachment": true,
       "canonical_model_id": "mistral/ministral-3-3b-instruct-2512",
       "cost": {
+        "cache_read": 0.01,
         "input": 0.1,
         "output": 0.1
       },
@@ -5094,6 +5046,7 @@
       "attachment": true,
       "canonical_model_id": "mistral/ministral-3-8b-instruct-2512",
       "cost": {
+        "cache_read": 0.015,
         "input": 0.15,
         "output": 0.15
       },
@@ -5142,7 +5095,8 @@
       "modalities": {
         "input": [
           "text",
-          "image"
+          "image",
+          "pdf"
         ],
         "output": [
           "text"
@@ -5151,7 +5105,16 @@
       "name": "Mistral Large 4",
       "open_weights": true,
       "reasoning": true,
-      "reasoning_options": [],
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
       "release_date": "2026-10-05",
       "structured_output": true,
       "temperature": true,
