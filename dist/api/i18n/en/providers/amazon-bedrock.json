@@ -511,6 +511,7 @@
         }
       ],
       "release_date": "2025-11-24",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -782,7 +783,7 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "anthropic.claude-sonnet-4-5-20250929-v1:0",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
@@ -1074,51 +1075,6 @@
       "reasoning": false,
       "release_date": "2024-12-03",
       "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "apac.anthropic.claude-sonnet-4-20250514-v1:0": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-sonnet-4-20250514",
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-      "family": "claude-sonnet",
-      "id": "apac.anthropic.claude-sonnet-4-20250514-v1:0",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 4 (APAC)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-05-22",
-      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -1497,7 +1453,7 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "au.anthropic.claude-sonnet-4-5-20250929-v1:0",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
@@ -1719,6 +1675,117 @@
       "release_date": "2024-12-03",
       "structured_output": false,
       "temperature": true,
+      "tool_call": true
+    },
+    "ca.anthropic.claude-haiku-5-5": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-haiku-5-5",
+      "cost": {
+        "cache_read": 0.011,
+        "cache_write": 0.1375,
+        "input": 0.11,
+        "output": 0.55,
+        "tiers": [
+          {
+            "cache_read": 0.055,
+            "cache_write": 0.6875,
+            "input": 0.55,
+            "output": 2.75,
+            "tier": {
+              "size": 100000,
+              "type": "context"
+            }
+          }
+        ]
+      },
+      "description": "Fast Claude model for responsive assistance, classification, and lightweight agents",
+      "family": "claude-haiku",
+      "id": "ca.anthropic.claude-haiku-5-5",
+      "knowledge": "2026-06",
+      "last_updated": "2026-10-07",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Haiku 5.5 (Canada)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-07",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "ca.anthropic.claude-sonnet-5-5": {
+      "attachment": true,
+      "canonical_model_id": "anthropic/claude-sonnet-5-5",
+      "cost": {
+        "cache_read": 0.11,
+        "cache_write": 2.75,
+        "input": 2.2,
+        "output": 11
+      },
+      "description": "Fast Claude model for everyday coding, agents, and knowledge work",
+      "family": "claude-sonnet",
+      "id": "ca.anthropic.claude-sonnet-5-5",
+      "knowledge": "2026-06",
+      "last_updated": "2026-09-28",
+      "limit": {
+        "context": 1000000,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Claude Sonnet 5.5 (Canada)",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-28",
+      "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "deepseek.r1-v1:0": {
@@ -1988,54 +2055,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "eu.anthropic.claude-fable-5": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-fable-5",
-      "cost": {
-        "cache_read": 1.1,
-        "cache_write": 13.75,
-        "input": 11,
-        "output": 55
-      },
-      "description": "Claude model for creative writing, analysis, and controlled agent workflows",
-      "family": "claude-fable",
-      "id": "eu.anthropic.claude-fable-5",
-      "knowledge": "2026-01-31",
-      "last_updated": "2026-06-09",
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Fable 5 (EU)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-06-09",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "eu.anthropic.claude-haiku-4-5-20251001-v1:0": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-haiku-4-5-20251001",
@@ -2193,6 +2212,7 @@
         }
       ],
       "release_date": "2025-11-24",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -2452,51 +2472,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "eu.anthropic.claude-sonnet-4-20250514-v1:0": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-sonnet-4-20250514",
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-      "family": "claude-sonnet",
-      "id": "eu.anthropic.claude-sonnet-4-20250514-v1:0",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 4 (EU)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-05-22",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
     "eu.anthropic.claude-sonnet-4-5-20250929-v1:0": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-sonnet-4-5-20250929",
@@ -2509,7 +2484,7 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "eu.anthropic.claude-sonnet-4-5-20250929-v1:0",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
@@ -3079,6 +3054,7 @@
         }
       ],
       "release_date": "2025-11-24",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3338,51 +3314,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "global.anthropic.claude-sonnet-4-20250514-v1:0": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-sonnet-4-20250514",
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-      "family": "claude-sonnet",
-      "id": "global.anthropic.claude-sonnet-4-20250514-v1:0",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 4 (Global)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-05-22",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
     "global.anthropic.claude-sonnet-4-5-20250929-v1:0": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-sonnet-4-5-20250929",
@@ -3395,7 +3326,7 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "global.anthropic.claude-sonnet-4-5-20250929-v1:0",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
@@ -4447,8 +4378,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
@@ -4911,6 +4841,89 @@
       "temperature": false,
       "tool_call": true
     },
+    "in.moonshotai.kimi-k3": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3",
+      "cost": {
+        "cache_read": 0.33,
+        "cache_write": 4.125,
+        "input": 3.3,
+        "output": 16.5
+      },
+      "description": "Multimodal Kimi model with 1M context and always-on thinking for long-horizon agent work",
+      "family": "kimi",
+      "id": "in.moonshotai.kimi-k3",
+      "interleaved": true,
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3 (India)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "in.moonshotai.kimi-k3.1": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+      "cost": {
+        "cache_read": 0.22,
+        "cache_write": 5.5,
+        "input": 4.4,
+        "output": 22
+      },
+      "description": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
+      "family": "kimi-pro",
+      "id": "in.moonshotai.kimi-k3.1",
+      "last_updated": "2026-10-23",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3.1 Pro Highspeed (India)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
     "in.openai.gpt-5.6-luna": {
       "attachment": true,
       "canonical_model_id": "openai/gpt-5.6-luna",
@@ -5305,57 +5318,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "jp.anthropic.claude-opus-5": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-opus-5",
-      "cost": {
-        "cache_read": 0.55,
-        "cache_write": 6.875,
-        "input": 5.5,
-        "output": 27.5
-      },
-      "description": "Strongest Claude Opus model for coding, agents, and professional work",
-      "family": "claude-opus",
-      "id": "jp.anthropic.claude-opus-5",
-      "knowledge": "2026-05",
-      "last_updated": "2026-07-24",
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Opus 5 (JP)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-07-24",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "jp.anthropic.claude-opus-5-5": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-opus-5-5",
@@ -5416,7 +5378,7 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "jp.anthropic.claude-sonnet-4-5-20250929-v1:0",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
@@ -5502,57 +5464,6 @@
       "release_date": "2026-02-17",
       "structured_output": true,
       "temperature": true,
-      "tool_call": true
-    },
-    "jp.anthropic.claude-sonnet-5": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-sonnet-5",
-      "cost": {
-        "cache_read": 0.22,
-        "cache_write": 2.75,
-        "input": 2.2,
-        "output": 11
-      },
-      "description": "Everyday Claude agent model for coding, planning, browsing, and general work",
-      "family": "claude-sonnet",
-      "id": "jp.anthropic.claude-sonnet-5",
-      "knowledge": "2026-01-31",
-      "last_updated": "2026-06-30",
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 5 (JP)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh",
-            "max"
-          ]
-        }
-      ],
-      "release_date": "2026-06-30",
-      "structured_output": true,
-      "temperature": false,
       "tool_call": true
     },
     "meta.llama3-1-70b-instruct-v1:0": {
@@ -6336,7 +6247,7 @@
       "knowledge": "2025-08-31",
       "last_updated": "2026-06-01",
       "limit": {
-        "context": 1000000,
+        "context": 1050000,
         "output": 128000
       },
       "modalities": {
@@ -6388,7 +6299,7 @@
       "knowledge": "2025-12-01",
       "last_updated": "2026-06-01",
       "limit": {
-        "context": 1000000,
+        "context": 1050000,
         "output": 128000
       },
       "modalities": {
@@ -7892,44 +7803,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "us.amazon.nova-premier-v1:0": {
-      "attachment": true,
-      "canonical_model_id": "amazon/nova-premier",
-      "cost": {
-        "cache_read": 0.625,
-        "cache_write": 2.5,
-        "input": 2.5,
-        "output": 12.5
-      },
-      "description": "Multimodal model for complex analysis, long-context understanding, tool use, and model distillation",
-      "family": "nova-premier",
-      "id": "us.amazon.nova-premier-v1:0",
-      "knowledge": "2024-10",
-      "last_updated": "2025-04-30",
-      "limit": {
-        "context": 1000000,
-        "output": 10000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "video",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Nova Premier (US)",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-04-30",
-      "status": "deprecated",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "us.amazon.nova-pro-v1:0": {
       "attachment": true,
       "canonical_model_id": "amazon/nova-pro",
@@ -8313,6 +8186,7 @@
         }
       ],
       "release_date": "2025-11-24",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -8572,51 +8446,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "us.anthropic.claude-sonnet-4-20250514-v1:0": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-sonnet-4-20250514",
-      "cost": {
-        "cache_read": 0.3,
-        "cache_write": 3.75,
-        "input": 3,
-        "output": 15
-      },
-      "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
-      "family": "claude-sonnet",
-      "id": "us.anthropic.claude-sonnet-4-20250514-v1:0",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-22",
-      "limit": {
-        "context": 200000,
-        "output": 64000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Sonnet 4 (US)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        },
-        {
-          "min": 1024,
-          "type": "budget_tokens"
-        }
-      ],
-      "release_date": "2025-05-22",
-      "status": "deprecated",
-      "temperature": true,
-      "tool_call": true
-    },
     "us.anthropic.claude-sonnet-4-5-20250929-v1:0": {
       "attachment": true,
       "canonical_model_id": "anthropic/claude-sonnet-4-5-20250929",
@@ -8629,7 +8458,7 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "us.anthropic.claude-sonnet-4-5-20250929-v1:0",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
@@ -9981,8 +9810,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"

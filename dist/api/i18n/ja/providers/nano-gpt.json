@@ -2045,6 +2045,47 @@
       "temperature": true,
       "tool_call": true
     },
+    "TEE/glm-5.3-uncensored": {
+      "attachment": false,
+      "cost": {
+        "cache_read": 0.26,
+        "input": 1.4,
+        "output": 4.4
+      },
+      "description": "GLM 5.3 Uncensored TEE is Phala's uncensored LoRA for Z.AI's open-weight GLM-5.3, served on NVFP4 weights. It is a separate model from GLM 5.3 Uncensored, with different weights. It refuses far less while keeping tool calling, structured output and the 1M-token context. A built-in system message, placed before yours, treats file, web and tool content as untrusted. Text only. Reasoning is always on; choose low, high, or max reasoning effort (defaults to high). Runs inside a TEE (Trusted Execution Environment), with provider attestation and signed completion receipts.",
+      "family": "glm",
+      "id": "TEE/glm-5.3-uncensored",
+      "last_updated": "2026-11-25",
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM 5.3 Uncensored TEE",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-25",
+      "structured_output": true,
+      "tool_call": true
+    },
     "TEE/gpt-oss-120b": {
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-120b",
@@ -4180,7 +4221,7 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "anthropic/claude-sonnet-4.5",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
@@ -4229,7 +4270,7 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "anthropic/claude-sonnet-4.5:thinking",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 200000,
@@ -5135,37 +5176,6 @@
       "release_date": "2025-08-21",
       "structured_output": false,
       "temperature": true,
-      "tool_call": false
-    },
-    "deepcogito/cogito-v1-preview-qwen-32B": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.9,
-        "input": 1.8,
-        "output": 1.8
-      },
-      "description": "32-B parameter reasoning model from DeepCogito (Qwen backbone) – strong general reasoning & coding at low price.",
-      "family": "cogito",
-      "id": "deepcogito/cogito-v1-preview-qwen-32B",
-      "last_updated": "2025-05-10",
-      "limit": {
-        "context": 128000,
-        "input": 128000,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Cogito v1 Preview Qwen 32B",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2025-05-10",
-      "structured_output": false,
       "tool_call": false
     },
     "deepseek-ai/DeepSeek-R1-0528": {
@@ -7012,7 +7022,7 @@
       "family": "gemini-flash-lite",
       "id": "gemini-2.5-flash-lite",
       "knowledge": "2025-01",
-      "last_updated": "2025-06-17",
+      "last_updated": "2025-07-22",
       "limit": {
         "context": 1048576,
         "input": 1048576,
@@ -7042,7 +7052,7 @@
           ]
         }
       ],
-      "release_date": "2025-06-17",
+      "release_date": "2025-07-22",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -10304,7 +10314,7 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2026-06-30",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -10338,7 +10348,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-06-30",
-      "structured_output": false,
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -12788,16 +12798,17 @@
     },
     "moonshotai/kimi-k3.1-pro-highspeed": {
       "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3.1-pro-highspeed",
       "cost": {
         "cache_read": 0.2,
         "cache_write": 4,
         "input": 4,
         "output": 20
       },
-      "description": "Kimi K3.1 Pro Highspeed is the faster variant of K3.1 Pro, a multimodal reasoning model for coding, 3D creation, document analysis and multi-step tool use. It supports a 1M-token context window and text, image and video inputs. Reasoning is always enabled, with low, high and max effort levels.",
+      "description": "Faster-serving Kimi K3.1 Pro with a 1M-token context window and always-on reasoning",
       "family": "kimi-pro",
       "id": "moonshotai/kimi-k3.1-pro-highspeed",
-      "last_updated": "2026-10-24",
+      "last_updated": "2026-10-23",
       "limit": {
         "context": 1048576,
         "input": 1048576,
@@ -12814,7 +12825,7 @@
         ]
       },
       "name": "Kimi K3.1 Pro Highspeed",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -12826,8 +12837,9 @@
           ]
         }
       ],
-      "release_date": "2026-10-24",
+      "release_date": "2026-10-23",
       "structured_output": true,
+      "temperature": false,
       "tool_call": true
     },
     "moonshotai/kimi-latest": {
@@ -16034,50 +16046,6 @@
       "structured_output": false,
       "temperature": false,
       "tool_call": false
-    },
-    "openai/o3-pro-2025-06-10": {
-      "attachment": false,
-      "canonical_model_id": "openai/o3-pro",
-      "cost": {
-        "cache_read": 10,
-        "input": 20,
-        "output": 80
-      },
-      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
-      "family": "o-pro",
-      "id": "openai/o3-pro-2025-06-10",
-      "knowledge": "2024-05",
-      "last_updated": "2025-06-10",
-      "limit": {
-        "context": 200000,
-        "input": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "OpenAI o3-pro (2025-06-10)",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-06-10",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
     },
     "orca/orcacyber-flash-1.0": {
       "attachment": true,
@@ -20690,9 +20658,9 @@
       "attachment": false,
       "canonical_model_id": "tencent/hy4-preview",
       "cost": {
-        "cache_read": 0.042,
-        "input": 0.834,
-        "output": 2.501
+        "cache_read": 0.0378,
+        "input": 0.7506,
+        "output": 2.2509
       },
       "description": "A next-generation productivity model with significantly enhanced Agent and complex task execution capabilities.",
       "family": "hy",
@@ -20846,6 +20814,54 @@
       "temperature": true,
       "tool_call": true
     },
+    "thinkingmachines/inkling-2-mini": {
+      "attachment": true,
+      "canonical_model_id": "thinkingmachines/inkling-2-mini",
+      "cost": {
+        "cache_read": 0.0075,
+        "input": 0.0375,
+        "output": 0.15
+      },
+      "description": "Looped MoE reasoning model (26.4B total, 3.4B active) for agentic coding, vision, and knowledge work",
+      "family": "inkling-mini",
+      "id": "thinkingmachines/inkling-2-mini",
+      "last_updated": "2026-11-20",
+      "limit": {
+        "context": 1048576,
+        "input": 1048576,
+        "output": 65536
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Inkling 2 Mini",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-20",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "thinkingmachines/inkling:thinking": {
       "attachment": true,
       "canonical_model_id": "thinkingmachines/inkling",
@@ -20891,72 +20907,6 @@
       "release_date": "2026-07-15",
       "structured_output": true,
       "temperature": true,
-      "tool_call": true
-    },
-    "unbiased/pareto-26.10": {
-      "attachment": true,
-      "canonical_model_id": "unbiased/pareto-26.10",
-      "cost": {
-        "cache_read": 0.03,
-        "input": 0.8,
-        "output": 3.2
-      },
-      "description": "Blended multimodal model that selects frontier and open models for each request and blends their outputs into one answer",
-      "family": "pareto",
-      "id": "unbiased/pareto-26.10",
-      "last_updated": "2026-10-15",
-      "limit": {
-        "context": 1048576,
-        "input": 1048576,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Pareto 26.10",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-10-15",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "unbiased/pareto-26.9": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.25,
-        "input": 2.5,
-        "output": 7.5
-      },
-      "description": "Pareto 26.9 is an experimental multimodal composite model from Unbiased AI for research, coding, agentic workflows, and general-purpose tasks. It runs several frontier and open models for each request and returns a single selected or synthesized answer. This experimental release supports text and image input, tool calling, a 262K-token context window, and up to 131K output tokens. Its underlying model mix and behavior may change as it is evaluated. Request content may be retained for abuse prevention and security monitoring for up to 30 days, and is not used for model training without explicit consent.",
-      "family": "pareto",
-      "id": "unbiased/pareto-26.9",
-      "last_updated": "2026-09-18",
-      "limit": {
-        "context": 262144,
-        "input": 262144,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Pareto 26.9",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-09-18",
-      "structured_output": false,
       "tool_call": true
     },
     "universal-summarizer": {
@@ -22007,46 +21957,6 @@
       "structured_output": false,
       "tool_call": true
     },
-    "xiaomi/mimo-v2.6-flash-mopd": {
-      "attachment": false,
-      "cost": {
-        "cache_read": 0.0028,
-        "input": 0.1,
-        "output": 0.28
-      },
-      "description": "MiMo V2.6 Flash MOPD is Xiaomi's updated checkpoint of MiMo V2.6 Flash, a 309B-parameter mixture-of-experts model activating 15B parameters per token. Multi-teacher on-policy distillation extends it to long-horizon tasks and reduces repeated tool calls in agent workflows. It accepts text, supports tool calling, structured output and optional reasoning, and has a 1M-token context window.",
-      "family": "mimo",
-      "id": "xiaomi/mimo-v2.6-flash-mopd",
-      "last_updated": "2026-11-25",
-      "limit": {
-        "context": 1048576,
-        "input": 1048576,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiMo V2.6 Flash MOPD",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "none",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2026-11-25",
-      "structured_output": true,
-      "tool_call": true
-    },
     "xiaomi/mimo-v2.6-flash-uncensored": {
       "attachment": false,
       "cost": {
@@ -22250,6 +22160,48 @@
       "release_date": "2026-11-07",
       "structured_output": false,
       "tool_call": false
+    },
+    "yetalabs/kimi-k3.1-pro-abliterated": {
+      "attachment": true,
+      "cost": {
+        "cache_read": 0.14,
+        "input": 1.4,
+        "output": 2.8
+      },
+      "description": "YetaLabs' abliterated (refusal-removed) version of Moonshot AI's Kimi K3.1 Pro. It always reasons, with low, high or max effort, and supports tool calling, structured output and up to 10 images per request. It may describe itself as an OpenAI model when asked. Its behavior and response quality may differ from Kimi K3.1 Pro.",
+      "family": "kimi-pro",
+      "id": "yetalabs/kimi-k3.1-pro-abliterated",
+      "last_updated": "2026-11-25",
+      "limit": {
+        "context": 980000,
+        "input": 980000,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3.1 Pro Abliterated (YetaLabs)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-11-25",
+      "structured_output": true,
+      "tool_call": true
     },
     "z-ai/GLM-4.5-Air": {
       "attachment": false,

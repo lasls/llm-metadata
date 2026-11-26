@@ -273,58 +273,6 @@
       "temperature": false,
       "tool_call": true
     },
-    "claude-mythos-5": {
-      "attachment": true,
-      "canonical_model_id": "anthropic/claude-mythos-5",
-      "cost": {
-        "cache_read": 1,
-        "cache_write": 12.5,
-        "input": 10,
-        "output": 50
-      },
-      "description": "Restricted Claude model for advanced cybersecurity and biology research workflows",
-      "family": "claude-mythos",
-      "id": "claude-mythos-5",
-      "knowledge": "2026-01-31",
-      "last_updated": "2026-06-09",
-      "limit": {
-        "context": 1000000,
-        "output": 128000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Claude Mythos 5",
-      "open_weights": false,
-      "provider": {
-        "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/anthropic/v1",
-        "npm": "@ai-sdk/anthropic"
-      },
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high",
-            "xhigh"
-          ]
-        }
-      ],
-      "release_date": "2026-06-09",
-      "status": "beta",
-      "structured_output": true,
-      "temperature": false,
-      "tool_call": true
-    },
     "claude-opus-4-5": {
       "attachment": true,
       "cost": {
@@ -687,7 +635,7 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "claude-sonnet-4-5",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "last_updated": "2025-11-18",
       "limit": {
         "context": 200000,
@@ -717,6 +665,7 @@
         }
       ],
       "release_date": "2025-11-18",
+      "status": "deprecated",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -916,50 +865,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "codex-mini": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.375,
-        "input": 1.5,
-        "output": 6
-      },
-      "description": "Coding-optimized GPT model for repository edits, reviews, and agentic software work",
-      "family": "gpt-codex-mini",
-      "id": "codex-mini",
-      "knowledge": "2024-04",
-      "last_updated": "2025-05-16",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Codex Mini",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-05-16",
-      "status": "deprecated",
-      "temperature": false,
-      "tool_call": true
-    },
     "cohere-command-a": {
       "attachment": false,
       "cost": {
@@ -1059,6 +964,7 @@
       },
       "reasoning": false,
       "release_date": "2023-11-07",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": false,
       "type": "embedding"
@@ -1093,6 +999,7 @@
       },
       "reasoning": false,
       "release_date": "2023-11-07",
+      "status": "deprecated",
       "temperature": false,
       "tool_call": false,
       "type": "embedding"
@@ -1315,8 +1222,350 @@
         }
       ],
       "release_date": "2026-09-10",
-      "status": "beta",
+      "status": "deprecated",
       "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "fw-deepseek-v4.1-flash": {
+      "attachment": true,
+      "canonical_model_id": "deepseek/deepseek-v4.1-flash",
+      "cost": {
+        "cache_read": 0.008,
+        "input": 0.375,
+        "output": 1.5
+      },
+      "description": "DeepSeek V4.1 Flash model for reasoning and agentic coding",
+      "family": "deepseek-flash",
+      "id": "fw-deepseek-v4.1-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-05",
+      "last_updated": "2026-09-10",
+      "limit": {
+        "context": 1048576,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "FW-DeepSeek-V4.1-Flash",
+      "open_weights": true,
+      "provider": {
+        "shape": "completions"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-09-10",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "fw-glm-5.3": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.325,
+        "input": 1.75,
+        "output": 5.5
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "fw-glm-5.3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "FW-GLM-5.3",
+      "open_weights": true,
+      "provider": {
+        "shape": "completions"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "fw-glm-5.3-flash": {
+      "attachment": true,
+      "canonical_model_id": "zhipuai/glm-5.3-flash",
+      "cost": {
+        "cache_read": 0.038,
+        "input": 0.188,
+        "output": 0.625
+      },
+      "description": "Native multimodal GLM model for efficient coding and long-horizon agent tasks",
+      "family": "glm-flash",
+      "id": "fw-glm-5.3-flash",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-26",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "FW-GLM-5.3-Flash",
+      "open_weights": true,
+      "provider": {
+        "shape": "completions"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-26",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "fw-kimi-k3": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3",
+      "cost": {
+        "cache_read": 0.3,
+        "input": 3,
+        "output": 15
+      },
+      "description": "Multimodal Kimi model with 1M context and always-on thinking for long-horizon agent work",
+      "family": "kimi",
+      "id": "fw-kimi-k3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-07-16",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "FW-Kimi-K3",
+      "open_weights": true,
+      "provider": {
+        "shape": "completions"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-07-16",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "fw-kimi-k3.1-pro": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+      "cost": {
+        "cache_read": 0.25,
+        "input": 2.5,
+        "output": 12.5
+      },
+      "description": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
+      "family": "kimi-pro",
+      "id": "fw-kimi-k3.1-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-10-23",
+      "limit": {
+        "context": 1048576,
+        "output": 1048576
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "FW-Kimi-K3.1-Pro",
+      "open_weights": true,
+      "provider": {
+        "shape": "completions"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-10-23",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "fw-nemotron-3-ultra-nvfp4": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3-ultra-550b-a55b",
+      "cost": {
+        "cache_read": 0.13,
+        "input": 0.66,
+        "output": 2.64
+      },
+      "description": "Largest Nemotron 3 model for maximum open-weight reasoning and agent accuracy",
+      "family": "nemotron-ultra",
+      "id": "fw-nemotron-3-ultra-nvfp4",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-09",
+      "last_updated": "2026-06-04",
+      "limit": {
+        "context": 262144,
+        "output": 128000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "FW-Nemotron-3-Ultra-NVFP4",
+      "open_weights": true,
+      "provider": {
+        "shape": "completions"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-06-04",
+      "temperature": true,
+      "tool_call": true
+    },
+    "fw-nemotron-lightning-3.5-30b-a3b": {
+      "attachment": false,
+      "canonical_model_id": "nvidia/nemotron-3.5-lightning",
+      "cost": {
+        "cache_read": 0.01,
+        "input": 0.06,
+        "output": 0.22
+      },
+      "description": "Fast NVIDIA Nemotron MoE for reliable agentic tasks across enterprise workloads",
+      "family": "nemotron-lightning",
+      "id": "fw-nemotron-lightning-3.5-30b-a3b",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-09",
+      "last_updated": "2026-08-11",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "FW-Nemotron-Lightning-3.5-30B-A3B",
+      "open_weights": true,
+      "provider": {
+        "shape": "completions"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        }
+      ],
+      "release_date": "2026-08-11",
       "temperature": true,
       "tool_call": true
     },
@@ -3298,8 +3547,7 @@
       "knowledge": "2025-12-01",
       "last_updated": "2026-05-28",
       "limit": {
-        "context": 400000,
-        "input": 272000,
+        "context": 128000,
         "output": 128000
       },
       "modalities": {
@@ -3329,13 +3577,13 @@
       "temperature": false,
       "tool_call": true
     },
-    "gpt-image-1": {
+    "gpt-image-1-mini": {
       "attachment": true,
-      "canonical_model_id": "openai/gpt-image-1",
-      "description": "OpenAI image model for production generation, edits, and brand-safe visual workflows",
-      "family": "gpt-image",
-      "id": "gpt-image-1",
-      "last_updated": "2025-04-24",
+      "canonical_model_id": "openai/gpt-image-1-mini",
+      "description": "Cost-efficient GPT Image 1 variant for image generation and editing",
+      "family": "gpt-image-mini",
+      "id": "gpt-image-1-mini",
+      "last_updated": "2025-10-06",
       "limit": {
         "context": 0,
         "output": 0
@@ -3349,10 +3597,10 @@
           "image"
         ]
       },
-      "name": "GPT-Image-1",
+      "name": "GPT-Image-1 Mini",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2025-04-24",
+      "release_date": "2025-10-06",
       "temperature": false,
       "tool_call": false,
       "type": "image"
@@ -3475,6 +3723,51 @@
       "tool_call": false,
       "type": "image"
     },
+    "gpt-oss-120b": {
+      "attachment": false,
+      "canonical_model_id": "openai/gpt-oss-120b",
+      "cost": {
+        "input": 0.15,
+        "output": 0.6
+      },
+      "description": "Open GPT reasoning model for self-hosted agents and controllable deployments",
+      "family": "gpt-oss",
+      "id": "gpt-oss-120b",
+      "knowledge": "2024-06",
+      "last_updated": "2025-08-05",
+      "limit": {
+        "context": 131072,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GPT OSS 120B",
+      "open_weights": true,
+      "provider": {
+        "shape": "completions"
+      },
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2025-08-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "grok-4-1-fast-non-reasoning": {
       "attachment": true,
       "cost": {
@@ -3489,7 +3782,7 @@
       "limit": {
         "context": 128000,
         "input": 128000,
-        "output": 8192
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -3524,7 +3817,7 @@
       "limit": {
         "context": 128000,
         "input": 128000,
-        "output": 8192
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -3549,8 +3842,8 @@
     "grok-4-20-non-reasoning": {
       "attachment": false,
       "cost": {
-        "input": 2,
-        "output": 6
+        "input": 1.25,
+        "output": 2.5
       },
       "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
       "family": "grok",
@@ -3583,8 +3876,8 @@
     "grok-4-20-reasoning": {
       "attachment": false,
       "cost": {
-        "input": 2,
-        "output": 6
+        "input": 1.25,
+        "output": 2.5
       },
       "description": "Grok model for agentic tool use, reasoning, coding, and live assistance",
       "family": "grok",
@@ -3716,8 +4009,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
@@ -3741,7 +4033,6 @@
         }
       ],
       "release_date": "2026-09-21",
-      "status": "beta",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3750,6 +4041,7 @@
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k2.5",
       "cost": {
+        "cache_read": 0.1,
         "input": 0.6,
         "output": 3
       },
@@ -3781,6 +4073,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-01-27",
+      "status": "beta",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3821,6 +4114,7 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-04-20",
+      "status": "beta",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -3863,6 +4157,48 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2026-06-12",
+      "status": "beta",
+      "structured_output": true,
+      "temperature": false,
+      "tool_call": true
+    },
+    "kimi-k3.1-pro": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k3.1-pro",
+      "cost": {
+        "cache_read": 0.23,
+        "input": 2.3,
+        "output": 11.5
+      },
+      "description": "Multimodal Kimi model with a 1M-token context window and always-on reasoning, for coding, 3D creation and financial research",
+      "family": "kimi-pro",
+      "id": "kimi-k3.1-pro",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-10-23",
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K3.1 Pro",
+      "open_weights": true,
+      "provider": {
+        "api": "https://${AZURE_COGNITIVE_SERVICES_RESOURCE_NAME}.services.ai.azure.com/models",
+        "npm": "@ai-sdk/openai-compatible"
+      },
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-10-23",
       "structured_output": true,
       "temperature": false,
       "tool_call": true
@@ -3880,7 +4216,7 @@
       "last_updated": "2024-12-06",
       "limit": {
         "context": 128000,
-        "output": 32768
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -3998,6 +4334,7 @@
       },
       "reasoning": false,
       "release_date": "2024-10-22",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -4032,6 +4369,7 @@
       },
       "reasoning": false,
       "release_date": "2025-05-07",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -4066,6 +4404,7 @@
       },
       "reasoning": false,
       "release_date": "2025-03-01",
+      "status": "deprecated",
       "temperature": true,
       "tool_call": true
     },
@@ -4102,182 +4441,6 @@
       "release_date": "2025-05-19",
       "tool_call": true
     },
-    "o1": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 7.5,
-        "input": 15,
-        "output": 60
-      },
-      "description": "O-series reasoning model for hard analysis, math, coding, and planning",
-      "family": "o",
-      "id": "o1",
-      "knowledge": "2023-09",
-      "last_updated": "2024-12-05",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o1",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2024-12-05",
-      "status": "deprecated",
-      "temperature": false,
-      "tool_call": true
-    },
-    "o3": {
-      "attachment": true,
-      "canonical_model_id": "openai/o3",
-      "cost": {
-        "cache_read": 0.5,
-        "input": 2,
-        "output": 8
-      },
-      "description": "Deliberate o-series reasoner for hard math, coding, and multi-step analysis",
-      "family": "o",
-      "id": "o3",
-      "knowledge": "2024-05",
-      "last_updated": "2025-04-16",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o3",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-04-16",
-      "temperature": false,
-      "tool_call": true
-    },
-    "o3-mini": {
-      "attachment": false,
-      "canonical_model_id": "openai/o3-mini",
-      "cost": {
-        "cache_read": 0.55,
-        "input": 1.1,
-        "output": 4.4
-      },
-      "description": "Smaller o-series reasoner for economical coding, math, and planning tasks",
-      "family": "o-mini",
-      "id": "o3-mini",
-      "knowledge": "2024-05",
-      "last_updated": "2025-01-29",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o3-mini",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2024-12-20",
-      "status": "deprecated",
-      "temperature": false,
-      "tool_call": true
-    },
-    "o4-mini": {
-      "attachment": true,
-      "canonical_model_id": "openai/o4-mini",
-      "cost": {
-        "cache_read": 0.275,
-        "input": 1.1,
-        "output": 4.4
-      },
-      "description": "Fast o-series model for compact reasoning, coding, and tool use",
-      "family": "o-mini",
-      "id": "o4-mini",
-      "knowledge": "2024-05",
-      "last_updated": "2025-04-16",
-      "limit": {
-        "context": 200000,
-        "output": 100000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "o4-mini",
-      "open_weights": false,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "low",
-            "medium",
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-04-16",
-      "status": "deprecated",
-      "temperature": false,
-      "tool_call": true
-    },
     "phi-4": {
       "attachment": false,
       "cost": {
@@ -4290,8 +4453,8 @@
       "knowledge": "2023-10",
       "last_updated": "2024-12-11",
       "limit": {
-        "context": 128000,
-        "output": 4096
+        "context": 16384,
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -4323,7 +4486,7 @@
       "knowledge": "2023-10",
       "last_updated": "2024-12-11",
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 4096
       },
       "modalities": {
@@ -4357,7 +4520,7 @@
       "last_updated": "2024-12-11",
       "limit": {
         "context": 128000,
-        "output": 4096
+        "output": 128000
       },
       "modalities": {
         "input": [
@@ -4391,7 +4554,7 @@
       "knowledge": "2023-10",
       "last_updated": "2024-12-11",
       "limit": {
-        "context": 128000,
+        "context": 131072,
         "output": 4096
       },
       "modalities": {
@@ -4426,8 +4589,8 @@
       "knowledge": "2023-10",
       "last_updated": "2024-12-11",
       "limit": {
-        "context": 32000,
-        "output": 4096
+        "context": 32768,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -4438,40 +4601,6 @@
         ]
       },
       "name": "Phi-4-reasoning",
-      "open_weights": true,
-      "provider": {
-        "shape": "completions"
-      },
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2024-12-11",
-      "temperature": true,
-      "tool_call": false
-    },
-    "phi-4-reasoning-plus": {
-      "attachment": false,
-      "cost": {
-        "input": 0.125,
-        "output": 0.5
-      },
-      "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
-      "family": "phi",
-      "id": "phi-4-reasoning-plus",
-      "knowledge": "2023-10",
-      "last_updated": "2024-12-11",
-      "limit": {
-        "context": 32000,
-        "output": 4096
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Phi-4-reasoning-plus",
       "open_weights": true,
       "provider": {
         "shape": "completions"

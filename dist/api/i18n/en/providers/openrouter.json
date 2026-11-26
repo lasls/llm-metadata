@@ -1067,7 +1067,7 @@
       "description": "Balanced Claude model for coding, analysis, agent workflows, and cost control",
       "family": "claude-sonnet",
       "id": "anthropic/claude-sonnet-4.5",
-      "knowledge": "2025-07-31",
+      "knowledge": "2025-01-31",
       "last_updated": "2025-09-29",
       "limit": {
         "context": 1000000,
@@ -1400,6 +1400,7 @@
       "last_updated": "2026-02-14",
       "limit": {
         "context": 262144,
+        "input": 224000,
         "output": 131072
       },
       "modalities": {
@@ -1455,6 +1456,7 @@
       "last_updated": "2026-02-14",
       "limit": {
         "context": 262144,
+        "input": 224000,
         "output": 131072
       },
       "modalities": {
@@ -2012,9 +2014,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
-        "cache_read": 0.035,
-        "input": 0.047,
-        "output": 0.3
+        "cache_read": 0.015,
+        "input": 0.06,
+        "output": 0.18
       },
       "description": "Official DeepSeek V4 Flash release with enhanced agentic capabilities and integrated DSpark speculative decoding",
       "family": "deepseek-flash",
@@ -2100,9 +2102,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.108,
-        "input": 1.28,
-        "output": 2.56
+        "cache_read": 0.2,
+        "input": 0.888188,
+        "output": 1.5082
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-pro",
@@ -2416,8 +2418,8 @@
       "description": "Nano Banana image model for fast generation, edits, and character-consistent assets",
       "family": "nano-banana",
       "id": "google/gemini-2.5-flash-image",
-      "knowledge": "2024-06",
-      "last_updated": "2025-08-26",
+      "knowledge": "2025-06",
+      "last_updated": "2025-10-02",
       "limit": {
         "context": 32768,
         "output": 8192
@@ -2435,7 +2437,7 @@
       "name": "Nano Banana",
       "open_weights": false,
       "reasoning": false,
-      "release_date": "2025-08-26",
+      "release_date": "2025-10-02",
       "structured_output": true,
       "temperature": true,
       "tool_call": false,
@@ -2456,7 +2458,7 @@
       "family": "gemini-flash-lite",
       "id": "google/gemini-2.5-flash-lite",
       "knowledge": "2025-01",
-      "last_updated": "2025-06-17",
+      "last_updated": "2025-07-22",
       "limit": {
         "context": 1048576,
         "output": 65535
@@ -2481,7 +2483,7 @@
           "type": "toggle"
         }
       ],
-      "release_date": "2025-06-17",
+      "release_date": "2025-07-22",
       "status": "deprecated",
       "structured_output": true,
       "temperature": true,
@@ -3847,9 +3849,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.09,
-        "output": 0.3
+        "cache_read": 0.0425,
+        "input": 0.0765,
+        "output": 0.255
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -11400,9 +11402,9 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
       "cost": {
-        "cache_read": 0.22,
-        "input": 0.45,
-        "output": 3
+        "cache_read": 0.3,
+        "input": 0.5,
+        "output": 3.6
       },
       "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
       "family": "qwen",
@@ -11410,7 +11412,7 @@
       "last_updated": "2026-02-15",
       "limit": {
         "context": 262144,
-        "output": 81920
+        "output": 65536
       },
       "modalities": {
         "input": [
@@ -12354,8 +12356,8 @@
       "attachment": false,
       "canonical_model_id": "reflection/beam-1.0-501b-a23b",
       "cost": {
-        "cache_read": 0.05,
-        "input": 0.25,
+        "cache_read": 0.04,
+        "input": 0.3,
         "output": 1
       },
       "description": "Reasoning model for deliberate analysis, multi-step problem solving, and tool use",
@@ -13539,101 +13541,38 @@
       "temperature": true,
       "tool_call": true
     },
-    "unbiased/pareto-26.10": {
-      "attachment": true,
+    "tngtech/deepseek-r1t2-chimera": {
+      "attachment": false,
       "cost": {
-        "cache_read": 0.03,
-        "input": 0.8,
-        "output": 3.2
+        "cache_read": 0.02,
+        "input": 1,
+        "output": 2.625
       },
-      "description": "Multimodal model for analyzing text, images, documents, and rich media",
-      "family": "pareto",
-      "id": "unbiased/pareto-26.10",
-      "last_updated": "2026-10-15",
+      "description": "DeepSeek chat model for instruction following, coding, and analysis",
+      "family": "deepseek",
+      "id": "tngtech/deepseek-r1t2-chimera",
+      "knowledge": "2024-07-31",
+      "last_updated": "2025-07-08",
       "limit": {
-        "context": 1048576,
-        "output": 131072
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
-          "text",
-          "image"
+          "text"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Pareto 26.10",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-10-15",
-      "structured_output": false,
+      "name": "DeepSeek R1T2 Chimera",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2025-07-08",
+      "structured_output": true,
       "temperature": true,
-      "tool_call": true
-    },
-    "unbiased/pareto-26.10-preview": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.03,
-        "input": 0.8,
-        "output": 3.2
-      },
-      "description": "Preview model for early access evaluation, prototyping, and compatibility testing",
-      "family": "pareto",
-      "id": "unbiased/pareto-26.10-preview",
-      "last_updated": "2026-10-01",
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Pareto 26.10 Preview",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-10-01",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "unbiased/pareto-26.9": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.25,
-        "input": 2.5,
-        "output": 7.5
-      },
-      "description": "Multimodal model for analyzing text, images, documents, and rich media",
-      "family": "pareto",
-      "id": "unbiased/pareto-26.9",
-      "last_updated": "2026-10-13",
-      "limit": {
-        "context": 262144,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Pareto 26.9",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-10-13",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
+      "tool_call": false
     },
     "undi95/remm-slerp-l2-13b": {
       "attachment": false,
@@ -14446,8 +14385,9 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-4.5-air",
       "cost": {
-        "input": 0.14,
-        "output": 0.86
+        "cache_read": 0.03,
+        "input": 0.2,
+        "output": 1.1
       },
       "description": "Lighter GLM-4.5 variant for fast coding assistance and cheaper agents",
       "family": "glm-air",
@@ -15884,38 +15824,6 @@
       "release_date": "2026-09-11",
       "structured_output": true,
       "temperature": false,
-      "tool_call": true
-    },
-    "~unbiased/pareto-latest": {
-      "attachment": true,
-      "cost": {
-        "cache_read": 0.03,
-        "input": 0.8,
-        "output": 3.2
-      },
-      "description": "Multimodal model for analyzing text, images, documents, and rich media",
-      "family": "pareto",
-      "id": "~unbiased/pareto-latest",
-      "last_updated": "2026-10-13",
-      "limit": {
-        "context": 1048576,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Pareto Latest",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2026-10-13",
-      "structured_output": false,
-      "temperature": true,
       "tool_call": true
     },
     "~x-ai/grok-latest": {
