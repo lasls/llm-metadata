@@ -2289,7 +2289,7 @@
       "cost": {
         "cache_read": 0.2,
         "input": 0.888188,
-        "output": 1.5082
+        "output": 1.5039
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek-pro",
@@ -2330,9 +2330,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
       "cost": {
-        "cache_read": 0.097,
-        "input": 0.111,
-        "output": 4.44
+        "cache_read": 0.125,
+        "input": 0.25,
+        "output": 5
       },
       "description": "DeepSeek V4 Pro 0813 is a large-scale mixture-of-experts model from DeepSeek. This is the GA release of DeepSeek V4 Pro.",
       "family": "deepseek-pro",
@@ -2340,7 +2340,7 @@
       "last_updated": "2026-08-22",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 393216
       },
       "modalities": {
         "input": [
@@ -4232,7 +4232,7 @@
       "last_updated": "2025-03-12",
       "limit": {
         "context": 131072,
-        "output": 117964
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -4255,9 +4255,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.023,
-        "input": 0.047,
-        "output": 0.168
+        "cache_read": 0.025,
+        "input": 0.05,
+        "output": 0.18
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -4563,6 +4563,7 @@
     },
     "inclusionai/ling-3.0-flash-fin": {
       "attachment": false,
+      "canonical_model_id": "inclusionai/ling-3.0-flash-fin",
       "cost": {
         "cache_read": 0.015,
         "input": 0.075,
@@ -4572,7 +4573,7 @@
       "description": "Ling 3.0 Flash Fin is InclusionAI’s finance-enhanced MoE language model, combining 124 billion total parameters with approximately 5.1 billion active parameters for efficient financial reasoning. Its 256K context window, function calling, and support for complex, multi-step investment workflows make it ideal for financial research, analysis, long-horizon planning, and execution, while retaining strong capabilities in coding and mathematics.",
       "family": "ling-flash",
       "id": "inclusionai/ling-3.0-flash-fin",
-      "last_updated": "2026-08-27",
+      "last_updated": "2026-09-03",
       "limit": {
         "context": 256000,
         "output": 32000
@@ -4586,7 +4587,7 @@
         ]
       },
       "name": "inclusionAI: Ling 3.0 Flash Fin",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -4604,6 +4605,7 @@
     },
     "inclusionai/ling-3.0-flash-sante": {
       "attachment": false,
+      "canonical_model_id": "inclusionai/ling-3.0-flash-sante",
       "cost": {
         "cache_read": 0.015,
         "input": 0.075,
@@ -4688,6 +4690,7 @@
     },
     "inclusionai/ling-3.0-tiny": {
       "attachment": false,
+      "canonical_model_id": "inclusionai/ling-3.0-tiny",
       "cost": {
         "cache_read": 0.003,
         "input": 0.015,
@@ -4696,7 +4699,7 @@
       "description": "Ling 3.0 Tiny is a mixture-of-experts model from InclusionAI, with 1.3B active parameters out of 7.9B total. It is designed for responsive agents, instruction following, and multi-turn conversations, with switchable...",
       "family": "ling-tiny",
       "id": "inclusionai/ling-3.0-tiny",
-      "last_updated": "2026-08-06",
+      "last_updated": "2026-08-07",
       "limit": {
         "context": 262144,
         "output": 250000
@@ -4710,7 +4713,7 @@
         ]
       },
       "name": "inclusionAI: Ling 3.0 Tiny",
-      "open_weights": false,
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -4721,7 +4724,7 @@
           ]
         }
       ],
-      "release_date": "2026-08-06",
+      "release_date": "2026-08-07",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -4810,6 +4813,7 @@
     },
     "inclusionai/ling-3.2-flash:free": {
       "attachment": true,
+      "canonical_model_id": "inclusionai/ling-3.2-flash",
       "cost": {
         "input": 0,
         "output": 0
@@ -4817,7 +4821,7 @@
       "description": "Ling 3.2 Flash is a hybrid reasoning model from inclusionAI that accepts text and image input, with a 1M-token context window and up to 200 images per request. Thinking can...",
       "family": "ling-flash-free",
       "id": "inclusionai/ling-3.2-flash:free",
-      "last_updated": "2026-11-13",
+      "last_updated": "2026-11-05",
       "limit": {
         "context": 1048576,
         "output": 262144
@@ -4843,7 +4847,49 @@
           ]
         }
       ],
-      "release_date": "2026-11-13",
+      "release_date": "2026-11-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inclusionai/lingsante-3.1-air-vl": {
+      "attachment": true,
+      "canonical_model_id": "inclusionai/lingsante-3.1-air-vl",
+      "cost": {
+        "cache_read": 0.012,
+        "input": 0.06,
+        "output": 0.18
+      },
+      "description": "LingSante 3.1 Air VL is inclusionAI's medical vision-language model, a 124B total / 5.5B active MoE. It takes text and up to 16 images (scans, skin and meal photos, lab...",
+      "family": "lingsante",
+      "id": "inclusionai/lingsante-3.1-air-vl",
+      "last_updated": "2026-11-19",
+      "limit": {
+        "context": 131072,
+        "output": 32768
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "inclusionAI: LingSante 3.1 Air VL",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-19",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -5467,8 +5513,8 @@
       "knowledge": "2023-12",
       "last_updated": "2024-12-06",
       "limit": {
-        "context": 128000,
-        "output": 115200
+        "context": 131072,
+        "output": 32768
       },
       "modalities": {
         "input": [
@@ -5649,7 +5695,7 @@
       "last_updated": "2026-08-10",
       "limit": {
         "context": 131072,
-        "output": 117964
+        "output": 16384
       },
       "modalities": {
         "input": [
@@ -7200,7 +7246,7 @@
       "last_updated": "2025-07-11",
       "limit": {
         "context": 131072,
-        "output": 131072
+        "output": 98304
       },
       "modalities": {
         "input": [
@@ -7218,6 +7264,37 @@
       "temperature": true,
       "tool_call": true
     },
+    "moonshotai/kimi-k2-0905": {
+      "attachment": false,
+      "canonical_model_id": "moonshotai/kimi-k2-0905",
+      "cost": {
+        "input": 0.6,
+        "output": 2.5
+      },
+      "description": "Kimi K2 0905 is the September update of [Kimi K2 0711](moonshotai/kimi-k2). It is a large-scale Mixture-of-Experts (MoE) language model developed by Moonshot AI, featuring 1 trillion total parameters with 32...",
+      "family": "kimi",
+      "id": "moonshotai/kimi-k2-0905",
+      "last_updated": "2025-09-05",
+      "limit": {
+        "context": 262144,
+        "output": 98304
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MoonshotAI: Kimi K2 0905",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-09-05",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
     "moonshotai/kimi-k2.5": {
       "attachment": true,
       "canonical_model_id": "moonshotai/kimi-k2.5",
@@ -7232,7 +7309,7 @@
       "last_updated": "2026-01-27",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -12011,9 +12088,9 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-20b",
       "cost": {
-        "cache_read": 0.0085,
-        "input": 0.017,
-        "output": 0.085
+        "cache_read": 0.00765,
+        "input": 0.0153,
+        "output": 0.0765
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
@@ -12582,7 +12659,7 @@
       "last_updated": "2026-10-28",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -12627,7 +12704,7 @@
       "last_updated": "2026-10-28",
       "limit": {
         "context": 1048576,
-        "output": 131072
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -17220,15 +17297,16 @@
     },
     "xiaomi/mimo-v2.6-flash-mopd": {
       "attachment": true,
+      "canonical_model_id": "xiaomi/mimo-v2.6-flash-mopd",
       "cost": {
         "cache_read": 0.05,
         "input": 0.5,
         "output": 1
       },
       "description": "MiMo-V2.6-Flash-MOPD is an updated checkpoint of Xiaomi's MiMo-V2.6-Flash, a Mixture-of-Experts model with 309B total and 15B active parameters, a 1M-token context window, and native multimodal input. It adds a multi-teacher...",
-      "family": "mimo",
+      "family": "mimo-flash",
       "id": "xiaomi/mimo-v2.6-flash-mopd",
-      "last_updated": "2026-11-23",
+      "last_updated": "2026-09-27",
       "limit": {
         "context": 1048576,
         "output": 32768
@@ -17237,15 +17315,15 @@
         "input": [
           "text",
           "image",
-          "video",
-          "audio"
+          "audio",
+          "video"
         ],
         "output": [
           "text"
         ]
       },
-      "name": "Xiaomi: MiMo-V2.6-Flash-MOPD",
-      "open_weights": false,
+      "name": "MiMo-V2.6-Flash-MOPD",
+      "open_weights": true,
       "reasoning": true,
       "reasoning_options": [
         {
@@ -17256,7 +17334,7 @@
           ]
         }
       ],
-      "release_date": "2026-11-23",
+      "release_date": "2026-09-27",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -18432,9 +18510,9 @@
     "~deepseek/deepseek-pro-latest": {
       "attachment": false,
       "cost": {
-        "cache_read": 0.097,
-        "input": 0.111,
-        "output": 4.44
+        "cache_read": 0.125,
+        "input": 0.25,
+        "output": 5
       },
       "description": "This model always redirects to the latest model in the DeepSeek Pro family.",
       "family": "deepseek",

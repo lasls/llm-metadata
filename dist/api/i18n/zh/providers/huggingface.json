@@ -224,7 +224,7 @@
       "id": "MiniMaxAI/MiniMax-M3",
       "last_updated": "2026-06-01",
       "limit": {
-        "context": 524288,
+        "context": 1048576,
         "output": 512000
       },
       "modalities": {
@@ -383,6 +383,39 @@
       "open_weights": true,
       "reasoning": false,
       "release_date": "2024-11-12",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Qwen/Qwen2.5-VL-72B-Instruct": {
+      "attachment": true,
+      "canonical_model_id": "alibaba/qwen2-5-vl-72b-instruct",
+      "cost": {
+        "input": 0.8,
+        "output": 1
+      },
+      "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
+      "family": "qwen-vl",
+      "id": "Qwen/Qwen2.5-VL-72B-Instruct",
+      "knowledge": "2024-04",
+      "last_updated": "2025-01-26",
+      "limit": {
+        "context": 128000,
+        "output": 8192
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Qwen2.5-VL 72B Instruct",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2025-01-26",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -997,8 +1030,8 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.5-9b",
       "cost": {
-        "input": 0.1,
-        "output": 0.15
+        "input": 0.085,
+        "output": 0.125
       },
       "description": "Qwen instruction model for multilingual chat, reasoning, and tool use",
       "family": "qwen",
@@ -1258,6 +1291,70 @@
       "temperature": true,
       "tool_call": true
     },
+    "RekaAI/reka-edge-2603": {
+      "attachment": true,
+      "canonical_model_id": "rekaai/reka-edge",
+      "cost": {
+        "input": 0.1,
+        "output": 0.1
+      },
+      "description": "Multimodal model for analyzing text, images, documents, and rich media",
+      "family": "reka",
+      "id": "RekaAI/reka-edge-2603",
+      "last_updated": "2026-03-11",
+      "limit": {
+        "context": 16384,
+        "output": 14745
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Reka Edge",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2026-03-11",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "Sao10K/L3-8B-Lunaris-v1": {
+      "attachment": false,
+      "canonical_model_id": "sao10k/l3-lunaris-8b",
+      "cost": {
+        "input": 0.04,
+        "output": 0.05
+      },
+      "description": "Open Llama instruction model for multilingual chat, reasoning, and coding",
+      "family": "lunaris",
+      "id": "Sao10K/L3-8B-Lunaris-v1",
+      "knowledge": "2023-12-31",
+      "last_updated": "2024-08-13",
+      "limit": {
+        "context": 8192,
+        "output": 7372
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Llama 3 8B Lunaris",
+      "open_weights": true,
+      "reasoning": false,
+      "release_date": "2024-08-13",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": false
+    },
     "Undi95/ReMM-SLERP-L2-13B": {
       "attachment": false,
       "canonical_model_id": "undi95/remm-slerp-l2-13b",
@@ -1374,6 +1471,92 @@
         }
       ],
       "release_date": "2026-04-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "XiaomiMiMo/MiMo-V2.6-Flash-RL": {
+      "attachment": false,
+      "canonical_model_id": "xiaomi/mimo-v2.6-flash",
+      "cost": {
+        "input": 0.14,
+        "output": 0.28
+      },
+      "description": "MiMo Flash model for multimodal coding agents and long-context automation",
+      "family": "mimo-flash",
+      "id": "XiaomiMiMo/MiMo-V2.6-Flash-RL",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.6-Flash",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "XiaomiMiMo/MiMo-V2.6-Pro-RL": {
+      "attachment": false,
+      "canonical_model_id": "xiaomi/mimo-v2.6-pro",
+      "cost": {
+        "input": 0.387,
+        "output": 0.783
+      },
+      "description": "Stronger MiMo Pro tier for multimodal reasoning and coding-agent execution",
+      "family": "mimo-pro",
+      "id": "XiaomiMiMo/MiMo-V2.6-Pro-RL",
+      "last_updated": "2026-09-22",
+      "limit": {
+        "context": 1048576,
+        "output": 131072
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "MiMo-V2.6-Pro",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high",
+            "xhigh"
+          ]
+        }
+      ],
+      "release_date": "2026-09-22",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -1785,8 +1968,8 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "input": 0.888188,
-        "output": 1.5082
+        "input": 0.640586,
+        "output": 1.5039
       },
       "description": "Open MoE flagship with million-token context for coding and long agent runs",
       "family": "deepseek-pro",
@@ -4227,8 +4410,8 @@
       "attachment": false,
       "canonical_model_id": "zhipuai/glm-5.2",
       "cost": {
-        "input": 0.643,
-        "output": 1.978
+        "input": 0.5625,
+        "output": 1.8
       },
       "description": "Open flagship GLM for long-horizon coding agents and million-token context work",
       "family": "glm",
