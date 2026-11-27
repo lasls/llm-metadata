@@ -7,41 +7,6 @@
   "iconURL": "https://models.dev/logos/concentrate.svg",
   "id": "concentrate",
   "models": {
-    "apodex-1.1-mini": {
-      "attachment": false,
-      "canonical_model_id": "apodex/apodex-1.1-mini",
-      "cost": {
-        "input": 0,
-        "output": 0
-      },
-      "description": "Open-weight 35B MoE model for long-horizon research, forecasting, and tool-assisted work",
-      "family": "apodex-mini",
-      "id": "apodex-1.1-mini",
-      "last_updated": "2026-08-24",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Apodex 1.1 Mini",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "toggle"
-        }
-      ],
-      "release_date": "2026-08-24",
-      "temperature": true,
-      "tool_call": true
-    },
     "beam-1.0-501b-a23b": {
       "attachment": false,
       "canonical_model_id": "reflection/beam-1.0-501b-a23b",
@@ -961,8 +926,8 @@
       "canonical_model_id": "deepseek/deepseek-r1-0528",
       "cost": {
         "cache_read": 0.35,
-        "input": 0.7,
-        "output": 2.5
+        "input": 0.5,
+        "output": 2.15
       },
       "description": "May 2025 DeepSeek R1 update with improved mathematics, coding, and reasoning",
       "family": "deepseek-r",
@@ -2028,8 +1993,8 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "input": 0.13,
-        "output": 0.4
+        "input": 0.1,
+        "output": 0.34
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -4362,8 +4327,7 @@
       "modalities": {
         "input": [
           "text",
-          "image",
-          "pdf"
+          "image"
         ],
         "output": [
           "text"
@@ -4672,8 +4636,6 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M2",
       "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.375,
         "input": 0.3,
         "output": 1.2
       },
@@ -4683,7 +4645,7 @@
       "last_updated": "2025-10-27",
       "limit": {
         "context": 204800,
-        "output": 131072
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -4707,8 +4669,6 @@
       "attachment": true,
       "canonical_model_id": "minimax/MiniMax-M2.1",
       "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.375,
         "input": 0.3,
         "output": 1.2
       },
@@ -4717,8 +4677,8 @@
       "id": "minimax-m2-1",
       "last_updated": "2025-12-23",
       "limit": {
-        "context": 204800,
-        "output": 51200
+        "context": 196608,
+        "output": 8192
       },
       "modalities": {
         "input": [
@@ -4734,142 +4694,6 @@
       "reasoning": true,
       "reasoning_options": [],
       "release_date": "2025-12-23",
-      "temperature": true,
-      "tool_call": true
-    },
-    "minimax-m2-1-highspeed": {
-      "attachment": true,
-      "canonical_model_id": "minimax/MiniMax-M2.1",
-      "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.375,
-        "input": 0.6,
-        "output": 2.4
-      },
-      "description": "Earlier MiniMax agent model for practical coding and productivity tasks",
-      "family": "minimax-m",
-      "id": "minimax-m2-1-highspeed",
-      "last_updated": "2025-12-23",
-      "limit": {
-        "context": 204800,
-        "output": 51200
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax-M2.1",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2025-12-23",
-      "temperature": true,
-      "tool_call": true
-    },
-    "minimax-m2-5": {
-      "attachment": true,
-      "canonical_model_id": "minimax/MiniMax-M2.5",
-      "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.375,
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "Prior MiniMax coding model for agent workflows, office edits, and automation",
-      "family": "minimax-m",
-      "id": "minimax-m2-5",
-      "last_updated": "2026-02-12",
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax-M2.5",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-02-12",
-      "temperature": true,
-      "tool_call": true
-    },
-    "minimax-m2-5-highspeed": {
-      "attachment": true,
-      "canonical_model_id": "minimax/MiniMax-M2.5-highspeed",
-      "cost": {
-        "cache_read": 0.03,
-        "cache_write": 0.375,
-        "input": 0.6,
-        "output": 2.4
-      },
-      "description": "High-speed MiniMax model for low-latency coding and agent workflows",
-      "family": "minimax-m",
-      "id": "minimax-m2-5-highspeed",
-      "last_updated": "2026-02-13",
-      "limit": {
-        "context": 204800,
-        "output": 51200
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax-M2.5-highspeed",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-02-13",
-      "temperature": true,
-      "tool_call": true
-    },
-    "minimax-m2-7": {
-      "attachment": true,
-      "canonical_model_id": "minimax/MiniMax-M2.7",
-      "cost": {
-        "cache_read": 0.06,
-        "cache_write": 0.375,
-        "input": 0.3,
-        "output": 1.2
-      },
-      "description": "Open MiniMax flagship for coding agents, office automation, and complex environments",
-      "family": "minimax-m",
-      "id": "minimax-m2-7",
-      "last_updated": "2026-03-18",
-      "limit": {
-        "context": 204800,
-        "output": 131072
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "MiniMax-M2.7",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [],
-      "release_date": "2026-03-18",
       "temperature": true,
       "tool_call": true
     },
@@ -4878,16 +4702,15 @@
       "canonical_model_id": "minimax/MiniMax-M2.7-highspeed",
       "cost": {
         "cache_read": 0.07,
-        "cache_write": 0.375,
-        "input": 0.6,
-        "output": 2.4
+        "input": 0.38,
+        "output": 1.7
       },
       "description": "Low-latency M2.7 variant for interactive coding plans and agent loops",
       "family": "minimax-m",
       "id": "minimax-m2-7-highspeed",
       "last_updated": "2026-03-18",
       "limit": {
-        "context": 204800,
+        "context": 196608,
         "output": 131072
       },
       "modalities": {
@@ -5116,74 +4939,6 @@
         }
       ],
       "release_date": "2026-10-05",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistral-medium-3": {
-      "attachment": true,
-      "canonical_model_id": "mistral/mistral-medium-3",
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "family": "mistral-medium",
-      "id": "mistral-medium-3",
-      "knowledge": "2025-03-31",
-      "last_updated": "2025-05-07",
-      "limit": {
-        "context": 128000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Medium 3",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-05-07",
-      "structured_output": true,
-      "temperature": true,
-      "tool_call": true
-    },
-    "mistral-medium-3.1": {
-      "attachment": true,
-      "canonical_model_id": "mistral/mistral-medium-3.1",
-      "cost": {
-        "input": 0.4,
-        "output": 2
-      },
-      "description": "Mistral model for multilingual chat, reasoning, and tool-assisted workflows",
-      "family": "mistral-medium",
-      "id": "mistral-medium-3.1",
-      "knowledge": "2025-06-30",
-      "last_updated": "2025-08-12",
-      "limit": {
-        "context": 128000,
-        "output": 32000
-      },
-      "modalities": {
-        "input": [
-          "text",
-          "image",
-          "pdf"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Mistral Medium 3.1",
-      "open_weights": false,
-      "reasoning": false,
-      "release_date": "2025-08-12",
       "structured_output": true,
       "temperature": true,
       "tool_call": true
@@ -6618,8 +6373,8 @@
       "canonical_model_id": "alibaba/qwen3.5-397b-a17b",
       "cost": {
         "cache_read": 0.22,
-        "input": 0.6,
-        "output": 3.6
+        "input": 0.45,
+        "output": 3
       },
       "description": "Large open Qwen multimodal MoE for visual agents and long technical tasks",
       "family": "qwen",
