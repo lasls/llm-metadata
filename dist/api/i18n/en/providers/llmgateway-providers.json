@@ -7326,6 +7326,42 @@
       "temperature": true,
       "tool_call": true
     },
+    "canopywave/deepseek-v4-pro-0813": {
+      "attachment": false,
+      "canonical_model_id": "deepseek/deepseek-v4-pro-0813",
+      "cost": {
+        "cache_read": 0.044,
+        "input": 1.32,
+        "output": 3.96
+      },
+      "description": "DeepSeek V4 Pro snapshot with million-token context and support for thinking and non-thinking modes",
+      "family": "deepseek-pro",
+      "id": "canopywave/deepseek-v4-pro-0813",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-22",
+      "limit": {
+        "context": 1000000,
+        "output": 384000
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "deepseek-v4-pro-0813 (CanopyWave)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [],
+      "release_date": "2026-08-13",
+      "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
     "canopywave/deepseek-v4.1-flash-1017": {
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash-1017",
@@ -7608,6 +7644,58 @@
       "release_date": "2026-04-20",
       "structured_output": false,
       "temperature": true,
+      "tool_call": true
+    },
+    "canopywave/kimi-k2.7-code": {
+      "attachment": true,
+      "canonical_model_id": "moonshotai/kimi-k2.7-code",
+      "cost": {
+        "cache_read": 0.19,
+        "input": 0.95,
+        "output": 4
+      },
+      "description": "Coding-focused Kimi model, stronger on long-horizon repo work with less overthinking",
+      "family": "kimi-code",
+      "id": "canopywave/kimi-k2.7-code",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "knowledge": "2025-01",
+      "last_updated": "2026-06-12",
+      "limit": {
+        "context": 262144,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "Kimi K2.7 Code (CanopyWave)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-06-12",
+      "structured_output": false,
+      "temperature": false,
       "tool_call": true
     },
     "canopywave/kimi-k3": {
@@ -14342,69 +14430,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "novita/gemma-4-26b-a4b-it": {
-      "attachment": false,
-      "canonical_model_id": "google/gemma-4-26b-a4b-it",
-      "cost": {
-        "input": 0.13,
-        "output": 0.4
-      },
-      "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
-      "family": "gemma",
-      "id": "novita/gemma-4-26b-a4b-it",
-      "last_updated": "2026-04-02",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemma 4 26B A4B IT (NovitaAI)",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-04-02",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "novita/gemma-4-31b-it": {
-      "attachment": false,
-      "canonical_model_id": "google/gemma-4-31b-it",
-      "cost": {
-        "input": 0.14,
-        "output": 0.4
-      },
-      "description": "Largest Gemma 4 instruction model for open, self-hosted chat and reasoning",
-      "family": "gemma",
-      "id": "novita/gemma-4-31b-it",
-      "knowledge": "2025-01",
-      "last_updated": "2026-04-02",
-      "limit": {
-        "context": 262144,
-        "output": 32768
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Gemma 4 31B IT (NovitaAI)",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2026-04-02",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "novita/glm-4.5v": {
       "attachment": true,
       "canonical_model_id": "zhipuai/glm-4.5v",
@@ -15147,38 +15172,6 @@
         }
       ],
       "release_date": "2026-09-29",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
-    "novita/llama-3.3-70b-instruct": {
-      "attachment": false,
-      "canonical_model_id": "meta/llama-3.3-70b-instruct",
-      "cost": {
-        "input": 0.135,
-        "output": 0.4
-      },
-      "description": "Popular open Llama workhorse for multilingual chat, coding, and self-hosting",
-      "family": "llama",
-      "id": "novita/llama-3.3-70b-instruct",
-      "knowledge": "2023-12",
-      "last_updated": "2024-12-06",
-      "limit": {
-        "context": 131072,
-        "output": 120000
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Llama 3.3 70B Instruct (NovitaAI)",
-      "open_weights": true,
-      "reasoning": false,
-      "release_date": "2024-12-06",
       "structured_output": false,
       "temperature": true,
       "tool_call": true
@@ -17583,6 +17576,55 @@
         }
       ],
       "release_date": "2026-10-17",
+      "structured_output": true,
+      "temperature": true,
+      "tool_call": true
+    },
+    "reka-ai/glm-5.3": {
+      "attachment": false,
+      "canonical_model_id": "zhipuai/glm-5.3",
+      "cost": {
+        "cache_read": 0.135,
+        "input": 0.45,
+        "output": 1.8
+      },
+      "description": "Flagship GLM model for long-horizon coding, agents, and complex project delivery",
+      "family": "glm",
+      "id": "reka-ai/glm-5.3",
+      "interleaved": {
+        "field": "reasoning_content"
+      },
+      "last_updated": "2026-08-14",
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "GLM-5.3 (reka-ai)",
+      "open_weights": true,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "minimal",
+            "low",
+            "medium",
+            "high",
+            "xhigh",
+            "max"
+          ]
+        }
+      ],
+      "release_date": "2026-08-14",
       "structured_output": true,
       "temperature": true,
       "tool_call": true

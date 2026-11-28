@@ -2203,7 +2203,7 @@
       "canonical_model_id": "deepseek/deepseek-v4-flash-0731",
       "cost": {
         "cache_read": 0.035,
-        "input": 0.047,
+        "input": 0.0456,
         "output": 0.3
       },
       "description": "DeepSeek V4 Flash 0731 is a sparse mixture-of-experts model from DeepSeek, with 13B active parameters out of 284B total. This re-post-trained revision is suited for coding, reasoning, and agent workflows.",
@@ -2290,9 +2290,9 @@
       "attachment": false,
       "canonical_model_id": "deepseek/deepseek-v4-pro",
       "cost": {
-        "cache_read": 0.2,
-        "input": 0.888188,
-        "output": 1.5082
+        "cache_read": 0.22,
+        "input": 0.51221,
+        "output": 1.5651
       },
       "description": "Flagship DeepSeek model for coding, reasoning, and agentic work",
       "family": "deepseek-pro",
@@ -2376,9 +2376,9 @@
       "attachment": true,
       "canonical_model_id": "deepseek/deepseek-v4.1-flash",
       "cost": {
-        "cache_read": 0.0042,
-        "input": 0.14,
-        "output": 0.42
+        "cache_read": 0.018,
+        "input": 0.051,
+        "output": 0.567
       },
       "description": "DeepSeek V4.1 Flash is a sparse mixture-of-experts model from DeepSeek, and the cost-efficient tier of the V4.1 family. DeepSeek reports that it exceeds V4 Pro on performance, speed, and task...",
       "family": "deepseek-flash",
@@ -2387,7 +2387,7 @@
       "last_updated": "2026-09-10",
       "limit": {
         "context": 1048576,
-        "output": 393216
+        "output": 943718
       },
       "modalities": {
         "input": [
@@ -4235,7 +4235,7 @@
       "last_updated": "2025-03-12",
       "limit": {
         "context": 131072,
-        "output": 16384
+        "output": 117964
       },
       "modalities": {
         "input": [
@@ -4258,9 +4258,9 @@
       "attachment": true,
       "canonical_model_id": "google/gemma-4-26b-a4b-it",
       "cost": {
-        "cache_read": 0.023,
-        "input": 0.047,
-        "output": 0.169
+        "cache_read": 0.025,
+        "input": 0.05,
+        "output": 0.18
       },
       "description": "Open Gemma instruction model for efficient chat and self-hosted deployments",
       "family": "gemma",
@@ -4811,6 +4811,48 @@
       ],
       "release_date": "2026-10-30",
       "structured_output": false,
+      "temperature": true,
+      "tool_call": true
+    },
+    "inclusionai/ling-3.2-flash": {
+      "attachment": true,
+      "canonical_model_id": "inclusionai/ling-3.2-flash",
+      "cost": {
+        "cache_read": 0.06,
+        "input": 0.3,
+        "output": 0.9
+      },
+      "description": "Ling 3.2 Flash is a hybrid reasoning model from inclusionAI that accepts text and image input, with a 1M-token context window and up to 200 images per request. Thinking can...",
+      "family": "ling-flash",
+      "id": "inclusionai/ling-3.2-flash",
+      "last_updated": "2026-11-05",
+      "limit": {
+        "context": 1048576,
+        "output": 262144
+      },
+      "modalities": {
+        "input": [
+          "text",
+          "image"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "name": "inclusionAI: Ling 3.2 Flash",
+      "open_weights": false,
+      "reasoning": true,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "high"
+          ]
+        }
+      ],
+      "release_date": "2026-11-05",
+      "structured_output": true,
       "temperature": true,
       "tool_call": true
     },
@@ -8235,7 +8277,7 @@
       "last_updated": "2026-10-15",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -12050,9 +12092,9 @@
       "attachment": false,
       "canonical_model_id": "openai/gpt-oss-20b",
       "cost": {
-        "cache_read": 0.00765,
-        "input": 0.0153,
-        "output": 0.0765
+        "cache_read": 0.0085,
+        "input": 0.017,
+        "output": 0.085
       },
       "description": "Open-weight GPT model for self-hosted reasoning and instruction-following workloads",
       "family": "gpt-oss",
@@ -13421,45 +13463,6 @@
       "temperature": true,
       "tool_call": true
     },
-    "qwen/qwen3-235b-a22b-thinking-2507": {
-      "attachment": false,
-      "canonical_model_id": "alibaba/qwen3-235b-a22b-thinking-2507",
-      "cost": {
-        "input": 0.45,
-        "output": 3.5
-      },
-      "description": "Qwen reasoning model for deliberate problem solving, math, and coding",
-      "family": "qwen",
-      "id": "qwen/qwen3-235b-a22b-thinking-2507",
-      "last_updated": "2025-07-25",
-      "limit": {
-        "context": 128000,
-        "output": 16384
-      },
-      "modalities": {
-        "input": [
-          "text"
-        ],
-        "output": [
-          "text"
-        ]
-      },
-      "name": "Qwen: Qwen3 235B A22B Thinking 2507",
-      "open_weights": true,
-      "reasoning": true,
-      "reasoning_options": [
-        {
-          "type": "effort",
-          "values": [
-            "high"
-          ]
-        }
-      ],
-      "release_date": "2025-07-25",
-      "structured_output": false,
-      "temperature": true,
-      "tool_call": true
-    },
     "qwen/qwen3-30b-a3b": {
       "attachment": false,
       "canonical_model_id": "alibaba/qwen3-30b-a3b",
@@ -14008,8 +14011,9 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.5-9b",
       "cost": {
-        "input": 0.08,
-        "output": 0.12
+        "cache_read": 0.035,
+        "input": 0.038,
+        "output": 0.057
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -14017,7 +14021,7 @@
       "last_updated": "2026-02-23",
       "limit": {
         "context": 262144,
-        "output": 235929
+        "output": 40960
       },
       "modalities": {
         "input": [
@@ -14319,9 +14323,9 @@
       "attachment": true,
       "canonical_model_id": "alibaba/qwen3.6-35b-a3b",
       "cost": {
-        "cache_read": 0.024,
+        "cache_read": 0.025,
         "input": 0.05,
-        "output": 0.69
+        "output": 0.7
       },
       "description": "Qwen vision-language model for visual reasoning, documents, and agent tasks",
       "family": "qwen",
@@ -14590,8 +14594,8 @@
       "id": "qwen/qwen3.8-2.4t-a95b",
       "last_updated": "2026-08-12",
       "limit": {
-        "context": 262144,
-        "output": 65536
+        "context": 1000000,
+        "output": 900000
       },
       "modalities": {
         "input": [
@@ -15074,7 +15078,7 @@
       "last_updated": "2026-10-16",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [
@@ -18515,7 +18519,7 @@
       "attachment": false,
       "cost": {
         "cache_read": 0.035,
-        "input": 0.047,
+        "input": 0.0456,
         "output": 0.3
       },
       "description": "This model always redirects to the latest model in the DeepSeek V4 Flash family.",
@@ -18524,7 +18528,7 @@
       "last_updated": "2026-08-01",
       "limit": {
         "context": 1048576,
-        "output": 943718
+        "output": 131072
       },
       "modalities": {
         "input": [
